@@ -1,4 +1,4 @@
-import { createSignal, onMount } from "solid-js";
+import { createSignal, onCleanup, onMount } from "solid-js";
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 
 const tokens = [
@@ -20,7 +20,7 @@ function TokenSwatch(props: { name: string; purpose: string }) {
     // Observe the decorator so resolved values follow toolbar theme changes.
     const observer = new MutationObserver(read);
     observer.observe(swatch.closest(".nui-preview")!, { attributes: true, attributeFilter: ["data-nui-theme"] });
-    return observer;
+    onCleanup(() => observer.disconnect());
   });
   return <figure class="nui-catalog-swatch"><div ref={swatch} class="nui-catalog-swatch-color" style={{ background: `var(--nui-${props.name})` }} /><figcaption><code>--nui-{props.name}</code><span>{props.purpose}</span><code style={{ color: "var(--catalog-muted)" }}>{value()}</code></figcaption></figure>;
 }

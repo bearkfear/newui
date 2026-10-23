@@ -2,13 +2,43 @@
 
 [Workspace](../../README.md)
 
-This application is the initial development catalog for the [UI package](../../pkgs/ui/README.md). Its local dependency is declared as `newui: workspace:*`.
+The component workshop for [newui](../../pkgs/ui/README.md), powered by SolidJS, Storybook 10, Vite, and Tailwind 4. Stories stay beside the library source; workshop presentation stays in this app. The library tsconfig includes colocated stories so editors apply Solid JSX types (`class`, not React `className`). `pkgs/ui/tsconfig.build.json` excludes stories specifically from distributed declarations.
 
-Configuration lives in `.storybook/`. Stories remain beside library code in `pkgs/ui/`, organized under the library's functional categories. The preview processes the library source stylesheet with Tailwind and provides a light/dark theme toolbar.
+## Run and validate
 
-From `workspace/`, run `bun run dev` to start the catalog at `http://localhost:6006`. The server stays running until stopped with Ctrl+C. Run `bun run build:storybook` to generate this application's `storybook-static/` output.
+Run from `workspace/`:
 
-The catalog starts with an introduction, provisional color tokens, and Button examples. Storybook is the development environment; the public website remains undecided.
+```sh
+bun install
+bun run storybook
+bun run typecheck
+bun run build:storybook
+bun run test:storybook
+```
+
+Storybook opens at `http://localhost:6006`. The static output is `apps/storybook/storybook-static/`. Before the first browser test, install Chromium from this directory with `bunx playwright install chromium`.
+
+The Playwright suite starts a development server automatically, reusing port 6006 locally when it is already available. It discovers every story from the index, waits for Storybook's render/play/addon result, and checks WCAG A/AA rules in light and dark themes with axe. It also checks documentation, editable controls, manager/preview theme switching, and a 320px introduction. Screenshots and failure traces are written to ignored `test-results/`; `bun run test:ui` here opens the interactive runner. Automated checks complement manual keyboard and assistive technology reviews.
+
+## Workshop features
+
+- Local newui wordmarks and favicon, themed navigation, and a responsive introduction.
+- System, light, and dark preview themes; the manager follows the same selection. Docs use a dedicated light theme with individually themed component previews.
+- LTR/RTL reading direction, comfortable/compact/flush canvas padding, and reduced-motion simulation. Canvas padding does not modify component density. The reduced-motion override covers descendants of the preview wrapper; body-level portal content needs its own integration when introduced.
+- Mobile (320px and 390px), tablet (768px), and desktop (1440px) viewports, plus Storybook's built-in zoom, measure, outlines, and grid tools. Independent background switching is disabled so component surfaces remain consistent with the selected theme.
+- Autodocs, props descriptions and categories, source/code panels, controls, callback spies, and accessibility/vision tools. Storybook Links is available for future programmatic navigation.
+- Button state/variant matrix, reactive counter, keyboard and disabled interaction assertions, custom tokens, RTL, and mobile examples.
+- Color swatches show resolved public token values and update with the active theme. Workshop-only surface variables are not public library tokens.
+
+## Extending the catalog
+
+Add `*.stories.tsx` next to a component in `pkgs/ui/`. Set `component`, `tags: ["autodocs"]`, explicit variant controls, default args, and descriptions. Use `fn()` from `storybook/test` for callback spies and `play` functions for meaningful behavior checks. JSX decorators must use the Solid adapter's `createJSXDecorator` to preserve reactive args/globals without duplicate mounts.
+
+Navigation follows the library's functional categories. Empty categories are not fabricated. Use the Workshop guide story for the workflow. Colors and Button styling remain provisional, and the public website remains a separate decision.
+
+Configuration lives in `.storybook/`: `main.ts` owns addons/build integration, `theme.ts` owns manager/docs branding, `manager.ts` synchronizes the manager theme, and `preview.tsx`/`preview.css` own the component canvas. Static branding lives in `public/`; it uses relative URLs for subdirectory hosting. Typography uses local system stacks without external font requests.
+
+References: [Storybook theming](https://storybook.js.org/docs/configure/user-interface/theming), [viewports](https://storybook.js.org/docs/essentials/viewport), and [accessibility](https://storybook.js.org/docs/writing-tests/accessibility-testing).
 
 ## Node compatibility
 

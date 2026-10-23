@@ -8,6 +8,7 @@ const config: StorybookConfig = {
   staticDirs: ["../public"],
   addons: ["@storybook/addon-docs", "@storybook/addon-a11y", "@storybook/addon-links"],
   core: { disableTelemetry: true },
+  features: { sidebarOnboardingChecklist: false, menuOnboardingChecklist: false },
   docs: { defaultName: "Documentation" },
   async viteFinal(config) {
     return mergeConfig(config, {

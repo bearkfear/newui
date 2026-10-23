@@ -7,7 +7,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   workers: 2,
   reporter: "list",
-  use: { baseURL: "http://127.0.0.1:6006", trace: "retain-on-failure" },
+  use: { baseURL: "http://127.0.0.1:6006", trace: "retain-on-failure", screenshot: "only-on-failure" },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
     command: "bun run dev --ci --host 127.0.0.1",

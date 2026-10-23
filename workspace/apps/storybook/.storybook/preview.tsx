@@ -72,7 +72,7 @@ const preview: Preview = {
     docs: { theme: catalogTheme("light"), codePanel: true, source: { type: "code" }, toc: true },
     a11y: {
       test: "error",
-      config: { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] } },
+      options: { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] } },
     },
     backgrounds: { disable: true },
     viewport: {

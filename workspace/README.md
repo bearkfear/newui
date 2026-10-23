@@ -19,6 +19,7 @@ Run these commands from `workspace/`:
 - `bun run dev` or `bun run storybook`: start Storybook at `http://localhost:6006`.
 - `bun run typecheck`: check the UI package and Storybook application.
 - `bun run build`: build the UI package in `pkgs/ui/dist/`.
+- `bun run test:storybook`: run browser checks for the catalog, interactions, and accessibility.
 - `bun run build:storybook`: generate the static catalog in `apps/storybook/storybook-static/`.
 
 `package.json` coordinates the Bun workspaces; `tsconfig.base.json` shares compiler settings. Each application and package owns its manifest, configuration, and build output. No tooling is placed at the repository root.

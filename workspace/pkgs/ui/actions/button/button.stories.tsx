@@ -34,7 +34,9 @@ export const Disabled: Story = {
   play: async ({ canvasElement, args }) => {
     const button = within(canvasElement).getByRole("button");
     await expect(button).toBeDisabled();
-    await userEvent.click(button);
+    await userEvent.tab();
+    await expect(button).not.toHaveFocus();
+    await userEvent.keyboard("{Enter}");
     await expect(args.onClick).not.toHaveBeenCalled();
   },
 };

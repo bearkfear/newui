@@ -42,8 +42,7 @@ const css = await transform(result.css, { loader: "css", minify: true });
 await writeFile("dist/styles.css", css.code);
 
 const types = Bun.spawn([
-  "bun", fileURLToPath(import.meta.resolve("typescript/bin/tsc")), "--declaration", "--emitDeclarationOnly",
-  "--rootDir", ".", "--outDir", "dist/types",
+  "bun", fileURLToPath(import.meta.resolve("typescript/bin/tsc")), "--project", "tsconfig.build.json",
 ], { stdout: "inherit", stderr: "inherit" });
 if (await types.exited !== 0) throw new Error("Declaration generation failed.");
 console.log(`Built library, declarations, and CSS (${Buffer.byteLength(css.code)} bytes).`);
