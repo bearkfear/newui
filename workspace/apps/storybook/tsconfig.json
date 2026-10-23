@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
+    "../../pkgs/ui/**/*.stories.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "storybook-static",
+    "../../pkgs/ui/dist"
+  ]
+}

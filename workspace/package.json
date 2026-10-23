@@ -1,0 +1,19 @@
+{
+  "name": "newui-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "pkgs/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/storybook dev",
+    "storybook": "bun run --cwd apps/storybook dev",
+    "build": "bun run --cwd pkgs/ui build",
+    "build:storybook": "bun run --cwd apps/storybook build",
+    "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/storybook typecheck"
+  },
+  "patchedDependencies": {
+    "storybook@10.6.1": "patches/storybook@10.6.1.patch"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@newui/storybook",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev --port 6006 --no-open --disable-telemetry",
+    "build": "storybook build --output-dir storybook-static --disable-telemetry",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "newui": "workspace:*",
+    "solid-js": "1.9.17"
+  },
+  "devDependencies": {
+    "storybook": "10.6.1",
+    "storybook-solidjs-vite": "10.7.2",
+    "vite": "7.3.5",
+    "vite-plugin-solid": "2.11.14",
+    "typescript": "5.9.3",
+    "@tailwindcss/postcss": "4.3.3"
+  }
+}

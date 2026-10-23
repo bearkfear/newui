@@ -1,0 +1,11 @@
+@import "tailwindcss" prefix(nui) source(none);
+@import "./tokens.css";
+
+@source "../actions/button/button.recipe.ts";
+
+@theme inline {
+  --color-primary: var(--nui-primary);
+  --color-primary-hover: var(--nui-primary-hover);
+  --color-on-primary: var(--nui-on-primary);
+  --color-muted: var(--nui-muted);
+}

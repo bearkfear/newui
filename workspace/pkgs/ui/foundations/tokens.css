@@ -1,0 +1,14 @@
+/* Provisional colors; the Radix color mapping is still to be implemented. */
+:root {
+  --nui-primary: #2563eb;
+  --nui-primary-hover: #1d4ed8;
+  --nui-on-primary: #ffffff;
+  --nui-muted: #eff6ff;
+}
+
+[data-nui-theme="dark"] {
+  --nui-primary: #93c5fd;
+  --nui-primary-hover: #bfdbfe;
+  --nui-on-primary: #172554;
+  --nui-muted: #172554;
+}

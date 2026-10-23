@@ -1,0 +1,42 @@
+{
+  "name": "newui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "solid": "./dist/index.jsx",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.9.0"
+  },
+  "dependencies": {
+    "tailwind-variants": "3.3.1"
+  },
+  "scripts": {
+    "build": "bun scripts/build.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "solid-js": "1.9.17",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/postcss": "4.3.3",
+    "postcss": "8.5.6",
+    "typescript": "5.9.3",
+    "esbuild": "0.28.2",
+    "@babel/core": "7.29.7",
+    "babel-preset-solid": "1.9.16",
+    "storybook": "10.6.1",
+    "storybook-solidjs-vite": "10.7.2"
+  }
+}
