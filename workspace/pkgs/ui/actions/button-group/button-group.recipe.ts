@@ -9,7 +9,9 @@ export const buttonGroupRecipe = tv({
     },
     align: { start: "nui:justify-start", center: "nui:justify-center", end: "nui:justify-end" },
     attached: { true: "nui:gap-0 nui:flex-nowrap", false: "nui:gap-2" },
-    fullWidth: { true: "nui:w-full nui:[&>[data-nui-button]]:min-w-0 nui:[&>[data-nui-button]]:flex-1" },
+    fullWidth: {
+      true: "nui:w-full nui:[&>[data-nui-button]]:min-w-0 nui:[&>[data-nui-button]]:flex-1",
+    },
   },
   compoundVariants: [{ orientation: "horizontal", attached: false, class: "nui:flex-wrap" }],
   defaultVariants: { orientation: "horizontal", align: "start", attached: false },

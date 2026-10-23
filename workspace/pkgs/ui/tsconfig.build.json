@@ -6,10 +6,5 @@
     "rootDir": ".",
     "outDir": "dist/types"
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "scripts",
-    "**/*.stories.tsx"
-  ]
+  "exclude": ["node_modules", "dist", "scripts", "**/*.stories.tsx", "**/stories/**"]
 }

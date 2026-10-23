@@ -15,6 +15,13 @@
     background: var(--catalog-selection-hover);
   }
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    *, *::before, *::after {
+      /* biome-ignore lint/complexity/noImportantStyles: Respect the OS preference over addon styles. */
+      scroll-behavior: auto !important;
+      /* biome-ignore lint/complexity/noImportantStyles: Respect the OS preference over addon styles. */
+      animation-duration: .01ms !important;
+      /* biome-ignore lint/complexity/noImportantStyles: Respect the OS preference over addon styles. */
+      transition-duration: .01ms !important;
+    }
   }
 </style>

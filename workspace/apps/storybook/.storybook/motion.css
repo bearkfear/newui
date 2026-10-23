@@ -1,0 +1,19 @@
+/* biome-ignore-all lint/complexity/noImportantStyles: Reduced-motion preferences must override library and addon animations. */
+.nui-preview[data-motion="reduced"] *,
+.nui-preview[data-motion="reduced"] *::before,
+.nui-preview[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-preview *,
+  .nui-preview *::before,
+  .nui-preview *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

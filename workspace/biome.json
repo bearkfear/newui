@@ -1,0 +1,78 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "root": ".."
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "**",
+      "!!**/node_modules",
+      "!!**/dist",
+      "!!**/storybook-static",
+      "!!**/test-results",
+      "!!**/playwright-report",
+      "!!references/_local",
+      "!!patches",
+      "!!pkgs/ui/foundations/radix.css",
+      "!!bun.lock"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "jsxRuntime": "transparent",
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "always"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "style": {
+        "noExcessiveLinesPerFile": {
+          "level": "error",
+          "options": {
+            "maxLines": 250,
+            "skipBlankLines": false
+          }
+        }
+      },
+      "complexity": {
+        "noExcessiveLinesPerFunction": {
+          "level": "error",
+          "options": {
+            "maxLines": 60,
+            "skipBlankLines": false,
+            "skipIifes": false
+          }
+        },
+        "noExcessiveCognitiveComplexity": {
+          "level": "error",
+          "options": {
+            "maxAllowedComplexity": 15
+          }
+        },
+        "useLiteralKeys": "off"
+      },
+      "correctness": {
+        "useJsxKeyInIterable": "off"
+      },
+      "preset": "recommended"
+    }
+  }
+}

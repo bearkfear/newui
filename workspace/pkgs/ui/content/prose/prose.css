@@ -1,34 +1,116 @@
 /* Scoped editorial styles for native HTML; no typography plugin is required. */
 @layer components {
   .nui-prose {
-    & :where(p, ul, ol, dl, blockquote, pre, figure, table, hr) { margin-block: 1.25em; }
-    & :where(h1, h2, h3, h4, h5, h6) { margin-block: 1.6em .6em; font-weight: 600; line-height: 1.2; letter-spacing: -.025em; text-wrap: balance; }
-    & :where(h1) { font-size: 2.25em; }
-    & :where(h2) { font-size: 1.75em; }
-    & :where(h3) { font-size: 1.4em; }
-    & :where(h4) { font-size: 1.2em; }
-    & :where(h5, h6) { font-size: 1em; }
-    & :where(ul, ol) { padding-inline-start: 1.5em; }
-    & :where(ul) { list-style-type: disc; }
-    & :where(ol) { list-style-type: decimal; }
-    & :where(li) { margin-block: .4em; }
-    & :where(li > ul, li > ol) { margin-block: .5em; }
-    & :where(dt, strong, th) { font-weight: 600; }
-    & :where(dd) { padding-inline-start: 1.5em; }
-    & :where(a) { color: var(--nui-primary-text); text-decoration: underline; text-underline-offset: .2em; }
-    & :where(a:hover) { color: var(--nui-primary-text-strong); }
-    & :where(a:focus-visible) { outline: 2px solid var(--nui-focus-ring); outline-offset: 3px; }
-    & :where(blockquote) { border-inline-start: 3px solid var(--nui-border); padding-inline-start: 1em; color: var(--nui-muted-foreground); }
-    & :where(code, pre) { font-family: ui-monospace, monospace; font-size: .9em; background: var(--nui-surface); border-radius: .25rem; }
-    & :where(code) { padding: .15em .3em; }
-    & :where(pre) { padding: 1em; overflow-x: auto; }
-    & :where(pre code) { padding: 0; background: transparent; }
-    & :where(img, video) { max-width: 100%; height: auto; border-radius: .5rem; }
-    & :where(figcaption) { margin-block-start: .5em; color: var(--nui-muted-foreground); font-size: .875em; }
-    & :where(table) { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
-    & :where(th, td) { padding: .6em .8em; border-bottom: 1px solid var(--nui-border); text-align: start; }
-    & :where(hr) { border: 0; border-top: 1px solid var(--nui-border); }
-    & > :first-child { margin-block-start: 0; }
-    & > :last-child { margin-block-end: 0; }
+    & :where(p, ul, ol, dl, blockquote, pre, figure, table, hr) {
+      margin-block: 1.25em;
+    }
+    & :where(h1, h2, h3, h4, h5, h6) {
+      margin-block: 1.6em 0.6em;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+    }
+    & :where(h1) {
+      font-size: 2.25em;
+    }
+    & :where(h2) {
+      font-size: 1.75em;
+    }
+    & :where(h3) {
+      font-size: 1.4em;
+    }
+    & :where(h4) {
+      font-size: 1.2em;
+    }
+    & :where(h5, h6) {
+      font-size: 1em;
+    }
+    & :where(ul, ol) {
+      padding-inline-start: 1.5em;
+    }
+    & :where(ul) {
+      list-style-type: disc;
+    }
+    & :where(ol) {
+      list-style-type: decimal;
+    }
+    & :where(li) {
+      margin-block: 0.4em;
+    }
+    & :where(li > ul, li > ol) {
+      margin-block: 0.5em;
+    }
+    & :where(dt, strong, th) {
+      font-weight: 600;
+    }
+    & :where(dd) {
+      padding-inline-start: 1.5em;
+    }
+    & :where(a) {
+      color: var(--nui-primary-text);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+    & :where(a:hover) {
+      color: var(--nui-primary-text-strong);
+    }
+    & :where(a:focus-visible) {
+      outline: 2px solid var(--nui-focus-ring);
+      outline-offset: 3px;
+    }
+    & :where(blockquote) {
+      border-inline-start: 3px solid var(--nui-border);
+      padding-inline-start: 1em;
+      color: var(--nui-muted-foreground);
+    }
+    & :where(code, pre) {
+      font-family: ui-monospace, monospace;
+      font-size: 0.9em;
+      background: var(--nui-surface);
+      border-radius: 0.25rem;
+    }
+    & :where(code) {
+      padding: 0.15em 0.3em;
+    }
+    & :where(pre) {
+      padding: 1em;
+      overflow-x: auto;
+    }
+    & :where(pre code) {
+      padding: 0;
+      background: transparent;
+    }
+    & :where(img, video) {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+    & :where(figcaption) {
+      margin-block-start: 0.5em;
+      color: var(--nui-muted-foreground);
+      font-size: 0.875em;
+    }
+    & :where(table) {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+    }
+    & :where(th, td) {
+      padding: 0.6em 0.8em;
+      border-bottom: 1px solid var(--nui-border);
+      text-align: start;
+    }
+    & :where(hr) {
+      border: 0;
+      border-top: 1px solid var(--nui-border);
+    }
+    & > :first-child {
+      margin-block-start: 0;
+    }
+    & > :last-child {
+      margin-block-end: 0;
+    }
   }
 }

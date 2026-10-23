@@ -2,14 +2,28 @@ import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import * as colors from "@radix-ui/colors";
 
-const palettes = ["slate", "blue", "sky", "green", "amber", "red"] as const;
-const ramps = colors as unknown as Record<string, Record<string, string>>;
-const declarations: string[] = [];
-for (const name of palettes) {
-  for (let step = 1; step <= 12; step++) {
-    declarations.push(`  --nui-${name}-${step}: light-dark(${ramps[name][`${name}${step}`]}, ${ramps[`${name}Dark`][`${name}${step}`]});`);
-  }
+const steps = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
+type Step = (typeof steps)[number];
+
+function scaleDeclarations<Name extends string>(
+  name: Name,
+  light: Record<`${Name}${Step}`, string>,
+  dark: Record<`${Name}${Step}`, string>,
+) {
+  return steps.map((step) => {
+    const key: `${Name}${Step}` = `${name}${step}`;
+    return `  --nui-${name}-${step}: light-dark(${light[key]}, ${dark[key]});`;
+  });
 }
+
+const declarations = [
+  ...scaleDeclarations("slate", colors.slate, colors.slateDark),
+  ...scaleDeclarations("blue", colors.blue, colors.blueDark),
+  ...scaleDeclarations("sky", colors.sky, colors.skyDark),
+  ...scaleDeclarations("green", colors.green, colors.greenDark),
+  ...scaleDeclarations("amber", colors.amber, colors.amberDark),
+  ...scaleDeclarations("red", colors.red, colors.redDark),
+];
 
 // Match Radix Themes contrast tokens for solid steps 9 and 10 in both modes.
 // https://github.com/radix-ui/themes/tree/main/packages/radix-ui-themes/src/styles/tokens/colors

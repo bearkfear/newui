@@ -8,15 +8,15 @@ Organize space, alignment, flow, and sizing independently of a specific page's c
 
 ## Planned inventory
 
-| Resource | Intent and initial format |
-| --- | --- |
-| Container | Standardize maximum width and responsive margins. |
-| Section | Standardize spacing between sections. |
-| Flex and Grid | Provide organizational primitives. |
-| Stack | Lightweight composition for sequential spacing. |
-| AutoGrid | Recipe for automatic item distribution. |
-| Aspect Ratio | Preserve content proportions. |
-| Resizable | Organize resizable panels; behavior mapping pending. |
+| Resource      | Intent and initial format                            |
+| ------------- | ---------------------------------------------------- |
+| Container     | Standardize maximum width and responsive margins.    |
+| Section       | Standardize spacing between sections.                |
+| Flex and Grid | Provide organizational primitives.                   |
+| Stack         | Lightweight composition for sequential spacing.      |
+| AutoGrid      | Recipe for automatic item distribution.              |
+| Aspect Ratio  | Preserve content proportions.                        |
+| Resizable     | Organize resizable panels; behavior mapping pending. |
 
 ## Ideas and references
 

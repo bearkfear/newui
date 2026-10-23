@@ -8,15 +8,15 @@ Bring together component combinations that address complete interface scenarios.
 
 ## Planned inventory
 
-| Composition | Intent |
-| --- | --- |
-| Hero | Present the main content or opening of a page. |
-| Footer | Organize the closing content and links of a page. |
-| Media Object | Combine image, content, and actions. |
-| Panel | Bring together filters, search, and compact lists. |
-| Action bar | Arrange actions and information in a responsive row. |
-| Complete forms | Demonstrate field grouping, help text, and validation. |
-| Settings and listings | Exercise components in pages with real needs. |
+| Composition           | Intent                                                 |
+| --------------------- | ------------------------------------------------------ |
+| Hero                  | Present the main content or opening of a page.         |
+| Footer                | Organize the closing content and links of a page.      |
+| Media Object          | Combine image, content, and actions.                   |
+| Panel                 | Bring together filters, search, and compact lists.     |
+| Action bar            | Arrange actions and information in a responsive row.   |
+| Complete forms        | Demonstrate field grouping, help text, and validation. |
+| Settings and listings | Exercise components in pages with real needs.          |
 
 ## Ideas and boundaries
 

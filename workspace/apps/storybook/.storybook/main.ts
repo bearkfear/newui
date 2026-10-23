@@ -1,6 +1,6 @@
+import tailwind from "@tailwindcss/postcss";
 import type { StorybookConfig } from "storybook-solidjs-vite";
 import { mergeConfig } from "vite";
-import tailwind from "@tailwindcss/postcss";
 
 const config: StorybookConfig = {
   framework: "storybook-solidjs-vite",

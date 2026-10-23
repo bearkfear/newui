@@ -1,10 +1,6 @@
-/* Workshop presentation stays outside the distributed library stylesheet. */
-body { margin: 0; background: var(--nui-background); color: var(--nui-foreground); }
-.nui-docs { min-height: 100vh; background: var(--nui-background); color: var(--nui-foreground); }
-/* Keep docs links and focus indicators on their dedicated Radix roles. */
-.nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)) { color: var(--nui-primary-text); }
-.nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)):hover { color: var(--nui-primary-text-strong); }
-.nui-docs :where(a, button, input, select, textarea):focus-visible { outline-color: var(--nui-focus-ring); }
+@import "./docs.css";
+@import "./catalog.css";
+@import "./motion.css";
 
 .nui-preview {
   --catalog-bg: var(--nui-background);
@@ -27,65 +23,14 @@ body { margin: 0; background: var(--nui-background); color: var(--nui-foreground
   line-height: 1.65;
   text-align: start;
 }
-.nui-preview[data-spacing="compact"] { padding: 16px; }
-.nui-preview[data-spacing="flush"] { padding: 0; }
-.nui-preview[data-view="docs"] { min-height: auto; padding: 32px; border-radius: 8px; }
-.nui-preview[data-motion="reduced"] *,
-.nui-preview[data-motion="reduced"] *::before,
-.nui-preview[data-motion="reduced"] *::after {
-  animation-duration: .01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: .01ms !important;
-  scroll-behavior: auto !important;
+.nui-preview[data-spacing="compact"] {
+  padding: 16px;
 }
-.nui-catalog { width: 100%; max-width: 1120px; margin-inline: auto; }
-.nui-catalog * { box-sizing: border-box; }
-.nui-catalog h1, .nui-catalog h2, .nui-catalog h3, .nui-catalog p { margin: 0; }
-.nui-catalog h1 { max-width: 850px; font-size: clamp(38px, 6vw, 76px); font-weight: 650; line-height: 1.06; letter-spacing: -.055em; text-wrap: balance; }
-.nui-catalog h2 { font-size: 24px; font-weight: 650; line-height: 1.25; letter-spacing: -.025em; }
-.nui-catalog h3 { font-size: 17px; font-weight: 650; }
-.nui-catalog a { color: var(--catalog-accent); text-underline-offset: 4px; }
-.nui-catalog a:hover { color: var(--catalog-accent-hover); }
-.nui-catalog a:focus-visible { outline: 2px solid var(--catalog-focus); outline-offset: 5px; border-radius: 2px; }
-.nui-catalog code, .nui-catalog pre { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; }
-.nui-catalog pre { overflow-x: auto; padding: 24px; border: 1px solid var(--catalog-border); border-radius: 12px; background: var(--catalog-surface); line-height: 1.8; }
-.nui-catalog ul { padding-inline-start: 20px; list-style: disc; }
-.nui-catalog li + li { margin-top: 8px; }
-.nui-catalog-topline { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block-end: 24px; border-bottom: 1px solid var(--catalog-border); }
-.nui-catalog-wordmark { font-size: 24px; font-weight: 750; letter-spacing: -.06em; }
-.nui-catalog-status { display: inline-flex; align-items: center; gap: 8px; color: var(--catalog-muted); font-size: 12px; }
-.nui-catalog-status::before { content: ""; width: 7px; height: 7px; background: var(--catalog-accent); border-radius: 100%; }
-.nui-catalog-hero { display: grid; gap: 24px; padding-block: clamp(40px, 6vw, 80px); }
-.nui-catalog-eyebrow { color: var(--catalog-accent); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; }
-.nui-catalog-lead { max-width: 640px; color: var(--catalog-muted); font-size: 18px; line-height: 1.7; }
-.nui-catalog-links { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; font-weight: 600; }
-.nui-catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.nui-catalog-card { display: grid; align-content: start; gap: 12px; padding: 24px; border: 1px solid var(--catalog-border); border-radius: 12px; background: var(--catalog-surface); }
-.nui-catalog-card p { color: var(--catalog-muted); }
-.nui-catalog-number { color: var(--catalog-accent); font: 12px monospace; }
-.nui-catalog-section { display: grid; gap: 24px; padding-block: 40px; border-top: 1px solid var(--catalog-border); margin-top: 40px; }
-.nui-catalog-split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
-.nui-catalog-stack { display: grid; gap: 16px; }
-.nui-catalog-demo { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; min-height: 120px; padding: 24px; border: 1px solid var(--catalog-border); border-radius: 12px; background: var(--catalog-surface); }
-.nui-catalog-note { padding: 16px 20px; border-inline-start: 3px solid var(--catalog-accent-border); background: var(--catalog-accent-soft); border-radius: 0 8px 8px 0; color: var(--catalog-text); }
-.nui-catalog-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 24px; border-top: 1px solid var(--catalog-border); margin-top: 40px; color: var(--catalog-muted); font-size: 12px; }
-.nui-catalog-swatch { display: grid; gap: 12px; padding: 12px; border: 1px solid var(--catalog-border); border-radius: 12px; }
-.nui-catalog-swatch-color { height: 112px; border: 1px solid var(--catalog-border); border-radius: 7px; }
-.nui-catalog-swatch figcaption { display: grid; gap: 4px; overflow-wrap: anywhere; }
-.nui-catalog-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.nui-catalog-table th, .nui-catalog-table td { padding: 16px 12px; border-bottom: 1px solid var(--catalog-border); text-align: start; }
-.nui-catalog-table th { color: var(--catalog-muted); font-size: 12px; font-weight: 600; }
-@media (max-width: 640px) {
-  .nui-catalog-grid, .nui-catalog-split { grid-template-columns: 1fr; }
-  .nui-catalog-topline { align-items: start; }
-  .nui-catalog-status { max-width: 140px; }
-  .nui-catalog-table th, .nui-catalog-table td { padding: 12px 6px; }
+.nui-preview[data-spacing="flush"] {
+  padding: 0;
 }
-@media (prefers-reduced-motion: reduce) {
-  .nui-preview *, .nui-preview *::before, .nui-preview *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
+.nui-preview[data-view="docs"] {
+  min-height: auto;
+  padding: 32px;
+  border-radius: 8px;
 }

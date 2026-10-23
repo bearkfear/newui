@@ -23,15 +23,15 @@ Override the theme on the document or on any container:
 
 ## Semantic state roles
 
-| Role | Radix step |
-| --- | --- |
-| Background / subtle surface | Neutral 1 / 2 |
-| Interactive surface / hover / active or selected | Tone 3 / 4 / 5 |
-| Separator / control border / hovered border | 6 / 7 / 8 |
-| Solid / solid hover | 9 / 10 |
-| Colored or supporting text / high-contrast text | 11 / 12 |
-| Focus ring | Tone 8 |
-| Disabled background / border / text | Neutral 3 / 6 / 8 |
+| Role                                             | Radix step        |
+| ------------------------------------------------ | ----------------- |
+| Background / subtle surface                      | Neutral 1 / 2     |
+| Interactive surface / hover / active or selected | Tone 3 / 4 / 5    |
+| Separator / control border / hovered border      | 6 / 7 / 8         |
+| Solid / solid hover                              | 9 / 10            |
+| Colored or supporting text / high-contrast text  | 11 / 12           |
+| Focus ring                                       | Tone 8            |
+| Disabled background / border / text              | Neutral 3 / 6 / 8 |
 
 Solid primary (Blue), success (Green), and danger (Red) use white text on steps 9 and 10 in both themes. Info (Sky) uses light Slate 12; warning (Amber) uses light Sand 12. These match the contrast tokens in [Radix Themes](https://github.com/radix-ui/themes/tree/main/packages/radix-ui-themes/src/styles/tokens/colors), rather than an automatic black/white luminance calculation. Neutral solid buttons use steps 12/11 with step 1 text. Disabled styling and the neutral solid exception are newui policies. Accessibility still needs evaluation with the actual typography and custom overrides.
 

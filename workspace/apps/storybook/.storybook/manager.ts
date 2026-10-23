@@ -1,6 +1,6 @@
 import { blue, blueDark } from "@radix-ui/colors";
-import { addons } from "storybook/manager-api";
 import { GLOBALS_UPDATED, SET_GLOBALS } from "storybook/internal/core-events";
+import { addons } from "storybook/manager-api";
 import { catalogTheme, resolveCatalogTheme } from "./theme";
 
 const preference = window.matchMedia("(prefers-color-scheme: dark)");
@@ -18,16 +18,18 @@ addons.register("newui/theme", (api) => {
     const theme = catalogTheme(mode);
     api.setOptions({ theme });
     document.documentElement.style.colorScheme = mode;
-    document.documentElement.dataset.nuiTheme = mode;
+    document.documentElement.dataset["nuiTheme"] = mode;
     const accent = mode === "dark" ? blueDark : blue;
     document.documentElement.style.setProperty("--catalog-selection", accent.blue9);
     document.documentElement.style.setProperty("--catalog-selection-hover", accent.blue10);
     document.documentElement.style.setProperty("--catalog-selection-text", theme.textInverseColor);
     document.documentElement.style.setProperty("--catalog-focus", accent.blue8);
-    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.setAttribute("content", theme.appBg));
+    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+      meta.setAttribute("content", theme.appBg);
+    });
   }
   function syncTheme({ globals }: { globals: Record<string, unknown> }) {
-    selectedTheme = typeof globals.theme === "string" ? globals.theme : "system";
+    selectedTheme = typeof globals["theme"] === "string" ? globals["theme"] : "system";
     updateTheme();
   }
   updateTheme();

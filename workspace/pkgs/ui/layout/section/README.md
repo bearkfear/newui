@@ -10,7 +10,7 @@ import "newui/styles.css";
   <Container>
     <Heading id="overview-title">Overview</Heading>
   </Container>
-</Section>
+</Section>;
 ```
 
 Native attributes, events, and DOM refs are forwarded. `class` adds classes without guaranteeing utility conflict resolution. Colors use public `--nui-*` tokens and follow `data-nui-theme="dark"` on an ancestor.

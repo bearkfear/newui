@@ -1,0 +1,21 @@
+/* Workshop presentation stays outside the distributed library stylesheet. */
+body {
+  margin: 0;
+  background: var(--nui-background);
+  color: var(--nui-foreground);
+}
+.nui-docs {
+  min-height: 100vh;
+  background: var(--nui-background);
+  color: var(--nui-foreground);
+}
+/* Keep docs links and focus indicators on their dedicated Radix roles. */
+.nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)) {
+  color: var(--nui-primary-text);
+}
+.nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)):hover {
+  color: var(--nui-primary-text-strong);
+}
+.nui-docs :where(a, button, input, select, textarea):focus-visible {
+  outline-color: var(--nui-focus-ring);
+}

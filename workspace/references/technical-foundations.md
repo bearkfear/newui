@@ -4,13 +4,13 @@
 
 ## Planned roles
 
-| Foundation | Role in the project |
-| --- | --- |
-| SolidJS | Component implementation and reactive composition. |
-| Ark UI | Interactive behaviors where suitable equivalents exist. |
-| Tailwind CSS | Utilities and style expression. |
-| tailwind-variants | Recipes, slots, and variants. |
-| Radix Colors | Color scales for themes and semantic aliases. |
+| Foundation        | Role in the project                                     |
+| ----------------- | ------------------------------------------------------- |
+| SolidJS           | Component implementation and reactive composition.      |
+| Ark UI            | Interactive behaviors where suitable equivalents exist. |
+| Tailwind CSS      | Utilities and style expression.                         |
+| tailwind-variants | Recipes, slots, and variants.                           |
+| Radix Colors      | Color scales for themes and semantic aliases.           |
 
 The [architecture](../architecture.md) records these choices. Versions, integration contracts, and behavior gaps will be evaluated during implementation.
 

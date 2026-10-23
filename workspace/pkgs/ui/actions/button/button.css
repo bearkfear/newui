@@ -1,7 +1,19 @@
 @layer components {
-  .nui-button-content { display: inline-flex; align-items: center; justify-content: center; gap: .5em; min-width: 0; }
-  .nui-button-icon { display: inline-flex; flex: none; }
-  .nui-button-icon > svg { width: var(--nui-button-icon-size); height: var(--nui-button-icon-size); }
+  .nui-button-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    min-width: 0;
+  }
+  .nui-button-icon {
+    display: inline-flex;
+    flex: none;
+  }
+  .nui-button-icon > svg {
+    width: var(--nui-button-icon-size);
+    height: var(--nui-button-icon-size);
+  }
   .nui-button-spinner {
     position: absolute;
     width: var(--nui-button-icon-size);
@@ -9,11 +21,21 @@
     border: 2px solid currentColor;
     border-inline-end-color: transparent;
     border-radius: 50%;
-    animation: nui-button-spin .7s linear infinite;
+    animation: nui-button-spin 0.7s linear infinite;
   }
-  @keyframes nui-button-spin { to { transform: rotate(360deg); } }
-  @media (prefers-reduced-motion: reduce) { .nui-button-spinner { animation: none; } }
-  [data-motion="reduced"] .nui-button-spinner { animation: none; }
+  @keyframes nui-button-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nui-button-spinner {
+      animation: none;
+    }
+  }
+  [data-motion="reduced"] .nui-button-spinner {
+    animation: none;
+  }
 }
 
 @layer utilities {
@@ -24,5 +46,7 @@
     text-decoration: none;
     box-shadow: none;
   }
-  .nui-button[data-icon-only="true"] { padding-inline: 0; }
+  .nui-button[data-icon-only="true"] {
+    padding-inline: 0;
+  }
 }

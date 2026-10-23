@@ -12,9 +12,27 @@
     "build": "bun run --cwd pkgs/ui build",
     "build:storybook": "bun run --cwd apps/storybook build",
     "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/storybook typecheck",
-    "test:storybook": "bun run --cwd apps/storybook test"
+    "test:storybook": "bun run --cwd apps/storybook test",
+    "lint": "biome lint . --error-on-warnings",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "biome check . --error-on-warnings && bun run typecheck",
+    "check:fix": "biome check --write .",
+    "hooks:install": "simple-git-hooks",
+    "prepare": "simple-git-hooks"
   },
   "patchedDependencies": {
     "storybook@10.6.1": "patches/storybook@10.6.1.patch"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.2",
+    "@types/babel__core": "7.20.5",
+    "@types/bun": "1.4.4",
+    "simple-git-hooks": "2.14.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "cd workspace && bun run check",
+    "preserveUnused": true
   }
 }

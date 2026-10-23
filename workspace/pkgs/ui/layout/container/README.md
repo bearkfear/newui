@@ -6,7 +6,7 @@ Centers content in a full-width div with responsive inline gutters (1rem, 1.5rem
 import { Container } from "newui";
 import "newui/styles.css";
 
-<Container size="md">Page content</Container>
+<Container size="md">Page content</Container>;
 ```
 
 Native attributes, events, and DOM refs are forwarded. `class` adds classes without guaranteeing utility conflict resolution. Colors use public `--nui-*` tokens and follow `data-nui-theme="dark"` on an ancestor.

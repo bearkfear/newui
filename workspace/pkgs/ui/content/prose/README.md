@@ -9,7 +9,7 @@ import "newui/styles.css";
 <Prose>
   <h2>Getting started</h2>
   <p>Write with semantic HTML or use your application’s Markdown renderer.</p>
-</Prose>
+</Prose>;
 ```
 
 Native attributes, events, and DOM refs are forwarded. `class` adds classes without guaranteeing utility conflict resolution. Colors use public `--nui-*` tokens and follow `data-nui-theme="dark"` on an ancestor.

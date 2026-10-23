@@ -32,7 +32,6 @@ The initial distribution will be an installable package with compiled CSS, globa
 ## State and open questions
 
 Button and the first layout and typography primitives are available, with Radix Colors, automatic system themes, and initial component contracts. Container, Section, Heading, Text, and Prose await user validation. Define these details before publishing installation instructions:
-
 - Dependency compatibility beyond the initial component, including Ark integration.
 - Standard registry installation and lockfile generation; registry access is restricted in the development sandbox.
 - Final installation steps, package exports, and publishing metadata.

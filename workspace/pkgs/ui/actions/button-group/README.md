@@ -3,7 +3,6 @@
 [Actions](../README.md)
 
 Groups related native buttons with `role="group"`. Supply `aria-label` or `aria-labelledby` to describe the group.
-
 - Shares `size`, `variant`, `tone`, and `disabled` with descendant Buttons through reactive Solid context. Individual appearance props override group defaults; disabling the group disables every button.
 - `orientation`: horizontal (default) or vertical.
 - `align`: start (default), center, end along the main axis; horizontal alignment follows reading direction.
@@ -19,7 +18,7 @@ import "newui/styles.css";
   <Button>Save</Button>
   <Button>Duplicate</Button>
   <Button tone="danger">Delete</Button>
-</ButtonGroup>
+</ButtonGroup>;
 ```
 
 Every button retains native Tab navigation. Grouping introduces no arrow-key navigation, selection state, or toolbar behavior. Avoid nesting ButtonGroup; joined styling and equal widths require direct Button children.

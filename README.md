@@ -17,7 +17,11 @@ Storybook starts at `http://localhost:6006`. The server stays running until stop
 Components, recipes, documentation, and stories live together in `workspace/pkgs/ui/`. Storybook loads source styles through Tailwind and provides a branded workshop with system/light/dark themes, automatic component documentation, accessibility checks, responsive viewports, and interactive examples. The catalog includes an introduction, workshop guide, color tokens, Button, and layout and typography primitives, plus button variants and groups.
 
 - `bun run storybook`: start the component catalog.
-- `bun run typecheck`: check library code, Storybook configuration, and stories.
+- `bun run check`: run Biome linting, formatting verification, and strict TypeScript checks.
+- `bun run lint`: check code quality, including file/function size and complexity limits.
+- `bun run format`: format supported source files with Biome.
+- `bun run typecheck`: check library code, stories, Storybook, and build scripts.
+- `bun run hooks:install`: install the pre-commit check (also installed during dependency installation).
 - `bun run build`: generate the library modules, declarations, and compiled CSS in `workspace/pkgs/ui/dist/`.
 - `bun run test:storybook`: validate stories, interactions, controls, themes, and accessibility in Chromium.
 - `bun run build:storybook`: generate the static catalog in `workspace/apps/storybook/storybook-static/`.

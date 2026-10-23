@@ -7,7 +7,6 @@
 In Solid UI, Text Field is the family grouping the field and its parts. `TextFieldInput` is the single-line control and `TextFieldTextArea` is the multiline control. Text Field is not a synonym for textarea.
 
 API direction approved by the user:
-
 - `Field`: shared structure for the field's label, description, error, and states.
 - `Input`: single-line control based on `<input>`.
 - `Textarea`: multiline control based on `<textarea>`.
