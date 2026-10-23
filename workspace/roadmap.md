@@ -75,7 +75,8 @@ Data Table and Charts require their own dependency evaluation; do not assume Ark
 
 - [ ] Implement the Bulma additions according to the [comparison](references/bulma.md#bulma-differences-from-solid-ui), reusing existing primitives.
 - [ ] Create complete form, settings, and listing examples.
-- [ ] Implement Hero, Footer, Media Object, Panel, and an action bar as compositions or recipes.
+- [x] Implement Hero, Footer, Media Object, Panel, and ActionBar as compound compositions with responsive Storybook examples.
+- [ ] Obtain user validation of these five compositions before creating or expanding their tests.
 - [ ] Create responsive compositions with stabilized components.
 
 ### 8. Preparation for external use
