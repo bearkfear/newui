@@ -17,11 +17,11 @@ Reference for layout, content, navigation, and composition needs that complement
 | [Navigation](../pkgs/ui/navigation/README.md) | Navbar and the static vertical menu. |
 | [Compositions](../pkgs/ui/compositions/README.md) | Hero, Footer, Media Object, Panel, and the action bar. |
 
-Icon standardization belongs to [Foundations](../pkgs/ui/foundations/README.md). Proposed formats and priorities are in the [detailed comparison](#bulma-differences-from-solid-ui). These ideas were accepted and have not been implemented yet.
+Icon standardization belongs to [Foundations](../pkgs/ui/foundations/README.md). Proposed formats and priorities are in the [detailed comparison](#bulma-differences-from-solid-ui). The first additions (Container, Section, Heading, Text, and Prose) are implemented and await user validation; the remaining ideas are planned.
 
 ## Material and provenance
 
-Temporary material: `_local/bulma/`, ignored by Git. No code has been incorporated.
+Temporary material: `_local/bulma/`, ignored by Git. No Bulma source code has been incorporated. The first primitives are original implementations using the accepted needs as design references.
 
 The comparison was recorded on 2026-10-23. Links are in the [sources](sources.md). Record origins and dates for future consultations in new notes.
 
@@ -29,7 +29,7 @@ The comparison was recorded on 2026-10-23. Links are in the [sources](sources.md
 
 This compares the official catalogs; it does not claim that a feature is impossible with Solid UI.
 “No dedicated equivalent” means there was no separate entry in the catalog consulted.
-The user accepted these additions. The recommendations define each resource's initial format; none has been implemented yet.
+The user accepted these additions. The recommendations define each resource's initial format; the first five primitives are implemented and await user validation.
 
 | Bulma | Solid UI coverage | Accepted direction |
 | --- | --- | --- |

@@ -25,18 +25,20 @@
   },
   "scripts": {
     "build": "bun scripts/build.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "colors:generate": "bun scripts/generate-colors.ts"
   },
   "devDependencies": {
-    "solid-js": "1.9.17",
-    "tailwindcss": "4.3.3",
-    "@tailwindcss/postcss": "4.3.3",
-    "postcss": "8.5.6",
-    "typescript": "5.9.3",
-    "esbuild": "0.28.2",
     "@babel/core": "7.29.7",
+    "@radix-ui/colors": "3.0.0",
+    "@tailwindcss/postcss": "4.3.3",
     "babel-preset-solid": "1.9.16",
+    "esbuild": "0.28.2",
+    "postcss": "8.5.6",
+    "solid-js": "1.9.17",
     "storybook": "10.6.1",
-    "storybook-solidjs-vite": "10.7.2"
+    "storybook-solidjs-vite": "10.7.2",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3"
   }
 }

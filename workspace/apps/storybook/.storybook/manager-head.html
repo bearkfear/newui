@@ -1,10 +1,19 @@
 <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-<meta name="theme-color" content="#2563eb" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#18191b" media="(prefers-color-scheme: dark)" />
 <meta name="description" content="The newui component workshop. Explore SolidJS components, design tokens, documentation, and accessibility." />
 <style>
   .sidebar-header img { max-width: 156px; max-height: 40px; }
   .sidebar-subheading { letter-spacing: .12em; }
-  :focus-visible { outline-offset: 3px; }
+  :focus-visible { outline-offset: 3px; outline-color: var(--catalog-focus); }
+  [data-nui-theme] .sidebar-container [data-selected="true"] {
+    background: var(--catalog-selection);
+    color: var(--catalog-selection-text);
+  }
+  [data-nui-theme] .sidebar-container [data-selected="true"]:hover {
+    background: var(--catalog-selection-hover);
+  }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   }

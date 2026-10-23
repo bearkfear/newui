@@ -20,8 +20,8 @@ Organize space, alignment, flow, and sizing independently of a specific page's c
 
 ## Ideas and references
 
-Container and Section are accepted additions inspired by Bulma. Stack addresses the need covered by Block; AutoGrid and responsive examples draw on Columns and grid needs. None of these resources has been implemented yet.
+Container and Section standardize page widths and section spacing. Stack provides sequential spacing; AutoGrid and responsive examples cover automatic item distribution. Container and Section are implemented and await user validation; Stack, AutoGrid, and the remaining layout resources are still planned.
 
 Define which primitives need their own component and which work better as a recipe or composition. Hero and Footer belong to [Compositions](../compositions/README.md), as they combine structure and content.
 
-See the [Bulma comparison](../../../references/bulma.md#bulma-differences-from-solid-ui).
+Source comparisons are recorded in [References](../../../references/README.md).

@@ -10,12 +10,20 @@ const meta = {
   render: (args) => <Button {...args} />,
   args: { children: "Button", variant: "solid", size: "md", disabled: false, type: "button", onClick: fn() },
   parameters: {
-    docs: { description: { component: "A native SolidJS button with solid and outline variants, small and medium sizes, visible keyboard focus, and semantic CSS tokens. Use the native disabled attribute when an action is unavailable. Defaults to type=button to avoid accidental form submission." } },
+    docs: { description: { component: "A native SolidJS button with five visual variants, six semantic tones, four sizes, icons, loading, rounded and full-width options, and visible keyboard focus. Use the native disabled attribute when an action is unavailable. Defaults to type=button to avoid accidental form submission." } },
   },
   argTypes: {
     children: { control: "text", description: "Visible label. Provide an accessible name for every button.", table: { category: "Content" } },
-    variant: { control: "inline-radio", options: ["solid", "outline"], description: "Visual emphasis.", table: { category: "Appearance", defaultValue: { summary: "solid" } } },
-    size: { control: "inline-radio", options: ["sm", "md"], description: "Control height: sm = 32px; md = 40px.", table: { category: "Appearance", defaultValue: { summary: "md" } } },
+    variant: { control: "inline-radio", options: ["solid", "outline", "soft", "ghost", "link"], description: "Visual emphasis.", table: { category: "Appearance", defaultValue: { summary: "solid" } } },
+    size: { control: "inline-radio", options: ["xs", "sm", "md", "lg"], description: "Control height: xs = 24px; sm = 32px; md = 40px; lg = 48px.", table: { category: "Appearance", defaultValue: { summary: "md" } } },
+    tone: { control: "select", options: ["primary", "neutral", "info", "success", "warning", "danger"] },
+    loading: { control: "boolean", description: "Disables activation, retains the accessible name and label width, and exposes aria-busy." },
+    rounded: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    responsive: { control: "boolean", description: "Use one smaller size below 640px; xs remains unchanged." },
+    iconOnly: { control: "boolean", description: "Square button; supply aria-label for an icon-only action." },
+    startIcon: { control: false },
+    endIcon: { control: false },
     disabled: { control: "boolean", description: "Prevents pointer and keyboard activation.", table: { category: "Behavior", defaultValue: { summary: "false" } } },
     type: { control: "select", options: ["button", "submit", "reset"], description: "Native button type.", table: { category: "Behavior", defaultValue: { summary: "button" } } },
     class: { control: "text", description: "Additional CSS classes; arbitrary utility conflict resolution is not guaranteed.", table: { category: "Appearance" } },
@@ -74,15 +82,52 @@ export const KeyboardInteraction: Story = {
 };
 
 export const AllVariants: Story = {
-  parameters: { controls: { disable: true }, docs: { description: { story: "Compare every variant, size, and disabled state on the current theme." } } },
-  render: () => (
-    <div class="nui-catalog"><table class="nui-catalog-table"><caption style={{ "text-align": "start", "margin-bottom": "16px" }}>Button variants and states</caption><thead><tr><th scope="col">Variant</th><th scope="col">Small</th><th scope="col">Medium</th><th scope="col">Disabled</th></tr></thead><tbody>{(["solid", "outline"] as const).map((variant) => <tr><th scope="row">{variant}</th><td><Button variant={variant} size="sm">Action</Button></td><td><Button variant={variant}>Action</Button></td><td><Button variant={variant} disabled>Action</Button></td></tr>)}</tbody></table></div>
-  ),
+  parameters: { controls: { disable: true } },
+  render: () => <div style={{ overflow: "auto" }}><table class="nui-catalog-table">
+    <caption>Button variants and semantic tones</caption>
+    <thead><tr><th scope="col">Variant</th>{(["primary", "neutral", "info", "success", "warning", "danger"] as const).map((tone) => <th scope="col">{tone}</th>)}</tr></thead>
+    <tbody>{(["solid", "outline", "soft", "ghost", "link"] as const).map((variant) => <tr><th scope="row">{variant}</th>{(["primary", "neutral", "info", "success", "warning", "danger"] as const).map((tone) => <td><Button variant={variant} tone={tone}>Action</Button></td>)}</tr>)}</tbody>
+  </table></div>,
+};
+
+export const Sizes: Story = {
+  render: () => <div style={{ display: "flex", gap: "12px", "flex-wrap": "wrap", "align-items": "center" }}>{(["xs", "sm", "md", "lg"] as const).map((size) => <Button size={size}>{size}</Button>)}</div>,
+};
+export const Soft: Story = { args: { variant: "soft" } };
+export const Ghost: Story = { args: { variant: "ghost" } };
+export const Link: Story = { args: { variant: "link" }, parameters: { docs: { description: { story: "A visual link variant remains a native button for actions. Use an anchor for navigation." } } } };
+export const Rounded: Story = { args: { rounded: true } };
+export const FullWidth: Story = { args: { fullWidth: true } };
+export const Loading: Story = { args: { loading: true, children: "Save changes" } };
+export const Responsive: Story = { args: { responsive: true, size: "lg", children: "Resize the viewport" } };
+
+const PlusIcon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>;
+const ArrowIcon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>;
+export const WithIcons: Story = { render: (args) => <Button {...args} startIcon={<PlusIcon />} endIcon={<ArrowIcon />}>Create project</Button> };
+export const IconOnly: Story = { render: (args) => <Button {...args} iconOnly aria-label="Add project"><span class="nui-button-icon" aria-hidden="true"><PlusIcon /></span></Button> };
+export const ToggleAction: Story = {
+  render: () => {
+    const [pressed, setPressed] = createSignal(false);
+    return <Button variant="outline" aria-pressed={pressed()} onClick={() => setPressed((value) => !value)}>Bold</Button>;
+  },
+};
+export const LoadingAction: Story = {
+  render: () => {
+    const [loading, setLoading] = createSignal(false);
+    return <div style={{ display: "flex", gap: "12px", "flex-wrap": "wrap" }}>
+      <Button loading={loading()} onClick={() => setLoading(true)}>Save changes</Button>
+      <Button variant="ghost" disabled={!loading()} onClick={() => setLoading(false)}>Reset demo</Button>
+    </div>;
+  },
 };
 
 export const CustomTokens: Story = {
+  args: {
+    variant: "solid"
+  },
+
   parameters: { docs: { description: { story: "Container-scoped CSS variables replace the primary palette without recompiling styles." } } },
-  render: (args) => <div style={{ "--nui-primary": "#15803d", "--nui-primary-hover": "#166534", "--nui-on-primary": "white" }}><Button {...args} /></div>,
+  render: (args) => <div style={{ "--nui-primary": "var(--nui-success)", "--nui-primary-hover": "var(--nui-success-hover)", "--nui-on-primary": "var(--nui-on-success)", "--nui-primary-soft": "var(--nui-success-soft)", "--nui-primary-soft-hover": "var(--nui-success-soft-hover)", "--nui-primary-soft-active": "var(--nui-success-soft-active)", "--nui-primary-border": "var(--nui-success-border)", "--nui-primary-border-hover": "var(--nui-success-border-hover)", "--nui-primary-text": "var(--nui-success-text)", "--nui-primary-text-strong": "var(--nui-success-text-strong)", "--nui-primary-focus": "var(--nui-success-focus)" }}><Button {...args} /></div>
 };
 
 export const RightToLeft: Story = { args: { children: "Continue →" }, globals: { direction: "rtl" }, parameters: { docs: { description: { story: "Inspect native reading direction. Directional icons and translated labels are the consuming application's responsibility." } } } };

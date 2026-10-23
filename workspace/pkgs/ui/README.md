@@ -19,6 +19,6 @@ The publishable library lives here. Components, recipes, contracts, examples, an
 - [Compositions](compositions/README.md): combinations for complete interface scenarios.
 - [Utilities](utilities/README.md): reusable formatting and other supporting functions.
 
-The initial Button is implemented; the rest of the inventory is planned or under evaluation. Public APIs for future utilities have not been defined. Keep utilities in this package initially; extract a separate package only when actual reuse justifies it.
+Button, Container, Section, Heading, Text, and Prose are implemented with colocated stories. The layout and typography additions await user validation; the remaining inventory is planned or under evaluation. Public APIs for future utilities have not been defined. Keep utilities in this package initially; extract a separate package only when actual reuse justifies it.
 
 Run the coordinating commands from `workspace/`. This package owns its build script and TypeScript configuration and generates its distribution in `dist/`. The private flag stays enabled until publication is ready.

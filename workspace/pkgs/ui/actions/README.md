@@ -8,7 +8,7 @@ Enable command execution and selection of actions available in context.
 
 ## Planned inventory
 
-- Button and IconButton.
+- Button and ButtonGroup (implemented); IconButton remains planned.
 - CloseButton as an IconButton variant with an accessible name.
 - Toggle and Toggle Group.
 - Dropdown Menu, Context Menu, and Menubar.
@@ -16,7 +16,7 @@ Enable command execution and selection of actions available in context.
 
 ## Ideas and boundaries
 
-CloseButton addresses the need identified through Bulma's Delete. Its initial format is a variant; this does not require a separate public export.
+CloseButton provides a compact, accessible close action. Its initial format is a variant; this does not require a separate public export.
 
 Command menus belong to this area. Groups of page links belong to [Navigation](../navigation/README.md), even when they look similar. Toolbar still needs behavioral evaluation; the simple action bar belongs to [Compositions](../compositions/README.md).
 

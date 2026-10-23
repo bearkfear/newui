@@ -15,11 +15,14 @@
       "devDependencies": {
         "@axe-core/playwright": "4.14.0",
         "@playwright/test": "1.64.1",
+        "@radix-ui/colors": "3.0.0",
         "@storybook/addon-a11y": "10.6.1",
         "@storybook/addon-docs": "10.6.1",
         "@storybook/addon-links": "10.6.1",
         "@tailwindcss/postcss": "4.3.3",
         "@types/node": "26.6.5",
+        "@types/react": "19.3.0",
+        "react": "19.3.1",
         "storybook": "10.6.1",
         "storybook-solidjs-vite": "10.7.2",
         "typescript": "5.9.3",
@@ -35,6 +38,7 @@
       },
       "devDependencies": {
         "@babel/core": "7.29.7",
+        "@radix-ui/colors": "3.0.0",
         "@tailwindcss/postcss": "4.3.3",
         "babel-preset-solid": "1.9.16",
         "esbuild": "0.28.2",
@@ -255,6 +259,8 @@
     "@oxc-resolver/binding-win32-x64-msvc": ["@oxc-resolver/binding-win32-x64-msvc@11.21.2", "", { "os": "win32", "cpu": "x64" }, "sha512-VPoCAhKvCQTlG7vxqaBXcmuvbh77BfnGXj8g0pbvVXpm1F/R8rDVwqIWcEbMzrI1JvJlm8v7T9uMVQb6UctMRg=="],
 
     "@playwright/test": ["@playwright/test@1.64.1", "", { "dependencies": { "playwright": "1.64.1" }, "bin": { "playwright": "cli.js" } }, "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg=="],
+
+    "@radix-ui/colors": ["@radix-ui/colors@3.0.0", "", {}, "sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg=="],
 
     "@rollup/rollup-android-arm-eabi": ["@rollup/rollup-android-arm-eabi@4.65.0", "", { "os": "android", "cpu": "arm" }, "sha512-t2AnVba25baFdq7gczzS13JyVcdubLVbFX1X04mxrggDrTQPUXNv3XM0k9H1hr5tqvg7AVvtQ720QHAj0iYqhg=="],
 

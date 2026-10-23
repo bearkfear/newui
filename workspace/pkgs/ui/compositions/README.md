@@ -20,7 +20,7 @@ Bring together component combinations that address complete interface scenarios.
 
 ## Ideas and boundaries
 
-Hero, Footer, Media Object, Panel, and the action bar incorporate accepted Bulma additions. They will be developed after the necessary primitives. Level inspires the action bar; a potential Toolbar with its own behavior requires separate evaluation.
+Hero, Footer, Media Object, Panel, and the action bar are planned compositions. They will be developed after the necessary primitives. The action bar groups related actions; a potential Toolbar with its own behavior requires separate evaluation.
 
 Each composition should explain which pieces it uses, how it responds to different widths, and what consumers can replace. Navbar's primary area is [Navigation](../navigation/README.md); Image/Figure and Box/Surface belong to [Content](../content/README.md).
 

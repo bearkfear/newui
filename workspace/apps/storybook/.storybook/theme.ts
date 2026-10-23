@@ -1,7 +1,15 @@
+import { blue, blueDark, slate, slateDark } from "@radix-ui/colors";
 import { create } from "storybook/theming/create";
+
+export function resolveCatalogTheme(preference: unknown, systemDark: boolean): "light" | "dark" {
+  if (preference === "light" || preference === "dark") return preference;
+  return systemDark ? "dark" : "light";
+}
 
 export function catalogTheme(base: "light" | "dark") {
   const dark = base === "dark";
+  const gray = dark ? slateDark : slate;
+  const accent = dark ? blueDark : blue;
   return create({
     base,
     brandTitle: "newui · component workshop",
@@ -10,22 +18,28 @@ export function catalogTheme(base: "light" | "dark") {
     brandTarget: "_self",
     fontBase: '"Inter", ui-sans-serif, system-ui, sans-serif',
     fontCode: '"SFMono-Regular", Consolas, "Liberation Mono", monospace',
-    colorPrimary: dark ? "#93c5fd" : "#2563eb",
-    colorSecondary: dark ? "#93c5fd" : "#2563eb",
-    appBg: dark ? "#0b1220" : "#f5f7fb",
-    appContentBg: dark ? "#111b2c" : "#ffffff",
-    appPreviewBg: dark ? "#0b1220" : "#ffffff",
-    appBorderColor: dark ? "#2a3950" : "#dce3ee",
+    colorPrimary: accent.blue9,
+    colorSecondary: accent.blue9,
+    appBg: gray.slate2,
+    appContentBg: gray.slate1,
+    appHoverBg: gray.slate4,
+    appPreviewBg: gray.slate1,
+    appBorderColor: gray.slate6,
     appBorderRadius: 8,
-    textColor: dark ? "#e5edf9" : "#17243b",
-    textMutedColor: dark ? "#a8b7ce" : "#52647d",
-    barBg: dark ? "#111b2c" : "#ffffff",
-    barTextColor: dark ? "#a8b7ce" : "#52647d",
-    barSelectedColor: dark ? "#93c5fd" : "#2563eb",
-    barHoverColor: dark ? "#bfdbfe" : "#1d4ed8",
-    inputBg: dark ? "#0b1220" : "#ffffff",
-    inputBorder: dark ? "#40516c" : "#bdcadd",
-    inputTextColor: dark ? "#e5edf9" : "#17243b",
+    textInverseColor: "white",
+    textColor: gray.slate12,
+    textMutedColor: gray.slate11,
+    barBg: gray.slate2,
+    barTextColor: gray.slate11,
+    barSelectedColor: accent.blue11,
+    barHoverColor: accent.blue12,
+    buttonBg: gray.slate3,
+    buttonBorder: gray.slate7,
+    booleanBg: gray.slate3,
+    booleanSelectedBg: accent.blue9,
+    inputBg: gray.slate1,
+    inputBorder: gray.slate7,
+    inputTextColor: gray.slate12,
     inputBorderRadius: 6,
   });
 }

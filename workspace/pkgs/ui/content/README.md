@@ -6,7 +6,11 @@
 
 Present text, identity, and information, including their organization and disclosure within the page.
 
-## Planned inventory
+## Initial implementation
+
+Heading, Text, and Prose are implemented with recipes, semantic tokens, and colocated Storybook examples. They await user validation before new automated tests are written.
+
+## Inventory
 
 - Heading, Text, and Prose.
 - Card, Badge, Avatar, and Separator.
@@ -17,7 +21,7 @@ Present text, identity, and information, including their organization and disclo
 
 ## Ideas and boundaries
 
-Heading, Text, and Prose are accepted priorities inspired by Bulma's Title/Subtitle and Content. Image/Figure and Box/Surface are also accepted additions; their public names and final formats remain under evaluation.
+Heading, Text, and Prose cover interface typography and editorial content. Image/Figure and Box/Surface are also accepted additions; their public names and final formats remain under evaluation.
 
 Accordion and Collapsible belong here because they organize content presentation. Timeline presents a sequence; visualizations for comparing values belong to [Data](../data/README.md). Carousel is initially classified as Content, with behavior and composition still to be defined.
 

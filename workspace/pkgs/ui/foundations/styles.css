@@ -1,11 +1,22 @@
 @import "tailwindcss" prefix(nui) source(none);
 @import "./tokens.css";
+@import "../actions/button/button.css";
+@import "../actions/button-group/button-group.css";
+@import "../content/prose/prose.css";
 
-@source "../actions/button/button.recipe.ts";
+@source "../actions/**/*.recipe.ts";
+@source "../layout/**/*.recipe.ts";
+@source "../content/**/*.recipe.ts";
 
 @theme inline {
+  --color-background: var(--nui-background);
+  --color-focus-ring: var(--nui-focus-ring);
   --color-primary: var(--nui-primary);
   --color-primary-hover: var(--nui-primary-hover);
   --color-on-primary: var(--nui-on-primary);
   --color-muted: var(--nui-muted);
+  --color-foreground: var(--nui-foreground);
+  --color-muted-foreground: var(--nui-muted-foreground);
+  --color-surface: var(--nui-surface);
+  --color-border: var(--nui-border);
 }

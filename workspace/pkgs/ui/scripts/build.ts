@@ -10,6 +10,7 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 process.chdir(root);
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist", { recursive: true });
+await writeFile("dist/RADIX_COLORS_LICENSE.txt", await readFile(new URL("./LICENSE", import.meta.resolve("@radix-ui/colors")), "utf8"));
 
 // Keep JSX for the consumer's Solid compiler, including its SSR target.
 await build({

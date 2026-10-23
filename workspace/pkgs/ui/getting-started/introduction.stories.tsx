@@ -35,7 +35,7 @@ export const Overview: Story = {
           <div class="nui-catalog-stack"><p class="nui-catalog-eyebrow">Planned package usage</p><pre><code>{'import { Button } from "newui";\nimport "newui/styles.css";\n\n<Button variant="solid" size="md">\n  Start building\n</Button>'}</code></pre><p style={{ color: "var(--catalog-muted)", "font-size": "13px" }}>Compiled CSS, nui-prefixed utilities, and global Tailwind Preflight. Consumers will not need a Tailwind build.</p></div>
         </div>
       </section>
-      <aside class="nui-catalog-note">newui is in early development and is not published. Colors are provisional; Radix scales and Ark behaviors remain planned.</aside>
+      <aside class="nui-catalog-note">newui is in early development and is not published. Colors use official Radix scales with automatic system themes. Ark behaviors remain planned.</aside>
       <footer class="nui-catalog-footer"><span>newui / Component development catalog</span><a href="?path=/story/getting-started-workshop-guide--overview" target="_top">Learn your way around →</a></footer>
     </main>
   ),

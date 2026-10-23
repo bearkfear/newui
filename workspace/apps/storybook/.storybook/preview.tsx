@@ -1,7 +1,6 @@
-import { createSignal, onCleanup } from "solid-js";
 import type { Preview } from "storybook-solidjs-vite";
 import { createJSXDecorator } from "storybook-solidjs-vite";
-import { catalogTheme } from "./theme";
+import { CatalogDocsContainer } from "./docs-container";
 import "../../../pkgs/ui/foundations/styles.css";
 import "./preview.css";
 
@@ -43,22 +42,14 @@ const preview: Preview = {
   initialGlobals: { theme: "system", direction: "ltr", spacing: "comfortable", motion: "system" },
   decorators: [
     createJSXDecorator((Story, context) => {
-      const preference = window.matchMedia("(prefers-color-scheme: dark)");
-      const [systemDark, setSystemDark] = createSignal(preference.matches);
-      const update = () => setSystemDark(preference.matches);
-      preference.addEventListener("change", update);
-      onCleanup(() => preference.removeEventListener("change", update));
-      const theme = () => context.globals.theme === "system"
-        ? (systemDark() ? "dark" : "light") : context.globals.theme;
       return (
         <div
           class="nui-preview"
-          data-nui-theme={theme()}
+          data-nui-theme={context.globals.theme}
           data-spacing={context.globals.spacing}
           data-motion={context.globals.motion}
           data-view={context.viewMode}
           dir={context.globals.direction}
-          style={{ "color-scheme": theme() }}
         >
           <Story />
         </div>
@@ -69,7 +60,7 @@ const preview: Preview = {
     layout: "fullscreen",
     controls: { expanded: true, sort: "requiredFirst", matchers: { color: /(background|color)$/i, date: /Date$/i } },
     actions: { disable: false },
-    docs: { theme: catalogTheme("light"), codePanel: true, source: { type: "code" }, toc: true },
+    docs: { container: CatalogDocsContainer, codePanel: true, source: { type: "code" }, toc: true },
     a11y: {
       test: "error",
       options: { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] } },

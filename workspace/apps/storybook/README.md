@@ -23,7 +23,7 @@ The Playwright suite starts a development server automatically, reusing port 600
 ## Workshop features
 
 - Local newui wordmarks and favicon, themed navigation, and a responsive introduction.
-- System, light, and dark preview themes; the manager follows the same selection. Docs use a dedicated light theme with individually themed component previews.
+- System, light, and dark preview themes; the manager follows the same selection. Manager, documentation, controls, and previews share Radix Slate/Blue roles and follow the toolbar selection, including live system preference changes.
 - LTR/RTL reading direction, comfortable/compact/flush canvas padding, and reduced-motion simulation. Canvas padding does not modify component density. The reduced-motion override covers descendants of the preview wrapper; body-level portal content needs its own integration when introduced.
 - Mobile (320px and 390px), tablet (768px), and desktop (1440px) viewports, plus Storybook's built-in zoom, measure, outlines, and grid tools. Independent background switching is disabled so component surfaces remain consistent with the selected theme.
 - Autodocs, props descriptions and categories, source/code panels, controls, callback spies, and accessibility/vision tools. Storybook Links is available for future programmatic navigation.
@@ -32,11 +32,11 @@ The Playwright suite starts a development server automatically, reusing port 600
 
 ## Extending the catalog
 
-Add `*.stories.tsx` next to a component in `pkgs/ui/`. Set `component`, `tags: ["autodocs"]`, explicit variant controls, default args, and descriptions. Use `fn()` from `storybook/test` for callback spies and `play` functions for meaningful behavior checks. JSX decorators must use the Solid adapter's `createJSXDecorator` to preserve reactive args/globals without duplicate mounts.
+Add `*.stories.tsx` next to a component in `pkgs/ui/`. Set `component`, `tags: ["autodocs"]`, explicit variant controls, default args, and descriptions. Use `fn()` from `storybook/test` for callback spies. Add new `play` functions or tests only after user validation and explicit authorization, following the project validation convention. JSX decorators must use the Solid adapter's `createJSXDecorator` to preserve reactive args/globals without duplicate mounts.
 
-Navigation follows the library's functional categories. Empty categories are not fabricated. Use the Workshop guide story for the workflow. Colors and Button styling remain provisional, and the public website remains a separate decision.
+Navigation follows the library's functional categories. Empty categories are not fabricated. Use the Workshop guide story for the workflow. Colors use official Radix scales; the public website remains a separate decision.
 
-Configuration lives in `.storybook/`: `main.ts` owns addons/build integration, `theme.ts` owns manager/docs branding, `manager.ts` synchronizes the manager theme, and `preview.tsx`/`preview.css` own the component canvas. Static branding lives in `public/`; it uses relative URLs for subdirectory hosting. Typography uses local system stacks without external font requests.
+Configuration lives in `.storybook/`: `main.ts` owns addons/build integration, `theme.ts` owns manager/docs branding, `manager.ts` synchronizes the manager theme, `docs-container.ts` synchronizes the React-based documentation container, and `preview.tsx`/`preview.css` own the component canvas. Static branding lives in `public/`; it uses relative URLs for subdirectory hosting. Typography uses local system stacks without external font requests.
 
 References: [Storybook theming](https://storybook.js.org/docs/configure/user-interface/theming), [viewports](https://storybook.js.org/docs/essentials/viewport), and [accessibility](https://storybook.js.org/docs/writing-tests/accessibility-testing).
 

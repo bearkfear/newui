@@ -24,7 +24,7 @@ Input and Textarea must work independently or within Field, with an accessible n
 
 ## Ideas and questions
 
-The Field contract, InputGroup, field groups, and File Upload incorporate needs identified through Bulma. These additions were accepted and have not been implemented yet.
+The Field contract, InputGroup, field groups, and File Upload standardize form composition. These additions were accepted and have not been implemented yet.
 
 Define ID, description, and error associations, controlled and uncontrolled states, and validation integration. Distinguish native selection from a custom Select. Complete examples belong to [Compositions](../compositions/README.md).
 

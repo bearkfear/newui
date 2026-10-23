@@ -2,12 +2,33 @@
 
 [Actions](../README.md)
 
-An initial native button implementation with solid/outline variants, small/medium sizes, disabled and focus styles, and a safe default `type="button"`. The final visual design remains under development.
+A native button with a safe default `type="button"`. Colors and states follow the official Radix scales through semantic tokens; see [Themes](../../foundations/themes.md).
 
-## Development examples
+## API
 
-From `workspace/`, run `bun run dev` and open Actions / Button in Storybook. Stories cover the default appearance, outline, small size, disabled state, a reactive counter, and scoped token customization. Controls let you edit properties; the theme toolbar switches between light and dark.
+- `variant`: solid (default), outline, soft, ghost, link. The link appearance still performs an action; use an anchor for navigation.
+- `tone`: primary (default), neutral, info, success, warning, danger.
+- `size`: xs (24px), sm (32px), md (40px, default), lg (48px).
+- `responsive`: use one smaller size below 640px; xs stays unchanged.
+- `rounded`: pill corners. `fullWidth`: fill the available width.
+- `startIcon` / `endIcon`: decorative JSX icon slots with size and alignment applied to direct SVG children.
+- `iconOnly`: square button; supply `aria-label` and an icon with the `nui-button-icon` class.
+- `loading`: disable activation, expose `aria-busy`, and overlay a spinner while preserving label width and the accessible name. Applications own async state and announcements of results.
+- Native attributes, `disabled` (neutral background/border/text without opacity), `aria-pressed`, events, and refs are forwarded.
 
-Recipes use tailwind-variants' lightweight entry without class merging. Use variants, scoped tokens, or the `style` property to change existing styles. The `class` property supports additive consumer styles.
+```tsx
+import { Button, ButtonGroup } from "newui";
+import "newui/styles.css";
 
-The colors are provisional; the planned Radix scales have not been integrated yet. Behavior comes from the native button. Ark integration remains planned for components that need it.
+<Button tone="success" loading={saving()}>Save changes</Button>
+<ButtonGroup variant="outline" aria-label="Document actions">
+  <Button>Duplicate</Button>
+  <Button tone="danger">Delete</Button>
+</ButtonGroup>
+```
+
+ButtonGroup shares size, variant, tone, and disabled state. Explicit button variants override group defaults; a disabled group disables all its buttons. Native Tab navigation is preserved.
+
+Run `bun run dev` from `workspace/` and open Actions / Button and Actions / Button group. New examples await user validation; no new automated tests were added. Existing interaction examples remain in place.
+
+Recipes use tailwind-variants' lightweight entry without class merging. Use variants, scoped public `--nui-*` tokens, or `style` to customize. `class` is additive and does not promise utility conflict resolution. Ark is not required for native button behavior.

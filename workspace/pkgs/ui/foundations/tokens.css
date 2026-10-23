@@ -1,14 +1,167 @@
-/* Provisional colors; the Radix color mapping is still to be implemented. */
-:root {
-  --nui-primary: #2563eb;
-  --nui-primary-hover: #1d4ed8;
-  --nui-on-primary: #ffffff;
-  --nui-muted: #eff6ff;
-}
+@import "./radix.css";
 
-[data-nui-theme="dark"] {
-  --nui-primary: #93c5fd;
-  --nui-primary-hover: #bfdbfe;
-  --nui-on-primary: #172554;
-  --nui-muted: #172554;
+/* Native color-scheme follows the OS and supports nested explicit themes. */
+:root { color-scheme: light dark; }
+[data-nui-theme="light"] { color-scheme: light; }
+[data-nui-theme="dark"] { color-scheme: dark; }
+[data-nui-theme="system"] { color-scheme: light dark; }
+
+:root {
+  --nui-background: var(--nui-slate-1);
+  --nui-surface: var(--nui-slate-2);
+  --nui-foreground: var(--nui-slate-12);
+  --nui-muted-foreground: var(--nui-slate-11);
+  --nui-border: var(--nui-slate-6);
+  --nui-control-border: var(--nui-slate-7);
+  --nui-control-border-hover: var(--nui-slate-8);
+  --nui-disabled-background: var(--nui-slate-3);
+  --nui-disabled-foreground: var(--nui-slate-8);
+  --nui-disabled-border: var(--nui-slate-6);
+  --nui-focus-ring: var(--nui-blue-8);
+
+  --nui-primary-1: var(--nui-blue-1);
+  --nui-primary-2: var(--nui-blue-2);
+  --nui-primary-3: var(--nui-blue-3);
+  --nui-primary-4: var(--nui-blue-4);
+  --nui-primary-5: var(--nui-blue-5);
+  --nui-primary-6: var(--nui-blue-6);
+  --nui-primary-7: var(--nui-blue-7);
+  --nui-primary-8: var(--nui-blue-8);
+  --nui-primary-9: var(--nui-blue-9);
+  --nui-primary-10: var(--nui-blue-10);
+  --nui-primary-11: var(--nui-blue-11);
+  --nui-primary-12: var(--nui-blue-12);
+  --nui-primary: var(--nui-primary-9);
+  --nui-primary-hover: var(--nui-primary-10);
+  --nui-primary-soft: var(--nui-primary-3);
+  --nui-primary-soft-hover: var(--nui-primary-4);
+  --nui-primary-soft-active: var(--nui-primary-5);
+  --nui-primary-border: var(--nui-primary-7);
+  --nui-primary-border-hover: var(--nui-primary-8);
+  --nui-primary-text: var(--nui-primary-11);
+  --nui-primary-text-strong: var(--nui-primary-12);
+  --nui-primary-focus: var(--nui-primary-8);
+  --nui-on-primary: var(--nui-on-blue);
+
+  --nui-neutral-1: var(--nui-slate-1);
+  --nui-neutral-2: var(--nui-slate-2);
+  --nui-neutral-3: var(--nui-slate-3);
+  --nui-neutral-4: var(--nui-slate-4);
+  --nui-neutral-5: var(--nui-slate-5);
+  --nui-neutral-6: var(--nui-slate-6);
+  --nui-neutral-7: var(--nui-slate-7);
+  --nui-neutral-8: var(--nui-slate-8);
+  --nui-neutral-9: var(--nui-slate-9);
+  --nui-neutral-10: var(--nui-slate-10);
+  --nui-neutral-11: var(--nui-slate-11);
+  --nui-neutral-12: var(--nui-slate-12);
+  --nui-neutral: var(--nui-neutral-12);
+  --nui-neutral-hover: var(--nui-neutral-11);
+  --nui-neutral-soft: var(--nui-neutral-3);
+  --nui-neutral-soft-hover: var(--nui-neutral-4);
+  --nui-neutral-soft-active: var(--nui-neutral-5);
+  --nui-neutral-border: var(--nui-neutral-7);
+  --nui-neutral-border-hover: var(--nui-neutral-8);
+  --nui-neutral-text: var(--nui-neutral-11);
+  --nui-neutral-text-strong: var(--nui-neutral-12);
+  --nui-neutral-focus: var(--nui-neutral-8);
+  --nui-on-neutral: var(--nui-slate-1);
+
+  --nui-info-1: var(--nui-sky-1);
+  --nui-info-2: var(--nui-sky-2);
+  --nui-info-3: var(--nui-sky-3);
+  --nui-info-4: var(--nui-sky-4);
+  --nui-info-5: var(--nui-sky-5);
+  --nui-info-6: var(--nui-sky-6);
+  --nui-info-7: var(--nui-sky-7);
+  --nui-info-8: var(--nui-sky-8);
+  --nui-info-9: var(--nui-sky-9);
+  --nui-info-10: var(--nui-sky-10);
+  --nui-info-11: var(--nui-sky-11);
+  --nui-info-12: var(--nui-sky-12);
+  --nui-info: var(--nui-info-9);
+  --nui-info-hover: var(--nui-info-10);
+  --nui-info-soft: var(--nui-info-3);
+  --nui-info-soft-hover: var(--nui-info-4);
+  --nui-info-soft-active: var(--nui-info-5);
+  --nui-info-border: var(--nui-info-7);
+  --nui-info-border-hover: var(--nui-info-8);
+  --nui-info-text: var(--nui-info-11);
+  --nui-info-text-strong: var(--nui-info-12);
+  --nui-info-focus: var(--nui-info-8);
+  --nui-on-info: var(--nui-on-sky);
+
+  --nui-success-1: var(--nui-green-1);
+  --nui-success-2: var(--nui-green-2);
+  --nui-success-3: var(--nui-green-3);
+  --nui-success-4: var(--nui-green-4);
+  --nui-success-5: var(--nui-green-5);
+  --nui-success-6: var(--nui-green-6);
+  --nui-success-7: var(--nui-green-7);
+  --nui-success-8: var(--nui-green-8);
+  --nui-success-9: var(--nui-green-9);
+  --nui-success-10: var(--nui-green-10);
+  --nui-success-11: var(--nui-green-11);
+  --nui-success-12: var(--nui-green-12);
+  --nui-success: var(--nui-success-9);
+  --nui-success-hover: var(--nui-success-10);
+  --nui-success-soft: var(--nui-success-3);
+  --nui-success-soft-hover: var(--nui-success-4);
+  --nui-success-soft-active: var(--nui-success-5);
+  --nui-success-border: var(--nui-success-7);
+  --nui-success-border-hover: var(--nui-success-8);
+  --nui-success-text: var(--nui-success-11);
+  --nui-success-text-strong: var(--nui-success-12);
+  --nui-success-focus: var(--nui-success-8);
+  --nui-on-success: var(--nui-on-green);
+
+  --nui-warning-1: var(--nui-amber-1);
+  --nui-warning-2: var(--nui-amber-2);
+  --nui-warning-3: var(--nui-amber-3);
+  --nui-warning-4: var(--nui-amber-4);
+  --nui-warning-5: var(--nui-amber-5);
+  --nui-warning-6: var(--nui-amber-6);
+  --nui-warning-7: var(--nui-amber-7);
+  --nui-warning-8: var(--nui-amber-8);
+  --nui-warning-9: var(--nui-amber-9);
+  --nui-warning-10: var(--nui-amber-10);
+  --nui-warning-11: var(--nui-amber-11);
+  --nui-warning-12: var(--nui-amber-12);
+  --nui-warning: var(--nui-warning-9);
+  --nui-warning-hover: var(--nui-warning-10);
+  --nui-warning-soft: var(--nui-warning-3);
+  --nui-warning-soft-hover: var(--nui-warning-4);
+  --nui-warning-soft-active: var(--nui-warning-5);
+  --nui-warning-border: var(--nui-warning-7);
+  --nui-warning-border-hover: var(--nui-warning-8);
+  --nui-warning-text: var(--nui-warning-11);
+  --nui-warning-text-strong: var(--nui-warning-12);
+  --nui-warning-focus: var(--nui-warning-8);
+  --nui-on-warning: var(--nui-on-amber);
+
+  --nui-danger-1: var(--nui-red-1);
+  --nui-danger-2: var(--nui-red-2);
+  --nui-danger-3: var(--nui-red-3);
+  --nui-danger-4: var(--nui-red-4);
+  --nui-danger-5: var(--nui-red-5);
+  --nui-danger-6: var(--nui-red-6);
+  --nui-danger-7: var(--nui-red-7);
+  --nui-danger-8: var(--nui-red-8);
+  --nui-danger-9: var(--nui-red-9);
+  --nui-danger-10: var(--nui-red-10);
+  --nui-danger-11: var(--nui-red-11);
+  --nui-danger-12: var(--nui-red-12);
+  --nui-danger: var(--nui-danger-9);
+  --nui-danger-hover: var(--nui-danger-10);
+  --nui-danger-soft: var(--nui-danger-3);
+  --nui-danger-soft-hover: var(--nui-danger-4);
+  --nui-danger-soft-active: var(--nui-danger-5);
+  --nui-danger-border: var(--nui-danger-7);
+  --nui-danger-border-hover: var(--nui-danger-8);
+  --nui-danger-text: var(--nui-danger-11);
+  --nui-danger-text-strong: var(--nui-danger-12);
+  --nui-danger-focus: var(--nui-danger-8);
+  --nui-on-danger: var(--nui-on-red);
+
+  --nui-muted: var(--nui-primary-soft);
 }

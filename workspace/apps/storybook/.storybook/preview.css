@@ -1,13 +1,22 @@
 /* Workshop presentation stays outside the distributed library stylesheet. */
-body { margin: 0; }
+body { margin: 0; background: var(--nui-background); color: var(--nui-foreground); }
+.nui-docs { min-height: 100vh; background: var(--nui-background); color: var(--nui-foreground); }
+/* Keep docs links and focus indicators on their dedicated Radix roles. */
+.nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)) { color: var(--nui-primary-text); }
+.nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)):hover { color: var(--nui-primary-text-strong); }
+.nui-docs :where(a, button, input, select, textarea):focus-visible { outline-color: var(--nui-focus-ring); }
+
 .nui-preview {
-  --catalog-bg: #ffffff;
-  --catalog-surface: #f5f7fb;
-  --catalog-text: #17243b;
-  --catalog-muted: #52647d;
-  --catalog-border: #dce3ee;
-  --catalog-accent: #2563eb;
-  --catalog-accent-soft: #eff6ff;
+  --catalog-bg: var(--nui-background);
+  --catalog-surface: var(--nui-surface);
+  --catalog-text: var(--nui-foreground);
+  --catalog-muted: var(--nui-muted-foreground);
+  --catalog-border: var(--nui-border);
+  --catalog-accent: var(--nui-primary-text);
+  --catalog-accent-soft: var(--nui-primary-soft);
+  --catalog-accent-hover: var(--nui-primary-text-strong);
+  --catalog-focus: var(--nui-focus-ring);
+  --catalog-accent-border: var(--nui-primary-border);
   box-sizing: border-box;
   min-height: 100vh;
   padding: clamp(24px, 4vw, 64px);
@@ -17,15 +26,6 @@ body { margin: 0; }
   font-size: 15px;
   line-height: 1.65;
   text-align: start;
-}
-.nui-preview[data-nui-theme="dark"] {
-  --catalog-bg: #0b1220;
-  --catalog-surface: #111b2c;
-  --catalog-text: #e5edf9;
-  --catalog-muted: #a8b7ce;
-  --catalog-border: #2a3950;
-  --catalog-accent: #93c5fd;
-  --catalog-accent-soft: #172554;
 }
 .nui-preview[data-spacing="compact"] { padding: 16px; }
 .nui-preview[data-spacing="flush"] { padding: 0; }
@@ -45,7 +45,8 @@ body { margin: 0; }
 .nui-catalog h2 { font-size: 24px; font-weight: 650; line-height: 1.25; letter-spacing: -.025em; }
 .nui-catalog h3 { font-size: 17px; font-weight: 650; }
 .nui-catalog a { color: var(--catalog-accent); text-underline-offset: 4px; }
-.nui-catalog a:focus-visible { outline: 2px solid var(--catalog-accent); outline-offset: 5px; border-radius: 2px; }
+.nui-catalog a:hover { color: var(--catalog-accent-hover); }
+.nui-catalog a:focus-visible { outline: 2px solid var(--catalog-focus); outline-offset: 5px; border-radius: 2px; }
 .nui-catalog code, .nui-catalog pre { font-family: "SFMono-Regular", Consolas, monospace; font-size: 12px; }
 .nui-catalog pre { overflow-x: auto; padding: 24px; border: 1px solid var(--catalog-border); border-radius: 12px; background: var(--catalog-surface); line-height: 1.8; }
 .nui-catalog ul { padding-inline-start: 20px; list-style: disc; }
@@ -66,7 +67,7 @@ body { margin: 0; }
 .nui-catalog-split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
 .nui-catalog-stack { display: grid; gap: 16px; }
 .nui-catalog-demo { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; min-height: 120px; padding: 24px; border: 1px solid var(--catalog-border); border-radius: 12px; background: var(--catalog-surface); }
-.nui-catalog-note { padding: 16px 20px; border-inline-start: 3px solid var(--catalog-accent); background: var(--catalog-accent-soft); border-radius: 0 8px 8px 0; color: var(--catalog-text); }
+.nui-catalog-note { padding: 16px 20px; border-inline-start: 3px solid var(--catalog-accent-border); background: var(--catalog-accent-soft); border-radius: 0 8px 8px 0; color: var(--catalog-text); }
 .nui-catalog-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 24px; border-top: 1px solid var(--catalog-border); margin-top: 40px; color: var(--catalog-muted); font-size: 12px; }
 .nui-catalog-swatch { display: grid; gap: 12px; padding: 12px; border: 1px solid var(--catalog-border); border-radius: 12px; }
 .nui-catalog-swatch-color { height: 112px; border: 1px solid var(--catalog-border); border-radius: 7px; }

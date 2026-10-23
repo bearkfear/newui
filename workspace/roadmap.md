@@ -19,7 +19,7 @@ The catalog starts early and grows with each component.
 ### 1. Visual foundation and minimum catalog
 
 - [ ] Set up SolidJS, TypeScript, Tailwind, tailwind-variants, and Ark.
-- [ ] Integrate Radix scales and light/dark themes with semantic tokens.
+- [x] Integrate official Radix scales, semantic interaction state tokens, automatic system themes, and nested light/dark scopes.
 - [ ] Define typography, dimensions, visible focus, disabled states, and reduced motion.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
 - [ ] Implement Button, Card, and the text field family; use Dialog to validate composition and overlays.
@@ -29,7 +29,8 @@ The catalog starts early and grows with each component.
 
 - [ ] Badge, Separator, Skeleton, Avatar, and Aspect Ratio.
 - [ ] Flex and Grid.
-- [ ] Implement Container, Section, Text, Heading, and Prose, inspired by the gaps identified through Bulma.
+- [x] Implement Container, Section, Text, Heading, and Prose, inspired by the gaps identified through Bulma.
+- [ ] Obtain user validation of these five primitives in Storybook before creating or expanding their tests.
 
 ### 3. Forms
 
