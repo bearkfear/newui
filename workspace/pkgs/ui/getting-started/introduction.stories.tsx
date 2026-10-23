@@ -1,19 +1,42 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
+import { Button } from "../actions/button/button";
 
-const meta = { title: "Getting started/Introduction" } satisfies Meta;
+const meta = {
+  title: "Getting started/Introduction",
+  parameters: { controls: { disable: true }, docs: { disable: true } },
+} satisfies Meta;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Overview: Story = {
   render: () => (
-    <article style={{ display: "grid", gap: "1rem", "max-width": "44rem", "line-height": "1.6" }}>
-      <h1 style={{ "font-size": "2rem", "font-weight": "700" }}>newui</h1>
-      <p>A SolidJS UI library with its own visual identity. This Storybook is the component development catalog; the public website is still to be defined.</p>
-      <p>Start with Actions / Button to explore variants, sizes, disabled state, reactivity, and token customization. Use the theme toolbar to compare light and dark appearances.</p>
-      <p>Components, recipes, documentation, and stories live together inside the workspace. Other catalog areas will appear as their components are implemented.</p>
-      <p>The planned npm package includes compiled CSS with global Preflight and nui-prefixed utilities:</p>
-      <pre><code>{'import { Button } from "newui";\nimport "newui/styles.css";'}</code></pre>
-      <p>The package is not published yet. The initial colors are provisional and Ark integration remains planned.</p>
-    </article>
+    <main class="nui-catalog">
+      <header class="nui-catalog-topline">
+        <span class="nui-catalog-wordmark">newui<span style={{ color: "var(--catalog-accent)" }}>.</span></span>
+        <span class="nui-catalog-status">Component workshop · Early development</span>
+      </header>
+      <section class="nui-catalog-hero">
+        <p class="nui-catalog-eyebrow">SolidJS / Design system / Open canvas</p>
+        <h1>A small foundation.<br />Room to build.</h1>
+        <p class="nui-catalog-lead">Components with a clear purpose, expressive tokens, and Solid's fine-grained reactivity. Explore the details. Make them your own.</p>
+        <nav class="nui-catalog-links" aria-label="Explore the catalog">
+          <a href="?path=/docs/actions-button--documentation" target="_top">Explore Button →</a>
+          <a href="?path=/story/foundations-tokens--colors" target="_top">Browse color tokens ↗</a>
+        </nav>
+      </section>
+      <div class="nui-catalog-grid">
+        <article class="nui-catalog-card"><span class="nui-catalog-number">01 / EXPLORE</span><h2>Built in the open</h2><p>Real components, editable props, and visible states. Start with Button and follow the library as it grows.</p></article>
+        <article class="nui-catalog-card"><span class="nui-catalog-number">02 / ADAPT</span><h2>Your own expression</h2><p>Switch light and dark themes. Inspect semantic tokens. Adjust component variants without rebuilding a design language.</p></article>
+        <article class="nui-catalog-card"><span class="nui-catalog-number">03 / VERIFY</span><h2>Details that matter</h2><p>Inspect keyboard behavior, responsive canvases, reading direction, and automated accessibility checks in one place.</p></article>
+      </div>
+      <section class="nui-catalog-section">
+        <div class="nui-catalog-split">
+          <div class="nui-catalog-stack"><p class="nui-catalog-eyebrow">The first building block</p><h2>Simple API. Deliberate states.</h2><p>Two variants, two sizes, native button semantics, and theme-aware CSS tokens.</p><div class="nui-catalog-demo"><Button>Start building</Button><Button variant="outline">Explore</Button><Button disabled>Disabled</Button></div></div>
+          <div class="nui-catalog-stack"><p class="nui-catalog-eyebrow">Planned package usage</p><pre><code>{'import { Button } from "newui";\nimport "newui/styles.css";\n\n<Button variant="solid" size="md">\n  Start building\n</Button>'}</code></pre><p style={{ color: "var(--catalog-muted)", "font-size": "13px" }}>Compiled CSS, nui-prefixed utilities, and global Tailwind Preflight. Consumers will not need a Tailwind build.</p></div>
+        </div>
+      </section>
+      <aside class="nui-catalog-note">newui is in early development and is not published. Colors are provisional; Radix scales and Ark behaviors remain planned.</aside>
+      <footer class="nui-catalog-footer"><span>newui / Component development catalog</span><a href="?path=/story/getting-started-workshop-guide--overview" target="_top">Learn your way around →</a></footer>
+    </main>
   ),
 };

@@ -1,41 +1,91 @@
+import { createSignal, onCleanup } from "solid-js";
 import type { Preview } from "storybook-solidjs-vite";
 import { createJSXDecorator } from "storybook-solidjs-vite";
+import { catalogTheme } from "./theme";
 import "../../../pkgs/ui/foundations/styles.css";
+import "./preview.css";
 
 const preview: Preview = {
   globalTypes: {
     theme: {
-      description: "Component color theme",
+      description: "Color scheme for the workshop and components",
       toolbar: {
-        title: "Theme",
-        icon: "circlehollow",
-        items: ["light", "dark"],
-        dynamicTitle: true,
+        title: "Theme", icon: "circlehollow", dynamicTitle: true,
+        items: [
+          { value: "system", title: "System theme", icon: "browser" },
+          { value: "light", title: "Light theme", icon: "sun" },
+          { value: "dark", title: "Dark theme", icon: "moon" },
+        ],
+      },
+    },
+    direction: {
+      description: "Reading direction",
+      toolbar: {
+        title: "Direction", icon: "paragraph", dynamicTitle: true,
+        items: [{ value: "ltr", title: "Left to right" }, { value: "rtl", title: "Right to left" }],
+      },
+    },
+    spacing: {
+      description: "Canvas padding; does not change component sizes",
+      toolbar: {
+        title: "Canvas spacing", icon: "component", dynamicTitle: true,
+        items: [{ value: "comfortable", title: "Comfortable canvas" }, { value: "compact", title: "Compact canvas" }, { value: "flush", title: "Flush canvas" }],
+      },
+    },
+    motion: {
+      description: "Animation preference inside the component preview",
+      toolbar: {
+        title: "Motion", icon: "play", dynamicTitle: true,
+        items: [{ value: "system", title: "System motion" }, { value: "reduced", title: "Reduced motion" }],
       },
     },
   },
-  initialGlobals: { theme: "light" },
+  initialGlobals: { theme: "system", direction: "ltr", spacing: "comfortable", motion: "system" },
   decorators: [
-    createJSXDecorator((Story, context) => (
-      <div
-        data-nui-theme={context.globals.theme}
-        style={{
-          padding: "2rem",
-          "min-height": "100vh",
-          "font-family": "system-ui, sans-serif",
-          background: context.globals.theme === "dark" ? "#0f172a" : "#ffffff",
-          color: context.globals.theme === "dark" ? "#e2e8f0" : "#172554",
-        }}
-      >
-        <Story />
-      </div>
-    )),
+    createJSXDecorator((Story, context) => {
+      const preference = window.matchMedia("(prefers-color-scheme: dark)");
+      const [systemDark, setSystemDark] = createSignal(preference.matches);
+      const update = () => setSystemDark(preference.matches);
+      preference.addEventListener("change", update);
+      onCleanup(() => preference.removeEventListener("change", update));
+      const theme = () => context.globals.theme === "system"
+        ? (systemDark() ? "dark" : "light") : context.globals.theme;
+      return (
+        <div
+          class="nui-preview"
+          data-nui-theme={theme()}
+          data-spacing={context.globals.spacing}
+          data-motion={context.globals.motion}
+          data-view={context.viewMode}
+          dir={context.globals.direction}
+          style={{ "color-scheme": theme() }}
+        >
+          <Story />
+        </div>
+      );
+    }),
   ],
   parameters: {
     layout: "fullscreen",
+    controls: { expanded: true, sort: "requiredFirst", matchers: { color: /(background|color)$/i, date: /Date$/i } },
+    actions: { disable: false },
+    docs: { theme: catalogTheme("light"), codePanel: true, source: { type: "code" }, toc: true },
+    a11y: {
+      test: "error",
+      config: { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] } },
+    },
+    backgrounds: { disable: true },
+    viewport: {
+      options: {
+        mobile: { name: "Mobile · 390", styles: { width: "390px", height: "844px" }, type: "mobile" },
+        smallMobile: { name: "Small mobile · 320", styles: { width: "320px", height: "568px" }, type: "mobile" },
+        tablet: { name: "Tablet · 768", styles: { width: "768px", height: "1024px" }, type: "tablet" },
+        desktop: { name: "Desktop · 1440", styles: { width: "1440px", height: "900px" }, type: "desktop" },
+      },
+    },
     options: {
       storySort: {
-        order: ["Getting started", "Foundations", "Layout", "Content", "Actions", "Forms", "Navigation", "Overlays", "Feedback", "Data", "Compositions"],
+        order: ["Getting started", ["Introduction", "Workshop guide"], "Foundations", "Layout", "Content", "Actions", "Forms", "Navigation", "Overlays", "Feedback", "Data", "Compositions"],
       },
     },
   },

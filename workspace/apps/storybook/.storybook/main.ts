@@ -5,7 +5,10 @@ import tailwind from "@tailwindcss/postcss";
 const config: StorybookConfig = {
   framework: "storybook-solidjs-vite",
   stories: ["../../../pkgs/ui/**/*.stories.tsx"],
-  addons: [],
+  staticDirs: ["../public"],
+  addons: ["@storybook/addon-docs", "@storybook/addon-a11y", "@storybook/addon-links"],
+  core: { disableTelemetry: true },
+  docs: { defaultName: "Documentation" },
   async viteFinal(config) {
     return mergeConfig(config, {
       css: { postcss: { plugins: [tailwind()] } },

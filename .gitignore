@@ -3,3 +3,5 @@ dist/
 storybook-static/
 debug-storybook.log
 *.tgz
+test-results/
+playwright-report/
