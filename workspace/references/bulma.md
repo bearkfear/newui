@@ -62,7 +62,8 @@ The user accepted these additions. The recommendations define each resource's in
 - Breadcrumb, Button, Card, Dropdown, Pagination, Progress, Table, and Tabs already have Solid UI references.
 - Input, Select, Checkbox, and Radio already have references; distinguish native selection from a custom Select.
 - Textarea already appears as `TextFieldTextArea` in Solid UI documentation, although it has no separate menu entry.
-- Themes and skeletons are already planned; they are not gaps unique to Bulma.
+- Themes are implemented; Skeleton was excluded by user decision. Neither is a gap unique to Bulma.
+- Media proportions use CSS aspect-ratio; no AspectRatio component will be added.
 - Flex and Grid components are out of scope; applications use CSS directly for these layouts.
 - Bulma's Sass mixins and palette generation will not be ported: the chosen stack uses Tailwind and Radix Colors.
 

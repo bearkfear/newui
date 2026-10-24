@@ -1,0 +1,16 @@
+.nui-badge {
+  background: var(--nui-badge-bg);
+  color: var(--nui-badge-fg);
+}
+.nui-badge:is(a[href], button) {
+  cursor: pointer;
+}
+.nui-badge:is(a[href], button):not(:disabled):is(:hover, :active) {
+  background: var(--nui-badge-bg-hover);
+}
+.nui-badge:disabled {
+  background: var(--nui-disabled-background);
+  border-color: var(--nui-disabled-border);
+  color: var(--nui-disabled-foreground);
+  cursor: not-allowed;
+}

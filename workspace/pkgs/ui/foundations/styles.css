@@ -3,6 +3,7 @@
 @import "../actions/button/button.css";
 @import "../actions/button-group/button-group.css";
 @import "../content/prose/prose.css";
+@import "../content/badge/badge.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";

@@ -8,18 +8,17 @@ Organize space, alignment, flow, and sizing independently of a specific page's c
 
 ## Planned inventory
 
-| Resource     | Intent and initial format                            |
-| ------------ | ---------------------------------------------------- |
-| Container    | Standardize maximum width and responsive margins.    |
-| Section      | Standardize spacing between sections.                |
-| Stack        | Lightweight composition for sequential spacing.      |
-| AutoGrid     | Recipe for automatic item distribution.              |
-| Aspect Ratio | Preserve content proportions.                        |
-| Resizable    | Organize resizable panels; behavior mapping pending. |
+| Resource  | Intent and initial format                            |
+| --------- | ---------------------------------------------------- |
+| Container | Standardize maximum width and responsive margins.    |
+| Section   | Standardize spacing between sections.                |
+| Stack     | Lightweight composition for sequential spacing.      |
+| AutoGrid  | Recipe for automatic item distribution.              |
+| Resizable | Organize resizable panels; behavior mapping pending. |
 
 ## Ideas and references
 
-Flex and Grid components are out of scope. Applications use native CSS flexbox and grid for these layouts.
+Flex and Grid components are out of scope. Applications use native CSS flexbox and grid for these layouts. Media proportions use CSS aspect-ratio, demonstrated in Storybook under Layout / Media proportions; no AspectRatio component is planned.
 
 Container and Section standardize page widths and section spacing. Stack provides sequential spacing; AutoGrid and responsive examples cover automatic item distribution. Container and Section are implemented and validated by the user; Stack, AutoGrid, and the remaining layout resources are still planned.
 

@@ -12,6 +12,8 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 
 [Card](card/README.md) is implemented with optional media, header actions, content, and simple/divided footers. Its Storybook examples await user validation.
 
+[Badge](badge/README.md), [Separator](separator/README.md), and [Avatar](avatar/README.md) are implemented with reviewable examples. Badge uses native labels and controls; Avatar uses Ark UI for image state. They have been validated by the user.
+
 ## Inventory
 
 - Heading, Text, and Prose.

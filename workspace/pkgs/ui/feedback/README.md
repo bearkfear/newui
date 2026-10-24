@@ -11,7 +11,8 @@ Communicate an operation's state, result, loading status, and progress.
 - Alert and Callout.
 - Toast.
 - Progress and Progress Circle.
-- Skeleton.
+
+Skeleton is out of scope by user decision.
 
 ## Ideas and questions
 

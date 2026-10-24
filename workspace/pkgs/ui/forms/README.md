@@ -6,6 +6,8 @@
 
 Enable entering, selecting, and editing values with consistent labels, help text, errors, and states.
 
+Forms are deferred until the other implementation areas are complete. The contracts below remain planned and no form components have been implemented.
+
 ## Planned inventory
 
 - Field, including Label, Description, and ErrorText.
