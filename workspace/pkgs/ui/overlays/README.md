@@ -6,6 +6,10 @@
 
 Present content over the interface with appropriate opening, closing, focus, and positioning behavior.
 
+## Initial implementation
+
+[Dialog](dialog/README.md) is implemented as an Ark-powered modal with Bulma-inspired compact header/footer surfaces, a scrollable body, right-aligned actions, and a free-content variant. The user validated and manually verified the Storybook examples; AlertDialog remains planned.
+
 ## Planned inventory
 
 - Dialog and Alert Dialog.
@@ -14,7 +18,7 @@ Present content over the interface with appropriate opening, closing, focus, and
 
 ## Direction and questions
 
-Dialog is part of the initial architecture validation sample. Evaluate whether Drawer and Sheet are presentations of the same implementation before maintaining separate APIs.
+Dialog supplies the first overlay composition and preserves theme tokens through its portal. Evaluate whether Drawer and Sheet are presentations of the same implementation before maintaining separate APIs.
 
 Check portals, title and description associations, keyboard interaction, focus, and controlled and uncontrolled states. Map each behavior to Ark.
 

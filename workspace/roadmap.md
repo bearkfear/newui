@@ -31,7 +31,8 @@ The catalog starts early and grows with each component.
 - [x] Implement Button and ButtonGroup with validated variants and examples.
 - [x] Implement Card with optional parts, visual variants, media, and footer compositions.
 - [ ] Obtain user validation of Card in Storybook.
-- [ ] Use Dialog to validate composition and overlays; the text field family is deferred to Forms.
+- [x] Implement the first Ark-powered Dialog with Bulma-inspired modal-card presentation and responsive examples.
+- [x] Obtain user validation of Dialog; the user also manually verified the examples. The text field family remains deferred to Forms.
 - [ ] Validate this sample before replicating the architecture across the catalog.
 
 ### 2. Basic elements and organization
@@ -44,7 +45,8 @@ The catalog starts early and grows with each component.
 
 ### 3. Overlays and feedback
 
-- [ ] Consolidate Dialog and implement Alert Dialog.
+- [x] Implement Dialog with compact header/footer, right-aligned actions, body scrolling, free media content, and theme-preserving portals.
+- [ ] Implement Alert Dialog on the validated Dialog foundation.
 - [ ] Popover, Tooltip, and Hover Card.
 - [ ] Drawer and Sheet: evaluate whether they are presentations of the same implementation.
 - [ ] Alert and Callout: evaluate usage differences before maintaining separate APIs.

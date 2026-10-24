@@ -41,3 +41,7 @@ export type { VerticalMenuRootProps } from "./navigation/vertical-menu/vertical-
 export { VerticalMenu } from "./navigation/vertical-menu/vertical-menu";
 export type { VerticalMenuBranchProps } from "./navigation/vertical-menu/vertical-menu.branch";
 export type { VerticalMenuLinkProps } from "./navigation/vertical-menu/vertical-menu.parts";
+export type { DialogRootProps } from "./overlays/dialog/dialog";
+export { Dialog } from "./overlays/dialog/dialog";
+export type { DialogContentProps, DialogSurfaceProps } from "./overlays/dialog/dialog.content";
+export type { DialogPortalProps } from "./overlays/dialog/dialog.portal";

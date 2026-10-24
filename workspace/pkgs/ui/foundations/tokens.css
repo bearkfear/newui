@@ -15,6 +15,14 @@
 }
 
 :root {
+  --nui-z-overlay: 1000;
+  --nui-overlay-backdrop: color-mix(
+    in srgb,
+    light-dark(var(--nui-slate-12), var(--nui-slate-1)) 72%,
+    transparent
+  );
+  --nui-overlay-shadow: 0 16px 64px
+    color-mix(in srgb, light-dark(var(--nui-slate-12), var(--nui-slate-1)) 30%, transparent);
   --nui-background: var(--nui-slate-1);
   --nui-surface: var(--nui-slate-2);
   --nui-foreground: var(--nui-slate-12);

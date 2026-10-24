@@ -1,0 +1,56 @@
+.nui-dialog-content {
+  z-index: calc(var(--nui-z-overlay) + var(--layer-index, 0) * 2 + 1);
+}
+.nui-dialog-positioner {
+  z-index: var(--z-index, calc(var(--nui-z-overlay) + 1));
+}
+.nui-dialog-backdrop {
+  z-index: calc(var(--z-index, calc(var(--nui-z-overlay) + 1)) - 1);
+}
+.nui-dialog-backdrop[data-state="open"] {
+  animation: nui-dialog-fade-in 140ms ease-out;
+}
+.nui-dialog-backdrop[data-state="closed"] {
+  animation: nui-dialog-fade-out 100ms ease-in;
+}
+.nui-dialog-content[data-state="open"] {
+  animation: nui-dialog-enter 160ms ease-out;
+}
+.nui-dialog-content[data-state="closed"] {
+  animation: nui-dialog-fade-out 100ms ease-in;
+}
+@keyframes nui-dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes nui-dialog-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes nui-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-dialog-content,
+  .nui-dialog-backdrop {
+    animation: none;
+  }
+}
+[data-nui-overlay-root][data-motion="reduced"] :is(.nui-dialog-content, .nui-dialog-backdrop) {
+  animation: none;
+}
