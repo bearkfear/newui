@@ -1,10 +1,38 @@
+<div align="center">
+
 # newui
 
-A SolidJS UI library with its own visual identity, using Solid UI as an initial reference and Ark UI for suitable interactive behaviors. The initial distribution will be an installable package.
+**A considered foundation for SolidJS interfaces.**
 
-## Development
+Composable components, a shared visual language, and room to make it yours.
 
-Run the development commands from `workspace/`:
+[Explore the library](workspace/pkgs/ui/README.md) · [Our philosophy](workspace/philosophy.md) · [Roadmap](workspace/roadmap.md) · [Contribute](#contributing)
+
+</div>
+
+## From a single button to a complete page
+
+newui is a UI library for SolidJS, bringing everyday controls, layout primitives, and page compositions into one cohesive system. It gives typography, spacing, color, and interaction a shared language so the pieces feel at home together.
+
+The project is in active development. You can explore the components locally in Storybook; the package is not yet published, and APIs may change as the library takes shape.
+
+## Built with care
+
+- **Composition first.** Small, focused pieces work together across controls, content, navigation, and complete page layouts.
+- **Thoughtful interaction.** Native semantics and suitable Ark UI primitives support keyboard navigation, focus management, and accessible behavior.
+- **A consistent palette.** Radix Colors power semantic tokens, with system, light, and dark themes and support for nested theme scopes.
+- **Your visual language.** Component variants and public `--nui-*` tokens provide the customization foundation.
+- **Styles included.** The library build ships compiled CSS, so consuming applications do not need Tailwind. The stylesheet includes a page-wide reset.
+
+## Explore the collection
+
+The current collection includes buttons and button groups; containers and sections; typography, avatars, badges, cards, and separators; responsive navigation; dialogs; and compositions such as Hero, Footer, Panel, MediaObject, and ActionBar.
+
+Storybook brings these pieces together with interactive examples, theme switching, responsive viewports, and accessibility checks. Browse the [library areas](workspace/pkgs/ui/README.md) for component documentation and the [roadmap](workspace/roadmap.md) for upcoming work.
+
+## Get started locally
+
+With Bun installed, run these commands from your checkout:
 
 ```sh
 cd workspace
@@ -12,24 +40,22 @@ bun install
 bun run dev
 ```
 
-Storybook starts at `http://localhost:6006`. The server stays running until stopped with Ctrl+C. Applications live in `workspace/apps/` and library packages in `workspace/pkgs/`. Configuration, dependencies, and generated output stay inside `workspace/`.
+Open [Storybook at localhost:6006](http://localhost:6006) to explore the library and try the examples.
 
-Components, recipes, documentation, and stories live together in `workspace/pkgs/ui/`. Storybook loads source styles through Tailwind and provides a branded workshop with system/light/dark themes, automatic component documentation, accessibility checks, responsive viewports, and interactive examples. The catalog includes an introduction, workshop guide, color tokens, Button, and layout and typography primitives, plus button variants and groups, Hero, Footer, Media Object, Panel, and ActionBar compositions, plus responsive Navbar and VerticalMenu navigation.
+All development commands run from `workspace/`:
 
-- `bun run storybook`: start the component catalog.
-- `bun run check`: run Biome linting, formatting verification, and strict TypeScript checks.
-- `bun run lint`: check code quality, including file/function size and complexity limits.
-- `bun run format`: format supported source files with Biome.
-- `bun run typecheck`: check library code, stories, Storybook, and build scripts.
-- `bun run hooks:install`: install the pre-commit check (also installed during dependency installation).
-- `bun run build`: generate the library modules, declarations, and compiled CSS in `workspace/pkgs/ui/dist/`.
-- `bun run test:storybook`: validate stories, interactions, controls, themes, and accessibility in Chromium.
-- `bun run build:storybook`: generate the static catalog in `workspace/apps/storybook/storybook-static/`.
+| Command | Purpose |
+| --- | --- |
+| `bun run check` | Check formatting, linting, and TypeScript types |
+| `bun run build` | Build the library and its compiled stylesheet |
+| `bun run build:storybook` | Build the static component catalog |
 
-Button, Container, Section, Heading, Text, and Prose are implemented. The layout and typography additions await user validation; colors and interaction states now use official Radix scales with automatic system themes. The library is not published. The future public website is a separate decision.
+See the [workspace guide](workspace/README.md) for the full command list and [getting started](workspace/pkgs/ui/getting-started/README.md) for distribution details.
 
-- [Workspace](workspace/README.md): philosophy, resource areas, architecture, roadmap, and references.
-- [Getting started](workspace/pkgs/ui/getting-started/README.md): development and distribution details.
-- [Conventions](conventions): current development rules, one convention per file.
+## Contributing
 
-External study material belongs in `workspace/references/_local/`, whose contents are ignored by Git except for its `.gitignore`.
+Contributions can start with a small observation: an unclear example, a missing state, an awkward keyboard interaction, or a composition that could be easier to use. Bug reports, documentation improvements, and concrete usage examples all help shape the library.
+
+Before changing code, read the [project conventions](conventions/) and [philosophy](workspace/philosophy.md). Keep implementation in `workspace/`, place component examples alongside their source, and include Storybook stories for UI changes. Follow the [implementation validation process](conventions/implementation-validation.md): make the change reviewable first, then add or expand automated tests after validation and explicit approval.
+
+Development, documentation, and pull requests use English to give contributors a shared language. Start with the [architecture](workspace/architecture.md) to understand the technical choices, or explore `workspace/pkgs/ui/` to find a component you would like to improve.
