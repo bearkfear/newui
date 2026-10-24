@@ -48,8 +48,8 @@ export function IntroductionFeatures() {
         <span class="nui-catalog-number">03 / VERIFY</span>
         <h2>Details that matter</h2>
         <p>
-          Inspect keyboard behavior, responsive canvases, reading direction, and automated
-          accessibility checks in one place.
+          Inspect keyboard behavior, responsive canvases, and automated accessibility checks in one
+          place.
         </p>
       </article>
     </div>

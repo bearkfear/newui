@@ -24,10 +24,10 @@ The Playwright suite starts a development server automatically, reusing port 600
 
 - Local newui wordmarks and favicon, themed navigation, and a responsive introduction.
 - System, light, and dark preview themes; the manager follows the same selection. Manager, documentation, controls, and previews share Radix Slate/Blue roles and follow the toolbar selection, including live system preference changes.
-- LTR/RTL reading direction, comfortable/compact/flush canvas padding, and reduced-motion simulation. Canvas padding does not modify component density. The reduced-motion override covers descendants of the preview wrapper; body-level portal content needs its own integration when introduced.
+- Comfortable/compact/flush canvas padding, and reduced-motion simulation. Canvas padding does not modify component density. The reduced-motion override covers descendants of the preview wrapper; body-level portal content needs its own integration when introduced.
 - Mobile (320px and 390px), tablet (768px), and desktop (1440px) viewports, plus Storybook's built-in zoom, measure, outlines, and grid tools. Independent background switching is disabled so component surfaces remain consistent with the selected theme.
 - Autodocs, props descriptions and categories, source/code panels, controls, callback spies, and accessibility/vision tools. Storybook Links is available for future programmatic navigation.
-- Button state/variant matrix, reactive counter, keyboard and disabled interaction assertions, custom tokens, RTL, and mobile examples.
+- Button state/variant matrix, reactive counter, keyboard and disabled interaction assertions, custom tokens and mobile examples.
 - Color swatches show resolved public token values and update with the active theme. Workshop-only surface variables are not public library tokens.
 
 ## Extending the catalog

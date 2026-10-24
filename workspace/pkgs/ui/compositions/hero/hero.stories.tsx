@@ -36,4 +36,3 @@ export const Mobile: Story = {
   args: { layout: "split" },
   globals: { viewport: { value: "smallMobile", isRotated: false } },
 };
-export const RightToLeft: Story = { args: { layout: "split" }, globals: { direction: "rtl" } };

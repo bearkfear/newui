@@ -17,7 +17,7 @@ Reference for layout, content, navigation, and composition needs that complement
 | [Navigation](../pkgs/ui/navigation/README.md)     | Navbar and the static vertical menu.                          |
 | [Compositions](../pkgs/ui/compositions/README.md) | Hero, Footer, Media Object, Panel, and the action bar.        |
 
-Icon standardization belongs to [Foundations](../pkgs/ui/foundations/README.md). Proposed formats and priorities are in the [detailed comparison](#bulma-differences-from-solid-ui). The first additions (Container, Section, Heading, Text, and Prose) are implemented and await user validation; Hero, Footer, Media Object, Panel, and the action bar are also implemented with Storybook examples and await user validation; the other additions remain planned.
+Icon standardization belongs to [Foundations](../pkgs/ui/foundations/README.md). Proposed formats and priorities are in the [detailed comparison](#bulma-differences-from-solid-ui). The first additions (Container, Section, Heading, Text, and Prose) are implemented and await user validation; Hero, Footer, Media Object, Panel, and the action bar are also implemented with Storybook examples and await user validation; Navbar and VerticalMenu are also implemented with Ark-powered behavior and await user validation; the other additions remain planned.
 
 ## Material and provenance
 

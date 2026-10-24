@@ -36,4 +36,4 @@ Example pages will help validate the library. Website technology and design rema
 
 The public exports are `Hero`, `Footer`, `MediaObject`, `Panel`, and `ActionBar`, each with a `Root` and named parts. All use the existing Radix tokens and automatic themes. Application state remains outside the compositions.
 
-Storybook's Compositions / Overview combines all five into a responsive workspace. Individual stories include editable variants, mobile and RTL views, local interaction examples, and native semantics. No new automated tests were added.
+Storybook's Compositions / Overview combines all five into a responsive workspace. Individual stories include editable variants, mobile views, local interaction examples, and native semantics. No new automated tests were added.

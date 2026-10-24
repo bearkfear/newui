@@ -9,7 +9,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Hero, Footer, Media Object, Panel, and Action Bar composed into one responsive page. Actions use local state; footer links navigate to catalog documentation. Use the theme, viewport, and direction controls for visual review.",
+          "Hero, Footer, Media Object, Panel, and Action Bar composed into one responsive page. Actions use local state; footer links navigate to catalog documentation. Use the theme and viewport controls for visual review.",
       },
     },
   },
@@ -19,4 +19,3 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Workspace: Story = {};
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
-export const RightToLeft: Story = { globals: { direction: "rtl" } };

@@ -31,7 +31,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
-export const RightToLeft: Story = { globals: { direction: "rtl" } };
 
 export const AllSizes: Story = {
   parameters: { controls: { disable: true } },

@@ -16,4 +16,4 @@ The [architecture](../architecture.md) records these choices. Versions, integrat
 
 Park UI/Panda CSS are not part of the chosen base. Chart and table dependencies need their own evaluation.
 
-Study notes can grow here with source links and dates. Temporary copies of external material belong in `_local/`, ignored by Git. Actual dependencies will be declared in the project when implementation starts.
+Study notes can grow here with source links and dates. Temporary copies of external material belong in `_local/`, ignored by Git. The current implementation declares Ark UI Solid for Navbar submenus and Collapsible navigation, Solid Primitives for responsive media queries, and the existing styling stack. Native links remain native navigation.

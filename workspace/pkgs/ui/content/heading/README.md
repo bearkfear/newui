@@ -26,4 +26,4 @@ import "newui/styles.css";
 
 Native attributes, events, and DOM refs are forwarded. `class` adds classes without guaranteeing utility conflict resolution. Colors use public `--nui-*` tokens and follow `data-nui-theme="dark"` on an ancestor.
 
-Review All Sizes and the colocated mobile and right-to-left examples in Storybook. This scale awaits user validation; no new automated tests have been added.
+Review All Sizes and the colocated mobile examples in Storybook. This scale awaits user validation; no new automated tests have been added.

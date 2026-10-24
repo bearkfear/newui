@@ -14,7 +14,7 @@ bun run dev
 
 Storybook starts at `http://localhost:6006`. The server stays running until stopped with Ctrl+C. Applications live in `workspace/apps/` and library packages in `workspace/pkgs/`. Configuration, dependencies, and generated output stay inside `workspace/`.
 
-Components, recipes, documentation, and stories live together in `workspace/pkgs/ui/`. Storybook loads source styles through Tailwind and provides a branded workshop with system/light/dark themes, automatic component documentation, accessibility checks, responsive viewports, and interactive examples. The catalog includes an introduction, workshop guide, color tokens, Button, and layout and typography primitives, plus button variants and groups, Hero, Footer, Media Object, Panel, and ActionBar compositions.
+Components, recipes, documentation, and stories live together in `workspace/pkgs/ui/`. Storybook loads source styles through Tailwind and provides a branded workshop with system/light/dark themes, automatic component documentation, accessibility checks, responsive viewports, and interactive examples. The catalog includes an introduction, workshop guide, color tokens, Button, and layout and typography primitives, plus button variants and groups, Hero, Footer, Media Object, Panel, and ActionBar compositions, plus responsive Navbar and VerticalMenu navigation.
 
 - `bun run storybook`: start the component catalog.
 - `bun run check`: run Biome linting, formatting verification, and strict TypeScript checks.

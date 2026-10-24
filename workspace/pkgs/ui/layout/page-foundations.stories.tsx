@@ -13,7 +13,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Layout and typography primitives composed with newui recipes and semantic tokens. Use the theme, direction, viewport, and flush canvas controls to review the composition.",
+          "Layout and typography primitives composed with newui recipes and semantic tokens. Use the theme, viewport, and flush canvas controls to review the composition.",
       },
     },
   },
@@ -70,4 +70,3 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Page: Story = {};
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
-export const RightToLeft: Story = { globals: { direction: "rtl" } };

@@ -4,10 +4,10 @@ export function WorkshopScenes() {
       <h2>Set the scene</h2>
       <div class="nui-catalog-grid">
         <article class="nui-catalog-card">
-          <h3>Color & direction</h3>
+          <h3>Color theme</h3>
           <p>
             Theme follows your system by default. Choose light or dark explicitly; the workshop
-            follows too. Switch LTR / RTL to inspect reading direction.
+            follows too.
           </p>
         </article>
         <article class="nui-catalog-card">

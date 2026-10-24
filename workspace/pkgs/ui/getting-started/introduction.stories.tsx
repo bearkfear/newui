@@ -26,7 +26,7 @@ export const Overview: Story = {
       <IntroductionButtonDemo />
       <aside class="nui-catalog-note">
         newui is in early development and is not published. Colors use official Radix scales with
-        automatic system themes. Ark behaviors remain planned.
+        automatic system themes. Navigation interactions use Ark UI.
       </aside>
       <footer class="nui-catalog-footer">
         <span>newui / Component development catalog</span>

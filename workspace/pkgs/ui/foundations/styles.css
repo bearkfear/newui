@@ -8,6 +8,7 @@
 @source "../layout/**/*.recipe.ts";
 @source "../content/**/*.recipe.ts";
 @source "../compositions/**/*.recipe.ts";
+@source "../navigation/**/*.recipe.ts";
 
 @theme inline {
   --color-background: var(--nui-background);

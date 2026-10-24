@@ -77,5 +77,4 @@ export const Wrapping: Story = {
     </div>
   ),
 };
-export const RightToLeft: Story = { args: { attached: true }, globals: { direction: "rtl" } };
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };

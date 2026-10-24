@@ -16,7 +16,7 @@ import { ActionBar, Button } from "newui";
 </ActionBar.Root>;
 ```
 
-Root options: `variant` plain (default) or surface. Content and actions stack on narrow screens; from 640px they share a row, with actions aligned to the logical end. Actions wrap when necessary, including with RTL content.
+Root options: `variant` plain (default) or surface. Content and actions stack on narrow screens; from 640px they share a row, with actions aligned to the logical end. Actions wrap when necessary.
 
 Title defaults to h2, size 6; Description defaults to muted Text size 7. Typography props remain customizable. Root, Content, and Actions render divs and forward native attributes, events, styles, and refs.
 

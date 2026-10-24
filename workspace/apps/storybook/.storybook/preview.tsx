@@ -19,18 +19,6 @@ const preview: Preview = {
         ],
       },
     },
-    direction: {
-      description: "Reading direction",
-      toolbar: {
-        title: "Direction",
-        icon: "paragraph",
-        dynamicTitle: true,
-        items: [
-          { value: "ltr", title: "Left to right" },
-          { value: "rtl", title: "Right to left" },
-        ],
-      },
-    },
     spacing: {
       description: "Canvas padding; does not change component sizes",
       toolbar: {
@@ -57,7 +45,7 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { theme: "system", direction: "ltr", spacing: "comfortable", motion: "system" },
+  initialGlobals: { theme: "system", spacing: "comfortable", motion: "system" },
   decorators: [
     createJSXDecorator((Story, context) => {
       return (
@@ -67,7 +55,6 @@ const preview: Preview = {
           data-spacing={context.globals["spacing"]}
           data-motion={context.globals["motion"]}
           data-view={context.viewMode}
-          dir={context.globals["direction"]}
         >
           <Story />
         </div>

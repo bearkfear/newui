@@ -18,7 +18,7 @@ The catalog starts early and grows with each component.
 
 ### 1. Visual foundation and minimum catalog
 
-- [ ] Set up SolidJS, TypeScript, Tailwind, tailwind-variants, and Ark.
+- [x] Set up SolidJS, strict TypeScript, Tailwind, tailwind-variants, and the first Ark-powered navigation components.
 - [x] Integrate official Radix scales, semantic interaction state tokens, automatic system themes, and nested light/dark scopes.
 - [ ] Define typography, dimensions, visible focus, disabled states, and reduced motion.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
@@ -59,7 +59,8 @@ The Field contract must associate the label, description, and error with the con
 - [ ] Dropdown Menu and Context Menu.
 - [ ] Menubar and Navigation Menu.
 - [ ] Command, Sidebar, Resizable, and Carousel.
-- [ ] Implement Navbar and a static vertical menu, inspired by Bulma, after the necessary primitives.
+- [x] Implement Navbar and VerticalMenu with responsive navigation, Ark-powered submenus/disclosures, grouped links, and optional nested branches.
+- [ ] Obtain user validation of Navbar and VerticalMenu before creating or expanding their tests.
 
 Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists, record the gap before choosing another implementation.
 

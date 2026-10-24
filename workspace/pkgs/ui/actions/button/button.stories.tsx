@@ -232,16 +232,4 @@ export const CustomTokens: Story = {
   ),
 };
 
-export const RightToLeft: Story = {
-  args: { children: "Continue →" },
-  globals: { direction: "rtl" },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Inspect native reading direction. Directional icons and translated labels are the consuming application's responsibility.",
-      },
-    },
-  },
-};
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };

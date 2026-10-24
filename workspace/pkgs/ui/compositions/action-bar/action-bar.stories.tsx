@@ -33,4 +33,3 @@ export const ActionsOnly: Story = {
   ),
 };
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
-export const RightToLeft: Story = { globals: { direction: "rtl" } };

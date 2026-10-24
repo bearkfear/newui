@@ -1,0 +1,27 @@
+import { tv } from "tailwind-variants/lite";
+import { navigationLinkBase } from "../navigation-link.recipe";
+
+export const navbarRecipe = tv({
+  slots: {
+    root: "nui:relative nui:z-20 nui:border-b nui:border-border nui:text-foreground",
+    frame:
+      "nui:grid nui:min-w-0 nui:grid-cols-[minmax(0,1fr)_auto] nui:items-center nui:gap-x-6 nui:md:grid-cols-[auto_minmax(0,1fr)]",
+    brand:
+      "nui:my-4 nui:min-w-0 nui:rounded-sm nui:text-xl nui:font-semibold nui:text-foreground nui:no-underline nui:focus-visible:outline-2 nui:focus-visible:outline-offset-4 nui:focus-visible:outline-focus-ring",
+    toggle:
+      "nui:my-3 nui:inline-flex nui:min-h-10 nui:items-center nui:justify-center nui:gap-2 nui:rounded-md nui:border nui:border-[var(--nui-control-border)] nui:px-3 nui:py-2 nui:text-sm nui:font-medium nui:cursor-pointer nui:hover:bg-[var(--nui-neutral-soft-hover)] nui:hover:border-[var(--nui-control-border-hover)] nui:focus-visible:outline-2 nui:focus-visible:outline-offset-2 nui:focus-visible:outline-focus-ring nui:disabled:cursor-not-allowed nui:disabled:text-[var(--nui-disabled-foreground)] nui:md:hidden",
+    content:
+      "nui:col-span-2 nui:flex nui:min-w-0 nui:flex-col nui:gap-4 nui:pb-4 nui:md:col-span-1 nui:md:flex-row nui:md:items-center nui:md:justify-between nui:md:pb-0",
+    list: "nui:flex nui:min-w-0 nui:flex-col nui:gap-1 nui:md:flex-row nui:md:items-center",
+    item: "nui:relative nui:min-w-0",
+    link: `${navigationLinkBase} nui:px-3 nui:py-2`,
+    trigger: `${navigationLinkBase} nui:w-full nui:justify-between nui:px-3 nui:py-2 nui:cursor-pointer nui:data-[state=open]:bg-[var(--nui-primary-soft-active)] nui:data-[state=open]:text-[var(--nui-primary-text)] nui:disabled:cursor-not-allowed nui:disabled:text-[var(--nui-disabled-foreground)] nui:[&_svg]:shrink-0 nui:[&>svg]:transition-transform nui:motion-reduce:[&>svg]:transition-none nui:[&[data-state=open]>svg]:rotate-180`,
+    menuContent:
+      "nui:mt-2 nui:grid nui:min-w-0 nui:gap-1 nui:rounded-lg nui:border nui:border-border nui:bg-background nui:p-2 nui:shadow-sm nui:md:absolute nui:md:start-0 nui:md:top-full nui:md:z-30 nui:md:min-w-64 nui:md:max-w-[min(24rem,calc(100vw-2rem))]",
+    actions: "nui:flex nui:min-w-0 nui:flex-wrap nui:items-center nui:gap-2 nui:md:ms-auto",
+  },
+  variants: {
+    tone: { default: { root: "nui:bg-background" }, subtle: { root: "nui:bg-surface" } },
+  },
+  defaultVariants: { tone: "default" },
+});
