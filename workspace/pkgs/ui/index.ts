@@ -12,6 +12,9 @@ export type { MediaObjectRootProps } from "./compositions/media-object/media-obj
 export { MediaObject } from "./compositions/media-object/media-object";
 export type { PanelRootProps } from "./compositions/panel/panel";
 export { Panel } from "./compositions/panel/panel";
+export type { CardRootProps } from "./content/card/card";
+export { Card } from "./content/card/card";
+export type { CardFooterProps } from "./content/card/card.parts";
 export type { HeadingProps } from "./content/heading/heading";
 export { Heading } from "./content/heading/heading";
 export type { ProseProps } from "./content/prose/prose";

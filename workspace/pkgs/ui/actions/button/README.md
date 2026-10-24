@@ -29,6 +29,6 @@ import "newui/styles.css";
 
 ButtonGroup shares size, variant, tone, and disabled state. Explicit button variants override group defaults; a disabled group disables all its buttons. Native Tab navigation is preserved.
 
-Run `bun run dev` from `workspace/` and open Actions / Button and Actions / Button group. New examples await user validation; no new automated tests were added. Existing interaction examples remain in place.
+Run `bun run dev` from `workspace/` and open Actions / Button and Actions / Button group. The examples have been validated by the user; no new automated tests were added. Existing interaction examples remain in place.
 
 Recipes use tailwind-variants' lightweight entry without class merging. Use variants, scoped public `--nui-*` tokens, or `style` to customize. `class` is additive and does not promise utility conflict resolution. Ark is not required for native button behavior.

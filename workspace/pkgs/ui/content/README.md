@@ -8,7 +8,9 @@ Present text, identity, and information, including their organization and disclo
 
 ## Initial implementation
 
-Heading, Text, and Prose are implemented with recipes, semantic tokens, and colocated Storybook examples. They await user validation before new automated tests are written.
+Heading, Text, and Prose are implemented with recipes, semantic tokens, and colocated Storybook examples. They have been validated by the user. New automated tests require separate explicit authorization.
+
+[Card](card/README.md) is implemented with optional media, header actions, content, and simple/divided footers. Its Storybook examples await user validation.
 
 ## Inventory
 

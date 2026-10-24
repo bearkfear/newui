@@ -2,6 +2,12 @@
 
 [Workspace](README.md)
 
+## Validated deliveries
+
+The user accepted the implemented Button and ButtonGroup variants, layout/content primitives, compound compositions, Navbar, VerticalMenu, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
+
+Remaining unchecked items below describe future work. Flex and Grid components are out of scope; applications use CSS directly for these layouts.
+
 ## Proposed implementation order
 
 The stage order below is a proposal. The user accepted the Bulma additions; their implementation will be distributed across the corresponding stages.
@@ -22,15 +28,17 @@ The catalog starts early and grows with each component.
 - [x] Integrate official Radix scales, semantic interaction state tokens, automatic system themes, and nested light/dark scopes.
 - [ ] Define typography, dimensions, visible focus, disabled states, and reduced motion.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
-- [ ] Implement Button, Card, and the text field family; use Dialog to validate composition and overlays.
+- [x] Implement Button and ButtonGroup with validated variants and examples.
+- [x] Implement Card with optional parts, visual variants, media, and footer compositions.
+- [ ] Obtain user validation of Card in Storybook.
+- [ ] Implement the text field family; use Dialog to validate composition and overlays.
 - [ ] Validate this sample before replicating the architecture across the catalog.
 
 ### 2. Basic elements and organization
 
 - [ ] Badge, Separator, Skeleton, Avatar, and Aspect Ratio.
-- [ ] Flex and Grid.
 - [x] Implement Container, Section, Text, Heading, and Prose, inspired by the gaps identified through Bulma.
-- [ ] Obtain user validation of these five primitives in Storybook before creating or expanding their tests.
+- [x] Obtain user validation of Container, Section, Text, Heading, and Prose in Storybook.
 
 ### 3. Forms
 
@@ -60,7 +68,7 @@ The Field contract must associate the label, description, and error with the con
 - [ ] Menubar and Navigation Menu.
 - [ ] Command, Sidebar, Resizable, and Carousel.
 - [x] Implement Navbar and VerticalMenu with responsive navigation, Ark-powered submenus/disclosures, grouped links, and optional nested branches.
-- [ ] Obtain user validation of Navbar and VerticalMenu before creating or expanding their tests.
+- [x] Obtain user validation of Navbar and VerticalMenu in Storybook.
 
 Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists, record the gap before choosing another implementation.
 
@@ -77,7 +85,7 @@ Data Table and Charts require their own dependency evaluation; do not assume Ark
 - [ ] Implement the Bulma additions according to the [comparison](references/bulma.md#bulma-differences-from-solid-ui), reusing existing primitives.
 - [ ] Create complete form, settings, and listing examples.
 - [x] Implement Hero, Footer, Media Object, Panel, and ActionBar as compound compositions with responsive Storybook examples.
-- [ ] Obtain user validation of these five compositions before creating or expanding their tests.
+- [x] Obtain user validation of Hero, Footer, Media Object, Panel, and ActionBar in Storybook.
 - [ ] Create responsive compositions with stabilized components.
 
 ### 8. Preparation for external use

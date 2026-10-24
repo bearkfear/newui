@@ -16,7 +16,7 @@ Guide paths between pages, sections, and sets of content.
 
 ## Ideas and boundaries
 
-Navbar and VerticalMenu are implemented and await user validation. Navbar uses Ark Navigation Menu for submenus and Ark Collapsible for responsive disclosure. VerticalMenu uses native navigation semantics and Ark Collapsible for optional branches.
+Navbar and VerticalMenu are implemented and validated by the user. Navbar uses Ark Navigation Menu for submenus and Ark Collapsible for responsive disclosure. VerticalMenu uses native navigation semantics and Ark Collapsible for optional branches.
 
 A group of navigation links must not automatically receive ARIA action menu behavior. Dropdown Menu, Context Menu, and Menubar belong to [Actions](../actions/README.md).
 

@@ -63,6 +63,7 @@ The user accepted these additions. The recommendations define each resource's in
 - Input, Select, Checkbox, and Radio already have references; distinguish native selection from a custom Select.
 - Textarea already appears as `TextFieldTextArea` in Solid UI documentation, although it has no separate menu entry.
 - Themes and skeletons are already planned; they are not gaps unique to Bulma.
+- Flex and Grid components are out of scope; applications use CSS directly for these layouts.
 - Bulma's Sass mixins and palette generation will not be ported: the chosen stack uses Tailwind and Radix Colors.
 
 ### Priorities for accepted additions

@@ -20,7 +20,7 @@ Bring together component combinations that address complete interface scenarios.
 
 ## Ideas and boundaries
 
-Hero, Footer, Media Object, Panel, and ActionBar are implemented as compound compositions with recipes, native semantics, and existing typography/layout primitives. They await user validation. The action bar groups related actions; a potential Toolbar with its own behavior requires separate evaluation.
+Hero, Footer, Media Object, Panel, and ActionBar are implemented as compound compositions with recipes, native semantics, and existing typography/layout primitives. They have been validated by the user. The action bar groups related actions; a potential Toolbar with its own behavior requires separate evaluation.
 
 Each composition should explain which pieces it uses, how it responds to different widths, and what consumers can replace. Navbar's primary area is [Navigation](../navigation/README.md); Image/Figure and Box/Surface belong to [Content](../content/README.md).
 

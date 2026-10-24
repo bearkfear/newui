@@ -42,4 +42,4 @@ MenuTrigger/MenuContent live inside Item. Ark owns submenu interactions, focus m
 
 Ark's Solid `asChild` uses a render function, rather than a boolean. Link forwards this prop for custom router elements. Applications own destinations, routing, and route-change focus. Class values are additive; use variants and tokens for reliable customization.
 
-Review Navigation / Navbar and Overview in Storybook. The implementation awaits user validation; no new automated tests have been added.
+Review Navigation / Navbar and Overview in Storybook. The implementation has been validated by the user; no new automated tests have been added.
