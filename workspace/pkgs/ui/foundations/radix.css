@@ -72,6 +72,8 @@
   --nui-red-10: light-dark(#dc3e42, #ec5d5e);
   --nui-red-11: light-dark(#ce2c31, #ff9592);
   --nui-red-12: light-dark(#641723, #ffd1d9);
+  --nui-shadow-ink: rgba(0, 0, 0, 0.95);
+  --nui-highlight-ink: rgba(255, 255, 255, 0.95);
   --nui-on-blue: white;
   --nui-on-sky: #1c2024;
   --nui-on-green: white;

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { Text } from "../text/text";
 import { Card } from "./card";
 import { CardExample } from "./stories/card-example";
+import { ElevatedThemes } from "./stories/elevated-themes";
 import { HeaderActionsCard } from "./stories/header-actions-card";
 import { MediaCard } from "./stories/media-card";
 
@@ -23,8 +24,8 @@ const meta = {
     },
   },
   decorators: [
-    (Story) => (
-      <div style={{ "max-width": "28rem" }}>
+    (Story, context) => (
+      <div style={{ "max-width": context.parameters["wide"] ? "64rem" : "28rem" }}>
         <Story />
       </div>
     ),
@@ -36,6 +37,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 export const Soft: Story = { args: { variant: "soft" } };
 export const Elevated: Story = { args: { variant: "elevated" } };
+export const ElevatedInBothThemes: Story = {
+  parameters: { wide: true },
+  render: () => <ElevatedThemes />,
+};
 export const WithMediaAndDividedFooter: Story = { render: (args) => <MediaCard {...args} /> };
 export const HeaderActions: Story = { render: (args) => <HeaderActionsCard {...args} /> };
 export const ContentOnly: Story = {

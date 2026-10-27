@@ -16,6 +16,8 @@ A compound surface for related content. Its structure combines the explicit titl
 
 All parts are optional. Props, event handlers, DOM refs, and additive classes are forwarded. Root and Footer export `CardRootProps` and `CardFooterProps`.
 
+The elevated variant uses a subtle surface, a softened border, and directional dark and light shadows inspired by neumorphism. Customize its edge and shadows with `--nui-elevated-border` and `--nui-elevated-shadow`; its fill follows `--nui-surface`. Shadow and highlight inks come from the official Radix Black Alpha and White Alpha scales. The Elevated In Both Themes story compares soft and elevated cards in nested light and dark scopes for visual review.
+
 ```tsx
 <Card.Root as="article" aria-labelledby="project-title">
   <Card.Media>
@@ -38,7 +40,7 @@ All parts are optional. Props, event handlers, DOM refs, and additive classes ar
 
 Card is a static HTML composition and needs no Ark behavior primitive. It does not add a click handler, focus stop, or button role. Compose real controls inside it; interactive menus or disclosures should use the corresponding Ark-powered components. Header, Content, Media, Actions, Footer, and FooterItem render div elements without additional landmark roles.
 
-Review Content / Card in Storybook for visual variants, media, divided actions, header actions, content-only layouts, and mobile examples. Local signals demonstrate saving, resetting, and following. The brand image examples use a nested light theme to preserve the artwork contrast. The implementation awaits user validation; no new automated tests were added.
+Review Content / Card in Storybook for visual variants, media, divided actions, header actions, content-only layouts, and mobile examples. Local signals demonstrate saving, resetting, and following. The brand image examples use a nested light theme to preserve the artwork contrast. The user validated Card, including the revised elevated surface. No new automated tests were added.
 
 ## References
 

@@ -25,6 +25,23 @@
     color-mix(in srgb, light-dark(var(--nui-slate-12), var(--nui-slate-1)) 30%, transparent);
   --nui-background: var(--nui-slate-1);
   --nui-surface: var(--nui-slate-2);
+  --nui-elevated-border: color-mix(in srgb, var(--nui-slate-6) 45%, var(--nui-surface));
+  --nui-elevated-shadow:
+    8px 8px 20px
+    light-dark(
+      color-mix(in srgb, var(--nui-shadow-ink) 14%, transparent),
+      color-mix(in srgb, var(--nui-shadow-ink) 50%, transparent)
+    ),
+    -6px -6px 18px
+    light-dark(
+      color-mix(in srgb, var(--nui-highlight-ink) 90%, transparent),
+      color-mix(in srgb, var(--nui-highlight-ink) 4%, transparent)
+    ),
+    inset 0 1px 0
+    light-dark(
+      color-mix(in srgb, var(--nui-highlight-ink) 90%, transparent),
+      color-mix(in srgb, var(--nui-highlight-ink) 6%, transparent)
+    );
   --nui-foreground: var(--nui-slate-12);
   --nui-muted-foreground: var(--nui-slate-11);
   --nui-border: var(--nui-slate-6);

@@ -23,6 +23,8 @@ const declarations = [
   ...scaleDeclarations("green", colors.green, colors.greenDark),
   ...scaleDeclarations("amber", colors.amber, colors.amberDark),
   ...scaleDeclarations("red", colors.red, colors.redDark),
+  `  --nui-shadow-ink: ${colors.blackA.blackA12};`,
+  `  --nui-highlight-ink: ${colors.whiteA.whiteA12};`,
 ];
 
 // Match Radix Themes contrast tokens for solid steps 9 and 10 in both modes.

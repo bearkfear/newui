@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants/lite";
 
 export const cardRecipe = tv({
   slots: {
-    root: "nui:@container/card nui:flex nui:min-w-0 nui:flex-col nui:rounded-xl nui:border nui:border-border nui:text-foreground nui:wrap-break-word",
+    root: "nui:@container/card nui:flex nui:min-w-0 nui:flex-col nui:rounded-xl nui:border nui:text-foreground nui:wrap-break-word",
     header:
       "nui:grid nui:min-w-0 nui:grid-cols-1 nui:@sm/card:has-[[data-nui-card-actions]]:grid-cols-[minmax(0,1fr)_auto] nui:items-start nui:gap-x-4 nui:gap-y-2 nui:p-5 nui:[&+[data-nui-card-content]]:pt-0 nui:[&+[data-nui-card-footer=simple]]:pt-0",
     title: "nui:col-start-1",
@@ -15,10 +15,10 @@ export const cardRecipe = tv({
   },
   variants: {
     variant: {
-      outline: { root: "nui:bg-background" },
-      soft: { root: "nui:bg-surface" },
+      outline: { root: "nui:border-border nui:bg-background" },
+      soft: { root: "nui:border-border nui:bg-surface" },
       elevated: {
-        root: "nui:bg-background nui:shadow-[0_4px_16px_color-mix(in_srgb,var(--nui-foreground)_10%,transparent)]",
+        root: "nui:border-[var(--nui-elevated-border)] nui:bg-surface nui:shadow-[var(--nui-elevated-shadow)]",
       },
     },
   },

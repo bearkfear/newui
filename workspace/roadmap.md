@@ -30,7 +30,7 @@ The catalog starts early and grows with each component.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
 - [x] Implement Button and ButtonGroup with validated variants and examples.
 - [x] Implement Card with optional parts, visual variants, media, and footer compositions.
-- [ ] Obtain user validation of Card in Storybook.
+- [x] Obtain user validation of Card in Storybook, including the softened, neumorphism-inspired elevated surface.
 - [x] Implement the first Ark-powered Dialog with Bulma-inspired modal-card presentation and responsive examples.
 - [x] Obtain user validation of Dialog; the user also manually verified the examples. The text field family remains deferred to Forms.
 - [ ] Validate this sample before replicating the architecture across the catalog.
