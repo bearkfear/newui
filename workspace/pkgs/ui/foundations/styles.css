@@ -8,6 +8,7 @@
 @import "../overlays/tooltip/tooltip.css";
 @import "../overlays/popover/popover.css";
 @import "../overlays/hover-card/hover-card.css";
+@import "../overlays/sheet/sheet.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";

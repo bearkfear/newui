@@ -16,6 +16,7 @@
 
 :root {
   --nui-z-overlay: 1000;
+  --nui-header-gap: 0.125rem;
   --nui-z-tooltip: 1100;
   --nui-z-popover: 1050;
   --nui-z-hover-card: 1050;

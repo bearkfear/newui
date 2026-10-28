@@ -54,7 +54,9 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Popover in Storybook.
 - [x] Implement Hover Card with Ark hover/focus previews, delays, positioning, and theme-preserving portals.
 - [x] Obtain user validation of Hover Card in Storybook.
-- [ ] Drawer and Sheet: evaluate whether they are presentations of the same implementation.
+- [x] Implement Sheet as an edge-attached presentation of Dialog, with four sides and responsive examples.
+- [x] Obtain user validation of Sheet in Storybook, including the shared compact header spacing.
+- [ ] Evaluate a gesture-enabled Drawer separately if drag-to-dismiss or snap points are needed.
 - [ ] Alert and Callout: evaluate usage differences before maintaining separate APIs.
 - [ ] Toast: choose one solution; compare the Toast and Sonner references without automatically duplicating them.
 - [ ] Progress and Progress Circle.

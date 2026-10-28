@@ -65,6 +65,7 @@ export type {
   OverlayPortalProps as TooltipPortalProps,
   OverlayPortalProps as PopoverPortalProps,
   OverlayPortalProps as HoverCardPortalProps,
+  OverlayPortalProps as SheetPortalProps,
 } from "./overlays/overlay.portal";
 export type { PopoverRootProps, PopoverTriggerProps } from "./overlays/popover/popover";
 export { Popover } from "./overlays/popover/popover";
@@ -75,6 +76,13 @@ export type {
   PopoverPositionerProps,
   PopoverSurfaceProps,
 } from "./overlays/popover/popover.parts";
+export type { SheetRootProps } from "./overlays/sheet/sheet";
+export { Sheet } from "./overlays/sheet/sheet";
+export type {
+  SheetContentProps,
+  SheetPositionerProps,
+  SheetSurfaceProps,
+} from "./overlays/sheet/sheet.content";
 export type { TooltipRootProps, TooltipTriggerProps } from "./overlays/tooltip/tooltip";
 export { Tooltip } from "./overlays/tooltip/tooltip";
 export type { TooltipContentProps } from "./overlays/tooltip/tooltip.content";

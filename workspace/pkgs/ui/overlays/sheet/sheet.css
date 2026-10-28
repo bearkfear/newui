@@ -1,0 +1,61 @@
+.nui-sheet-positioner {
+  z-index: var(--z-index, calc(var(--nui-z-overlay) + 1));
+}
+.nui-sheet-content {
+  --nui-sheet-x: 0%;
+  --nui-sheet-y: 0%;
+  z-index: calc(var(--nui-z-overlay) + var(--layer-index, 0) * 2 + 1);
+}
+.nui-sheet-content[data-side="right"] {
+  --nui-sheet-x: 100%;
+}
+.nui-sheet-content[data-side="left"] {
+  --nui-sheet-x: -100%;
+}
+.nui-sheet-content[data-side="top"] {
+  --nui-sheet-y: -100%;
+}
+.nui-sheet-content[data-side="bottom"] {
+  --nui-sheet-y: 100%;
+}
+.nui-sheet-content[data-state="open"] {
+  animation: nui-sheet-enter 220ms ease-out;
+}
+.nui-sheet-content[data-state="closed"] {
+  animation: nui-sheet-exit 160ms ease-in;
+}
+.nui-sheet-content > [data-nui-dialog-footer] {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+.nui-sheet-content > [data-nui-dialog-body] {
+  flex: 1 1 auto;
+  align-content: start;
+}
+.nui-sheet-content:is([data-side="left"], [data-side="right"], [data-side="top"])
+  > [data-nui-dialog-header] {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+@keyframes nui-sheet-enter {
+  from {
+    transform: translate(var(--nui-sheet-x), var(--nui-sheet-y));
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes nui-sheet-exit {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(var(--nui-sheet-x), var(--nui-sheet-y));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-sheet-content {
+    animation: none;
+  }
+}
+[data-nui-overlay-root][data-motion="reduced"] .nui-sheet-content {
+  animation: none;
+}

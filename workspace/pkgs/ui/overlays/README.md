@@ -18,13 +18,15 @@ Present content over the interface with appropriate opening, closing, focus, and
 
 [Hover Card](hover-card/README.md) is implemented with Ark-powered previews on hover/focus, delays, an optional bordered arrow, and the shared theme-preserving portal. Storybook includes native link previews, controlled state, use inside Dialog, and light/dark comparison. The user approved the implementation and examples.
 
-## Remaining inventory
+[Sheet](sheet/README.md) presents the existing Ark-powered Dialog from any viewport edge, sharing its header/body/footer and portal. Storybook includes responsive side selection, scrolling, nonmodal mode, and nested Dialog. The user approved the implementation and examples, including the shared compact header spacing.
 
-- Drawer and Sheet.
+## Future evaluation
+
+- Drawer with drag gestures and snap points.
 
 ## Direction and questions
 
-Dialog supplies the first overlay composition and preserves theme tokens through its portal. Evaluate whether Drawer and Sheet are presentations of the same implementation before maintaining separate APIs.
+Sheet reuses Dialog for edge-attached presentation. A draggable Drawer requires an additional behavior evaluation; it is not part of the initial Sheet delivery.
 
 Check portals, title and description associations, keyboard interaction, focus, and controlled and uncontrolled states. Map each behavior to Ark.
 

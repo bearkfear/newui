@@ -4,7 +4,7 @@ export const cardRecipe = tv({
   slots: {
     root: "nui:@container/card nui:flex nui:min-w-0 nui:flex-col nui:rounded-xl nui:border nui:text-foreground nui:wrap-break-word",
     header:
-      "nui:grid nui:min-w-0 nui:grid-cols-1 nui:@sm/card:has-[[data-nui-card-actions]]:grid-cols-[minmax(0,1fr)_auto] nui:items-start nui:gap-x-4 nui:gap-y-2 nui:p-5 nui:[&+[data-nui-card-content]]:pt-0 nui:[&+[data-nui-card-footer=simple]]:pt-0",
+      "nui:grid nui:min-w-0 nui:grid-cols-1 nui:@sm/card:has-[[data-nui-card-actions]]:grid-cols-[minmax(0,1fr)_auto] nui:items-start nui:gap-x-4 nui:gap-y-[var(--nui-header-gap)] nui:p-5 nui:[&+[data-nui-card-content]]:pt-0 nui:[&+[data-nui-card-footer=simple]]:pt-0",
     title: "nui:col-start-1",
     description: "nui:col-start-1",
     actions:

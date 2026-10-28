@@ -7,7 +7,7 @@ export const popoverRecipe = tv({
     content:
       "nui-popover-content nui:flex nui:max-h-[min(var(--available-height,100dvh),calc(100dvh-2rem))] nui:w-full nui:min-w-0 nui:max-w-[calc(100vw-2rem)] nui:flex-col nui:rounded-xl nui:border nui:border-border nui:bg-background nui:text-foreground nui:wrap-anywhere nui:shadow-[var(--nui-popover-shadow)] nui:outline-none",
     header:
-      "nui:grid nui:shrink-0 nui:grid-cols-1 nui:items-start nui:gap-x-3 nui:gap-y-1 nui:rounded-t-xl nui:border-b nui:border-border nui:bg-surface nui:p-4 nui:has-[[data-part=close-trigger]]:grid-cols-[minmax(0,1fr)_auto] nui:[&>[data-part=close-trigger]]:col-start-2 nui:[&>[data-part=close-trigger]]:row-start-1 nui:[&>[data-part=close-trigger]]:row-span-2",
+      "nui:grid nui:shrink-0 nui:grid-cols-1 nui:items-start nui:gap-x-3 nui:gap-y-[var(--nui-header-gap)] nui:rounded-t-xl nui:border-b nui:border-border nui:bg-surface nui:p-4 nui:has-[[data-part=close-trigger]]:grid-cols-[minmax(0,1fr)_auto] nui:[&>[data-part=close-trigger]]:col-start-2 nui:[&>[data-part=close-trigger]]:row-start-1 nui:[&>[data-part=close-trigger]]:row-span-2",
     title:
       "nui:col-start-1 nui:m-0 nui:text-base nui:leading-snug nui:font-semibold nui:tracking-tight",
     description:

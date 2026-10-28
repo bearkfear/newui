@@ -8,7 +8,7 @@ export const dialogRecipe = tv({
     content:
       "nui-dialog-content nui:relative nui:flex nui:max-h-[calc(100dvh-2rem)] nui:min-h-0 nui:w-full nui:min-w-0 nui:flex-col nui:text-foreground nui:wrap-anywhere nui:outline-none nui:sm:max-h-[calc(100dvh-3rem)]",
     header:
-      "nui:grid nui:shrink-0 nui:grid-cols-1 nui:items-start nui:gap-x-5 nui:gap-y-1 nui:border-b nui:border-border nui:bg-surface nui:px-5 nui:py-3 nui:sm:px-6 nui:has-[[data-part=close-trigger]]:grid-cols-[minmax(0,1fr)_auto] nui:[&>[data-part=close-trigger]]:col-start-2 nui:[&>[data-part=close-trigger]]:row-start-1 nui:[&>[data-part=close-trigger]]:row-span-2",
+      "nui:grid nui:shrink-0 nui:grid-cols-1 nui:items-start nui:gap-x-5 nui:gap-y-[var(--nui-header-gap)] nui:border-b nui:border-border nui:bg-surface nui:px-5 nui:py-3 nui:sm:px-6 nui:has-[[data-part=close-trigger]]:grid-cols-[minmax(0,1fr)_auto] nui:[&>[data-part=close-trigger]]:col-start-2 nui:[&>[data-part=close-trigger]]:row-start-1 nui:[&>[data-part=close-trigger]]:row-span-2",
     title:
       "nui:col-start-1 nui:m-0 nui:text-xl nui:leading-snug nui:font-semibold nui:tracking-tight nui:text-foreground",
     description:

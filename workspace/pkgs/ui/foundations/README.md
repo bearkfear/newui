@@ -21,6 +21,8 @@ Use Tailwind and tailwind-variants to express styles and variants. Token structu
 
 Heading and Text belong to [Content](../content/README.md); they apply the typographic rules defined here. The [style distribution convention](../../../../conventions/style-distribution.md) defines compiled CSS, Preflight, and the `nui` prefix. Official Radix Colors scales now back semantic tokens, interaction states, and automatic light/dark themes.
 
+Compact component headers share `--nui-header-gap` (0.125rem) for the vertical gap between title and description. Card, Panel, Dialog, Alert Dialog, Sheet, and Popover use this token independently of their outer padding.
+
 ## Open decisions
 
 - Final variant and size conventions.

@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants/lite";
 export const panelRecipe = tv({
   slots: {
     root: "nui:min-w-0 nui:overflow-hidden nui:rounded-xl nui:border nui:border-border nui:text-foreground",
-    header: "nui:grid nui:gap-2 nui:p-5",
+    header: "nui:grid nui:gap-y-[var(--nui-header-gap)] nui:p-5",
     toolbar: "nui:border-t nui:border-border nui:px-5 nui:py-4",
     body: "nui:border-t nui:border-border nui:p-5",
     list: "nui:m-0 nui:list-none nui:p-0",
