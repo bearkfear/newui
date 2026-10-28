@@ -1,10 +1,6 @@
 const paths = {
   edit: "M12 4H5v16h14v-7M14 4l3-3 4 4-3 3M10 12l8-8 3 3-8 8-4 1 1-4Z",
   delete: "M3 6h18M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7M14 10v7",
-  first: "m11 6-6 6 6 6m8-12-6 6 6 6",
-  previous: "m15 6-6 6 6 6",
-  next: "m9 6 6 6-6 6",
-  last: "m5 6 6 6-6 6m8-12 6 6-6 6",
 } as const;
 
 export function TransactionIcon(props: { name: keyof typeof paths }) {

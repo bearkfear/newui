@@ -4,6 +4,7 @@ import { Panel } from "../panel";
 const inputStyle = {
   display: "block",
   width: "100%",
+  height: "2rem",
   "min-width": "0",
   padding: "0.375rem",
   border: "1px solid var(--nui-control-border)",
@@ -27,8 +28,8 @@ export function TransactionEditor(props: {
         }
       }}
     >
-      <Panel.Row>
-        <Panel.ItemContent>
+      <Panel.Row style={{ "align-items": "flex-end", "flex-wrap": "wrap" }}>
+        <Panel.ItemContent style={{ "flex-basis": "14rem" }}>
           <label style={{ "font-size": "0.875rem", color: "var(--nui-muted-foreground)" }}>
             Transaction name
             <input

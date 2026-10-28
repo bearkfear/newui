@@ -36,7 +36,7 @@ export function TransactionPanel() {
         <Panel.Footer>
           <TransactionPagination
             page={records.page()}
-            pages={records.pages()}
+            count={records.items().length}
             pageSize={records.pageSize()}
             onPage={records.onPage}
             onPageSize={records.onPageSize}

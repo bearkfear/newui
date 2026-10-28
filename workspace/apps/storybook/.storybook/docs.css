@@ -9,6 +9,11 @@ body {
   background: var(--nui-background);
   color: var(--nui-foreground);
 }
+/* Keep wide property tables scrollable without widening the documentation page. */
+.nui-docs div:has(> .docblock-argstable) {
+  max-width: 100%;
+  overflow-x: auto;
+}
 /* Keep docs links and focus indicators on their dedicated Radix roles. */
 .nui-docs :where(.sbdocs-a, .sbdocs-content a:not(.nui-button)) {
   color: var(--nui-primary-text);

@@ -23,6 +23,10 @@ Temporary material: `_local/solid-ui/`, ignored by Git. Implementation and licen
 
 Links consulted during planning are in [Sources](sources.md). New observations should record the source page or file and consultation date.
 
+## Pagination
+
+Reviewed the [official Pagination example](https://www.solid-ui.com/docs/components/pagination) on 2026-10-28. It places Previous, page numbers, ellipses, and Next in one centered row, with ghost controls and an outlined current page. newui follows this visual direction with its own Ark wrappers, Radix tokens, and compact mobile summary. The native page-size selector remains a demo composition. No upstream implementation code was copied.
+
 ## Breadcrumb
 
 Reviewed the [official Breadcrumb example](https://www.solid-ui.com/docs/components/breadcrumb) on 2026-10-28. newui follows its restrained link hierarchy using native nav/ol/li/a elements and a current-page span. Separators are automatic, decorative SVG chevrons; no collapse menu or additional dependency is introduced. No upstream implementation code was copied.

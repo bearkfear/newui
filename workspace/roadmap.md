@@ -79,11 +79,13 @@ The catalog starts early and grows with each component.
 - [x] Document complete Counter overlay composition and add compact record-list Panel examples.
 - [x] Obtain user validation of Counter, overlays, rich Tabs, and compact Panel record lists; remove Panel tabs integration.
 - [x] Implement compact Panel.Bar composition following the Preview / Code / Blame reference, with natural-width tabs, metadata, and trailing actions in one wrapping header.
-- [ ] Obtain user validation of File Header Tabs, including dark/mobile layouts, content switching, file actions, and the complete source example.
+- [x] Obtain user validation of File Header Tabs, including dark/mobile layouts, content switching, file actions, and the complete source example.
 - [x] Implement simple native Breadcrumb with ancestor links, automatic decorative separators, current-page semantics, and dark/mobile examples.
 - [x] Obtain user validation of Breadcrumb.
-- [ ] Implement dedicated Pagination components with Ark behavior, numbered pages and ellipses, previous/next and first/last controls, compact/mobile layouts, and consistent sizes, tones, and disabled states.
-- [ ] Provide Storybook examples for page-size selection and total/page summaries; obtain user validation of Pagination before replacing the temporary Panel record-list footer controls.
+- [x] Obtain user validation of the Panel Pagination integration and aligned inline editing controls, including responsive wrapping.
+- [x] Implement simple Pagination with Ark behavior, Solid UI-inspired ghost controls, numbered pages and ellipses, previous/next controls, automatic mobile summaries, three sizes, and native boundary disabled states. Keep one appearance and four public composition parts.
+- [x] Provide Storybook examples for page-size selection and total/page summaries; obtain user validation of the simplified Pagination and record-list footer.
+- [x] Replace the temporary Panel record-list footer controls with the validated Pagination composition, adapting zero-based Panel pages and preserving deletion/undo behavior.
 - [ ] Dropdown Menu and Context Menu.
 - [ ] Menubar and Navigation Menu.
 - [ ] Command, Sidebar, Resizable, and Carousel.

@@ -86,6 +86,13 @@ export type {
 export { Breadcrumb } from "./navigation/breadcrumb/breadcrumb";
 export type { NavbarRootProps } from "./navigation/navbar/navbar";
 export { Navbar } from "./navigation/navbar/navbar";
+export type { PaginationRootProps } from "./navigation/pagination/pagination";
+export { Pagination } from "./navigation/pagination/pagination";
+export type { PaginationItemsProps } from "./navigation/pagination/pagination.items";
+export type {
+  PaginationNextTriggerProps,
+  PaginationPrevTriggerProps,
+} from "./navigation/pagination/pagination.parts";
 export type { TabsRootProps } from "./navigation/tabs/tabs";
 export { Tabs } from "./navigation/tabs/tabs";
 export type {
