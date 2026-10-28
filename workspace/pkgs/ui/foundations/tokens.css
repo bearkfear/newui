@@ -18,6 +18,9 @@
   --nui-z-overlay: 1000;
   --nui-z-tooltip: 1100;
   --nui-z-popover: 1050;
+  --nui-z-hover-card: 1050;
+  --nui-hover-card-width: 20rem;
+  --nui-hover-card-shadow: var(--nui-popover-shadow);
   --nui-popover-width: 20rem;
   --nui-popover-shadow: 0 8px 24px color-mix(in srgb, var(--nui-shadow-ink) 18%, transparent);
   --nui-tooltip-background: var(--nui-slate-12);

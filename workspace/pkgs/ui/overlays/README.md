@@ -16,9 +16,10 @@ Present content over the interface with appropriate opening, closing, focus, and
 
 [Popover](popover/README.md) is implemented with Ark-powered click/tap disclosure, interactive content, focus and dismissal behavior, an optional arrow, and compact header/body/footer styling. Storybook includes controlled state, modal mode, anchored positioning, and use inside Dialog. The user approved the implementation and examples, including the revised arrow.
 
-## Planned inventory
+[Hover Card](hover-card/README.md) is implemented with Ark-powered previews on hover/focus, delays, an optional bordered arrow, and the shared theme-preserving portal. Storybook includes native link previews, controlled state, use inside Dialog, and light/dark comparison. The user approved the implementation and examples.
 
-- Hover Card.
+## Remaining inventory
+
 - Drawer and Sheet.
 
 ## Direction and questions
