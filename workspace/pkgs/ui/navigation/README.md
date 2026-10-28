@@ -22,9 +22,12 @@ A group of navigation links must not automatically receive ARIA action menu beha
 
 Define active states, hierarchy, small-screen behavior, and routing integration without assuming website tooling now.
 
+Pagination needs dedicated components and visual review: numbered pages, ellipses, previous/next and first/last actions, compact/mobile layouts, and examples with page sizes and totals. Evaluate Ark Pagination for behavior. The current Panel record-list footer is temporary and should adopt the approved components afterward.
+
 ## Implemented navigation
 
 - [Navbar](navbar/README.md): responsive navigation, brand, mobile toggle, links, submenus, and actions.
 - [Vertical Menu](vertical-menu/README.md): grouped links, current-page state, static nesting, and optional controlled/uncontrolled branches.
+- [Tabs](tabs/README.md): Ark content tabs with five appearances, semantic tones, and rich trigger content; validated by the user.
 
 Both use Radix tokens and the existing automatic themes. Navigation / Overview combines them with shared local page state. No new automated tests were added.

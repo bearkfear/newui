@@ -20,6 +20,7 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 
 - Heading, Text, and Prose.
 - Card, Badge, Avatar, and Separator.
+- [Counter](counter/README.md) for numeric notifications and unread counts; validated by the user.
 - Accordion and Collapsible.
 - Timeline and Carousel.
 - Image/Figure as a recipe or composition with framing and captions.

@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { Panel } from "./panel";
 import { PanelExample } from "./stories/panel-example";
+import { PanelHeaderTones } from "./stories/panel-header-tones";
+import { TransactionPanel } from "./stories/transaction-panel";
 
 const meta = {
   title: "Compositions/Panel",
@@ -26,6 +28,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 export const Subtle: Story = { args: { tone: "subtle" } };
+export const RecordList: Story = { render: () => <TransactionPanel /> };
+export const RecordListDark: Story = { ...RecordList, globals: { theme: "dark" } };
+export const RecordListMobile: Story = {
+  ...RecordList,
+  globals: { viewport: { value: "smallMobile", isRotated: false } },
+};
 export const ContentOnly: Story = {
   render: (args) => (
     <Panel.Root {...args} aria-label="Release notes">
@@ -39,3 +47,5 @@ export const ContentOnly: Story = {
   ),
 };
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
+export const SolidHeaderTones: Story = { render: () => <PanelHeaderTones /> };
+export const SolidHeadersDark: Story = { ...SolidHeaderTones, globals: { theme: "dark" } };

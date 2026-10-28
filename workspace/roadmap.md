@@ -72,8 +72,15 @@ The catalog starts early and grows with each component.
 
 - [x] Implement Accordion and Collapsible with Ark behavior, shared styling, native disabled states, and disclosure animations.
 - [x] Obtain user validation of Accordion and Collapsible in Storybook, including the revised content spacing.
-- [ ] Tabs.
-- [ ] Breadcrumb and Pagination.
+- [x] Implement Ark Tabs with Bulma-inspired variants and segmented styling.
+- [x] Obtain user validation of Tabs and solid Panel headers in Storybook.
+- [x] Add rich Tabs examples with icons, counts, and labels, plus a reusable Counter.
+- [x] Add CounterAnchor and corner overlays for buttons, avatars, and content, with reviewable examples.
+- [x] Document complete Counter overlay composition and add compact record-list Panel examples.
+- [x] Obtain user validation of Counter, overlays, rich Tabs, and compact Panel record lists; remove Panel tabs integration.
+- [ ] Breadcrumb.
+- [ ] Implement dedicated Pagination components with Ark behavior, numbered pages and ellipses, previous/next and first/last controls, compact/mobile layouts, and consistent sizes, tones, and disabled states.
+- [ ] Provide Storybook examples for page-size selection and total/page summaries; obtain user validation of Pagination before replacing the temporary Panel record-list footer controls.
 - [ ] Dropdown Menu and Context Menu.
 - [ ] Menubar and Navigation Menu.
 - [ ] Command, Sidebar, Resizable, and Carousel.

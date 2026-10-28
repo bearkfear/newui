@@ -12,6 +12,7 @@ export type { MediaObjectRootProps } from "./compositions/media-object/media-obj
 export { MediaObject } from "./compositions/media-object/media-object";
 export type { PanelRootProps } from "./compositions/panel/panel";
 export { Panel } from "./compositions/panel/panel";
+export type { PanelHeaderProps } from "./compositions/panel/panel.parts";
 export type { AccordionRootProps } from "./content/accordion/accordion";
 export { Accordion } from "./content/accordion/accordion";
 export type {
@@ -39,6 +40,8 @@ export type {
   CollapsibleIndicatorProps,
   CollapsibleTriggerProps,
 } from "./content/collapsible/collapsible.parts";
+export type { CounterAnchorProps, CounterProps } from "./content/counter/counter";
+export { Counter, CounterAnchor } from "./content/counter/counter";
 export type { HeadingProps } from "./content/heading/heading";
 export { Heading } from "./content/heading/heading";
 export type { ProseProps } from "./content/prose/prose";
@@ -75,6 +78,13 @@ export type { SectionProps } from "./layout/section/section";
 export { Section } from "./layout/section/section";
 export type { NavbarRootProps } from "./navigation/navbar/navbar";
 export { Navbar } from "./navigation/navbar/navbar";
+export type { TabsRootProps } from "./navigation/tabs/tabs";
+export { Tabs } from "./navigation/tabs/tabs";
+export type {
+  TabsContentProps,
+  TabsListProps,
+  TabsTriggerProps,
+} from "./navigation/tabs/tabs.parts";
 export type { VerticalMenuRootProps } from "./navigation/vertical-menu/vertical-menu";
 export { VerticalMenu } from "./navigation/vertical-menu/vertical-menu";
 export type { VerticalMenuBranchProps } from "./navigation/vertical-menu/vertical-menu.branch";

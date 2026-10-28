@@ -13,6 +13,13 @@ import {
   PanelToolbar,
 } from "./panel.parts";
 import { panelRecipe } from "./panel.recipe";
+import {
+  PanelItemActions,
+  PanelItemContent,
+  PanelItemDescription,
+  PanelItemTitle,
+  PanelRow,
+} from "./panel-row.parts";
 
 export type PanelRootProps = JSX.HTMLAttributes<HTMLElement> & VariantProps<typeof panelRecipe>;
 
@@ -32,6 +39,11 @@ export const Panel = {
   Body: PanelBody,
   List: PanelList,
   Item: PanelItem,
+  Row: PanelRow,
+  ItemContent: PanelItemContent,
+  ItemTitle: PanelItemTitle,
+  ItemDescription: PanelItemDescription,
+  ItemActions: PanelItemActions,
   Link: PanelLink,
   Footer: PanelFooter,
 };

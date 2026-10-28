@@ -1,0 +1,141 @@
+@layer components {
+  .nui-tabs-list {
+    display: flex;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    /* Safe alignment keeps the first tab reachable when the row overflows. */
+    justify-content: safe start;
+    color: var(--nui-tabs-foreground, var(--nui-muted-foreground));
+  }
+  .nui-tabs-list.nui\:justify-center {
+    justify-content: safe center;
+  }
+  .nui-tabs-list.nui\:justify-end {
+    justify-content: safe end;
+  }
+  .nui-tabs-trigger {
+    display: inline-flex;
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: var(--nui-tab-height);
+    padding: 0.375rem var(--nui-tab-padding);
+    border: 1px solid transparent;
+    background: transparent;
+    color: inherit;
+    font-size: var(--nui-tab-font);
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .nui-tabs-trigger:hover:not(:disabled) {
+    background: var(--nui-tabs-hover, var(--nui-neutral-soft));
+    color: var(--nui-tabs-foreground, var(--nui-foreground));
+  }
+  .nui-tabs-trigger:focus-visible {
+    z-index: 2;
+    outline: 2px solid var(--nui-focus-ring);
+    outline-offset: -3px;
+  }
+  .nui-tabs-segmented {
+    width: fit-content;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    background: var(--nui-tabs-track, var(--nui-neutral-soft));
+  }
+  .nui-tabs-segmented > .nui-tabs-trigger {
+    min-height: calc(var(--nui-tab-height) - 0.5rem);
+    border-radius: 0.5rem;
+  }
+  .nui-tabs-segmented > .nui-tabs-trigger[data-selected] {
+    background: var(--nui-tabs-selected-bg, var(--nui-background));
+    color: var(--nui-tabs-selected-fg, var(--nui-tabs-tone));
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--nui-neutral-12) 12%, transparent);
+  }
+  .nui-tabs-full {
+    width: 100%;
+  }
+  .nui-tabs-full > .nui-tabs-trigger {
+    flex: 1 0 0;
+    min-width: max-content;
+  }
+  .nui-tabs-underline {
+    border-bottom: 1px solid var(--nui-tabs-border, var(--nui-border));
+  }
+  .nui-tabs-underline > .nui-tabs-trigger {
+    border-bottom: 2px solid transparent;
+  }
+  .nui-tabs-underline > .nui-tabs-trigger[data-selected] {
+    border-bottom-color: var(--nui-tabs-accent, var(--nui-tabs-tone));
+    color: var(--nui-tabs-accent, var(--nui-tabs-tone));
+  }
+  .nui-tabs-boxed {
+    background: linear-gradient(
+      to top,
+      var(--nui-tabs-border, var(--nui-border)) 1px,
+      transparent 1px
+    );
+  }
+  .nui-tabs-boxed > .nui-tabs-trigger {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .nui-tabs-boxed > .nui-tabs-trigger[data-selected] {
+    border-color: var(--nui-tabs-border, var(--nui-border));
+    border-bottom-color: var(--nui-tabs-selected-bg, var(--nui-background));
+    background: var(--nui-tabs-selected-bg, var(--nui-background));
+    color: var(--nui-tabs-selected-fg, var(--nui-tabs-tone));
+  }
+  .nui-tabs-toggle > .nui-tabs-trigger {
+    border-color: var(--nui-tabs-border, var(--nui-control-border));
+  }
+  .nui-tabs-toggle > .nui-tabs-trigger + .nui-tabs-trigger {
+    margin-left: -1px;
+  }
+  .nui-tabs-toggle > .nui-tabs-trigger:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .nui-tabs-toggle > .nui-tabs-trigger:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .nui-tabs-rounded > .nui-tabs-trigger:first-child {
+    border-radius: 999px 0 0 999px;
+  }
+  .nui-tabs-rounded > .nui-tabs-trigger:last-child {
+    border-radius: 0 999px 999px 0;
+  }
+  .nui-tabs-toggle > .nui-tabs-trigger:only-child {
+    border-radius: 0.5rem;
+  }
+  .nui-tabs-rounded > .nui-tabs-trigger:only-child {
+    border-radius: 999px;
+  }
+  .nui-tabs-toggle > .nui-tabs-trigger[data-selected] {
+    z-index: 1;
+    border-color: var(--nui-tabs-selected-bg, var(--nui-tabs-solid));
+    background: var(--nui-tabs-selected-bg, var(--nui-tabs-solid));
+    color: var(--nui-tabs-selected-fg, var(--nui-tabs-on-solid));
+  }
+  .nui-tabs-list > .nui-tabs-trigger:disabled {
+    border-color: var(--nui-neutral-6);
+    background: var(--nui-neutral-3);
+    color: var(--nui-neutral-8);
+    cursor: not-allowed;
+  }
+  .nui-tabs-underline > .nui-tabs-trigger:disabled {
+    border-bottom-color: transparent;
+  }
+  .nui-tabs-content[hidden] {
+    display: none;
+  }
+}
+
+.nui-tabs-trigger:disabled .nui-badge {
+  background: var(--nui-neutral-3);
+  border-color: var(--nui-neutral-6);
+  color: var(--nui-neutral-8);
+}
