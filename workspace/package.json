@@ -23,7 +23,8 @@
     "prepare": "simple-git-hooks"
   },
   "patchedDependencies": {
-    "storybook@10.6.1": "patches/storybook@10.6.1.patch"
+    "storybook@10.6.1": "patches/storybook@10.6.1.patch",
+    "@zag-js/focus-visible@1.45.0": "patches/@zag-js%2Ffocus-visible@1.45.0.patch"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.2",

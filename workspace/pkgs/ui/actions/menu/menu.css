@@ -1,0 +1,5 @@
+@layer utilities {
+  .nui-menu-content:not(:has([data-nui-menu-icon])) .nui-menu-icon {
+    display: none;
+  }
+}

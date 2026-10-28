@@ -86,7 +86,8 @@ The catalog starts early and grows with each component.
 - [x] Implement simple Pagination with Ark behavior, Solid UI-inspired ghost controls, numbered pages and ellipses, previous/next controls, automatic mobile summaries, three sizes, and native boundary disabled states. Keep one appearance and four public composition parts.
 - [x] Provide Storybook examples for page-size selection and total/page summaries; obtain user validation of the simplified Pagination and record-list footer.
 - [x] Replace the temporary Panel record-list footer controls with the validated Pagination composition, adapting zero-based Panel pages and preserving deletion/undo behavior.
-- [ ] Dropdown Menu and Context Menu.
+- [x] Implement simple Ark-powered Dropdown Menu and Context Menu with shared styling, groups, separators, optional icons, nested submenus, unboxed disabled/destructive states, theme-preserving portals, and a separate ordinary dropdown alternative for context actions.
+- [x] Obtain user validation of Dropdown Menu and Context Menu, including keyboard/submenu navigation, icon-free layouts, selection, dismissal/focus, dark/mobile collision handling, controlled state, and removal of outer menu focus rings.
 - [ ] Menubar and Navigation Menu.
 - [ ] Command, Sidebar, Resizable, and Carousel.
 - [x] Implement Navbar and VerticalMenu with responsive navigation, Ark-powered submenus/disclosures, grouped links, and optional nested branches.
@@ -123,6 +124,7 @@ The Field contract must associate the label, description, and error with the con
 
 ### 8. Preparation for external use
 
+- [ ] Adopt a compatible stable Ark release using Zag focus-visible 1.46.0 or later, remove the workspace focus patch, and validate the packed library in a clean consumer without workspace overrides/patches.
 - [ ] Review exports, types, and style installation in consuming applications.
 - [ ] Verify server rendering and hydration when included in the chosen support scope.
 - [ ] Verify keyboard interaction, focus, accessible names, and opening/closing behavior in interactive components.

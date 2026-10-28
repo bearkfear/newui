@@ -2,6 +2,24 @@ export type { ButtonProps } from "./actions/button/button";
 export { Button } from "./actions/button/button";
 export type { ButtonGroupProps } from "./actions/button-group/button-group";
 export { ButtonGroup } from "./actions/button-group/button-group";
+export type {
+  ContextMenuRootProps,
+  ContextMenuTriggerProps,
+} from "./actions/context-menu/context-menu";
+export { ContextMenu } from "./actions/context-menu/context-menu";
+export type {
+  DropdownMenuRootProps,
+  DropdownMenuTriggerProps,
+} from "./actions/dropdown-menu/dropdown-menu";
+export { DropdownMenu } from "./actions/dropdown-menu/dropdown-menu";
+export type { MenuContentProps } from "./actions/menu/menu.content";
+export type {
+  MenuGroupLabelProps,
+  MenuGroupProps,
+  MenuItemProps,
+  MenuSeparatorProps,
+  MenuSubTriggerProps,
+} from "./actions/menu/menu.parts";
 export type { ActionBarRootProps } from "./compositions/action-bar/action-bar";
 export { ActionBar } from "./compositions/action-bar/action-bar";
 export type { FooterRootProps } from "./compositions/footer/footer";

@@ -30,3 +30,7 @@ Reviewed the [official Pagination example](https://www.solid-ui.com/docs/compone
 ## Breadcrumb
 
 Reviewed the [official Breadcrumb example](https://www.solid-ui.com/docs/components/breadcrumb) on 2026-10-28. newui follows its restrained link hierarchy using native nav/ol/li/a elements and a current-page span. Separators are automatic, decorative SVG chevrons; no collapse menu or additional dependency is introduced. No upstream implementation code was copied.
+
+## Action menus
+
+Reviewed the official [Dropdown Menu](https://www.solid-ui.com/docs/components/dropdown-menu) and [Context Menu](https://www.solid-ui.com/docs/components/context-menu) examples on 2026-10-28. newui follows their compact action-menu presentation with one Ark-powered foundation, optional group labels, separators, and destructive styling. Context examples pair a separate Dropdown Menu with the same action list for click/keyboard access. The user requested nested submenus, optional icons, and unboxed disabled action styling. No upstream implementation code was copied.
