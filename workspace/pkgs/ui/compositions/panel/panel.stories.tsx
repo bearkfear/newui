@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { Panel } from "./panel";
+import { FilePanel } from "./stories/file-panel";
+import { filePanelSource } from "./stories/file-panel-source";
 import { PanelExample } from "./stories/panel-example";
 import { PanelHeaderTones } from "./stories/panel-header-tones";
 import { TransactionPanel } from "./stories/transaction-panel";
@@ -28,6 +30,23 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 export const Subtle: Story = { args: { tone: "subtle" } };
+export const FileHeaderTabs: Story = {
+  render: () => <FilePanel />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Compact file-view header inspired by the provided Preview / Code / Blame reference. Tabs, metadata, and file actions share a bar and wrap on small screens. Raw selects Code; Copy and Download operate on the demo document. The source shows a minimal complete composition with a native download link.",
+      },
+      source: { language: "tsx", code: filePanelSource },
+    },
+  },
+};
+export const FileHeaderTabsDark: Story = { ...FileHeaderTabs, globals: { theme: "dark" } };
+export const FileHeaderTabsMobile: Story = {
+  ...FileHeaderTabs,
+  globals: { viewport: { value: "smallMobile", isRotated: false } },
+};
 export const RecordList: Story = { render: () => <TransactionPanel /> };
 export const RecordListDark: Story = { ...RecordList, globals: { theme: "dark" } };
 export const RecordListMobile: Story = {

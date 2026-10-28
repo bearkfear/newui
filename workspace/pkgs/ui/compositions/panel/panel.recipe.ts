@@ -3,6 +3,10 @@ import { tv } from "tailwind-variants/lite";
 export const panelRecipe = tv({
   slots: {
     root: "nui:min-w-0 nui:overflow-hidden nui:rounded-xl nui:border nui:border-border nui:text-foreground",
+    bar: "nui:flex nui:min-w-0 nui:flex-wrap nui:items-center nui:justify-between nui:gap-2 nui:bg-surface nui:px-3 nui:py-2 nui:[--nui-tabs-track:var(--nui-background)] nui:[--nui-tabs-selected-bg:var(--nui-neutral-soft-active)] nui:[--nui-tabs-selected-fg:var(--nui-foreground)]",
+    barGroup:
+      "nui:flex nui:min-w-0 nui:flex-auto nui:flex-wrap nui:items-center nui:gap-x-3 nui:gap-y-2",
+    barActions: "nui:ml-auto nui:flex nui:shrink-0 nui:items-center nui:gap-1",
     toolbar: "nui:border-t nui:border-border nui:px-5 nui:py-4",
     body: "nui:border-t nui:border-border nui:p-5",
     list: "nui:m-0 nui:list-none nui:p-0",

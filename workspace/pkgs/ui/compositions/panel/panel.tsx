@@ -13,6 +13,7 @@ import {
   PanelToolbar,
 } from "./panel.parts";
 import { panelRecipe } from "./panel.recipe";
+import { PanelBar, PanelBarActions, PanelBarGroup } from "./panel-bar.parts";
 import {
   PanelItemActions,
   PanelItemContent,
@@ -32,6 +33,9 @@ export function PanelRoot(props: PanelRootProps) {
 
 export const Panel = {
   Root: PanelRoot,
+  Bar: PanelBar,
+  BarGroup: PanelBarGroup,
+  BarActions: PanelBarActions,
   Header: PanelHeader,
   Title: PanelTitle,
   Description: PanelDescription,
