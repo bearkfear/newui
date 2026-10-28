@@ -59,6 +59,8 @@ The catalog starts early and grows with each component.
 - [ ] Evaluate a gesture-enabled Drawer separately if drag-to-dismiss or snap points are needed.
 - [x] Implement Callout as one API for static guidance and inline alerts, with explicit announcement roles, tones, variants, and optional actions/dismissal.
 - [x] Obtain user validation of Callout and inline alert examples in Storybook, including tone-based title and description colors.
+- [x] Expand Callout with a Bulma-inspired Message presentation using separated header/body parts.
+- [x] Obtain user validation of the Message presentation in Storybook.
 - [x] Implement Loading and PageLoading with status messages, page/section layouts, and reduced-motion support.
 - [x] Obtain user validation of Loading and PageLoading in Storybook.
 - [x] Compare Toast and Sonner references and implement one Ark-powered Toast system with Callout visuals, queuing, actions, and themed portals.
@@ -68,7 +70,9 @@ The catalog starts early and grows with each component.
 
 ### 4. Navigation and interaction
 
-- [ ] Accordion, Collapsible, and Tabs.
+- [x] Implement Accordion and Collapsible with Ark behavior, shared styling, native disabled states, and disclosure animations.
+- [x] Obtain user validation of Accordion and Collapsible in Storybook, including the revised content spacing.
+- [ ] Tabs.
 - [ ] Breadcrumb and Pagination.
 - [ ] Dropdown Menu and Context Menu.
 - [ ] Menubar and Navigation Menu.

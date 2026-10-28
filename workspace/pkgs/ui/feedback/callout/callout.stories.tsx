@@ -6,6 +6,8 @@ import { CalloutMatrix } from "./stories/callout-matrix";
 import { CalloutThemes } from "./stories/callout-themes";
 import { DismissibleCallout } from "./stories/dismissible-callout";
 import { LiveCallout } from "./stories/live-callout";
+import { MessageCallout } from "./stories/message-callout";
+import { DismissibleMessage, MessageTones } from "./stories/message-examples";
 
 const meta = {
   title: "Feedback/Callout",
@@ -23,7 +25,7 @@ const meta = {
       control: "select",
       options: ["neutral", "primary", "info", "success", "warning", "danger"],
     },
-    variant: { control: "inline-radio", options: ["soft", "outline"] },
+    variant: { control: "inline-radio", options: ["soft", "outline", "message"] },
     showIcon: { control: "boolean" },
     showTitle: { control: "boolean" },
     title: { control: "text" },
@@ -43,6 +45,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 export const Outline: Story = { args: { variant: "outline" } };
+export const Message: Story = { render: (args) => <MessageCallout {...args} /> };
+export const MessageTonesAndHeaders: Story = { render: () => <MessageTones /> };
+export const MessageDismissible: Story = { render: () => <DismissibleMessage /> };
+export const MessageDark: Story = { ...MessageTonesAndHeaders, globals: { theme: "dark" } };
+export const MessageMobile: Story = {
+  ...MessageDismissible,
+  globals: { viewport: { value: "smallMobile", isRotated: false } },
+};
 export const AllTonesAndVariants: Story = { render: () => <CalloutMatrix /> };
 export const WithoutIcon: Story = { args: { showIcon: false } };
 export const DescriptionOnly: Story = { args: { showTitle: false } };

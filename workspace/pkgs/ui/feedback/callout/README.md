@@ -4,7 +4,8 @@ One composition for contextual guidance, status messages, and inline alerts. The
 
 ## API
 
-- `Root`: native div with `tone` neutral, primary, info (default), success, warning, or danger; `variant` soft (default) or outline. Native attributes, events, refs, styles, and additive classes are forwarded. Color does not set an announcement role.
+- `Root`: native div with `tone` neutral, primary, info (default), success, warning, or danger; `variant` soft (default), outline, or message. Native attributes, events, refs, styles, and additive classes are forwarded. Color does not set an announcement role.
+- `Header` / `Body`: optional parts for the separated [Message presentation](message.md), with a solid colored header and a padded soft body. The user approved this presentation and its Storybook examples.
 - `Icon`: optional decorative span, with a tone-based information/check/warning/error icon. Supply children to replace the graphic; omit the part to remove it. Icons are hidden from assistive technology, so convey meaning in text as well.
 - `Content`: flexible text column with the shared compact header gap.
 - `Title`: optional semibold paragraph. It provides a visual message title without introducing a page heading or forcing a heading level.
@@ -41,7 +42,7 @@ Surfaces use Radix step 3 and noninteractive borders step 6. Titles use step 12 
 
 Storybook: Feedback / Callout includes all tones and variants, optional icon/title, actions with retry, dismiss/restore, a dynamic alert, structured content with links, theme comparison, long text, and mobile. These are reviewable demos without test assertions or play functions.
 
-The user approved the implementation and Storybook examples, including tone-based title and description colors. No automated tests were added.
+The user approved the soft/outline implementation and examples, including tone-based title and description colors. The user also approved the Message presentation. No automated tests were added.
 
 ## References
 

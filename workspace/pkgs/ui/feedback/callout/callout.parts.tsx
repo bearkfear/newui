@@ -5,6 +5,15 @@ import { calloutRecipe } from "./callout.recipe";
 type PartProps = JSX.HTMLAttributes<HTMLDivElement>;
 const styles = calloutRecipe();
 
+export function CalloutHeader(props: PartProps) {
+  const [local, rest] = splitProps(props, ["class"]);
+  return <div {...rest} data-nui-callout-header="" class={styles.header({ class: local.class })} />;
+}
+export function CalloutBody(props: PartProps) {
+  const [local, rest] = splitProps(props, ["class"]);
+  return <div {...rest} data-nui-callout-body="" class={styles.body({ class: local.class })} />;
+}
+
 export function CalloutContent(props: PartProps) {
   const [local, rest] = splitProps(props, ["class"]);
   return (

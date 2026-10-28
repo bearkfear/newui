@@ -1,0 +1,42 @@
+.nui-disclosure-content[data-state="open"] {
+  animation: nui-disclosure-expand 180ms ease-out;
+}
+.nui-disclosure-content[data-state="closed"] {
+  animation: nui-disclosure-collapse 140ms ease-in;
+}
+.nui-disclosure-indicator {
+  transition: rotate 150ms ease;
+}
+.nui-disclosure-indicator[data-state="open"] {
+  rotate: 180deg;
+}
+@keyframes nui-disclosure-expand {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--height);
+  }
+}
+@keyframes nui-disclosure-collapse {
+  from {
+    height: var(--height);
+  }
+  to {
+    height: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-disclosure-content {
+    animation: none;
+  }
+  .nui-disclosure-indicator {
+    transition: none;
+  }
+}
+[data-motion="reduced"] .nui-disclosure-content {
+  animation: none;
+}
+[data-motion="reduced"] .nui-disclosure-indicator {
+  transition: none;
+}

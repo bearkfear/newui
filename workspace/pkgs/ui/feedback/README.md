@@ -20,6 +20,8 @@ Skeleton is out of scope by user decision.
 
 ## Ideas and questions
 
+Callout also has a separated [Message presentation](callout/message.md) inspired by Bulma, with a solid header and soft body. The user approved this presentation and its Storybook examples.
+
 Callout covers informational and alert uses through one API and native announcement roles. Toast uses one Ark-powered system after comparing the Toast and Sonner references. Compare notification and message use cases before adding components.
 
 Define message semantics, accessible announcements where applicable, duration, and loading behavior. Alert Dialog belongs to [Overlays](../overlays/README.md), as it requires its own interaction contract.

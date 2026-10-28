@@ -45,7 +45,7 @@ export function CalloutMatrix() {
     >
       <For each={messages}>
         {(message) => (
-          <For each={["soft", "outline"] as const}>
+          <For each={["soft", "outline", "message"] as const}>
             {(variant) => <CalloutExample {...message} variant={variant} />}
           </For>
         )}

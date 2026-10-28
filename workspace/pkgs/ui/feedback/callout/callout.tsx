@@ -4,7 +4,14 @@ import type { VariantProps } from "tailwind-variants/lite";
 import { CalloutCloseButton } from "./callout.close-button";
 import { CalloutOptions } from "./callout.context";
 import { CalloutIcon } from "./callout.icon";
-import { CalloutActions, CalloutContent, CalloutDescription, CalloutTitle } from "./callout.parts";
+import {
+  CalloutActions,
+  CalloutBody,
+  CalloutContent,
+  CalloutDescription,
+  CalloutHeader,
+  CalloutTitle,
+} from "./callout.parts";
 import { calloutRecipe } from "./callout.recipe";
 
 export type CalloutRootProps = JSX.HTMLAttributes<HTMLDivElement> &
@@ -27,6 +34,8 @@ export function CalloutRoot(props: CalloutRootProps) {
 
 export const Callout = {
   Root: CalloutRoot,
+  Header: CalloutHeader,
+  Body: CalloutBody,
   Icon: CalloutIcon,
   Content: CalloutContent,
   Title: CalloutTitle,

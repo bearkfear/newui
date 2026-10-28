@@ -14,6 +14,8 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 
 [Badge](badge/README.md), [Separator](separator/README.md), and [Avatar](avatar/README.md) are implemented with reviewable examples. Badge uses native labels and controls; Avatar uses Ark UI for image state. They have been validated by the user.
 
+[Accordion](accordion/README.md) and [Collapsible](collapsible/README.md) are implemented with Ark-powered disclosure, controlled/uncontrolled examples, optional indicators, and reduced-motion support. The user approved both implementations and their Storybook examples, including the revised content spacing.
+
 ## Inventory
 
 - Heading, Text, and Prose.
