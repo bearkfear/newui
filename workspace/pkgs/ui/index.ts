@@ -39,6 +39,10 @@ export type { LoadingProps } from "./feedback/loading/loading";
 export { Loading } from "./feedback/loading/loading";
 export type { PageLoadingProps } from "./feedback/page-loading/page-loading";
 export { PageLoading } from "./feedback/page-loading/page-loading";
+export type { ProgressProps } from "./feedback/progress/progress";
+export { Progress } from "./feedback/progress/progress";
+export type { ProgressCircleProps } from "./feedback/progress-circle/progress-circle";
+export { ProgressCircle } from "./feedback/progress-circle/progress-circle";
 export type {
   CreateToasterOptions,
   ToasterStore,

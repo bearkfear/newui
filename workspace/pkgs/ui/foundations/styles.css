@@ -11,6 +11,7 @@
 @import "../overlays/sheet/sheet.css";
 @import "../feedback/loading/loading.css";
 @import "../feedback/toast/toast.css";
+@import "../feedback/progress/progress.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";

@@ -14,9 +14,7 @@ Communicate an operation's state, result, loading status, and progress.
 
 [Toast](toast/README.md) uses Ark for the store, queue, timers, actions, and dismissal, with the approved Callout visual language and shared theme-scope handling. Sonner was evaluated as a reference; only the Ark implementation is exposed. The user approved the implementation and Storybook examples.
 
-## Planned inventory
-
-- Progress and Progress Circle.
+[Progress](progress/README.md) and [Progress Circle](progress-circle/README.md) use Ark for numeric/indeterminate progress state, value formatting, bounds, and accessible semantics. Both include sizes, tones, and reduced-motion support. The user approved both implementations and their Storybook examples.
 
 Skeleton is out of scope by user decision.
 

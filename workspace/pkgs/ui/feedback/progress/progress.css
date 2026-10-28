@@ -1,0 +1,52 @@
+.nui-progress-range {
+  transition: width 200ms ease;
+}
+.nui-progress-range[data-state="indeterminate"] {
+  width: 35%;
+  animation: nui-progress-travel 1300ms ease-in-out infinite;
+}
+.nui-progress-circle-range {
+  transition: stroke-dashoffset 200ms ease;
+}
+.nui-progress-circle[data-state="indeterminate"] {
+  animation: nui-progress-rotate 1100ms linear infinite;
+}
+.nui-progress-circle-range[data-state="indeterminate"] {
+  stroke-dasharray: calc(var(--circumference) * 0.25) calc(var(--circumference) * 0.75);
+}
+@keyframes nui-progress-travel {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+@keyframes nui-progress-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-progress-range,
+  .nui-progress-circle-range {
+    transition: none;
+  }
+  .nui-progress-range[data-state="indeterminate"] {
+    animation: none;
+    margin-inline: auto;
+  }
+  .nui-progress-circle[data-state="indeterminate"] {
+    animation: none;
+  }
+}
+[data-motion="reduced"] :is(.nui-progress-range, .nui-progress-circle-range) {
+  transition: none;
+}
+[data-motion="reduced"] .nui-progress-range[data-state="indeterminate"] {
+  animation: none;
+  margin-inline: auto;
+}
+[data-motion="reduced"] .nui-progress-circle[data-state="indeterminate"] {
+  animation: none;
+}
