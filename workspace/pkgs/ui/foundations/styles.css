@@ -5,6 +5,7 @@
 @import "../content/prose/prose.css";
 @import "../content/badge/badge.css";
 @import "../overlays/dialog/dialog.css";
+@import "../overlays/tooltip/tooltip.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";

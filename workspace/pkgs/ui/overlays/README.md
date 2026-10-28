@@ -12,10 +12,11 @@ Present content over the interface with appropriate opening, closing, focus, and
 
 [Alert Dialog](alert-dialog/README.md) reuses that foundation for critical confirmations, with Ark's alertdialog role, initial Cancel focus, blocked outside dismissal, and dedicated cancel/action triggers. Storybook includes controlled async failure/retry. The user approved the implementation and examples.
 
+[Tooltip](tooltip/README.md) is implemented with Ark-powered hover/focus behavior, delays, collision-aware positioning, an optional arrow, and the shared theme-preserving portal. Storybook includes controlled state, nested themes, and use inside Dialog. The user approved the implementation and examples.
+
 ## Planned inventory
 
-- Dialog and Alert Dialog.
-- Popover, Tooltip, and Hover Card.
+- Popover and Hover Card.
 - Drawer and Sheet.
 
 ## Direction and questions

@@ -51,3 +51,12 @@ export type { DialogRootProps } from "./overlays/dialog/dialog";
 export { Dialog } from "./overlays/dialog/dialog";
 export type { DialogContentProps, DialogSurfaceProps } from "./overlays/dialog/dialog.content";
 export type { DialogPortalProps } from "./overlays/dialog/dialog.portal";
+export type { OverlayPortalProps as TooltipPortalProps } from "./overlays/overlay.portal";
+export type { TooltipRootProps, TooltipTriggerProps } from "./overlays/tooltip/tooltip";
+export { Tooltip } from "./overlays/tooltip/tooltip";
+export type { TooltipContentProps } from "./overlays/tooltip/tooltip.content";
+export type {
+  TooltipArrowProps,
+  TooltipPositionerProps,
+  TooltipSurfaceProps,
+} from "./overlays/tooltip/tooltip.parts";

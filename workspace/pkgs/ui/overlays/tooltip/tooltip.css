@@ -1,0 +1,42 @@
+.nui-tooltip-positioner {
+  z-index: var(--nui-z-tooltip);
+}
+.nui-tooltip-content {
+  z-index: var(--nui-z-tooltip);
+  transform-origin: var(--transform-origin);
+}
+.nui-tooltip-content[data-state="open"] {
+  animation: nui-tooltip-enter 120ms ease-out;
+}
+.nui-tooltip-content[data-state="closed"] {
+  animation: nui-tooltip-exit 80ms ease-in;
+}
+.nui-tooltip-content[data-instant] {
+  animation: none;
+}
+@keyframes nui-tooltip-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes nui-tooltip-exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-tooltip-content {
+    animation: none;
+  }
+}
+[data-nui-overlay-root][data-motion="reduced"] .nui-tooltip-content {
+  animation: none;
+}

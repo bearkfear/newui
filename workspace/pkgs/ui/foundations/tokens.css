@@ -16,6 +16,10 @@
 
 :root {
   --nui-z-overlay: 1000;
+  --nui-z-tooltip: 1100;
+  --nui-tooltip-background: var(--nui-slate-12);
+  --nui-tooltip-foreground: var(--nui-slate-1);
+  --nui-tooltip-shadow: 0 4px 12px color-mix(in srgb, var(--nui-shadow-ink) 16%, transparent);
   --nui-overlay-backdrop: color-mix(
     in srgb,
     light-dark(var(--nui-slate-12), var(--nui-slate-1)) 72%,
