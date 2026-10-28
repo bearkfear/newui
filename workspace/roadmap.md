@@ -61,7 +61,8 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Callout and inline alert examples in Storybook, including tone-based title and description colors.
 - [x] Implement Loading and PageLoading with status messages, page/section layouts, and reduced-motion support.
 - [x] Obtain user validation of Loading and PageLoading in Storybook.
-- [ ] Toast: choose one solution; compare the Toast and Sonner references without automatically duplicating them.
+- [x] Compare Toast and Sonner references and implement one Ark-powered Toast system with Callout visuals, queuing, actions, and themed portals.
+- [x] Obtain user validation of Toast in Storybook.
 - [ ] Progress and Progress Circle.
 
 ### 4. Navigation and interaction

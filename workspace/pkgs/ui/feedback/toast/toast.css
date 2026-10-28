@@ -1,0 +1,24 @@
+.nui-toast-root {
+  width: var(--nui-toast-width);
+  max-width: calc(
+    100vw -
+    var(--viewport-offset-left, 1rem) -
+    var(--viewport-offset-right, 1rem) -
+    env(safe-area-inset-left, 0px) -
+    env(safe-area-inset-right, 0px)
+  );
+  z-index: var(--z-index);
+  opacity: var(--opacity);
+  translate: var(--x) var(--y);
+  transition:
+    translate 180ms ease,
+    opacity 180ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-toast-root {
+    transition: none;
+  }
+}
+[data-nui-overlay-root][data-motion="reduced"] .nui-toast-root {
+  transition: none;
+}
