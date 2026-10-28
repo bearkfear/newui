@@ -9,6 +9,7 @@
 @import "../overlays/popover/popover.css";
 @import "../overlays/hover-card/hover-card.css";
 @import "../overlays/sheet/sheet.css";
+@import "../feedback/loading/loading.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";
@@ -16,6 +17,7 @@
 @source "../compositions/**/*.recipe.ts";
 @source "../navigation/**/*.recipe.ts";
 @source "../overlays/**/*.recipe.ts";
+@source "../feedback/**/*.recipe.ts";
 
 @theme inline {
   --color-background: var(--nui-background);

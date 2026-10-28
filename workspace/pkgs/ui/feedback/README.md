@@ -6,6 +6,10 @@
 
 Communicate an operation's state, result, loading status, and progress.
 
+## Initial implementation
+
+[Loading](loading/README.md) provides an indeterminate spinner with optional visible text and a native status message. [Page Loading](page-loading/README.md) composes the same indicator into page or section placeholders. Both respect themes and reduced motion; Storybook includes a loading-to-content flow. The user approved both implementations and their examples.
+
 ## Planned inventory
 
 - Alert and Callout.

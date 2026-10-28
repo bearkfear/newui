@@ -1,0 +1,16 @@
+.nui-loading-indicator {
+  animation: nui-loading-spin 800ms linear infinite;
+}
+@keyframes nui-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nui-loading-indicator {
+    animation: none;
+  }
+}
+[data-motion="reduced"] .nui-loading-indicator {
+  animation: none;
+}

@@ -58,6 +58,8 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Sheet in Storybook, including the shared compact header spacing.
 - [ ] Evaluate a gesture-enabled Drawer separately if drag-to-dismiss or snap points are needed.
 - [ ] Alert and Callout: evaluate usage differences before maintaining separate APIs.
+- [x] Implement Loading and PageLoading with status messages, page/section layouts, and reduced-motion support.
+- [x] Obtain user validation of Loading and PageLoading in Storybook.
 - [ ] Toast: choose one solution; compare the Toast and Sonner references without automatically duplicating them.
 - [ ] Progress and Progress Circle.
 
