@@ -8,7 +8,9 @@ Present content over the interface with appropriate opening, closing, focus, and
 
 ## Initial implementation
 
-[Dialog](dialog/README.md) is implemented as an Ark-powered modal with Bulma-inspired compact header/footer surfaces, a scrollable body, right-aligned actions, and a free-content variant. The user validated and manually verified the Storybook examples; AlertDialog remains planned.
+[Dialog](dialog/README.md) is implemented as an Ark-powered modal with Bulma-inspired compact header/footer surfaces, a scrollable body, right-aligned actions, and a free-content variant. The user validated and manually verified its Storybook examples.
+
+[Alert Dialog](alert-dialog/README.md) reuses that foundation for critical confirmations, with Ark's alertdialog role, initial Cancel focus, blocked outside dismissal, and dedicated cancel/action triggers. Storybook includes controlled async failure/retry. The user approved the implementation and examples.
 
 ## Planned inventory
 

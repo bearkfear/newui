@@ -46,7 +46,8 @@ The catalog starts early and grows with each component.
 ### 3. Overlays and feedback
 
 - [x] Implement Dialog with compact header/footer, right-aligned actions, body scrolling, free media content, and theme-preserving portals.
-- [ ] Implement Alert Dialog on the validated Dialog foundation.
+- [x] Implement Alert Dialog on the validated Dialog foundation.
+- [x] Obtain user approval of the Alert Dialog implementation and Storybook examples.
 - [ ] Popover, Tooltip, and Hover Card.
 - [ ] Drawer and Sheet: evaluate whether they are presentations of the same implementation.
 - [ ] Alert and Callout: evaluate usage differences before maintaining separate APIs.
