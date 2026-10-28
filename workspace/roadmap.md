@@ -80,7 +80,8 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Counter, overlays, rich Tabs, and compact Panel record lists; remove Panel tabs integration.
 - [x] Implement compact Panel.Bar composition following the Preview / Code / Blame reference, with natural-width tabs, metadata, and trailing actions in one wrapping header.
 - [ ] Obtain user validation of File Header Tabs, including dark/mobile layouts, content switching, file actions, and the complete source example.
-- [ ] Breadcrumb.
+- [x] Implement simple native Breadcrumb with ancestor links, automatic decorative separators, current-page semantics, and dark/mobile examples.
+- [x] Obtain user validation of Breadcrumb.
 - [ ] Implement dedicated Pagination components with Ark behavior, numbered pages and ellipses, previous/next and first/last controls, compact/mobile layouts, and consistent sizes, tones, and disabled states.
 - [ ] Provide Storybook examples for page-size selection and total/page summaries; obtain user validation of Pagination before replacing the temporary Panel record-list footer controls.
 - [ ] Dropdown Menu and Context Menu.

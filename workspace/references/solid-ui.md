@@ -22,3 +22,7 @@ The text field family will be organized as Field, Input, and Textarea according 
 Temporary material: `_local/solid-ui/`, ignored by Git. Implementation and license audits are still pending; no code has been incorporated.
 
 Links consulted during planning are in [Sources](sources.md). New observations should record the source page or file and consultation date.
+
+## Breadcrumb
+
+Reviewed the [official Breadcrumb example](https://www.solid-ui.com/docs/components/breadcrumb) on 2026-10-28. newui follows its restrained link hierarchy using native nav/ol/li/a elements and a current-page span. Separators are automatic, decorative SVG chevrons; no collapse menu or additional dependency is introduced. No upstream implementation code was copied.

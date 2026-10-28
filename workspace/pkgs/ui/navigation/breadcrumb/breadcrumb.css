@@ -1,0 +1,5 @@
+@layer components {
+  .nui-breadcrumb-item:first-child > .nui-breadcrumb-separator {
+    display: none;
+  }
+}

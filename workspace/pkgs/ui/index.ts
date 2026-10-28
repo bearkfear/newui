@@ -76,6 +76,14 @@ export type { ContainerProps } from "./layout/container/container";
 export { Container } from "./layout/container/container";
 export type { SectionProps } from "./layout/section/section";
 export { Section } from "./layout/section/section";
+export type {
+  BreadcrumbItemProps,
+  BreadcrumbLinkProps,
+  BreadcrumbListProps,
+  BreadcrumbPageProps,
+  BreadcrumbRootProps,
+} from "./navigation/breadcrumb/breadcrumb";
+export { Breadcrumb } from "./navigation/breadcrumb/breadcrumb";
 export type { NavbarRootProps } from "./navigation/navbar/navbar";
 export { Navbar } from "./navigation/navbar/navbar";
 export type { TabsRootProps } from "./navigation/tabs/tabs";

@@ -6,6 +6,7 @@
 @import "../content/badge/badge.css";
 @import "../content/disclosure.css";
 @import "../navigation/tabs/tabs.css";
+@import "../navigation/breadcrumb/breadcrumb.css";
 @import "../overlays/dialog/dialog.css";
 @import "../overlays/tooltip/tooltip.css";
 @import "../overlays/popover/popover.css";
