@@ -14,9 +14,11 @@ Present content over the interface with appropriate opening, closing, focus, and
 
 [Tooltip](tooltip/README.md) is implemented with Ark-powered hover/focus behavior, delays, collision-aware positioning, an optional arrow, and the shared theme-preserving portal. Storybook includes controlled state, nested themes, and use inside Dialog. The user approved the implementation and examples.
 
+[Popover](popover/README.md) is implemented with Ark-powered click/tap disclosure, interactive content, focus and dismissal behavior, an optional arrow, and compact header/body/footer styling. Storybook includes controlled state, modal mode, anchored positioning, and use inside Dialog. The user approved the implementation and examples, including the revised arrow.
+
 ## Planned inventory
 
-- Popover and Hover Card.
+- Hover Card.
 - Drawer and Sheet.
 
 ## Direction and questions

@@ -50,7 +50,9 @@ The catalog starts early and grows with each component.
 - [x] Obtain user approval of the Alert Dialog implementation and Storybook examples.
 - [x] Implement Tooltip with Ark hover/focus behavior, positioning, an optional arrow, and theme-preserving portals.
 - [x] Obtain user validation of Tooltip in Storybook.
-- [ ] Popover and Hover Card.
+- [x] Implement Popover with Ark click/tap behavior, focus and dismissal, positioning, and theme-preserving portals.
+- [x] Obtain user validation of Popover in Storybook.
+- [ ] Hover Card.
 - [ ] Drawer and Sheet: evaluate whether they are presentations of the same implementation.
 - [ ] Alert and Callout: evaluate usage differences before maintaining separate APIs.
 - [ ] Toast: choose one solution; compare the Toast and Sonner references without automatically duplicating them.

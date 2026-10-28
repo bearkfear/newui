@@ -51,7 +51,19 @@ export type { DialogRootProps } from "./overlays/dialog/dialog";
 export { Dialog } from "./overlays/dialog/dialog";
 export type { DialogContentProps, DialogSurfaceProps } from "./overlays/dialog/dialog.content";
 export type { DialogPortalProps } from "./overlays/dialog/dialog.portal";
-export type { OverlayPortalProps as TooltipPortalProps } from "./overlays/overlay.portal";
+export type {
+  OverlayPortalProps as TooltipPortalProps,
+  OverlayPortalProps as PopoverPortalProps,
+} from "./overlays/overlay.portal";
+export type { PopoverRootProps, PopoverTriggerProps } from "./overlays/popover/popover";
+export { Popover } from "./overlays/popover/popover";
+export type { PopoverCloseTriggerProps } from "./overlays/popover/popover.close-trigger";
+export type { PopoverContentProps } from "./overlays/popover/popover.content";
+export type {
+  PopoverArrowProps,
+  PopoverPositionerProps,
+  PopoverSurfaceProps,
+} from "./overlays/popover/popover.parts";
 export type { TooltipRootProps, TooltipTriggerProps } from "./overlays/tooltip/tooltip";
 export { Tooltip } from "./overlays/tooltip/tooltip";
 export type { TooltipContentProps } from "./overlays/tooltip/tooltip.content";
