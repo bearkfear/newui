@@ -57,7 +57,8 @@ The catalog starts early and grows with each component.
 - [x] Implement Sheet as an edge-attached presentation of Dialog, with four sides and responsive examples.
 - [x] Obtain user validation of Sheet in Storybook, including the shared compact header spacing.
 - [ ] Evaluate a gesture-enabled Drawer separately if drag-to-dismiss or snap points are needed.
-- [ ] Alert and Callout: evaluate usage differences before maintaining separate APIs.
+- [x] Implement Callout as one API for static guidance and inline alerts, with explicit announcement roles, tones, variants, and optional actions/dismissal.
+- [x] Obtain user validation of Callout and inline alert examples in Storybook, including tone-based title and description colors.
 - [x] Implement Loading and PageLoading with status messages, page/section layouts, and reduced-motion support.
 - [x] Obtain user validation of Loading and PageLoading in Storybook.
 - [ ] Toast: choose one solution; compare the Toast and Sonner references without automatically duplicating them.
