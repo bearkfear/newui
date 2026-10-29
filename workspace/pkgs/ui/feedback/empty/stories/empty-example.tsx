@@ -1,3 +1,4 @@
+import { Search } from "lucide-solid";
 import { createSignal, Show } from "solid-js";
 import { Button } from "../../../actions/button/button";
 import { Card } from "../../../content/card/card";
@@ -85,19 +86,7 @@ export function NoResults() {
       <Show when={filtered()} fallback={<Text>Showing all 12 workspace projects.</Text>}>
         <Empty.Root>
           <Empty.Icon>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              aria-hidden="true"
-            >
-              <circle cx="10.5" cy="10.5" r="6.5" />
-              <path d="m16 16 5 5" />
-            </svg>
+            <Search size={24} aria-hidden="true" />
           </Empty.Icon>
           <Empty.Content>
             <Empty.Title>No matching projects</Empty.Title>

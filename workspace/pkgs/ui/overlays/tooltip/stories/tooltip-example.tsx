@@ -1,3 +1,4 @@
+import { Archive } from "lucide-solid";
 import { createSignal } from "solid-js";
 import { Button } from "../../../actions/button/button";
 import { Text } from "../../../content/text/text";
@@ -13,17 +14,7 @@ export interface TooltipExampleProps {
 }
 
 export function ArchiveIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M4 8v12h16V8M3 4h18v4H3zM9 12h6"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  );
+  return <Archive size={20} aria-hidden="true" />;
 }
 
 export function TooltipExample(props: TooltipExampleProps) {

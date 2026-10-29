@@ -1,44 +1,24 @@
+import { CircleCheck, CircleX, Info, TriangleAlert } from "lucide-solid";
 import type { JSX } from "solid-js";
-import { Match, Switch, splitProps } from "solid-js";
+import { splitProps } from "solid-js";
+import { Dynamic } from "solid-js/web";
 import { type CalloutTone, useCalloutOptions } from "./callout.context";
 import { calloutRecipe } from "./callout.recipe";
 
 export type CalloutIconProps = JSX.HTMLAttributes<HTMLSpanElement>;
 const styles = calloutRecipe();
 
+const symbols = {
+  primary: Info,
+  neutral: Info,
+  info: Info,
+  success: CircleCheck,
+  warning: TriangleAlert,
+  danger: CircleX,
+} as const;
+
 function CalloutSymbol(props: { tone: CalloutTone }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.8"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <Switch
-        fallback={
-          <>
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 11v5m0-9v.01" />
-          </>
-        }
-      >
-        <Match when={props.tone === "success"}>
-          <circle cx="12" cy="12" r="9" />
-          <path d="m8 12 3 3 5-6" />
-        </Match>
-        <Match when={props.tone === "warning"}>
-          <path d="m12 3 10 18H2L12 3Zm0 6v5m0 3v.01" />
-        </Match>
-        <Match when={props.tone === "danger"}>
-          <circle cx="12" cy="12" r="9" />
-          <path d="m9 9 6 6m0-6-6 6" />
-        </Match>
-      </Switch>
-    </svg>
-  );
+  return <Dynamic component={symbols[props.tone]} aria-hidden="true" />;
 }
 
 export function CalloutIcon(props: CalloutIconProps) {

@@ -4,9 +4,9 @@
 
 ## Validated deliveries
 
-The user accepted the implemented Button and ButtonGroup variants, layout/content primitives, compound compositions, Navbar, VerticalMenu, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
+The user accepted the implemented actions and menus, layout/content primitives, compound compositions, navigation including Steps, overlays, feedback, native Table, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
 
-Remaining unchecked items below describe future work. Flex, Grid, Skeleton, and AspectRatio components are out of scope. Applications use CSS directly for layout and media proportions. Forms are deferred until the other implementation stages are complete.
+Remaining unchecked items below describe future work. Flex, Grid, Skeleton, and AspectRatio components are out of scope. Applications use CSS directly for layout and media proportions. Forms are deferred until the other implementation stages are complete. Icon actions use Button iconOnly with an accessible name; no separate IconButton or CloseButton component is planned.
 
 ## Proposed implementation order
 
@@ -26,6 +26,8 @@ The catalog starts early and grows with each component.
 
 - [x] Set up SolidJS, strict TypeScript, Tailwind, tailwind-variants, and the first Ark-powered navigation components.
 - [x] Integrate official Radix scales, semantic interaction state tokens, automatic system themes, and nested light/dark scopes.
+- [x] Replace handwritten interface icons with Lucide for Solid and provide a Foundations / Iconography review page.
+- [x] Obtain user approval of the Lucide migration and iconography examples.
 - [ ] Define typography, dimensions, visible focus, disabled states, and reduced motion.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
 - [x] Implement Button and ButtonGroup with validated variants and examples.

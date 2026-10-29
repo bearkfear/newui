@@ -11,6 +11,7 @@
 - Use Ark UI for interactive component behavior. Do not use Kobalte, including as a fallback for missing Ark equivalents. Evaluate other maintained primitives when needed.
 - Use Tailwind CSS for styles and tailwind-variants for recipes, slots, and variants.
 - Adopt Radix Colors as the color system, with light and dark themes and semantic aliases.
+- Use Lucide for Solid (`lucide-solid`) for interface icons, with named imports and the shared [iconography contract](pkgs/ui/foundations/iconography.md).
 - Provide compound components such as `Accordion.Root`, `Accordion.Item`, `Accordion.ItemTrigger`, and `Accordion.ItemContent`.
 - Use Storybook with SolidJS/Vite as the initial component development catalog; keep the future public website undecided.
 - Incorporate the suggested Bulma additions accepted by the user: layouts, typography, navigation, files, and compositions. Each resource's format (component, variant, recipe, or example) follows the planning recommendations.

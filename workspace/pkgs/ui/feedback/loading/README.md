@@ -8,7 +8,7 @@ A reusable indeterminate spinner with a native status message. Use it for a smal
 - `tone`: `primary` (default) or `neutral`, using the existing Radix semantic tokens.
 - `label`: meaningful status text, defaulting to `Loading…`. Keep it nonempty and localize it in the application.
 - `showLabel`: false by default; the label remains available to assistive technology. Set true to show it beside the spinner.
-- Root is a span with `role="status"` and explicit `aria-atomic="true"`. Native attributes, refs, events, styles, and additive classes are forwarded. The SVG indicator is decorative.
+- Root is a span with `role="status"` and explicit `aria-atomic="true"`. Native attributes, refs, events, styles, and additive classes are forwarded. The indicator composes decorative Lucide Circle and LoaderCircle icons.
 
 ```tsx
 <Loading />

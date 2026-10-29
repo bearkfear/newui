@@ -1,3 +1,4 @@
+import { Copy, Download } from "lucide-solid";
 import { Button } from "../../../actions/button/button";
 import { Panel } from "../panel";
 import { fileSource } from "./file-content";
@@ -30,7 +31,7 @@ export function FileActions(props: { onRaw: () => void; onStatus: (message: stri
         aria-label="Copy file"
         onClick={copy}
       >
-        <FileActionIcon name="copy" />
+        <Copy size={16} aria-hidden="true" />
       </Button>
       <Button
         size="sm"
@@ -40,31 +41,8 @@ export function FileActions(props: { onRaw: () => void; onStatus: (message: stri
         aria-label="Download file"
         onClick={download}
       >
-        <FileActionIcon name="download" />
+        <Download size={16} aria-hidden="true" />
       </Button>
     </Panel.BarActions>
-  );
-}
-
-function FileActionIcon(props: { name: "copy" | "download" }) {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.75"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <path
-        d={
-          props.name === "copy"
-            ? "M8 8h12v12H8V8ZM16 8V4H4v12h4"
-            : "M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"
-        }
-      />
-    </svg>
   );
 }

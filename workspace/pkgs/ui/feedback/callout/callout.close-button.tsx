@@ -1,3 +1,4 @@
+import { X } from "lucide-solid";
 import type { JSX } from "solid-js";
 import { mergeProps, splitProps } from "solid-js";
 import { calloutRecipe } from "./callout.recipe";
@@ -6,11 +7,7 @@ export type CalloutCloseButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement
 const styles = calloutRecipe();
 
 function CloseIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path d="m4 4 8 8m0-8-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-    </svg>
-  );
+  return <X size={16} aria-hidden="true" />;
 }
 
 export function CalloutCloseButton(props: CalloutCloseButtonProps) {

@@ -42,6 +42,7 @@
       "dependencies": {
         "@ark-ui/solid": "5.39.3",
         "@solid-primitives/media": "2.3.6",
+        "lucide-solid": "1.63.0",
         "tailwind-variants": "3.3.1",
       },
       "devDependencies": {
@@ -744,6 +745,8 @@
     "loupe": ["loupe@3.2.1", "", {}, "sha512-CdzqowRJCeLU72bHvWqwRBBlLcMEtIvGrlvef74kMnV2AolS9Y8xUv1I0U/MNAWMhBlKIoyuEgoJ0t/bbwHbLQ=="],
 
     "lru-cache": ["lru-cache@5.1.1", "", { "dependencies": { "yallist": "^3.0.2" } }, "sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w=="],
+
+    "lucide-solid": ["lucide-solid@1.63.0", "", { "peerDependencies": { "solid-js": "^1.4.7" } }, "sha512-DMP7LupPa+yWdZWXJCSeCNB+lI9Da489JaSlArvX69HQZ1k9GY+ckP6WB+B5JLZfehzXd1tjZS1GFuTwQiShtA=="],
 
     "lz-string": ["lz-string@1.5.0", "", { "bin": { "lz-string": "bin/bin.js" } }, "sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ=="],
 

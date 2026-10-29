@@ -1,3 +1,4 @@
+import { X } from "lucide-solid";
 import { createSignal, Show } from "solid-js";
 import { Button } from "../../../actions/button/button";
 import { Text } from "../../text/text";
@@ -27,7 +28,7 @@ export function RemovableBadge() {
             onClick={remove}
             ref={removeButton}
           >
-            <span aria-hidden="true">×</span>
+            <X size={12} aria-hidden="true" />
           </Badge>
         </BadgeGroup>
       </Show>

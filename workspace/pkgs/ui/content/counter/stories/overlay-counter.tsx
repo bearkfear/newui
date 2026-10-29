@@ -1,3 +1,4 @@
+import { Bell } from "lucide-solid";
 import { createSignal, For } from "solid-js";
 import { Button } from "../../../actions/button/button";
 import { Avatar } from "../../avatar/avatar";
@@ -10,21 +11,7 @@ type OverlayCounterProps = Pick<
 >;
 
 function NotificationIcon() {
-  return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.75"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4" />
-    </svg>
-  );
+  return <Bell size={20} aria-hidden="true" />;
 }
 
 export function OverlayCounterExamples(props: OverlayCounterProps) {

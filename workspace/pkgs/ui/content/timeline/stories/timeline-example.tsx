@@ -1,3 +1,4 @@
+import { Check } from "lucide-solid";
 import { For, Show } from "solid-js";
 import { Heading } from "../../heading/heading";
 import { Timeline, type TimelineRootProps } from "../timeline";
@@ -32,21 +33,7 @@ export interface TimelineExampleProps {
 }
 
 export function EventIcon() {
-  return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.75"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <path d="m5 12 4 4L19 6" />
-    </svg>
-  );
+  return <Check size={14} aria-hidden="true" />;
 }
 
 export function TimelineExample(props: TimelineExampleProps) {

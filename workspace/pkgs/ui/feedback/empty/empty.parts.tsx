@@ -1,3 +1,4 @@
+import { Inbox } from "lucide-solid";
 import { type JSX, mergeProps, Show, splitProps } from "solid-js";
 import { Heading, type HeadingProps } from "../../content/heading/heading";
 import { Text, type TextProps } from "../../content/text/text";
@@ -29,22 +30,7 @@ export function EmptyActions(props: EmptyActionsProps) {
 }
 
 function InboxIcon() {
-  return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M4 4h16l2 10v6H2v-6L4 4Z" />
-      <path d="M2 14h6l2 3h4l2-3h6" />
-    </svg>
-  );
+  return <Inbox size={24} aria-hidden="true" />;
 }
 
 export function EmptyIcon(props: EmptyIconProps) {

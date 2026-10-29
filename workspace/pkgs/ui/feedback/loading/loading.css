@@ -1,5 +1,12 @@
 .nui-loading-indicator {
+  position: relative;
   animation: nui-loading-spin 800ms linear infinite;
+}
+.nui-loading-indicator > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 @keyframes nui-loading-spin {
   to {

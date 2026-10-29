@@ -14,6 +14,10 @@ await writeFile(
   "dist/RADIX_COLORS_LICENSE.txt",
   await readFile(new URL("./LICENSE", import.meta.resolve("@radix-ui/colors")), "utf8"),
 );
+await writeFile(
+  "dist/LUCIDE_LICENSE.txt",
+  await readFile(new URL("../../LICENSE", import.meta.resolve("lucide-solid")), "utf8"),
+);
 
 // Keep JSX for the consumer's Solid compiler, including its SSR target.
 await build({

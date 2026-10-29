@@ -1,4 +1,5 @@
 import { useStepsContext, useStepsItemContext } from "@ark-ui/solid/steps";
+import { Check } from "lucide-solid";
 import { children, type JSX, Show, splitProps } from "solid-js";
 import { stepsRecipe } from "./steps.recipe";
 
@@ -6,21 +7,7 @@ export type StepsIndicatorProps = JSX.HTMLAttributes<HTMLSpanElement>;
 const styles = stepsRecipe();
 
 function CompletedIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.75"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <path d="m5 12 4 4L19 6" />
-    </svg>
-  );
+  return <Check size={16} aria-hidden="true" />;
 }
 
 export function StepsIndicator(props: StepsIndicatorProps) {

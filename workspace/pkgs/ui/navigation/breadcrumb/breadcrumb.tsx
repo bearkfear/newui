@@ -1,3 +1,4 @@
+import { ChevronRight } from "lucide-solid";
 import type { JSX } from "solid-js";
 import { mergeProps, splitProps } from "solid-js";
 import { breadcrumbRecipe } from "./breadcrumb.recipe";
@@ -27,20 +28,7 @@ export function BreadcrumbItem(props: BreadcrumbItemProps) {
   const [local, rest] = splitProps(props, ["class", "children"]);
   return (
     <li {...rest} class={styles.item({ class: local.class })}>
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-        class={styles.separator()}
-      >
-        <path d="m9 6 6 6-6 6" />
-      </svg>
+      <ChevronRight size={14} aria-hidden="true" class={styles.separator()} />
       {local.children}
     </li>
   );

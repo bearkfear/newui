@@ -1,4 +1,5 @@
 import { Popover as ArkPopover } from "@ark-ui/solid/popover";
+import { X } from "lucide-solid";
 import { createUniqueId, splitProps } from "solid-js";
 import { dialogRecipe } from "../dialog/dialog.recipe";
 
@@ -6,11 +7,7 @@ export type PopoverCloseTriggerProps = ArkPopover.CloseTriggerProps;
 const styles = dialogRecipe();
 
 function CloseIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path d="m4 4 8 8m0-8-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-    </svg>
-  );
+  return <X size={16} aria-hidden="true" />;
 }
 
 export function PopoverCloseTrigger(props: PopoverCloseTriggerProps) {
