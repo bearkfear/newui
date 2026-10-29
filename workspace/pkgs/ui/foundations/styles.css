@@ -12,6 +12,7 @@
 @import "../navigation/tabs/tabs.css";
 @import "../navigation/steps/steps.css";
 @import "../navigation/breadcrumb/breadcrumb.css";
+@import "../navigation/navigation-menu/navigation-menu.css";
 @import "../overlays/dialog/dialog.css";
 @import "../overlays/tooltip/tooltip.css";
 @import "../overlays/popover/popover.css";

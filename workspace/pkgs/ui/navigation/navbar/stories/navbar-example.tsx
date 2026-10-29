@@ -6,8 +6,10 @@ import type { NavbarRootProps } from "../navbar";
 import { Navbar } from "../navbar";
 import { NavbarLinks } from "./navbar-links";
 
-export function NavbarSample(props: NavbarRootProps & { model: NavigationModel }) {
-  const [local, rest] = splitProps(props, ["model"]);
+export function NavbarSample(
+  props: NavbarRootProps & { model: NavigationModel; grouped?: boolean | undefined },
+) {
+  const [local, rest] = splitProps(props, ["model", "grouped"]);
   return (
     <Navbar.Root {...rest}>
       <Navbar.Brand
@@ -18,7 +20,7 @@ export function NavbarSample(props: NavbarRootProps & { model: NavigationModel }
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Content>
-        <NavbarLinks model={local.model} />
+        <NavbarLinks model={local.model} grouped={local.grouped} />
         <Navbar.Actions>
           <Navbar.Link
             value="settings"
@@ -33,7 +35,7 @@ export function NavbarSample(props: NavbarRootProps & { model: NavigationModel }
     </Navbar.Root>
   );
 }
-export function NavbarExample(props: NavbarRootProps) {
+export function NavbarExample(props: NavbarRootProps & { grouped?: boolean }) {
   const model = createNavigationModel();
   return (
     <div>

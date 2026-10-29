@@ -20,6 +20,13 @@ export type {
   MenuSeparatorProps,
   MenuSubTriggerProps,
 } from "./actions/menu/menu.parts";
+export type { MenubarRootProps } from "./actions/menubar/menubar";
+export { Menubar } from "./actions/menubar/menubar";
+export type {
+  MenubarContentProps,
+  MenubarMenuProps,
+  MenubarTriggerProps,
+} from "./actions/menubar/menubar.parts";
 export type { ActionBarRootProps } from "./compositions/action-bar/action-bar";
 export { ActionBar } from "./compositions/action-bar/action-bar";
 export type { FooterRootProps } from "./compositions/footer/footer";
@@ -140,6 +147,14 @@ export type {
 export { Breadcrumb } from "./navigation/breadcrumb/breadcrumb";
 export type { NavbarRootProps } from "./navigation/navbar/navbar";
 export { Navbar } from "./navigation/navbar/navbar";
+export type { NavigationMenuRootProps } from "./navigation/navigation-menu/navigation-menu";
+export { NavigationMenu } from "./navigation/navigation-menu/navigation-menu";
+export type { NavigationMenuContentProps } from "./navigation/navigation-menu/navigation-menu.parts";
+export type {
+  NavigationSubmenuContentProps,
+  NavigationSubmenuProps,
+  NavigationSubmenuTriggerProps,
+} from "./navigation/navigation-menu/navigation-menu.submenu";
 export type { PaginationRootProps } from "./navigation/pagination/pagination";
 export { Pagination } from "./navigation/pagination/pagination";
 export type { PaginationItemsProps } from "./navigation/pagination/pagination.items";

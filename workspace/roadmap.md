@@ -94,7 +94,8 @@ The catalog starts early and grows with each component.
 - [x] Replace the temporary Panel record-list footer controls with the validated Pagination composition, adapting zero-based Panel pages and preserving deletion/undo behavior.
 - [x] Implement simple Ark-powered Dropdown Menu and Context Menu with shared styling, groups, separators, optional icons, nested submenus, unboxed disabled/destructive states, theme-preserving portals, and a separate ordinary dropdown alternative for context actions.
 - [x] Obtain user validation of Dropdown Menu and Context Menu, including keyboard/submenu navigation, icon-free layouts, selection, dismissal/focus, dark/mobile collision handling, controlled state, and removal of outer menu focus rings.
-- [ ] Menubar and Navigation Menu.
+- [x] Implement Menubar with Ark multi-trigger Menu and shared action-menu parts; extract standalone Navigation Menu as Navbar's shared foundation, with grouped panels and cascading page-link disclosures using Ark Popover.
+- [x] Obtain user validation of Menubar, Navigation Menu, and the revised Navbar appearance and cascading/mobile examples, including dropdown spacing, open chevrons, and stable hover switching.
 - [ ] Command, Sidebar, and Carousel.
 - [x] Implement Resizable using Ark Splitter with horizontal/vertical panels, optional grips, controlled sizes, collapse/expand, and nested/mobile/theme Storybook examples.
 - [x] Obtain user validation of Resizable and its Storybook examples.

@@ -8,7 +8,6 @@ Guide paths between pages, sections, and sets of content.
 
 ## Planned inventory
 
-- Standalone Navigation Menu; Navbar already uses Ark Navigation Menu for submenus, so a separate API needs a distinct scope.
 - Sidebar.
 
 ## Ideas and boundaries
@@ -24,6 +23,7 @@ Pagination is implemented and validated, with Ark behavior, a simple Previous / 
 ## Implemented navigation
 
 - [Navbar](navbar/README.md): responsive navigation, brand, mobile toggle, links, submenus, and actions.
+- [Navigation Menu](navigation-menu/README.md): shared standalone page navigation, grouped panels, and cascading disclosures; also powers Navbar. The user approved the implementation and Navbar revision, including hover, keyboard, and mobile behavior.
 - [Steps](steps/README.md): Ark step state, associated content, next/back/reset, linear validation, and horizontal/vertical layouts with Radix markers; validated by the user, including full-width distribution and optional Card composition.
 - [Vertical Menu](vertical-menu/README.md): grouped links, current-page state, static nesting, and optional controlled/uncontrolled branches.
 - [Tabs](tabs/README.md): Ark content tabs with five appearances, semantic tones, and rich trigger content; validated by the user.

@@ -20,7 +20,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "A native navigation landmark powered by Ark Navigation Menu for submenus, current links, hover, dismissal, and keyboard navigation, plus Ark Collapsible for mobile disclosure. Desktop links remain visible from 768px; mobile supports a toggle, Escape with focus return, and closing after a link selection.",
+          "Responsive header using the shared Navigation Menu foundation: text links with current/open indicators, simple or grouped panels, and cascading page-link disclosures. Click/tap opens each level; mobile cascades expand inline. Ark Navigation Menu owns top-level navigation, Popover owns deeper disclosures, and Collapsible owns the mobile toggle. Use Tab to traverse cascading links, Enter/Space to open, and Escape to dismiss. Desktop links remain visible from 768px. Link selection closes the navigation unless canceled.",
       },
     },
   },
@@ -30,9 +30,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 export const Subtle: Story = { args: { tone: "subtle" } };
+export const WithSubmenus: Story = { args: { defaultValue: "resources" } };
+export const GroupedPanel: Story = {
+  render: (args) => <NavbarExample {...args} defaultValue="resources" grouped />,
+};
+export const Dark: Story = { globals: { theme: "dark" } };
+export const SubmenusDark: Story = { ...WithSubmenus, globals: { theme: "dark" } };
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
 export const MobileInitiallyOpen: Story = {
   args: { defaultOpen: true },
+  globals: { viewport: { value: "smallMobile", isRotated: false } },
+};
+export const MobileSubmenus: Story = {
+  args: { defaultOpen: true, defaultValue: "resources" },
   globals: { viewport: { value: "smallMobile", isRotated: false } },
 };
 export const Controlled: Story = {

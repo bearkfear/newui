@@ -1,6 +1,6 @@
 # Navbar
 
-Responsive website navigation powered by Ark UI Navigation Menu and Collapsible, with Radix semantic colors.
+Responsive website navigation built on the shared [Navigation Menu](../navigation-menu/README.md) and Ark Collapsible, with Radix semantic colors. Top-level links use text and a thin current/open indicator; buttons are reserved for disclosure and explicit actions.
 
 ```tsx
 import { Navbar } from "newui";
@@ -40,6 +40,10 @@ Root renders the Ark nav landmark inside its mobile disclosure provider. Its DOM
 
 MenuTrigger/MenuContent live inside Item. Ark owns submenu interactions, focus movement, dismissal, expanded states, and current-link semantics. Pass `current` to Link for aria-current=page. Item supports disabled. Toggle's default name is Toggle navigation; children and aria-label support application wording.
 
+MenuContent accepts `layout="wide"` for grouped links and `align="end"` near the right edge. MenuGroup/MenuLabel/MenuDescription provide the same parts as Navigation Menu. Cascades use Submenu/SubmenuTrigger/SubmenuContent; repeat inside SubmenuContent for more levels and name each content with `aria-label`. Desktop levels open beside the trigger with collision handling; mobile levels expand inline. See the shared contract for a complete example and the Ark mapping.
+
+Opening defaults to click/tap, with pointer-leave closing disabled so cascades stay open. Top-level panels retain Ark navigation behavior. Cascading page-link disclosures use nonmodal Ark Popover and native Tab/Enter/Space/Escape interaction; they do not adopt ARIA action-menu semantics. Selecting a link closes its ancestor disclosures and the mobile navigation unless `onSelect` is canceled.
+
 Ark's Solid `asChild` uses a render function, rather than a boolean. Link forwards this prop for custom router elements. Applications own destinations, routing, and route-change focus. Class values are additive; use variants and tokens for reliable customization.
 
-Review Navigation / Navbar and Overview in Storybook. The implementation has been validated by the user; no new automated tests have been added.
+Review Navigation / Navbar and Overview in Storybook. The user approved the revised appearance, shared Navigation Menu foundation, cascading submenus, dropdown spacing, and open chevrons, including keyboard and mobile behavior. No new automated tests have been added.

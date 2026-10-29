@@ -1,7 +1,8 @@
+import { GroupedLinks, ResourceLinks } from "../../navigation-menu/stories/resource-links";
 import type { NavigationModel } from "../../stories/navigation-model";
 import { Navbar } from "../navbar";
 
-export function NavbarLinks(props: { model: NavigationModel }) {
+export function NavbarLinks(props: { model: NavigationModel; grouped?: boolean | undefined }) {
   const href = () => `#${props.model.targetId}`;
   return (
     <Navbar.List>
@@ -16,23 +17,12 @@ export function NavbarLinks(props: { model: NavigationModel }) {
       </Navbar.Item>
       <Navbar.Item value="resources">
         <Navbar.MenuTrigger>Resources</Navbar.MenuTrigger>
-        <Navbar.MenuContent>
-          <Navbar.Link
-            value="guides"
-            href={href()}
-            current={props.model.current() === "guides"}
-            onSelect={() => props.model.select("guides")}
-          >
-            Guides
-          </Navbar.Link>
-          <Navbar.Link
-            value="components"
-            href={href()}
-            current={props.model.current() === "components"}
-            onSelect={() => props.model.select("components")}
-          >
-            Components
-          </Navbar.Link>
+        <Navbar.MenuContent layout={props.grouped ? "wide" : "simple"}>
+          {props.grouped ? (
+            <GroupedLinks model={props.model} />
+          ) : (
+            <ResourceLinks model={props.model} />
+          )}
         </Navbar.MenuContent>
       </Navbar.Item>
       <Navbar.Item value="changelog">

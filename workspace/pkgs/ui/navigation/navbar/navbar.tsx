@@ -1,10 +1,10 @@
 import { Collapsible } from "@ark-ui/solid/collapsible";
-import { NavigationMenu as ArkNavigationMenu } from "@ark-ui/solid/navigation-menu";
+import type { NavigationMenu as ArkNavigationMenu } from "@ark-ui/solid/navigation-menu";
 import { mergeProps, splitProps } from "solid-js";
 import type { VariantProps } from "tailwind-variants/lite";
 import type { ContainerProps } from "../../layout/container/container";
 import { Container } from "../../layout/container/container";
-import { NavbarCloseContext } from "./navbar.context";
+import { NavigationMenu } from "../navigation-menu/navigation-menu";
 import {
   NavbarItem,
   NavbarLink,
@@ -34,19 +34,18 @@ export function NavbarRoot(props: NavbarRootProps) {
   const disclosure = useNavbarDisclosure(local);
   const styles = () => navbarRecipe({ tone: local.tone });
   return (
-    <NavbarCloseContext.Provider value={disclosure.close}>
-      <Collapsible.RootProvider value={disclosure.api} onKeyDown={disclosure.onKeyDown}>
-        <ArkNavigationMenu.Root
-          {...rest}
-          orientation={disclosure.desktop() ? "horizontal" : "vertical"}
-          class={styles().root({ class: local.class })}
-        >
-          <Container size={local.width} class={styles().frame()}>
-            {local.children}
-          </Container>
-        </ArkNavigationMenu.Root>
-      </Collapsible.RootProvider>
-    </NavbarCloseContext.Provider>
+    <Collapsible.RootProvider value={disclosure.api} onKeyDown={disclosure.onKeyDown}>
+      <NavigationMenu.Root
+        {...rest}
+        onNavigate={disclosure.close}
+        orientation={disclosure.desktop() ? "horizontal" : "vertical"}
+        class={styles().root({ class: local.class })}
+      >
+        <Container size={local.width} class={styles().frame()}>
+          {local.children}
+        </Container>
+      </NavigationMenu.Root>
+    </Collapsible.RootProvider>
   );
 }
 
@@ -60,5 +59,11 @@ export const Navbar = {
   Link: NavbarLink,
   MenuTrigger: NavbarMenuTrigger,
   MenuContent: NavbarMenuContent,
+  MenuGroup: NavigationMenu.Group,
+  MenuLabel: NavigationMenu.Label,
+  MenuDescription: NavigationMenu.Description,
+  Submenu: NavigationMenu.Submenu,
+  SubmenuTrigger: NavigationMenu.SubmenuTrigger,
+  SubmenuContent: NavigationMenu.SubmenuContent,
   Actions: NavbarActions,
 };
