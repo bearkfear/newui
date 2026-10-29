@@ -4,7 +4,7 @@
 
 ## Validated deliveries
 
-The user accepted the implemented actions and menus, layout/content primitives, compound compositions, navigation including Steps and Sidebar, overlays, feedback, native Table, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
+The user accepted the implemented actions and menus, layout/content primitives, compound compositions, navigation including Steps and Sidebar, overlays, feedback, native Table, Unovis charts, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
 
 Remaining unchecked items below describe future work. Flex, Grid, Skeleton, and AspectRatio components are out of scope. Applications use CSS directly for layout and media proportions. Forms are deferred until the other implementation stages are complete. Icon actions use Button iconOnly with an accessible name; no separate IconButton or CloseButton component is planned.
 
@@ -113,12 +113,15 @@ Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists
 
 - [x] Implement native Table with Solid UI/Bulma-inspired presentation, Radix tokens, composable borders/stripes/density/hover, and responsive Storybook examples, without Kobalte or additional dependencies.
 - [x] Obtain user validation of Table, including square bordered corners without scroll-container clipping.
-- [ ] Data Table.
 - [x] Implement native Timeline with vertical/horizontal layouts, chronological lists, dates, custom indicators, Radix status colors, and responsive progress/history Storybook examples.
 - [x] Obtain user validation of Timeline, including horizontal and vertical layouts.
-- [ ] Charts, Bar List, Delta Bar, and Badge Delta.
+- [x] Select Unovis for Charts and implement LineChart, BarChart, and DonutChart with semantic themes, responsive rendering, legends, value tables, and reviewable Storybook examples.
+- [x] Obtain user validation of LineChart, BarChart, and DonutChart and their Storybook examples, including compact data disclosures, header spacing, consistent closed/open card alignment, independent mixed states, and grouped-bar spacing.
+- [ ] Bar List, Delta Bar, and Badge Delta.
 
-Data Table and Charts require their own dependency evaluation; do not assume Ark provides data tables or chart rendering.
+Data Table is deferred by user decision until a concrete need for sorting, filtering, pagination, or selection arises. The existing native Table remains the current presentation component. Data Table is not a prerequisite for subsequent stages.
+
+Data Table and Charts require their own dependency evaluation; do not assume Ark provides data tables or chart rendering. The user selected Unovis; the initial integration uses its official Solid adapter through the optional `newui/charts` entry.
 
 ### 6. Layouts and larger blocks
 
@@ -148,3 +151,5 @@ The Field contract must associate the label, description, and error with the con
 - [ ] Review themes, contrast, states, responsiveness, and reduced motion.
 - [ ] Document installation, customization, composition, and complete examples.
 - [ ] Publish only after defining the distribution format.
+
+Future distribution idea: evaluate optional component-level CSS imports after the initial shared stylesheet contract is stable. This is not a prerequisite for the current implementation stages.

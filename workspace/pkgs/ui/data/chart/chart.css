@@ -1,0 +1,45 @@
+@layer components {
+  .nui-chart {
+    --nui-chart-1: var(--nui-primary);
+    --nui-chart-2: var(--nui-success);
+    --nui-chart-3: var(--nui-warning);
+    --nui-chart-4: var(--nui-danger);
+    --nui-chart-5: var(--nui-info);
+    --vis-font-family: inherit;
+    --vis-axis-tick-label-color: var(--nui-muted-foreground);
+    --vis-axis-label-color: var(--nui-muted-foreground);
+    --vis-axis-grid-color: var(--nui-border);
+    --vis-axis-tick-color: var(--nui-border);
+    --vis-axis-tick-label-font-size: 11px;
+    --vis-axis-tick-label-hide-transition: none;
+    --vis-donut-central-label-text-color: var(--nui-foreground);
+    --vis-donut-central-sub-label-text-color: var(--nui-muted-foreground);
+    --vis-donut-background-color: var(--nui-surface);
+    --vis-tooltip-background-color: var(--nui-background);
+    --vis-tooltip-border-color: var(--nui-border);
+    --vis-tooltip-text-color: var(--nui-foreground);
+    --vis-tooltip-shadow-color: var(--nui-shadow-ink);
+    --vis-tooltip-transition-duration: 0ms;
+    --vis-crosshair-line-stroke-color: var(--nui-neutral-border-hover);
+  }
+  .nui-chart-plot > :where(div) {
+    width: 100%;
+    height: 100%;
+  }
+  .nui-chart-data-trigger[data-state="open"] .nui-chart-data-chevron {
+    transform: rotate(180deg);
+  }
+  .nui-chart-values {
+    min-width: max-content;
+  }
+  .nui-chart-values :where(th, td) {
+    white-space: nowrap;
+  }
+  .nui-chart-tooltip {
+    display: grid;
+    gap: 0.25rem;
+    color: var(--nui-foreground);
+    font-family: inherit;
+    font-size: 0.75rem;
+  }
+}

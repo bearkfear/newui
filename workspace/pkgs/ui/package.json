@@ -15,7 +15,12 @@
       "solid": "./dist/index.jsx",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./charts": {
+      "types": "./dist/types/data/chart/index.d.ts",
+      "solid": "./dist/charts.jsx",
+      "import": "./dist/charts.js"
+    }
   },
   "peerDependencies": {
     "solid-js": "^1.9.0"
@@ -23,13 +28,16 @@
   "dependencies": {
     "@ark-ui/solid": "5.39.3",
     "@solid-primitives/media": "2.3.6",
+    "@unovis/solid": "1.7.1",
+    "@unovis/ts": "1.7.1",
     "lucide-solid": "1.63.0",
     "tailwind-variants": "3.3.1"
   },
   "scripts": {
     "build": "bun scripts/build.ts",
     "typecheck": "tsc --noEmit && tsc --project scripts/tsconfig.json",
-    "colors:generate": "bun scripts/generate-colors.ts"
+    "colors:generate": "bun scripts/generate-colors.ts",
+    "measure:charts": "bun scripts/measure-chart-bundles.ts"
   },
   "devDependencies": {
     "@babel/core": "7.29.7",

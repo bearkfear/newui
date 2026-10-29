@@ -21,8 +21,9 @@ await writeFile(
 
 // Keep JSX for the consumer's Solid compiler, including its SSR target.
 await build({
-  entryPoints: ["index.ts"],
-  outfile: "dist/index.jsx",
+  entryPoints: { index: "index.ts", charts: "data/chart/index.ts" },
+  outdir: "dist",
+  outExtension: { ".js": ".jsx" },
   bundle: true,
   packages: "external",
   format: "esm",
@@ -32,14 +33,16 @@ await build({
 });
 
 // Supply a browser-compiled fallback for tools without the Solid export condition.
-const compiled = await transformAsync(await readFile("dist/index.jsx", "utf8"), {
-  filename: "index.jsx",
-  babelrc: false,
-  configFile: false,
-  presets: [[solid, { generate: "dom", hydratable: true }]],
-});
-if (!compiled?.code) throw new Error("Solid compilation produced no output.");
-await writeFile("dist/index.js", compiled.code);
+for (const name of ["index", "charts"]) {
+  const compiled = await transformAsync(await readFile(`dist/${name}.jsx`, "utf8"), {
+    filename: `${name}.jsx`,
+    babelrc: false,
+    configFile: false,
+    presets: [[solid, { generate: "dom", hydratable: true }]],
+  });
+  if (!compiled?.code) throw new Error(`Solid compilation produced no output for ${name}.`);
+  await writeFile(`dist/${name}.js`, compiled.code);
+}
 
 const stylesheet = "foundations/styles.css";
 const result = await postcss([tailwind()]).process(await readFile(stylesheet, "utf8"), {
