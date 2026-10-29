@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { InvoiceTable, type InvoiceTableProps } from "./stories/invoice-table";
+import { playlistSource } from "./stories/playlist-source";
+import { PlaylistTable } from "./stories/playlist-table";
 import {
   EmptyTable,
   GroupedHeaders,
@@ -133,4 +135,24 @@ export const NestedDark: Story = {
       <InvoiceTable striped hoverable highlightRow />
     </div>
   ),
+};
+
+export const Playlist: Story = {
+  render: () => <PlaylistTable />,
+  globals: { theme: "dark" },
+  parameters: {
+    controls: { disable: true },
+    docs: {
+      description: {
+        story:
+          "Music-library composition inspired by the supplied playlist reference. Native cells contain illustrated covers, title/album details, artists, favorites, library toggles, durations, and Ark dropdown actions. Select using the song title; playback controls only preview state and do not load audio. The initial blue row is selected independently of playback. Scoped story CSS supplies rounded rows and solid emphasis without changing Table's default appearance or API. Narrow viewports preserve the columns with native horizontal scrolling.",
+      },
+      source: { code: playlistSource },
+    },
+  },
+};
+export const PlaylistLight: Story = { ...Playlist, globals: { theme: "light" } };
+export const PlaylistMobile: Story = {
+  ...Playlist,
+  globals: { theme: "dark", viewport: { value: "mobile", isRotated: false } },
 };

@@ -1,0 +1,217 @@
+@import "./playlist-cover.css";
+
+.playlist-demo {
+  padding: clamp(0.5rem, 2vw, 2rem);
+  background: var(--nui-surface);
+  color: var(--nui-foreground);
+  border-radius: 0.75rem;
+}
+
+.playlist-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.75rem 0.75rem 2rem;
+}
+
+.playlist-toolbar h2 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.playlist-eyebrow {
+  color: var(--nui-primary-text);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.playlist-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nui-table.playlist-table {
+  min-width: 60rem;
+  background: transparent;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  table-layout: fixed;
+}
+
+.playlist-table > thead > tr > th {
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.playlist-table > thead > tr > th:nth-child(1) {
+  width: 2rem;
+}
+.playlist-table > thead > tr > th:nth-child(2) {
+  width: 47%;
+}
+.playlist-table > thead > tr > th:nth-child(4) {
+  width: 2.75rem;
+}
+.playlist-table > thead > tr > th:nth-child(5) {
+  width: 4.25rem;
+}
+.playlist-table > thead > tr > th:nth-child(6) {
+  width: 3rem;
+}
+
+.playlist-table > thead > tr > th:nth-child(3) {
+  background-image: linear-gradient(var(--nui-border), var(--nui-border));
+  background-position: left center;
+  background-size: 1px 1rem;
+  background-repeat: no-repeat;
+}
+
+.playlist-table > tbody > tr > :is(th, td) {
+  height: 4.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  font-weight: 400;
+}
+
+.playlist-table > tbody > tr,
+.playlist-table > tbody > tr[data-selected],
+.playlist-table > tbody > tr:hover,
+.playlist-table > tbody > tr[data-selected]:hover {
+  background: transparent;
+}
+
+.playlist-table > tbody > tr > :is(th, td):nth-child(n + 3) {
+  box-shadow: inset 0 -1px var(--nui-border);
+}
+
+.playlist-table > tbody > tr > th {
+  /* Start at the title: cell padding + cover width + track gap. */
+  background-image: linear-gradient(var(--nui-border), var(--nui-border));
+  background-position: right bottom;
+  background-size: calc(100% - 0.75rem - 3.5rem - 1rem) 1px;
+  background-repeat: no-repeat;
+}
+
+.playlist-table > tbody > tr:last-child > :is(th, td) {
+  background-image: none;
+  box-shadow: none;
+}
+
+.playlist-table > tbody > tr:hover > :is(th, td):not(:first-child),
+.playlist-table > tbody > tr:focus-within > :is(th, td):not(:first-child) {
+  background: var(--nui-neutral-soft);
+  box-shadow: none;
+}
+
+.playlist-table > tbody > tr[data-selected] > :is(th, td):not(:first-child) {
+  background: var(--nui-primary);
+  color: var(--nui-on-primary);
+  box-shadow: none;
+}
+
+.playlist-table > tbody > tr > :nth-child(2) {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.playlist-table > tbody > tr > :last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.playlist-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+.playlist-details {
+  min-width: 0;
+}
+.playlist-title {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: start;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+.playlist-title:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.playlist-secondary,
+.playlist-artist,
+.playlist-duration {
+  color: var(--nui-muted-foreground);
+}
+.playlist-details .playlist-secondary,
+.playlist-artist > span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.playlist-explicit {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  padding: 0.05rem 0.2rem;
+  border-radius: 0.15rem;
+  background: var(--nui-neutral-11);
+  color: var(--nui-neutral-1);
+  font-size: 0.625rem;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+.playlist-table .playlist-favorite-cell {
+  padding: 0;
+}
+.playlist-table .playlist-favorite {
+  padding: 0;
+  color: var(--nui-primary-text);
+}
+.playlist-table .playlist-library-cell,
+.playlist-table .playlist-actions {
+  padding-inline: 0.25rem;
+}
+.playlist-table .playlist-library {
+  padding: 0;
+  color: var(--nui-primary-text);
+}
+.playlist-table .playlist-menu {
+  min-height: 2rem;
+  padding: 0.25rem;
+  color: inherit;
+}
+.playlist-table tr[data-selected] .playlist-secondary,
+.playlist-table tr[data-selected] .playlist-library {
+  color: inherit;
+}
+.playlist-table tr[data-selected] .playlist-library:hover,
+.playlist-table tr[data-selected] .playlist-menu:hover {
+  background: var(--nui-primary-hover);
+}
+.playlist-table tr[data-selected] :is(.playlist-library, .playlist-menu):focus-visible {
+  outline-color: var(--nui-on-primary);
+}
+.playlist-table caption {
+  text-align: start;
+  font-size: 0.75rem;
+}
+.playlist-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
