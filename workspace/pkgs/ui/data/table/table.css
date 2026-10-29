@@ -1,0 +1,38 @@
+@layer components {
+  .nui-table > :where(thead, tbody, tfoot) > :where(tr) > :where(th, td) {
+    padding: var(--nui-table-cell-py) var(--nui-table-cell-px);
+    border-bottom: 1px solid var(--nui-border);
+  }
+
+  .nui-table > :where(tbody:last-child) > :where(tr:last-child) > :where(th, td),
+  .nui-table > :where(tfoot) > :where(tr:last-child) > :where(th, td) {
+    border-bottom: 0;
+  }
+
+  .nui-table > :where(tfoot) > :where(tr:first-child) > :where(th, td) {
+    border-top: 1px solid var(--nui-border);
+  }
+
+  .nui-table:where([data-variant="bordered"])
+    > :where(thead, tbody, tfoot)
+    > :where(tr)
+    > :where(th, td) {
+    border: 1px solid var(--nui-border);
+  }
+
+  .nui-table:where([data-striped]) > :where(tbody) > :where(tr:nth-child(even)) {
+    background: var(--nui-surface);
+  }
+
+  .nui-table:where([data-hoverable]) > :where(tbody) > :where(tr:hover) {
+    background: var(--nui-neutral-soft);
+  }
+
+  .nui-table > :where(tbody) > :where(tr[data-selected]) {
+    background: var(--nui-primary-soft);
+  }
+
+  .nui-table:where([data-hoverable]) > :where(tbody) > :where(tr[data-selected]:hover) {
+    background: var(--nui-primary-soft-hover);
+  }
+}

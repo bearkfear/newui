@@ -8,7 +8,7 @@ Enable browsing, comparing, and interpreting structured information.
 
 ## Planned inventory
 
-- Table and Data Table.
+- Table (implemented and validated) and Data Table (planned).
 - Charts.
 - Bar List and Delta Bar.
 - Badge Delta.
@@ -24,3 +24,7 @@ Generic Badge and Timeline belong to [Content](../content/README.md). Badge Delt
 ## Open decisions
 
 - Dependencies for charts and data table behavior; evaluate them separately from Ark.
+
+## Implemented
+
+- [Table](table/README.md): native table parts, caption, row/column headers, totals, alignment, composable borders/stripes/density/hover states, presentational row highlighting, and an optional keyboard-focusable scroll container. Uses Radix semantic tokens without an interaction primitive or additional dependency. The user validated the implementation and Storybook examples, including the corrected bordered corners.

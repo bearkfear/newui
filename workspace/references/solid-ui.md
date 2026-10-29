@@ -34,3 +34,7 @@ Reviewed the [official Breadcrumb example](https://www.solid-ui.com/docs/compone
 ## Action menus
 
 Reviewed the official [Dropdown Menu](https://www.solid-ui.com/docs/components/dropdown-menu) and [Context Menu](https://www.solid-ui.com/docs/components/context-menu) examples on 2026-10-28. newui follows their compact action-menu presentation with one Ark-powered foundation, optional group labels, separators, and destructive styling. Context examples pair a separate Dropdown Menu with the same action list for click/keyboard access. The user requested nested submenus, optional icons, and unboxed disabled action styling. No upstream implementation code was copied.
+
+## Table
+
+Reviewed [Solid UI Table](https://www.solid-ui.com/docs/components/table) and [Bulma Table](https://bulma.io/documentation/elements/table/) on 2026-10-28. Solid UI inspires the restrained invoice presentation and caption; Bulma inspires combinable borders, stripes, compact spacing, hover, highlighted rows, and a separate scroll container. newui uses original native HTML wrappers and Radix tokens, without copied source, extra dependencies, or Kobalte. See the [Table contract](../pkgs/ui/data/table/README.md).

@@ -97,7 +97,9 @@ Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists
 
 ### 5. Data and visualizations
 
-- [ ] Table and Data Table.
+- [x] Implement native Table with Solid UI/Bulma-inspired presentation, Radix tokens, composable borders/stripes/density/hover, and responsive Storybook examples, without Kobalte or additional dependencies.
+- [x] Obtain user validation of Table, including square bordered corners without scroll-container clipping.
+- [ ] Data Table.
 - [ ] Timeline.
 - [ ] Charts, Bar List, Delta Bar, and Badge Delta.
 

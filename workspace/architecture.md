@@ -8,7 +8,7 @@
 - Use Solid UI as the initial reference for the catalog, styles, and reusable code, while developing our own visual identity.
 - Distribute the library initially as an installable package.
 - Use `workspace/` as the development root, `apps/storybook/` for the catalog, and `pkgs/ui/` for the library, with tooling owned by each application or package; see [repository structure](../conventions/repository-structure.md).
-- Use Ark UI for interactive component behavior, replacing Kobalte and corvu where suitable equivalents exist.
+- Use Ark UI for interactive component behavior. Do not use Kobalte, including as a fallback for missing Ark equivalents. Evaluate other maintained primitives when needed.
 - Use Tailwind CSS for styles and tailwind-variants for recipes, slots, and variants.
 - Adopt Radix Colors as the color system, with light and dark themes and semantic aliases.
 - Provide compound components such as `Accordion.Root`, `Accordion.Item`, `Accordion.ItemTrigger`, and `Accordion.ItemContent`.

@@ -68,6 +68,15 @@ export type { SeparatorProps } from "./content/separator/separator";
 export { Separator } from "./content/separator/separator";
 export type { TextProps } from "./content/text/text";
 export { Text } from "./content/text/text";
+export type { TableContainerProps, TableRootProps } from "./data/table/table";
+export { Table } from "./data/table/table";
+export type {
+  TableCaptionProps,
+  TableCellProps,
+  TableHeadProps,
+  TableRowProps,
+  TableSectionProps,
+} from "./data/table/table.parts";
 export type { CalloutRootProps } from "./feedback/callout/callout";
 export { Callout } from "./feedback/callout/callout";
 export type { CalloutCloseButtonProps } from "./feedback/callout/callout.close-button";
