@@ -4,7 +4,7 @@
 
 ## Validated deliveries
 
-The user accepted the implemented actions and menus, layout/content primitives, compound compositions, navigation including Steps, overlays, feedback, native Table, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
+The user accepted the implemented actions and menus, layout/content primitives, compound compositions, navigation including Steps and Sidebar, overlays, feedback, native Table, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
 
 Remaining unchecked items below describe future work. Flex, Grid, Skeleton, and AspectRatio components are out of scope. Applications use CSS directly for layout and media proportions. Forms are deferred until the other implementation stages are complete. Icon actions use Button iconOnly with an accessible name; no separate IconButton or CloseButton component is planned.
 
@@ -96,13 +96,16 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Dropdown Menu and Context Menu, including keyboard/submenu navigation, icon-free layouts, selection, dismissal/focus, dark/mobile collision handling, controlled state, and removal of outer menu focus rings.
 - [x] Implement Menubar with Ark multi-trigger Menu and shared action-menu parts; extract standalone Navigation Menu as Navbar's shared foundation, with grouped panels and cascading page-link disclosures using Ark Popover.
 - [x] Obtain user validation of Menubar, Navigation Menu, and the revised Navbar appearance and cascading/mobile examples, including dropdown spacing, open chevrons, and stable hover switching.
-- [ ] Command, Sidebar, and Carousel.
+- [x] Implement Sidebar with optional Resizable integration, constrained desktop widths, compact icon navigation, controlled collapse, mobile Sheet, and reviewable application examples.
+- [x] Obtain user validation of Sidebar and its fixed/resizable, compact, dark, and mobile Storybook examples, including the single divider, account spacing, consistent compact blocks, and layout state preservation when creating projects.
 - [x] Implement Resizable using Ark Splitter with horizontal/vertical panels, optional grips, controlled sizes, collapse/expand, and nested/mobile/theme Storybook examples.
 - [x] Obtain user validation of Resizable and its Storybook examples.
 - [x] Implement Ark-powered Steps with horizontal/vertical layouts, associated content, next/back navigation, completion, controlled state, and linear validation examples using Radix tokens.
 - [x] Obtain user validation of Steps, including full-width horizontal distribution and plain content with optional Card composition.
 - [x] Implement Navbar and VerticalMenu with responsive navigation, Ark-powered submenus/disclosures, grouped links, and optional nested branches.
 - [x] Obtain user validation of Navbar and VerticalMenu in Storybook.
+
+Command and Carousel are deferred by user decision. Revisit them only when a concrete future need arises; they are not prerequisites for subsequent stages.
 
 Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists, record the gap before choosing another implementation.
 

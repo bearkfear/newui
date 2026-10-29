@@ -1,0 +1,42 @@
+@layer components {
+  .nui-sidebar-root:not([data-mobile], [data-resizable]) > .nui-sidebar-panel {
+    border-inline-end: 1px solid var(--nui-border);
+  }
+  .nui-sidebar-root[data-mobile] > .nui-sidebar-panel {
+    display: none;
+  }
+  .nui-sidebar-resize-handle {
+    /* Keep the pointer target centered over the boundary without a layout gutter. */
+    margin-inline: calc(var(--nui-resizable-handle-size) * -0.5);
+    z-index: 1;
+  }
+  @media (pointer: coarse) {
+    .nui-sidebar-resize-handle {
+      margin-inline: calc(max(var(--nui-resizable-handle-size), 1.5rem) * -0.5);
+    }
+  }
+  .nui-sidebar-surface[data-collapsed] .nui-sidebar-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .nui-sidebar-surface[data-collapsed] .nui-sidebar-expanded {
+    display: none;
+  }
+  .nui-sidebar-surface[data-collapsed] :where(a, button) {
+    flex-shrink: 0;
+  }
+  .nui-sidebar-mobile-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 1;
+  }
+  .nui-sidebar-sheet .nui-sidebar-surface > :first-child {
+    padding-inline-end: 3.5rem;
+  }
+}

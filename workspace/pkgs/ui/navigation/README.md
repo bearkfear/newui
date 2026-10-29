@@ -6,10 +6,6 @@
 
 Guide paths between pages, sections, and sets of content.
 
-## Planned inventory
-
-- Sidebar.
-
 ## Ideas and boundaries
 
 Navbar and VerticalMenu are implemented and validated by the user. Navbar uses Ark Navigation Menu for submenus and Ark Collapsible for responsive disclosure. VerticalMenu uses native navigation semantics and Ark Collapsible for optional branches.
@@ -21,6 +17,8 @@ Define active states, hierarchy, small-screen behavior, and routing integration 
 Pagination is implemented and validated, with Ark behavior, a simple Previous / numbers / Next composition, automatic mobile summaries, and three sizes. The user also validated its Panel record-list footer integration.
 
 ## Implemented navigation
+
+- [Sidebar](sidebar/README.md): fixed or resizable application sidebar with an Ark Splitter compact rail, VerticalMenu composition, and mobile Sheet; implementation and Storybook examples validated by the user.
 
 - [Navbar](navbar/README.md): responsive navigation, brand, mobile toggle, links, submenus, and actions.
 - [Navigation Menu](navigation-menu/README.md): shared standalone page navigation, grouped panels, and cascading disclosures; also powers Navbar. The user approved the implementation and Navbar revision, including hover, keyboard, and mobile behavior.

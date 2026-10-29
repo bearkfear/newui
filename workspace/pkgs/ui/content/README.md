@@ -23,7 +23,6 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 - [Counter](counter/README.md) for numeric notifications and unread counts; validated by the user.
 - Accordion and Collapsible.
 - [Timeline](timeline/README.md): vertical/horizontal native chronological lists, dates, decorative connectors, optional custom markers, and progress statuses; implementation and Storybook examples are validated by the user.
-- Carousel.
 - Image/Figure as a recipe or composition with framing and captions.
 - Box/Surface as a recipe or variant, reusing Card where appropriate.
 
@@ -31,6 +30,6 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 
 Heading, Text, and Prose cover interface typography and editorial content. Image/Figure and Box/Surface are also accepted additions; their public names and final formats remain under evaluation.
 
-Accordion and Collapsible belong here because they organize content presentation. Timeline presents a sequence; visualizations for comparing values belong to [Data](../data/README.md). Carousel is initially classified as Content, with behavior and composition still to be defined.
+Accordion and Collapsible belong here because they organize content presentation. Timeline presents a sequence; visualizations for comparing values belong to [Data](../data/README.md). Carousel is deferred until a concrete future need arises; it remains classified as Content.
 
 Typographic scales belong to [Foundations](../foundations/README.md). Interactive behavior mappings to Ark must be checked before implementation.
