@@ -63,6 +63,8 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of the Message presentation in Storybook.
 - [x] Implement Loading and PageLoading with status messages, page/section layouts, and reduced-motion support.
 - [x] Obtain user validation of Loading and PageLoading in Storybook.
+- [x] Implement Empty with optional icon, title, description, actions, compact/section/page layouts, Radix tokens, and Card/Table/loading-flow Storybook examples.
+- [x] Obtain user validation of Empty and its Table integration, including the adjusted icon size.
 - [x] Compare Toast and Sonner references and implement one Ark-powered Toast system with Callout visuals, queuing, actions, and themed portals.
 - [x] Obtain user validation of Toast in Storybook.
 - [x] Implement Progress and Progress Circle with Ark state, numeric/indeterminate values, tones, sizes, and reduced-motion support.

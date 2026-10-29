@@ -81,6 +81,15 @@ export type { CalloutRootProps } from "./feedback/callout/callout";
 export { Callout } from "./feedback/callout/callout";
 export type { CalloutCloseButtonProps } from "./feedback/callout/callout.close-button";
 export type { CalloutIconProps } from "./feedback/callout/callout.icon";
+export type { EmptyRootProps } from "./feedback/empty/empty";
+export { Empty } from "./feedback/empty/empty";
+export type {
+  EmptyActionsProps,
+  EmptyContentProps,
+  EmptyDescriptionProps,
+  EmptyIconProps,
+  EmptyTitleProps,
+} from "./feedback/empty/empty.parts";
 export type { LoadingProps } from "./feedback/loading/loading";
 export { Loading } from "./feedback/loading/loading";
 export type { PageLoadingProps } from "./feedback/page-loading/page-loading";

@@ -45,7 +45,7 @@ Container is optional and renders a named `section` with horizontal overflow, ke
 
 Surfaces and stripes use neutral Radix steps 1–2, borders use step 6, hover uses step 3, and selected states use primary steps 3–4. Text retains foreground/muted semantic tokens. System, explicit, and nested themes work through the existing tokens. Class values are additive; arbitrary conflicting utility overrides are not guaranteed to win.
 
-Sorting, filtering, pagination, row-selection logic, virtualization, and column management belong to a future Data Table contract. Table does not introduce a data engine or an ARIA grid. Empty content is composed with a spanning Cell.
+Sorting, filtering, pagination, row-selection logic, virtualization, and column management belong to a future Data Table contract. Table does not introduce a data engine or an ARIA grid. Empty content composes [Empty](../../feedback/empty/README.md) inside a spanning Cell; the user approved this integration.
 
 ## Review
 

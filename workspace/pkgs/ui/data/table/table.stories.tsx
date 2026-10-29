@@ -80,7 +80,17 @@ export const Empty: Story = {
     docs: {
       source: {
         code: `<Table.Body>
-  <Table.Row><Table.Cell colSpan={3} align="center">No invoices yet.</Table.Cell></Table.Row>
+  <Table.Row>
+    <Table.Cell colSpan={3}>
+      <Empty.Root layout="compact">
+        <Empty.Icon />
+        <Empty.Content>
+          <Empty.Title>No invoices yet</Empty.Title>
+          <Empty.Description>New invoices will appear here.</Empty.Description>
+        </Empty.Content>
+      </Empty.Root>
+    </Table.Cell>
+  </Table.Row>
 </Table.Body>`,
       },
     },

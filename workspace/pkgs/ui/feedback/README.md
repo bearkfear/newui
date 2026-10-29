@@ -18,6 +18,8 @@ Communicate an operation's state, result, loading status, and progress.
 
 Skeleton is out of scope by user decision.
 
+[Empty](empty/README.md) provides a native empty-state composition with optional decorative icon, title, description, and actions. Compact, section, and page layouts cover tables through complete pages. It uses Radix tokens and introduces no interaction dependency or automatic announcements. The user approved the implementation and Storybook examples, including Card/Table integration, the loading-to-empty-to-content flow, and the adjusted icon size.
+
 ## Ideas and questions
 
 Callout also has a separated [Message presentation](callout/message.md) inspired by Bulma, with a solid header and soft body. The user approved this presentation and its Storybook examples.

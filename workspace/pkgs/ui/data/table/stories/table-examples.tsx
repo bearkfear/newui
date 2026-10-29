@@ -2,6 +2,7 @@ import { createSignal, For } from "solid-js";
 import { Button } from "../../../actions/button/button";
 import { Heading } from "../../../content/heading/heading";
 import { Text } from "../../../content/text/text";
+import { Empty } from "../../../feedback/empty/empty";
 import { Table } from "../table";
 import { InvoiceTable } from "./invoice-table";
 
@@ -84,11 +85,14 @@ export function EmptyTable() {
         </Table.Header>
         <Table.Body>
           <Table.Row>
-            <Table.Cell colSpan={3} align="center" style={{ padding: "3rem 1rem" }}>
-              <Text>No invoices yet.</Text>
-              <Text tone="muted" size="7">
-                New invoices will appear here.
-              </Text>
+            <Table.Cell colSpan={3} align="center">
+              <Empty.Root layout="compact">
+                <Empty.Icon />
+                <Empty.Content>
+                  <Empty.Title>No invoices yet</Empty.Title>
+                  <Empty.Description>New invoices will appear here.</Empty.Description>
+                </Empty.Content>
+              </Empty.Root>
             </Table.Cell>
           </Table.Row>
         </Table.Body>
