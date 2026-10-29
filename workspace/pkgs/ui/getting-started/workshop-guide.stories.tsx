@@ -46,8 +46,9 @@ export const Overview: Story = {
         </pre>
         <p>
           Provide descriptions, explicit controls for public variants, state examples, and
-          meaningful interaction assertions. Add an appropriate category; empty categories stay out
-          of the sidebar.
+          reviewable interactions. Add automated assertions only after the user explicitly approves
+          the component and authorizes test work. Add an appropriate category; empty categories stay
+          out of the sidebar.
         </p>
       </section>
       <aside class="nui-catalog-note">

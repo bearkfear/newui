@@ -8,11 +8,8 @@ Guide paths between pages, sections, and sets of content.
 
 ## Planned inventory
 
-- Tabs and Navigation Menu.
+- Standalone Navigation Menu; Navbar already uses Ark Navigation Menu for submenus, so a separate API needs a distinct scope.
 - Sidebar.
-- Steps (implemented and validated).
-- Navbar that adapts to small screens.
-- Static vertical menu with groups, headings, and nested items.
 
 ## Ideas and boundaries
 
@@ -33,4 +30,4 @@ Pagination is implemented and validated, with Ark behavior, a simple Previous / 
 - [Pagination](pagination/README.md): Ark page ranges, boundary controls, numbered pages, ellipses, compact/mobile layouts, and controlled record examples; validated by the user.
 - [Breadcrumb](breadcrumb/README.md): native ancestor links, decorative separators, current-page semantics, and wrapping labels; validated by the user.
 
-Both use Radix tokens and the existing automatic themes. Navigation / Overview combines them with shared local page state. No new automated tests were added.
+The implemented navigation components use Radix tokens and the existing automatic themes. Navigation / Overview combines Navbar and VerticalMenu with shared local page state. No new automated tests were added.

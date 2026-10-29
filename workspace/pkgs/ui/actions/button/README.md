@@ -16,6 +16,8 @@ A native button with a safe default `type="button"`. Colors and states follow th
 - `loading`: disable activation, expose `aria-busy`, and overlay a spinner while preserving label width and the accessible name. Applications own async state and announcements of results.
 - Native attributes, `disabled` (neutral background/border/text without opacity), `aria-pressed`, events, and refs are forwarded.
 
+Use `Button iconOnly` for icon actions, including close buttons, with an accessible name such as `aria-label="Close"`. No standalone IconButton or CloseButton API is planned. Existing component-specific close parts retain their contracts. Compose overlay close actions with the owning component's close trigger to preserve dismissal behavior.
+
 ```tsx
 import { Button, ButtonGroup } from "newui";
 import "newui/styles.css";

@@ -36,4 +36,4 @@ The pre-commit hook runs `bun run check` against the workspace without changing 
 
 ## Planning
 
-The library has an initial Button and Storybook examples. Other inventory entries remain planned or under evaluation. Open decisions live with their subject, and documentation grows alongside implementation. The future public website is still to be defined.
+The library includes validated actions, layout and content primitives, navigation, overlays, feedback, native Table, and compound compositions with colocated Storybook examples. See the [roadmap](roadmap.md) for completed deliveries and remaining work. Forms remain deferred; data tables, visualizations, and additional interaction components are planned or under evaluation. The future public website is still to be defined.

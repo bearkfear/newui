@@ -12,7 +12,7 @@ From the repository root, run `cd workspace`. Then run `bun install` and `bun ru
 
 Stories live next to their implementation as `*.stories.tsx` files inside `workspace/pkgs/ui/`. Storybook configuration lives in `workspace/apps/storybook/.storybook/`. Applications and packages own their manifests and configuration, while `workspace/package.json` coordinates shared commands. The sidebar follows our areas: Getting started, Foundations, Layout, Content, Actions, Forms, Navigation, Overlays, Feedback, Data, and Compositions. Areas appear as stories are added.
 
-The catalog includes an introduction, color tokens, Container, Section, Heading, Text, Prose, a composed page example, ButtonGroup, and Button examples with editable properties, a reactive counter, and scoped token overrides. The theme toolbar switches between light and dark. This setup uses Storybook's core features without extra addons.
+The catalog includes foundations, layout, content, actions, navigation, overlays, feedback, native Table, and compound compositions. Colocated stories demonstrate public properties, states, themes, responsiveness, and composition. The theme toolbar switches between light and dark; component documentation links to related examples.
 
 Storybook processes the source stylesheet with the same Tailwind PostCSS plugin used by the library build, so style changes are available during development without first building the npm package.
 
@@ -31,8 +31,8 @@ The initial distribution will be an installable package with compiled CSS, globa
 
 ## State and open questions
 
-Button and the first layout and typography primitives are available, with Radix Colors, automatic system themes, and initial component contracts. Container, Section, Heading, Text, and Prose have been validated by the user. Define these details before publishing installation instructions:
-- Dependency compatibility beyond the current Ark-powered navigation integration.
+The implemented catalog has been validated incrementally by the user; see the [roadmap](../../../roadmap.md) for individual deliveries. Radix Colors, automatic system themes, and Ark-powered interactive behavior are established. Forms remain deferred. Resolve these details before publishing installation instructions:
+- Replace the workspace Zag focus-visible patch through a compatible Ark upgrade and validate the packed package in a clean consumer without workspace patches.
 - Standard registry installation and lockfile generation; registry access is restricted in the development sandbox.
 - Final installation steps, package exports, and publishing metadata.
 
