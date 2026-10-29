@@ -1,5 +1,5 @@
 @import "./docs.css";
-@import "./catalog.css";
+@import "./catalog.css" layer(components);
 @import "./motion.css";
 
 .nui-preview {
