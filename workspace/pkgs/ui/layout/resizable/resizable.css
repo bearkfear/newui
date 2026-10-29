@@ -1,0 +1,53 @@
+.nui-resizable-handle[data-orientation="horizontal"] {
+  width: var(--nui-resizable-handle-size);
+  align-self: stretch;
+}
+.nui-resizable-handle[data-orientation="vertical"] {
+  height: var(--nui-resizable-handle-size);
+  align-self: stretch;
+}
+.nui-resizable-handle::before {
+  content: "";
+  position: absolute;
+  background: var(--nui-border);
+}
+.nui-resizable-handle[data-orientation="horizontal"]::before {
+  width: 1px;
+  height: 100%;
+}
+.nui-resizable-handle[data-orientation="vertical"]::before {
+  height: 1px;
+  width: 100%;
+}
+.nui-resizable-handle:hover:not([data-disabled])::before,
+.nui-resizable-handle[data-focus]:not([data-disabled])::before,
+.nui-resizable-handle[data-dragging]::before {
+  background: var(--nui-primary-focus);
+}
+.nui-resizable-grip {
+  width: 0.75rem;
+  height: 1.5rem;
+}
+.nui-resizable-handle[data-orientation="vertical"] > .nui-resizable-grip {
+  width: 1.5rem;
+  height: 0.75rem;
+}
+.nui-resizable-handle[data-orientation="vertical"] > .nui-resizable-grip > svg {
+  rotate: 90deg;
+}
+.nui-resizable-handle[data-disabled] {
+  cursor: not-allowed;
+}
+.nui-resizable-handle[data-disabled] > .nui-resizable-grip {
+  border-color: var(--nui-disabled-border);
+  background: var(--nui-disabled-background);
+  color: var(--nui-disabled-foreground);
+}
+@media (pointer: coarse) {
+  .nui-resizable-handle[data-orientation="horizontal"] {
+    width: max(var(--nui-resizable-handle-size), 1.5rem);
+  }
+  .nui-resizable-handle[data-orientation="vertical"] {
+    height: max(var(--nui-resizable-handle-size), 1.5rem);
+  }
+}

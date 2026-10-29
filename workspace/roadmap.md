@@ -95,7 +95,9 @@ The catalog starts early and grows with each component.
 - [x] Implement simple Ark-powered Dropdown Menu and Context Menu with shared styling, groups, separators, optional icons, nested submenus, unboxed disabled/destructive states, theme-preserving portals, and a separate ordinary dropdown alternative for context actions.
 - [x] Obtain user validation of Dropdown Menu and Context Menu, including keyboard/submenu navigation, icon-free layouts, selection, dismissal/focus, dark/mobile collision handling, controlled state, and removal of outer menu focus rings.
 - [ ] Menubar and Navigation Menu.
-- [ ] Command, Sidebar, Resizable, and Carousel.
+- [ ] Command, Sidebar, and Carousel.
+- [x] Implement Resizable using Ark Splitter with horizontal/vertical panels, optional grips, controlled sizes, collapse/expand, and nested/mobile/theme Storybook examples.
+- [x] Obtain user validation of Resizable and its Storybook examples.
 - [x] Implement Ark-powered Steps with horizontal/vertical layouts, associated content, next/back navigation, completion, controlled state, and linear validation examples using Radix tokens.
 - [x] Obtain user validation of Steps, including full-width horizontal distribution and plain content with optional Card composition.
 - [x] Implement Navbar and VerticalMenu with responsive navigation, Ark-powered submenus/disclosures, grouped links, and optional nested branches.

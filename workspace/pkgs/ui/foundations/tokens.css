@@ -33,6 +33,7 @@
 
 :root {
   --nui-z-overlay: 1000;
+  --nui-resizable-handle-size: 0.5rem;
   --nui-header-gap: 0.125rem;
   --nui-loading-track: var(--nui-slate-6);
   --nui-progress-track: var(--nui-slate-3);

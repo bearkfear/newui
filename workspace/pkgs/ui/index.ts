@@ -119,6 +119,15 @@ export type { ToasterProps } from "./feedback/toast/toaster";
 export { Toaster } from "./feedback/toast/toaster";
 export type { ContainerProps } from "./layout/container/container";
 export { Container } from "./layout/container/container";
+export type {
+  ResizablePanelData,
+  ResizablePanelProps,
+  ResizableResizeDetails,
+  ResizableResizeEndDetails,
+  ResizableRootProps,
+} from "./layout/resizable/resizable";
+export { Resizable } from "./layout/resizable/resizable";
+export type { ResizableHandleProps } from "./layout/resizable/resizable.handle";
 export type { SectionProps } from "./layout/section/section";
 export { Section } from "./layout/section/section";
 export type {

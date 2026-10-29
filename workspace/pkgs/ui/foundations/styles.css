@@ -1,6 +1,7 @@
 @import "tailwindcss" prefix(nui) source(none);
 @import "./tokens.css";
 @import "./metrics.css";
+@import "../layout/resizable/resizable.css";
 @import "../actions/button/button.css";
 @import "../actions/button-group/button-group.css";
 @import "../actions/menu/menu.css";
