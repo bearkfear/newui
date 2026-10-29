@@ -117,7 +117,8 @@ Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists
 - [x] Obtain user validation of Timeline, including horizontal and vertical layouts.
 - [x] Select Unovis for Charts and implement LineChart, BarChart, and DonutChart with semantic themes, responsive rendering, legends, value tables, and reviewable Storybook examples.
 - [x] Obtain user validation of LineChart, BarChart, and DonutChart and their Storybook examples, including compact data disclosures, header spacing, consistent closed/open card alignment, independent mixed states, and grouped-bar spacing.
-- [ ] Bar List, Delta Bar, and Badge Delta.
+- [x] Implement native Bar List, Delta Bar, and Badge Delta with Radix tokens, visible numeric alternatives, configurable business direction, and reactive/responsive Storybook examples, without additional dependencies.
+- [x] Obtain user validation of Bar List, Delta Bar, and Badge Delta and their Storybook examples, including toolbar theme selection, solid bars, semantic badge colors, and compact responsive metric grouping.
 
 Data Table is deferred by user decision until a concrete need for sorting, filtering, pagination, or selection arises. The existing native Table remains the current presentation component. Data Table is not a prerequisite for subsequent stages.
 

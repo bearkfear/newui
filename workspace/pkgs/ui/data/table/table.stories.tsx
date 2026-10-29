@@ -113,33 +113,13 @@ export const WithActions: Story = {
     },
   },
 };
-export const Dark: Story = { ...Combined, globals: { theme: "dark" } };
 export const Mobile: Story = {
   ...Combined,
   globals: { viewport: { value: "smallMobile", isRotated: false } },
 };
-export const MobileDark: Story = { ...Mobile, globals: { ...Mobile.globals, theme: "dark" } };
-export const NestedDark: Story = {
-  globals: { theme: "light" },
-  render: () => (
-    <div
-      data-nui-theme="dark"
-      style={{
-        background: "var(--nui-background)",
-        color: "var(--nui-foreground)",
-        padding: "1rem",
-        "border-radius": "0.75rem",
-        "min-width": "0",
-      }}
-    >
-      <InvoiceTable striped hoverable highlightRow />
-    </div>
-  ),
-};
 
 export const Playlist: Story = {
   render: () => <PlaylistTable />,
-  globals: { theme: "dark" },
   parameters: {
     controls: { disable: true },
     docs: {
@@ -151,8 +131,7 @@ export const Playlist: Story = {
     },
   },
 };
-export const PlaylistLight: Story = { ...Playlist, globals: { theme: "light" } };
 export const PlaylistMobile: Story = {
   ...Playlist,
-  globals: { theme: "dark", viewport: { value: "mobile", isRotated: false } },
+  globals: { viewport: { value: "mobile", isRotated: false } },
 };

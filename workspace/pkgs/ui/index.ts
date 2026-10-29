@@ -84,6 +84,12 @@ export type {
   TimelineTimeProps,
   TimelineTitleProps,
 } from "./content/timeline/timeline.parts";
+export type { BadgeDeltaProps } from "./data/badge-delta/badge-delta";
+export { BadgeDelta } from "./data/badge-delta/badge-delta";
+export type { BarListProps, BarListTone } from "./data/bar-list/bar-list";
+export { BarList } from "./data/bar-list/bar-list";
+export type { DeltaBarProps } from "./data/delta-bar/delta-bar";
+export { DeltaBar } from "./data/delta-bar/delta-bar";
 export type { TableContainerProps, TableRootProps } from "./data/table/table";
 export { Table } from "./data/table/table";
 export type {

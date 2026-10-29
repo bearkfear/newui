@@ -1,0 +1,81 @@
+.indicators-demo {
+  container-type: inline-size;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+.indicators-demo-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.indicators-demo-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.indicators-demo-header p {
+  margin: 0.25rem 0 0;
+  color: var(--nui-muted-foreground);
+  font-size: 0.875rem;
+}
+.indicators-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.5rem;
+}
+.indicators-demo-stack {
+  display: grid;
+  gap: 1.75rem;
+  max-width: 48rem;
+}
+.indicators-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.indicators-demo-metric h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--nui-muted-foreground);
+}
+.indicators-demo-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.indicators-demo-metric {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--nui-border);
+  border-radius: var(--nui-radius-md);
+  background: var(--nui-surface);
+}
+.indicators-demo-metric p {
+  margin: 0.375rem 0 0.75rem;
+  font-size: clamp(1.5rem, 3cqi, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+.indicators-demo-metric > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.indicators-demo-comparison {
+  font-size: 0.75rem;
+  color: var(--nui-muted-foreground);
+}
+@container (max-width: 44rem) {
+  .indicators-demo-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

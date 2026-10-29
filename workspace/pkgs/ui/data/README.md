@@ -10,8 +10,7 @@ Enable browsing, comparing, and interpreting structured information.
 
 - Table (implemented and validated).
 - Charts (implemented and validated).
-- Bar List and Delta Bar.
-- Badge Delta.
+- Bar List, Delta Bar, and Badge Delta (implemented and validated).
 
 ## Direction and questions
 
@@ -30,3 +29,7 @@ Generic Badge and Timeline belong to [Content](../content/README.md). Badge Delt
 - [Table](table/README.md): native table parts, caption, row/column headers, totals, alignment, composable borders/stripes/density/hover states, presentational row highlighting, and an optional keyboard-focusable scroll container. Uses Radix semantic tokens without an interaction primitive or additional dependency. The user validated the implementation and Storybook examples, including the corrected bordered corners.
 
 - [Charts](chart/README.md): LineChart, grouped BarChart, and DonutChart powered by Unovis 1.7.1, with Radix tokens, native figure captions/legends, Ark Collapsible value tables, responsive examples, and an optional `newui/charts` JavaScript entry; validated by the user, including compact disclosures, consistent layout across open/closed states, and grouped-bar spacing. No automated tests were added.
+
+- [Bar List](bar-list/README.md): native lists with decorative proportional bars, visible values, shared scales, semantic tones, and empty states.
+- [Delta Bar](delta-bar/README.md): signed percentage changes around zero, with full numeric labels and configurable business direction.
+- [Badge Delta](badge-delta/README.md): Badge composition with direction icons, signed values, and business impact colors. All three export from `newui`, use existing dependencies, and were validated by the user in Storybook.

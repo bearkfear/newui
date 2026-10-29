@@ -24,6 +24,7 @@
 @import "../feedback/progress/progress.css";
 @import "../data/table/table.css";
 @import "../data/chart/chart.css";
+@import "../data/data-indicators.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";
