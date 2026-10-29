@@ -138,6 +138,23 @@ export type {
   PaginationNextTriggerProps,
   PaginationPrevTriggerProps,
 } from "./navigation/pagination/pagination.parts";
+export type { StepsItemProps, StepsListProps, StepsRootProps } from "./navigation/steps/steps";
+export { Steps } from "./navigation/steps/steps";
+export type {
+  StepsNextTriggerProps,
+  StepsPrevTriggerProps,
+} from "./navigation/steps/steps.controls";
+export type { StepsIndicatorProps } from "./navigation/steps/steps.indicator";
+export type {
+  StepsActionsProps,
+  StepsCompletedContentProps,
+  StepsContentProps,
+  StepsDescriptionProps,
+  StepsLabelProps,
+  StepsSeparatorProps,
+  StepsTitleProps,
+  StepsTriggerProps,
+} from "./navigation/steps/steps.parts";
 export type { TabsRootProps } from "./navigation/tabs/tabs";
 export { Tabs } from "./navigation/tabs/tabs";
 export type {

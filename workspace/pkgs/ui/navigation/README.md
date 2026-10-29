@@ -10,6 +10,7 @@ Guide paths between pages, sections, and sets of content.
 
 - Tabs and Navigation Menu.
 - Sidebar.
+- Steps (implemented and validated).
 - Navbar that adapts to small screens.
 - Static vertical menu with groups, headings, and nested items.
 
@@ -26,6 +27,7 @@ Pagination is implemented and validated, with Ark behavior, a simple Previous / 
 ## Implemented navigation
 
 - [Navbar](navbar/README.md): responsive navigation, brand, mobile toggle, links, submenus, and actions.
+- [Steps](steps/README.md): Ark step state, associated content, next/back/reset, linear validation, and horizontal/vertical layouts with Radix markers; validated by the user, including full-width distribution and optional Card composition.
 - [Vertical Menu](vertical-menu/README.md): grouped links, current-page state, static nesting, and optional controlled/uncontrolled branches.
 - [Tabs](tabs/README.md): Ark content tabs with five appearances, semantic tones, and rich trigger content; validated by the user.
 - [Pagination](pagination/README.md): Ark page ranges, boundary controls, numbered pages, ellipses, compact/mobile layouts, and controlled record examples; validated by the user.

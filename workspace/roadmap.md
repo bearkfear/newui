@@ -93,6 +93,8 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Dropdown Menu and Context Menu, including keyboard/submenu navigation, icon-free layouts, selection, dismissal/focus, dark/mobile collision handling, controlled state, and removal of outer menu focus rings.
 - [ ] Menubar and Navigation Menu.
 - [ ] Command, Sidebar, Resizable, and Carousel.
+- [x] Implement Ark-powered Steps with horizontal/vertical layouts, associated content, next/back navigation, completion, controlled state, and linear validation examples using Radix tokens.
+- [x] Obtain user validation of Steps, including full-width horizontal distribution and plain content with optional Card composition.
 - [x] Implement Navbar and VerticalMenu with responsive navigation, Ark-powered submenus/disclosures, grouped links, and optional nested branches.
 - [x] Obtain user validation of Navbar and VerticalMenu in Storybook.
 
