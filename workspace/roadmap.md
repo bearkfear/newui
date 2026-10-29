@@ -19,7 +19,7 @@ The catalog starts early and grows with each component.
 - [x] Define the implementation project structure: a workspace coordinator, `apps/storybook/`, and one `pkgs/ui/` library package with source and contracts together.
 - [x] Choose an installable package for the first distribution. A CLI has not been approved.
 - [ ] Audit selected Solid UI implementations and map dependencies and Ark equivalents.
-- [ ] Define conventions for imports, composition, variants, sizes, class overrides, and DOM references.
+- [x] Document conventions for imports, composition, variants, sizes, class overrides, and DOM references in the Foundations component contracts.
 - [ ] Check licenses and preserve notices from reused code.
 
 ### 1. Visual foundation and minimum catalog
@@ -28,7 +28,8 @@ The catalog starts early and grows with each component.
 - [x] Integrate official Radix scales, semantic interaction state tokens, automatic system themes, and nested light/dark scopes.
 - [x] Replace handwritten interface icons with Lucide for Solid and provide a Foundations / Iconography review page.
 - [x] Obtain user approval of the Lucide migration and iconography examples.
-- [ ] Define typography, dimensions, visible focus, disabled states, and reduced motion.
+- [x] Define typography, dimensions, visible focus, disabled states, and reduced motion with shared metrics, compiled style integration, and reviewable Foundations examples.
+- [x] Obtain user approval of the consolidated foundations and customization examples, including corrected Storybook typography style precedence.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
 - [x] Implement Button and ButtonGroup with validated variants and examples.
 - [x] Obtain user validation of solid Button press feedback using the approved Radix Themes filter exception, preserving hover colors and introducing no positional motion.
@@ -36,7 +37,7 @@ The catalog starts early and grows with each component.
 - [x] Obtain user validation of Card in Storybook, including the softened, neumorphism-inspired elevated surface.
 - [x] Implement the first Ark-powered Dialog with Bulma-inspired modal-card presentation and responsive examples.
 - [x] Obtain user validation of Dialog; the user also manually verified the examples. The text field family remains deferred to Forms.
-- [ ] Validate this sample before replicating the architecture across the catalog.
+- [x] Validate the initial Button/Card/Dialog sample before replicating the architecture across the catalog.
 
 ### 2. Basic elements and organization
 

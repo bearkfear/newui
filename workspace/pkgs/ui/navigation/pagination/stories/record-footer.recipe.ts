@@ -9,7 +9,7 @@ export const recordFooterRecipe = tv({
     label: "nui:inline-flex nui:items-center nui:gap-2 nui:whitespace-nowrap",
     field: "nui:relative nui:inline-flex nui:items-center",
     select:
-      "nui:h-8 nui:appearance-none nui:rounded-md nui:border nui:border-[var(--nui-control-border)] nui:bg-background nui:pl-3 nui:pr-8 nui:text-sm nui:leading-none nui:text-foreground nui:cursor-pointer nui:hover:border-[var(--nui-neutral-border-hover)] nui:focus-visible:outline-2 nui:focus-visible:outline-offset-2 nui:focus-visible:outline-focus-ring",
+      "nui:h-8 nui:appearance-none nui:rounded-md nui:border nui:border-[var(--nui-control-border)] nui:bg-background nui:pl-3 nui:pr-8 nui:text-sm nui:leading-none nui:text-foreground nui:cursor-pointer nui:hover:border-[var(--nui-neutral-border-hover)] nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
     icon: "nui:pointer-events-none nui:absolute nui:right-2 nui:text-muted-foreground",
   },
 });

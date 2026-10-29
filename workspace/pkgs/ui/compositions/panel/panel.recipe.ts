@@ -18,7 +18,7 @@ export const panelRecipe = tv({
     itemDescription:
       "nui:m-0 nui:text-sm nui:leading-snug nui:text-muted-foreground nui:wrap-anywhere",
     itemActions: "nui:flex nui:shrink-0 nui:items-center nui:gap-2",
-    link: "nui:flex nui:min-w-0 nui:flex-wrap nui:items-center nui:justify-between nui:gap-3 nui:px-5 nui:py-4 nui:text-[var(--nui-primary-text)] nui:no-underline nui:hover:bg-[var(--nui-neutral-soft)] nui:active:bg-[var(--nui-neutral-soft-active)] nui:aria-[current=page]:bg-[var(--nui-primary-soft-active)] nui:focus-visible:outline-2 nui:focus-visible:-outline-offset-2 nui:focus-visible:outline-focus-ring",
+    link: "nui:flex nui:min-w-0 nui:flex-wrap nui:items-center nui:justify-between nui:gap-3 nui:px-5 nui:py-4 nui:text-[var(--nui-primary-text)] nui:no-underline nui:hover:bg-[var(--nui-neutral-soft)] nui:active:bg-[var(--nui-neutral-soft-active)] nui:aria-[current=page]:bg-[var(--nui-primary-soft-active)] nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:-outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
     footer:
       "nui:flex nui:flex-wrap nui:items-center nui:justify-between nui:gap-3 nui:border-t nui:border-border nui:px-5 nui:py-4",
   },

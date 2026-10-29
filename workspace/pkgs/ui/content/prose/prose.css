@@ -56,7 +56,7 @@
       color: var(--nui-primary-text-strong);
     }
     & :where(a:focus-visible) {
-      outline: 2px solid var(--nui-focus-ring);
+      outline: var(--nui-focus-width) solid var(--nui-focus-ring);
       outline-offset: 3px;
     }
     & :where(blockquote) {

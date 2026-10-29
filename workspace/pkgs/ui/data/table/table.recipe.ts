@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants/lite";
 export const tableRecipe = tv({
   slots: {
     container:
-      "nui:w-full nui:min-w-0 nui:max-w-full nui:overflow-x-auto nui:overscroll-x-contain nui:focus-visible:outline-2 nui:focus-visible:outline-offset-2 nui:focus-visible:outline-focus-ring",
+      "nui:w-full nui:min-w-0 nui:max-w-full nui:overflow-x-auto nui:overscroll-x-contain nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
     root: "nui-table nui:border-collapse nui:bg-background nui:text-sm nui:leading-relaxed nui:text-foreground",
     header: "nui:text-muted-foreground",
     body: "",

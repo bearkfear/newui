@@ -38,7 +38,7 @@
   }
   .nui-tabs-trigger:focus-visible {
     z-index: 2;
-    outline: 2px solid var(--nui-focus-ring);
+    outline: var(--nui-focus-width) solid var(--nui-focus-ring);
     outline-offset: -3px;
   }
   .nui-tabs-segmented {

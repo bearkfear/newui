@@ -1,0 +1,71 @@
+:root {
+  --nui-font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --nui-font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+  --nui-font-size-xs: 0.75rem;
+  --nui-font-size-sm: 0.875rem;
+  --nui-font-size-base: 1rem;
+  --nui-font-size-lg: 1.125rem;
+  --nui-font-size-xl: 1.25rem;
+  --nui-font-size-2xl: 1.5rem;
+  --nui-font-size-3xl: 1.875rem;
+  --nui-font-size-4xl: 2.25rem;
+  --nui-font-size-5xl: 3rem;
+  --nui-font-size-display-sm: 2rem;
+  --nui-font-size-display-md: 2.5rem;
+  --nui-font-weight-normal: 400;
+  --nui-font-weight-medium: 500;
+  --nui-font-weight-semibold: 600;
+  --nui-leading-tight: 1.25;
+  --nui-leading-snug: 1.375;
+  --nui-leading-normal: 1.5;
+  --nui-leading-relaxed: 1.625;
+  --nui-tracking-tight: -0.025em;
+  --nui-space-unit: 0.25rem;
+  --nui-radius-xs: 0.125rem;
+  --nui-radius-sm: 0.25rem;
+  --nui-radius-md: 0.375rem;
+  --nui-radius-lg: 0.5rem;
+  --nui-radius-xl: 0.75rem;
+  --nui-radius-2xl: 1rem;
+  --nui-radius-3xl: 1.5rem;
+  --nui-radius-4xl: 2rem;
+  --nui-control-height-xs: 1.5rem;
+  --nui-control-height-sm: 2rem;
+  --nui-control-height-md: 2.5rem;
+  --nui-control-height-lg: 3rem;
+  --nui-focus-width: 2px;
+  --nui-focus-offset: 2px;
+  --nui-motion-duration: 150ms;
+  --nui-motion-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Inline aliases resolve public tokens at the element using each utility. */
+@theme inline {
+  --default-font-family: var(--nui-font-sans);
+  --default-mono-font-family: var(--nui-font-mono);
+  --text-xs: var(--nui-font-size-xs);
+  --text-sm: var(--nui-font-size-sm);
+  --text-base: var(--nui-font-size-base);
+  --text-lg: var(--nui-font-size-lg);
+  --text-xl: var(--nui-font-size-xl);
+  --text-2xl: var(--nui-font-size-2xl);
+  --text-3xl: var(--nui-font-size-3xl);
+  --text-4xl: var(--nui-font-size-4xl);
+  --text-5xl: var(--nui-font-size-5xl);
+  --spacing: var(--nui-space-unit);
+  --default-transition-duration: var(--nui-motion-duration);
+  --default-transition-timing-function: var(--nui-motion-easing);
+}
+
+@custom-variant motion-reduce {
+  @media (prefers-reduced-motion: reduce) {
+    @slot;
+  }
+  &:where([data-motion="reduced"], [data-motion="reduced"] *) {
+    @slot;
+  }
+}

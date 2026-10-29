@@ -6,7 +6,7 @@ export const tabsRecipe = tv({
     list: "nui-tabs-list",
     trigger: "nui-tabs-trigger",
     content:
-      "nui-tabs-content nui:min-w-0 nui:pt-4 nui:focus-visible:outline-2 nui:focus-visible:outline-offset-2 nui:focus-visible:outline-focus-ring",
+      "nui-tabs-content nui:min-w-0 nui:pt-4 nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
   },
   variants: {
     variant: {

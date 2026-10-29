@@ -17,7 +17,7 @@ export const dialogRecipe = tv({
     footer:
       "nui:flex nui:shrink-0 nui:flex-wrap nui:items-center nui:justify-end nui:gap-2 nui:border-t nui:border-border nui:bg-surface nui:px-5 nui:py-3 nui:sm:px-6",
     close:
-      "nui:inline-flex nui:size-8 nui:shrink-0 nui:cursor-pointer nui:items-center nui:justify-center nui:rounded-full nui:border-0 nui:bg-[var(--nui-neutral-soft)] nui:text-[var(--nui-neutral-text)] nui:enabled:hover:bg-[var(--nui-neutral-soft-hover)] nui:enabled:active:bg-[var(--nui-neutral-soft-active)] nui:focus-visible:outline-2 nui:focus-visible:outline-offset-2 nui:focus-visible:outline-focus-ring nui:disabled:cursor-not-allowed nui:disabled:bg-[var(--nui-disabled-background)] nui:disabled:text-[var(--nui-disabled-foreground)]",
+      "nui:inline-flex nui:size-8 nui:shrink-0 nui:cursor-pointer nui:items-center nui:justify-center nui:rounded-full nui:border-0 nui:bg-[var(--nui-neutral-soft)] nui:text-[var(--nui-neutral-text)] nui:enabled:hover:bg-[var(--nui-neutral-soft-hover)] nui:enabled:active:bg-[var(--nui-neutral-soft-active)] nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring nui:disabled:cursor-not-allowed nui:disabled:bg-[var(--nui-disabled-background)] nui:disabled:text-[var(--nui-disabled-foreground)]",
   },
   variants: {
     size: {

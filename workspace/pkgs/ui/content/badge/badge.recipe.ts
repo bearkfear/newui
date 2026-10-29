@@ -24,7 +24,7 @@ export const badgeAppearanceVariants = {
 } as const;
 
 export const badgeRecipe = tv({
-  base: "nui-badge nui:inline-flex nui:max-w-full nui:min-w-0 nui:items-center nui:justify-center nui:gap-1 nui:border nui:font-medium nui:leading-snug nui:align-middle nui:wrap-anywhere nui:no-underline nui:transition-colors nui:motion-reduce:transition-none nui:focus-visible:outline-2 nui:focus-visible:outline-offset-2 nui:focus-visible:outline-focus-ring",
+  base: "nui-badge nui:inline-flex nui:max-w-full nui:min-w-0 nui:items-center nui:justify-center nui:gap-1 nui:border nui:font-medium nui:leading-snug nui:align-middle nui:wrap-anywhere nui:no-underline nui:transition-colors nui:motion-reduce:transition-none nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
   variants: {
     ...badgeAppearanceVariants,
     size: {
