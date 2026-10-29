@@ -34,6 +34,7 @@ export function Button(props: ButtonProps) {
     <button
       {...rest}
       data-nui-button=""
+      data-nui-button-variant={local.variant ?? group.variant ?? "solid"}
       data-icon-only={local.iconOnly ? "true" : undefined}
       disabled={local.disabled || group.disabled || local.loading}
       aria-busy={local.loading || local["aria-busy"]}

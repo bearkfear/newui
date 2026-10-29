@@ -14,6 +14,23 @@
   color-scheme: light dark;
 }
 
+:root,
+[data-nui-theme="system"] {
+  --nui-button-solid-active-filter: brightness(0.92) saturate(1.1);
+}
+@media (prefers-color-scheme: dark) {
+  :root,
+  [data-nui-theme="system"] {
+    --nui-button-solid-active-filter: brightness(1.08);
+  }
+}
+[data-nui-theme="light"] {
+  --nui-button-solid-active-filter: brightness(0.92) saturate(1.1);
+}
+[data-nui-theme="dark"] {
+  --nui-button-solid-active-filter: brightness(1.08);
+}
+
 :root {
   --nui-z-overlay: 1000;
   --nui-header-gap: 0.125rem;

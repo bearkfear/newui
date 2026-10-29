@@ -3,6 +3,7 @@ import { expect, userEvent, within } from "storybook/test";
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { ArrowIcon, PlusIcon } from "./stories/button-icons";
 import baseMeta from "./stories/button-meta";
+import { ButtonPressExample, ButtonPressThemes } from "./stories/button-press-example";
 
 const meta = {
   ...baseMeta,
@@ -233,3 +234,10 @@ export const CustomTokens: Story = {
 };
 
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };
+export const PressFeedback: Story = { render: () => <ButtonPressExample /> };
+export const PressFeedbackDark: Story = { ...PressFeedback, globals: { theme: "dark" } };
+export const PressFeedbackThemes: Story = { render: () => <ButtonPressThemes /> };
+export const PressFeedbackReducedMotion: Story = {
+  ...PressFeedback,
+  globals: { motion: "reduced" },
+};

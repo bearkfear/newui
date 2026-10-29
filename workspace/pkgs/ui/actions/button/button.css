@@ -36,6 +36,9 @@
   [data-motion="reduced"] .nui-button-spinner {
     animation: none;
   }
+  .nui-button[data-nui-button-variant="solid"]:enabled:active:not([data-state="open"]) {
+    filter: var(--nui-button-solid-active-filter);
+  }
 }
 
 @layer utilities {

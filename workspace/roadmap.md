@@ -29,6 +29,7 @@ The catalog starts early and grows with each component.
 - [ ] Define typography, dimensions, visible focus, disabled states, and reduced motion.
 - [x] Create the initial Storybook catalog with area navigation, component demos, property controls, and light/dark theme switching.
 - [x] Implement Button and ButtonGroup with validated variants and examples.
+- [x] Obtain user validation of solid Button press feedback using the approved Radix Themes filter exception, preserving hover colors and introducing no positional motion.
 - [x] Implement Card with optional parts, visual variants, media, and footer compositions.
 - [x] Obtain user validation of Card in Storybook, including the softened, neumorphism-inspired elevated surface.
 - [x] Implement the first Ark-powered Dialog with Bulma-inspired modal-card presentation and responsive examples.

@@ -31,3 +31,7 @@ Shared semantic roles keep component states consistent and allow theme changes w
 
 - [Radix scale roles](https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale).
 - [Theme contract](../workspace/pkgs/ui/foundations/themes.md).
+
+## Exceptions
+
+Enabled solid Buttons may apply the Radix Themes active-state filter while pressed: `brightness(0.92) saturate(1.1)` in light themes and `brightness(1.08)` in dark themes, over the existing hover background. Keep the filter scoped to transient native `:active`, exclude open triggers and disabled/loading buttons, and preserve other variants' explicit state colors. Do not add positional motion as part of this feedback. See [Radix Themes Button implementation](https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/_internal/base-button.css).
