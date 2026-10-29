@@ -22,7 +22,8 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 - Card, Badge, Avatar, and Separator.
 - [Counter](counter/README.md) for numeric notifications and unread counts; validated by the user.
 - Accordion and Collapsible.
-- Timeline and Carousel.
+- [Timeline](timeline/README.md): vertical/horizontal native chronological lists, dates, decorative connectors, optional custom markers, and progress statuses; implementation and Storybook examples are validated by the user.
+- Carousel.
 - Image/Figure as a recipe or composition with framing and captions.
 - Box/Surface as a recipe or variant, reusing Card where appropriate.
 

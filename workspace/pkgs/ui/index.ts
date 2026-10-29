@@ -68,6 +68,15 @@ export type { SeparatorProps } from "./content/separator/separator";
 export { Separator } from "./content/separator/separator";
 export type { TextProps } from "./content/text/text";
 export { Text } from "./content/text/text";
+export type { TimelineItemProps, TimelineRootProps } from "./content/timeline/timeline";
+export { Timeline } from "./content/timeline/timeline";
+export type {
+  TimelineContentProps,
+  TimelineDescriptionProps,
+  TimelineIndicatorProps,
+  TimelineTimeProps,
+  TimelineTitleProps,
+} from "./content/timeline/timeline.parts";
 export type { TableContainerProps, TableRootProps } from "./data/table/table";
 export { Table } from "./data/table/table";
 export type {

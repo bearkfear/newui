@@ -38,3 +38,7 @@ Reviewed the official [Dropdown Menu](https://www.solid-ui.com/docs/components/d
 ## Table
 
 Reviewed [Solid UI Table](https://www.solid-ui.com/docs/components/table) and [Bulma Table](https://bulma.io/documentation/elements/table/) on 2026-10-28. Solid UI inspires the restrained invoice presentation and caption; Bulma inspires combinable borders, stripes, compact spacing, hover, highlighted rows, and a separate scroll container. newui uses original native HTML wrappers and Radix tokens, without copied source, extra dependencies, or Kobalte. See the [Table contract](../pkgs/ui/data/table/README.md).
+
+## Timeline
+
+Reviewed [Solid UI Timeline](https://www.solid-ui.com/docs/components/timeline) on 2026-10-28. Its event/progress presentation inspires a native ordered list with decorative markers and connectors. newui uses a compound API, optional native dates and rich content, application-owned statuses, and Radix tokens. No upstream source, extra dependency, or Kobalte is used. See the [Timeline contract](../pkgs/ui/content/timeline/README.md).

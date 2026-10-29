@@ -1,0 +1,48 @@
+@layer components {
+  .nui-timeline > [data-nui-timeline-item] {
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    padding-bottom: var(--nui-timeline-gap);
+  }
+
+  .nui-timeline > [data-nui-timeline-item]:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 1.75rem;
+    bottom: 0.25rem;
+    left: calc(0.75rem - 0.5px);
+    width: 1px;
+    background: var(--nui-border);
+  }
+
+  .nui-timeline > [data-nui-timeline-item]:last-child {
+    padding-bottom: 0;
+  }
+
+  .nui-timeline[data-orientation="horizontal"] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(14rem, 1fr);
+  }
+
+  .nui-timeline[data-orientation="horizontal"] > [data-nui-timeline-item] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: var(--nui-timeline-gap);
+    padding-bottom: 0;
+  }
+
+  .nui-timeline[data-orientation="horizontal"] > [data-nui-timeline-item]:last-child {
+    padding-right: 0;
+  }
+
+  .nui-timeline[data-orientation="horizontal"] > [data-nui-timeline-item]:not(:last-child)::before {
+    top: calc(0.75rem - 0.5px);
+    right: 0.25rem;
+    bottom: auto;
+    left: 1.75rem;
+    width: auto;
+    height: 1px;
+  }
+}
