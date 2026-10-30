@@ -8,7 +8,7 @@ export const verticalMenuRecipe = tv({
     label: "nui:px-3 nui:font-semibold nui:uppercase nui:tracking-wider",
     list: "nui:m-0 nui:grid nui:min-w-0 nui:list-none nui:gap-1 nui:p-0",
     item: "nui:min-w-0",
-    link: navigationLinkBase,
+    link: `nui-vertical-menu-link ${navigationLinkBase}`,
     subList:
       "nui:ms-3 nui:mt-1 nui:grid nui:min-w-0 nui:list-none nui:gap-1 nui:border-s nui:border-border nui:ps-3",
     branch: "nui:min-w-0",

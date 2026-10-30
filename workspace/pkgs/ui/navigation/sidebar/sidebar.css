@@ -27,6 +27,10 @@
   .nui-sidebar-surface[data-collapsed] .nui-sidebar-expanded {
     display: none;
   }
+  .nui-sidebar-surface[data-collapsed] .nui-vertical-menu-link {
+    justify-content: center;
+    padding-inline: 0;
+  }
   .nui-sidebar-surface[data-collapsed] :where(a, button) {
     flex-shrink: 0;
   }

@@ -194,12 +194,6 @@
   justify-items: start;
   gap: 1rem;
 }
-.sidebar-demo-frame
-  .nui-sidebar-surface[data-collapsed]
-  [data-scope="tooltip"][data-part="trigger"] {
-  justify-content: center;
-}
-
 @media (max-width: 47.999rem) {
   .sidebar-demo-status {
     display: none;
