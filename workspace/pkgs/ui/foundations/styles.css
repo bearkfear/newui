@@ -25,6 +25,9 @@
 @import "../data/table/table.css";
 @import "../data/chart/chart.css";
 @import "../data/data-indicators.css";
+@import "../forms/field/field.css";
+@import "../forms/text-control.css";
+@import "../forms/input-group/input-group.css";
 
 @source "../actions/**/*.recipe.ts";
 @source "../layout/**/*.recipe.ts";
@@ -34,6 +37,7 @@
 @source "../overlays/**/*.recipe.ts";
 @source "../feedback/**/*.recipe.ts";
 @source "../data/**/*.recipe.ts";
+@source "../forms/**/*.recipe.ts";
 
 @theme inline {
   --color-background: var(--nui-background);

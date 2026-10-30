@@ -1,0 +1,86 @@
+.text-fields-demo {
+  display: grid;
+  gap: 2rem;
+  max-width: 68rem;
+  margin-inline: auto;
+}
+.text-fields-demo-heading {
+  display: grid;
+  gap: 0.5rem;
+}
+.text-fields-demo-heading h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+.text-fields-demo-heading p {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--nui-muted-foreground);
+  font-size: 0.875rem;
+}
+.text-fields-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  align-items: start;
+  gap: 1.5rem;
+}
+.text-fields-demo-stack {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+.text-fields-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+.text-fields-demo-status {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--nui-muted-foreground);
+  overflow-wrap: anywhere;
+}
+.text-fields-demo-form {
+  display: grid;
+  gap: 1.5rem;
+}
+.text-fields-demo-feedback {
+  min-height: 1.125rem;
+}
+.text-fields-demo-form fieldset {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.text-fields-demo-form legend {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.text-fields-demo-code {
+  max-width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--nui-border);
+  border-radius: var(--nui-radius-md);
+  background: var(--nui-surface);
+  font-size: 0.75rem;
+}
+.text-fields-demo-error-list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  list-style: disc;
+}
+.text-fields-demo-error-list a {
+  color: var(--nui-danger-text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

@@ -6,12 +6,12 @@
 
 Enable entering, selecting, and editing values with consistent labels, help text, errors, and states.
 
-Forms are deferred until the other implementation areas are complete. The contracts below remain planned and no form components have been implemented.
+The first text-family delivery implements Field, Input, Textarea, and InputGroup with Ark behavior and Bulma-inspired Radix styling. It awaits user validation in Storybook. The remaining controls and form-library integration are still planned.
 
 ## Planned inventory
 
-- Field, including Label, Description, and ErrorText.
-- Input, Textarea, and InputGroup.
+- Field, including Label, Content, Description, ErrorText, SuccessText, and RequiredIndicator (implemented; awaiting validation).
+- Input, Textarea, and InputGroup (implemented; awaiting validation).
 - Checkbox, Radio Group, and Switch.
 - Number Field, OTP Field, and Slider.
 - Select, Combobox, and Date Picker.
@@ -27,9 +27,11 @@ Input and Textarea must work independently or within Field, with an accessible n
 
 ## Ideas and questions
 
-The Field contract, InputGroup, field groups, and File Upload standardize form composition. These additions were accepted and have not been implemented yet.
+Field and InputGroup standardize text-field composition. Field groups and File Upload remain planned. The implementation uses Ark Field and native text controls without a new dependency; newui owns visual variants and explicit valid/success feedback.
 
-Define ID, description, and error associations, controlled and uncontrolled states, and validation integration. Distinguish native selection from a custom Select. Complete examples belong to [Compositions](../compositions/README.md).
+Ark owns label/description/error associations; newui appends success descriptions. Native attributes, refs, editing, FormData, value/defaultValue, and resets are preserved. See the [Field](field/README.md), [Input](input/README.md), [Textarea](textarea/README.md), and [Input Group](input-group/README.md) contracts. Form-library integration and the distinction between native selection and a custom Select remain separate decisions. Complete application examples belong to [Compositions](../compositions/README.md).
+
+Forms / Field / Overview covers the family, with interactive profile editing, password reveal/clear/search actions, sizes, tones, addons, loading, readonly/static/disabled states, explicit validation, horizontal layout, and mobile. Native Submission And Reset demonstrates browser form behavior. No new automated tests were added.
 
 ## Planned extensions
 

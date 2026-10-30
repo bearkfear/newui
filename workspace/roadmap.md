@@ -135,12 +135,13 @@ Image/Figure, Box/Surface, Stack, and AutoGrid are excluded; no additional media
 
 ### 7. Forms (last implementation stage)
 
-- [ ] Consolidate Label, Input, and Textarea within the Field contract.
+- [x] Implement Field, Input, Textarea, and InputGroup using Ark Field, native text editing, Radix/Bulma-inspired sizes and tones, icons/addons/actions, explicit valid/invalid feedback, loading, readonly/static/disabled states, and reviewable Storybook examples.
+- [ ] Obtain user validation of the text-field family, native submission/reset, accessible associations, and responsive examples.
 - [ ] Checkbox, Radio Group, Switch, Toggle, and Toggle Group.
 - [ ] Number Field, OTP Field, and Slider.
 - [ ] Select and Combobox.
 - [ ] Date Picker.
-- [ ] Implement Input Group, field groups, and File Upload.
+- [ ] Implement field groups and File Upload; InputGroup is included in the text-field delivery above.
 - [ ] Create complete form and settings examples with the implemented controls.
 
 The Field contract must associate the label, description, and error with the control. Validation and form library integration require their own decision.
