@@ -17,6 +17,7 @@ Forms are deferred until the other implementation areas are complete. The contra
 - Select, Combobox, and Date Picker.
 - File Upload.
 - Field groups and horizontal form examples.
+- Complete form and settings compositions, moved from stage 6 to accompany their controls.
 
 ## Agreed decisions
 

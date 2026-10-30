@@ -1,0 +1,75 @@
+.example-app {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.example-app :where(button, a):focus-visible {
+  outline-color: var(--nui-focus-ring);
+}
+.example-brand {
+  min-height: 5rem;
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+.example-brand-mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.625rem;
+  background: var(--nui-primary);
+  color: var(--nui-on-primary);
+}
+.example-brand strong {
+  font-size: 1.25rem;
+  letter-spacing: -0.05em;
+}
+.example-brand small,
+.example-account small {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--nui-muted-foreground);
+}
+.example-account {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.example-app .nui-sidebar-surface[data-collapsed] .example-brand {
+  justify-content: center;
+  padding-inline: 0.5rem;
+}
+.example-app .nui-sidebar-surface[data-collapsed] .example-account {
+  justify-content: center;
+}
+.example-sidebar-note {
+  padding: 1rem;
+  margin-top: 1.5rem;
+  color: var(--nui-muted-foreground);
+  font-size: 0.75rem;
+}
+.example-sidebar-note > p {
+  margin-bottom: 0.75rem;
+}
+.example-sidebar-note small {
+  display: block;
+  margin-top: 0.5rem;
+}
+.example-topbar {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+  padding: 0.75rem clamp(1rem, 3vw, 2.5rem);
+  border-bottom: 1px solid var(--nui-border);
+  background: var(--nui-background);
+}
+.example-stage {
+  container-type: inline-size;
+  padding: clamp(1rem, 3vw, 2.5rem);
+}

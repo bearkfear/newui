@@ -1,0 +1,195 @@
+@import "./page-shell.css";
+@import "./page-status-help.css";
+@import "./orders-footer.css";
+
+.example-page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin-inline: auto;
+  min-width: 0;
+}
+.example-page-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.25rem 0.5rem;
+}
+.example-page-heading > div:first-child {
+  display: grid;
+  gap: 0.375rem;
+}
+.example-page-heading h1 {
+  font-size: clamp(1.75rem, 4cqi, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  font-weight: 650;
+}
+.example-eyebrow {
+  color: var(--nui-primary-text);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  font-weight: 650;
+}
+.example-muted {
+  color: var(--nui-muted-foreground);
+}
+.example-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.example-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.example-metric {
+  display: grid;
+  gap: 0.625rem;
+}
+.example-metric h2 {
+  color: var(--nui-muted-foreground);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.example-metric > p {
+  font-size: clamp(1.5rem, 3cqi, 2.25rem);
+  letter-spacing: -0.045em;
+  font-weight: 650;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.example-metric-comparison {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.example-metric-comparison > span:last-child {
+  color: var(--nui-muted-foreground);
+  font-size: 0.6875rem;
+}
+.example-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.example-equal-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+.example-stack {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+.example-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.example-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.example-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.example-list > li + li {
+  padding-top: 1rem;
+  border-top: 1px solid var(--nui-border);
+}
+.example-details {
+  display: grid;
+  gap: 1rem;
+}
+.example-details > div {
+  display: grid;
+  gap: 0.25rem;
+}
+.example-details dt {
+  font-size: 0.75rem;
+  color: var(--nui-muted-foreground);
+}
+.example-details dd {
+  font-weight: 500;
+}
+.example-table {
+  min-width: 38rem;
+}
+.example-table-button {
+  padding: 0;
+  color: var(--nui-primary-text);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.example-table-secondary {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--nui-muted-foreground);
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+.example-filters {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.example-task {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.example-task > div {
+  min-width: 0;
+  flex: 1;
+}
+.example-task p {
+  font-weight: 500;
+}
+.example-task small {
+  color: var(--nui-muted-foreground);
+}
+.example-task[data-complete] p {
+  text-decoration: line-through;
+  color: var(--nui-muted-foreground);
+}
+@container (max-width: 48rem) {
+  .example-columns,
+  .example-equal-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .example-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 30rem) {
+  .example-topbar > .nui-badge {
+    display: none;
+  }
+}
+
+.example-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

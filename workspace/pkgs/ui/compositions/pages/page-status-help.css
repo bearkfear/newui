@@ -1,0 +1,44 @@
+.example-status-summary {
+  padding: 1.5rem;
+  border: 1px solid var(--nui-success-border);
+  border-radius: var(--nui-radius-lg);
+  background: var(--nui-success-soft);
+  color: var(--nui-success-text);
+}
+.example-status-summary[data-incident] {
+  border-color: var(--nui-warning-border);
+  background: var(--nui-warning-soft);
+  color: var(--nui-warning-text);
+}
+.example-status-summary h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.example-health-bars {
+  display: flex;
+  gap: 3px;
+  height: 1.75rem;
+  margin-top: 1rem;
+}
+.example-health-bars > span {
+  flex: 1;
+  min-width: 0;
+  border-radius: 2px;
+  background: var(--nui-success);
+}
+.example-health-bars > span[data-interrupted] {
+  background: var(--nui-warning);
+}
+.example-help-hero {
+  border-radius: var(--nui-radius-xl);
+  overflow: hidden;
+}
+.example-article-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--nui-radius-md);
+  background: var(--nui-primary-soft);
+  color: var(--nui-primary-text);
+}

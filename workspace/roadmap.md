@@ -6,11 +6,11 @@
 
 The user accepted the implemented actions and menus, layout/content primitives, compound compositions, navigation including Steps and Sidebar, overlays, feedback, native Table, Unovis charts, Radix color system, Storybook styling, and code-quality tooling with pre-commit checks. These deliveries are complete. New automated tests still require separate explicit authorization.
 
-Remaining unchecked items below describe future work. Flex, Grid, Skeleton, and AspectRatio components are out of scope. Applications use CSS directly for layout and media proportions. Forms are deferred until the other implementation stages are complete. Icon actions use Button iconOnly with an accessible name; no separate IconButton or CloseButton component is planned.
+Remaining unchecked items below describe future work. Flex, Grid, Skeleton, AspectRatio, Image/Figure, Box/Surface, Stack, and AutoGrid additions are out of scope. Media uses native HTML and existing compositions; no dedicated image or video wrapper is planned. Applications use CSS directly for layout and media proportions. Forms are deferred until the other implementation stages are complete. Icon actions use Button iconOnly with an accessible name; no separate IconButton or CloseButton component is planned.
 
 ## Proposed implementation order
 
-The stage order below is a proposal. The user accepted the Bulma additions; their implementation will be distributed across the corresponding stages.
+The stage order below is a proposal. The retained Bulma additions are distributed across their corresponding stages; the remaining layout/content recipes were excluded by user decision.
 The catalog starts early and grows with each component.
 
 ### 0. Define minimum contracts
@@ -126,11 +126,12 @@ Data Table and Charts require their own dependency evaluation; do not assume Ark
 
 ### 6. Layouts and larger blocks
 
-- [ ] Implement the Bulma additions according to the [comparison](references/bulma.md#bulma-differences-from-solid-ui), reusing existing primitives.
-- [ ] Create complete form, settings, and listing examples.
+Image/Figure, Box/Surface, Stack, and AutoGrid are excluded; no additional media wrappers are planned. The user requested a final collection of complete pages using the expanded catalog. Form and settings examples move to stage 7 alongside their controls.
 - [x] Implement Hero, Footer, Media Object, Panel, and ActionBar as compound compositions with responsive Storybook examples.
 - [x] Obtain user validation of Hero, Footer, Media Object, Panel, and ActionBar in Storybook.
-- [ ] Create responsive compositions with stabilized components.
+- [x] Provide responsive compositions through Compositions / Overview and the existing Panel, Sidebar, and Table examples.
+- [x] Create Analytics, Orders, Project, Service Status, and Help Center pages with shared responsive navigation, local actions, CSV exports, and mobile stories under Compositions / Pages.
+- [ ] Obtain user validation of the complete page collection, including compact Sidebar icon alignment and viewport-height scrolling.
 
 ### 7. Forms (last implementation stage)
 
@@ -140,6 +141,7 @@ Data Table and Charts require their own dependency evaluation; do not assume Ark
 - [ ] Select and Combobox.
 - [ ] Date Picker.
 - [ ] Implement Input Group, field groups, and File Upload.
+- [ ] Create complete form and settings examples with the implemented controls.
 
 The Field contract must associate the label, description, and error with the control. Validation and form library integration require their own decision.
 

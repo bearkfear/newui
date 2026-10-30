@@ -8,16 +8,16 @@ Reference for layout, content, navigation, and composition needs that complement
 
 ## Accepted directions
 
-| Destination                                       | Ideas                                                         |
-| ------------------------------------------------- | ------------------------------------------------------------- |
-| [Layout](../pkgs/ui/layout/README.md)             | Container, Section, Stack, AutoGrid, and responsive patterns. |
-| [Content](../pkgs/ui/content/README.md)           | Heading, Text, Prose, Image/Figure, and Box/Surface.          |
-| [Actions](../pkgs/ui/actions/README.md)           | Close actions using Button iconOnly.                          |
-| [Forms](../pkgs/ui/forms/README.md)               | Field, InputGroup, field groups, and File Upload.             |
-| [Navigation](../pkgs/ui/navigation/README.md)     | Navbar and the static vertical menu.                          |
-| [Compositions](../pkgs/ui/compositions/README.md) | Hero, Footer, Media Object, Panel, and the action bar.        |
+| Destination                                       | Ideas                                                  |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| [Layout](../pkgs/ui/layout/README.md)             | Container, Section, and existing responsive patterns.  |
+| [Content](../pkgs/ui/content/README.md)           | Heading, Text, and Prose.                              |
+| [Actions](../pkgs/ui/actions/README.md)           | Close actions using Button iconOnly.                   |
+| [Forms](../pkgs/ui/forms/README.md)               | Field, InputGroup, field groups, and File Upload.      |
+| [Navigation](../pkgs/ui/navigation/README.md)     | Navbar and the static vertical menu.                   |
+| [Compositions](../pkgs/ui/compositions/README.md) | Hero, Footer, Media Object, Panel, and the action bar. |
 
-Icon standardization belongs to [Foundations](../pkgs/ui/foundations/README.md). Proposed formats and priorities are in the [detailed comparison](#bulma-differences-from-solid-ui). Container, Section, Heading, Text, Prose, Hero, Footer, Media Object, Panel, ActionBar, Navbar, and VerticalMenu are implemented and validated. Message presentation is available through Callout. Close actions use the existing Button iconOnly contract. Other additions remain planned; current delivery status is tracked in the [roadmap](../roadmap.md).
+Icon standardization belongs to [Foundations](../pkgs/ui/foundations/README.md). Proposed formats and priorities are in the [detailed comparison](#bulma-differences-from-solid-ui). Container, Section, Heading, Text, Prose, Hero, Footer, Media Object, Panel, ActionBar, Navbar, and VerticalMenu are implemented and validated. Message presentation is available through Callout. Close actions use the existing Button iconOnly contract. Forms additions remain planned. Image/Figure, Box/Surface, Stack, and AutoGrid were excluded by user decision when closing stage 6; current delivery status is tracked in the [roadmap](../roadmap.md).
 
 ## Material and provenance
 
@@ -29,7 +29,7 @@ The comparison was recorded on 2026-10-23. Links are in the [sources](sources.md
 
 This compares the official catalogs; it does not claim that a feature is impossible with Solid UI.
 “No dedicated equivalent” means there was no separate entry in the catalog consulted.
-The user accepted these additions. The recommendations define each resource's initial format; the first five primitives and the larger navigation/composition deliveries are implemented and validated.
+The table reflects the current retained scope. The first five primitives and the larger navigation/composition deliveries are implemented and validated. The user later excluded the remaining layout/content recipes when closing stage 6.
 
 | Bulma                             | Solid UI coverage                                           | Accepted direction                                                                                            |
 | --------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -46,12 +46,12 @@ The user accepted these additions. The recommendations define each resource's in
 | Vertical menu                     | Sidebar and Navigation Menu cover parts                     | Implement link groups with headings and nested items; distinguish static navigation from an ARIA action menu. |
 | Panel                             | Card, Tabs, and fields cover parts                          | Implement a composed block for filters, search, and compact lists.                                            |
 | Field / Control and groups        | Text Field covers part of the problem                       | Standardize Field, Input Group, and horizontal form compositions.                                             |
-| Image                             | Aspect Ratio and Avatar cover parts                         | Include an Image/Figure recipe/composition with framing and captions.                                         |
-| Box                               | Card and utilities cover much of it                         | Cover generic surfaces with a recipe/variant; reuse Card where appropriate.                                   |
-| Block                             | Spacing through Tailwind/Flex                               | Include Stack as a composition for consistent spacing.                                                        |
+| Image                             | Aspect Ratio and Avatar cover parts                         | Excluded by user decision; use native media and existing compositions.                                        |
+| Box                               | Card and utilities cover much of it                         | No separate Box/Surface addition; reuse existing Card and CSS.                                                |
+| Block                             | Spacing through Tailwind/Flex                               | No Stack addition; use CSS directly for sequential spacing.                                                   |
 | Delete                            | Reusable close button                                       | Use Button iconOnly with an accessible name; compose overlay close triggers where needed.                     |
 | Icon                              | Icons and utilities cover the purpose                       | Standardize size and alignment; do not create an icon library.                                                |
-| Columns / Smart Grid / Fixed Grid | Flex and Grid cover parts; Tailwind provides the mechanisms | Provide responsive patterns and examples; include an AutoGrid recipe for automatic item distribution.         |
+| Columns / Smart Grid / Fixed Grid | Flex and Grid cover parts; Tailwind provides the mechanisms | Use existing responsive examples and native CSS; no AutoGrid addition.                                        |
 | CSS helpers                       | Tailwind covers most                                        | Use existing utilities and our own tokens.                                                                    |
 
 ### Overlaps that do not automatically justify new components
@@ -73,4 +73,4 @@ The user accepted these additions. The recommendations define each resource's in
 2. **Alongside forms:** the Field contract, Input Group, and File Upload.
 3. **After primitives:** Navbar and the vertical menu.
 4. **Initially as blocks or recipes:** Hero, Footer, Media Object, Panel, and the action bar.
-5. **As recipes, variants, or lightweight compositions:** Box/Surface, Image/Figure, close actions with Button iconOnly, Stack, icon standardization, and AutoGrid.
+5. **Covered by existing contracts:** close actions with Button iconOnly and icon standardization. Box/Surface, Image/Figure, Stack, and AutoGrid additions are excluded.

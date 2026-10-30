@@ -23,12 +23,10 @@ Heading, Text, and Prose are implemented with recipes, semantic tokens, and colo
 - [Counter](counter/README.md) for numeric notifications and unread counts; validated by the user.
 - Accordion and Collapsible.
 - [Timeline](timeline/README.md): vertical/horizontal native chronological lists, dates, decorative connectors, optional custom markers, and progress statuses; implementation and Storybook examples are validated by the user.
-- Image/Figure as a recipe or composition with framing and captions.
-- Box/Surface as a recipe or variant, reusing Card where appropriate.
 
 ## Ideas and boundaries
 
-Heading, Text, and Prose cover interface typography and editorial content. Image/Figure and Box/Surface are also accepted additions; their public names and final formats remain under evaluation.
+Heading, Text, and Prose cover interface typography and editorial content. Image/Figure and Box/Surface additions are excluded by user decision. Use native media elements and existing Card, Prose, Hero, or Media Object compositions; no dedicated image or video wrapper is planned.
 
 Accordion and Collapsible belong here because they organize content presentation. Timeline presents a sequence; visualizations for comparing values belong to [Data](../data/README.md). Carousel is deferred until a concrete future need arises; it remains classified as Content.
 

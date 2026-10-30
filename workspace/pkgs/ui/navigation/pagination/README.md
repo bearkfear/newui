@@ -29,6 +29,8 @@ Consumers own data loading, record slicing, status announcements, and page-size 
 
 Pagination uses buttons for local page changes. Consumers can update application routing in `onPageChange`; generated URL links are outside this API.
 
+Compositions / Pages / Orders demonstrates a compact table footer: visible record range on the left, icon-only previous/next triggers on the right, and automatic page-summary presentation based on the panel's available width. Its layout uses application-owned container queries; the default standalone Pagination presentation remains unchanged. The footer omits navigation when one page contains all matching records.
+
 ## Review
 
 The user validated the simplified implementation, record-list footer, and Panel integration. Storybook covers ellipses, page boundaries, one-page and empty results, sizes, dark/mobile layouts, and a controlled record list with page-size selection. The Panel record-list demo reuses this footer, adapting its zero-based page state at the integration boundary. The shared footer labels its navigation and handles empty totals. No new automated tests were added; test work requires separate authorization.
