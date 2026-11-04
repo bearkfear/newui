@@ -1,0 +1,5 @@
+@import "../../styles/foundations.css";
+@import "../../content/heading/heading.styles.css";
+@import "../../content/text/text.styles.css";
+
+@source "./empty.recipe.ts";

@@ -1,7 +1,7 @@
 import type { Preview } from "storybook-solidjs-vite";
 import { createJSXDecorator } from "storybook-solidjs-vite";
 import { CatalogDocsContainer } from "./docs-container";
-import "../../../pkgs/ui/foundations/styles.css";
+import "./library.css";
 import "./preview.css";
 
 const preview: Preview = {

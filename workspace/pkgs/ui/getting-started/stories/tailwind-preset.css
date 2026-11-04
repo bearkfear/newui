@@ -1,0 +1,6 @@
+@import "tailwindcss" source(none);
+@import "../../tailwind/preset.css";
+@import "../../tailwind/actions.css";
+@import "../../tailwind/forms.css";
+
+@source "../../../../apps/tailwind-playground/src/**/*.tsx";

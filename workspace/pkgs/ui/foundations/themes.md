@@ -44,3 +44,5 @@ Solid primary (Blue), success (Green), and danger (Red) use white text on steps 
 Storybook's system option exercises the public CSS contract directly. Its manager resolves the operating system separately because its theming API accepts JavaScript color values.
 
 Application-specific theme persistence and user preference storage remain the consuming application's responsibility.
+
+The optional [Tailwind preset](../getting-started/tailwind.md) maps application utilities to the same tokens. [Runtime customization](../getting-started/theme-customization.md) and the consumer playground demonstrate changing palette roles, spacing, radius, and appearance without regenerating source palettes.

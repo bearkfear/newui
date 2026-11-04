@@ -72,6 +72,12 @@
       "correctness": {
         "useJsxKeyInIterable": "off"
       },
+      "suspicious": {
+        "noUnknownAtRules": {
+          "level": "error",
+          "options": { "ignore": ["newui"] }
+        }
+      },
       "preset": "recommended"
     }
   }

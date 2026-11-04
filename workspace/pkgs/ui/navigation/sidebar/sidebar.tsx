@@ -1,5 +1,4 @@
-import { createSignal, type JSX, mergeProps, splitProps } from "solid-js";
-import type { ResizableResizeEndDetails } from "../../layout/resizable/resizable";
+import { createSignal, mergeProps, splitProps } from "solid-js";
 import { Resizable } from "../../layout/resizable/resizable";
 import { Sheet } from "../../overlays/sheet/sheet";
 import { SidebarConsumer } from "./sidebar.context";
@@ -16,22 +15,8 @@ import { SidebarProvider } from "./sidebar.provider";
 import { sidebarRecipe } from "./sidebar.recipe";
 import { sidebarOptionKeys, useSidebarState } from "./sidebar.state";
 import { SidebarToggle } from "./sidebar.toggle";
+import type { SidebarRootProps } from "./sidebar.types";
 
-export type SidebarRootProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "id" | "onResize"> & {
-  id?: string;
-  resizable?: boolean;
-  defaultWidth?: number;
-  minWidth?: number;
-  maxWidth?: number;
-  compactWidth?: number;
-  collapsed?: boolean;
-  defaultCollapsed?: boolean;
-  onCollapsedChange?: (collapsed: boolean) => void;
-  mobileOpen?: boolean;
-  defaultMobileOpen?: boolean;
-  onMobileOpenChange?: (open: boolean) => void;
-  onResizeEnd?: (details: ResizableResizeEndDetails) => void;
-};
 const styles = sidebarRecipe();
 
 export function SidebarRoot(props: SidebarRootProps) {
@@ -97,3 +82,4 @@ export type { SidebarContextValue } from "./sidebar.context";
 export type { SidebarPanelProps } from "./sidebar.panel";
 export type { SidebarLabelProps, SidebarMainProps, SidebarPartProps } from "./sidebar.parts";
 export type { SidebarToggleProps } from "./sidebar.toggle";
+export type { SidebarRootProps } from "./sidebar.types";

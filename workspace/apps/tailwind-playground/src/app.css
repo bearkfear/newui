@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "newui/tailwind/preset.css";
+@import "newui/tailwind/actions.css";
+@import "newui/tailwind/forms.css";
+
+@source "./**/*.tsx";

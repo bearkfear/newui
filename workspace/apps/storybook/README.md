@@ -42,6 +42,10 @@ References: [Storybook theming](https://storybook.js.org/docs/configure/user-int
 
 ## Node compatibility
 
+Shared PostCSS helpers are imported by the main configuration through the internal `#storybook-tooling` package alias. The `dev` and `build` commands first bundle its extensionless TypeScript source graph into this application's ignored `dist/storybook-tooling.mjs`. Node loads that generated module without invoking Storybook's deprecated extensionless-import fallback. TypeScript resolves the alias to source for checking; no `allowImportingTsExtensions` setting is needed.
+
+Use the documented Bun commands so the bundle exists before Storybook starts. Restart the command after changing helper implementation code to regenerate it. Component, story, CSS, and recipe changes retain their usual development watchers.
+
 Storybook 10.6.1 registers an asynchronous TypeScript loader that emits `DEP0205` on Node 26. The workspace carries a [versioned compatibility patch](../../patches/storybook@10.6.1.patch): it uses `registerHooks()` with synchronous file reads and TypeScript transforms where that API is available, retaining the original loader for older Node versions.
 
 The patch is declared in `workspace/package.json` under `patchedDependencies`, so Bun applies it during installation. No warning filters or global Node settings are used. Remove the patch when upgrading to a Storybook release whose loader no longer needs it.

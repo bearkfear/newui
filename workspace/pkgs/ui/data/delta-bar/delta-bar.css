@@ -1,0 +1,24 @@
+@layer components {
+  .nui-delta-track {
+    position: relative;
+    height: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 999px;
+    background: var(--nui-neutral-soft);
+  }
+  .nui-delta-track::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: -0.25rem;
+    bottom: -0.25rem;
+    width: 1px;
+    background: var(--nui-neutral-text);
+  }
+  .nui-delta-fill {
+    position: absolute;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--nui-data-solid);
+  }
+}

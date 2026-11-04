@@ -21,6 +21,7 @@ Solid UI is a starting reference, with no obligation to follow every shadcn/ui u
 
 ## Proposed architectural direction
 
+The [dependency map](dependencies.md) defines module layers, current cross-area reuse, and distribution boundaries. Follow the [dependency layer convention](../conventions/dependency-layers.md): catalog areas are not dependency layers, implementations import specific owning modules, and both runtime and type dependencies remain acyclic.
 1. **Tokens:** Radix colors and semantic aliases; spacing, typography, radii, shadows, and motion.
 2. **Recipes:** Tailwind classes organized with `tv()`, component variants, and slots.
 3. **Components:** Solid wrappers around Ark and custom components for elements without complex behavior.
@@ -38,3 +39,5 @@ Migrate by behavior and anatomy rather than replacing import names. Check DOM re
 - Dependencies for behaviors without a suitable Ark equivalent. Record each gap in its owning area before choosing an implementation.
 
 Dependency compatibility and package consumption are tracked in [Getting started](pkgs/ui/getting-started/README.md); chart and table dependencies are tracked in [Data](pkgs/ui/data/README.md).
+
+The optional [Tailwind integration](pkgs/ui/getting-started/tailwind.md) compiles selected prefixed library styles before the application's unprefixed Tailwind pass. Its preset shares public tokens with application utilities. The [consumer playground](apps/tailwind-playground/README.md) demonstrates runtime customization through public package entries.

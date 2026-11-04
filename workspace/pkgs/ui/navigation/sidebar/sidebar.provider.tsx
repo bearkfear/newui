@@ -1,8 +1,8 @@
 import { useSplitterContext } from "@ark-ui/solid/splitter";
 import type { JSX } from "solid-js";
-import type { SidebarRootProps } from "./sidebar";
 import { SidebarContext } from "./sidebar.context";
 import { synchronizeCollapsed, type useSidebarState } from "./sidebar.state";
+import type { SidebarRootProps } from "./sidebar.types";
 
 export function SidebarProvider(props: {
   options: SidebarRootProps;

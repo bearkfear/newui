@@ -4,6 +4,8 @@
 
 The publishable library lives here. Components, recipes, contracts, examples, and stories stay together in their owning area. Only selected build artifacts are included in the npm package.
 
+Use the main `newui` entry or named [area entries](getting-started/package-entries.md), such as `newui/actions` and `newui/forms`. Charts remain in `newui/charts`. All entries use the shared `newui/styles.css` stylesheet.
+
 ## Areas
 
 - [Getting started](getting-started/README.md): development and future consumer documentation.

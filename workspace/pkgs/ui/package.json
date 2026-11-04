@@ -20,10 +20,74 @@
       "types": "./dist/types/data/chart/index.d.ts",
       "solid": "./dist/charts.jsx",
       "import": "./dist/charts.js"
-    }
+    },
+    "./actions": {
+      "types": "./dist/types/actions/index.d.ts",
+      "solid": "./dist/actions.jsx",
+      "import": "./dist/actions.js"
+    },
+    "./compositions": {
+      "types": "./dist/types/compositions/index.d.ts",
+      "solid": "./dist/compositions.jsx",
+      "import": "./dist/compositions.js"
+    },
+    "./content": {
+      "types": "./dist/types/content/index.d.ts",
+      "solid": "./dist/content.jsx",
+      "import": "./dist/content.js"
+    },
+    "./data": {
+      "types": "./dist/types/data/index.d.ts",
+      "solid": "./dist/data.jsx",
+      "import": "./dist/data.js"
+    },
+    "./feedback": {
+      "types": "./dist/types/feedback/index.d.ts",
+      "solid": "./dist/feedback.jsx",
+      "import": "./dist/feedback.js"
+    },
+    "./forms": {
+      "types": "./dist/types/forms/index.d.ts",
+      "solid": "./dist/forms.jsx",
+      "import": "./dist/forms.js"
+    },
+    "./layout": {
+      "types": "./dist/types/layout/index.d.ts",
+      "solid": "./dist/layout.jsx",
+      "import": "./dist/layout.js"
+    },
+    "./navigation": {
+      "types": "./dist/types/navigation/index.d.ts",
+      "solid": "./dist/navigation.jsx",
+      "import": "./dist/navigation.js"
+    },
+    "./overlays": {
+      "types": "./dist/types/overlays/index.d.ts",
+      "solid": "./dist/overlays.jsx",
+      "import": "./dist/overlays.js"
+    },
+    "./postcss": {
+      "types": "./dist/postcss.d.ts",
+      "import": "./dist/postcss.js"
+    },
+    "./tailwind/preset.css": "./dist/tailwind/preset.css",
+    "./tailwind/foundations.css": "./dist/tailwind/foundations.css",
+    "./tailwind/actions.css": "./dist/tailwind/actions.css",
+    "./tailwind/forms.css": "./dist/tailwind/forms.css",
+    "./tailwind/content.css": "./dist/tailwind/content.css",
+    "./tailwind/layout.css": "./dist/tailwind/layout.css",
+    "./tailwind/navigation.css": "./dist/tailwind/navigation.css",
+    "./tailwind/overlays.css": "./dist/tailwind/overlays.css",
+    "./tailwind/feedback.css": "./dist/tailwind/feedback.css",
+    "./tailwind/data.css": "./dist/tailwind/data.css",
+    "./tailwind/charts.css": "./dist/tailwind/charts.css",
+    "./tailwind/compositions.css": "./dist/tailwind/compositions.css"
   },
   "peerDependencies": {
-    "solid-js": "^1.9.0"
+    "solid-js": "^1.9.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^4.3.3"
   },
   "dependencies": {
     "@ark-ui/solid": "5.39.3",
@@ -37,7 +101,9 @@
     "build": "bun scripts/build.ts",
     "typecheck": "tsc --noEmit && tsc --project scripts/tsconfig.json",
     "colors:generate": "bun scripts/generate-colors.ts",
-    "measure:charts": "bun scripts/measure-chart-bundles.ts"
+    "measure:charts": "bun scripts/measure-chart-bundles.ts",
+    "measure:bundles": "bun scripts/measure-bundles.ts",
+    "measure:styles": "bun scripts/measure-styles.ts"
   },
   "devDependencies": {
     "@babel/core": "7.29.7",
@@ -51,5 +117,16 @@
     "storybook-solidjs-vite": "10.7.2",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3"
+  },
+  "peerDependenciesMeta": {
+    "@tailwindcss/postcss": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    },
+    "tailwindcss": {
+      "optional": true
+    }
   }
 }

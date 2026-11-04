@@ -1,0 +1,5 @@
+@import "../../styles/foundations.css";
+@import "../heading/heading.styles.css";
+@import "../text/text.styles.css";
+
+@source "./card.recipe.ts";

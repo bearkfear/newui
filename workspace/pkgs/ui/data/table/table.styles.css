@@ -1,0 +1,4 @@
+@import "../../styles/foundations.css";
+@import "./table.css";
+
+@source "./table.recipe.ts";

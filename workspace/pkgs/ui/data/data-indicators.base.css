@@ -1,0 +1,65 @@
+@import "./data-accessibility.css";
+
+@layer components {
+  .nui-bar-list,
+  .nui-delta-bar {
+    min-width: 0;
+    margin: 0;
+    color: var(--nui-foreground);
+    font-size: 0.875rem;
+  }
+  .nui-data-caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    justify-content: space-between;
+  }
+  .nui-data-label {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  .nui-data-description {
+    margin: 0.25rem 0 0;
+    color: var(--nui-muted-foreground);
+    overflow-wrap: anywhere;
+  }
+  .nui-data-value,
+  .nui-bar-list-value {
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+  }
+  .nui-data-value {
+    color: var(--nui-data-text);
+  }
+  :where(.nui-bar-list-fill, .nui-delta-fill, .nui-data-value)[data-tone="primary"] {
+    --nui-data-solid: var(--nui-primary);
+    --nui-data-soft: var(--nui-primary-soft);
+    --nui-data-text: var(--nui-primary-text);
+  }
+  :where(.nui-bar-list-fill, .nui-delta-fill, .nui-data-value)[data-tone="neutral"] {
+    --nui-data-solid: var(--nui-neutral);
+    --nui-data-soft: var(--nui-neutral-soft);
+    --nui-data-text: var(--nui-neutral-text);
+  }
+  :where(.nui-bar-list-fill, .nui-delta-fill, .nui-data-value)[data-tone="success"] {
+    --nui-data-solid: var(--nui-success);
+    --nui-data-soft: var(--nui-success-soft);
+    --nui-data-text: var(--nui-success-text);
+  }
+  :where(.nui-bar-list-fill, .nui-delta-fill, .nui-data-value)[data-tone="warning"] {
+    --nui-data-solid: var(--nui-warning);
+    --nui-data-soft: var(--nui-warning-soft);
+    --nui-data-text: var(--nui-warning-text);
+  }
+  :where(.nui-bar-list-fill, .nui-delta-fill, .nui-data-value)[data-tone="danger"] {
+    --nui-data-solid: var(--nui-danger);
+    --nui-data-soft: var(--nui-danger-soft);
+    --nui-data-text: var(--nui-danger-text);
+  }
+  :where(.nui-bar-list-fill, .nui-delta-fill, .nui-data-value)[data-tone="info"] {
+    --nui-data-solid: var(--nui-info);
+    --nui-data-soft: var(--nui-info-soft);
+    --nui-data-text: var(--nui-info-text);
+  }
+}

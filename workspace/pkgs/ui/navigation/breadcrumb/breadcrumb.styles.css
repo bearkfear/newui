@@ -1,0 +1,4 @@
+@import "../../styles/foundations.css";
+@import "./breadcrumb.css";
+
+@source "./breadcrumb.recipe.ts";

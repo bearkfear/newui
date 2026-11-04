@@ -6,7 +6,9 @@
   "include": [
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
+    "scripts/**/*.ts",
     "../../pkgs/ui/**/*.stories.tsx",
+    "../../pkgs/ui/**/stories/**/*.d.ts",
     "playwright.config.ts",
     "tests/**/*.ts"
   ],

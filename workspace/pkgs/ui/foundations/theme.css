@@ -1,0 +1,136 @@
+/* Shared by the prefixed components and the optional application preset. */
+@theme inline {
+  --default-font-family: var(--nui-font-sans);
+  --default-mono-font-family: var(--nui-font-mono);
+  --text-xs: var(--nui-font-size-xs);
+  --text-sm: var(--nui-font-size-sm);
+  --text-base: var(--nui-font-size-base);
+  --text-lg: var(--nui-font-size-lg);
+  --text-xl: var(--nui-font-size-xl);
+  --text-2xl: var(--nui-font-size-2xl);
+  --text-3xl: var(--nui-font-size-3xl);
+  --text-4xl: var(--nui-font-size-4xl);
+  --text-5xl: var(--nui-font-size-5xl);
+  --text-display-sm: var(--nui-font-size-display-sm);
+  --text-display-md: var(--nui-font-size-display-md);
+  --spacing: var(--nui-space-unit);
+  --default-transition-duration: var(--nui-motion-duration);
+  --default-transition-timing-function: var(--nui-motion-easing);
+  --font-sans: var(--nui-font-sans);
+  --font-mono: var(--nui-font-mono);
+  --font-weight-normal: var(--nui-font-weight-normal);
+  --font-weight-medium: var(--nui-font-weight-medium);
+  --font-weight-semibold: var(--nui-font-weight-semibold);
+  --leading-tight: var(--nui-leading-tight);
+  --leading-snug: var(--nui-leading-snug);
+  --leading-normal: var(--nui-leading-normal);
+  --leading-relaxed: var(--nui-leading-relaxed);
+  --tracking-tight: var(--nui-tracking-tight);
+  --radius-xs: var(--nui-radius-xs);
+  --radius-sm: var(--nui-radius-sm);
+  --radius-md: var(--nui-radius-md);
+  --radius-lg: var(--nui-radius-lg);
+  --radius-xl: var(--nui-radius-xl);
+  --radius-2xl: var(--nui-radius-2xl);
+  --radius-3xl: var(--nui-radius-3xl);
+  --radius-4xl: var(--nui-radius-4xl);
+  --color-background: var(--nui-background);
+  --color-focus-ring: var(--nui-focus-ring);
+  --color-muted: var(--nui-muted);
+  --color-foreground: var(--nui-foreground);
+  --color-muted-foreground: var(--nui-muted-foreground);
+  --color-surface: var(--nui-surface);
+  --color-border: var(--nui-border);
+  --color-control-border: var(--nui-control-border);
+  --color-control-border-hover: var(--nui-control-border-hover);
+  --color-disabled-background: var(--nui-disabled-background);
+  --color-disabled-foreground: var(--nui-disabled-foreground);
+  --color-disabled-border: var(--nui-disabled-border);
+  --color-primary: var(--nui-primary);
+  --color-primary-hover: var(--nui-primary-hover);
+  --color-primary-soft: var(--nui-primary-soft);
+  --color-primary-soft-hover: var(--nui-primary-soft-hover);
+  --color-primary-soft-active: var(--nui-primary-soft-active);
+  --color-primary-border: var(--nui-primary-border);
+  --color-primary-border-hover: var(--nui-primary-border-hover);
+  --color-primary-text: var(--nui-primary-text);
+  --color-primary-text-strong: var(--nui-primary-text-strong);
+  --color-primary-focus: var(--nui-primary-focus);
+  --color-on-primary: var(--nui-on-primary);
+  --color-neutral: var(--nui-neutral);
+  --color-neutral-hover: var(--nui-neutral-hover);
+  --color-neutral-soft: var(--nui-neutral-soft);
+  --color-neutral-soft-hover: var(--nui-neutral-soft-hover);
+  --color-neutral-soft-active: var(--nui-neutral-soft-active);
+  --color-neutral-border: var(--nui-neutral-border);
+  --color-neutral-border-hover: var(--nui-neutral-border-hover);
+  --color-neutral-text: var(--nui-neutral-text);
+  --color-neutral-text-strong: var(--nui-neutral-text-strong);
+  --color-neutral-focus: var(--nui-neutral-focus);
+  --color-on-neutral: var(--nui-on-neutral);
+  --color-info: var(--nui-info);
+  --color-info-hover: var(--nui-info-hover);
+  --color-info-soft: var(--nui-info-soft);
+  --color-info-soft-hover: var(--nui-info-soft-hover);
+  --color-info-soft-active: var(--nui-info-soft-active);
+  --color-info-border: var(--nui-info-border);
+  --color-info-border-hover: var(--nui-info-border-hover);
+  --color-info-text: var(--nui-info-text);
+  --color-info-text-strong: var(--nui-info-text-strong);
+  --color-info-focus: var(--nui-info-focus);
+  --color-on-info: var(--nui-on-info);
+  --color-success: var(--nui-success);
+  --color-success-hover: var(--nui-success-hover);
+  --color-success-soft: var(--nui-success-soft);
+  --color-success-soft-hover: var(--nui-success-soft-hover);
+  --color-success-soft-active: var(--nui-success-soft-active);
+  --color-success-border: var(--nui-success-border);
+  --color-success-border-hover: var(--nui-success-border-hover);
+  --color-success-text: var(--nui-success-text);
+  --color-success-text-strong: var(--nui-success-text-strong);
+  --color-success-focus: var(--nui-success-focus);
+  --color-on-success: var(--nui-on-success);
+  --color-warning: var(--nui-warning);
+  --color-warning-hover: var(--nui-warning-hover);
+  --color-warning-soft: var(--nui-warning-soft);
+  --color-warning-soft-hover: var(--nui-warning-soft-hover);
+  --color-warning-soft-active: var(--nui-warning-soft-active);
+  --color-warning-border: var(--nui-warning-border);
+  --color-warning-border-hover: var(--nui-warning-border-hover);
+  --color-warning-text: var(--nui-warning-text);
+  --color-warning-text-strong: var(--nui-warning-text-strong);
+  --color-warning-focus: var(--nui-warning-focus);
+  --color-on-warning: var(--nui-on-warning);
+  --color-danger: var(--nui-danger);
+  --color-danger-hover: var(--nui-danger-hover);
+  --color-danger-soft: var(--nui-danger-soft);
+  --color-danger-soft-hover: var(--nui-danger-soft-hover);
+  --color-danger-soft-active: var(--nui-danger-soft-active);
+  --color-danger-border: var(--nui-danger-border);
+  --color-danger-border-hover: var(--nui-danger-border-hover);
+  --color-danger-text: var(--nui-danger-text);
+  --color-danger-text-strong: var(--nui-danger-text-strong);
+  --color-danger-focus: var(--nui-danger-focus);
+  --color-on-danger: var(--nui-on-danger);
+  --shadow-elevated: var(--nui-elevated-shadow);
+  --shadow-overlay: var(--nui-overlay-shadow);
+  --shadow-popover: var(--nui-popover-shadow);
+  --shadow-tooltip: var(--nui-tooltip-shadow);
+  --shadow-hover-card: var(--nui-hover-card-shadow);
+  --shadow-toast: var(--nui-toast-shadow);
+  --ease-ui: var(--nui-motion-easing);
+}
+
+@custom-variant motion-reduce {
+  @media (prefers-reduced-motion: reduce) {
+    @slot;
+  }
+  &:where([data-motion="reduced"], [data-motion="reduced"] *) {
+    @slot;
+  }
+}
+
+@utility focus-ring {
+  outline: var(--nui-focus-width) solid var(--nui-focus-ring);
+  outline-offset: var(--nui-focus-offset);
+}

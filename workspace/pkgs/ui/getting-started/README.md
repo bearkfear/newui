@@ -22,6 +22,14 @@ Run `bun run typecheck` to check the source, stories, and configuration. Run `bu
 
 The initial distribution will be an installable package with compiled CSS, global Preflight, and `nui`-prefixed utilities. Consumers import components and `newui/styles.css`; Tailwind is a development dependency of the library. The library package manifest in `workspace/pkgs/ui/` is currently named `newui`, with publishing disabled. Registry name availability and publishing details remain unverified. See [style distribution](../../../../conventions/style-distribution.md).
 
+[Package entries](package-entries.md) documents the implemented main and area imports, public types, shared build chunks, and current CSS contract. Review the examples in **Getting started / Package consumption**.
+
+[Consumer bundle measurements](bundle-sizes.md) records reproducible main/area comparisons, dependency elimination, shared Button bindings, and the separate full-stylesheet cost. Run `bun run --cwd pkgs/ui measure:bundles` after building.
+
+[Source stylesheet graph](../styles/README.md) records internal component/area composition and deduplication. Review **Getting started / Modular styles** in isolated documents, and run `bun run --cwd pkgs/ui measure:styles` for CSS measurements.
+
+[Tailwind integration](tailwind.md) documents public area selections, PostCSS setup, and the optional shared-token preset. [Runtime customization](theme-customization.md) covers palettes, geometry, appearance, and token ownership. Review **Getting started / Tailwind preset**, or run `bun run build` and `bun run dev:consumer` for the standalone playground.
+
 ## Planned consumer documentation
 
 - What the library is, its goals, and the problems it aims to solve.

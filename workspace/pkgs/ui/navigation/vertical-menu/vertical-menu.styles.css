@@ -1,0 +1,5 @@
+@import "../../styles/foundations.css";
+@import "../navigation-link.styles.css";
+@import "../../content/heading/heading.styles.css";
+
+@source "./vertical-menu.recipe.ts";

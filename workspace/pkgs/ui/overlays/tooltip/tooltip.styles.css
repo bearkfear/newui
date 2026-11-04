@@ -1,0 +1,4 @@
+@import "../../styles/foundations.css";
+@import "./tooltip.css";
+
+@source "./tooltip.recipe.ts";

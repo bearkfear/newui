@@ -1,0 +1,4 @@
+@import "../../styles/foundations.css";
+@import "./progress.css";
+
+@source "./progress.recipe.ts";

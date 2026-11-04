@@ -1,7 +1,7 @@
 import type { UseSplitterContext } from "@ark-ui/solid/splitter";
 import { createMediaQuery } from "@solid-primitives/media";
 import { createEffect, createSignal, createUniqueId, on, untrack } from "solid-js";
-import type { SidebarRootProps } from "./sidebar";
+import type { SidebarRootProps } from "./sidebar.types";
 
 export function useSidebarState(props: SidebarRootProps) {
   const desktop = createMediaQuery("(min-width: 48rem)");

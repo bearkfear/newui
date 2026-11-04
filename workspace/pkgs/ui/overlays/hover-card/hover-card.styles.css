@@ -1,0 +1,4 @@
+@import "../../styles/foundations.css";
+@import "./hover-card.css";
+
+@source "./hover-card.recipe.ts";

@@ -28,9 +28,27 @@
         "@tailwindcss/postcss": "4.3.3",
         "@types/node": "26.6.5",
         "@types/react": "19.3.0",
+        "esbuild": "0.28.2",
+        "postcss": "8.5.31",
         "react": "19.3.1",
         "storybook": "10.6.1",
         "storybook-solidjs-vite": "10.7.2",
+        "typescript": "5.9.3",
+        "vite": "7.3.5",
+        "vite-plugin-solid": "2.11.14",
+      },
+    },
+    "apps/tailwind-playground": {
+      "name": "@newui/tailwind-playground",
+      "version": "0.0.0",
+      "dependencies": {
+        "newui": "workspace:*",
+        "solid-js": "1.9.17",
+      },
+      "devDependencies": {
+        "@tailwindcss/postcss": "4.3.3",
+        "postcss": "8.5.31",
+        "tailwindcss": "4.3.3",
         "typescript": "5.9.3",
         "vite": "7.3.5",
         "vite-plugin-solid": "2.11.14",
@@ -61,8 +79,16 @@
         "typescript": "5.9.3",
       },
       "peerDependencies": {
+        "@tailwindcss/postcss": "^4.3.3",
+        "postcss": "^8.5.0",
         "solid-js": "^1.9.0",
+        "tailwindcss": "^4.3.3",
       },
+      "optionalPeers": [
+        "@tailwindcss/postcss",
+        "postcss",
+        "tailwindcss",
+      ],
     },
   },
   "patchedDependencies": {
@@ -263,6 +289,8 @@
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.2.5", "", { "dependencies": { "@tybys/wasm-util": "^0.10.3" }, "peerDependencies": { "@emnapi/core": "^1.7.1 || ^2.0.0-alpha.4", "@emnapi/runtime": "^1.7.1 || ^2.0.0-alpha.4" } }, "sha512-HshSvXzmBxNzqejd3k/KemgQ3hdREUYFRRrgxOZ+gPljDIsO2SDZrVZMd4Z/HsxudQbE62OVyVFE8z9BCurfjA=="],
 
     "@newui/storybook": ["@newui/storybook@workspace:apps/storybook"],
+
+    "@newui/tailwind-playground": ["@newui/tailwind-playground@workspace:apps/tailwind-playground"],
 
     "@oxc-parser/binding-android-arm-eabi": ["@oxc-parser/binding-android-arm-eabi@0.127.0", "", { "os": "android", "cpu": "arm" }, "sha512-0LC7ye4hvqbIKxAzThzvswgHLFu2AURKzYLeSVvLdu2TBOYWQDmHnTqPLeA597BcUCxiLqLsS4CJ5uoI5WYWCQ=="],
 
