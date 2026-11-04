@@ -1,6 +1,6 @@
 # Publishing experimental releases
 
-The first release is `@egcs/newui@0.1.0-alpha.0`, with npm tag `next` and public access. Forms is incomplete and the unpatched external Zag focus-visible dependency is an accepted alpha limitation. Neither blocks this release. See the packaged [changelog](pkgs/ui/CHANGELOG.md).
+`@egcs/newui@0.1.0-alpha.0` was published publicly through the interactive bootstrap. `0.1.0-alpha.1` validates the GitHub OIDC publishing path on `next`. Forms is incomplete and the unpatched external Zag focus-visible dependency is an accepted alpha limitation. See the packaged [changelog](pkgs/ui/CHANGELOG.md).
 
 ## Prepare a version
 
@@ -22,7 +22,7 @@ For the initial alpha, the tarball was also installed with npm into a separate c
 
 ## Bootstrap the first package
 
-The package does not yet exist on npm, so there is no package settings page on which to register its trusted publisher. The first publish uses the maintainer's interactive npm login and account 2FA. Never put login credentials or a permanent publish token into GitHub secrets or this repository.
+The bootstrap is already complete for `@egcs/newui`; do not repeat it for an existing version. A new package must first be created with the maintainer's interactive npm login and account 2FA before configuring its package-level trusted publisher. Never put login credentials or a permanent publish token into GitHub secrets or this repository.
 
 After merging the release PR, rebuild and pack the exact merged code, then run from `workspace/`:
 
@@ -35,7 +35,7 @@ The npm package belongs to the `egcs` organization; the GitHub repository remain
 
 ## Configure trusted publishing on npm
 
-After the bootstrap, open **@egcs/newui → Settings → Trusted publishing** on npmjs.com. Add GitHub Actions with:
+The GitHub trusted publisher was registered on November 4, 2026. To inspect or recreate it, open **@egcs/newui → Settings → Trusted publishing** on npmjs.com. Its GitHub Actions configuration is:
 
 | Field                | Value                                       |
 | -------------------- | ------------------------------------------- |
@@ -53,4 +53,4 @@ Once the trusted publisher is configured, merging a UI `package.json` change int
 
 For a retry after fixing npm configuration, open **GitHub → Actions → Publish alpha → Run workflow**, choose **main**, and run it. The workflow accepts no package/version inputs, runs only on `main`, grants OIDC only to the publishing job, and never runs on pull requests. Its actions are already in the repository allowlist.
 
-Verify with `npm view @egcs/newui@next version --registry=https://registry.npmjs.org`, then install with `bun add @egcs/newui@next solid-js`. Keep `latest` reserved for a later release decision. This workflow does not create a GitHub Release or automatically increment versions.
+Verify with `npm view @egcs/newui@next version --registry=https://registry.npmjs.org`, then install with `bun add @egcs/newui@next solid-js`. The bootstrap also assigned `latest` to `0.1.0-alpha.0`; the registry rejected removing that tag. Use `next` explicitly for current experimental releases. This workflow does not create a GitHub Release or automatically increment versions.
