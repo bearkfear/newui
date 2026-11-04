@@ -14,7 +14,13 @@ Composable components, a shared visual language, and room to make it yours.
 
 newui is a UI library for SolidJS, bringing everyday controls, layout primitives, and page compositions into one cohesive system. It gives typography, spacing, color, and interaction a shared language so the pieces feel at home together.
 
-The project is in active development. You can explore the components locally in Storybook; the package is not yet published, and APIs may change as the library takes shape.
+The experimental package is available as [@egcs/newui](https://www.npmjs.com/package/@egcs/newui). APIs may change, Forms is incomplete, and the known focus-visible issue remains documented in the [package changelog](workspace/pkgs/ui/CHANGELOG.md).
+
+```sh
+bun add @egcs/newui@next solid-js
+```
+
+See the [package guide](workspace/pkgs/ui/README.md) for component imports, compiled CSS, Tailwind integration, and runtime customization.
 
 ## Built with care
 

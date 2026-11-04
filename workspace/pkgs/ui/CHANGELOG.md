@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0-alpha.1
+
+Release automation validation: publish through the authorized GitHub Actions OIDC workflow on the `next` tag. Component code and APIs are unchanged from `0.1.0-alpha.0`; incomplete Forms and the known focus-visible limitation still apply.
+
 ## 0.1.0-alpha.0
 
 Initial experimental release, distributed through the `next` tag.
