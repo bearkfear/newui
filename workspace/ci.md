@@ -1,6 +1,6 @@
 # Continuous integration
 
-The GitHub workflow is [CI](../.github/workflows/ci.yml). It runs on pull requests, pushes to `main`, and manual dispatch. One GitHub-hosted Ubuntu job builds the library, runs Biome and strict TypeScript checks, builds the standalone Tailwind consumer and Storybook, then packages the library. There is no browser matrix or new component test suite.
+The GitHub workflow is [CI](../.github/workflows/ci.yml). It runs on pull requests, pushes to `main`, and manual dispatch. One GitHub-hosted Ubuntu job builds the library, runs Biome and strict TypeScript checks, builds Storybook, then packages the library. Storybook includes the isolated Tailwind preset example; there is no separate consumer application, browser matrix, or new component test suite.
 
 ## Reproduce locally
 
@@ -10,12 +10,11 @@ Use Node from `.node-version` and Bun from `packageManager` in `package.json`. R
 bun install --frozen-lockfile --ignore-scripts
 bun run build
 bun run check
-bun run build:consumer
 bun run build:storybook
 bun run pack
 ```
 
-Build first: the consumer resolves public declarations from the generated package. Ignoring install scripts skips the local Git hook installer in CI; developers can run `bun run hooks:install` locally.
+Build first: examples importing the public package resolve declarations from the generated build. Ignoring install scripts skips the local Git hook installer in CI; developers can run `bun run hooks:install` locally.
 
 `bun run pack` verifies that all public export targets and release documents exist inside the generated archive. Successful CI uploads `newui-package`, containing `newui-preview.tgz`, for seven days. Artifacts from pull requests are untrusted review material. This check does not establish clean registry installation or browser behavior. The initial alpha accepts the known Zag issue and incomplete Forms; see [publishing](publishing.md) and the [roadmap](roadmap.md).
 

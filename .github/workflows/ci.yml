@@ -47,9 +47,6 @@ jobs:
       - name: Check lint, formatting and types
         run: bun run check
 
-      - name: Build consumer application
-        run: bun run build:consumer
-
       - name: Build Storybook
         run: bun run build:storybook
 

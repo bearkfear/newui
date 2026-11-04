@@ -51,4 +51,4 @@ Use plain imports in the entry stylesheet. Vite's CSS import pipeline is support
 
 ## Review
 
-Run `bun run build`, then `bun run dev:consumer` from `workspace/`. The [Tailwind playground](../../../apps/tailwind-playground/README.md) runs at `http://127.0.0.1:4174`. Storybook **Getting started / Tailwind preset** embeds the same example in an isolated document. No new automated tests were added.
+Run `bun run dev` from `workspace/` and open **Getting started / Tailwind preset** in Storybook. The example compiles selected library areas and application utilities in an isolated document, with interactive palette, spacing, radius, and appearance controls. No new automated tests were added.

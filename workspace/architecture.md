@@ -40,4 +40,4 @@ Migrate by behavior and anatomy rather than replacing import names. Check DOM re
 
 Dependency compatibility and package consumption are tracked in [Getting started](pkgs/ui/getting-started/README.md); chart and table dependencies are tracked in [Data](pkgs/ui/data/README.md).
 
-The optional [Tailwind integration](pkgs/ui/getting-started/tailwind.md) compiles selected prefixed library styles before the application's unprefixed Tailwind pass. Its preset shares public tokens with application utilities. The [consumer playground](apps/tailwind-playground/README.md) demonstrates runtime customization through public package entries.
+The optional [Tailwind integration](pkgs/ui/getting-started/tailwind.md) compiles selected prefixed library styles before the application's unprefixed Tailwind pass. Its preset shares public tokens with application utilities. Storybook's isolated **Getting started / Tailwind preset** examples demonstrate runtime customization through public package entries.

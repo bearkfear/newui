@@ -28,7 +28,7 @@ The experimental distribution is `@egcs/newui`, with compiled CSS, global Prefli
 
 [Source stylesheet graph](../styles/README.md) records internal component/area composition and deduplication. Review **Getting started / Modular styles** in isolated documents, and run `bun run --cwd pkgs/ui measure:styles` for CSS measurements.
 
-[Tailwind integration](tailwind.md) documents public area selections, PostCSS setup, and the optional shared-token preset. [Runtime customization](theme-customization.md) covers palettes, geometry, appearance, and token ownership. Review **Getting started / Tailwind preset**, or run `bun run build` and `bun run dev:consumer` for the standalone playground.
+[Tailwind integration](tailwind.md) documents public area selections, PostCSS setup, and the optional shared-token preset. [Runtime customization](theme-customization.md) covers palettes, geometry, appearance, and token ownership. Review **Getting started / Tailwind preset** in Storybook for the isolated interactive example.
 
 ## Planned consumer documentation
 

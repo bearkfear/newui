@@ -1,9 +1,9 @@
 import { createEffect, createSignal } from "solid-js";
-import { Preview } from "./Preview";
+import { Preview } from "./preview";
 import { type Palette, primaryTheme, themeMode } from "./primary-theme";
-import { ThemeControls } from "./ThemeControls";
+import { ThemeControls } from "./theme-controls";
 
-export function App(props: { theme?: string } = {}) {
+export function TailwindPresetDemo(props: { theme?: string } = {}) {
   const [palette, setPalette] = createSignal<Palette>("blue");
   const [theme, setTheme] = createSignal(themeMode(props.theme));
   const [spacing, setSpacing] = createSignal(4);

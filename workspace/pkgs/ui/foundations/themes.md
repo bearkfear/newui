@@ -45,4 +45,4 @@ Storybook's system option exercises the public CSS contract directly. Its manage
 
 Application-specific theme persistence and user preference storage remain the consuming application's responsibility.
 
-The optional [Tailwind preset](../getting-started/tailwind.md) maps application utilities to the same tokens. [Runtime customization](../getting-started/theme-customization.md) and the consumer playground demonstrate changing palette roles, spacing, radius, and appearance without regenerating source palettes.
+The optional [Tailwind preset](../getting-started/tailwind.md) maps application utilities to the same tokens. [Runtime customization](../getting-started/theme-customization.md) and the isolated Storybook preset example demonstrate changing palette roles, spacing, radius, and appearance without regenerating source palettes.
