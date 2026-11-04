@@ -1,26 +1,92 @@
-# newui UI package
+# newui
 
-[Workspace](../../README.md)
+Composable components for **SolidJS**, with shared spacing, typography, Radix color tokens, automatic light/dark themes, and optional Tailwind integration.
 
-The publishable library lives here. Components, recipes, contracts, examples, and stories stay together in their owning area. Only selected build artifacts are included in the npm package.
+**Experimental alpha:** APIs may change. Forms currently includes Field, Input, Textarea, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
 
-Use the main `newui` entry or named [area entries](getting-started/package-entries.md), such as `newui/actions` and `newui/forms`. Charts remain in `newui/charts`. All entries use the shared `newui/styles.css` stylesheet.
+## Install
 
-## Areas
+```sh
+bun add newui@next solid-js
+```
 
-- [Getting started](getting-started/README.md): development and future consumer documentation.
-- [Foundations](foundations/README.md): tokens, themes, typography, and shared visual rules.
-- [Layout](layout/README.md): space, alignment, and sizing.
-- [Content](content/README.md): text, identity, and information presentation.
-- [Actions](actions/README.md): command execution.
-- [Forms](forms/README.md): input, selection, editing, and optional masking.
-- [Navigation](navigation/README.md): paths between pages and sections.
-- [Overlays](overlays/README.md): content presented over the interface.
-- [Feedback](feedback/README.md): states, results, and progress.
-- [Data](data/README.md): structured information and visualizations.
-- [Compositions](compositions/README.md): combinations for complete interface scenarios.
-- [Utilities](utilities/README.md): reusable formatting and other supporting functions.
+Use npm, pnpm, or Yarn if preferred. Configure your application for SolidJS, for example with Vite and `vite-plugin-solid`.
 
-The implemented catalog includes Button and ButtonGroup, DropdownMenu and ContextMenu, layout and typography primitives, content components including Timeline, navigation including Steps, overlays, feedback, native Table, and the Hero, Footer, MediaObject, Panel, and ActionBar compositions. These deliveries have been validated by the user and include colocated Storybook examples. Area documentation and the [roadmap](../../roadmap.md) distinguish implemented resources from future work. Forms remain deferred. Public APIs for future utilities have not been defined. Keep utilities in this package initially; extract a separate package only when actual reuse justifies it.
+## Start with compiled CSS
 
-Run the coordinating commands from `workspace/`. This package owns its build script and TypeScript configuration and generates its distribution in `dist/`. The private flag stays enabled until publication is ready.
+Import the stylesheet once from your application entry:
+
+```tsx
+import "newui/styles.css";
+```
+
+Import components from the area you use:
+
+```tsx
+import { Button } from "newui/actions";
+import { Field, Input } from "newui/forms";
+
+export function ProjectForm() {
+  return (
+    <form>
+      <Field.Root>
+        <Field.Label>Project name</Field.Label>
+        <Input name="project" required />
+      </Field.Root>
+      <Button type="submit">Create project</Button>
+    </form>
+  );
+}
+```
+
+The main `newui` entry also works. Area entries include `actions`, `forms`, `content`, `layout`, `navigation`, `overlays`, `feedback`, `data`, `charts`, and `compositions`. Entries share internal modules; bundle elimination depends on your bundler. CSS selection is configured separately.
+
+The complete stylesheet includes Tailwind Preflight, which resets the whole page. Tailwind is not required for this mode.
+
+## Use your application's Tailwind
+
+Install Tailwind 4.3.3+, `@tailwindcss/postcss`, and PostCSS 8.5+ as development dependencies. Configure `postcss.config.mjs`:
+
+```js
+import newui from "newui/postcss";
+import tailwind from "@tailwindcss/postcss";
+
+export default { plugins: [newui(), tailwind()] };
+```
+
+Use an application entry stylesheet instead of the complete `newui/styles.css`:
+
+```css
+@import "tailwindcss";
+@import "newui/tailwind/preset.css";
+@import "newui/tailwind/actions.css";
+@import "newui/tailwind/forms.css";
+```
+
+Import this application stylesheet once. Areas bring their style dependencies, including foundations, and shared dependencies are compiled once. The optional preset maps application utilities such as `p-4`, `rounded-md`, and `bg-primary` to newui tokens. Omit it to keep your application's theme. The application owns Preflight in this mode.
+
+See the [Tailwind integration guide](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/getting-started/tailwind.md) for supported pipelines and area selections.
+
+## Customize at runtime
+
+```css
+:root {
+  --nui-space-unit: 0.25rem;
+  --nui-radius-md: 0.75rem;
+  --nui-font-sans: system-ui, sans-serif;
+}
+```
+
+Automatic system appearance uses CSS `color-scheme` and `light-dark()`. Set `data-nui-theme="light"`, `"dark"`, or `"system"` on the document or a nested scope. Tokens can also be updated with `style.setProperty()` without rebuilding. Custom palettes need complete semantic role mappings; see [theme customization](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/getting-started/theme-customization.md).
+
+## Known limitations
+
+- Forms is incomplete, APIs are experimental, and SSR/hydration has not been validated for this release.
+- Ark currently resolves `@zag-js/focus-visible@1.45.0`, which can leave `HTMLElement.prototype.focus` read-only and conflict with other focus wrappers. The development workspace patch is **not shipped to consumers**. This is an accepted alpha limitation; see the [changelog](CHANGELOG.md) and [patch audit](https://github.com/bearkfear/newui/blob/main/workspace/patches/README.md).
+- Browser support requires modern CSS including `light-dark()` (Baseline 2024). Runtime theme editing, persistence, and custom palette generation belong to the application.
+
+## Development and license
+
+See the [workspace guide](https://github.com/bearkfear/newui/blob/main/workspace/README.md) for Storybook, the consumer playground, checks, and builds. The [roadmap](https://github.com/bearkfear/newui/blob/main/workspace/roadmap.md) tracks remaining work.
+
+MIT. Distributed Radix Colors and Lucide notices are retained in `dist/`; dependencies retain their own licenses.

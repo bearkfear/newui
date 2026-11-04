@@ -1,0 +1,71 @@
+name: Publish alpha
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [workspace/pkgs/ui/package.json]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: npm-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish next from main
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+    defaults:
+      run:
+        working-directory: workspace
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: workspace/.node-version
+          package-manager-cache: false
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@ecf28ddc73e819eb6fa29df6b34ef8921c743461 # v2.1.3
+        with:
+          bun-version-file: workspace/package.json
+
+      - name: Check whether this version needs publishing
+        id: release
+        run: bun scripts/ci/release-status.ts
+
+      - name: Install locked dependencies
+        if: steps.release.outputs.publish == 'true'
+        run: bun install --frozen-lockfile --ignore-scripts
+
+      - name: Build library
+        if: steps.release.outputs.publish == 'true'
+        run: bun run build
+
+      - name: Check lint, formatting and types
+        if: steps.release.outputs.publish == 'true'
+        run: bun run check
+
+      - name: Build consumer and Storybook
+        if: steps.release.outputs.publish == 'true'
+        run: bun run build:consumer && bun run build:storybook
+
+      - name: Pack library and verify public exports
+        if: steps.release.outputs.publish == 'true'
+        run: bun run pack
+
+      - name: Publish experimental package through npm OIDC
+        if: steps.release.outputs.publish == 'true'
+        run: npm publish ./artifacts/newui-preview.tgz --access public --tag next --ignore-scripts --registry=https://registry.npmjs.org

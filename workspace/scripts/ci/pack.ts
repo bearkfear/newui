@@ -13,6 +13,9 @@ const packing = Bun.spawn(
 if ((await packing.exited) !== 0) throw new Error("Library packaging failed.");
 
 const entries = new Set(execFileSync("tar", ["-tzf", output], { encoding: "utf8" }).split("\n"));
+for (const file of ["README.md", "LICENSE", "CHANGELOG.md"]) {
+  if (!entries.has(`package/${file}`)) throw new Error(`Missing packed documentation: ${file}`);
+}
 const manifest: { exports: Record<string, unknown> } = JSON.parse(
   execFileSync("tar", ["-xOf", output, "package/package.json"], { encoding: "utf8" }),
 );
