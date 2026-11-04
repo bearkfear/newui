@@ -3,8 +3,8 @@
 Grouped and nested page navigation with native links and optional Ark Collapsible branches.
 
 ```tsx
-import { VerticalMenu } from "newui";
-import "newui/styles.css";
+import { VerticalMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <VerticalMenu.Root aria-label="Workspace">
   <VerticalMenu.Group>

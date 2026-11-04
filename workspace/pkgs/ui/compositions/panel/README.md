@@ -11,7 +11,7 @@ See Storybook's Solid Header Tones and Solid Headers Dark examples. The user app
 A compact section for search, filters, lists, free-form content, and related actions.
 
 ```tsx
-import { Panel } from "newui";
+import { Panel } from "@egcs/newui";
 
 <Panel.Root aria-labelledby="projects-title">
   <Panel.Header>
@@ -36,7 +36,7 @@ Filtering, current destinations, empty states, loading, and application state be
 
 Root and parts forward native attributes, events, styles, refs, and additive classes. Surface and interaction colors follow existing Radix semantic tokens.
 
-Import `newui/styles.css` once. Review Compositions / Panel and Overview before authorizing new tests.
+Import `@egcs/newui/styles.css` once. Review Compositions / Panel and Overview before authorizing new tests.
 
 ## Record lists
 

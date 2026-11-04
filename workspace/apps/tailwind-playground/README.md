@@ -2,7 +2,7 @@
 
 [Workspace](../../README.md) · [Consumer setup](../../pkgs/ui/getting-started/tailwind.md)
 
-This Solid/Vite application consumes the built `newui` package through public JavaScript, CSS, and PostCSS exports. It uses unprefixed application utilities beside `nui:` library utilities, one application Preflight, selected Actions/Forms styles, and the optional shared-token preset.
+This Solid/Vite application consumes the built `@egcs/newui` package through public JavaScript, CSS, and PostCSS exports. It uses unprefixed application utilities beside `nui:` library utilities, one application Preflight, selected Actions/Forms styles, and the optional shared-token preset.
 
 From `workspace/`:
 
@@ -22,7 +22,7 @@ Open `http://127.0.0.1:4174`. `bun run build:consumer` generates the production 
 - Press both buttons and use the field action. They share the visible press count.
 - Review a 320px viewport and keyboard focus. The application controls are native HTML, while Field/InputGroup use newui's existing associations and behavior.
 
-The same UI appears in Storybook under **Getting started / Tailwind preset**, with source aliases and an isolated stylesheet. The standalone app uses built package entries. Neither example loads `newui/styles.css` alongside the modular integration.
+The same UI appears in Storybook under **Getting started / Tailwind preset**, with source aliases and an isolated stylesheet. The standalone app uses built package entries. Neither example loads `@egcs/newui/styles.css` alongside the modular integration.
 
 ## Packaging validation
 

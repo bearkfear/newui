@@ -3,8 +3,8 @@
 An application sidebar that composes the existing Resizable (Ark Splitter), Sheet (Ark Dialog), and native VerticalMenu navigation. No new dependency or custom pointer/keyboard state machine is introduced. Ark Splitter owns desktop resizing and collapse/expand, including the compact icon rail. Ark Dialog owns mobile focus containment/restoration, dismissal, scroll locking, and accessible associations. Optional navigation branches retain Ark Collapsible behavior.
 
 ```tsx
-import { Sidebar, VerticalMenu } from "newui";
-import "newui/styles.css";
+import { Sidebar, VerticalMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Sidebar.Root resizable style={{ height: "40rem" }}>
   <Sidebar.Panel aria-label="Workspace sidebar">

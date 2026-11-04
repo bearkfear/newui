@@ -24,8 +24,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { Resizable } from "newui";
-import "newui/styles.css";
+        code: `import { Resizable } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Resizable.Root
   panels={[{ id: "navigation", minSize: 20 }, { id: "content", minSize: 25 }]}

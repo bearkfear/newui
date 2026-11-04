@@ -17,8 +17,8 @@ Size 1 is the largest. Sizes use rem units and remain consistent across viewport
 | `"7"` | 0.75rem   | 12px           |
 
 ```tsx
-import { Text } from "newui";
-import "newui/styles.css";
+import { Text } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Text size="5" tone="muted">
   Everything you need in one place.

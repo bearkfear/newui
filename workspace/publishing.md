@@ -1,6 +1,6 @@
 # Publishing experimental releases
 
-The first release is `newui@0.1.0-alpha.0`, with npm tag `next` and public access. Forms is incomplete and the unpatched external Zag focus-visible dependency is an accepted alpha limitation. Neither blocks this release. See the packaged [changelog](pkgs/ui/CHANGELOG.md).
+The first release is `@egcs/newui@0.1.0-alpha.0`, with npm tag `next` and public access. Forms is incomplete and the unpatched external Zag focus-visible dependency is an accepted alpha limitation. Neither blocks this release. See the packaged [changelog](pkgs/ui/CHANGELOG.md).
 
 ## Prepare a version
 
@@ -18,7 +18,7 @@ npm publish ./artifacts/newui-preview.tgz --dry-run --access public --tag next -
 
 Review the package file list, README, license, changelog, version, public exports, and dependency graph. CI also builds Storybook and the standalone application. The workspace patch is not propagated to installed packages, and the alpha does not claim full browser or SSR validation.
 
-For the initial alpha, the tarball was also installed with npm into a separate consumer without workspace patches or overrides. A Solid/Vite production build importing Actions, Forms, and the complete stylesheet passed. This verifies installation and bundling, not the known runtime focus issue.
+For the initial alpha, the tarball was also installed with npm into a separate consumer without workspace patches or overrides. A Solid/Vite build verified Actions, Forms, and the complete stylesheet. After adopting `@egcs/newui`, another clean consumer build verified the scoped imports, PostCSS plugin, modular Actions/Forms styles, and optional preset. This verifies installation and bundling, not the known runtime focus issue.
 
 ## Bootstrap the first package
 
@@ -31,11 +31,11 @@ npm login --registry=https://registry.npmjs.org
 npm publish ./artifacts/newui-preview.tgz --access public --tag next --ignore-scripts --registry=https://registry.npmjs.org
 ```
 
-The registry makes the final decision on name availability. If `newui` is rejected, choose another name and update package imports before retrying. A local bootstrap publish has no GitHub provenance attestation; later GitHub OIDC publishes generate it automatically.
+The npm package belongs to the `egcs` organization; the GitHub repository remains `bearkfear/newui`. A local bootstrap publish has no GitHub provenance attestation; later GitHub OIDC publishes generate it automatically.
 
 ## Configure trusted publishing on npm
 
-After the bootstrap, open **newui → Settings → Trusted publishing** on npmjs.com. Add GitHub Actions with:
+After the bootstrap, open **@egcs/newui → Settings → Trusted publishing** on npmjs.com. Add GitHub Actions with:
 
 | Field                | Value                                       |
 | -------------------- | ------------------------------------------- |
@@ -53,4 +53,4 @@ Once the trusted publisher is configured, merging a UI `package.json` change int
 
 For a retry after fixing npm configuration, open **GitHub → Actions → Publish alpha → Run workflow**, choose **main**, and run it. The workflow accepts no package/version inputs, runs only on `main`, grants OIDC only to the publishing job, and never runs on pull requests. Its actions are already in the repository allowlist.
 
-Verify with `npm view newui@next version --registry=https://registry.npmjs.org`, then install with `bun add newui@next solid-js`. Keep `latest` reserved for a later release decision. This workflow does not create a GitHub Release or automatically increment versions.
+Verify with `npm view @egcs/newui@next version --registry=https://registry.npmjs.org`, then install with `bun add @egcs/newui@next solid-js`. Keep `latest` reserved for a later release decision. This workflow does not create a GitHub Release or automatically increment versions.

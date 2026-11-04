@@ -15,8 +15,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { ContextMenu, DropdownMenu } from "newui";
-import "newui/styles.css";
+        code: `import { ContextMenu, DropdownMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 function Actions() {
   return <>

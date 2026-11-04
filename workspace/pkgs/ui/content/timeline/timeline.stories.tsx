@@ -30,8 +30,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { Timeline } from "newui";
-import "newui/styles.css";
+        code: `import { Timeline } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Timeline.Root aria-label="Shipment progress">
   <Timeline.Item status="complete">

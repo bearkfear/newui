@@ -33,8 +33,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { Button, Empty } from "newui";
-import "newui/styles.css";
+        code: `import { Button, Empty } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Empty.Root>
   <Empty.Icon />

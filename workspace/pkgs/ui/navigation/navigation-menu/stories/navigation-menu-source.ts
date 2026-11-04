@@ -1,5 +1,5 @@
-export const navigationMenuSource = `import { NavigationMenu as Menu } from "newui";
-import "newui/styles.css";
+export const navigationMenuSource = `import { NavigationMenu as Menu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Menu.Root aria-label="Product navigation">
   <Menu.List>

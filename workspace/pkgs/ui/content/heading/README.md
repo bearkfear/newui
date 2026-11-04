@@ -16,8 +16,8 @@ Size 1 is the largest. Sizes use rem units and remain consistent across viewport
 | `"6"` | 1rem      | 16px           |
 
 ```tsx
-import { Heading } from "newui";
-import "newui/styles.css";
+import { Heading } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Heading as="h1" size="1">
   Your workspace

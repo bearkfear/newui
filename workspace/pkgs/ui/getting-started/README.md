@@ -20,7 +20,7 @@ Run `bun run typecheck` to check the source, stories, and configuration. Run `bu
 
 ## Distribution
 
-The initial distribution will be an installable package with compiled CSS, global Preflight, and `nui`-prefixed utilities. Consumers import components and `newui/styles.css`; Tailwind is a development dependency of the library. The library package manifest in `workspace/pkgs/ui/` is currently named `newui`, with publishing disabled. Registry name availability and publishing details remain unverified. See [style distribution](../../../../conventions/style-distribution.md).
+The experimental distribution is `@egcs/newui`, with compiled CSS, global Preflight, and `nui`-prefixed utilities. Consumers import components and `@egcs/newui/styles.css`; Tailwind is optional for consuming applications. The package also exposes modular CSS selections and a shared-token preset for Tailwind applications. See [style distribution](../../../../conventions/style-distribution.md) and the [publishing guide](../../../publishing.md).
 
 [Package entries](package-entries.md) documents the implemented main and area imports, public types, shared build chunks, and current CSS contract. Review the examples in **Getting started / Package consumption**.
 

@@ -3,8 +3,8 @@
 Page links with dropdowns, grouped panels, and cascading disclosures. Use this standalone inside a page or custom header; use [Navbar](../navbar/README.md) when you also need a brand, actions, and mobile toggle. Use [Menubar](../../actions/menubar/README.md) for application commands.
 
 ```tsx
-import { NavigationMenu as Menu } from "newui";
-import "newui/styles.css";
+import { NavigationMenu as Menu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Menu.Root aria-label="Product navigation">
   <Menu.List>

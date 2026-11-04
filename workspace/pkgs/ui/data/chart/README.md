@@ -3,8 +3,8 @@
 LineChart, BarChart, and DonutChart use the official Unovis Solid adapter, pinned with its core to 1.7.1. Unovis owns SVG rendering, sizing, axes, chart data updates, and hover positioning. Ark has no chart-rendering equivalent; Ark Collapsible controls the compact value-table disclosure. No new interaction state machine is introduced.
 
 ```tsx
-import { LineChart } from "newui/charts";
-import "newui/styles.css";
+import { LineChart } from "@egcs/newui/charts";
+import "@egcs/newui/styles.css";
 
 const data = [
   { month: "Jan", subscriptions: 4200, services: 2100 },
@@ -24,7 +24,7 @@ const data = [
 
 ## Contract
 
-Import the named components from the dedicated `newui/charts` entry. They are not re-exported by `newui`; consumers of the main entry do not pull Unovis into their JavaScript. The Unovis packages remain normal package dependencies. Our shared stylesheet supplies the theme mappings, while Unovis injects its own component rules at runtime. No external font is loaded.
+Import the named components from the dedicated `@egcs/newui/charts` entry. They are not re-exported by `@egcs/newui`; consumers of the main entry do not pull Unovis into their JavaScript. The Unovis packages remain normal package dependencies. Our shared stylesheet supplies the theme mappings, while Unovis injects its own component rules at runtime. No external font is loaded.
 
 Every chart requires a visible `title`, `data`, and `label(datum)` for categories. Optional `description` supplies context and units. Native figure attributes, events, styles, and refs target the outer figure; title/description generate accessible caption associations. Plot height defaults to 260 pixels and is configurable through `height`. Width follows the containing element; use CSS for surrounding layout.
 

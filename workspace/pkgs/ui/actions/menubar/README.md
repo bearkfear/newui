@@ -3,8 +3,8 @@
 Persistent application commands such as File / Edit / View. Use [Navigation Menu](../../navigation/navigation-menu/README.md) or Navbar for page links. Menubar shares the existing Dropdown Menu visuals, item parts, themed portal, and Ark Menu behavior. No Kobalte or new dependency.
 
 ```tsx
-import { Menubar } from "newui";
-import "newui/styles.css";
+import { Menubar } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Menubar.Root aria-label="Document commands">
   <Menubar.Menu value="file">

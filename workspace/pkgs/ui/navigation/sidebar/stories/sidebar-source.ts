@@ -1,6 +1,6 @@
 export const sidebarSource = `import { Folder, Layers } from "lucide-solid";
-import { Sidebar, VerticalMenu } from "newui";
-import "newui/styles.css";
+import { Sidebar, VerticalMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Sidebar.Root resizable defaultWidth={256} minWidth={216} maxWidth={360}
   style={{ height: "40rem" }}>

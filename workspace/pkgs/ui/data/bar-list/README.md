@@ -3,8 +3,8 @@
 `BarList` is a native figure with a visible caption and unordered list. Decorative CSS bars repeat the values shown as text. No Ark equivalent, interaction primitive, Unovis rendering, or new dependency is required.
 
 ```tsx
-import { BarList } from "newui";
-import "newui/styles.css";
+import { BarList } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <BarList
   title="Sessions by channel"

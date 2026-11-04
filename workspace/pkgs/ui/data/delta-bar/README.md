@@ -3,8 +3,8 @@
 `DeltaBar` displays signed percentage change around a fixed zero midpoint. It uses a native figure, caption, text, and decorative CSS geometry. This is a data comparison, with no progressbar semantics or Ark interaction requirement.
 
 ```tsx
-import { DeltaBar } from "newui";
-import "newui/styles.css";
+import { DeltaBar } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <DeltaBar
   label="Acquisition cost"

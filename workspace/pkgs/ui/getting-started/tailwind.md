@@ -2,14 +2,14 @@
 
 [Package entries](package-entries.md) · [Runtime customization](theme-customization.md)
 
-Use this optional mode with Tailwind 4.3.3+ and PostCSS 8.5+. Experimental releases use the npm `next` tag; local consumers can also install the generated tarball. Applications using only the compiled `newui/styles.css` do not need these build dependencies.
+Use this optional mode with Tailwind 4.3.3+ and PostCSS 8.5+. Experimental releases use the npm `next` tag; local consumers can also install the generated tarball. Applications using only the compiled `@egcs/newui/styles.css` do not need these build dependencies.
 
 ## Configure
 
-Install `newui` and `solid-js`, plus `tailwindcss`, `@tailwindcss/postcss`, and `postcss` as development dependencies. Configure `postcss.config.mjs` in this order:
+Install `@egcs/newui` and `solid-js`, plus `tailwindcss`, `@tailwindcss/postcss`, and `postcss` as development dependencies. Configure `postcss.config.mjs` in this order:
 
 ```js
-import newui from "newui/postcss";
+import newui from "@egcs/newui/postcss";
 import tailwind from "@tailwindcss/postcss";
 
 export default { plugins: [newui(), tailwind()] };
@@ -19,16 +19,16 @@ In the application's entry stylesheet:
 
 ```css
 @import "tailwindcss";
-@import "newui/tailwind/preset.css";
-@import "newui/tailwind/actions.css";
-@import "newui/tailwind/forms.css";
+@import "@egcs/newui/tailwind/preset.css";
+@import "@egcs/newui/tailwind/actions.css";
+@import "@egcs/newui/tailwind/forms.css";
 ```
 
-Import that stylesheet once from the application entry. Continue importing components from `newui/actions`, `newui/forms`, or other JavaScript entries. Use this mode instead of importing the complete `newui/styles.css`; the application owns Preflight.
+Import that stylesheet once from the application entry. Continue importing components from `@egcs/newui/actions`, `@egcs/newui/forms`, or other JavaScript entries. Use this mode instead of importing the complete `@egcs/newui/styles.css`; the application owns Preflight.
 
 ## Select styles and adopt tokens
 
-CSS entries are available for Actions, Forms, Content, Layout, Navigation, Overlays, Feedback, Data, Charts, and Compositions, named `newui/tailwind/<area>.css`. Foundations are included by area dependencies. `newui/tailwind/foundations.css` also works on its own for tokens and themes.
+CSS entries are available for Actions, Forms, Content, Layout, Navigation, Overlays, Feedback, Data, Charts, and Compositions, named `@egcs/newui/tailwind/<area>.css`. Foundations are included by area dependencies. `@egcs/newui/tailwind/foundations.css` also works on its own for tokens and themes.
 
 The optional `preset.css` maps application utilities to the newui tokens. Omit it to preserve your application's Tailwind theme while styling library components independently. The selected library areas still compile with their own theme mappings and `nui:` prefix. Import the preset even without components to use just the shared application theme.
 

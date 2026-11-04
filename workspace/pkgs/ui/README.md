@@ -7,7 +7,7 @@ Composable components for **SolidJS**, with shared spacing, typography, Radix co
 ## Install
 
 ```sh
-bun add newui@next solid-js
+bun add @egcs/newui@next solid-js
 ```
 
 Use npm, pnpm, or Yarn if preferred. Configure your application for SolidJS, for example with Vite and `vite-plugin-solid`.
@@ -17,14 +17,14 @@ Use npm, pnpm, or Yarn if preferred. Configure your application for SolidJS, for
 Import the stylesheet once from your application entry:
 
 ```tsx
-import "newui/styles.css";
+import "@egcs/newui/styles.css";
 ```
 
 Import components from the area you use:
 
 ```tsx
-import { Button } from "newui/actions";
-import { Field, Input } from "newui/forms";
+import { Button } from "@egcs/newui/actions";
+import { Field, Input } from "@egcs/newui/forms";
 
 export function ProjectForm() {
   return (
@@ -39,7 +39,7 @@ export function ProjectForm() {
 }
 ```
 
-The main `newui` entry also works. Area entries include `actions`, `forms`, `content`, `layout`, `navigation`, `overlays`, `feedback`, `data`, `charts`, and `compositions`. Entries share internal modules; bundle elimination depends on your bundler. CSS selection is configured separately.
+The main `@egcs/newui` entry also works. Area entries include `actions`, `forms`, `content`, `layout`, `navigation`, `overlays`, `feedback`, `data`, `charts`, and `compositions`. Entries share internal modules; bundle elimination depends on your bundler. CSS selection is configured separately.
 
 The complete stylesheet includes Tailwind Preflight, which resets the whole page. Tailwind is not required for this mode.
 
@@ -48,19 +48,19 @@ The complete stylesheet includes Tailwind Preflight, which resets the whole page
 Install Tailwind 4.3.3+, `@tailwindcss/postcss`, and PostCSS 8.5+ as development dependencies. Configure `postcss.config.mjs`:
 
 ```js
-import newui from "newui/postcss";
+import newui from "@egcs/newui/postcss";
 import tailwind from "@tailwindcss/postcss";
 
 export default { plugins: [newui(), tailwind()] };
 ```
 
-Use an application entry stylesheet instead of the complete `newui/styles.css`:
+Use an application entry stylesheet instead of the complete `@egcs/newui/styles.css`:
 
 ```css
 @import "tailwindcss";
-@import "newui/tailwind/preset.css";
-@import "newui/tailwind/actions.css";
-@import "newui/tailwind/forms.css";
+@import "@egcs/newui/tailwind/preset.css";
+@import "@egcs/newui/tailwind/actions.css";
+@import "@egcs/newui/tailwind/forms.css";
 ```
 
 Import this application stylesheet once. Areas bring their style dependencies, including foundations, and shared dependencies are compiled once. The optional preset maps application utilities such as `p-4`, `rounded-md`, and `bg-primary` to newui tokens. Omit it to keep your application's theme. The application owns Preflight in this mode.

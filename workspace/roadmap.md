@@ -122,7 +122,7 @@ Each behavior needs an explicit mapping to Ark. If no suitable equivalent exists
 
 Data Table is deferred by user decision until a concrete need for sorting, filtering, pagination, or selection arises. The existing native Table remains the current presentation component. Data Table is not a prerequisite for subsequent stages.
 
-Data Table and Charts require their own dependency evaluation; do not assume Ark provides data tables or chart rendering. The user selected Unovis; the initial integration uses its official Solid adapter through the optional `newui/charts` entry.
+Data Table and Charts require their own dependency evaluation; do not assume Ark provides data tables or chart rendering. The user selected Unovis; the initial integration uses its official Solid adapter through the optional `@egcs/newui/charts` entry.
 
 ### 6. Layouts and larger blocks
 
@@ -160,7 +160,7 @@ The Field contract must associate the label, description, and error with the con
 - [ ] Verify keyboard interaction, focus, accessible names, and opening/closing behavior in interactive components.
 - [ ] Review themes, contrast, states, responsiveness, and reduced motion.
 - [ ] Document installation, customization, composition, and complete examples.
-- [x] Select `newui`, public access, MIT, and `0.1.0-alpha.0` on `next`; prepare package metadata, consumer README, and known limitations. Final name acceptance is determined by npm at publication.
+- [x] Select `@egcs/newui`, public access, MIT, and `0.1.0-alpha.0` on `next`; prepare package metadata, consumer README, and known limitations. Final name acceptance is determined by npm at publication.
 - [x] Implement GitHub CI for Biome/types, library, Storybook and consumer builds, and packed export validation; document public-repository security settings. The first GitHub run and repository settings remain to be verified after pushing.
 - [x] Implement a main-only OIDC workflow that publishes new package versions automatically, with manual retry, and document the interactive first-package bootstrap. npm login and trusted-publisher registration remain maintainer setup steps.
 - [ ] Publish after metadata, clean installation, and release validation are ready.

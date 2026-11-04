@@ -29,8 +29,8 @@ const meta = {
           "Ark-powered pagination with numbered pages, ellipses, and previous/next controls. Solid UI-inspired styling groups Previous, page numbers, and Next in one centered row, with ghost controls and an outlined current page. Responsive mode shows a compact page summary on mobile. Pages are one-based; count is the number of records. Native buttons support Tab and Enter/Space. Initial page controls apply on mount; use the controlled example for live updates.",
       },
       source: {
-        code: `import { Pagination } from "newui";
-import "newui/styles.css";
+        code: `import { Pagination } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Pagination.Root count={200} defaultPage={10} defaultPageSize={10}>
   <Pagination.PrevTrigger />
@@ -63,8 +63,8 @@ export const ControlledRecords: Story = {
     docs: {
       source: {
         code: `import { createSignal } from "solid-js";
-import { Pagination } from "newui";
-import "newui/styles.css";
+import { Pagination } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 export function DocumentPages() {
   const [page, setPage] = createSignal(1);

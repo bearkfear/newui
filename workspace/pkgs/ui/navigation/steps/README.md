@@ -3,8 +3,8 @@
 An interactive stepper using [Ark UI Solid Steps](https://ark-ui.com/docs/components/steps), with horizontal/vertical layouts and newui's Radix-backed colors. No new dependency or Kobalte. Timeline remains the presentation-only event sequence.
 
 ```tsx
-import { Steps } from "newui";
-import "newui/styles.css";
+import { Steps } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Steps.Root count={2} orientation="horizontal">
   <Steps.List aria-label="Project setup">

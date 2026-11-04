@@ -18,12 +18,12 @@ const config: StorybookConfig = {
     return mergeConfig(config, {
       resolve: {
         alias: [
-          { find: /^newui$/, replacement: `${sourceRoot}index.ts` },
-          { find: /^newui\/charts$/, replacement: `${sourceRoot}data/chart/index.ts` },
+          { find: /^@egcs\/newui$/, replacement: `${sourceRoot}index.ts` },
+          { find: /^@egcs\/newui\/charts$/, replacement: `${sourceRoot}data/chart/index.ts` },
           ...styleAreas
             .filter((area) => area !== "foundations" && area !== "charts")
             .map((area) => ({
-              find: new RegExp(`^newui/${area}$`),
+              find: new RegExp(`^@egcs/newui/${area}$`),
               replacement: `${sourceRoot}${area}/index.ts`,
             })),
         ],

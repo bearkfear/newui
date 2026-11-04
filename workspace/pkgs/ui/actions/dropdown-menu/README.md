@@ -3,8 +3,8 @@
 A compact button-triggered action menu, styled consistently with Context Menu.
 
 ```tsx
-import { DropdownMenu } from "newui";
-import "newui/styles.css";
+import { DropdownMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <DropdownMenu.Root>
   <DropdownMenu.Trigger>Actions</DropdownMenu.Trigger>

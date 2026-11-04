@@ -75,7 +75,7 @@ export function IntroductionButtonDemo() {
           <pre>
             <code>
               {
-                'import { Button } from "newui";\nimport "newui/styles.css";\n\n<Button variant="solid" size="md">\n  Start building\n</Button>'
+                'import { Button } from "@egcs/newui";\nimport "@egcs/newui/styles.css";\n\n<Button variant="solid" size="md">\n  Start building\n</Button>'
               }
             </code>
           </pre>

@@ -3,8 +3,8 @@
 A vertical or horizontal sequence for event history or progress presentation, inspired by [Solid UI Timeline](https://www.solid-ui.com/docs/components/timeline). Original native HTML implementation with newui's Radix tokens; no copied source, new dependencies, or Kobalte.
 
 ```tsx
-import { Timeline } from "newui";
-import "newui/styles.css";
+import { Timeline } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Timeline.Root aria-label="Shipment progress">
   <Timeline.Item status="complete">

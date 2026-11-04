@@ -3,7 +3,7 @@
 Arranges contextual information and actions with responsive spacing.
 
 ```tsx
-import { ActionBar, Button } from "newui";
+import { ActionBar, Button } from "@egcs/newui";
 
 <ActionBar.Root variant="surface">
   <ActionBar.Content>
@@ -22,4 +22,4 @@ Title defaults to h2, size 6; Description defaults to muted Text size 7. Typogra
 
 This is a layout composition. It supplies no ARIA toolbar, arrow-key navigation, sticky positioning, or selection state. Put native buttons or ButtonGroup inside Actions and let the application own behavior. Choose an appropriate heading level or omit Title when unnecessary.
 
-Import `newui/styles.css` once. Review Compositions / Action bar and Overview before authorizing new tests. The bulk-action example uses local state and introduces no server mutation.
+Import `@egcs/newui/styles.css` once. Review Compositions / Action bar and Overview before authorizing new tests. The bulk-action example uses local state and introduces no server mutation.

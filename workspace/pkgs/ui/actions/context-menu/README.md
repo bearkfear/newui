@@ -3,8 +3,8 @@
 Actions opened by right-click or touch long-press. Use a separate Dropdown Menu with the same actions as a discoverable click/keyboard alternative.
 
 ```tsx
-import { ContextMenu, DropdownMenu } from "newui";
-import "newui/styles.css";
+import { ContextMenu, DropdownMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 function Actions() {
   return (

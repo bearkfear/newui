@@ -3,8 +3,8 @@
 Responsive website navigation built on the shared [Navigation Menu](../navigation-menu/README.md) and Ark Collapsible, with Radix semantic colors. Top-level links use text and a thin current/open indicator; buttons are reserved for disclosure and explicit actions.
 
 ```tsx
-import { Navbar } from "newui";
-import "newui/styles.css";
+import { Navbar } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Navbar.Root aria-label="Primary navigation">
   <Navbar.Brand href="/">Your product</Navbar.Brand>

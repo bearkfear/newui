@@ -1,5 +1,5 @@
-import { Button } from "newui/actions";
-import { Field, Input, InputGroup } from "newui/forms";
+import { Button } from "@egcs/newui/actions";
+import { Field, Input, InputGroup } from "@egcs/newui/forms";
 import { createSignal } from "solid-js";
 
 export function Preview() {

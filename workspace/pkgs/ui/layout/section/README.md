@@ -3,8 +3,8 @@
 Renders a native section with vertical padding: sm = 1.5rem / 2rem, md = 2.5rem / 4rem (default), lg = 4rem / 6rem. The second value applies from the md breakpoint. Compose with Container for horizontal gutters. Use aria-labelledby to associate a meaningful region with its visible heading.
 
 ```tsx
-import { Section, Container, Heading } from "newui";
-import "newui/styles.css";
+import { Section, Container, Heading } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Section aria-labelledby="overview-title">
   <Container>

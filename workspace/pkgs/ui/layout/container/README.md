@@ -3,8 +3,8 @@
 Centers content in a full-width div with responsive inline gutters (1rem, 1.5rem from sm, 2rem from lg). Maximum widths include gutters: sm = 48rem, md = 64rem, lg = 80rem (default), full = unlimited.
 
 ```tsx
-import { Container } from "newui";
-import "newui/styles.css";
+import { Container } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Container size="md">Page content</Container>;
 ```

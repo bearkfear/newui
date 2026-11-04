@@ -1,5 +1,5 @@
-export const lineChartSource = `import { LineChart } from "newui/charts";
-import "newui/styles.css";
+export const lineChartSource = `import { LineChart } from "@egcs/newui/charts";
+import "@egcs/newui/styles.css";
 
 const data = [
   { month: "Jan", subscriptions: 4200, services: 2100 },
@@ -22,8 +22,8 @@ const data = [
 />;`;
 
 export const barChartSource = lineChartSource.replaceAll("LineChart", "BarChart");
-export const donutChartSource = `import { DonutChart } from "newui/charts";
-import "newui/styles.css";
+export const donutChartSource = `import { DonutChart } from "@egcs/newui/charts";
+import "@egcs/newui/styles.css";
 
 const data = [
   { channel: "Search", visits: 4280 },

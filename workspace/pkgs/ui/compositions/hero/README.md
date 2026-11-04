@@ -3,7 +3,7 @@
 A responsive opening section composed from Section, Container, Heading, and Text.
 
 ```tsx
-import { Hero, Button } from "newui";
+import { Hero, Button } from "@egcs/newui";
 
 <Hero.Root layout="split" tone="accent" aria-labelledby="welcome-title">
   <Hero.Content>
@@ -28,4 +28,4 @@ Title defaults to h1, size 1. Description defaults to Text size 5, muted; Eyebro
 
 Actions accepts arbitrary JSX. Root attributes, events, styles, and refs target the section; the inner Container controls width and gutters. Each part accepts its native or typography props and additive classes.
 
-Import `newui/styles.css` once. Review Compositions / Hero and Overview before authorizing new tests.
+Import `@egcs/newui/styles.css` once. Review Compositions / Hero and Overview before authorizing new tests.

@@ -21,6 +21,6 @@ Heading sizes 1–6 map to 5xl, display-md, display-sm, 2xl, xl, and base. Text 
 
 `--nui-font-sans` and `--nui-font-mono` expose local system font stacks without loading a web font. Preflight uses them for document defaults. Components normally inherit the host font family. A local font override must set font-family on its container as well as defining the token when needed. Prose retains its relative editorial heading scale and monospace code styling.
 
-The public size tokens feed compiled library utilities through Tailwind's inline theme aliases. Consumers only import `newui/styles.css`; they do not compile Tailwind. Scoped font-size overrides affect components using that size, including controls and descriptions. Component-specific pixel/rem values remain governed by their owning contracts.
+The public size tokens feed compiled library utilities through Tailwind's inline theme aliases. Consumers only import `@egcs/newui/styles.css`; they do not compile Tailwind. Scoped font-size overrides affect components using that size, including controls and descriptions. Component-specific pixel/rem values remain governed by their owning contracts.
 
 Review Foundations / Typography alongside Content / Heading, Text, and Prose. Check long text, browser zoom, and narrow widths when customizing metrics.

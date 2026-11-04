@@ -1,5 +1,5 @@
-export const tableSource = `import { Table } from "newui";
-import "newui/styles.css";
+export const tableSource = `import { Table } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Table.Container aria-label="Recent invoices">
   <Table.Root striped hoverable>

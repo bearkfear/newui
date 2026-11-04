@@ -8,7 +8,7 @@ Icons inherit `currentColor` and use Lucide's default stroke width of 2. Size fo
 
 ```tsx
 import { Archive, Plus } from "lucide-solid";
-import { Button } from "newui";
+import { Button } from "@egcs/newui";
 
 <Button startIcon={<Plus aria-hidden="true" />}>Create project</Button>;
 <Button iconOnly aria-label="Archive project">
