@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { App } from "../../../apps/tailwind-playground/src/App";
 import { ModularStyleFrame } from "./stories/modular-style-frame";
+import { TailwindPresetDemo } from "./stories/tailwind-preset/demo";
 import css from "./stories/tailwind-preset.css?inline";
 
 const meta = {
@@ -11,7 +11,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "The optional newui preset maps application utilities to the same tokens as the prefixed components. Palette, spacing, radius, and appearance controls change CSS variables at runtime. This isolated document compiles the application and selected library areas through the consumer PostCSS integration. The full stylesheet is not loaded inside it. The same example is available as the standalone Tailwind playground application.",
+          "The optional newui preset maps application utilities to the same tokens as the prefixed components. Palette, spacing, radius, and appearance controls change CSS variables at runtime. This isolated Storybook document compiles the example and selected library areas through the consumer PostCSS integration. The full stylesheet is not loaded inside it.",
       },
     },
   },
@@ -26,7 +26,7 @@ export const SharedTokens: Story = {
       title="Shared Tailwind preset"
       height="64rem"
       theme={String(context.globals["theme"])}
-      content={() => <App theme={String(context.globals["theme"])} />}
+      content={() => <TailwindPresetDemo theme={String(context.globals["theme"])} />}
     />
   ),
 };

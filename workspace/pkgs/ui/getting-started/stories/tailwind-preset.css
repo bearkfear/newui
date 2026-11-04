@@ -3,4 +3,4 @@
 @import "../../tailwind/actions.css";
 @import "../../tailwind/forms.css";
 
-@source "../../../../apps/tailwind-playground/src/**/*.tsx";
+@source "./tailwind-preset/**/*.tsx";

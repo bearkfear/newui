@@ -5,7 +5,6 @@ This directory contains the development environment, applications, library packa
 ## Structure
 
 - [UI package](pkgs/ui/README.md): components, recipes, foundations, utilities, documentation, and colocated stories.
-- [Tailwind consumer playground](apps/tailwind-playground/README.md): a separate Solid/Vite application using public package exports, area CSS selections, and the optional shared-token preset.
 - [Storybook application](apps/storybook/README.md): the initial component development catalog.
 - [Philosophy](philosophy.md): purpose and organizational principles.
 - [Architecture](architecture.md): technical choices and implementation layers.
@@ -28,8 +27,6 @@ Run these commands from `workspace/`:
 - `bun run hooks:install`: install the pre-commit hook; `bun install` also runs this through `prepare`.
 - `bun run build`: build the UI package in `pkgs/ui/dist/`.
 - `bun run pack`: package the existing build and verify every public export target in `artifacts/newui-preview.tgz`.
-- `bun run dev:consumer`: start the Tailwind consumer playground at `http://127.0.0.1:4174` after building the library.
-- `bun run build:consumer`: build the standalone consumer application.
 - `bun run test:storybook`: run browser checks for the catalog, interactions, and accessibility.
 - `bun run build:storybook`: generate the static catalog in `apps/storybook/storybook-static/`.
 

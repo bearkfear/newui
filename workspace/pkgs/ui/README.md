@@ -87,6 +87,6 @@ Automatic system appearance uses CSS `color-scheme` and `light-dark()`. Set `dat
 
 ## Development and license
 
-See the [workspace guide](https://github.com/bearkfear/newui/blob/main/workspace/README.md) for Storybook, the consumer playground, checks, and builds. The [roadmap](https://github.com/bearkfear/newui/blob/main/workspace/roadmap.md) tracks remaining work.
+See the [workspace guide](https://github.com/bearkfear/newui/blob/main/workspace/README.md) for Storybook, checks, and builds. The [roadmap](https://github.com/bearkfear/newui/blob/main/workspace/roadmap.md) tracks remaining work.
 
 MIT. Distributed Radix Colors and Lucide notices are retained in `dist/`; dependencies retain their own licenses.

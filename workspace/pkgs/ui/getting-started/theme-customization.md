@@ -24,7 +24,7 @@ Font families, text sizes, normal/medium/semibold weights, named line heights, t
 
 The stylesheet includes the official light/dark Slate, Blue, Sky, Green, Amber, and Red scales. It does not include every Radix palette or generate a scale from a selected color. To change the whole primary appearance, update its solid, hover, soft, border, text, focus, and contrast roles together.
 
-The playground's [primaryTheme helper](../../../apps/tailwind-playground/src/primary-theme.ts) shows the complete mapping to a supplied Radix palette. An application can apply that role set to the document or a preview container:
+The Storybook example's [primaryTheme helper](stories/tailwind-preset/primary-theme.ts) shows the complete mapping to a supplied Radix palette. An application can apply that role set to the document or a preview container:
 
 ```ts
 for (const [name, value] of Object.entries(primaryTheme("green"))) {
