@@ -17,7 +17,7 @@ bun run pack
 
 Build first: the consumer resolves public declarations from the generated package. Ignoring install scripts skips the local Git hook installer in CI; developers can run `bun run hooks:install` locally.
 
-`bun run pack` verifies that all public export targets exist inside the generated archive. Successful CI uploads `newui-package`, containing `newui-preview.tgz`, for seven days. Artifacts from pull requests are untrusted review material. This check does not establish clean registry installation, browser behavior, or readiness to publish; the Zag patch and publication prerequisites remain in the [roadmap](roadmap.md).
+`bun run pack` verifies that all public export targets and release documents exist inside the generated archive. Successful CI uploads `newui-package`, containing `newui-preview.tgz`, for seven days. Artifacts from pull requests are untrusted review material. This check does not establish clean registry installation or browser behavior. The initial alpha accepts the known Zag issue and incomplete Forms; see [publishing](publishing.md) and the [roadmap](roadmap.md).
 
 ## GitHub settings to apply
 
@@ -33,7 +33,7 @@ See GitHub's [repository Actions settings](https://docs.github.com/en/repositori
 
 After the first successful run, protect `main` in **Settings → Rules → Rulesets**: require pull requests and the `Lint, types, builds and package` status check, block force pushes and deletion, and restrict bypasses. Require an approving review when another maintainer is available; a sole maintainer cannot approve their own PR. Review changes to workflows, dependency lockfiles, patches, and build scripts carefully. GitHub documents [branch protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
 
-No npm token or other secret is needed. Push the commits to start the first run; the workflow packages an artifact and does not publish to npm or deploy Storybook. Publishing requires its own reviewed workflow and registry configuration later.
+No npm token or other secret is needed for CI. It packages an artifact and does not publish to npm or deploy Storybook. The separate [publishing workflow](../.github/workflows/publish.yml) publishes new package versions merged into `main` through npm OIDC after the initial bootstrap, with a manual retry option; see [publishing](publishing.md).
 
 ## Security decisions and maintenance
 

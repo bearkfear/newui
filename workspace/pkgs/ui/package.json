@@ -1,10 +1,34 @@
 {
   "name": "newui",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0-alpha.0",
+  "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
+  "license": "MIT",
+  "homepage": "https://github.com/bearkfear/newui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bearkfear/newui.git",
+    "directory": "workspace/pkgs/ui"
+  },
+  "bugs": {
+    "url": "https://github.com/bearkfear/newui/issues"
+  },
+  "keywords": [
+    "solid-js",
+    "components",
+    "design-system",
+    "tailwindcss",
+    "ark-ui",
+    "radix-colors"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "next",
+    "registry": "https://registry.npmjs.org"
+  },
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md"
   ],
   "sideEffects": [
     "**/*.css"

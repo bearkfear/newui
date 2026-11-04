@@ -2,7 +2,7 @@
 
 [Package entries](package-entries.md) · [Runtime customization](theme-customization.md)
 
-Use this optional mode with Tailwind 4.3.3+ and PostCSS 8.5+. The package remains unpublished; local consumers can install the generated tarball. Applications using only the compiled `newui/styles.css` do not need these build dependencies.
+Use this optional mode with Tailwind 4.3.3+ and PostCSS 8.5+. Experimental releases use the npm `next` tag; local consumers can also install the generated tarball. Applications using only the compiled `newui/styles.css` do not need these build dependencies.
 
 ## Configure
 

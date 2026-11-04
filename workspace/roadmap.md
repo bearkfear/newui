@@ -154,15 +154,15 @@ The Field contract must associate the label, description, and error with the con
 - [x] Modularize component CSS and explicit recipe sources with area aggregators, shared import normalization, source CSS measurements, and isolated Modular styles previews. The complete compiled stylesheet remains public; the following integration exposes area selections. This delivery was validated by the user.
 - [x] Add optional consumer Tailwind compilation, public CSS area selections, a PostCSS integration, and an optional shared-token preset alongside the complete stylesheet; document reset ownership and provide a standalone consumer plus isolated preset stories. This delivery was validated by the user.
 - [x] Document runtime palette, spacing, radius, typography, focus, and theme customization, preserving automatic light/dark behavior. Application storage and user-defined palette generation remain consumer responsibilities.
-- [ ] Adopt a compatible stable Ark release using Zag focus-visible 1.46.0 or later, remove the workspace focus patch, and validate the packed library in a clean consumer without workspace overrides/patches.
+- [ ] Adopt a compatible stable Ark release using Zag focus-visible 1.46.0 or later, remove the workspace focus patch, and validate focus behavior without workspace overrides/patches. The user accepted this known issue for the initial alpha; it is not a publication blocker.
 - [ ] Review exports, types, and style installation in consuming applications.
 - [ ] Verify server rendering and hydration when included in the chosen support scope.
 - [ ] Verify keyboard interaction, focus, accessible names, and opening/closing behavior in interactive components.
 - [ ] Review themes, contrast, states, responsiveness, and reduced motion.
 - [ ] Document installation, customization, composition, and complete examples.
-- [ ] Confirm npm package name and access, complete package metadata, and choose the project's distribution license.
+- [x] Select `newui`, public access, MIT, and `0.1.0-alpha.0` on `next`; prepare package metadata, consumer README, and known limitations. Final name acceptance is determined by npm at publication.
 - [x] Implement GitHub CI for Biome/types, library, Storybook and consumer builds, and packed export validation; document public-repository security settings. The first GitHub run and repository settings remain to be verified after pushing.
-- [ ] Configure a controlled release workflow after publication prerequisites are complete.
+- [x] Implement a main-only OIDC workflow that publishes new package versions automatically, with manual retry, and document the interactive first-package bootstrap. npm login and trusted-publisher registration remain maintainer setup steps.
 - [ ] Publish after metadata, clean installation, and release validation are ready.
 
-Distribution remains one npm package. The complete stylesheet and optional Tailwind area/preset integration are implemented; component-level public CSS entries remain deferred. The delivery validated the extracted package's CSS payload with installed compiler dependencies. Clean registry installation without workspace patches and release CI remain publication prerequisites.
+Distribution remains one npm package. The complete stylesheet and optional Tailwind area/preset integration are implemented; component-level public CSS entries remain deferred. The initial alpha is authorized with incomplete Forms and the known unpatched focus-visible issue, documented in its README/changelog. The focus fix and broader validation remain follow-up work. The delivery previously validated the extracted CSS payload with installed compiler dependencies; authenticated npm publication remains pending.

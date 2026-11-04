@@ -12,6 +12,7 @@ This directory contains the development environment, applications, library packa
 - [Dependency map](dependencies.md): module layers, cross-area reuse, and distribution boundaries.
 - [Roadmap](roadmap.md): implementation sequence and checklists.
 - [Continuous integration](ci.md): checks, package artifacts, and GitHub security settings.
+- [Publishing](publishing.md): the initial alpha, npm bootstrap, and subsequent OIDC releases.
 - [References](references/README.md): external foundations and temporary study material.
 - [Project conventions](../conventions/): current development agreements.
 
