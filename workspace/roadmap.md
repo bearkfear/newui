@@ -161,7 +161,8 @@ The Field contract must associate the label, description, and error with the con
 - [ ] Review themes, contrast, states, responsiveness, and reduced motion.
 - [ ] Document installation, customization, composition, and complete examples.
 - [ ] Confirm npm package name and access, complete package metadata, and choose the project's distribution license.
-- [ ] Configure CI for library checks/build, Storybook and consumer builds, packed artifact validation, and a controlled release workflow.
+- [x] Implement GitHub CI for Biome/types, library, Storybook and consumer builds, and packed export validation; document public-repository security settings. The first GitHub run and repository settings remain to be verified after pushing.
+- [ ] Configure a controlled release workflow after publication prerequisites are complete.
 - [ ] Publish after metadata, clean installation, and release validation are ready.
 
 Distribution remains one npm package. The complete stylesheet and optional Tailwind area/preset integration are implemented; component-level public CSS entries remain deferred. The delivery validated the extracted package's CSS payload with installed compiler dependencies. Clean registry installation without workspace patches and release CI remain publication prerequisites.

@@ -11,6 +11,7 @@ This directory contains the development environment, applications, library packa
 - [Architecture](architecture.md): technical choices and implementation layers.
 - [Dependency map](dependencies.md): module layers, cross-area reuse, and distribution boundaries.
 - [Roadmap](roadmap.md): implementation sequence and checklists.
+- [Continuous integration](ci.md): checks, package artifacts, and GitHub security settings.
 - [References](references/README.md): external foundations and temporary study material.
 - [Project conventions](../conventions/): current development agreements.
 
@@ -25,12 +26,13 @@ Run these commands from `workspace/`:
 - `bun run typecheck`: check the UI package, stories, Storybook, existing tests, and build scripts.
 - `bun run hooks:install`: install the pre-commit hook; `bun install` also runs this through `prepare`.
 - `bun run build`: build the UI package in `pkgs/ui/dist/`.
+- `bun run pack`: package the existing build and verify every public export target in `artifacts/newui-preview.tgz`.
 - `bun run dev:consumer`: start the Tailwind consumer playground at `http://127.0.0.1:4174` after building the library.
 - `bun run build:consumer`: build the standalone consumer application.
 - `bun run test:storybook`: run browser checks for the catalog, interactions, and accessibility.
 - `bun run build:storybook`: generate the static catalog in `apps/storybook/storybook-static/`.
 
-`package.json` coordinates the Bun workspaces; `tsconfig.base.json` shares compiler settings. Each application and package owns its manifest, configuration, and build output. No tooling is placed at the repository root.
+`package.json` coordinates the Bun workspaces; `tsconfig.base.json` shares compiler settings. Each application and package owns its manifest, configuration, and build output. GitHub's required workflow entry point lives in `.github/workflows/`; its commands and scripts live here.
 
 ## Quality checks
 

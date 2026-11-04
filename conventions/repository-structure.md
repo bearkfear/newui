@@ -12,6 +12,8 @@ Use `workspace/package.json` to coordinate installation and commands, and `works
 
 Run shared commands from `workspace/`. Keep project conventions in the root `conventions/` directory, with the root README and Git metadata at the repository level.
 
+GitHub Actions entry points live in the provider-required root `.github/workflows/` directory. Keep their implementation scripts, runtime version files, commands, and generated artifacts inside `workspace/`; workflows invoke those workspace commands.
+
 ## Rationale
 
 Applications and distributable code have separate responsibilities while sharing one development environment. Documentation stays near its implementation, and the repository root remains free of tool configuration.
