@@ -3,7 +3,7 @@
 A page footer with responsive brand content, link groups, and optional metadata.
 
 ```tsx
-import { Footer, Text } from "newui";
+import { Footer, Text } from "@egcs/newui";
 
 <Footer.Root tone="subtle">
   <Footer.Content>
@@ -30,4 +30,4 @@ Group renders nav and needs an accessible label. Title defaults to h2, size 6. L
 
 Root renders footer. Place a page footer outside main to expose the native contentinfo landmark; a footer nested in an article has contextual semantics instead. Other layout parts render divs. Native attributes, events, styles, and refs are forwarded.
 
-Import `newui/styles.css` once. Review Compositions / Footer and Overview before authorizing new tests.
+Import `@egcs/newui/styles.css` once. Review Compositions / Footer and Overview before authorizing new tests.

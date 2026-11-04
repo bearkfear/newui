@@ -1,5 +1,5 @@
-export const filePanelSource = `import { Panel, Tabs, Text } from "newui";
-import "newui/styles.css";
+export const filePanelSource = `import { Panel, Tabs, Text } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 export function FilePanel() {
   return (

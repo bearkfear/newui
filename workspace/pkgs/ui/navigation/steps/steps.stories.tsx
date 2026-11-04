@@ -34,8 +34,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { Steps } from "newui";
-import "newui/styles.css";
+        code: `import { Steps } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Steps.Root count={2} orientation="horizontal">
   <Steps.List aria-label="Project setup">

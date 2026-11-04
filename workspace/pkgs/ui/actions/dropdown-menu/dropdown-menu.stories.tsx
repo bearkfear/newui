@@ -18,8 +18,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { DropdownMenu } from "newui";
-import "newui/styles.css";
+        code: `import { DropdownMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <DropdownMenu.Root>
   <DropdownMenu.Trigger>Actions</DropdownMenu.Trigger>
@@ -55,8 +55,8 @@ export const Controlled: Story = {
       source: {
         language: "tsx",
         code: `import { createSignal } from "solid-js";
-import { DropdownMenu } from "newui";
-import "newui/styles.css";
+import { DropdownMenu } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 export function Actions() {
   const [open, setOpen] = createSignal(false);

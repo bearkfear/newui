@@ -1,6 +1,6 @@
 # Input
 
-Input styles Ark Field.Input and keeps the native input element. Use it within Field or independently with a visible native label or an accessible name. Import Input, Field, and the shared stylesheet from `newui`.
+Input styles Ark Field.Input and keeps the native input element. Use it within Field or independently with a visible native label or an accessible name. Import Input, Field, and the shared stylesheet from `@egcs/newui`.
 
 ## Contract
 

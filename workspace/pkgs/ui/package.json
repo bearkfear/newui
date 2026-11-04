@@ -1,5 +1,5 @@
 {
-  "name": "newui",
+  "name": "@egcs/newui",
   "version": "0.1.0-alpha.0",
   "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
   "license": "MIT",

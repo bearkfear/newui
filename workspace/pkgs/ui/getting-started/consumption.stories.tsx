@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { PackageProfile, SharedButtonDefaults } from "./stories/package-examples";
 import "./stories/package-examples.css";
 
-const profileSource = `import { Button } from "newui/actions";
-import { Card } from "newui/content";
-import { Field, Input } from "newui/forms";
-import "newui/styles.css";
+const profileSource = `import { Button } from "@egcs/newui/actions";
+import { Card } from "@egcs/newui/content";
+import { Field, Input } from "@egcs/newui/forms";
+import "@egcs/newui/styles.css";
 
 export function Profile() {
   return (
@@ -34,7 +34,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "One package with named area entries and one compiled stylesheet. The catalog renders source aggregators without requiring a library build; consumer snippets use the package paths. Charts stay in newui/charts. Modular CSS and consumer Tailwind compilation are later stages. The package is not published yet.",
+          "One @egcs/newui package with named area entries and a complete compiled stylesheet. The catalog renders source aggregators; consumer snippets use public package paths. Charts stay in @egcs/newui/charts. Tailwind applications may instead select modular CSS areas and the optional shared-token preset.",
       },
     },
   },
@@ -56,9 +56,9 @@ export const SharedDefaults: Story = {
           "InputGroup from Forms supplies small button defaults and disabled state to both the Actions Button and the main-entry Button. Toggle disabled and inspect both actions. Both imports must share the same button context.",
       },
       source: {
-        code: `import { Button as RootButton } from "newui";
-import { Button } from "newui/actions";
-import { Input, InputGroup } from "newui/forms";
+        code: `import { Button as RootButton } from "@egcs/newui";
+import { Button } from "@egcs/newui/actions";
+import { Input, InputGroup } from "@egcs/newui/forms";
 
 <InputGroup.Root size="sm" disabled={disabled()}>
   <Input aria-label="Project name" value="newui" />

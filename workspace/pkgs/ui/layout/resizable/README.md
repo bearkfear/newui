@@ -3,8 +3,8 @@
 Resizable panels using Ark UI Solid Splitter. Root, Panel, Handle, and Context map to Ark Root, Panel, ResizeTrigger, and Context. Ark owns pointer capture, touch dragging, keyboard resizing, constraints, collapse/expand, state, IDs, and separator associations. No new dependency or custom interaction state machine.
 
 ```tsx
-import { Resizable } from "newui";
-import "newui/styles.css";
+import { Resizable } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Resizable.Root
   panels={[

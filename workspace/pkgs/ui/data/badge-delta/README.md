@@ -3,8 +3,8 @@
 `BadgeDelta` composes the existing Badge with Lucide direction icons and shared delta formatting. It is a native, noninteractive span; no Ark interaction or new dependency is needed.
 
 ```tsx
-import { BadgeDelta } from "newui";
-import "newui/styles.css";
+import { BadgeDelta } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <p>
   Operating costs <BadgeDelta value={-8.2} isPositiveGood={false} /> vs. last month

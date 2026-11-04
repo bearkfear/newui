@@ -16,8 +16,8 @@ const meta = {
       },
       source: {
         language: "tsx",
-        code: `import { Breadcrumb } from "newui";
-import "newui/styles.css";
+        code: `import { Breadcrumb } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Breadcrumb.Root>
   <Breadcrumb.List>

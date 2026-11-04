@@ -3,8 +3,8 @@
 A native HTML table with a restrained default inspired by [Solid UI](https://www.solid-ui.com/docs/components/table) and composable presentation options inspired by [Bulma](https://bulma.io/documentation/elements/table/). Implementation is original; neither upstream's code nor palette is incorporated. All colors use the existing Radix-backed `--nui-*` tokens. No new dependency or Kobalte is used.
 
 ```tsx
-import { Table } from "newui";
-import "newui/styles.css";
+import { Table } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Table.Container aria-label="Recent invoices">
   <Table.Root striped hoverable density="compact">

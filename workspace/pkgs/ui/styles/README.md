@@ -4,7 +4,7 @@
 
 ## Entries and ownership
 
-The complete stylesheet remains `newui/styles.css`. This directory contains private source aggregators. The optional [consumer integration](../getting-started/tailwind.md) exposes area selections and a shared-token preset through `newui/tailwind/*.css`, compiled by `newui/postcss` before the application's Tailwind pass.
+The complete stylesheet remains `@egcs/newui/styles.css`. This directory contains private source aggregators. The optional [consumer integration](../getting-started/tailwind.md) exposes area selections and a shared-token preset through `@egcs/newui/tailwind/*.css`, compiled by `@egcs/newui/postcss` before the application's Tailwind pass.
 - `foundations.css` imports `foundations/base.css`: official Radix palettes, semantic tokens, theme selection, metrics, and inline utility mappings.
 - Actions, Content, Layout, Navigation, Overlays, Feedback, Forms, Data, and Compositions each have an area stylesheet.
 - `charts.css` is separate from `data.css`, matching the JavaScript boundary.

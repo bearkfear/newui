@@ -1,6 +1,6 @@
 export const playlistSource = `import { createSignal, For } from "solid-js";
-import { Table } from "newui";
-import "newui/styles.css";
+import { Table } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 // These modules are colocated with the Table stories.
 import { PlaylistRow } from "./playlist-row";
 import { playlistTracks } from "./playlist-tracks";

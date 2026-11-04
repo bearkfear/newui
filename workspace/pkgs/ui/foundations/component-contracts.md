@@ -2,7 +2,7 @@
 
 [Foundations](README.md)
 
-Import public components and types from `newui`, and import `newui/styles.css` once. Internal source imports stay extensionless and relative. The package owns compiled styles; consuming applications do not need Tailwind or access to internal recipes.
+Import public components and types from `@egcs/newui`, and import `@egcs/newui/styles.css` once. Internal source imports stay extensionless and relative. The package owns compiled styles; consuming applications do not need Tailwind or access to internal recipes.
 
 Use standalone components for small native controls and compound APIs for parts with distinct composition roles: `Card.Root`, `Card.Header`, `Card.Title`, and `Card.Content`. Parts remain optional only where their semantic contract permits. Interactive roots retain Ark's required anatomy and associated labels. Do not add a universal wrapper solely to hide meaningful parts.
 

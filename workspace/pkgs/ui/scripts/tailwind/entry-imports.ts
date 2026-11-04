@@ -19,11 +19,11 @@ export const styleAreas = [
 export async function expandEntryImports(root: Root, publicRoot: string, result: Result) {
   for (const node of [...root.nodes]) {
     if (node.type !== "atrule" || node.name !== "import") continue;
-    if (!node.params.includes("newui/tailwind/")) continue;
-    const match = /^['"]newui\/tailwind\/([a-z-]+)\.css['"]$/.exec(node.params);
+    if (!node.params.includes("@egcs/newui/tailwind/")) continue;
+    const match = /^['"]@egcs\/newui\/tailwind\/([a-z-]+)\.css['"]$/.exec(node.params);
     const name = match?.[1];
     if (!name || ![...styleAreas, "preset"].some((area) => area === name)) {
-      throw node.error("Use a plain @import of a documented newui/tailwind/*.css entry.");
+      throw node.error("Use a plain @import of a documented @egcs/newui/tailwind/*.css entry.");
     }
     const file = resolve(publicRoot, `${name}.css`);
     const imported = postcss.parse(await readFile(file, "utf8"), { from: file });

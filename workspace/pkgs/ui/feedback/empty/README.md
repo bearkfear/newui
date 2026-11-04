@@ -3,8 +3,8 @@
 A reusable empty state for a page, section, list, panel, or table. The application decides when results are empty; Empty presents the message and optional next actions. Uses native HTML and existing Radix-backed tokens, without new dependencies or Kobalte.
 
 ```tsx
-import { Button, Empty } from "newui";
-import "newui/styles.css";
+import { Button, Empty } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Empty.Root>
   <Empty.Icon />

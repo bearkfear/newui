@@ -3,8 +3,8 @@
 Ark UI Solid Pagination owns page state, ranges, ellipses, accessible labels, current-page associations, and boundary disabling. newui supplies styles and composition. Pages are one-based; `count` is the total number of records, not pages. Use positive page sizes.
 
 ```tsx
-import { Pagination } from "newui";
-import "newui/styles.css";
+import { Pagination } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Pagination.Root count={200} defaultPage={10} defaultPageSize={10}>
   <Pagination.PrevTrigger />

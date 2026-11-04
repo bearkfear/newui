@@ -21,7 +21,7 @@ const meta = {
           "A native figure and list with proportional decorative bars and visible values. Input order is preserved; the largest value defines the scale unless maxValue is larger. Zero rows remain visible; negative and nonfinite values are excluded. No Ark interaction or chart dependency is needed. Import from newui.",
       },
       source: {
-        code: `import { BarList } from "newui";
+        code: `import { BarList } from "@egcs/newui";
 
 <BarList
   title="Sessions by channel"

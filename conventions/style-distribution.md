@@ -2,7 +2,7 @@
 
 ## Rule
 
-Build newui's Tailwind styles into CSS distributed with the npm package. Consumers import the components and `newui/styles.css` once; they do not need Tailwind to compile library styles.
+Build newui's Tailwind styles into CSS distributed with the npm package. Consumers import the components and `@egcs/newui/styles.css` once; they do not need Tailwind to compile library styles.
 
 Use the Tailwind prefix `nui`, producing utilities such as `nui:bg-primary`. Use `--nui-*` names for public design tokens.
 
@@ -18,7 +18,7 @@ Keep the Tailwind engine and Preflight in compilation roots. Source component an
 
 Use the shared library import normalizer before Tailwind in the library build and Storybook. Resolve internal literal CSS imports once per compilation, reject cycles, retain original source bases, and report dependencies for watch mode. Tailwind imports alone do not guarantee deduplication of custom CSS.
 
-Keep the raw component graph private. Export documented area selections through `newui/tailwind/<area>.css`, the optional application theme through `newui/tailwind/preset.css`, and the required consumer plugin through `newui/postcss`. Run that plugin before `@tailwindcss/postcss` to compile selected `nui:` utilities independently of the application's unprefixed utilities. The application owns Preflight in this mode; use it instead of the complete stylesheet.
+Keep the raw component graph private. Export documented area selections through `@egcs/newui/tailwind/<area>.css`, the optional application theme through `@egcs/newui/tailwind/preset.css`, and the required consumer plugin through `@egcs/newui/postcss`. Run that plugin before `@tailwindcss/postcss` to compile selected `nui:` utilities independently of the application's unprefixed utilities. The application owns Preflight in this mode; use it instead of the complete stylesheet.
 
 Keep compiler peers optional for consumers of the complete stylesheet. Share the same theme mappings between components and the preset. Map named spacing, radius, typography, semantic colors, contextual elevation, motion, and focus utilities to public tokens; do not replace unrelated application theme values or promise automatic resolution of conflicting classes.
 

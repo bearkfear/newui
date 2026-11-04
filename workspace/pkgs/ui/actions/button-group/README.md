@@ -11,8 +11,8 @@ Groups related native buttons with `role="group"`. Supply `aria-label` or `aria-
 - Spaced horizontal groups wrap automatically.
 
 ```tsx
-import { Button, ButtonGroup } from "newui";
-import "newui/styles.css";
+import { Button, ButtonGroup } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <ButtonGroup attached variant="outline" aria-label="Document actions">
   <Button>Save</Button>

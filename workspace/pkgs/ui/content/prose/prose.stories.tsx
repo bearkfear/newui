@@ -42,7 +42,7 @@ const meta = {
       </blockquote>
       <h3 id="publishing">Publishing</h3>
       <pre>
-        <code>{'import { Prose } from "newui";\nimport "newui/styles.css";'}</code>
+        <code>{'import { Prose } from "@egcs/newui";\nimport "@egcs/newui/styles.css";'}</code>
       </pre>
       <table>
         <caption>Content formats</caption>

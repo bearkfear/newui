@@ -1,5 +1,5 @@
-export const menubarSource = `import { Menubar } from "newui";
-import "newui/styles.css";
+export const menubarSource = `import { Menubar } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 function createDocument() { console.log("New document"); }
 function openProposal() { console.log("Open proposal"); }

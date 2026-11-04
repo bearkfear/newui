@@ -2,8 +2,8 @@ import type { CounterProps } from "../counter";
 
 export function overlaySource(_source: string, context: { args: CounterProps }) {
   const args = context.args;
-  return `import { Button, Counter, CounterAnchor } from "newui";
-import "newui/styles.css";
+  return `import { Button, Counter, CounterAnchor } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 export function NotificationButton() {
   return (
@@ -27,8 +27,8 @@ export function NotificationButton() {
 }
 
 export const interactiveOverlaySource = `import { createSignal } from "solid-js";
-import { Button, Counter, CounterAnchor } from "newui";
-import "newui/styles.css";
+import { Button, Counter, CounterAnchor } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 export function Notifications() {
   const [unread, setUnread] = createSignal(5);

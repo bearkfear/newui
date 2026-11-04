@@ -3,8 +3,8 @@
 A simple hierarchy of native links, inspired by [Solid UI](https://www.solid-ui.com/docs/components/breadcrumb). Compose Root, List, Item, Link, and Page. Each Item supplies a decorative chevron; the first separator is hidden. Long labels wrap naturally, including unbroken words on mobile.
 
 ```tsx
-import { Breadcrumb } from "newui";
-import "newui/styles.css";
+import { Breadcrumb } from "@egcs/newui";
+import "@egcs/newui/styles.css";
 
 <Breadcrumb.Root>
   <Breadcrumb.List>
