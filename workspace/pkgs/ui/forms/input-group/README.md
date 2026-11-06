@@ -20,7 +20,7 @@ InputGroup composes a single text input with decorative icons, adornments, and a
 ## Parts
 
 - Root renders a div with the shared size, tone, rounded, valid, invalid, loading, disabled, and readOnly options. It inherits Field options. Native div attributes/ref and additive class target the group.
-- Icon renders a decorative span with `placement="start" | "end"` (default start). It is hidden from assistive technology and ignores pointer events. Use Lucide children; icons do not create actions.
+- Icon renders a decorative span with `placement="start" | "end"` (default start). It is hidden from assistive technology and passes pointer events to Root, which focuses the native input when its icon area or empty space is clicked. Use Lucide children; icons do not create actions. Disabled inputs remain unfocusable; action Buttons keep their own behavior. Consumer click handlers can cancel focus forwarding with preventDefault.
 - Addon renders a text span at the start or end (default start). Use prefixes, currency names, units, or suffixes. Describe important formatting expectations in Field.Description; addons do not parse input.
 - Action renders a span for actual Buttons, defaulting to end placement. Buttons retain their own accessible name, focus, events, pressed state, and native type. Root shares size and disabled state through the existing ButtonGroup context. Readonly does not disable independent actions such as revealing a password.
 - Loading renders the existing Loading indicator while the inherited loading flag is true. Its `label` defaults to Checking…; it occupies a trailing icon slot. Loading never disables input editing by itself.

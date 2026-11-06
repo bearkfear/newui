@@ -13,10 +13,11 @@
     font-size: var(--nui-text-font);
     line-height: var(--nui-leading-normal);
     outline: calc(var(--nui-focus-width) + 1px) solid transparent;
-    outline-offset: -1px;
+    outline-offset: 3px;
     transition:
       border-color 120ms ease-out,
-      outline-color 120ms ease-out;
+      outline-color 120ms ease-out,
+      outline-offset 120ms ease-out;
   }
   .nui-text-control::placeholder {
     color: var(--nui-muted-foreground);
@@ -49,7 +50,7 @@
     --nui-text-active-focus: var(--nui-text-focus);
     outline-color: var(--nui-text-active-focus);
     border-color: var(--nui-text-active-focus);
-    animation: nui-text-focus-in var(--nui-text-focus-duration, 120ms) ease-out;
+    outline-offset: -1px;
   }
   .nui-text-control[data-valid] {
     border-color: var(--nui-success-border);
@@ -94,26 +95,16 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .nui-text-control {
-      --nui-text-focus-duration: 0s;
       transition: none;
     }
   }
   [data-motion="reduced"] .nui-text-control {
-    --nui-text-focus-duration: 0s;
     transition: none;
   }
   @media (forced-colors: active) {
     .nui-text-control:where(input, textarea):focus-visible,
     .nui-input-group:has(> .nui-text-control:focus-visible) {
       outline-color: Highlight;
-    }
-  }
-  @keyframes nui-text-focus-in {
-    from {
-      outline-offset: 3px;
-    }
-    to {
-      outline-offset: -1px;
     }
   }
 }

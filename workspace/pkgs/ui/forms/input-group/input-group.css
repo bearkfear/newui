@@ -12,6 +12,7 @@
     border: 0;
     border-radius: 0;
     background: transparent;
+    outline: none;
   }
   .nui-input-group > .nui-text-control:first-child {
     border-start-start-radius: max(0px, calc(var(--nui-text-radius) - 1px));
@@ -25,9 +26,6 @@
     :has(> :disabled)
   ) {
     background: var(--nui-surface);
-  }
-  .nui-input-group > .nui-text-control:focus-visible {
-    outline: none;
   }
   .nui-input-group-icon,
   .nui-input-group-addon,
