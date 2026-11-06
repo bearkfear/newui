@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.2
+
+### Changed
+
+- Remove Input's `appearance` option and static presentation. Use `readOnly` for non-editable values that remain focusable and included in form data.
+- Tint text-control backgrounds by tone and validation state. Use Radix step 12 for entered text and step 11 for decorative icons and addons; keep readonly and disabled presentation neutral.
+
+### Added
+
+- Add dedicated disabled and tone previews for Input, Textarea, and InputGroup in Storybook.
+
+### Fixed
+
+- Share a single-color focus contour across buttons, links, tabs, and other outlined controls, converging inward in 120ms. Preserve component colors, intentional offsets, reduced-motion preferences, and a visible system outline in forced colors.
+- Fade focus out in place over 80ms and prevent the inner InputGroup control from flashing an outline on blur.
+- Focus the InputGroup input when clicking decorative icons or empty group space. Preserve focus and text selection when the input is already active, without restarting the focus transition.
+- Apply the shared focus contour to text controls and paint attached InputGroup focus above action buttons to prevent uneven edges. Carry tone and validation colors through addon backgrounds, text, and dividers.
+
 ## 0.1.0-alpha.1
 
 Release automation validation: publish through the authorized GitHub Actions OIDC workflow on the `next` tag. Component code and APIs are unchanged from `0.1.0-alpha.0`; incomplete Forms and the known focus-visible limitation still apply.

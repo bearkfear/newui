@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants/lite";
 
 export const textControlRecipe = tv({
-  base: "nui-text-control",
+  base: "nui-text-control nui-focus-ring",
   variants: {
     size: {
       sm: "nui:[--nui-text-height:var(--nui-control-height-sm)] nui:[--nui-text-font:var(--nui-font-size-sm)] nui:[--nui-text-padding:0.625rem] nui:[--nui-text-block:0.25rem]",
@@ -10,16 +10,16 @@ export const textControlRecipe = tv({
     },
     tone: {
       neutral:
-        "nui:[--nui-text-border:var(--nui-control-border)] nui:[--nui-text-hover:var(--nui-control-border-hover)] nui:[--nui-text-focus:var(--nui-focus-ring)]",
+        "nui:[--nui-text-color:var(--nui-foreground)] nui:[--nui-text-background:var(--nui-background)] nui:[--nui-text-addon-background:var(--nui-surface)] nui:[--nui-text-addon-color:var(--nui-muted-foreground)] nui:[--nui-text-border:var(--nui-control-border)] nui:[--nui-text-hover:var(--nui-control-border-hover)] nui:[--nui-text-focus:var(--nui-focus-ring)]",
       primary:
-        "nui:[--nui-text-border:var(--nui-primary-border)] nui:[--nui-text-hover:var(--nui-primary-border-hover)] nui:[--nui-text-focus:var(--nui-primary-focus)]",
-      info: "nui:[--nui-text-border:var(--nui-info-border)] nui:[--nui-text-hover:var(--nui-info-border-hover)] nui:[--nui-text-focus:var(--nui-info-focus)]",
+        "nui:[--nui-text-color:var(--nui-primary-text-strong)] nui:[--nui-text-background:var(--nui-primary-soft)] nui:[--nui-text-addon-background:var(--nui-primary-soft-hover)] nui:[--nui-text-addon-color:var(--nui-primary-text)] nui:[--nui-text-border:var(--nui-primary-border)] nui:[--nui-text-hover:var(--nui-primary-border-hover)] nui:[--nui-text-focus:var(--nui-primary-focus)]",
+      info: "nui:[--nui-text-color:var(--nui-info-text-strong)] nui:[--nui-text-background:var(--nui-info-soft)] nui:[--nui-text-addon-background:var(--nui-info-soft-hover)] nui:[--nui-text-addon-color:var(--nui-info-text)] nui:[--nui-text-border:var(--nui-info-border)] nui:[--nui-text-hover:var(--nui-info-border-hover)] nui:[--nui-text-focus:var(--nui-info-focus)]",
       success:
-        "nui:[--nui-text-border:var(--nui-success-border)] nui:[--nui-text-hover:var(--nui-success-border-hover)] nui:[--nui-text-focus:var(--nui-success-focus)]",
+        "nui:[--nui-text-color:var(--nui-success-text-strong)] nui:[--nui-text-background:var(--nui-success-soft)] nui:[--nui-text-addon-background:var(--nui-success-soft-hover)] nui:[--nui-text-addon-color:var(--nui-success-text)] nui:[--nui-text-border:var(--nui-success-border)] nui:[--nui-text-hover:var(--nui-success-border-hover)] nui:[--nui-text-focus:var(--nui-success-focus)]",
       warning:
-        "nui:[--nui-text-border:var(--nui-warning-border)] nui:[--nui-text-hover:var(--nui-warning-border-hover)] nui:[--nui-text-focus:var(--nui-warning-focus)]",
+        "nui:[--nui-text-color:var(--nui-warning-text-strong)] nui:[--nui-text-background:var(--nui-warning-soft)] nui:[--nui-text-addon-background:var(--nui-warning-soft-hover)] nui:[--nui-text-addon-color:var(--nui-warning-text)] nui:[--nui-text-border:var(--nui-warning-border)] nui:[--nui-text-hover:var(--nui-warning-border-hover)] nui:[--nui-text-focus:var(--nui-warning-focus)]",
       danger:
-        "nui:[--nui-text-border:var(--nui-danger-border)] nui:[--nui-text-hover:var(--nui-danger-border-hover)] nui:[--nui-text-focus:var(--nui-danger-focus)]",
+        "nui:[--nui-text-color:var(--nui-danger-text-strong)] nui:[--nui-text-background:var(--nui-danger-soft)] nui:[--nui-text-addon-background:var(--nui-danger-soft-hover)] nui:[--nui-text-addon-color:var(--nui-danger-text)] nui:[--nui-text-border:var(--nui-danger-border)] nui:[--nui-text-hover:var(--nui-danger-border-hover)] nui:[--nui-text-focus:var(--nui-danger-focus)]",
     },
     rounded: {
       true: "nui:[--nui-text-radius:999px]",

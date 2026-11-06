@@ -11,10 +11,10 @@ export const calloutRecipe = tv({
     title:
       "nui:m-0 nui:text-base nui:leading-snug nui:font-semibold nui:text-[var(--nui-callout-text-strong)]",
     description:
-      "nui:text-sm nui:leading-relaxed nui:[&_a]:font-medium nui:[&_a]:text-[var(--nui-callout-accent)] nui:[&_a]:underline nui:[&_a]:underline-offset-4 nui:[&_a:focus-visible]:rounded-sm nui:[&_a:focus-visible]:outline-[length:var(--nui-focus-width)] nui:[&_a:focus-visible]:outline-offset-[var(--nui-focus-offset)] nui:[&_a:focus-visible]:outline-focus-ring",
+      "nui:text-sm nui:leading-relaxed nui:[&_a]:font-medium nui:[&_a]:text-[var(--nui-callout-accent)] nui:[&_a]:underline nui:[&_a]:underline-offset-4 nui:[&_a:focus-visible]:rounded-sm nui-focus-links",
     actions: "nui:mt-3 nui:flex nui:min-w-0 nui:flex-wrap nui:items-center nui:gap-2",
     close:
-      "nui:-mt-1 nui:-mr-1 nui:inline-flex nui:size-8 nui:shrink-0 nui:cursor-pointer nui:items-center nui:justify-center nui:rounded-full nui:border-0 nui:bg-transparent nui:text-[var(--nui-callout-accent)] nui:enabled:hover:bg-[var(--nui-callout-hover)] nui:enabled:active:bg-[var(--nui-callout-active)] nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring nui:disabled:cursor-not-allowed nui:disabled:bg-[var(--nui-disabled-background)] nui:disabled:text-[var(--nui-disabled-foreground)]",
+      "nui:-mt-1 nui:-mr-1 nui:inline-flex nui:size-8 nui:shrink-0 nui:cursor-pointer nui:items-center nui:justify-center nui:rounded-full nui:border-0 nui:bg-transparent nui:text-[var(--nui-callout-accent)] nui:enabled:hover:bg-[var(--nui-callout-hover)] nui:enabled:active:bg-[var(--nui-callout-active)] nui-focus-ring nui:disabled:cursor-not-allowed nui:disabled:bg-[var(--nui-disabled-background)] nui:disabled:text-[var(--nui-disabled-foreground)]",
   },
   variants: {
     variant: {

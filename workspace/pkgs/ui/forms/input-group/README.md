@@ -20,16 +20,20 @@ InputGroup composes a single text input with decorative icons, adornments, and a
 ## Parts
 
 - Root renders a div with the shared size, tone, rounded, valid, invalid, loading, disabled, and readOnly options. It inherits Field options. Native div attributes/ref and additive class target the group.
-- Icon renders a decorative span with `placement="start" | "end"` (default start). It is hidden from assistive technology and ignores pointer events. Use Lucide children; icons do not create actions.
+- Icon renders a decorative span with `placement="start" | "end"` (default start). It is hidden from assistive technology and passes pointer events to Root, which focuses the native input when its icon area or empty space is clicked. Use Lucide children; icons do not create actions. Disabled inputs remain unfocusable; action Buttons keep their own behavior. Consumer click handlers can cancel focus forwarding with preventDefault.
 - Addon renders a text span at the start or end (default start). Use prefixes, currency names, units, or suffixes. Describe important formatting expectations in Field.Description; addons do not parse input.
 - Action renders a span for actual Buttons, defaulting to end placement. Buttons retain their own accessible name, focus, events, pressed state, and native type. Root shares size and disabled state through the existing ButtonGroup context. Readonly does not disable independent actions such as revealing a password.
 - Loading renders the existing Loading indicator while the inherited loading flag is true. Its `label` defaults to Checking…; it occupies a trailing icon slot. Loading never disables input editing by itself.
 
 ## Composition
 
+Colored tones carry through the addon background, text, and divider. Its background is one soft step stronger than the editable surface. Neutral, readonly, and disabled addons retain neutral surfaces.
+
 Use one primary Input as a direct Root child. Put start parts before it and end parts after it. Icon placement also controls visual order; action/addon order follows the composition. Use `attached` for an action button flush with the control edge; ordinary actions are inset. The group reserves icon space without drawing over the typed value. Shared focus styling follows the input's visible focus; action buttons retain their own focus indicator.
 
 Inputs and action Buttons follow the same control-height tokens in all three sizes. Attached actions overlap the group's one-pixel border at the outer edge, so the button's height and corner radius follow the group's outer contour without an inset seam. Leading and trailing actions preserve their respective outer corners. Validation colors apply to the group border and decorative icons; disabled styles take priority. Native disabled fieldsets also style and disable the input through platform semantics. Parent disabled/invalid/readonly states cannot be cleared on the Input. Local custom Buttons remain responsible for respecting any application-specific restrictions.
+
+Attached groups paint the input focus contour above the action surface so positioned Buttons cannot cover its inner edge. The contour follows the shell's color, offset, animation, reduced-motion setting, and forced colors; action Buttons retain their independent focus indicator.
 
 Use separate Fields for independently labeled controls. This first delivery does not include Select, numeric parsing, masks, or a general multi-control form group. Root can be used without Field when the Input has its own accessible name. Themes, tokens, reduced motion, events, and native refs remain supported.
 

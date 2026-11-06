@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
+import { Input } from "../input/input";
 import { AttachedActions } from "../stories/attached-actions";
 import {
   AdornedFields,
@@ -7,7 +8,8 @@ import {
   PasswordField,
   SearchField,
 } from "../stories/input-examples";
-import { TextSizes } from "../stories/text-field-matrices";
+import { TextSizes, TextTones } from "../stories/text-field-matrices";
+import { InputGroup } from "./input-group";
 import "../stories/text-fields-demo.css";
 
 const meta = {
@@ -28,8 +30,21 @@ export const IconsAndAddons: Story = { render: () => <AdornedFields /> };
 export const PasswordAction: Story = { render: () => <PasswordField /> };
 export const ClearAction: Story = { render: () => <ClearableField /> };
 export const AttachedSearch: Story = { render: () => <SearchField /> };
+export const Disabled: Story = { render: () => <SearchField disabled /> };
 export const AttachedEdges: Story = { render: () => <AttachedActions /> };
 export const Sizes: Story = { render: () => <TextSizes /> };
+export const Tones: Story = {
+  render: () => (
+    <TextTones
+      renderControl={() => (
+        <InputGroup.Root>
+          <InputGroup.Addon>@</InputGroup.Addon>
+          <Input defaultValue="forma.studio" placeholder="A semantic tone" />
+        </InputGroup.Root>
+      )}
+    />
+  ),
+};
 export const Loading: Story = { render: () => <LoadingField /> };
 export const Mobile: Story = {
   ...IconsAndAddons,

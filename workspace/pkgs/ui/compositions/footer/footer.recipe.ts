@@ -8,7 +8,7 @@ export const footerRecipe = tv({
     links:
       "nui:grid nui:min-w-0 nui:grid-cols-[repeat(auto-fit,minmax(min(100%,10rem),1fr))] nui:gap-8",
     group: "nui:grid nui:min-w-0 nui:content-start nui:justify-items-start nui:gap-3",
-    link: "nui:rounded-sm nui:text-sm nui:text-muted-foreground nui:underline-offset-4 nui:hover:text-foreground nui:hover:underline nui:aria-[current=page]:text-foreground nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-4 nui:focus-visible:outline-focus-ring",
+    link: "nui:rounded-sm nui:text-sm nui:text-muted-foreground nui:underline-offset-4 nui:hover:text-foreground nui:hover:underline nui:aria-[current=page]:text-foreground nui-focus-ring nui:[--nui-focus-rest-offset:4px]",
     meta: "nui:mt-10 nui:flex nui:flex-wrap nui:items-center nui:justify-between nui:gap-4 nui:border-t nui:border-border nui:pt-6 nui:text-sm nui:text-muted-foreground",
   },
   variants: {

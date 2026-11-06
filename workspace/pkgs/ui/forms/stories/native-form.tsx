@@ -60,7 +60,7 @@ export function HorizontalFields() {
       <Field.Root orientation="horizontal" readOnly>
         <Field.Label>From</Field.Label>
         <Field.Content>
-          <Input appearance="static" name="sender" defaultValue="hello@forma.studio" />
+          <Input readOnly name="sender" defaultValue="hello@forma.studio" />
         </Field.Content>
       </Field.Root>
       <Field.Root orientation="horizontal" required>

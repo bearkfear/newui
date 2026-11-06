@@ -4,9 +4,8 @@ export const tabsRecipe = tv({
   slots: {
     root: "nui:min-w-0",
     list: "nui-tabs-list",
-    trigger: "nui-tabs-trigger",
-    content:
-      "nui-tabs-content nui:min-w-0 nui:pt-4 nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
+    trigger: "nui-tabs-trigger nui-focus-ring nui:[--nui-focus-rest-offset:-3px]",
+    content: "nui-tabs-content nui:min-w-0 nui:pt-4 nui-focus-ring",
   },
   variants: {
     variant: {

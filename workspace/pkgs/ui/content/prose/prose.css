@@ -48,16 +48,13 @@
       padding-inline-start: 1.5em;
     }
     & :where(a) {
+      --nui-focus-rest-offset: 3px;
       color: var(--nui-primary-text);
       text-decoration: underline;
       text-underline-offset: 0.2em;
     }
     & :where(a:hover) {
       color: var(--nui-primary-text-strong);
-    }
-    & :where(a:focus-visible) {
-      outline: var(--nui-focus-width) solid var(--nui-focus-ring);
-      outline-offset: 3px;
     }
     & :where(blockquote) {
       border-inline-start: 3px solid var(--nui-border);

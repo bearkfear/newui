@@ -38,8 +38,6 @@
   }
   .nui-tabs-trigger:focus-visible {
     z-index: 2;
-    outline: var(--nui-focus-width) solid var(--nui-focus-ring);
-    outline-offset: -3px;
   }
   .nui-tabs-segmented {
     width: fit-content;

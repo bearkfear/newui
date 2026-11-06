@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import { Field } from "../field/field";
-import { TextareaExamples } from "../stories/text-field-matrices";
+import { TextareaExamples, TextTones } from "../stories/text-field-matrices";
 import { Textarea, type TextareaProps } from "./textarea";
 import "../stories/text-fields-demo.css";
 
@@ -47,7 +47,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
+export const Disabled: Story = {
+  args: { disabled: true, defaultValue: "A project brief that cannot be edited." },
+};
 export const Examples: Story = { render: () => <TextareaExamples /> };
+export const Tones: Story = {
+  render: () => <TextTones renderControl={() => <Textarea defaultValue="A semantic tone" />} />,
+};
 export const Small: Story = { args: { size: "sm", rows: 3 } };
 export const Large: Story = { args: { size: "lg" } };
 export const Standalone: Story = {

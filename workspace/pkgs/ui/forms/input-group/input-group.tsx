@@ -7,6 +7,7 @@ import {
 import type { TextControlOptions } from "../text-control.context";
 import { InputGroupContext, useTextControl } from "../text-control.context";
 import { textControlRecipe } from "../text-control.recipe";
+import { focusInputFromGroup, preserveInputFocusFromGroup } from "./input-group.events";
 import {
   InputGroupAction,
   InputGroupAddon,
@@ -32,6 +33,8 @@ export function InputGroupRoot(props: InputGroupRootProps) {
     "attached",
     "class",
     "children",
+    "onClick",
+    "onPointerDown",
   ]);
   const control = useTextControl(local);
   const buttons = useButtonGroup();
@@ -56,8 +59,21 @@ export function InputGroupRoot(props: InputGroupRootProps) {
   return (
     <InputGroupContext.Provider value={options}>
       <ButtonGroupContext.Provider value={buttonOptions}>
+        {/* biome-ignore lint/a11y/noStaticElementInteractions: Decorative hit areas forward clicks to the native input; the group is not a separate control. */}
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: Keyboard users focus the native input directly through Tab. */}
         <div
           {...rest}
+          data-nui-focus-container=""
+          onPointerDown={(event) => {
+            if (typeof local.onPointerDown === "function") local.onPointerDown(event);
+            else local.onPointerDown?.[0](local.onPointerDown[1], event);
+            preserveInputFocusFromGroup(event);
+          }}
+          onClick={(event) => {
+            if (typeof local.onClick === "function") local.onClick(event);
+            else local.onClick?.[0](local.onClick[1], event);
+            focusInputFromGroup(event);
+          }}
           data-attached={local.attached ? "" : undefined}
           data-invalid={control.invalid() ? "" : undefined}
           data-valid={control.valid() ? "" : undefined}
