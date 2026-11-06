@@ -16,7 +16,7 @@ bun run pack
 npm publish ./artifacts/newui-preview.tgz --dry-run --access public --tag next --ignore-scripts
 ```
 
-Review the package file list, README, license, changelog, version, public exports, and dependency graph. CI builds Storybook, including its isolated Tailwind preset example. The workspace patch is not propagated to installed packages, and the alpha does not claim full browser or SSR validation.
+Review the package file list, README, license, changelog, version, public exports, and dependency graph. The CI workflow builds Storybook, including its isolated Tailwind preset example, before the release PR is merged. The publishing workflow builds the library, runs lint and type checks, validates the packed exports, and publishes through npm OIDC; it does not rebuild Storybook. The workspace patch is not propagated to installed packages, and the alpha does not claim full browser or SSR validation.
 
 For the initial alpha, the tarball was also installed with npm into a separate consumer without workspace patches or overrides. A Solid/Vite build verified Actions, Forms, and the complete stylesheet. After adopting `@egcs/newui`, another clean consumer build verified the scoped imports, PostCSS plugin, modular Actions/Forms styles, and optional preset. This verifies installation and bundling, not the known runtime focus issue.
 
