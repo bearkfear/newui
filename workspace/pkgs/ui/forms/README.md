@@ -31,7 +31,7 @@ Field and InputGroup standardize text-field composition. Field groups and File U
 
 Ark owns label/description/error associations; newui appends success descriptions. Native attributes, refs, editing, FormData, value/defaultValue, and resets are preserved. See the [Field](field/README.md), [Input](input/README.md), [Textarea](textarea/README.md), and [Input Group](input-group/README.md) contracts. Form-library integration and the distinction between native selection and a custom Select remain separate decisions. Complete application examples belong to [Compositions](../compositions/README.md).
 
-Forms / Field / Overview covers the family, with interactive profile editing, password reveal/clear/search actions, sizes, tones, addons, loading, readonly/static/disabled states, explicit validation, horizontal layout, and mobile. Native Submission And Reset demonstrates browser form behavior. No new automated tests were added.
+Forms / Field / Overview covers the family, with interactive profile editing, password reveal/clear/search actions, sizes, tones, addons, loading, readonly/disabled states, explicit validation, horizontal layout, and mobile. Native Submission And Reset demonstrates browser form behavior. No new automated tests were added.
 
 ## Planned extensions
 

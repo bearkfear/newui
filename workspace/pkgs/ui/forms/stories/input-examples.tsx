@@ -37,7 +37,7 @@ export function PasswordField() {
   );
 }
 
-export function SearchField() {
+export function SearchField(props: { disabled?: boolean } = {}) {
   const [query, setQuery] = createSignal("");
   const [result, setResult] = createSignal("Search the project catalog.");
   return (
@@ -52,7 +52,7 @@ export function SearchField() {
         );
       }}
     >
-      <Field.Root>
+      <Field.Root disabled={props.disabled ?? false}>
         <Field.Label>Find a project</Field.Label>
         <InputGroup.Root attached>
           <InputGroup.Icon>

@@ -1,5 +1,6 @@
 @layer components {
   .nui-text-control {
+    --nui-focus-rest-offset: -1px;
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
@@ -7,17 +8,11 @@
     padding: var(--nui-text-block) var(--nui-text-padding);
     border: 1px solid var(--nui-text-border);
     border-radius: var(--nui-text-radius);
-    background: var(--nui-background);
-    color: var(--nui-foreground);
+    background: var(--nui-text-background);
+    color: var(--nui-text-color);
     font-family: inherit;
     font-size: var(--nui-text-font);
     line-height: var(--nui-leading-normal);
-    outline: calc(var(--nui-focus-width) + 1px) solid transparent;
-    outline-offset: 3px;
-    transition:
-      border-color 120ms ease-out,
-      outline-color 120ms ease-out,
-      outline-offset 120ms ease-out;
   }
   .nui-text-control::placeholder {
     color: var(--nui-muted-foreground);
@@ -48,11 +43,12 @@
   .nui-text-control:where(input, textarea):focus-visible,
   .nui-input-group:has(> .nui-text-control:focus-visible) {
     --nui-text-active-focus: var(--nui-text-focus);
-    outline-color: var(--nui-text-active-focus);
+    --nui-focus-color: var(--nui-text-active-focus);
     border-color: var(--nui-text-active-focus);
-    outline-offset: -1px;
   }
   .nui-text-control[data-valid] {
+    background: var(--nui-success-soft);
+    color: var(--nui-success-text-strong);
     border-color: var(--nui-success-border);
   }
   .nui-text-control[data-valid]:not(:disabled, [data-disabled]):hover,
@@ -62,6 +58,8 @@
     --nui-text-active-focus: var(--nui-success-focus);
   }
   .nui-text-control[data-invalid] {
+    background: var(--nui-danger-soft);
+    color: var(--nui-danger-text-strong);
     border-color: var(--nui-danger-border);
   }
   .nui-text-control[data-invalid]:not(:disabled, [data-disabled]):hover,
@@ -73,8 +71,9 @@
   .nui-text-control[data-loading] {
     cursor: progress;
   }
-  .nui-text-control:is(input, textarea):read-only {
+  .nui-text-control:is(input, textarea):read-only:where(:not(:disabled)) {
     background: var(--nui-surface);
+    color: var(--nui-foreground);
   }
   .nui-text-control:disabled,
   .nui-input-group[data-disabled],
@@ -86,25 +85,5 @@
   }
   .nui-text-control:disabled::placeholder {
     color: var(--nui-disabled-foreground);
-  }
-  input.nui-text-control[data-appearance="static"]:where(:not(:disabled)) {
-    padding-inline: 0;
-    border-color: transparent;
-    background: transparent;
-    border-radius: 0;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .nui-text-control {
-      transition: none;
-    }
-  }
-  [data-motion="reduced"] .nui-text-control {
-    transition: none;
-  }
-  @media (forced-colors: active) {
-    .nui-text-control:where(input, textarea):focus-visible,
-    .nui-input-group:has(> .nui-text-control:focus-visible) {
-      outline-color: Highlight;
-    }
   }
 }

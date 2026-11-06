@@ -27,9 +27,13 @@ InputGroup composes a single text input with decorative icons, adornments, and a
 
 ## Composition
 
+Colored tones carry through the addon background, text, and divider. Its background is one soft step stronger than the editable surface. Neutral, readonly, and disabled addons retain neutral surfaces.
+
 Use one primary Input as a direct Root child. Put start parts before it and end parts after it. Icon placement also controls visual order; action/addon order follows the composition. Use `attached` for an action button flush with the control edge; ordinary actions are inset. The group reserves icon space without drawing over the typed value. Shared focus styling follows the input's visible focus; action buttons retain their own focus indicator.
 
 Inputs and action Buttons follow the same control-height tokens in all three sizes. Attached actions overlap the group's one-pixel border at the outer edge, so the button's height and corner radius follow the group's outer contour without an inset seam. Leading and trailing actions preserve their respective outer corners. Validation colors apply to the group border and decorative icons; disabled styles take priority. Native disabled fieldsets also style and disable the input through platform semantics. Parent disabled/invalid/readonly states cannot be cleared on the Input. Local custom Buttons remain responsible for respecting any application-specific restrictions.
+
+Attached groups paint the input focus contour above the action surface so positioned Buttons cannot cover its inner edge. The contour follows the shell's color, offset, animation, reduced-motion setting, and forced colors; action Buttons retain their independent focus indicator.
 
 Use separate Fields for independently labeled controls. This first delivery does not include Select, numeric parsing, masks, or a general multi-control form group. Root can be used without Field when the Input has its own accessible name. Themes, tokens, reduced motion, events, and native refs remain supported.
 

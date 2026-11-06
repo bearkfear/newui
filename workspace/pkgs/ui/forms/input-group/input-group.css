@@ -13,6 +13,7 @@
     border-radius: 0;
     background: transparent;
     outline: none;
+    animation: none;
   }
   .nui-input-group > .nui-text-control:first-child {
     border-start-start-radius: max(0px, calc(var(--nui-text-radius) - 1px));
@@ -26,6 +27,7 @@
     :has(> :disabled)
   ) {
     background: var(--nui-surface);
+    color: var(--nui-foreground);
   }
   .nui-input-group-icon,
   .nui-input-group-addon,
@@ -38,6 +40,7 @@
     border-radius: inherit;
   }
   .nui-input-group-icon {
+    color: var(--nui-text-addon-color);
     width: calc(var(--nui-text-height) - 2px);
     pointer-events: none;
   }
@@ -55,20 +58,37 @@
   }
   .nui-input-group-addon {
     padding-inline: var(--nui-text-padding);
-    background: var(--nui-surface);
+    background: var(--nui-text-addon-background);
+    color: var(--nui-text-addon-color);
   }
   .nui-input-group-addon[data-placement="start"] {
-    border-inline-end: 1px solid var(--nui-border);
+    border-inline-end: 1px solid var(--nui-text-border);
     border-start-end-radius: 0;
     border-end-end-radius: 0;
   }
   .nui-input-group-addon[data-placement="end"] {
-    border-inline-start: 1px solid var(--nui-border);
+    border-inline-start: 1px solid var(--nui-text-border);
     border-start-start-radius: 0;
     border-end-start-radius: 0;
   }
   .nui-input-group-action {
     padding: 0.1875rem;
+  }
+  .nui-input-group[data-attached] {
+    position: relative;
+    outline-style: none;
+  }
+  /* Paint the shell's focus above positioned action Buttons, including its inner pixel. */
+  .nui-input-group[data-attached]::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: 1;
+    border-radius: inherit;
+    outline: calc(var(--nui-focus-width) + 1px) solid;
+    outline-color: inherit;
+    outline-offset: inherit;
+    pointer-events: none;
   }
   .nui-input-group[data-attached] > .nui-input-group-action {
     padding: 0;
@@ -86,16 +106,33 @@
   .nui-input-group:has(> .nui-input-group-icon[data-placement="end"]) > .nui-text-control {
     padding-inline-end: 0.375rem;
   }
-  .nui-input-group[data-valid] > .nui-input-group-icon {
+  .nui-input-group:where([data-valid]) > .nui-input-group-icon {
     color: var(--nui-success-text);
   }
-  .nui-input-group[data-invalid] > .nui-input-group-icon {
+  .nui-input-group:where([data-valid]) > .nui-input-group-addon {
+    background: var(--nui-success-soft-hover);
+    color: var(--nui-success-text);
+    border-color: var(--nui-success-border);
+  }
+  .nui-input-group:where([data-invalid]) > .nui-input-group-addon {
+    background: var(--nui-danger-soft-hover);
     color: var(--nui-danger-text);
+    border-color: var(--nui-danger-border);
+  }
+  .nui-input-group:where([data-invalid]) > .nui-input-group-icon {
+    color: var(--nui-danger-text);
+  }
+  .nui-input-group:where([data-readonly], :has(> [readonly]))
+    > :is(.nui-input-group-icon, .nui-input-group-addon) {
+    background: var(--nui-surface);
+    color: var(--nui-muted-foreground);
+    border-color: var(--nui-border);
   }
   .nui-input-group:is([data-disabled], :has(> .nui-text-control:disabled))
     > :where(.nui-input-group-icon, .nui-input-group-addon) {
     color: var(--nui-disabled-foreground);
     background: var(--nui-disabled-background);
+    border-color: var(--nui-disabled-border);
   }
 }
 

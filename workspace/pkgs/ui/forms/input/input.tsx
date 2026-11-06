@@ -9,7 +9,6 @@ export type InputProps = Omit<ArkField.InputProps, "size" | "type"> &
   TextControlOptions & {
     type?: "text" | "email" | "password" | "search" | "tel" | "url";
     htmlSize?: number;
-    appearance?: "default" | "static";
     defaultValue?: string;
   };
 
@@ -24,7 +23,6 @@ export function Input(props: InputProps) {
     "disabled",
     "readOnly",
     "htmlSize",
-    "appearance",
     "class",
     "aria-describedby",
     "aria-invalid",
@@ -40,14 +38,13 @@ export function Input(props: InputProps) {
       ref={(element) => initializeTextControl(element, initialValue, local.ref)}
       size={local.htmlSize}
       disabled={control.disabled()}
-      readOnly={local.appearance === "static" || control.readOnly()}
+      readOnly={control.readOnly()}
       aria-describedby={control.describedBy(local["aria-describedby"])}
       aria-invalid={control.invalid() ? "true" : local["aria-invalid"]}
       aria-busy={control.loading() || local["aria-busy"]}
       data-invalid={control.invalid() ? "" : undefined}
       data-valid={control.valid() ? "" : undefined}
       data-loading={control.loading() ? "" : undefined}
-      data-appearance={local.appearance ?? "default"}
       class={textControlRecipe({
         size: control.size(),
         tone: control.tone(),

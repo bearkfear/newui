@@ -135,7 +135,7 @@ Image/Figure, Box/Surface, Stack, and AutoGrid are excluded; no additional media
 
 ### 7. Forms (last implementation stage)
 
-- [x] Implement Field, Input, Textarea, and InputGroup using Ark Field, native text editing, Radix/Bulma-inspired sizes and tones, icons/addons/actions, explicit valid/invalid feedback, loading, readonly/static/disabled states, and reviewable Storybook examples.
+- [x] Implement Field, Input, Textarea, and InputGroup using Ark Field, native text editing, Radix/Bulma-inspired sizes and tones, icons/addons/actions, explicit valid/invalid feedback, loading, readonly/disabled states, and reviewable Storybook examples.
 - [ ] Obtain user validation of the text-field family, native submission/reset, accessible associations, and responsive examples.
 - [ ] Checkbox, Radio Group, Switch, Toggle, and Toggle Group.
 - [ ] Number Field, OTP Field, and Slider.

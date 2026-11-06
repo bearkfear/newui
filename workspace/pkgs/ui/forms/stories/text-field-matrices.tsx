@@ -1,5 +1,5 @@
 import { AlertCircle, Check, Mail } from "lucide-solid";
-import { For } from "solid-js";
+import { For, type JSX } from "solid-js";
 import { Button } from "../../actions/button/button";
 import { Field } from "../field/field";
 import { Input } from "../input/input";
@@ -40,14 +40,14 @@ export function TextSizes() {
   );
 }
 
-export function TextTones() {
+export function TextTones(props: { renderControl?: () => JSX.Element } = {}) {
   return (
     <div class="text-fields-demo-grid">
       <For each={textTones}>
         {(tone) => (
           <Field.Root tone={tone}>
             <Field.Label>{tone}</Field.Label>
-            <Input placeholder="A semantic border tone" />
+            {props.renderControl?.() ?? <Input defaultValue="A semantic tone" />}
             <Field.Description>
               Appearance does not imply that validation has run.
             </Field.Description>
@@ -104,10 +104,6 @@ export function ReadonlyAndDisabled() {
         <Field.Label>Readonly</Field.Label>
         <Input defaultValue="FORMA-2026" />
         <Field.Description>Focusable, selectable, and included in form data.</Field.Description>
-      </Field.Root>
-      <Field.Root readOnly>
-        <Field.Label>Static appearance</Field.Label>
-        <Input appearance="static" defaultValue="hello@forma.studio" />
       </Field.Root>
       <Field.Root disabled invalid>
         <Field.Label>Disabled</Field.Label>

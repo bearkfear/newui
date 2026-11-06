@@ -63,6 +63,7 @@ export function InputGroupRoot(props: InputGroupRootProps) {
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: Keyboard users focus the native input directly through Tab. */}
         <div
           {...rest}
+          data-nui-focus-container=""
           onPointerDown={(event) => {
             if (typeof local.onPointerDown === "function") local.onPointerDown(event);
             else local.onPointerDown?.[0](local.onPointerDown[1], event);
