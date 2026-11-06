@@ -14,7 +14,7 @@ Input accepts the shared size, tone, rounded, valid, invalid, loading, disabled,
 
 Compose InputGroup for icons, adornments, and named actions. Loading alone exposes busy state and a progress cursor; InputGroup.Loading supplies the visible indicator. Password reveal and clearing are reviewable application compositions, not implicit Input behavior.
 
-Text-family focus merges the border and shared-width outline into one continuous contour, without the gap used by standalone action controls. Focus retains its color while hovered, including valid and invalid states. InputGroup applies this contour to its outer shell.
+Text-family focus draws a 3px outline with the default focus metrics. It converges from a 3px outer offset to overlap the border at -1px in 120ms with an ease-out curve. Border and outline use the same color, forming one continuous contour at rest. Focus retains its color while hovered, including valid and invalid states. InputGroup applies the indicator to its outer shell. Reduced motion removes movement and color transitions; forced colors retains a system-colored outline.
 
 ## Review
 

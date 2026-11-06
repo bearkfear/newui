@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- Refine Input, Textarea, and InputGroup focus with a single-color 3px contour that converges inward in 120ms. Preserve validation colors, reduced-motion preferences, and a visible system outline in forced colors.
+
 ## 0.1.0-alpha.1
 
 Release automation validation: publish through the authorized GitHub Actions OIDC workflow on the `next` tag. Component code and APIs are unchanged from `0.1.0-alpha.0`; incomplete Forms and the known focus-visible limitation still apply.

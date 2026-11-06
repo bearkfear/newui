@@ -12,9 +12,11 @@
     font-family: inherit;
     font-size: var(--nui-text-font);
     line-height: var(--nui-leading-normal);
+    outline: calc(var(--nui-focus-width) + 1px) solid transparent;
+    outline-offset: -1px;
     transition:
-      border-color var(--nui-motion-duration),
-      outline-color var(--nui-motion-duration);
+      border-color 120ms ease-out,
+      outline-color 120ms ease-out;
   }
   .nui-text-control::placeholder {
     color: var(--nui-muted-foreground);
@@ -44,9 +46,10 @@
   }
   .nui-text-control:where(input, textarea):focus-visible,
   .nui-input-group:has(> .nui-text-control:focus-visible) {
-    outline: var(--nui-focus-width) solid var(--nui-text-focus);
-    outline-offset: -1px;
-    border-color: var(--nui-text-focus);
+    --nui-text-active-focus: var(--nui-text-focus);
+    outline-color: var(--nui-text-active-focus);
+    border-color: var(--nui-text-active-focus);
+    animation: nui-text-focus-in var(--nui-text-focus-duration, 120ms) ease-out;
   }
   .nui-text-control[data-valid] {
     border-color: var(--nui-success-border);
@@ -54,8 +57,8 @@
   .nui-text-control[data-valid]:not(:disabled, [data-disabled]):hover,
   .nui-text-control[data-valid]:focus-visible,
   .nui-input-group[data-valid]:has(> .nui-text-control:focus-visible) {
-    border-color: var(--nui-success-border-hover);
-    outline-color: var(--nui-success-focus);
+    border-color: var(--nui-success-focus);
+    --nui-text-active-focus: var(--nui-success-focus);
   }
   .nui-text-control[data-invalid] {
     border-color: var(--nui-danger-border);
@@ -63,8 +66,8 @@
   .nui-text-control[data-invalid]:not(:disabled, [data-disabled]):hover,
   .nui-text-control[data-invalid]:focus-visible,
   .nui-input-group[data-invalid]:has(> .nui-text-control:focus-visible) {
-    border-color: var(--nui-danger-border-hover);
-    outline-color: var(--nui-danger-focus);
+    border-color: var(--nui-danger-focus);
+    --nui-text-active-focus: var(--nui-danger-focus);
   }
   .nui-text-control[data-loading] {
     cursor: progress;
@@ -91,10 +94,26 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .nui-text-control {
+      --nui-text-focus-duration: 0s;
       transition: none;
     }
   }
   [data-motion="reduced"] .nui-text-control {
+    --nui-text-focus-duration: 0s;
     transition: none;
+  }
+  @media (forced-colors: active) {
+    .nui-text-control:where(input, textarea):focus-visible,
+    .nui-input-group:has(> .nui-text-control:focus-visible) {
+      outline-color: Highlight;
+    }
+  }
+  @keyframes nui-text-focus-in {
+    from {
+      outline-offset: 3px;
+    }
+    to {
+      outline-offset: -1px;
+    }
   }
 }
