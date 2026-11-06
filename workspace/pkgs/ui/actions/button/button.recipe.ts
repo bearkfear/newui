@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants/lite";
 
 export const buttonRecipe = tv({
-  base: "nui-button nui:relative nui:inline-flex nui:shrink-0 nui:items-center nui:justify-center nui:gap-2 nui:border nui:font-medium nui:leading-none nui:cursor-pointer nui:select-none nui:transition-colors nui:motion-reduce:transition-none nui:focus-visible:z-10 nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-[var(--nui-button-focus)] nui:disabled:cursor-not-allowed",
+  base: "nui-button nui:relative nui:inline-flex nui:shrink-0 nui:items-center nui:justify-center nui:gap-2 nui:border nui:font-medium nui:leading-none nui:cursor-pointer nui:select-none nui:motion-reduce:transition-none nui:focus-visible:z-10 nui-focus-ring nui:[--nui-focus-color:var(--nui-button-focus)] nui:disabled:cursor-not-allowed",
   variants: {
     variant: {
       solid:

@@ -17,6 +17,8 @@ CSS distribution roots → visual foundations + component styles + recipe source
 
 Visual foundations are `foundations/base.css`, `radix.css`, `tokens.css`, and `metrics.css`. They contain values, themes, and utility mappings without importing component implementations or styles. Component-specific token names alone do not create module dependencies.
 
+`foundations/focus.css`, imported by `base.css`, owns the shared focus contour, timing, reduced-motion behavior, and forced-color fallback. Components consume its classes and local color/offset variables without importing each other.
+
 Support modules include recipes, contexts, type contracts, and the theme-preserving portal helpers in Overlays. These stay with their owning areas. They may use Solid, Ark, or tailwind-variants without importing the component implementations that consume them.
 
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.

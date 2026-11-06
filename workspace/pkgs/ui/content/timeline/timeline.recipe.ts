@@ -19,7 +19,7 @@ export const timelineRecipe = tv({
     orientation: {
       vertical: {},
       horizontal: {
-        root: "nui:overflow-x-auto nui:overscroll-x-contain nui:pb-2 nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring",
+        root: "nui:overflow-x-auto nui:overscroll-x-contain nui:pb-2 nui-focus-ring",
       },
     },
   },

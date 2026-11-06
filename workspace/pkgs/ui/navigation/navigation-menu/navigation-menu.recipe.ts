@@ -1,7 +1,6 @@
 import { tv } from "tailwind-variants/lite";
 
-const focus =
-  "nui:focus-visible:outline-[length:var(--nui-focus-width)] nui:focus-visible:outline-offset-[var(--nui-focus-offset)] nui:focus-visible:outline-focus-ring";
+const focus = "nui-focus-ring";
 const entry = `nui:flex nui:min-w-0 nui:items-center nui:gap-2 nui:border-0 nui:bg-transparent nui:py-3 nui:text-sm nui:font-medium nui:text-muted-foreground nui:no-underline nui:wrap-anywhere nui:cursor-pointer nui:hover:text-foreground nui:aria-[current=page]:text-[var(--nui-primary-text)] ${focus}`;
 
 export const navigationMenuRecipe = tv({

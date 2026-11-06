@@ -1,0 +1,47 @@
+@layer components {
+  :is(.nui-focus-ring, .nui-focus-links :where(a)) {
+    outline: calc(var(--nui-focus-width) + 1px) solid transparent;
+    outline-offset: var(--nui-focus-rest-offset, var(--nui-focus-offset));
+    transition:
+      color var(--nui-motion-duration) var(--nui-motion-easing),
+      background-color var(--nui-motion-duration) var(--nui-motion-easing),
+      border-color var(--nui-motion-duration) var(--nui-motion-easing),
+      text-decoration-color var(--nui-motion-duration) var(--nui-motion-easing),
+      fill var(--nui-motion-duration) var(--nui-motion-easing),
+      stroke var(--nui-motion-duration) var(--nui-motion-easing),
+      outline-color 80ms ease-out;
+  }
+  :is(.nui-focus-ring, .nui-focus-links :where(a)):where(
+    :focus-visible,
+    [data-nui-focus-container]:has(> :is(input, textarea):focus-visible)
+  ) {
+    outline-color: var(--nui-focus-color, var(--nui-focus-ring));
+    animation: nui-focus-in 120ms ease-out;
+  }
+  @keyframes nui-focus-in {
+    from {
+      outline-offset: calc(var(--nui-focus-rest-offset, var(--nui-focus-offset)) + 4px);
+    }
+    to {
+      outline-offset: var(--nui-focus-rest-offset, var(--nui-focus-offset));
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :is(.nui-focus-ring, .nui-focus-links :where(a)) {
+      transition: none;
+      animation: none;
+    }
+  }
+  [data-motion="reduced"] :is(.nui-focus-ring, .nui-focus-links :where(a)) {
+    transition: none;
+    animation: none;
+  }
+  @media (forced-colors: active) {
+    :is(.nui-focus-ring, .nui-focus-links :where(a)):where(
+        :focus-visible,
+        [data-nui-focus-container]:has(> :is(input, textarea):focus-visible)
+      ) {
+      outline-color: Highlight;
+    }
+  }
+}

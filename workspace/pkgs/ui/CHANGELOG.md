@@ -4,8 +4,8 @@
 
 ### Fixed
 
-- Refine Input, Textarea, and InputGroup focus with a single-color 3px contour that converges inward in 120ms. Preserve validation colors, reduced-motion preferences, and a visible system outline in forced colors.
-- Smooth focus exit with a reversible outward fade and prevent the inner InputGroup control from flashing an outline on blur.
+- Share a single-color focus contour across buttons, links, tabs, and other outlined controls, converging inward in 120ms. Preserve component colors, intentional offsets, reduced-motion preferences, and a visible system outline in forced colors.
+- Fade focus out in place over 80ms and prevent the inner InputGroup control from flashing an outline on blur.
 - Focus the InputGroup input when clicking decorative icons or empty group space. Preserve focus and text selection when the input is already active, without restarting the focus transition.
 
 ## 0.1.0-alpha.1

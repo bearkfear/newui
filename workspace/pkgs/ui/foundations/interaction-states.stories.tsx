@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
+import { FocusMotion } from "./stories/focus-motion";
 import { FocusAndStates, MotionSample } from "./stories/interaction-samples";
 
 const meta = {
@@ -26,3 +27,4 @@ export const Overview: Story = {
 
 export const Dark: Story = { ...Overview, globals: { theme: "dark" } };
 export const ReducedMotion: Story = { ...Overview, globals: { motion: "reduced" } };
+export const SharedFocus: Story = { render: () => <FocusMotion /> };

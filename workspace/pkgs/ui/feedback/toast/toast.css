@@ -12,7 +12,8 @@
   translate: var(--x) var(--y);
   transition:
     translate 180ms ease,
-    opacity 180ms ease;
+    opacity 180ms ease,
+    outline-color 80ms ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .nui-toast-root {

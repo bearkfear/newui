@@ -4,7 +4,9 @@
 
 Focus, disabled state, selected state, loading, and motion have separate contracts. Accessible behavior remains native or owned by Ark; visual tokens do not replace that behavior.
 
-Keyboard focus uses `--nui-focus-width` (2px), `--nui-focus-offset` (2px), and `--nui-focus-ring` (Blue 8). Button uses its tone-specific focus color. Inset focus is retained for controls inside clipping surfaces; some text links use a 4px offset and Tabs/Prose retain their 3px inset/outset. Those intentional offsets do not use the general offset token. Preserve a visible outline rather than relying only on a color change. Theme and override contrast still need visual review.
+Keyboard focus shares `foundations/focus.css` through the `nui-focus-ring` class; rich text uses `nui-focus-links` for its native links. The contour is `--nui-focus-width` (2px) plus 1px, converges inward over 120ms, and fades in place over 80ms on blur. Button retains its tone-specific color. Inputs merge the contour with their border; other controls retain `--nui-focus-offset` (2px), inset placement for clipping surfaces, or intentional link spacing. Menus retain Ark's highlighted-item feedback and their intentionally outline-free content surfaces.
+
+The shared rules use `--nui-focus-color` (default `--nui-focus-ring`, Blue 8) and `--nui-focus-rest-offset` (default `--nui-focus-offset`) for local presentation. `data-nui-focus-container` lets a decorative control shell follow its direct native input's visible focus. Reduced motion removes the animation and transition; forced colors uses a system-colored outline. Theme and override contrast still need visual review.
 
 Disabled controls use neutral step 3 backgrounds, step 6 borders, and step 8 text where their component presentation includes those surfaces. Native disabled buttons do not activate or enter the Tab order. Native links have no disabled attribute; do not imply disabled behavior through styling alone. Selected states use the owning primitive's attributes or semantic native attributes; presentational Table row highlighting does not implement selection.
 
