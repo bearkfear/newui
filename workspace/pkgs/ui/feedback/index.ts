@@ -29,3 +29,11 @@ export type { ToastRootProps } from "./toast/toast";
 export { Toast } from "./toast/toast";
 export type { ToasterProps } from "./toast/toaster";
 export { Toaster } from "./toast/toaster";
+export { createTopProgress } from "./top-progress/create-top-progress";
+export type { TopProgressProps } from "./top-progress/top-progress";
+export { TopProgress } from "./top-progress/top-progress";
+export type {
+  CreateTopProgressOptions,
+  TopProgressController,
+  TopProgressState,
+} from "./top-progress/top-progress.contract";

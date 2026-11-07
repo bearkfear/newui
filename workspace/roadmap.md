@@ -74,6 +74,9 @@ The catalog starts early and grows with each component.
 - [x] Implement Progress and Progress Circle with Ark state, numeric/indeterminate values, tones, sizes, and reduced-motion support.
 - [x] Obtain user validation of Progress and Progress Circle in Storybook.
 
+- [x] Implement TopProgress with an Ark-backed page bar, shareable controller, manual/automatic progress, overlapping promise tracking, and Storybook examples.
+- [x] Obtain user validation of TopProgress, global usage, concurrent requests, and motion/theme behavior.
+
 ### 4. Navigation and interaction
 
 - [x] Implement Accordion and Collapsible with Ark behavior, shared styling, native disabled states, and disclosure animations.

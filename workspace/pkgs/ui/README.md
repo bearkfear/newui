@@ -66,6 +66,21 @@ Controlled value/defaultValue use raw strings; onValueChange exposes rawValue, f
 
 Definitions are capped at 256 UTF-16 code units per pattern, 16 alternatives, and 64 custom tokens. validateTextMaskOptions checks unknown backend configuration before rendering; textMaskLimits exposes the bounds. See the [mask contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/masked-input/README.md) and [configuration guide](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/masked-input/configuration.md).
 
+## Show global page progress
+
+```tsx
+import { createTopProgress, TopProgress } from "@egcs/newui/feedback";
+
+// Create once per application root; share via context when using SSR.
+const progress = createTopProgress();
+<TopProgress controller={progress} label="Loading page" />;
+
+// Call from page loaders or other application operations.
+await progress.track(fetch("/api/projects"));
+```
+
+Mount one bar per controller. Overlapping tracked operations keep it visible until all settle. For manual work, call `start()` then `done()` or `fail()`; `set(value)` reports known numeric progress. Requests finishing before the default 150ms delay stay hidden. See the [TopProgress contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/feedback/top-progress/README.md).
+
 ## Use your application's Tailwind
 
 Install Tailwind 4.3.3+, `@tailwindcss/postcss`, and PostCSS 8.5+ as development dependencies. Configure `postcss.config.mjs`:
