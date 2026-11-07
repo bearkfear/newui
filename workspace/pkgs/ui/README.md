@@ -2,7 +2,7 @@
 
 Composable components for **SolidJS**, with shared spacing, typography, Radix color tokens, automatic light/dark themes, and optional Tailwind integration.
 
-**Experimental alpha:** APIs may change. Forms currently includes Field, Input, MaskedInput, Textarea, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
+**Experimental alpha:** APIs may change. Forms currently includes Field, Input, MaskedInput, NumberInput, CurrencyInput, Textarea, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
 
 ## Install
 
@@ -65,6 +65,23 @@ unmaskText("123.456.789-00", documentMask); // "12345678900"
 Controlled value/defaultValue use raw strings; onValueChange exposes rawValue, formattedValue, and complete. Native forms submit formatted text by default, or raw text with submitValue="raw". Custom tokens can map & to digits, transform case, or disable defaults. The masking entry runs in Node without a DOM; component aggregators remain client entries.
 
 Definitions are capped at 256 UTF-16 code units per pattern, 16 alternatives, and 64 custom tokens. validateTextMaskOptions checks unknown backend configuration before rendering; textMaskLimits exposes the bounds. See the [mask contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/masked-input/README.md) and [configuration guide](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/masked-input/configuration.md).
+
+## Enter numbers and currency
+
+```tsx
+import { CurrencyInput, NumberInput } from "@egcs/newui/forms";
+import { formatCurrency, parseNumber } from "@egcs/newui/numbers";
+
+<NumberInput locale="pt-BR" defaultValue="1234.56" maximumFractionDigits={4} />;
+<CurrencyInput locale="pt-BR" currency="BRL" entryMode="minor-unit" submitValue="raw" />;
+
+formatCurrency("1234.56", { locale: "pt-BR", currency: "BRL" }); // "R$\u00a01.234,56"
+parseNumber("1.234,56", { locale: "pt-BR" }); // { status: "valid", value: "1234.56" }
+```
+
+Values remain exact major-unit decimal strings, independent of display separators. Configure grouping, fractional precision, sign rules and string min/max bounds. Currency defaults follow the selected currency; locale and currency are independent. Automatic minor-unit entry shifts typed digits (1234 becomes 12,34 for BRL), while initial and pasted values represent complete amounts. The minus key toggles the whole sign anywhere in the input.
+
+Both fields compose with Field/InputGroup, icons, addons and actions. Native forms submit formatted values by default or canonical strings with submitValue="raw". The numbers entry exposes number/currency formatting, parsing, configuration validation and types without UI or DOM dependencies. See the [number contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/number-input/README.md) and [currency contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/currency-input/README.md) for supported locales, precision limits and editing behavior.
 
 ## Show global page progress
 

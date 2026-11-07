@@ -1,3 +1,11 @@
+export type {
+  CurrencyEntryMode,
+  CurrencyFormatOptions,
+  CurrencyValueDetails,
+} from "./currency-input";
+export { formatCurrency, parseCurrency, validateCurrencyFormatOptions } from "./currency-input";
+export { CurrencyInput } from "./currency-input/currency-input";
+export type { CurrencyInputProps } from "./currency-input/currency-input.types";
 export type { FieldRootProps } from "./field/field";
 export { Field } from "./field/field";
 export type {
@@ -28,6 +36,20 @@ export { textMaskLimits, validateTextMaskOptions } from "./masked-input/input-ma
 export { maskText, unmaskText } from "./masked-input/mask-text";
 export type { MaskedInputProps } from "./masked-input/masked-input";
 export { MaskedInput } from "./masked-input/masked-input";
+export type {
+  NumberFormatOptions,
+  NumberInvalidReason,
+  NumberParseResult,
+  NumberValueDetails,
+} from "./number-input";
+export {
+  formatNumber,
+  numberFormatLimits,
+  parseNumber,
+  validateNumberFormatOptions,
+} from "./number-input";
+export type { NumberInputProps } from "./number-input/number-input";
+export { NumberInput } from "./number-input/number-input";
 export type { TextControlSize, TextControlTone } from "./text-control.context";
 export type { TextareaProps } from "./textarea/textarea";
 export { Textarea } from "./textarea/textarea";

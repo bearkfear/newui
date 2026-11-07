@@ -1,6 +1,6 @@
 {
   "name": "@egcs/newui",
-  "version": "0.1.0-alpha.4",
+  "version": "0.1.0-alpha.5",
   "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
@@ -79,6 +79,10 @@
       "types": "./dist/types/forms/masked-input/index.d.ts",
       "solid": "./dist/masking.jsx",
       "import": "./dist/masking.js"
+    },
+    "./numbers": {
+      "types": "./dist/types/forms/number-input/index.d.ts",
+      "import": "./dist/numbers.js"
     },
     "./layout": {
       "types": "./dist/types/layout/index.d.ts",

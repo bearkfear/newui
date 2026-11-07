@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.5
+
+### Added
+
+- Add NumberInput and CurrencyInput with exact canonical decimal string values, configurable locale/grouping, fractional precision, sign rules and decimal-string range validation.
+- Support decimal currency entry and automatic minor-unit entry, with currency-derived fractional defaults, configurable currency symbols/codes and InputGroup prefix/suffix composition.
+- Toggle the entire value's sign with the minus key while preserving selection. Keep mobile keyboards supported through composed sign actions.
+- Export formatNumber, parseNumber, formatCurrency, parseCurrency, configuration validators and types through the DOM-independent numbers entry and the main/Forms entries.
+- Preserve initial/external values, controlled editing, undo/redo and native form submission/reset. Currency clipboard input accepts complete localized amounts with or without its configured decoration.
+- Add reviewed Storybook examples for locales, currencies, decimal places, entry modes, large precise values, composition, forms, states, themes, mobile and independent helpers.
+
+### Changed
+
+- Share the existing canceled-reset-aware text-control binding between pattern masks and decimal inputs.
+
+The number and currency components were reviewed in Storybook and explored in Chromium. Dedicated automated coverage has not been added. Actual iPhone keyboards, IME and broader browser parity remain unverified. Existing alpha limitations still apply.
+
 ## 0.1.0-alpha.4
 
 ### Added

@@ -27,6 +27,10 @@ Forms / maskText and unmaskText reuse the same compiler and token contract throu
 
 The mask's TextMaskElement specializes IMask's DOM bridge only to gate undo/redo for native readonly/disabled controls. IMask still owns event binding, selection, and editing history; the bridge imports no newui component.
 
+Forms / NumberInput composes Input and reuses TextMaskElement plus the shared text-control reset binding. Its DecimalMask specializes IMask's string editing, grouping and blur padding while disabling numeric comparisons. Decimal helpers own normalization, exact string comparisons and Intl grouping; they import no components, Solid, IMask or styles and are exported through the DOM-independent numbers entry. Ark NumberInput's floating-point value path does not meet this precision contract.
+
+Forms / CurrencyInput reuses the decimal renderer/controller through an internal behavior contract and composes InputGroup currency addons. Currency helpers depend only on numeric helpers and Intl metadata. MinorUnitMask specializes DecimalMask's integer editing with fixed fractional decoration; it does not own a separate editing state machine. Public number/currency helpers share the numbers entry without importing either input component.
+
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.
 
 ## Current cross-area implementation dependencies

@@ -11,6 +11,8 @@ Enter and edit values with consistent labels, help text, errors, and states.
 - [Textarea](textarea/README.md): multiline native text controls with optional Ark autoresize.
 - [InputGroup](input-group/README.md): icons, addons, prefixes, suffixes, and attached actions.
 - [MaskedInput](masked-input/README.md): opt-in pattern masking, configurable tokens, raw values, and native form submission.
+- [NumberInput](number-input/README.md): exact decimal strings, locale grouping, configurable precision, and independent number helpers.
+- [CurrencyInput](currency-input/README.md): configurable currencies, decimal/minor-unit entry, currency addons, and independent currency helpers.
 
 The remaining Forms catalog is unfinished. These components do not include a form validation engine or form-library integration.
 
