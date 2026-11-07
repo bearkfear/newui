@@ -19,4 +19,4 @@ Formatting for display, parsing user input, and validating values are separate c
 - Handling of empty, invalid, and partial values.
 - Whether any needs require an external dependency.
 
-This is planning only; no formatting API is implemented or exported yet.
+General internationalized formatting remains planned. Pattern-based text formatting is available through the Forms [maskText and unmaskText helpers](../forms/masked-input/text-helpers.md), which share MaskedInput's token configuration without depending on a component or DOM element.

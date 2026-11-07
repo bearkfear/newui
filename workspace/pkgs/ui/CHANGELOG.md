@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.1.0-alpha.3
+
+### Added
+
+- Add MaskedInput with raw controlled values, configurable tokens, case transforms, escaped literals, progressive masks, and Field/InputGroup composition. IMask owns text editing and cursor behavior.
+- Export maskText and unmaskText for plain strings, plus TextMaskOptions and token/value types, from the main and Forms entries. Add the DOM-independent masking entry for helpers and configuration validation in Node and browsers.
+- Validate backend mask settings before compilation with validateTextMaskOptions. Export textMaskLimits: 256 UTF-16 code units per pattern, 16 alternatives, and 64 custom tokens. Invalid definitions are rejected rather than shortened.
+- Add explicit formatted/raw native form submission, reviewable Storybook examples, and authorized regression coverage for helpers, configuration, clipboard editing, and forms.
+
+### Fixed
+
+- Clear stale undo history on accepted reset, external controlled replacements, and mask configuration changes. Preserve normal editing history and canceled resets.
+- Wait until native reset propagation completes before checking cancellation. Preserve readonly/disabled state for IMask undo/redo.
+- Preserve the final visible InputGroup control's corners when raw mask submission appends a hidden input.
+- Prefer the shorter dynamic pattern when editable input fits multiple masks, including after pasting formatted phone text and deleting the eleventh digit.
+
+### Changed
+
+- Keep the Storybook build in pull-request/main CI and remove the duplicate build from npm publishing. Publishing still builds and checks the library and validates packed exports before npm OIDC publication.
+
+The alpha's existing focus-visible dependency, incomplete Forms, browser coverage, and SSR/hydration limitations still apply. See the known limitations below.
+
 ## 0.1.0-alpha.2
 
 ### Changed

@@ -50,6 +50,13 @@ jobs:
       - name: Build Storybook
         run: bun run build:storybook
 
+      - name: Install Chromium for mask regression coverage
+        working-directory: workspace/apps/storybook
+        run: bunx --no-install playwright install --with-deps chromium
+
+      - name: Run mask regression coverage
+        run: bun run test:masking
+
       - name: Pack library and verify public exports
         run: bun run pack
 

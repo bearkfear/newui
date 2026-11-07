@@ -1,6 +1,7 @@
 import { execFileSync } from "node:child_process";
 import { mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { verifyMaskingEntry } from "./verify-masking-entry";
 
 const workspace = fileURLToPath(new URL("../../", import.meta.url));
 const output = `${workspace}artifacts/newui-preview.tgz`;
@@ -27,6 +28,7 @@ for (const target of targets) {
   }
 }
 console.log(`Verified ${targets.length} public export targets in ${output}.`);
+verifyMaskingEntry(`${workspace}pkgs/ui`);
 
 function exportTargets(value: unknown): string[] {
   if (typeof value === "string") return [value];

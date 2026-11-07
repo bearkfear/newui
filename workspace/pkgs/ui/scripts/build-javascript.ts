@@ -12,6 +12,7 @@ const entries = {
   data: "data/index.ts",
   feedback: "feedback/index.ts",
   forms: "forms/index.ts",
+  masking: "forms/masked-input/index.ts",
   layout: "layout/index.ts",
   navigation: "navigation/index.ts",
   overlays: "overlays/index.ts",

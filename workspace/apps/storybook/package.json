@@ -15,6 +15,7 @@
     "build": "bun run build:tooling && storybook build --output-dir storybook-static --disable-telemetry",
     "typecheck": "tsc --noEmit",
     "test": "playwright test",
+    "test:masking": "playwright test mask-text.spec.ts mask-configuration.spec.ts masked-input.spec.ts",
     "test:ui": "playwright test --ui"
   },
   "dependencies": {

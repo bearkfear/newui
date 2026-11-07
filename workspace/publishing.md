@@ -20,6 +20,8 @@ Review the package file list, README, license, changelog, version, public export
 
 For the initial alpha, the tarball was also installed with npm into a separate consumer without workspace patches or overrides. A Solid/Vite build verified Actions, Forms, and the complete stylesheet. After adopting `@egcs/newui`, another clean consumer build verified the scoped imports, PostCSS plugin, modular Actions/Forms styles, and optional preset. This verifies installation and bundling, not the known runtime focus issue.
 
+The alpha.3 mask delivery was approved and its tests separately authorized. Its 32 focused regression cases cover helpers, configuration, clipboard editing, forms, and history in Chromium. Packing verifies the dedicated masking entry in Node; a separate npm-installed consumer verified Node helper imports, TypeScript, and a Solid/Vite build without workspace patches. These checks do not establish component SSR or additional browser coverage.
+
 ## Bootstrap the first package
 
 The bootstrap is already complete for `@egcs/newui`; do not repeat it for an existing version. A new package must first be created with the maintainer's interactive npm login and account 2FA before configuring its package-level trusted publisher. Never put login credentials or a permanent publish token into GitHub secrets or this repository.
