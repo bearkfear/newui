@@ -12,7 +12,7 @@ newui is a SolidJS component library distributed as one npm package, `@egcs/newu
 - Radix Colors supplies light/dark scales mapped to public semantic tokens.
 - Lucide for Solid supplies interface icons; see [iconography](pkgs/ui/foundations/iconography.md).
 - Unovis supplies chart rendering; see [Charts](pkgs/ui/data/chart/README.md).
-- IMask supplies opt-in input masking; see [MaskedInput](pkgs/ui/forms/masked-input/README.md).
+- IMask supplies opt-in pattern masking and decimal editing; see [MaskedInput](pkgs/ui/forms/masked-input/README.md), [NumberInput](pkgs/ui/forms/number-input/README.md) and [CurrencyInput](pkgs/ui/forms/currency-input/README.md).
 - Storybook with SolidJS/Vite provides interactive documentation and component examples.
 
 ## Repository and module layers
@@ -32,7 +32,7 @@ Preserve primitive refs, events, reactive properties, controlled/uncontrolled st
 
 ## Distribution and customization
 
-Public main and area entries share implementations. The DOM-independent `@egcs/newui/masking` entry supports text helpers in Node and browsers. Component entries remain client entries; see [package entries](pkgs/ui/getting-started/package-entries.md).
+Public main and area entries share implementations. The DOM-independent `@egcs/newui/masking` and `@egcs/newui/numbers` entries support text and decimal/currency helpers in Node and browsers. Component entries remain client entries; see [package entries](pkgs/ui/getting-started/package-entries.md).
 
 The complete stylesheet ships compiled CSS with global Preflight and `nui`-prefixed utilities. Consumers can use it without Tailwind. The optional [Tailwind integration](pkgs/ui/getting-started/tailwind.md) compiles selected library areas alongside application styles and offers a shared-token preset.
 

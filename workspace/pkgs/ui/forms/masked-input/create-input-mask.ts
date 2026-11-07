@@ -1,5 +1,6 @@
 import IMask, { createMask } from "imask";
 import { createEffect, createMemo, createSignal, onCleanup, untrack } from "solid-js";
+import { bindTextControlReset } from "../text-control.reset";
 import { TextMaskElement } from "./input-mask.element";
 import { inputMaskOptions } from "./input-mask.options";
 import type { InputMaskOptions, InputMaskValueDetails } from "./input-mask.types";
@@ -89,7 +90,7 @@ function bindInputMask(
       previousOptions = configuration;
     });
   });
-  bindMaskReset(
+  bindTextControlReset(
     input,
     () => {
       mask.history.clear();
@@ -101,16 +102,4 @@ function bindInputMask(
     disposed = true;
     mask.destroy();
   });
-}
-
-function bindMaskReset(input: HTMLInputElement, reset: () => void, disposed: () => boolean) {
-  const handleReset = (event: Event) => {
-    if (event.target !== input.form) return;
-    // Native dispatch can flush microtasks between listeners, before cancellation is known.
-    setTimeout(() => {
-      if (!disposed() && !event.defaultPrevented) reset();
-    }, 0);
-  };
-  input.ownerDocument.addEventListener("reset", handleReset, true);
-  onCleanup(() => input.ownerDocument.removeEventListener("reset", handleReset, true));
 }

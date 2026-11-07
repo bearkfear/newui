@@ -1,0 +1,12 @@
+@layer components {
+  .nui-text-control[data-number-input] {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+  .nui-text-control[data-number-align="left"] {
+    text-align: left;
+  }
+  .nui-text-control[data-number-align="center"] {
+    text-align: center;
+  }
+}

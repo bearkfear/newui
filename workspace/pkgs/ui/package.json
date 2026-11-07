@@ -80,6 +80,10 @@
       "solid": "./dist/masking.jsx",
       "import": "./dist/masking.js"
     },
+    "./numbers": {
+      "types": "./dist/types/forms/number-input/index.d.ts",
+      "import": "./dist/numbers.js"
+    },
     "./layout": {
       "types": "./dist/types/layout/index.d.ts",
       "solid": "./dist/layout.jsx",

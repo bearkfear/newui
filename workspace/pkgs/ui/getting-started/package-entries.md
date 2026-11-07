@@ -14,8 +14,9 @@ newui remains one published experimental package. Each area provides named compo
 | `@egcs/newui/content`      | Accordion, Avatar, Badge, Card, Collapsible, Counter, Heading, Prose, Separator, Text, Timeline                               |
 | `@egcs/newui/data`         | BadgeDelta, BarList, DeltaBar, native Table                                                                                   |
 | `@egcs/newui/feedback`     | Callout, Empty, Loading, PageLoading, Progress, ProgressCircle, Toast, Toaster, createToaster, TopProgress, createTopProgress |
-| `@egcs/newui/forms`        | Field, Input, MaskedInput, InputGroup, Textarea, mask helpers and configuration                                               |
+| `@egcs/newui/forms`        | Field, Input, MaskedInput, NumberInput, CurrencyInput, InputGroup, Textarea, mask/number/currency helpers and configuration   |
 | `@egcs/newui/masking`      | DOM-independent maskText, unmaskText, validateTextMaskOptions, textMaskLimits, and mask types                                 |
+| `@egcs/newui/numbers`      | DOM-independent number/currency formatters, parsers, configuration validation, limits and types                               |
 | `@egcs/newui/layout`       | Container, Resizable, Section                                                                                                 |
 | `@egcs/newui/navigation`   | Breadcrumb, Navbar, NavigationMenu, Pagination, Sidebar, Steps, Tabs, VerticalMenu                                            |
 | `@egcs/newui/overlays`     | AlertDialog, Dialog, HoverCard, Popover, Sheet, Tooltip                                                                       |
