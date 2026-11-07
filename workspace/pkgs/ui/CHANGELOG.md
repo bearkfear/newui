@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.0-alpha.4
+
+### Added
+
+- Add TopProgress and createTopProgress to the main and Feedback entries for a fixed page-loading bar with an application-owned, shareable controller.
+- Support automatic indeterminate advancement, manual numeric values, completion/error/reset controls, and overlapping promise tracking. Keep fast requests hidden with a configurable appearance delay.
+- Preserve themes and motion preferences through the existing portal scope. Include optional glow, semantic error color, reduced motion, forced colors, and public height/offset/color/layer tokens.
+- Add reviewed Storybook examples for global context sharing, overlapping requests, pending failures, fast requests, manual values, themes, mobile, and reduced motion.
+
+The user approved the implementation and stronger glow. No TopProgress automated tests were added. Existing alpha limitations remain unchanged.
+
 ## 0.1.0-alpha.3
 
 ### Added
