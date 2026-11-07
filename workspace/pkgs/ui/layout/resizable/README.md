@@ -30,6 +30,6 @@ Handle uses Ark's separator-role button with an optional decorative grip (`withH
 
 All parts preserve Ark props, DOM refs, styles, event handlers, and additive classes. Custom Handle children replace the grip. Keep them decorative; do not nest interactive controls inside the separator. `--nui-resizable-handle-size` defaults to `0.5rem`; coarse pointers get at least `1.5rem`. The divider stays visible without a grip, uses semantic Radix tokens for interaction/focus states, and adds no animation. Nest independent Roots to combine orientations.
 
-## Review
+## Storybook examples
 
-Layout / Resizable includes horizontal/vertical, grip-free, disabled, nested editor/terminal, controlled sizes/reset, collapsible navigation, dark, and mobile examples. The user approved the implementation and Storybook examples. No automated tests were created or expanded.
+Layout / Resizable includes horizontal/vertical, grip-free, disabled, nested editor/terminal, controlled sizes/reset, collapsible navigation, dark, and mobile examples.

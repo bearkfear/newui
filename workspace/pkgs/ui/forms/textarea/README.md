@@ -12,6 +12,6 @@ Textarea accepts native textarea attributes, styles, events, and refs, including
 
 Native editing, selection, composition events, and form participation are preserved. Standalone Textarea requires an accessible name. Within Field, place control IDs on Field.Root and let Ark associate label, description, and error; success descriptions are appended by newui.
 
-## Review
+## Storybook examples
 
-Forms / Textarea includes editable controls, manual vertical resize, Ark autoresize, fixed-size invalid state, sizes, standalone naming, and mobile. The profile form also includes a character counter. All stories follow the theme toolbar. Implementation awaits user validation; no automated tests were added.
+Forms / Textarea includes editable controls, manual vertical resize, Ark autoresize, fixed-size invalid state, sizes, standalone naming, and mobile. The profile form also includes a character counter. All stories follow the theme toolbar.

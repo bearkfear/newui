@@ -32,7 +32,7 @@ Content first mounts when opened, then stays mounted while hidden so its local s
 
 Radix surfaces, secondary text, native disabled behavior, and visible focus match Accordion. Shared CSS animates Ark's measured height and rotates the chevron. System/workshop reduced motion removes those effects. No animation library was added, and existing Ark Collapsible uses in navigation were not refactored.
 
-Storybook: Content / Collapsible includes variants, initially open/closed states, native disabled behavior, controlled state, Button composition, growing content, dark theme, mobile, and reduced motion. The user approved the implementation and examples, including the revised content spacing. No automated tests were added.
+Storybook: Content / Collapsible includes variants, initially open/closed states, native disabled behavior, controlled state, Button composition, growing content, dark theme, mobile, and reduced motion.
 
 ## References
 

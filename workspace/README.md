@@ -1,18 +1,17 @@
 # newui workspace
 
-This directory contains the development environment, applications, library package, and project planning. Run `bun install` here to install all workspace dependencies.
+This directory contains the development environment, applications, library package, and contributor documentation. Run `bun install` here to install all workspace dependencies.
 
 ## Structure
 
 - [UI package](pkgs/ui/README.md): components, recipes, foundations, utilities, documentation, and colocated stories.
-- [Storybook application](apps/storybook/README.md): the initial component development catalog.
+- [Storybook application](apps/storybook/README.md): the interactive component catalog.
 - [Philosophy](philosophy.md): purpose and organizational principles.
 - [Architecture](architecture.md): technical choices and implementation layers.
 - [Dependency map](dependencies.md): module layers, cross-area reuse, and distribution boundaries.
-- [Roadmap](roadmap.md): implementation sequence and checklists.
-- [Continuous integration](ci.md): checks, package artifacts, and GitHub security settings.
-- [Publishing](publishing.md): the initial alpha, npm bootstrap, and subsequent OIDC releases.
-- [References](references/README.md): external foundations and temporary study material.
+- [Continuous integration](ci.md): checks and package artifacts.
+- [Publishing](publishing.md): release preparation and automated OIDC publishing.
+- [References](references/README.md): design inspirations and attribution.
 - [Project conventions](../conventions/): current development agreements.
 
 ## Commands
@@ -37,7 +36,3 @@ Run these commands from `workspace/`:
 Biome enforces 250 lines per supported source file, 60 lines per function body, and cognitive complexity at most 15. Generated color values, build output, dependencies, patches, and local references are excluded. TypeScript uses strict mode, exact optional properties, checked indexed access, and unused-code checks. Build scripts have their own tooling type environment.
 
 The pre-commit hook runs `bun run check` against the workspace without changing files. Format or fix issues before retrying a failed commit. See [code quality](../conventions/code-quality.md) for conventions and the distinction between implementation checks and new test creation.
-
-## Planning
-
-The library includes validated actions, layout and content primitives, navigation, overlays, feedback, native Table, and compound compositions with colocated Storybook examples. See the [roadmap](roadmap.md) for completed deliveries and remaining work. Forms remain deferred; data tables, visualizations, and additional interaction components are planned or under evaluation. The future public website is still to be defined.

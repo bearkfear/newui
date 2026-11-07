@@ -32,7 +32,7 @@ Horizontal content tabs powered by Ark Tabs. The primitive owns selection, focus
 
 The underline, boxed, toggle, and rounded designs reference [Bulma Tabs](https://bulma.io/documentation/components/tabs/). The segmented track references [Solid UI Tabs](https://www.solid-ui.com/docs/components/tabs). Interaction uses [Ark Tabs](https://ark-ui.com/docs/components/tabs), with no additional dependencies.
 
-Storybook includes all variants, tones, sizes, alignment, full-width, manual activation, controlled selection, state retention, disabled triggers, dark theme, and mobile overflow. The user approved the implementation and Storybook examples; no automated tests were added.
+Storybook includes all variants, tones, sizes, alignment, full-width, manual activation, controlled selection, state retention, disabled triggers, dark theme, and mobile overflow.
 
 ## Rich triggers
 

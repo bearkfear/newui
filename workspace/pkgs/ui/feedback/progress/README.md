@@ -25,7 +25,7 @@ The actual track has the progressbar role, named through Ark's label ID or an ex
 
 CSS transitions known-value changes and moves a partial range for indeterminate work. System/workshop reduced motion removes transitions and holds a static partial range rather than implying completion. Keep essential task context in text. Use Loading for a simple pending status and PageLoading for a page placeholder; these progress components support numeric work as well as unknown duration.
 
-Storybook: Feedback / Progress includes sizes, tones, zero/partial/complete/unknown states, hidden labels, value visibility, custom bounds/formatting, simulated upload controls, light/dark comparison, mobile, and reduced motion. Only the demo owns its timer. The user approved the implementation and examples. No automated tests were added.
+Storybook: Feedback / Progress includes sizes, tones, zero/partial/complete/unknown states, hidden labels, value visibility, custom bounds/formatting, simulated upload controls, light/dark comparison, mobile, and reduced motion. Only the demo owns its timer.
 
 ## References
 

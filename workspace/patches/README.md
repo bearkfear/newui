@@ -17,10 +17,10 @@ Checked the npm registry and published package tarballs on 2026-10-28:
 - `@zag-js/focus-visible@1.45.0` omits `writable` in both descriptors.
 - `1.46.0` includes `writable: true` during installation and restoration, matching this patch's correction.
 - `1.47.0` retains that correction and additionally handles unreadable accessors while preserving the original descriptor for restoration.
-- The latest stable `@ark-ui/solid` is still `5.39.3`, which pins Zag dependencies, including focus-visible, to `1.45.0`. No stable Ark update currently removes the need for this workspace patch.
+- At the time of that audit, stable `@ark-ui/solid` was `5.39.3`, which pins Zag dependencies, including focus-visible, to `1.45.0`. That version retains the need for this workspace patch.
 
 Keep the patch until a compatible stable Ark release resolves the corrected Zag package, then remove the patch entry/file, reinstall, and recheck focus restoration and story navigation. Do not replace it with a workspace override as a distribution fix: overrides and patches in this root manifest are not inherited by consumers of the UI package.
 
-The library build keeps package dependencies external (`pkgs/ui/scripts/build.ts`), so it does not embed this patch in `dist/`. The user accepted publishing the initial experimental alpha with this known issue and incomplete Forms. The [package changelog](../pkgs/ui/CHANGELOG.md) documents that consumers do not inherit the patch. This issue remains follow-up work and does not block the alpha. No duplicate Zag bug report is needed for the already-published fix.
+The library build keeps package dependencies external (`pkgs/ui/scripts/build.ts`), so it does not embed this patch in `dist/`. The [package changelog](../pkgs/ui/CHANGELOG.md) documents that consumers do not inherit the patch. Consumers of the alpha remain affected by this limitation.
 
 Sources: [npm Zag metadata](https://registry.npmjs.org/@zag-js%2Ffocus-visible), [npm Ark Solid metadata](https://registry.npmjs.org/@ark-ui%2Fsolid), and published `dist/index.mjs` from the [1.45.0](https://registry.npmjs.org/@zag-js/focus-visible/-/focus-visible-1.45.0.tgz), [1.46.0](https://registry.npmjs.org/@zag-js/focus-visible/-/focus-visible-1.46.0.tgz), and [1.47.0](https://registry.npmjs.org/@zag-js/focus-visible/-/focus-visible-1.47.0.tgz) tarballs.

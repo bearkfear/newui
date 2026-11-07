@@ -37,7 +37,7 @@ Arrow Up/Down and Home/End navigate triggers; Enter/Space operate the focused tr
 
 Outline/soft surfaces use existing Radix background/surface tokens and step 6 borders. Triggers use neutral hover/active backgrounds, visible focus, and the shared disabled policy. Body text uses the secondary foreground, with 12px top padding, 16px side/bottom padding, and 12px between content blocks. CSS animates the Ark-measured height and rotates the indicator; system/workshop reduced motion disables those effects. These styles are local to the public components and do not alter the existing Navbar or VerticalMenu implementations.
 
-Storybook: Content / Accordion includes FAQ content, variants, single/multiple expansion, required-open behavior, disabled root/item states, controlled state, structured content with a persistent review counter, dark theme, mobile, and reduced motion. The user approved the implementation and examples, including the revised content spacing. No automated tests were added.
+Storybook: Content / Accordion includes FAQ content, variants, single/multiple expansion, required-open behavior, disabled root/item states, controlled state, structured content with a persistent review counter, dark theme, mobile, and reduced motion.
 
 ## References
 

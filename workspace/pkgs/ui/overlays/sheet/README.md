@@ -1,6 +1,6 @@
 # Sheet
 
-An edge-attached presentation of the existing Dialog. Ark UI Solid Dialog continues to own focus trapping/restoration, accessible associations, outside/Escape dismissal, scroll locking, presence, and nested-layer behavior. The shared Dialog portal preserves themes and typography. The composition takes inspiration from Solid UI Sheet, while the header/body/footer follow our approved Bulma-inspired Dialog styling.
+An edge-attached presentation of the existing Dialog. Ark UI Solid Dialog continues to own focus trapping/restoration, accessible associations, outside/Escape dismissal, scroll locking, presence, and nested-layer behavior. The shared Dialog portal preserves themes and typography. The composition takes inspiration from Solid UI Sheet, while the header/body/footer follow the Bulma-inspired Dialog styling.
 
 ## API
 
@@ -41,13 +41,11 @@ The panel slides from the selected edge; the backdrop uses the existing Dialog f
 
 The application chooses responsive sides; the Responsive story uses the maintained media-query primitive to select right from 48rem and bottom below it, keeping one Root mounted and application state intact. Sheet does not automatically switch presentation. Nonmodal mode omits the backdrop and lets pointer events reach the page outside the panel.
 
-This delivery adds no dragging, swipe-to-dismiss, snap points, or decorative drag handle. A gesture-enabled Drawer remains a separate future evaluation. Forms remain deferred; examples use existing content and action primitives. Keep application state outside lazy content when it must survive closing.
+Sheet does not provide dragging, swipe-to-dismiss, snap points, or a decorative drag handle. Keep application state outside lazy content when it must survive closing.
 
-## Review
+## Storybook examples
 
 Storybook: Overlays / Sheet includes all four sides, three sizes, controlled state, nonmodal mode, dismissal options, long content, responsive side selection, a nested Dialog, dark theme, mobile right/bottom layouts, and reduced motion. Review sliding direction, focus containment/restoration, Escape/outside closing, body scrolling with a fixed footer, nesting, and viewport fit.
-
-The user approved the implementation and Storybook examples, including the shared compact header spacing. No automated tests were added.
 
 ## References
 

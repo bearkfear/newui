@@ -30,9 +30,9 @@ Heading and Text belong to [Content](../content/README.md); they apply the typog
 
 Compact component headers share `--nui-header-gap` (0.125rem) for the vertical gap between title and description. Card, Panel, Dialog, Alert Dialog, Sheet, and Popover use this token independently of their outer padding.
 
-## Review
+## Storybook examples
 
-Foundations / Typography, Dimensions, Interaction states, and Customization demonstrate the consolidated contracts. Review keyboard focus, narrow widths, light/dark scopes, reduced motion, native refs, and local overrides including portals. The user approved these foundations and examples, including corrected Storybook typography style precedence. No automated tests were created or expanded.
+Foundations / Typography, Dimensions, Interaction states, and Customization demonstrate the consolidated contracts. Review keyboard focus, narrow widths, light/dark scopes, reduced motion, native refs, and local overrides including portals.
 
 ## Themes
 

@@ -50,4 +50,4 @@ Run `bun run --cwd pkgs/ui measure:styles` from `workspace/`. It prints raw/gzip
 | Data without Charts   |         34344 |       7489 |
 | Full catalog          |        120765 |      20410 |
 
-All reported selections emit zero repeated complete rules. Source order can change rule grouping and compression while retaining the same dependencies. Open **Getting started / Modular styles** for isolated Actions, Forms, combined, dark, and mobile previews. Parent Storybook CSS cannot style the preview document. No automated tests were added.
+All reported selections emit zero repeated complete rules. Source order can change rule grouping and compression while retaining the same dependencies. Open **Getting started / Modular styles** for isolated Actions, Forms, combined, dark, and mobile previews. Parent Storybook CSS cannot style the preview document.

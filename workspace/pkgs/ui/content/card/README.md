@@ -40,7 +40,7 @@ The elevated variant uses a subtle surface, a softened border, and directional d
 
 Card is a static HTML composition and needs no Ark behavior primitive. It does not add a click handler, focus stop, or button role. Compose real controls inside it; interactive menus or disclosures should use the corresponding Ark-powered components. Header, Content, Media, Actions, Footer, and FooterItem render div elements without additional landmark roles.
 
-Review Content / Card in Storybook for visual variants, media, divided actions, header actions, content-only layouts, and mobile examples. Local signals demonstrate saving, resetting, and following. The brand image examples use a nested light theme to preserve the artwork contrast. The user validated Card, including the revised elevated surface. No new automated tests were added.
+Review Content / Card in Storybook for visual variants, media, divided actions, header actions, content-only layouts, and mobile examples. Local signals demonstrate saving, resetting, and following. The brand image examples use a nested light theme to preserve the artwork contrast.
 
 ## References
 

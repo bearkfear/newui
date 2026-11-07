@@ -46,4 +46,4 @@ Opening defaults to click/tap, with pointer-leave closing disabled so cascades s
 
 Ark's Solid `asChild` uses a render function, rather than a boolean. Link forwards this prop for custom router elements. Applications own destinations, routing, and route-change focus. Class values are additive; use variants and tokens for reliable customization.
 
-Review Navigation / Navbar and Overview in Storybook. The user approved the revised appearance, shared Navigation Menu foundation, cascading submenus, dropdown spacing, and open chevrons, including keyboard and mobile behavior. No new automated tests have been added.
+Review Navigation / Navbar and Overview in Storybook.

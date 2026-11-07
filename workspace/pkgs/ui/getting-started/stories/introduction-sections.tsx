@@ -71,7 +71,7 @@ export function IntroductionButtonDemo() {
           </div>
         </div>
         <div class="nui-catalog-stack">
-          <p class="nui-catalog-eyebrow">Planned package usage</p>
+          <p class="nui-catalog-eyebrow">Package usage</p>
           <pre>
             <code>
               {
@@ -80,7 +80,7 @@ export function IntroductionButtonDemo() {
             </code>
           </pre>
           <p style={{ color: "var(--catalog-muted)", "font-size": "13px" }}>
-            Compiled CSS, nui-prefixed utilities, and global Tailwind Preflight. Consumers will not
+            Compiled CSS, nui-prefixed utilities, and global Tailwind Preflight. Consumers do not
             need a Tailwind build.
           </p>
         </div>

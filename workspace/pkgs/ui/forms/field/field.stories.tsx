@@ -15,7 +15,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Ark Field owns labels, help/error associations, required/disabled/readonly states, and native control semantics. newui adds Bulma-inspired styling, explicit valid/success feedback, loading, sizes, and horizontal composition. Invalid takes priority over valid. Validation rules and timing remain application-owned. All examples follow the theme toolbar; no new automated tests.",
+          "Ark Field owns labels, help/error associations, required/disabled/readonly states, and native control semantics. newui adds Bulma-inspired styling, explicit valid/success feedback, loading, sizes, and horizontal composition. Invalid takes priority over valid. Validation rules and timing remain application-owned. All examples follow the theme toolbar.",
       },
     },
   },

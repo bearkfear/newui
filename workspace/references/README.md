@@ -1,24 +1,9 @@
-# References
+# Design references
 
 [Workspace](../README.md)
 
-## Intent
+newui's catalog and visual design draw inspiration from [Solid UI](https://www.solid-ui.com/docs/introduction) and [Bulma](https://bulma.io/documentation/). Components use newui's own APIs, Radix tokens, and the interaction primitives described in the [architecture](../architecture.md).
 
-Separate external material used for learning and comparison from the project's own decisions and code.
+Solid UI informs compact controls, navigation, and content presentation. Bulma informs page layout, typography, native tables, and compositions such as Hero, Footer, MediaObject, and Panel.
 
-## Notes kept in the repository
-
-- [Solid UI](solid-ui.md): initial reference for the catalog, visual design, and code.
-- [Bulma](bulma.md): reference for organization and complementary needs.
-- [Technical foundations](technical-foundations.md): planned roles of Ark UI, Tailwind, tailwind-variants, and Radix Colors.
-- [Planning sources](sources.md): previously consulted links.
-
-Notes record origins, observations, and directions. When an idea becomes part of the project, develop its contract in the corresponding workspace area while keeping the reference connection.
-
-## Temporary local material
-
-Use `_local/solid-ui/`, `_local/bulma/`, or other `_local/` subdirectories for checkouts, snippets, images, and other external study material. Git ignores the contents of `_local/`; only its `.gitignore` is eligible for version control. No external code has been downloaded at this stage.
-
-Do not put project decisions or the only copy of important notes in this directory: it is disposable. Reference project snapshots do not need to be versioned.
-
-If code is incorporated into our implementation later, check its license, preserve applicable notices, and record its origin. Ignoring study material does not remove these requirements for reused code.
+References guide design; incorporating third-party source requires checking its license and preserving applicable notices. Distributed Radix Colors and Lucide notices remain in the package, and dependencies retain their own licenses.

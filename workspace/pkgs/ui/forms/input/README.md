@@ -22,6 +22,6 @@ Compose InputGroup for icons, adornments, and named actions. Loading alone expos
 
 Text-family focus uses the shared foundation contour: 3px with the default metrics, converging inward to overlap the border at -1px in 120ms. On blur, it fades in place over 80ms. Border and outline use the same color, forming one continuous contour at rest. Focus retains its color while hovered, including valid and invalid states. InputGroup applies the indicator only to its outer shell. Reduced motion removes movement and color transitions; forced colors retains a system-colored outline.
 
-## Review
+## Storybook examples
 
-Forms / Input includes editable controls, standalone naming, sizes, tones, rounded shape, password reveal, clearing with focus restoration, readonly/disabled, loading, and mobile stories. Implementation awaits user validation. No automated tests were added.
+Forms / Input includes editable controls, standalone naming, sizes, tones, rounded shape, password reveal, clearing with focus restoration, readonly/disabled, loading, and mobile stories.

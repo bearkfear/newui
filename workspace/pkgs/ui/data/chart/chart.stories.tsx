@@ -21,7 +21,7 @@ const meta = {
       source: { language: "tsx", code: lineChartSource },
       description: {
         component:
-          "Line, grouped bars, and donut charts powered by the official Unovis Solid integration. Radix tokens provide nested light/dark colors; responsive axes and hover details come from Unovis. Legends, visible captions, and keyboard-accessible View data disclosures provide a textual alternative. Charts render without animation. Import named components from newui/charts and the shared newui/styles.css stylesheet. No new automated tests.",
+          "Line, grouped bars, and donut charts powered by the official Unovis Solid integration. Radix tokens provide nested light/dark colors; responsive axes and hover details come from Unovis. Legends, visible captions, and keyboard-accessible View data disclosures provide a textual alternative. Charts render without animation. Import named components from newui/charts and the shared newui/styles.css stylesheet.",
       },
     },
   },

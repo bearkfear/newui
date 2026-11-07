@@ -26,7 +26,7 @@ The header uses the tone's solid background and existing on-color token. Blue/Gr
 
 All parts forward native attributes, refs, events, and additive classes. Dismissal still belongs to the application. The example's dismissNotice callback is application-provided; the Dismissible story demonstrates hiding/restoring a message and returning focus to a stable page action. The presentation adds no timer, live role, or state machine.
 
-Review Feedback / Callout → Message, Message Tones And Headers, Message Dismissible, Message Dark, and Message Mobile. The variant is also available in the standard controls and tone matrix. The user approved this expansion and its examples, alongside the previously approved soft/outline delivery. No automated tests were added.
+Review Feedback / Callout → Message, Message Tones And Headers, Message Dismissible, Message Dark, and Message Mobile. The variant is also available in the standard controls and tone matrix.
 
 ## References
 

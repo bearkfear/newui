@@ -30,4 +30,4 @@ Group renders nav and needs an accessible label. Title defaults to h2, size 6. L
 
 Root renders footer. Place a page footer outside main to expose the native contentinfo landmark; a footer nested in an article has contextual semantics instead. Other layout parts render divs. Native attributes, events, styles, and refs are forwarded.
 
-Import `@egcs/newui/styles.css` once. Review Compositions / Footer and Overview before authorizing new tests.
+Import `@egcs/newui/styles.css` once. Review Compositions / Footer and Overview.

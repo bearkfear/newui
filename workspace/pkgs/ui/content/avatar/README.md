@@ -22,4 +22,4 @@ Name the root as an image so its identity remains available while loading or aft
 
 Root uses a fixed size and clips image content to its shape. Fallback is visible while loading, when no image is supplied, or after failure; it is hidden when the image loads. Keep fallback text short so it fits the selected size.
 
-Review Content / Avatar for image and initials, failure/recovery, shapes, sizes, and redundant-image semantics. The implementation has been validated by the user; no new automated tests were added.
+Review Content / Avatar for image and initials, failure/recovery, shapes, sizes, and redundant-image semantics.

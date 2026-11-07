@@ -26,11 +26,9 @@ Set `aria-busy` on the region receiving data and provide a persistent status reg
 
 The default page layout suits a full route placeholder. Use section layout inside Card or another bounded container; native style can adapt the reserved height to the application shell. Text wraps within a maximum 24rem width, and colors follow the surrounding theme. The component keeps the container's background so it can blend into either page or card surfaces.
 
-## Review
+## Storybook examples
 
 Storybook: Feedback / Page Loading includes page and section layouts, optional description, use inside Card, simulated loading-to-content replacement, light/dark comparison, long messages, mobile, and reduced motion.
-
-The user approved the implementation and Storybook examples. No automated tests were added.
 
 ## References
 

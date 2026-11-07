@@ -51,6 +51,6 @@ Horizontal is the default. Intermediate segments expand across the available wid
 
 All parts preserve native attributes, styles, refs, and additive classes. Content and CompletedContent add no border, background, padding, or card. Place Card, Panel, a form, or plain content inside them as needed. Component recipes own structural spacing; Radix neutral tokens draw borders, primary marks current state, and success marks completed state. Automatic and nested themes use the existing token contract. No transition or animation is added. Meaningful state also has Ark semantics and the examples' persistent external status messages.
 
-## Review
+## Storybook examples
 
-Navigation / Steps includes plain content, optional Card composition, horizontal/vertical layouts, direct navigation, next/back/reset, numbered/completed markers, descriptions, initial middle/completed states, controlled state, linear validation with a confirmation action, dark/nested themes, and mobile examples. The user approved the implementation and examples, including full-width horizontal distribution and plain content with optional Card composition. No new automated tests were created or expanded.
+Navigation / Steps includes plain content, optional Card composition, horizontal/vertical layouts, direct navigation, next/back/reset, numbered/completed markers, descriptions, initial middle/completed states, controlled state, linear validation with a confirmation action, dark/nested themes, and mobile examples.

@@ -32,9 +32,9 @@ The Playwright suite starts a development server automatically, reusing port 600
 
 ## Extending the catalog
 
-Add `*.stories.tsx` next to a component in `pkgs/ui/`. Set `component`, `tags: ["autodocs"]`, explicit variant controls, default args, and descriptions. Use `fn()` from `storybook/test` for callback spies. Add new `play` functions or tests only after user validation and explicit authorization, following the project validation convention. JSX decorators must use the Solid adapter's `createJSXDecorator` to preserve reactive args/globals without duplicate mounts.
+Add `*.stories.tsx` next to a component in `pkgs/ui/`. Set `component`, `tags: ["autodocs"]`, explicit variant controls, default args, and descriptions. Use `fn()` from `storybook/test` for callback spies. Follow the [implementation validation convention](../../../conventions/implementation-validation.md) when adding interactions or tests. JSX decorators must use the Solid adapter's `createJSXDecorator` to preserve reactive args/globals without duplicate mounts.
 
-Navigation follows the library's functional categories. Empty categories are not fabricated. Use the Workshop guide story for the workflow. Colors use official Radix scales; the public website remains a separate decision.
+Navigation follows the library's functional categories. Empty categories are not fabricated. Use the Workshop guide story for the workflow. Colors use official Radix scales.
 
 Configuration lives in `.storybook/`: `main.ts` owns addons/build integration, `theme.ts` owns manager/docs branding, `manager.ts` synchronizes the manager theme, `docs-container.ts` synchronizes the React-based documentation container, and `preview.tsx`/`preview.css` own the component canvas. Static branding lives in `public/`; it uses relative URLs for subdirectory hosting. Typography uses local system stacks without external font requests.
 

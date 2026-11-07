@@ -35,8 +35,8 @@ Inputs and action Buttons follow the same control-height tokens in all three siz
 
 Attached groups paint the input focus contour above the action surface so positioned Buttons cannot cover its inner edge. The contour follows the shell's color, offset, animation, reduced-motion setting, and forced colors; action Buttons retain their independent focus indicator.
 
-Use separate Fields for independently labeled controls. This first delivery does not include Select, numeric parsing, masks, or a general multi-control form group. Root can be used without Field when the Input has its own accessible name. Themes, tokens, reduced motion, events, and native refs remain supported.
+Use separate Fields for independently labeled controls. InputGroup does not perform numeric parsing or masking; compose MaskedInput for pattern masks. Root can be used without Field when the Input has its own accessible name. Themes, tokens, reduced motion, events, and native refs remain supported.
 
-## Review
+## Storybook examples
 
-Forms / Input Group covers leading/trailing icons, prefix/suffix addons, password reveal, clear, attached search submission, sizes, loading, and mobile. Forms / Field / Overview combines these with the rest of the text family. Implementation awaits user validation; no automated tests were added.
+Forms / Input Group covers leading/trailing icons, prefix/suffix addons, password reveal, clear, attached search submission, sizes, loading, and mobile. Forms / Field / Overview combines these with the rest of the text family.

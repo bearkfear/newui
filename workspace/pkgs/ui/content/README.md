@@ -1,33 +1,20 @@
 # Content
 
-[Workspace](../../../README.md)
+[UI package](../README.md)
 
-## Intent
+Present text, identity, and information, including organization and disclosure within a page.
 
-Present text, identity, and information, including their organization and disclosure within the page.
+## Components
 
-## Initial implementation
+- Heading, Text, and Prose for interface typography and editorial content.
+- [Card](card/README.md): optional media, header actions, content, and simple or divided footers.
+- [Badge](badge/README.md): labels and interactive badge presentation.
+- [Avatar](avatar/README.md): identity images with Ark-powered image state and fallbacks.
+- [Separator](separator/README.md): visual or semantic divisions.
+- [Counter](counter/README.md): numeric notifications and unread counts.
+- [Accordion](accordion/README.md) and [Collapsible](collapsible/README.md): Ark-powered disclosures, controlled/uncontrolled state, optional indicators, and reduced motion.
+- [Timeline](timeline/README.md): chronological lists with dates, optional markers, and application-owned progress statuses.
 
-Heading, Text, and Prose are implemented with recipes, semantic tokens, and colocated Storybook examples. They have been validated by the user. New automated tests require separate explicit authorization.
+## Composition
 
-[Card](card/README.md) is implemented with optional media, header actions, content, and simple/divided footers. The user validated its implementation and Storybook examples, including the elevated surface.
-
-[Badge](badge/README.md), [Separator](separator/README.md), and [Avatar](avatar/README.md) are implemented with reviewable examples. Badge uses native labels and controls; Avatar uses Ark UI for image state. They have been validated by the user.
-
-[Accordion](accordion/README.md) and [Collapsible](collapsible/README.md) are implemented with Ark-powered disclosure, controlled/uncontrolled examples, optional indicators, and reduced-motion support. The user approved both implementations and their Storybook examples, including the revised content spacing.
-
-## Inventory
-
-- Heading, Text, and Prose.
-- Card, Badge, Avatar, and Separator.
-- [Counter](counter/README.md) for numeric notifications and unread counts; validated by the user.
-- Accordion and Collapsible.
-- [Timeline](timeline/README.md): vertical/horizontal native chronological lists, dates, decorative connectors, optional custom markers, and progress statuses; implementation and Storybook examples are validated by the user.
-
-## Ideas and boundaries
-
-Heading, Text, and Prose cover interface typography and editorial content. Image/Figure and Box/Surface additions are excluded by user decision. Use native media elements and existing Card, Prose, Hero, or Media Object compositions; no dedicated image or video wrapper is planned.
-
-Accordion and Collapsible belong here because they organize content presentation. Timeline presents a sequence; visualizations for comparing values belong to [Data](../data/README.md). Carousel is deferred until a concrete future need arises; it remains classified as Content.
-
-Typographic scales belong to [Foundations](../foundations/README.md). Interactive behavior mappings to Ark must be checked before implementation.
+Use native media elements with Card, Prose, Hero, or MediaObject for images and video. Typography contracts belong to [Foundations](../foundations/README.md). Visualizations that compare numeric values belong to [Data](../data/README.md).

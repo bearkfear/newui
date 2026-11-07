@@ -2,7 +2,7 @@
 
 [Contract](README.md) · [Study](../input-masking.md)
 
-Reports inform implementation and manual Storybook review; they do not prove our adapter fixes every upstream browser bug. IMask is pinned to 7.6.1. Subsequent authorized [regression coverage](test-coverage.md) complements these exploratory reports.
+Reports inform implementation and manual Storybook review; they do not prove our adapter fixes every upstream browser bug. IMask is pinned to 7.6.1. Subsequent [regression coverage](test-coverage.md) complements these exploratory reports.
 
 ## vue-the-mask findings
 

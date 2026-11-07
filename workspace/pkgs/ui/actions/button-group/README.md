@@ -23,4 +23,4 @@ import "@egcs/newui/styles.css";
 
 Every button retains native Tab navigation. Grouping introduces no arrow-key navigation, selection state, or toolbar behavior. Avoid nesting ButtonGroup; joined styling and equal widths require direct Button children.
 
-Review Actions / Button group in Storybook before authorizing new automated tests.
+Review Actions / Button group in Storybook.
