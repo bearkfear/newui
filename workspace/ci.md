@@ -1,6 +1,6 @@
 # Continuous integration
 
-The GitHub workflow is [CI](../.github/workflows/ci.yml). It runs on pull requests, pushes to `main`, and manual dispatch. One GitHub-hosted Ubuntu job builds the library, runs Biome and strict TypeScript checks, builds Storybook, then packages the library. Storybook includes the isolated Tailwind preset example; there is no separate consumer application, browser matrix, or new component test suite.
+The GitHub workflow is [CI](../.github/workflows/ci.yml). It runs on pull requests, pushes to `main`, and manual dispatch. One GitHub-hosted Ubuntu job builds the library, runs Biome and strict TypeScript checks, builds Storybook, runs the approved mask regression suite in Chromium, then packages the library. Storybook includes the isolated Tailwind preset example; broader browser coverage remains separate work.
 
 ## Reproduce locally
 
@@ -11,10 +11,13 @@ bun install --frozen-lockfile --ignore-scripts
 bun run build
 bun run check
 bun run build:storybook
+bun run test:masking
 bun run pack
 ```
 
 Build first: examples importing the public package resolve declarations from the generated build. Ignoring install scripts skips the local Git hook installer in CI; developers can run `bun run hooks:install` locally.
+
+In CI, Playwright serves the already-built Storybook with Vite preview, avoiding a cold development compiler and HMR during tests. Local tests can reuse Storybook development mode. Install Chromium with `bunx --no-install playwright install --with-deps chromium` from apps/storybook when needed.
 
 `bun run pack` verifies that all public export targets and release documents exist inside the generated archive. Successful CI uploads `newui-package`, containing `newui-preview.tgz`, for seven days. Artifacts from pull requests are untrusted review material. This check does not establish clean registry installation or browser behavior. The initial alpha accepts the known Zag issue and incomplete Forms; see [publishing](publishing.md) and the [roadmap](roadmap.md).
 
@@ -40,7 +43,7 @@ The job has only `contents: read`, does not persist checkout credentials, uses G
 
 There are no privileged fork triggers, user-supplied expressions in shell commands, shared dependency caches, publication secrets, or downstream workflows executing uploaded artifacts. Retain those boundaries when extending CI. GitHub's [secure use reference](https://docs.github.com/en/actions/reference/security/secure-use) explains these protections.
 
-Review upstream action changes before updating SHAs and retain the version comments. Keep runtime versions and `bun.lock` synchronized. Optional follow-ups are Dependabot for action updates and CodeQL scanning of workflows; they are separate from the required build check.
+Review upstream action changes before updating SHAs and retain version comments. The four direct actions use Node 24 runtimes; setup-bun v2.2.0 removes the prior Node 20 action-runtime warning independently of the project's .node-version. Keep runtime versions and bun.lock synchronized. Dependabot and CodeQL remain optional follow-ups.
 
 ## Recent GitHub changes reviewed
 
