@@ -2,7 +2,7 @@
 
 Composable components for **SolidJS**, with shared spacing, typography, Radix color tokens, automatic light/dark themes, and optional Tailwind integration.
 
-**Experimental alpha:** APIs may change. Forms currently includes Field, Input, Textarea, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
+**Experimental alpha:** APIs may change. Forms currently includes Field, Input, MaskedInput, Textarea, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
 
 ## Install
 
@@ -42,6 +42,29 @@ export function ProjectForm() {
 The main `@egcs/newui` entry also works. Area entries include `actions`, `forms`, `content`, `layout`, `navigation`, `overlays`, `feedback`, `data`, `charts`, and `compositions`. Entries share internal modules; bundle elimination depends on your bundler. CSS selection is configured separately.
 
 The complete stylesheet includes Tailwind Preflight, which resets the whole page. Tailwind is not required for this mode.
+
+## Mask text and inputs
+
+```tsx
+import { MaskedInput } from "@egcs/newui/forms";
+import { maskText, unmaskText } from "@egcs/newui/masking";
+
+const documentMask = { mask: "###.###.###-##" };
+maskText("12345678900", documentMask); // "123.456.789-00"
+unmaskText("123.456.789-00", documentMask); // "12345678900"
+
+<MaskedInput
+  {...documentMask}
+  name="document"
+  defaultValue="12345678900"
+  submitValue="raw"
+  inputmode="numeric"
+/>;
+```
+
+Controlled value/defaultValue use raw strings; onValueChange exposes rawValue, formattedValue, and complete. Native forms submit formatted text by default, or raw text with submitValue="raw". Custom tokens can map & to digits, transform case, or disable defaults. The masking entry runs in Node without a DOM; component aggregators remain client entries.
+
+Definitions are capped at 256 UTF-16 code units per pattern, 16 alternatives, and 64 custom tokens. validateTextMaskOptions checks unknown backend configuration before rendering; textMaskLimits exposes the bounds. See the [mask contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/masked-input/README.md) and [configuration guide](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/masked-input/configuration.md).
 
 ## Use your application's Tailwind
 

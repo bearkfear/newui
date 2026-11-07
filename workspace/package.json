@@ -15,6 +15,7 @@
     "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/storybook typecheck && tsc --project scripts/tsconfig.json",
     "pack": "bun scripts/ci/pack.ts",
     "test:storybook": "bun run --cwd apps/storybook test",
+    "test:masking": "bun run --cwd apps/storybook test:masking",
     "lint": "biome lint . --error-on-warnings",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",

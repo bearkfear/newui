@@ -13,8 +13,10 @@
     "build:tooling": "bun scripts/build-tooling.ts",
     "dev": "bun run build:tooling && storybook dev --port 6006 --no-open --disable-telemetry",
     "build": "bun run build:tooling && storybook build --output-dir storybook-static --disable-telemetry",
+    "preview:test": "vite preview --outDir storybook-static --host 127.0.0.1 --port 6006 --strictPort",
     "typecheck": "tsc --noEmit",
     "test": "playwright test",
+    "test:masking": "playwright test mask-text.spec.ts mask-configuration.spec.ts masked-input.spec.ts",
     "test:ui": "playwright test --ui"
   },
   "dependencies": {

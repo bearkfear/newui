@@ -35,4 +35,4 @@ Forms / Field / Overview covers the family, with interactive profile editing, pa
 
 ## Planned extensions
 
-[Input masking](input-masking.md) will be opt-in and developed alongside the input editing contract. Shared display [formatting](../utilities/formatting.md) lives in Utilities. Neither feature is implemented yet.
+[Input masking](input-masking.md) is implemented as opt-in MaskedInput with configurable tokens and an internal IMask adapter. The user approved the mask implementation, text helpers, configuration limits, and review examples. Shared display [formatting](../utilities/formatting.md) lives in Utilities and remains planned.

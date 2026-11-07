@@ -136,6 +136,9 @@ Image/Figure, Box/Surface, Stack, and AutoGrid are excluded; no additional media
 ### 7. Forms (last implementation stage)
 
 - [x] Implement Field, Input, Textarea, and InputGroup using Ark Field, native text editing, Radix/Bulma-inspired sizes and tones, icons/addons/actions, explicit valid/invalid feedback, loading, readonly/disabled states, and reviewable Storybook examples.
+- [x] Implement opt-in MaskedInput with an internal IMask adapter, configurable tokens, raw controlled values, native submission/reset, and Storybook examples informed by upstream issues.
+- [x] Obtain user approval of MaskedInput and its review examples, text helpers, configurable tokens, configuration limits, and editing/history corrections. New automated tests still require explicit authorization; browser-specific coverage remains documented separately.
+- [x] Obtain separate test authorization and add mask regression coverage for helpers, backend configuration limits, native clipboard/editing/forms, and history; provide a DOM-independent masking entry verified during packing.
 - [ ] Obtain user validation of the text-field family, native submission/reset, accessible associations, and responsive examples.
 - [ ] Checkbox, Radio Group, Switch, Toggle, and Toggle Group.
 - [ ] Number Field, OTP Field, and Slider.

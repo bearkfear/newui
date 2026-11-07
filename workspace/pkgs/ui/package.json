@@ -1,6 +1,6 @@
 {
   "name": "@egcs/newui",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
@@ -75,6 +75,11 @@
       "solid": "./dist/forms.jsx",
       "import": "./dist/forms.js"
     },
+    "./masking": {
+      "types": "./dist/types/forms/masked-input/index.d.ts",
+      "solid": "./dist/masking.jsx",
+      "import": "./dist/masking.js"
+    },
     "./layout": {
       "types": "./dist/types/layout/index.d.ts",
       "solid": "./dist/layout.jsx",
@@ -118,6 +123,7 @@
     "@solid-primitives/media": "2.3.6",
     "@unovis/solid": "1.7.1",
     "@unovis/ts": "1.7.1",
+    "imask": "7.6.1",
     "lucide-solid": "1.63.0",
     "tailwind-variants": "3.3.1"
   },

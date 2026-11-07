@@ -19,7 +19,8 @@
     border-start-start-radius: max(0px, calc(var(--nui-text-radius) - 1px));
     border-end-start-radius: max(0px, calc(var(--nui-text-radius) - 1px));
   }
-  .nui-input-group > .nui-text-control:last-child {
+  /* Raw mask submission may append a hidden input after the last visible control. */
+  .nui-input-group > .nui-text-control:nth-last-child(1 of :not([type="hidden"])) {
     border-start-end-radius: max(0px, calc(var(--nui-text-radius) - 1px));
     border-end-end-radius: max(0px, calc(var(--nui-text-radius) - 1px));
   }

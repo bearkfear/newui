@@ -21,6 +21,12 @@ Visual foundations are `foundations/base.css`, `radix.css`, `tokens.css`, and `m
 
 Support modules include recipes, contexts, type contracts, and the theme-preserving portal helpers in Overlays. These stay with their owning areas. They may use Solid, Ark, or tailwind-variants without importing the component implementations that consume them.
 
+Forms / MaskedInput composes Input. Its internal createInputMask adapter depends on Solid and IMask, and its pattern compiler depends on the mask token contract. These support modules do not import Input or MaskedInput; Ark Field.Input owns field associations. The base Input has no dependency on the mask adapter.
+
+Forms / maskText and unmaskText reuse the same compiler and token contract through IMask's model layer. These synchronous helpers import no components, Solid, or styles and require no DOM element or Solid owner.
+
+The mask's TextMaskElement specializes IMask's DOM bridge only to gate undo/redo for native readonly/disabled controls. IMask still owns event binding, selection, and editing history; the bridge imports no newui component.
+
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.
 
 ## Current cross-area implementation dependencies
