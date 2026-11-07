@@ -44,6 +44,7 @@ The table summarizes direct local imports, including types. Each target is a spe
 | Data / Charts                                | Actions / Button; Feedback / Empty                     | Data disclosure and empty state              |
 | Feedback / Empty                             | Content / Heading, Text                                | Shared typography                            |
 | Feedback / Toast                             | Actions / buttonRecipe; Overlays / portal-scope        | Action styling and themed portal scope       |
+| Feedback / TopProgress                       | Overlays / portal-scope                                | Themed page bar portal                       |
 | Forms / InputGroup                           | Actions / button-group.context; Feedback / Loading     | Shared button defaults and loading indicator |
 | Navigation / Navbar                          | Layout / Container                                     | Width constraints                            |
 | Navigation / NavigationMenu                  | Overlays / OverlayPortal                               | Themed submenu portals                       |
