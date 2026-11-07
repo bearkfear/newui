@@ -9,7 +9,7 @@
 - Preserve themes and motion preferences through the existing portal scope. Include optional glow, semantic error color, reduced motion, forced colors, and public height/offset/color/layer tokens.
 - Add reviewed Storybook examples for global context sharing, overlapping requests, pending failures, fast requests, manual values, themes, mobile, and reduced motion.
 
-The user approved the implementation and stronger glow. No TopProgress automated tests were added. Existing alpha limitations remain unchanged.
+Existing alpha limitations remain unchanged.
 
 ## 0.1.0-alpha.3
 
@@ -18,7 +18,7 @@ The user approved the implementation and stronger glow. No TopProgress automated
 - Add MaskedInput with raw controlled values, configurable tokens, case transforms, escaped literals, progressive masks, and Field/InputGroup composition. IMask owns text editing and cursor behavior.
 - Export maskText and unmaskText for plain strings, plus TextMaskOptions and token/value types, from the main and Forms entries. Add the DOM-independent masking entry for helpers and configuration validation in Node and browsers.
 - Validate backend mask settings before compilation with validateTextMaskOptions. Export textMaskLimits: 256 UTF-16 code units per pattern, 16 alternatives, and 64 custom tokens. Invalid definitions are rejected rather than shortened.
-- Add explicit formatted/raw native form submission, reviewable Storybook examples, and authorized regression coverage for helpers, configuration, clipboard editing, and forms.
+- Add explicit formatted/raw native form submission, reviewable Storybook examples, and regression coverage for helpers, configuration, clipboard editing, and forms.
 
 ### Fixed
 
@@ -53,7 +53,7 @@ The alpha's existing focus-visible dependency, incomplete Forms, browser coverag
 
 ## 0.1.0-alpha.1
 
-Release automation validation: publish through the authorized GitHub Actions OIDC workflow on the `next` tag. Component code and APIs are unchanged from `0.1.0-alpha.0`; incomplete Forms and the known focus-visible limitation still apply.
+Release automation validation: publish through the GitHub Actions OIDC workflow on the `next` tag. Component code and APIs are unchanged from `0.1.0-alpha.0`; incomplete Forms and the known focus-visible limitation still apply.
 
 ## 0.1.0-alpha.0
 

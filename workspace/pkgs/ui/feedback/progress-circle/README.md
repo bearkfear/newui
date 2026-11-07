@@ -22,7 +22,7 @@ The SVG carries Ark's progressbar role and the task name; the HTML value is a vi
 
 Known values transition the arc length. Indeterminate work rotates a partial arc; system/workshop reduced motion stops rotation and removes value transitions while keeping the partial arc visible. No additional animation dependency is installed.
 
-Storybook: Feedback / Progress Circle includes sizes, tones, zero/partial/complete/unknown states, value visibility, custom range, the shared simulated upload, light/dark comparison, mobile, and reduced motion. The user approved the implementation and examples. No automated tests were added.
+Storybook: Feedback / Progress Circle includes sizes, tones, zero/partial/complete/unknown states, value visibility, custom range, the shared simulated upload, light/dark comparison, mobile, and reduced motion.
 
 ## References
 

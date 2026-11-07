@@ -40,7 +40,7 @@ The initial chart entry is intended for client rendering. Server rendering/hydra
 
 ## Review and size
 
-Data / Charts includes a dashboard with reactive data, line/grouped bars/donut, empty and zero-total states, one-point lines, negative values, Resizable, dark, mobile, and nested themes. The user approved the implementation and examples, including compact data controls, tighter header spacing, matching card heights when both are closed or open, independent mixed states, and grouped-bar spacing. No automated tests were created or expanded.
+Data / Charts includes a dashboard with reactive data, line/grouped bars/donut, empty and zero-total states, one-point lines, negative values, Resizable, dark, mobile, and nested themes.
 
 See [bundle measurements](bundle-size.md) for the reproducible build-size inspection. There are no runtime performance guarantees based solely on tree shaking.
 

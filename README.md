@@ -6,7 +6,7 @@
 
 Composable components, a shared visual language, and room to make it yours.
 
-[Explore the library](workspace/pkgs/ui/README.md) · [Our philosophy](workspace/philosophy.md) · [Roadmap](workspace/roadmap.md) · [Contribute](#contributing)
+[Explore the library](workspace/pkgs/ui/README.md) · [Our philosophy](workspace/philosophy.md) · [Contribute](#contributing)
 
 </div>
 
@@ -34,7 +34,7 @@ See the [package guide](workspace/pkgs/ui/README.md) for component imports, comp
 
 The current collection includes buttons and button groups; containers and sections; typography, avatars, badges, cards, and separators; responsive navigation; dialogs; and compositions such as Hero, Footer, Panel, MediaObject, and ActionBar.
 
-Storybook brings these pieces together with interactive examples, theme switching, responsive viewports, and accessibility checks. Browse the [library areas](workspace/pkgs/ui/README.md) for component documentation and the [roadmap](workspace/roadmap.md) for upcoming work.
+Storybook brings these pieces together with interactive examples, theme switching, responsive viewports, and accessibility checks. Browse the [library guide](workspace/pkgs/ui/README.md) for installation and usage.
 
 ## Get started locally
 

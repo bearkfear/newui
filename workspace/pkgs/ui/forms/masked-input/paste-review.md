@@ -2,7 +2,7 @@
 
 [Contract](README.md) · [Upstream issues](upstream-issues.md)
 
-Exploratory inspection used Chromium 156.0.8078.4, the native clipboard shortcut, and the Storybook examples. No automated test files or assertions were created. Observed results below apply to this browser session, not all browsers or input methods.
+Exploratory inspection used Chromium 156.0.8078.4, the native clipboard shortcut, and the Storybook examples. Observed results below apply to this browser session, not all browsers or input methods.
 
 ## Long and mixed text
 

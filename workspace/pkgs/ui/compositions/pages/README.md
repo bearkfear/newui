@@ -27,7 +27,3 @@ Tasks can be completed and reopened. The release checklist is independent of the
 ## Layout and media
 
 The examples use native CSS grid, flexbox, and container queries. Columns become one column in narrow content areas; metric groups avoid a two-plus-one layout. Tables preserve their columns in an explicitly named horizontal scroll region. Menus and overlays use existing theme-preserving portals, and the shell leaves the selected Storybook theme intact. No image, video, Figure, Stack, AutoGrid, or Box wrapper is added. All illustrations are existing Lucide icons or native data visualizations; no remote assets are loaded.
-
-## Validation
-
-Implementation and examples await user review. Existing lint, formatting, type checks, and Storybook builds may run during implementation. No automated tests, assertions, or interaction test functions were created or expanded.

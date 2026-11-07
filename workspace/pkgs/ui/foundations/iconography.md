@@ -22,4 +22,4 @@ Loading composes Lucide Circle and LoaderCircle with the existing track token an
 
 The library build keeps Lucide as an external runtime dependency and distributes its upstream license notice, including the Feather attribution. Consumers using Lucide in their own application code should declare `lucide-solid` as a direct dependency.
 
-Foundations / Iconography and the existing component stories provide light/dark, mobile, and reduced-motion review scenarios. The user approved the Lucide migration and iconography examples. No automated tests were created or expanded.
+Foundations / Iconography and the existing component stories provide light/dark, mobile, and reduced-motion review scenarios.

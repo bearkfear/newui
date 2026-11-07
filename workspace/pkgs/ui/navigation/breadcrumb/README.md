@@ -26,6 +26,6 @@ Ark UI Solid has no Breadcrumb primitive in the installed catalog. This composit
 
 Keep ancestors in hierarchical order and place one Page at the end. The same composition supports a single current item. There are no automatic menus, collapsing branches, size variants, or configurable separators. Parts forward native attributes, refs, events, and additive classes. Styles use shared Radix tokens and visible focus indicators.
 
-## Review
+## Storybook examples
 
-The user validated Breadcrumb. Storybook includes default, dark/mobile, long labels, unbroken words, a single current item, and local navigation examples. Static examples link to actual Storybook destinations; the Navigation story keeps application state locally. The source snippet uses application paths. No new automated tests were added; test work requires separate authorization.
+Storybook includes default, dark/mobile, long labels, unbroken words, a single current item, and local navigation examples. Static examples link to actual Storybook destinations; the Navigation story keeps application state locally. The source snippet uses application paths.

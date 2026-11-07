@@ -45,10 +45,10 @@ Container is optional and renders a named `section` with horizontal overflow, ke
 
 Surfaces and stripes use neutral Radix steps 1–2, borders use step 6, hover uses step 3, and selected states use primary steps 3–4. Text retains foreground/muted semantic tokens. System, explicit, and nested themes work through the existing tokens. Class values are additive; arbitrary conflicting utility overrides are not guaranteed to win.
 
-Sorting, filtering, pagination, row-selection logic, virtualization, and column management belong to a future Data Table contract. Table does not introduce a data engine or an ARIA grid. Empty content composes [Empty](../../feedback/empty/README.md) inside a spanning Cell; the user approved this integration.
+Sorting, filtering, pagination, row-selection logic, virtualization, and column management belong to a future Data Table contract. Table does not introduce a data engine or an ARIA grid. Empty content composes [Empty](../../feedback/empty/README.md) inside a spanning Cell.
 
-## Review
+## Storybook examples
 
-Data / Table includes invoice totals and badges, individual and combined options, natural width, highlighted rows, grouped headers, an empty state, native cell actions, and mobile scrolling. Every example follows the Storybook theme selector without fixed theme overrides; the user approved this correction for Table and Playlist. The user validated the implementation and examples, including square bordered corners without scroll-container clipping. No new automated tests were created or expanded.
+Data / Table includes invoice totals and badges, individual and combined options, natural width, highlighted rows, grouped headers, an empty state, native cell actions, and mobile scrolling. Every example follows the Storybook theme selector without fixed theme overrides.
 
-Playlist and Playlist Mobile compose the reference music-library layout with illustrated CSS covers, title/album details, artists, duration, favorites, library toggles, and Ark dropdown actions. Both follow the selected Storybook theme. Song-title buttons select a row independently of the play/pause preview; no audio is loaded. Scoped story styles demonstrate solid primary selection and rounded rows without changing the Table API. Mobile preserves the columns in the existing horizontal scroll region. The user validated the playlist, including the corrected separators starting beneath the song titles; no new tests were added.
+Playlist and Playlist Mobile compose the reference music-library layout with illustrated CSS covers, title/album details, artists, duration, favorites, library toggles, and Ark dropdown actions. Both follow the selected Storybook theme. Song-title buttons select a row independently of the play/pause preview; no audio is loaded. Scoped story styles demonstrate solid primary selection and rounded rows without changing the Table API. Mobile preserves the columns in the existing horizontal scroll region.

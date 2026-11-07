@@ -47,7 +47,7 @@ The portal follows Ark presence so closed lazy content does not create an empty 
 
 Use variant free for media or custom content without card chrome; provide an accessible title or label and a visible way to close. Dialog does not add forms. Use [Alert Dialog](../alert-dialog/README.md) for critical confirmations with initial Cancel focus and blocked outside dismissal.
 
-Review Overlays / Dialog for sizes, long-content scrolling, media, controlled state, dismissal options, nested layers, custom composition, mobile, and reduced motion. The user validated the implementation and manually verified the examples; no automated tests were added.
+Review Overlays / Dialog for sizes, long-content scrolling, media, controlled state, dismissal options, nested layers, custom composition, mobile, and reduced motion.
 
 ## References
 

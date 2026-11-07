@@ -29,6 +29,6 @@ For horizontal layout, put the control and messages in Field.Content after Field
 
 The application owns values, validation rules/timing, async requests, submit prevention, and resets for controlled values. The Profile story demonstrates blur/submit validation, revalidation after touch, first-invalid-field focus, simulated saving, and reset. Native Submission And Reset demonstrates platform validation and FormData without a form library.
 
-## Review
+## Storybook examples
 
-Forms / Field includes the full text-family overview, neutral/valid/invalid/conflicting flags, profile editing, native submission/reset, horizontal layout, and mobile stories. Every story follows the theme toolbar. Implementation awaits user validation; no automated tests or interaction test functions were added.
+Forms / Field includes the full text-family overview, neutral/valid/invalid/conflicting flags, profile editing, native submission/reset, horizontal layout, and mobile stories. Every story follows the theme toolbar.

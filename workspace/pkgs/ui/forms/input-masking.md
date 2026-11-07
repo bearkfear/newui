@@ -20,10 +20,10 @@ Its [component](https://github.com/vuejs-tips/vue-the-mask/blob/master/src/compo
 
 Its [directive](https://github.com/vuejs-tips/vue-the-mask/blob/master/src/directive.js) replaces oninput, dispatches a synthetic input event, and restores a collapsed selection with a character-search heuristic. We use IMask listeners and preserve consumer handlers without redispatching input events.
 
-## Review
+## Storybook examples
 
 Forms / Masked Input provides custom tokens, Unicode letters, escaped literals, controlled phone editing, alternative prefixes, reactive configuration, native validity/events, native submission/reset, states, dark theme, and mobile examples.
 
 Review typing, paste, invalid characters, overflow, repeated digits, selection replacement, deletion beside punctuation, clear/reload, undo/redo, and switching phone lengths. Review composition, autofill, and mobile behavior on actual browsers; upstream features and issue reports do not establish browser parity.
 
-The user approved MaskedInput, its helpers, configuration, and review examples and separately authorized regression tests. [Automated coverage](masked-input/test-coverage.md) now complements the exploratory reviews. Approval does not imply unrecorded browser-specific verification.
+[Automated coverage](masked-input/test-coverage.md) now complements the exploratory reviews. See that guide for browser coverage.

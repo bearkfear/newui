@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Build newui, our own library for SolidJS interfaces with a consistent visual language, accessible behavior, and flexible composition. It should help build both an isolated control and a complete page.
+Build a library for SolidJS interfaces with a consistent visual language, accessible behavior, and flexible composition. It should help build both an isolated control and a complete page.
 
 ## Organize by intended use
 
@@ -22,7 +22,7 @@ Accessibility, keyboard interaction, focus, themes, responsiveness, and states a
 
 ## Learn from references
 
-Solid UI provides an initial reference for the catalog, visual design, and reusable code. Bulma inspires additions in layout, content, and compositions. Ark UI is the planned base for interactive behavior where suitable. Tailwind, tailwind-variants, and Radix Colors are part of the recorded technical direction.
+Solid UI provides an initial reference for the catalog, visual design, and reusable code. Bulma inspires additions in layout, content, and compositions. Ark UI supplies the base for interactive behavior where suitable. Tailwind, tailwind-variants, and Radix Colors provide styles, recipes, and color tokens.
 
 References help us make our own decisions. Copying an entire catalog or following every change in another library is not a goal. Reusing code requires checking its license and preserving applicable notices.
 
@@ -30,8 +30,8 @@ References help us make our own decisions. Copying an entire catalog or followin
 
 Start with a small sample, validate its contracts, and expand with real examples. Keep open decisions explicit. Planned documentation does not mean delivered functionality.
 
-The [existing architecture](architecture.md) records technical decisions, and the [roadmap](roadmap.md) organizes their implementation.
+The [architecture](architecture.md) describes the stack and module boundaries.
 
 ## Identity
 
-The project name is **newui**. It will have its own visual identity, using Solid UI as the initial reference. The specific visual language will be developed through the foundations and first components.
+The project name is **newui**. Its visual language uses shared typography, spacing, Radix color roles, and composable component variants.

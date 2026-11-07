@@ -53,14 +53,14 @@ The table summarizes direct local imports, including types. Each target is a spe
 | Navigation / VerticalMenu                    | Content / Heading                                      | Group headings                               |
 | Overlays / AlertDialog                       | Actions / buttonRecipe                                 | Trigger styling                              |
 
-InputGroup supplies button defaults through a context; it does not import or render Button itself. Its future CSS entry must account for composed action styling without treating all Actions as a dependency. A recipe dependency is also a styling dependency even when the corresponding component is not imported.
+InputGroup supplies button defaults through a context; it does not import or render Button itself. Its CSS entry accounts for composed action styling without treating all Actions as a dependency. A recipe dependency is also a styling dependency even when the corresponding component is not imported.
 
 ## Audit and distribution boundaries
 
-The local source audit found no runtime cycles. Type-only back references in Button/ButtonGroup and Sidebar were removed: button group options now derive from the recipe and native button attributes, and Sidebar options live in `sidebar.types.ts`. Existing public component and type exports remain unchanged.
+Button group options derive from the recipe and native button attributes; Sidebar options live in `sidebar.types.ts`. These support contracts avoid type-only back references to their components.
 
 Stories, `stories/` helpers, foundation previews, and `compositions/pages/` are catalog consumers. Their broad imports and page-level combinations do not authorize those dependencies in reusable library components. They must not become dependencies of public implementations.
 
 `foundations/styles.css` compiles the full [source stylesheet graph](pkgs/ui/styles/README.md). Component entries declare CSS/recipe dependencies, and area aggregators compose them. A shared normalizer deduplicates internal imports before Tailwind; JavaScript imports do not select CSS.
 
-Main and [area exports](pkgs/ui/getting-started/package-entries.md) aggregate the same implementations, with internal module boundaries and shared chunks per export condition. The [consumer bundle report](pkgs/ui/getting-started/bundle-sizes.md) records measured dependency elimination and shared Button bindings. The [Tailwind integration](pkgs/ui/getting-started/tailwind.md) adds area selections and an optional shared-token preset. Clean registry installation without workspace patches and release validation remain pending.
+Main and [area exports](pkgs/ui/getting-started/package-entries.md) aggregate the same implementations, with internal module boundaries and shared chunks per export condition. The [consumer bundle report](pkgs/ui/getting-started/bundle-sizes.md) records measured dependency elimination and shared Button bindings. The [Tailwind integration](pkgs/ui/getting-started/tailwind.md) adds area selections and an optional shared-token preset. See the [package guide](pkgs/ui/README.md#known-limitations) for distribution limitations.

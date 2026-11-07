@@ -51,6 +51,6 @@ Root uses Ark's hook and RootProvider with a narrow compatibility adapter: Zag 1
 
 Root accepts Ark `defaultValue` or controlled `value`/`onValueChange` for the open top-level panel. Submenu accepts Ark Popover `defaultOpen` or controlled `open`/`onOpenChange` and `positioning`. Link selection closes its ancestor disclosures and invokes Root `onNavigate`; cancel Link `onSelect` to retain the navigation. Submenu content is lazy-mounted and unmounted on exit; keep persistent application state outside it.
 
-## Review
+## Storybook examples
 
-Storybook: Navigation / Navigation Menu and Navigation / Navbar cover simple and grouped panels, three-level cascades, current links, desktop/mobile, and dark themes. The user approved this implementation and the Navbar revision, including dropdown spacing, open chevrons, keyboard/mobile behavior, and persistent parent panels during cascade hover. No automated tests were added.
+Storybook: Navigation / Navigation Menu and Navigation / Navbar cover simple and grouped panels, three-level cascades, current links, desktop/mobile, and dark themes.

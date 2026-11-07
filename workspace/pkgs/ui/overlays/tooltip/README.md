@@ -39,8 +39,6 @@ Keep content brief and noninteractive. Use Popover for controls or deliberate cl
 
 Storybook: Overlays / Tooltip includes controls for placement and delays, optional arrow, four preferred placements, disabled hints, controlled state, use within Dialog, nested light/dark themes, long text, small mobile viewport, and reduced motion. Check hover/focus opening, pointer movement onto the text, Escape dismissal, trigger clicks, edge repositioning, and theme inheritance. The Mobile story previews layout; it does not introduce a tap-to-open gesture.
 
-The user approved the implementation and Storybook examples. No automated tests were added.
-
 ## References
 
 - [Ark UI Tooltip](https://ark-ui.com/docs/components/tooltip).

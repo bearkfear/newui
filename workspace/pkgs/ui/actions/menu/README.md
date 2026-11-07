@@ -26,6 +26,6 @@ Use these components for actions. Page-link navigation belongs to Breadcrumb, Na
 
 The design follows [Solid UI Dropdown Menu](https://www.solid-ui.com/docs/components/dropdown-menu) and [Context Menu](https://www.solid-ui.com/docs/components/context-menu), using newui tokens and Ark rather than copying upstream implementation code. Menus are static surfaces with no new animation behavior.
 
-## Review
+## Storybook examples
 
-Storybook includes default/open, controlled, disabled trigger, dark/mobile dropdowns, and context examples with a separate ordinary dropdown alternative, submenus, and icon-free variants. The user validated the menus, including submenus, optional icons, unboxed disabled states, and surfaces without outer focus rings. New tests require separate authorization. No new automated tests were added.
+Storybook includes default/open, controlled, disabled trigger, dark/mobile dropdowns, and context examples with a separate ordinary dropdown alternative, submenus, and icon-free variants.

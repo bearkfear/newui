@@ -35,6 +35,6 @@ Use Root directly inside a Card or Panel. In a table, place it inside one Cell s
 
 No-results copy should explain how to recover, such as clearing filters. First-use copy can offer creation; a passive empty activity feed may need no action. Icon, description, and actions are optional, and applications own localization. No generic page text is injected by Root.
 
-## Review
+## Storybook examples
 
-Feedback / Empty includes default, optional parts, compact/page layouts, Card and Table integration, custom search icon and recovery actions, a loading-to-empty-to-content flow, long text, dark/nested themes, and mobile examples. The user approved the implementation and examples, including the adjusted icon size and Table integration. No automated tests were created or expanded.
+Feedback / Empty includes default, optional parts, compact/page layouts, Card and Table integration, custom search icon and recovery actions, a loading-to-empty-to-content flow, long text, dark/nested themes, and mobile examples.

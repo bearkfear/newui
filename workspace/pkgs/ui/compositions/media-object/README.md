@@ -27,4 +27,4 @@ Title defaults to h3, size 5, with a compact line height to align its text with 
 
 Root and parts forward native attributes, events, styles, and refs. Media width is scoped through a CSS variable on Root, so nested objects can have independent sizes. Applications own action behavior.
 
-Import `@egcs/newui/styles.css` once. Review Compositions / Media object and Overview before authorizing new tests.
+Import `@egcs/newui/styles.css` once. Review Compositions / Media object and Overview.

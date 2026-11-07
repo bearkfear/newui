@@ -2,15 +2,12 @@
 
 [UI package](../README.md)
 
-## Intent
+Supporting functions for consuming applications, independent of component rendering.
 
-Provide supporting functions that can be reused by several components or by consuming applications. Keep them within the UI package initially, with explicit exports when implemented.
+## Text masking
 
-## Planned scope
+Import `maskText`, `unmaskText`, `validateTextMaskOptions`, and `textMaskLimits` from `@egcs/newui/masking`. This entry has no component or DOM dependency and runs in Node and browsers.
 
-- [Formatting](formatting.md): locale-aware presentation of numbers, currencies, dates, and other values.
-- Parsing and normalization where a specific component contract requires them.
+See [text helpers](../forms/masked-input/text-helpers.md) and [configuration](../forms/masked-input/configuration.md) for patterns, tokens, transforms, and limits.
 
-These functions are not implemented yet. Avoid creating a generic helpers collection without a defined use. Keep utilities independent of component rendering when possible.
-
-[Input masking](../forms/input-masking.md) belongs to Forms because it interacts with editing, selection, and composition events. It may reuse formatting utilities, but display formatting alone does not define input behavior.
+[MaskedInput](../forms/masked-input/README.md) belongs to Forms because it also handles editing, selection, and composition events. General locale-aware [formatting](formatting.md) is not implemented.

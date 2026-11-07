@@ -14,7 +14,7 @@ export const Overview: Story = {
       <p class="nui-catalog-eyebrow">Getting started / Workshop guide</p>
       <h1>Your component workbench.</h1>
       <p class="nui-catalog-lead">
-        A repeatable workflow for exploring, documenting, and checking every new component.
+        Explore component APIs, themes, responsive layouts, and accessible interactions.
       </p>
       <WorkshopScenes />
       <section class="nui-catalog-section">
@@ -46,9 +46,8 @@ export const Overview: Story = {
         </pre>
         <p>
           Provide descriptions, explicit controls for public variants, state examples, and
-          reviewable interactions. Add automated assertions only after the user explicitly approves
-          the component and authorizes test work. Add an appropriate category; empty categories stay
-          out of the sidebar.
+          interactive examples. Follow the project conventions when contributing stories. Add an
+          appropriate category; empty categories stay out of the sidebar.
         </p>
       </section>
       <aside class="nui-catalog-note">

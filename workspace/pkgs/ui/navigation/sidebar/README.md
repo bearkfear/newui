@@ -52,6 +52,6 @@ Toggle is the existing Button with accessible name/state and cancellation-aware 
 
 Styles use existing Radix semantic tokens, automatic/nested themes, compiled CSS, and existing focus metrics. Mobile uses Sheet's reduced-motion handling; desktop widths do not animate. This is a sidebar layout composition, not a new resize or dialog primitive.
 
-## Review
+## Storybook examples
 
-Navigation / Sidebar includes an application example with grouped links, expandable collections, current-page state, project creation, account actions, fixed/resizable widths, a compact rail, controlled collapse, dark theme, and closed/open mobile sheets. The user approved the implementation and examples, including the single divider, account hover spacing in both modes, matching compact brand/navigation blocks, and preserved collapsed state and resized width after project creation. No automated tests were created or expanded.
+Navigation / Sidebar includes an application example with grouped links, expandable collections, current-page state, project creation, account actions, fixed/resizable widths, a compact rail, controlled collapse, dark theme, and closed/open mobile sheets.

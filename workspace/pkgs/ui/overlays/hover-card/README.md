@@ -35,15 +35,13 @@ Public types: `HoverCardRootProps`, `HoverCardTriggerProps`, `HoverCardContentPr
 
 ## Visual and behavior contracts
 
-The uniform surface uses Radix background, border, and text tokens, following the approved Popover card shape and shadow. The arrow shares that background and has matching outward border edges in every placement. Public tokens: `--nui-hover-card-width` (20rem), `--nui-hover-card-shadow` (defaults to the Popover shadow), and `--nui-z-hover-card` (1050). Width is limited to the viewport minus 2rem; Body scrolls within the available height. Set token overrides on a surrounding scope for portal inheritance. System and workshop reduced motion disable animations.
+The uniform surface uses Radix background, border, and text tokens, following the Popover card shape and shadow. The arrow shares that background and has matching outward border edges in every placement. Public tokens: `--nui-hover-card-width` (20rem), `--nui-hover-card-shadow` (defaults to the Popover shadow), and `--nui-z-hover-card` (1050). Width is limited to the viewport minus 2rem; Body scrolls within the available height. Set token overrides on a surrounding scope for portal inheritance. System and workshop reduced motion disable animations.
 
 The preview does not trap or move focus into its content and does not replace a link's accessible name or destination. Ark opens on focus as well as hover and ignores touch hover events. Keep essential information at the destination or visible in the page. Use Popover for deliberate click/tap disclosure, required controls, or interactive tasks; Hover Card is for optional previews. The default examples use native links that open their destinations in a new tab.
 
-## Review
+## Storybook examples
 
 Storybook: Overlays / Hover Card includes an organization preview composed from Avatar, Heading, Text, and Badge; configurable placement/delays; optional arrow; disabled preview; controlled state; use within Dialog; light/dark previews; small mobile viewport; and reduced motion. Check hover/focus opening, pointer travel onto the card, delayed closing, Escape, native link navigation, viewport edges, and arrow integration in both themes. Both Themes starts open for visual review. Mobile previews layout and preserves native link navigation without adding a tap-to-open gesture.
-
-The user approved the implementation and Storybook examples. No automated tests were added.
 
 ## References
 

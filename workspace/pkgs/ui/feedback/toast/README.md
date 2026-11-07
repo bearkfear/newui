@@ -1,6 +1,6 @@
 # Toast
 
-One notification system powered by Ark UI Solid Toast. Ark owns the store, visible limit, priority queue, timers, hover/focus/page-idle pause, keyboard access, status announcements, action callbacks, and dismissal. newui supplies the approved Callout colors and hierarchy, a compact shadowed surface, default rendering, and a theme-preserving portal.
+One notification system powered by Ark UI Solid Toast. Ark owns the store, visible limit, priority queue, timers, hover/focus/page-idle pause, keyboard access, status announcements, action callbacks, and dismissal. newui supplies the Callout colors and hierarchy, a compact shadowed surface, default rendering, and a theme-preserving portal.
 
 ## API
 
@@ -48,7 +48,7 @@ Notifications use Ark's polite status semantics, including error types. Critical
 
 Solid UI Toast demonstrates a composable toaster and imperative creation API; its Sonner reference uses the opinionated solid-sonner system. We selected Ark Toast because it is already in the dependency set, supplies the needed behavior, and allows direct reuse of our visual contracts. No Sonner dependency or second notification API was added.
 
-Storybook: Feedback / Toast includes all standard result types, persistent notifications, Undo, queuing, six placement controls, soft/outline styling, optional icons, loading-to-success/error updates, custom composition, live nested theme changes, dark mode, mobile, and reduced motion. The user approved the implementation and examples. No automated tests were added.
+Storybook: Feedback / Toast includes all standard result types, persistent notifications, Undo, queuing, six placement controls, soft/outline styling, optional icons, loading-to-success/error updates, custom composition, live nested theme changes, dark mode, mobile, and reduced motion.
 
 ## References
 

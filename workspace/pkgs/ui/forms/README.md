@@ -1,38 +1,27 @@
 # Forms
 
-[Workspace](../../../README.md)
+[UI package](../README.md)
 
-## Intent
+Enter and edit values with consistent labels, help text, errors, and states.
 
-Enable entering, selecting, and editing values with consistent labels, help text, errors, and states.
+## Components
 
-The first text-family delivery implements Field, Input, Textarea, and InputGroup with Ark behavior and Bulma-inspired Radix styling. It awaits user validation in Storybook. The remaining controls and form-library integration are still planned.
+- [Field](field/README.md): Label, Content, Description, ErrorText, SuccessText, and RequiredIndicator.
+- [Input](input/README.md): single-line native text controls.
+- [Textarea](textarea/README.md): multiline native text controls with optional Ark autoresize.
+- [InputGroup](input-group/README.md): icons, addons, prefixes, suffixes, and attached actions.
+- [MaskedInput](masked-input/README.md): opt-in pattern masking, configurable tokens, raw values, and native form submission.
 
-## Planned inventory
+The remaining Forms catalog is unfinished. These components do not include a form validation engine or form-library integration.
 
-- Field, including Label, Content, Description, ErrorText, SuccessText, and RequiredIndicator (implemented; awaiting validation).
-- Input, Textarea, and InputGroup (implemented; awaiting validation).
-- Checkbox, Radio Group, and Switch.
-- Number Field, OTP Field, and Slider.
-- Select, Combobox, and Date Picker.
-- File Upload.
-- Field groups and horizontal form examples.
-- Complete form and settings compositions, moved from stage 6 to accompany their controls.
+## Behavior and composition
 
-## Agreed decisions
+Field uses Ark to associate controls, labels, descriptions, and errors; newui adds explicit success feedback and visual variants. Input and Textarea also work independently with an accessible name. See the [field contract](field.md).
 
-Field is the shared structure. Input is the single-line control and Textarea is the multiline control. InputGroup combines adornments, prefixes, suffixes, and actions. Do not use TextField as the public name for this structure.
+Native attributes, refs, events, editing, FormData, default values, and resets are preserved. Applications own controlled values, validation rules, async requests, and submission. Use CSS for surrounding form layouts and [Compositions](../compositions/README.md) for complete application examples.
 
-Input and Textarea must work independently or within Field, with an accessible name in both cases. Detailed decisions are in the [field contract](field.md).
+[Input masking](input-masking.md) documents the IMask adapter and text helpers. The DOM-independent `@egcs/newui/masking` entry supports formatting and validation in Node and browsers.
 
-## Ideas and questions
+## Storybook examples
 
-Field and InputGroup standardize text-field composition. Field groups and File Upload remain planned. The implementation uses Ark Field and native text controls without a new dependency; newui owns visual variants and explicit valid/success feedback.
-
-Ark owns label/description/error associations; newui appends success descriptions. Native attributes, refs, editing, FormData, value/defaultValue, and resets are preserved. See the [Field](field/README.md), [Input](input/README.md), [Textarea](textarea/README.md), and [Input Group](input-group/README.md) contracts. Form-library integration and the distinction between native selection and a custom Select remain separate decisions. Complete application examples belong to [Compositions](../compositions/README.md).
-
-Forms / Field / Overview covers the family, with interactive profile editing, password reveal/clear/search actions, sizes, tones, addons, loading, readonly/disabled states, explicit validation, horizontal layout, and mobile. Native Submission And Reset demonstrates browser form behavior. No new automated tests were added.
-
-## Planned extensions
-
-[Input masking](input-masking.md) is implemented as opt-in MaskedInput with configurable tokens and an internal IMask adapter. The user approved the mask implementation, text helpers, configuration limits, and review examples. Shared display [formatting](../utilities/formatting.md) lives in Utilities and remains planned.
+Forms / Field / Overview demonstrates profile editing, password reveal, clear/search actions, sizes, tones, addons, loading, readonly/disabled states, explicit validation, horizontal layout, and mobile. Native Submission And Reset demonstrates browser form behavior.

@@ -54,6 +54,6 @@ The installed Ark version has no Menubar primitive. Its Navigation Menu was eval
 
 The bar stays horizontal on small screens; keep top-level labels short. Floating panels and submenus use the shared menu's viewport constraints, so cascades may overlap their parent on narrow screens. Automatic/nested themes and disabled/destructive styling follow the shared [menu contract](../menu/README.md).
 
-## Review
+## Storybook examples
 
-Storybook: Actions / Menubar includes File/Edit/View, disabled triggers/items, grouped commands, destructive actions, controlled opening, cascades, dark themes, and mobile. The user approved the implementation, including stable hover switching, keyboard navigation, and mobile behavior. No automated tests were added.
+Storybook: Actions / Menubar includes File/Edit/View, disabled triggers/items, grouped commands, destructive actions, controlled opening, cascades, dark themes, and mobile.

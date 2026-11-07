@@ -49,6 +49,6 @@ The PostCSS plugin compiles the selected library graph separately, without Prefl
 
 Use plain imports in the entry stylesheet. Vite's CSS import pipeline is supported; for a direct PostCSS pipeline, keep selection imports at the root rather than inside another imported application file. Do not layer, prefix, or condition these selection imports. This implementation supports the documented PostCSS pipeline; Tailwind 3, CLI-only compilation, and the native Tailwind Vite plugin are not validated.
 
-## Review
+## Storybook examples
 
-Run `bun run dev` from `workspace/` and open **Getting started / Tailwind preset** in Storybook. The example compiles selected library areas and application utilities in an isolated document, with interactive palette, spacing, radius, and appearance controls. No new automated tests were added.
+Run `bun run dev` from `workspace/` and open **Getting started / Tailwind preset** in Storybook. The example compiles selected library areas and application utilities in an isolated document, with interactive palette, spacing, radius, and appearance controls.

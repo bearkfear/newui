@@ -28,6 +28,6 @@ The largest valid value defines full width. Optional positive finite `maxValue` 
 
 Native figure attributes, events, styles, and refs target the outer figure. `class` is additive. Labels and values wrap on narrow screens. Bars have no animation or tab stops. Use external links or actions alongside this presentation when navigation is needed.
 
-## Review
+## Storybook examples
 
-Data / Bar List includes default, reactive dashboard, shared-scale/tone, empty, fractional/zero/invalid, long-label, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override. The user approved the implementation and examples, including the theme, color, and dashboard spacing adjustments. No automated tests were created or expanded.
+Data / Bar List includes default, reactive dashboard, shared-scale/tone, empty, fractional/zero/invalid, long-label, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override.

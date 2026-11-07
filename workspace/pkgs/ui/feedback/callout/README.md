@@ -5,8 +5,7 @@ One composition for contextual guidance, status messages, and inline alerts. The
 ## API
 
 - `Root`: native div with `tone` neutral, primary, info (default), success, warning, or danger; `variant` soft (default), outline, or message. Native attributes, events, refs, styles, and additive classes are forwarded. Color does not set an announcement role.
-- `Header` / `Body`: optional parts for the separated [Message presentation](message.md), with a solid colored header and a padded soft body. The user approved this presentation and its Storybook examples.
-- `Icon`: optional decorative span, with a tone-based information/check/warning/error icon. Supply children to replace the graphic; omit the part to remove it. Icons are hidden from assistive technology, so convey meaning in text as well.
+- `Header` / `Body`: optional parts for the separated [Message presentation](message.md), with a solid colored header and a padded soft body. - `Icon`: optional decorative span, with a tone-based information/check/warning/error icon. Supply children to replace the graphic; omit the part to remove it. Icons are hidden from assistive technology, so convey meaning in text as well.
 - `Content`: flexible text column with the shared compact header gap.
 - `Title`: optional semibold paragraph. It provides a visual message title without introducing a page heading or forcing a heading level.
 - `Description`: div for plain or structured content, including paragraphs, lists, and native links. Links receive matching tone and visible focus styling.
@@ -41,8 +40,6 @@ Announcements, visibility, actions, errors, and retries remain application-owned
 Surfaces use Radix step 3 and noninteractive borders step 6. Titles use step 12 of the selected tone for higher contrast; descriptions, icons, and links use step 11 of that same scale. Neutral maps to Slate rather than switching to pure black or white. Close-button hover/active backgrounds use steps 4/5; disabled controls use the shared neutral tokens. Both variants follow nested light/dark scopes, wrap long text, and keep icon/close controls separate from the flexible content column. There are no component animations.
 
 Storybook: Feedback / Callout includes all tones and variants, optional icon/title, actions with retry, dismiss/restore, a dynamic alert, structured content with links, theme comparison, long text, and mobile. These are reviewable demos without test assertions or play functions.
-
-The user approved the soft/outline implementation and examples, including tone-based title and description colors. The user also approved the Message presentation. No automated tests were added.
 
 ## References
 

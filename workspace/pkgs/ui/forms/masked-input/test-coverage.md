@@ -2,7 +2,7 @@
 
 [Contract](README.md) · [Exploratory review](paste-review.md)
 
-The user approved the implementation and separately authorized these tests. Existing exploratory reports describe the original manual sessions; they do not imply verification on additional browsers.
+Existing exploratory reports describe the original manual sessions; they do not imply verification on additional browsers.
 
 ## Automated checks
 
@@ -22,7 +22,7 @@ The focused suite has 32 cases and uses the configured Chromium project. Firefox
 
 Pull-request/main CI installs Chromium and runs this suite before validating the package. The publishing workflow does not duplicate browser tests.
 
-## Regression found during automation
+## Regression scenarios
 
 After formatted phone paste, deleting the eleventh digit could keep the longer mask incomplete. Candidate scoring now counts accepted editable characters rather than raw input that may include pasted literals. Ties prefer shorter patterns and then supplied order. IMask continues to simulate candidates and manage selection/history.
 

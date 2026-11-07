@@ -43,4 +43,4 @@ System and workshop reduced motion disable transitions and keep automatic progre
 
 [Ark Progress](https://ark-ui.com/docs/components/progress-linear) supplies the rendering and accessible value contract. Its progress API has no page-request aggregation/trickle lifecycle, so the controller adds the timer and promise bookkeeping around Ark without replacing its accessible primitive. No dependency was added.
 
-Storybook: Feedback / Top Progress includes manual controls, overlapping requests, an error while another request remains pending, fast requests, restart controls, a global context example, glow, dark/mobile, and reduced motion. The user approved the implementation and examples, including the stronger glow. No automated tests were added.
+Storybook: Feedback / Top Progress includes manual controls, overlapping requests, an error while another request remains pending, fast requests, restart controls, a global context example, glow, dark/mobile, and reduced motion.

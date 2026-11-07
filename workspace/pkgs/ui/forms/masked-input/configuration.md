@@ -32,6 +32,6 @@ try {
 
 For JSON settings, send a mask string or a list inside the configuration object, such as { "mask": "###.###.###-##" }. RegExp objects and transform functions are JavaScript configuration; this API does not execute function bodies or regex strings received from JSON. Applications may pair backend patterns with a locally defined token map.
 
-## Review
+## Storybook examples
 
-Forms / Masked Input / Configuration Limits accepts editable JSON and includes patterns at and above the length limit, arrays at and above the alternative limit, malformed types, empty patterns, and incomplete escapes. Invalid configuration displays its error before mounting a preview; valid configuration feeds the component and both helpers. Authorized [regression tests](test-coverage.md) cover boundaries and malformed backend settings.
+Forms / Masked Input / Configuration Limits accepts editable JSON and includes patterns at and above the length limit, arrays at and above the alternative limit, malformed types, empty patterns, and incomplete escapes. Invalid configuration displays its error before mounting a preview; valid configuration feeds the component and both helpers. [Regression tests](test-coverage.md) cover boundaries and malformed backend settings.

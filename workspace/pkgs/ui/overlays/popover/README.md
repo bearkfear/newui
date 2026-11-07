@@ -42,13 +42,11 @@ The card follows Dialog's header/body/footer visual language, using Radix backgr
 
 By default the rest of the page stays interactive. Ark moves focus into the content and manages return focus and dismissal. `modal={true}` adds focus trapping, outside isolation, and scroll locking without adding a backdrop. Prefer Dialog for larger modal tasks and Alert Dialog for critical confirmation. Buttons and links in the body do not automatically close the popover; compose CloseTrigger or update controlled state when needed. Keep application state outside lazy content when it must survive closing.
 
-## Review
+## Storybook examples
 
 Storybook: Overlays / Popover includes interactive notification preferences, optional arrow, placements, modal and dismissal options, controlled state, separate anchor with matching width, use within Dialog, nested light/dark themes, long content, small mobile viewport, and reduced motion. Check click/tap opening, Tab navigation, Escape/outside dismissal, focus restoration, clipping near viewport edges, scrolling, and theme inheritance.
 
 The arrow uses the card's border color and follows the header/footer surface when adjoining those edges. Storybook's Arrow In Both Themes opens light and dark examples side by side for placement review.
-
-The user approved the implementation and Storybook examples, including the revised arrow. No automated tests were added.
 
 ## References
 

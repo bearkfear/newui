@@ -31,7 +31,7 @@ const meta = {
       story: { inline: false, height: "480px" },
       description: {
         component:
-          "Temporary notifications powered by Ark Toast, with the approved Callout colors, title/description hierarchy, and optional icons. One store manages stacking, the queue, timers, hover/focus pause, actions, and dismissal. Mount one themed Toaster for each store. Controls reset the demo store; no global singleton is created.",
+          "Temporary notifications powered by Ark Toast, with the Callout colors, title/description hierarchy, and optional icons. One store manages stacking, the queue, timers, hover/focus pause, actions, and dismissal. Mount one themed Toaster for each store. Controls reset the demo store; no global singleton is created.",
       },
     },
   },

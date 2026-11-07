@@ -33,4 +33,4 @@ A plain badge adds no role, tab stop, or hover state. Native anchors and buttons
 
 Groups add layout only. They are not listboxes, toolbars, or form controls. Removal is application-owned composition with a named button. The removable example returns focus to the next available action. No Ark state machine is needed for native labels, anchors, or buttons.
 
-Review Content / Badge for tones, variants, sizes, wrapping, attached groups, navigation, disabled controls, and removal. The implementation has been validated by the user; no new automated tests were added.
+Review Content / Badge for tones, variants, sizes, wrapping, attached groups, navigation, disabled controls, and removal.

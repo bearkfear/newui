@@ -24,6 +24,6 @@ Positive values use success and negative values danger by default. `isPositiveGo
 
 Native figure attributes, events, styles, refs, and additive `class` target the outer figure. The visible caption labels the figure. Comparison labels and values wrap at narrow widths. Radix semantic tokens support automatic and nested themes.
 
-## Review
+## Storybook examples
 
-Data / Delta Bar includes controls, favorable decreases, zero, unavailable, values beyond the visual bounds, custom formatting, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override. A reactive dashboard is available under Data / Bar List. The user approved the implementation and examples, including the theme, color, and dashboard spacing adjustments. No automated tests were created or expanded.
+Data / Delta Bar includes controls, favorable decreases, zero, unavailable, values beyond the visual bounds, custom formatting, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override. A reactive dashboard is available under Data / Bar List.

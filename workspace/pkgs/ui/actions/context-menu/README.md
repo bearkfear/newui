@@ -49,4 +49,4 @@ Root, Content, Item, Group, GroupLabel, Separator, SubRoot, and SubTrigger share
 
 For custom targets use the function-form `asChild` and preserve supplied props. The default ContextTrigger is a button, but the context behavior does not assign a primary-click action. The ordinary alternative is a separate DropdownMenu root sharing the action component: Ark does not position a regular Trigger when a ContextTrigger is present in the same root. Keyboard users can use the ordinary trigger; native context-menu keys depend on the browser.
 
-Use `defaultOpen`, or controlled `open` / `onOpenChange`, as provided by Ark. Pointer positioning, touch cancellation, dismissal, themed portals, and shared states are described in the [menu contract](../menu/README.md). The user validated the regular, icon-free, dark/mobile, and nested action examples. Test work requires separate authorization. No new automated tests were added.
+Use `defaultOpen`, or controlled `open` / `onOpenChange`, as provided by Ark. Pointer positioning, touch cancellation, dismissal, themed portals, and shared states are described in the [menu contract](../menu/README.md).

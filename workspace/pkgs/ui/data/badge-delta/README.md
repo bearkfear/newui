@@ -19,6 +19,6 @@ Positive values point up, negative values point down, and zero uses a dash. Colo
 
 Existing Badge `variant` (soft, solid, outline), `size` (sm, md, lg), and `rounded` options are preserved. Tone is derived from the value and business direction. Native span attributes, events, styles, refs, and additive `class` target the Badge span; children are generated from the value. Icons are decorative.
 
-## Review
+## Storybook examples
 
-Data / Badge Delta includes editable controls, variants/sizes, favorable decreases, zero, unavailable, rounded, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override. The Data / Bar List dashboard supplies metric and comparison context. The user approved the implementation and examples, including the theme, color, and dashboard spacing adjustments. No automated tests were created or expanded.
+Data / Badge Delta includes editable controls, variants/sizes, favorable decreases, zero, unavailable, rounded, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override. The Data / Bar List dashboard supplies metric and comparison context.

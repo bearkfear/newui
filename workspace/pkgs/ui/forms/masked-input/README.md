@@ -49,7 +49,7 @@ Accepted reset, configuration changes, and external controlled replacements star
 
 Native required validates nonempty visible text; validate completeness/business rules explicitly. Do not mutate input.value directly: update controlled value or use native editing. Native maxlength counts displayed characters, including literals; the mask already limits editable positions.
 
-## Review
+## Storybook examples
 
 The [Chromium inspection](upstream-issues.md#chromium-inspection) records real clipboard paste, initial/default values, external controlled updates, selection replacement, and native submission/reset. Other browser-specific scenarios remain pending.
 
@@ -57,4 +57,4 @@ The [Chromium inspection](upstream-issues.md#chromium-inspection) records real c
 
 [Paste and editing review](paste-review.md) records oversized clipboard input, selection replacement, dynamic phone masks, and the history correction found during exploration.
 
-The user approved this implementation and separately authorized regression tests. The [automated coverage](test-coverage.md) covers helpers, configuration, clipboard editing, native forms, and the history corrections. Browser-specific coverage remains recorded separately; approval does not establish unrecorded compatibility.
+The [automated coverage](test-coverage.md) covers helpers, configuration, clipboard editing, native forms, and the history corrections. See that guide for browser coverage and limitations.

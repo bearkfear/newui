@@ -29,4 +29,4 @@ Content includes the portal and positioning. Use `defaultOpen` for initial state
 
 Compose SubRoot inside Content, then place SubTrigger and another Content inside it. Ark supplies right/left arrow navigation, pointer intent, and selection across levels. See the SubRoot example in Storybook source.
 
-See the [shared menu contract](../menu/README.md) for keyboard behavior, native/ARIA states, theme preservation, styling, and boundaries. The user validated the implementation and Storybook examples. No new tests were added; test work requires separate authorization.
+See the [shared menu contract](../menu/README.md) for keyboard behavior, native/ARIA states, theme preservation, styling, and boundaries.
