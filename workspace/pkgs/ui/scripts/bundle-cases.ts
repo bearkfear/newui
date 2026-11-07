@@ -31,6 +31,14 @@ export const areaCases: BundleCase[] = [
   { name: "Input forms", contents: 'export { Input } from "@egcs/newui/forms";' },
   { name: "InputGroup forms", contents: 'export { InputGroup } from "@egcs/newui/forms";' },
   {
+    name: "RichTextEditor forms",
+    contents: 'export { RichTextEditor } from "@egcs/newui/forms";',
+  },
+  {
+    name: "Rich text helpers",
+    contents: 'export { parseRichTextHtml, renderRichTextHtml } from "@egcs/newui/rich-text";',
+  },
+  {
     name: "Button and InputGroup main",
     contents: 'export { Button, InputGroup } from "@egcs/newui";',
   },

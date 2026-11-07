@@ -13,6 +13,7 @@ Enter and edit values with consistent labels, help text, errors, and states.
 - [MaskedInput](masked-input/README.md): opt-in pattern masking, configurable tokens, raw values, and native form submission.
 - [NumberInput](number-input/README.md): exact decimal strings, locale grouping, configurable precision, and independent number helpers.
 - [CurrencyInput](currency-input/README.md): configurable currencies, decimal/minor-unit entry, currency addons, and independent currency helpers.
+- [RichTextEditor](rich-text-editor/README.md): schema-backed structured writing, JSON values, HTML/text representations, and server-compatible helpers.
 
 The remaining Forms catalog is unfinished. These components do not include a form validation engine or form-library integration.
 
@@ -23,6 +24,8 @@ Field uses Ark to associate controls, labels, descriptions, and errors; newui ad
 Native attributes, refs, events, editing, FormData, default values, and resets are preserved. Applications own controlled values, validation rules, async requests, and submission. Use CSS for surrounding form layouts and [Compositions](../compositions/README.md) for complete application examples.
 
 [Input masking](input-masking.md) documents the IMask adapter and text helpers. The DOM-independent `@egcs/newui/masking` entry supports formatting and validation in Node and browsers.
+
+[Rich text editing](rich-text-editor/README.md) uses canonical JSON and exposes the DOM-independent `@egcs/newui/rich-text` entry for legacy HTML conversion, normalized HTML rendering, plain-text extraction, emptiness checks, and schema validation.
 
 ## Storybook examples
 

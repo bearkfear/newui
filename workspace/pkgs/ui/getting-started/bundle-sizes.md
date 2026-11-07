@@ -21,24 +21,26 @@ Values below are gzip bytes for this implementation and installed dependency ver
 
 | Consumer                                    | Solid condition | Import fallback |
 | ------------------------------------------- | --------------: | --------------: |
-| Button from main                            |           12929 |           12938 |
-| Button from Actions                         |           12932 |           12932 |
-| Input from main                             |           16476 |           16435 |
-| Input from Forms                            |           16472 |           16475 |
-| InputGroup from Forms                       |           19407 |           19443 |
-| Button + InputGroup from main               |           20843 |           20844 |
-| Button + InputGroup from areas              |           20829 |           20859 |
-| Mixed main/area Button aliases + InputGroup |           20852 |           20854 |
+| Button from main                            |           12913 |           12920 |
+| Button from Actions                         |           12916 |           12916 |
+| Input from main                             |           16603 |           16573 |
+| Input from Forms                            |           16607 |           16608 |
+| InputGroup from Forms                       |           19799 |           19837 |
+| RichTextEditor from Forms                   |          150189 |          150155 |
+| Rich text HTML helpers                      |          121235 |          121235 |
+| Button + InputGroup from main               |           21222 |           21216 |
+| Button + InputGroup from areas              |           21199 |           21249 |
+| Mixed main/area Button aliases + InputGroup |           21224 |           21225 |
 | Heading from Content                        |           11423 |           11419 |
-| Table from Data                             |           11664 |           11664 |
+| Table from Data                             |           11618 |           11618 |
 | Loading from Feedback                       |           14237 |           14235 |
 | Container from Layout                       |           10991 |           10976 |
-| Breadcrumb from Navigation                  |           14173 |           14198 |
-| Dialog from Overlays                        |           35569 |           35601 |
-| Panel from Compositions                     |           12916 |           12923 |
-| LineChart                                   |          100229 |          100317 |
-| All three chart types                       |          107262 |          107343 |
-| Button + all three chart types              |          106979 |          107038 |
+| Breadcrumb from Navigation                  |           14130 |           14150 |
+| Dialog from Overlays                        |           35542 |           35559 |
+| Panel from Compositions                     |           12910 |           12911 |
+| LineChart                                   |          100198 |          100291 |
+| All three chart types                       |          107230 |          107319 |
+| Button + all three chart types              |          106950 |          107015 |
 
 ## Findings and limits
 
@@ -48,4 +50,6 @@ The initial area-chunk build retained unrelated Navigation initialization when s
 
 In both conditions, mixed `RootButton` and `AreaButton` exports resolve to the same `Button` binding, with one Button function and one ButtonGroupContext declaration. InputGroup uses that shared context. Charts already use Button, so exporting Button beside Charts adds an export rather than another implementation; gzip totals can decrease slightly through compression changes.
 
-After source CSS modularization, the complete stylesheet is 120765 raw bytes / 20410 gzip bytes, independent of JavaScript area selection; catalog-only utilities are excluded. See the [source stylesheet graph](../styles/README.md) for CSS measurements. These are standalone consumer totals, not incremental application costs. They do not measure rendering, interaction behavior, SSR, hydration, route-level loading, other bundlers, or a packed installation without workspace patches.
+RichTextEditor is intentionally an opt-in, engine-backed control and is substantially larger than native form controls. Importing other Forms exports does not retain it. The server-compatible HTML helper entry also includes schema and virtual-DOM conversion code; text extraction and validation share that isolated boundary.
+
+After source CSS modularization, the complete stylesheet is 129115 raw bytes / 21641 gzip bytes, independent of JavaScript area selection; catalog-only utilities are excluded. See the [source stylesheet graph](../styles/README.md) for CSS measurements. These are standalone consumer totals, not incremental application costs. They do not measure rendering, interaction behavior, SSR, hydration, route-level loading, other bundlers, or a packed installation without workspace patches.

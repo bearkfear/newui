@@ -2,7 +2,7 @@
 
 Composable components for **SolidJS**, with shared spacing, typography, Radix color tokens, automatic light/dark themes, and optional Tailwind integration.
 
-**Experimental alpha:** APIs may change. Forms currently includes Field, Input, MaskedInput, NumberInput, CurrencyInput, Textarea, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
+**Experimental alpha:** APIs may change. Forms currently includes Field, Input, MaskedInput, NumberInput, CurrencyInput, Textarea, RichTextEditor, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
 
 ## Install
 
@@ -82,6 +82,24 @@ parseNumber("1.234,56", { locale: "pt-BR" }); // { status: "valid", value: "1234
 Values remain exact major-unit decimal strings, independent of display separators. Configure grouping, fractional precision, sign rules and string min/max bounds. Currency defaults follow the selected currency; locale and currency are independent. Automatic minor-unit entry shifts typed digits (1234 becomes 12,34 for BRL), while initial and pasted values represent complete amounts. The minus key toggles the whole sign anywhere in the input.
 
 Both fields compose with Field/InputGroup, icons, addons and actions. Native forms submit formatted values by default or canonical strings with submitValue="raw". The numbers entry exposes number/currency formatting, parsing, configuration validation and types without UI or DOM dependencies. See the [number contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/number-input/README.md) and [currency contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/currency-input/README.md) for supported locales, precision limits and editing behavior.
+
+## Edit rich text
+
+```tsx
+import { RichTextEditor } from "@egcs/newui/forms";
+import { parseRichTextHtml, renderRichTextHtml } from "@egcs/newui/rich-text";
+
+const document = parseRichTextHtml("<p>Legacy <strong>content</strong></p>");
+
+<RichTextEditor.Root defaultValue={document} name="body">
+  <RichTextEditor.Toolbar />
+  <RichTextEditor.Content placeholder="Write the article..." />
+</RichTextEditor.Root>;
+
+renderRichTextHtml(document);
+```
+
+RichTextEditor uses JSON as its canonical value while exposing normalized HTML and plain text in change details. Native forms can submit JSON, HTML, or text. The separate rich-text entry supports legacy HTML conversion, text extraction, emptiness checks, and schema validation without initializing the editor UI. See the [rich-text contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/rich-text-editor/README.md) for the schema, actions, form behavior, and conversion limits.
 
 ## Show global page progress
 

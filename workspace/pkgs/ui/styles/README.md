@@ -24,7 +24,7 @@ Toast → Callout, Loading, Button
 Charts → Button, Empty → Heading, Text
 ```
 
-Forms includes the action styles needed by InputGroup without importing action menus. Sidebar includes VerticalMenu's styling contract for compact navigation. Popover imports Dialog styles because its close trigger reuses the dialog recipe. Shared data captions, tones, and accessibility rules are separated from BarList and DeltaBar geometry.
+Forms includes the action styles needed by InputGroup and RichTextEditor without importing action menus. RichTextEditor also reuses Prose's semantic native-element rules for consistent editing and reading surfaces. Sidebar includes VerticalMenu's styling contract for compact navigation. Popover imports Dialog styles because its close trigger reuses the dialog recipe. Shared data captions, tones, and accessibility rules are separated from BarList and DeltaBar geometry.
 
 Recipes register their own literal source files. Recipe dependencies such as disclosure, badge appearance, navigation links, progress tones, and Panel headers are included explicitly. Catalog-only pagination recipes are registered by Storybook's `library.css`, not by the library.
 
@@ -42,12 +42,12 @@ Run `bun run --cwd pkgs/ui measure:styles` from `workspace/`. It prints raw/gzip
 
 | Selection             | Raw CSS bytes | Gzip bytes |
 | --------------------- | ------------: | ---------: |
-| Foundations and reset |         17678 |       4414 |
-| Button                |         32785 |       6645 |
-| Actions               |         38886 |       7735 |
-| Forms                 |         44125 |       8527 |
-| Actions + Forms       |         49879 |       9660 |
-| Data without Charts   |         34344 |       7489 |
-| Full catalog          |        120765 |      20410 |
+| Foundations and reset |         19121 |       4708 |
+| Button                |         33498 |       6722 |
+| Actions               |         39509 |       7805 |
+| Forms                 |         53549 |      10165 |
+| Actions + Forms       |         59213 |      11108 |
+| Data without Charts   |         34980 |       7572 |
+| Full catalog          |        129115 |      21641 |
 
 All reported selections emit zero repeated complete rules. Source order can change rule grouping and compression while retaining the same dependencies. Open **Getting started / Modular styles** for isolated Actions, Forms, combined, dark, and mobile previews. Parent Storybook CSS cannot style the preview document.

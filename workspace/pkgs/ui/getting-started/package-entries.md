@@ -14,9 +14,10 @@ newui remains one published experimental package. Each area provides named compo
 | `@egcs/newui/content`      | Accordion, Avatar, Badge, Card, Collapsible, Counter, Heading, Prose, Separator, Text, Timeline                               |
 | `@egcs/newui/data`         | BadgeDelta, BarList, DeltaBar, native Table                                                                                   |
 | `@egcs/newui/feedback`     | Callout, Empty, Loading, PageLoading, Progress, ProgressCircle, Toast, Toaster, createToaster, TopProgress, createTopProgress |
-| `@egcs/newui/forms`        | Field, Input, MaskedInput, NumberInput, CurrencyInput, InputGroup, Textarea, mask/number/currency helpers and configuration   |
+| `@egcs/newui/forms`        | Field, text inputs, InputGroup, RichTextEditor, mask/number/currency helpers and configuration                                |
 | `@egcs/newui/masking`      | DOM-independent maskText, unmaskText, validateTextMaskOptions, textMaskLimits, and mask types                                 |
 | `@egcs/newui/numbers`      | DOM-independent number/currency formatters, parsers, configuration validation, limits and types                               |
+| `@egcs/newui/rich-text`    | DOM-independent HTML/JSON conversion, plain-text extraction, emptiness, validation, and document types                        |
 | `@egcs/newui/layout`       | Container, Resizable, Section                                                                                                 |
 | `@egcs/newui/navigation`   | Breadcrumb, Navbar, NavigationMenu, Pagination, Sidebar, Steps, Tabs, VerticalMenu                                            |
 | `@egcs/newui/overlays`     | AlertDialog, Dialog, HoverCard, Popover, Sheet, Tooltip                                                                       |
@@ -39,7 +40,7 @@ System light/dark selection and `data-nui-theme` overrides remain available thro
 
 ## Build and module identity
 
-The manifest exposes declaration files, JSX through the `solid` condition for the consumer's Solid compiler, and an ESM browser fallback through `import`. Component browser fallback code is not an SSR target. The masking entry excludes component initialization and supports Node helper usage without a DOM; packing verifies that import independently.
+The manifest exposes declaration files, JSX through the `solid` condition for the consumer's Solid compiler, and an ESM browser fallback through `import`. Component browser fallback code is not an SSR target. The masking and rich-text helper entries exclude component initialization and support Node usage without a DOM; packing verifies the masking entry, and release review exercises rich-text conversion separately.
 
 The build generates all entries together, preserves reachable implementation module boundaries through internal entries, and shares chunks within each condition. Main and area imports resolve to the same implementations and contexts when resolved under the same condition. Keep the generated internal files and chunks with the entry files; copying an entry alone is insufficient. JavaScript side-effect metadata continues to preserve CSS imports.
 
