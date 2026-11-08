@@ -50,6 +50,13 @@ export {
 } from "./number-input";
 export type { NumberInputProps } from "./number-input/number-input";
 export { NumberInput } from "./number-input/number-input";
+export type {
+  RichTextDocument,
+  RichTextEditorProps,
+  RichTextSubmitValue,
+  RichTextValueDetails,
+} from "./rich-text-editor";
+export { RichTextEditor } from "./rich-text-editor/rich-text-editor";
 export type { TextControlSize, TextControlTone } from "./text-control.context";
 export type { TextareaProps } from "./textarea/textarea";
 export { Textarea } from "./textarea/textarea";

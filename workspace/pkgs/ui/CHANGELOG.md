@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.6
+
+### Added
+
+- Add RichTextEditor with canonical JSON documents, controlled and uncontrolled values, native form submission/reset, character limits, readonly/disabled/invalid states, and an accessible composable toolbar.
+- Include headings, inline formatting, links, ordered and unordered lists, blockquotes, code blocks, horizontal rules, and undo/redo in the default editor schema and toolbar.
+- Export HTML-to-JSON parsing, normalized JSON-to-HTML rendering, plain-text extraction, emptiness checks, schema validation, and document types through the DOM-independent `@egcs/newui/rich-text` entry.
+- Add reviewed Storybook examples for controlled values, representations, native forms, legacy HTML conversion, states, themes, and mobile layouts.
+- Document public rich-text APIs in English with matching Brazilian Portuguese JSDoc guidance.
+
+### Changed
+
+- Include RichTextEditor styles in the complete and Forms stylesheet distributions while keeping its JavaScript engine out of unrelated Forms imports.
+
+RichTextEditor was reviewed in Storybook and explored in Chromium, including form submission/reset and an accessibility scan. Dedicated automated interaction coverage has not been added. HTML import is schema normalization rather than lossless conversion, and the editor remains a client-side, opt-in dependency. Existing alpha limitations still apply.
+
 ## 0.1.0-alpha.5
 
 ### Added

@@ -4,7 +4,7 @@ Input styles Ark Field.Input and keeps the native input element. Use it within F
 
 ## Contract
 
-Supported text-family types are text (native default), email, password, search, tel, and url. Number editing belongs to the later Number Field; date selection and upload remain separate controls. `inputmode`, `autocomplete`, `pattern`, `required`, lengths, name, form, native events, styles, and DOM refs remain available. `size` selects the visual sm/md/lg size; `htmlSize` forwards the native numeric size attribute.
+Supported text-family types are text (native default), email, password, search, tel, and url. Number editing belongs to NumberInput; date selection and upload remain separate controls. `inputmode`, `autocomplete`, `pattern`, `required`, lengths, name, form, native events, styles, and DOM refs remain available. `size` selects the visual sm/md/lg size; `htmlSize` forwards the native numeric size attribute.
 
 Input accepts the shared size, tone, rounded, valid, invalid, loading, disabled, and readOnly options. Local visual options override inherited defaults. Parent invalid, disabled, and readonly states cannot be cleared by a child. Invalid overrides valid; visual tone alone never changes `aria-invalid`. Native Field associations and consumer descriptions are preserved.
 

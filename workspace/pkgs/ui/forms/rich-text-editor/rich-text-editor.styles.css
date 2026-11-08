@@ -1,0 +1,9 @@
+@import "../../styles/foundations.css";
+@import "../text-control.styles.css";
+@import "../../actions/button/button.styles.css";
+@import "../../content/prose/prose.css";
+@import "./rich-text-editor.css";
+
+@source "./rich-text-editor.root.tsx";
+@source "./rich-text-editor.action.tsx";
+@source "./rich-text-editor.link.tsx";

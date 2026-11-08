@@ -14,6 +14,7 @@ const entries = {
   forms: "forms/index.ts",
   masking: "forms/masked-input/index.ts",
   numbers: "forms/number-input/index.ts",
+  "rich-text": "forms/rich-text-editor/index.ts",
   layout: "layout/index.ts",
   navigation: "navigation/index.ts",
   overlays: "overlays/index.ts",

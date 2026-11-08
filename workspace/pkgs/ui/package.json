@@ -1,6 +1,6 @@
 {
   "name": "@egcs/newui",
-  "version": "0.1.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
@@ -84,6 +84,10 @@
       "types": "./dist/types/forms/number-input/index.d.ts",
       "import": "./dist/numbers.js"
     },
+    "./rich-text": {
+      "types": "./dist/types/forms/rich-text-editor/index.d.ts",
+      "import": "./dist/rich-text.js"
+    },
     "./layout": {
       "types": "./dist/types/layout/index.d.ts",
       "solid": "./dist/layout.jsx",
@@ -125,6 +129,12 @@
   "dependencies": {
     "@ark-ui/solid": "5.39.3",
     "@solid-primitives/media": "2.3.6",
+    "@tiptap/core": "3.33.0",
+    "@tiptap/extension-character-count": "3.33.0",
+    "@tiptap/extension-placeholder": "3.33.0",
+    "@tiptap/html": "3.33.0",
+    "@tiptap/pm": "3.33.0",
+    "@tiptap/starter-kit": "3.33.0",
     "@unovis/solid": "1.7.1",
     "@unovis/ts": "1.7.1",
     "imask": "7.6.1",
