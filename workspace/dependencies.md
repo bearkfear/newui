@@ -39,6 +39,8 @@ Forms / Checkbox, CheckboxGroup, and RadioGroup wrap Ark's corresponding primiti
 
 Forms / Switch wraps Ark Switch and reuses choice options, the choice visual recipe, and the shared reset adapter. Its own CSS and passive-tone recipe own track geometry and checked/unchecked appearance; it imports no other component implementation. Native disabled fieldsets are styled through the input's `:disabled` state because the installed Ark Switch does not expose that state on its visual parts.
 
+Forms / DateInput and DatePicker use Ark segmented input and calendar primitives with an explicit internationalized/date dependency. Shared date support owns CalendarDate contracts, locale resolution through the existing Ark locale context, Field visuals, ISO form inputs and reset binding. DateRangePicker reuses DatePicker in range mode with independent segment editors. DatePicker Content depends on Overlays / OverlayPortal for theme preservation; no date support module imports its consumers.
+
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.
 
 ## Current cross-area implementation dependencies
@@ -59,6 +61,7 @@ The table summarizes direct local imports, including types. Each target is a spe
 | Feedback / TopProgress                       | Overlays / portal-scope                                | Themed page bar portal                       |
 | Forms / InputGroup                           | Actions / button-group.context; Feedback / Loading     | Shared button defaults and loading indicator |
 | Forms / RichTextEditor                       | Actions / Button; Content / Prose styles               | Formatting controls and editorial typography |
+| Forms / DatePicker                           | Overlays / OverlayPortal                               | Themed calendar portals                      |
 | Forms / Select                               | Overlays / OverlayPortal; Feedback / LoadingIndicator  | Themed option list and loading indicator     |
 | Navigation / Navbar                          | Layout / Container                                     | Width constraints                            |
 | Navigation / NavigationMenu                  | Overlays / OverlayPortal                               | Themed submenu portals                       |

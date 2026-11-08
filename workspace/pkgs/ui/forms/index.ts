@@ -17,6 +17,22 @@ export type {
 export { formatCurrency, parseCurrency, validateCurrencyFormatOptions } from "./currency-input";
 export { CurrencyInput } from "./currency-input/currency-input";
 export type { CurrencyInputProps } from "./currency-input/currency-input.types";
+export type { LocaleProviderProps } from "./date/date.locale";
+export { LocaleProvider } from "./date/date.locale";
+export type { DateLabelProps } from "./date/date.parts";
+export type {
+  DateEntryProps,
+  DateOptions,
+  DateSelection,
+  DateValueChangeDetails,
+} from "./date/date.types";
+export { CalendarDate, parseDate } from "./date/date.value";
+export type { DateInputControlProps, DateInputRootProps } from "./date-input/date-input";
+export { DateInput } from "./date-input/date-input";
+export type { DatePickerContentProps, DatePickerRootProps } from "./date-picker/date-picker";
+export { DatePicker } from "./date-picker/date-picker";
+export type { DateRangePickerRootProps } from "./date-range-picker/date-range-picker";
+export { DateRangePicker } from "./date-range-picker/date-range-picker";
 export type { FieldRootProps } from "./field/field";
 export { Field } from "./field/field";
 export type {
