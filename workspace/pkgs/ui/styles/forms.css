@@ -1,4 +1,7 @@
 @import "../forms/field/field.styles.css";
+@import "../forms/checkbox/checkbox.styles.css";
+@import "../forms/checkbox-group/checkbox-group.styles.css";
+@import "../forms/radio-group/radio-group.styles.css";
 @import "../forms/input/input.styles.css";
 @import "../forms/select/select.styles.css";
 @import "../forms/number-input/number-input.styles.css";

@@ -35,6 +35,8 @@ Forms / RichTextEditor integrates Tiptap's framework-independent core directly w
 
 Forms / Select wraps Ark Select and reuses the text-control visual contract, recipe, and reset binding. Its value adapter preserves canceled native resets without replacing Ark navigation or selection behavior. Select Content uses Overlays / OverlayPortal for inherited themes; Indicator composes Feedback / LoadingIndicator. The lower-level select.types contract keeps the value adapter independent of Root.
 
+Forms / Checkbox, CheckboxGroup, and RadioGroup wrap Ark's corresponding primitives. Shared choice support owns the visual recipe, group options context, and native reset adapter over the existing text-control reset binding. Checkbox consumes CheckboxGroup's lower-level context for unique item IDs and input registration; CheckboxGroup does not import Checkbox. Radio item input composition preserves readonly submission and Field descriptions without replacing Ark selection or navigation.
+
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.
 
 ## Current cross-area implementation dependencies

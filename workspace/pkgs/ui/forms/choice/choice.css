@@ -1,0 +1,142 @@
+@layer components {
+  .nui-choice {
+    font-size: var(--nui-choice-font);
+    color: var(--nui-foreground);
+  }
+  .nui-choice-item {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    width: fit-content;
+    max-width: 100%;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .nui-choice-control {
+    display: inline-flex;
+    flex: 0 0 var(--nui-choice-size);
+    align-items: center;
+    justify-content: center;
+    width: var(--nui-choice-size);
+    height: var(--nui-choice-size);
+    margin-top: calc((1.5em - var(--nui-choice-size)) / 2);
+    border: 1px solid var(--nui-control-border);
+    border-radius: var(--nui-radius-sm);
+    background: var(--nui-background);
+    color: var(--nui-choice-contrast);
+    --nui-focus-color: var(--nui-choice-focus);
+  }
+  :where(.nui-choice[data-valid]) .nui-choice-control {
+    --nui-choice-color: var(--nui-success);
+    --nui-choice-contrast: var(--nui-on-success);
+    --nui-choice-focus: var(--nui-success-focus);
+  }
+  :where(.nui-choice[data-invalid]) .nui-choice-control,
+  .nui-choice-control[data-invalid] {
+    --nui-choice-color: var(--nui-danger);
+    --nui-choice-contrast: var(--nui-on-danger);
+    --nui-choice-focus: var(--nui-danger-focus);
+  }
+  .nui-choice-control svg {
+    width: calc(var(--nui-choice-size) - 0.25rem);
+    height: calc(var(--nui-choice-size) - 0.25rem);
+    stroke-width: 3;
+  }
+  .nui-choice-control [data-part="indicator"] {
+    display: flex;
+  }
+  .nui-choice-control [hidden] {
+    display: none;
+  }
+  .nui-choice-control:is([data-state="checked"], [data-state="indeterminate"]) {
+    background: var(--nui-choice-color);
+    border-color: var(--nui-choice-color);
+  }
+  .nui-choice-item:where(:not([data-disabled], [data-readonly])):hover .nui-choice-control {
+    border-color: var(--nui-choice-focus);
+  }
+  .nui-choice-control[data-focus-visible] {
+    outline-color: var(--nui-choice-focus);
+    animation: nui-focus-in 120ms ease-out;
+  }
+  .nui-choice-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .nui-choice-control[data-invalid] {
+    border-color: var(--nui-danger-border);
+  }
+  .nui-choice-item[data-disabled] {
+    color: var(--nui-disabled-foreground);
+    cursor: not-allowed;
+  }
+  .nui-choice-control[data-disabled] {
+    background: var(--nui-disabled-background);
+    border-color: var(--nui-disabled-border);
+    color: var(--nui-disabled-foreground);
+  }
+  .nui-choice-item[data-readonly] {
+    cursor: default;
+  }
+  .nui-choice-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+  .nui-choice-group[data-orientation="horizontal"] {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+  }
+  .nui-choice-group-label {
+    width: 100%;
+    font-weight: var(--nui-font-weight-medium);
+  }
+  .nui-radio-control {
+    border-radius: 50%;
+  }
+  .nui-radio-dot {
+    width: 45%;
+    height: 45%;
+    border-radius: 50%;
+    background: currentColor;
+    visibility: hidden;
+  }
+  .nui-radio-control[data-state="checked"] .nui-radio-dot {
+    visibility: visible;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nui-choice-control[data-focus-visible] {
+      animation: none;
+    }
+  }
+  [data-motion="reduced"] .nui-choice-control[data-focus-visible] {
+    animation: none;
+  }
+  @media (forced-colors: active) {
+    .nui-choice-control {
+      forced-color-adjust: none;
+      background: Canvas;
+      border-color: ButtonText;
+      color: HighlightText;
+    }
+    .nui-choice-control:is([data-state="checked"], [data-state="indeterminate"]) {
+      background: Highlight;
+      border-color: Highlight;
+    }
+    .nui-choice-control[data-focus-visible] {
+      outline-color: Highlight;
+    }
+    .nui-choice-control[data-disabled] {
+      background: Canvas;
+      border-color: GrayText;
+      color: GrayText;
+    }
+    .nui-choice-item[data-disabled] {
+      color: GrayText;
+    }
+  }
+}
