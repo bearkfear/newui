@@ -9,6 +9,7 @@ Enter and edit values with consistent labels, help text, errors, and states.
 - [Field](field/README.md): Label, Content, Description, ErrorText, SuccessText, and RequiredIndicator.
 - [Input](input/README.md): single-line native text controls.
 - [Textarea](textarea/README.md): multiline native text controls with optional Ark autoresize.
+- [Select](select/README.md): Ark-backed single/multiple selection, typed collections, and native forms.
 - [InputGroup](input-group/README.md): icons, addons, prefixes, suffixes, and attached actions.
 - [MaskedInput](masked-input/README.md): opt-in pattern masking, configurable tokens, raw values, and native form submission.
 - [NumberInput](number-input/README.md): exact decimal strings, locale grouping, configurable precision, and independent number helpers.

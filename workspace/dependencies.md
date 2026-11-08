@@ -33,6 +33,8 @@ Forms / CurrencyInput reuses the decimal renderer/controller through an internal
 
 Forms / RichTextEditor integrates Tiptap's framework-independent core directly with Solid lifecycle primitives and composes the existing Button for formatting actions. Its component styles reuse Content / Prose's native editorial rules. The fixed schema is shared with the DOM-independent rich-text entry, whose HTML conversion uses Tiptap's server-compatible HTML package without importing Solid or mounting an editor.
 
+Forms / Select wraps Ark Select and reuses the text-control visual contract, recipe, and reset binding. Its value adapter preserves canceled native resets without replacing Ark navigation or selection behavior. Select Content uses Overlays / OverlayPortal for inherited themes; Indicator composes Feedback / LoadingIndicator. The lower-level select.types contract keeps the value adapter independent of Root.
+
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.
 
 ## Current cross-area implementation dependencies
@@ -53,6 +55,7 @@ The table summarizes direct local imports, including types. Each target is a spe
 | Feedback / TopProgress                       | Overlays / portal-scope                                | Themed page bar portal                       |
 | Forms / InputGroup                           | Actions / button-group.context; Feedback / Loading     | Shared button defaults and loading indicator |
 | Forms / RichTextEditor                       | Actions / Button; Content / Prose styles               | Formatting controls and editorial typography |
+| Forms / Select                               | Overlays / OverlayPortal; Feedback / LoadingIndicator  | Themed option list and loading indicator     |
 | Navigation / Navbar                          | Layout / Container                                     | Width constraints                            |
 | Navigation / NavigationMenu                  | Overlays / OverlayPortal                               | Themed submenu portals                       |
 | Navigation / Sidebar                         | Layout / Resizable; Overlays / Sheet; Actions / Button | Desktop panels, mobile presentation, toggle  |
