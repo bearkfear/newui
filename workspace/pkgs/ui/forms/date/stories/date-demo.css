@@ -1,0 +1,41 @@
+@layer components {
+  .date-demo-field {
+    width: 100%;
+    max-width: 28rem;
+  }
+  .date-demo-field[data-kind="range"] {
+    max-width: 32rem;
+  }
+  .date-demo-stack {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 52rem;
+  }
+  .date-demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: 1.5rem;
+  }
+  .date-demo-panel {
+    padding: 1rem;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-lg);
+    background: var(--nui-background);
+    color: var(--nui-foreground);
+  }
+  .date-demo-panel h3 {
+    margin-bottom: 1rem;
+    font-weight: var(--nui-font-weight-medium);
+  }
+  .date-demo-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .date-demo-preset {
+    padding: 0.5rem;
+    margin-top: 0.75rem;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-md);
+  }
+}

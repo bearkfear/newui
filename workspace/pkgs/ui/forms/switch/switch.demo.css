@@ -1,0 +1,26 @@
+.switch-demo-settings {
+  display: grid;
+  gap: 1.5rem;
+  width: min(100%, 32rem);
+  padding: 1.5rem;
+  border: 1px solid var(--nui-border);
+  border-radius: var(--nui-radius-lg);
+  background: var(--nui-background);
+}
+.switch-demo-settings header {
+  display: grid;
+  gap: 0.5rem;
+}
+.switch-demo-settings h2 {
+  font-weight: var(--nui-font-weight-semibold);
+}
+.switch-demo-settings header p {
+  color: var(--nui-muted-foreground);
+  font-size: var(--nui-font-size-sm);
+}
+.switch-demo-setting {
+  width: 100%;
+}
+.switch-demo-setting .nui-switch-label {
+  flex: 1;
+}

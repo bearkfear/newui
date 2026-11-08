@@ -41,9 +41,10 @@
     },
     "pkgs/ui": {
       "name": "@egcs/newui",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0",
       "dependencies": {
         "@ark-ui/solid": "5.39.3",
+        "@internationalized/date": "3.12.4",
         "@solid-primitives/media": "2.3.6",
         "@tiptap/core": "3.33.0",
         "@tiptap/extension-character-count": "3.33.0",

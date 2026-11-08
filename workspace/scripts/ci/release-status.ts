@@ -1,8 +1,12 @@
 import { appendFile } from "node:fs/promises";
 
-const manifest: { name: string; version: string } = await Bun.file(
+const manifest: { name: string; version: string; publishConfig: { tag: string } } = await Bun.file(
   new URL("../../pkgs/ui/package.json", import.meta.url),
 ).json();
+const tag = manifest.version.includes("-") ? "next" : "latest";
+if (manifest.publishConfig.tag !== tag) {
+  throw new Error(`Version ${manifest.version} requires publishConfig.tag=${tag}.`);
+}
 const response = await fetch(`https://registry.npmjs.org/${encodeURIComponent(manifest.name)}`, {
   headers: { accept: "application/vnd.npm.install-v1+json" },
   signal: AbortSignal.timeout(30_000),
@@ -30,4 +34,4 @@ if (response.status === 404) {
 }
 
 const output = process.env["GITHUB_OUTPUT"];
-if (output) await appendFile(output, `publish=${publish}\n`);
+if (output) await appendFile(output, `publish=${publish}\ntag=${tag}\n`);

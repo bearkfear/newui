@@ -33,6 +33,14 @@ Forms / CurrencyInput reuses the decimal renderer/controller through an internal
 
 Forms / RichTextEditor integrates Tiptap's framework-independent core directly with Solid lifecycle primitives and composes the existing Button for formatting actions. Its component styles reuse Content / Prose's native editorial rules. The fixed schema is shared with the DOM-independent rich-text entry, whose HTML conversion uses Tiptap's server-compatible HTML package without importing Solid or mounting an editor.
 
+Forms / Select wraps Ark Select and reuses the text-control visual contract, recipe, and reset binding. Its value adapter preserves canceled native resets without replacing Ark navigation or selection behavior. Select Content uses Overlays / OverlayPortal for inherited themes; Indicator composes Feedback / LoadingIndicator. The lower-level select.types contract keeps the value adapter independent of Root.
+
+Forms / Checkbox, CheckboxGroup, and RadioGroup wrap Ark's corresponding primitives. Shared choice support owns the visual recipe, group options context, and native reset adapter over the existing text-control reset binding. Checkbox consumes CheckboxGroup's lower-level context for unique item IDs and input registration; CheckboxGroup does not import Checkbox. Radio item input composition preserves readonly submission and Field descriptions without replacing Ark selection or navigation.
+
+Forms / Switch wraps Ark Switch and reuses choice options, the choice visual recipe, and the shared reset adapter. Its own CSS and passive-tone recipe own track geometry and checked/unchecked appearance; it imports no other component implementation. Native disabled fieldsets are styled through the input's `:disabled` state because the installed Ark Switch does not expose that state on its visual parts.
+
+Forms / DateInput and DatePicker use Ark segmented input and calendar primitives with an explicit internationalized/date dependency. Shared date support owns CalendarDate contracts, locale resolution through the existing Ark locale context, Field visuals, ISO form inputs and reset binding. DateRangePicker reuses DatePicker in range mode with independent segment editors. DatePicker Content depends on Overlays / OverlayPortal for theme preservation; no date support module imports its consumers.
+
 Independent components include Button, Text, Heading, Loading, and Resizable. Composed components include Card, Empty, InputGroup, Sidebar, and Charts. The `compositions/` implementations combine components for larger interface structures; they are never dependencies of lower layers.
 
 ## Current cross-area implementation dependencies
@@ -53,6 +61,8 @@ The table summarizes direct local imports, including types. Each target is a spe
 | Feedback / TopProgress                       | Overlays / portal-scope                                | Themed page bar portal                       |
 | Forms / InputGroup                           | Actions / button-group.context; Feedback / Loading     | Shared button defaults and loading indicator |
 | Forms / RichTextEditor                       | Actions / Button; Content / Prose styles               | Formatting controls and editorial typography |
+| Forms / DatePicker                           | Overlays / OverlayPortal                               | Themed calendar portals                      |
+| Forms / Select                               | Overlays / OverlayPortal; Feedback / LoadingIndicator  | Themed option list and loading indicator     |
 | Navigation / Navbar                          | Layout / Container                                     | Width constraints                            |
 | Navigation / NavigationMenu                  | Overlays / OverlayPortal                               | Themed submenu portals                       |
 | Navigation / Sidebar                         | Layout / Resizable; Overlays / Sheet; Actions / Button | Desktop panels, mobile presentation, toggle  |

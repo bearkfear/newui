@@ -19,14 +19,15 @@ export const Overview: Story = {
         <span class="nui-catalog-wordmark">
           newui<span style={{ color: "var(--catalog-accent)" }}>.</span>
         </span>
-        <span class="nui-catalog-status">Component workshop · Early development</span>
+        <span class="nui-catalog-status">Component workshop · SolidJS</span>
       </header>
       <IntroductionHero />
       <IntroductionFeatures />
       <IntroductionButtonDemo />
       <aside class="nui-catalog-note">
-        newui is in early development and is not published. Colors use official Radix scales with
-        automatic system themes. Navigation interactions use Ark UI.
+        newui is available on npm. This catalog documents its components and known limitations.
+        Colors use official Radix scales with automatic system themes. Navigation interactions use
+        Ark UI.
       </aside>
       <footer class="nui-catalog-footer">
         <span>newui / Component development catalog</span>

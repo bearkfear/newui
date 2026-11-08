@@ -1,0 +1,144 @@
+@layer components {
+  .nui-date-action {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--nui-radius-md);
+    color: var(--nui-muted-foreground);
+  }
+  .nui-date-action:enabled:hover,
+  .nui-date-view-trigger:enabled:hover {
+    background: var(--nui-neutral-soft);
+    color: var(--nui-foreground);
+  }
+  .nui-date-action:disabled {
+    color: var(--nui-disabled-foreground);
+    cursor: not-allowed;
+  }
+  .nui-date-positioner {
+    z-index: calc(var(--nui-z-popover) + var(--layer-index, 0));
+  }
+  .nui-date-content {
+    box-sizing: border-box;
+    width: max-content;
+    padding: 0.75rem;
+    max-width: calc(100vw - 1.5rem);
+    max-height: min(var(--available-height, 100dvh), calc(100dvh - 1.5rem));
+    overflow: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-lg);
+    background: var(--nui-background);
+    color: var(--nui-foreground);
+    box-shadow: var(--nui-popover-shadow);
+    font-size: var(--nui-font-size-sm);
+  }
+  .nui-date-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .nui-date-view-trigger {
+    padding: 0.375rem;
+    border-radius: var(--nui-radius-md);
+    font-weight: var(--nui-font-weight-medium);
+  }
+  .nui-date-months {
+    display: flex;
+    gap: 1rem;
+  }
+  .nui-date-months > div {
+    flex: none;
+    width: min(17.5rem, calc(100vw - 3.25rem));
+  }
+  .nui-date-month-title {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    font-weight: var(--nui-font-weight-medium);
+  }
+  .nui-date-content table {
+    border-collapse: separate;
+    border-spacing: 0;
+    /* A percentage width makes max-content sizing expand through the positioner. */
+    width: min(17.5rem, calc(100vw - 3.25rem));
+    table-layout: fixed;
+  }
+  .nui-date-content th {
+    font-size: var(--nui-font-size-xs);
+    color: var(--nui-muted-foreground);
+    font-weight: normal;
+    height: 2rem;
+    text-align: center;
+  }
+  .nui-date-content td {
+    padding: 0;
+    text-align: center;
+  }
+  .nui-date-content [data-part="table-cell-trigger"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2.5rem;
+    border-radius: var(--nui-radius-md);
+    cursor: pointer;
+    font-variant-numeric: tabular-nums;
+    outline: none;
+  }
+  .nui-date-content
+    [data-part="table-cell-trigger"]:not([data-disabled], [data-unavailable]):hover {
+    background: var(--nui-neutral-soft);
+  }
+  .nui-date-content [data-part="table-cell"]:where(:has(> [data-in-range])) {
+    background: var(--nui-primary-soft);
+  }
+  .nui-date-content [data-part="table-cell"]:where(:has(> [data-range-start])) {
+    border-start-start-radius: var(--nui-radius-md);
+    border-end-start-radius: var(--nui-radius-md);
+  }
+  .nui-date-content [data-part="table-cell"]:where(:has(> [data-range-end])) {
+    border-start-end-radius: var(--nui-radius-md);
+    border-end-end-radius: var(--nui-radius-md);
+  }
+  .nui-date-content [data-part="table-cell-trigger"]:is([data-view="month"], [data-view="year"]) {
+    margin: 0.1875rem;
+  }
+  .nui-date-content
+    [data-part="table-cell"]:where(:has(> [data-in-range]))
+    [data-part="table-cell-trigger"] {
+    color: var(--nui-primary-text-strong);
+  }
+
+  .nui-date-content [data-part="table-cell"] [data-part="table-cell-trigger"][data-selected] {
+    background: var(--nui-primary);
+    color: var(--nui-on-primary);
+  }
+  .nui-date-content [data-part="table-cell-trigger"][data-today] {
+    box-shadow: inset 0 0 0 1px var(--nui-primary-border);
+  }
+  .nui-date-content [data-part="table-cell-trigger"]:focus-visible {
+    outline: 2px solid var(--nui-focus-ring);
+    outline-offset: -2px;
+  }
+  .nui-date-content [data-part="table-cell-trigger"]:is([data-disabled], [data-unavailable]) {
+    color: var(--nui-disabled-foreground);
+    cursor: not-allowed;
+  }
+  @media (forced-colors: active) {
+    .nui-date-content [data-part="table-cell"] [data-part="table-cell-trigger"][data-selected] {
+      background: Highlight;
+      color: HighlightText;
+      forced-color-adjust: none;
+    }
+    .nui-date-content [data-in-range] {
+      outline: 1px solid Highlight;
+    }
+    .nui-date-content [data-part="table-cell-trigger"]:focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}
