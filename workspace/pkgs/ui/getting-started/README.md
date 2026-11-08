@@ -4,7 +4,7 @@
 
 [Workspace](../../../README.md)
 
-Start with the [package guide](../README.md) for installation, a first form, stylesheet setup, and known alpha limitations.
+Start with the [package guide](../README.md) for installation, a first form, stylesheet setup, and known limitations.
 
 ## Usage guides
 

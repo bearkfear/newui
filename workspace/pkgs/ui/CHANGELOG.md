@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.1.0
+
+First official release without a prerelease suffix, distributed through npm's `latest` tag. Includes the components, tokens, compiled CSS, area entries, and optional Tailwind/PostCSS integration introduced in the alpha series.
+
+### Added
+
+- Add Ark-based Select with single/multiple selection, typed collections, clear actions, Field integration, themed portals, native FormData and cancelable reset support.
+- Add Checkbox, CheckboxGroup, and RadioGroup with composable controls, shared choice options, native inputs, group selection limits, and Field feedback.
+- Add Switch with solid/outline tracks, rounded/square geometry, label placement, passive tones, and native form behavior.
+- Add DateInput, DatePicker, and DateRangePicker with localized Ark segments, calendar navigation, inclusive bounds, unavailable endpoints, partial ranges, and Gregorian CalendarDate values without timezone conversion.
+- Export LocaleProvider, CalendarDate, parseDate, and typed date selection/change contracts. Separate localized presentation from ISO form serialization and stable range field names.
+- Add reviewed Storybook examples covering pt-BR/en-US comparison, controlled/uncontrolled values, native submission/reset, validation, Dialog, themes, sizes, and mobile layouts.
+
+### Changed
+
+- Include the new controls in the main/Forms exports and complete/Forms stylesheets; declare internationalized/date explicitly at Ark's installed version.
+- Update installation guidance to use the default npm tag and keep prereleases on `next`.
+- Derive the publishing tag from the package version and reject a mismatched publishConfig.tag before publishing.
+
+### Known limitations
+
+The catalog remains incomplete. This is a 0.x API; minor releases may change public contracts. SSR/hydration and full cross-browser interaction coverage remain unvalidated for release. The workspace focus-visible dependency patch is not inherited by consumers; see the original known limitation below.
+
+Dates support Gregorian AD calendar dates only. Unavailable interior days may be crossed by a range, and some Ark segment live-region announcements remain in English. The date family was reviewed in Storybook and Chromium; dedicated automated date interaction tests were not added. See the [date family documentation](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/date/README.md) for the full contract.
+
 ## 0.1.0-alpha.6
 
 ### Added

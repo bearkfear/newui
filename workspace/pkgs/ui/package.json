@@ -1,6 +1,6 @@
 {
   "name": "@egcs/newui",
-  "version": "0.1.0-alpha.6",
+  "version": "0.1.0",
   "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
@@ -22,7 +22,7 @@
   ],
   "publishConfig": {
     "access": "public",
-    "tag": "next",
+    "tag": "latest",
     "registry": "https://registry.npmjs.org"
   },
   "type": "module",

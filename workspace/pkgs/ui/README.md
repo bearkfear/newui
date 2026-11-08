@@ -2,12 +2,12 @@
 
 Composable components for **SolidJS**, with shared spacing, typography, Radix color tokens, automatic light/dark themes, and optional Tailwind integration.
 
-**Experimental alpha:** APIs may change. Forms currently includes Field, Input, MaskedInput, NumberInput, CurrencyInput, Textarea, RichTextEditor, and InputGroup; the rest of the Forms catalog is unfinished. See [known limitations](#known-limitations) before adopting this release.
+**First official release: 0.1.0.** This 0.x library continues to evolve. Forms includes Field, text/masked/number/currency inputs, Select, Checkbox/CheckboxGroup, RadioGroup, Switch, DateInput/DatePicker/DateRangePicker, RichTextEditor, and InputGroup; the broader catalog remains in progress. See [known limitations](#known-limitations) before adopting this release.
 
 ## Install
 
 ```sh
-bun add @egcs/newui@next solid-js
+bun add @egcs/newui solid-js
 ```
 
 Use npm, pnpm, or Yarn if preferred. Configure your application for SolidJS, for example with Vite and `vite-plugin-solid`.
@@ -83,6 +83,26 @@ Values remain exact major-unit decimal strings, independent of display separator
 
 Both fields compose with Field/InputGroup, icons, addons and actions. Native forms submit formatted values by default or canonical strings with submitValue="raw". The numbers entry exposes number/currency formatting, parsing, configuration validation and types without UI or DOM dependencies. See the [number contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/number-input/README.md) and [currency contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/currency-input/README.md) for supported locales, precision limits and editing behavior.
 
+## Choose calendar dates
+
+```tsx
+import { DatePicker, LocaleProvider, parseDate } from "@egcs/newui/forms";
+
+<LocaleProvider locale="pt-BR">
+  <DatePicker.Root name="departure" defaultValue={[parseDate("2028-02-29")]}>
+    <DatePicker.Label>Departure</DatePicker.Label>
+    <DatePicker.Control>
+      <DatePicker.Input />
+      <DatePicker.Trigger />
+      <DatePicker.ClearTrigger />
+    </DatePicker.Control>
+    <DatePicker.Content />
+  </DatePicker.Root>
+</LocaleProvider>;
+```
+
+DateInput, DatePicker and DateRangePicker share Gregorian CalendarDate values without time components. Display follows the locale; native forms submit ISO YYYY-MM-DD. Ranges preserve partial endpoints and submit stable start/end names. The default/fallback locale is en-US; pt-BR and en-US have localized labels. See the [date family contract](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/forms/date/README.md) for validation, serialization, SSR guidance and upstream announcement limitations.
+
 ## Edit rich text
 
 ```tsx
@@ -154,8 +174,9 @@ Automatic system appearance uses CSS `color-scheme` and `light-dark()`. Set `dat
 
 ## Known limitations
 
-- Forms is incomplete, APIs are experimental, and SSR/hydration has not been validated for this release.
-- Ark currently resolves `@zag-js/focus-visible@1.45.0`, which can leave `HTMLElement.prototype.focus` read-only and conflict with other focus wrappers. The development workspace patch is **not shipped to consumers**. This is an accepted alpha limitation; see the [changelog](CHANGELOG.md) and [patch audit](https://github.com/bearkfear/newui/blob/main/workspace/patches/README.md).
+- The catalog remains incomplete. In this 0.x series, APIs may change between minor releases. SSR/hydration and full browser parity have not been validated for release.
+- Ark currently resolves `@zag-js/focus-visible@1.45.0`, which can leave `HTMLElement.prototype.focus` read-only and conflict with other focus wrappers. The development workspace patch is **not shipped to consumers**. This is a known dependency limitation; see the [changelog](CHANGELOG.md) and [patch audit](https://github.com/bearkfear/newui/blob/main/workspace/patches/README.md).
+- Date controls currently support Gregorian AD dates only. Some upstream segment live-region announcements still include English in other locales; see the date family contract above.
 - Browser support requires modern CSS including `light-dark()` (Baseline 2024). Runtime theme editing, persistence, and custom palette generation belong to the application.
 
 ## Development and license
