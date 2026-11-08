@@ -1,0 +1,165 @@
+@layer components {
+  .nui-switch {
+    --nui-switch-height: 1.5rem;
+    --nui-switch-width: 2.75rem;
+    --nui-switch-radius: 999px;
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    width: fit-content;
+    max-width: 100%;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .nui-switch[data-size="sm"] {
+    --nui-switch-height: 1.25rem;
+    --nui-switch-width: 2.25rem;
+  }
+  .nui-switch[data-size="lg"] {
+    --nui-switch-height: 1.75rem;
+    --nui-switch-width: 3.25rem;
+  }
+  .nui-switch[data-rounded="false"] {
+    --nui-switch-radius: var(--nui-radius-sm);
+  }
+  .nui-switch-control {
+    --nui-switch-icon: var(--nui-switch-passive);
+    --nui-switch-active: var(--nui-choice-color);
+    --nui-switch-contrast: var(--nui-choice-contrast);
+    --nui-switch-focus: var(--nui-choice-focus);
+    --nui-focus-color: var(--nui-switch-focus);
+    display: inline-flex;
+    flex: 0 0 var(--nui-switch-width);
+    align-items: center;
+    width: var(--nui-switch-width);
+    height: var(--nui-switch-height);
+    margin-top: max(0px, calc((1.5em - var(--nui-switch-height)) / 2));
+    padding: 2px;
+    border: 1px solid var(--nui-switch-passive);
+    border-radius: var(--nui-switch-radius);
+    background: var(--nui-switch-passive);
+    color: var(--nui-switch-passive-contrast);
+  }
+  :where(.nui-switch[data-valid]) .nui-switch-control {
+    --nui-switch-active: var(--nui-success);
+    --nui-switch-contrast: var(--nui-on-success);
+    --nui-switch-focus: var(--nui-success-focus);
+  }
+  .nui-switch-control[data-invalid] {
+    --nui-switch-active: var(--nui-danger);
+    --nui-switch-contrast: var(--nui-on-danger);
+    --nui-switch-focus: var(--nui-danger-focus);
+    border-color: var(--nui-danger-border);
+  }
+  .nui-switch-control[data-state="checked"] {
+    --nui-switch-icon: var(--nui-switch-active);
+    background: var(--nui-switch-active);
+    border-color: var(--nui-switch-active);
+    color: var(--nui-switch-contrast);
+  }
+  .nui-switch-thumb {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--nui-switch-height) - 6px);
+    height: calc(var(--nui-switch-height) - 6px);
+    border-radius: var(--nui-switch-radius);
+    background: currentColor;
+    transform: translateX(0);
+    transition: transform var(--nui-motion-duration) var(--nui-motion-easing);
+  }
+  .nui-switch-thumb svg {
+    width: 75%;
+    height: 75%;
+    color: var(--nui-switch-icon);
+  }
+  .nui-switch-thumb[data-state="checked"] {
+    transform: translateX(calc(var(--nui-switch-width) - var(--nui-switch-height)));
+  }
+  :where(.nui-switch[data-variant="outline"]) .nui-switch-control {
+    --nui-switch-icon: var(--nui-switch-passive-contrast);
+    background: var(--nui-background);
+    color: var(--nui-switch-passive);
+  }
+  :where(.nui-switch[data-variant="outline"]) .nui-switch-control[data-state="checked"] {
+    --nui-switch-icon: var(--nui-switch-contrast);
+    background: var(--nui-background);
+    color: var(--nui-switch-active);
+  }
+  .nui-switch:where(:not([data-disabled], [data-readonly])):where(
+      :not(:has(> input:disabled))
+    ):hover
+    .nui-switch-control {
+    border-color: var(--nui-switch-passive-hover);
+  }
+  .nui-switch:where(:not([data-disabled], [data-readonly])):where(
+      :not(:has(> input:disabled))
+    ):hover
+    .nui-switch-control[data-state="checked"] {
+    border-color: var(--nui-switch-focus);
+  }
+  .nui-switch-control[data-focus-visible] {
+    outline-color: var(--nui-switch-focus);
+    animation: nui-focus-in 120ms ease-out;
+  }
+  .nui-switch-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .nui-switch[data-label-position="start"] .nui-switch-label {
+    order: -1;
+  }
+  .nui-switch[data-readonly] {
+    cursor: default;
+  }
+  .nui-switch:is([data-disabled], :has(> input:disabled)) {
+    color: var(--nui-disabled-foreground);
+    cursor: not-allowed;
+  }
+  .nui-switch:is([data-disabled], :has(> input:disabled)) .nui-switch-control {
+    --nui-switch-icon: var(--nui-disabled-background);
+    background: var(--nui-disabled-background);
+    border-color: var(--nui-disabled-border);
+    color: var(--nui-disabled-foreground);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nui-switch-thumb {
+      transition: none;
+    }
+    .nui-switch-control[data-focus-visible] {
+      animation: none;
+    }
+  }
+  [data-motion="reduced"] .nui-switch-thumb {
+    transition: none;
+  }
+  [data-motion="reduced"] .nui-switch-control[data-focus-visible] {
+    animation: none;
+  }
+  @media (forced-colors: active) {
+    .nui-switch .nui-switch-control {
+      forced-color-adjust: none;
+      background: Canvas;
+      border-color: ButtonText;
+      color: ButtonText;
+    }
+    .nui-switch .nui-switch-control[data-state="checked"] {
+      background: Highlight;
+      border-color: Highlight;
+      color: HighlightText;
+    }
+    .nui-switch .nui-switch-control[data-focus-visible] {
+      outline-color: Highlight;
+    }
+    .nui-switch:is([data-disabled], :has(> input:disabled)) .nui-switch-control {
+      background: Canvas;
+      border-color: GrayText;
+      color: GrayText;
+    }
+    .nui-switch .nui-switch-thumb svg {
+      color: Canvas;
+    }
+  }
+}

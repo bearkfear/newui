@@ -22,9 +22,10 @@ export function createChoiceFormState<T>(options: ChoiceFormOptions<T>) {
     const markReset = (event: Event) => {
       if (event.target !== input.form) return;
       resetting = true;
-      queueMicrotask(() => {
+      // Ark Switch also emits a synthetic click in a microtask during reset.
+      setTimeout(() => {
         resetting = false;
-      });
+      }, 0);
     };
     input.ownerDocument.addEventListener("reset", markReset, true);
     bindTextControlReset(

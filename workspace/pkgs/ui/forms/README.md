@@ -10,6 +10,7 @@ Enter and edit values with consistent labels, help text, errors, and states.
 - [Checkbox](checkbox/README.md): native form selection with checked, unchecked, and indeterminate states.
 - [CheckboxGroup](checkbox-group/README.md): multiple choices, shared values, and selection limits.
 - [RadioGroup](radio-group/README.md): exclusive selection with keyboard navigation and Field feedback.
+- [Switch](switch/README.md): binary settings with solid/outline tracks, passive tones, and native forms.
 - [Input](input/README.md): single-line native text controls.
 - [Textarea](textarea/README.md): multiline native text controls with optional Ark autoresize.
 - [Select](select/README.md): Ark-backed single/multiple selection, typed collections, and native forms.

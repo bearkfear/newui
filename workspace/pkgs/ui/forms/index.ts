@@ -1,5 +1,6 @@
 export type { CheckboxCheckedChangeDetails, CheckboxCheckedState } from "@ark-ui/solid/checkbox";
 export type { RadioGroupValueChangeDetails } from "@ark-ui/solid/radio-group";
+export type { SwitchCheckedChangeDetails } from "@ark-ui/solid/switch";
 export type { CheckboxRootProps } from "./checkbox/checkbox";
 export { Checkbox } from "./checkbox/checkbox";
 export type { CheckboxControlProps, CheckboxLabelProps } from "./checkbox/checkbox.parts";
@@ -82,6 +83,9 @@ export type {
   SelectValueChangeDetails,
 } from "./select";
 export { createListCollection, Select } from "./select";
+export type { SwitchRootProps } from "./switch/switch";
+export { Switch } from "./switch/switch";
+export type { SwitchControlProps, SwitchLabelProps, SwitchThumbProps } from "./switch/switch.parts";
 export type { TextControlSize, TextControlTone } from "./text-control.context";
 export type { TextareaProps } from "./textarea/textarea";
 export { Textarea } from "./textarea/textarea";
