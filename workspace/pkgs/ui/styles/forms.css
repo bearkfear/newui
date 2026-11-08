@@ -1,5 +1,6 @@
 @import "../forms/field/field.styles.css";
 @import "../forms/input/input.styles.css";
+@import "../forms/select/select.styles.css";
 @import "../forms/number-input/number-input.styles.css";
 @import "../forms/currency-input/currency-input.styles.css";
 @import "../forms/rich-text-editor/rich-text-editor.styles.css";

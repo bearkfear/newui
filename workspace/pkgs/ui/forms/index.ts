@@ -57,6 +57,13 @@ export type {
   RichTextValueDetails,
 } from "./rich-text-editor";
 export { RichTextEditor } from "./rich-text-editor/rich-text-editor";
+export type {
+  SelectContentProps,
+  SelectRootProps,
+  SelectTriggerProps,
+  SelectValueChangeDetails,
+} from "./select";
+export { createListCollection, Select } from "./select";
 export type { TextControlSize, TextControlTone } from "./text-control.context";
 export type { TextareaProps } from "./textarea/textarea";
 export { Textarea } from "./textarea/textarea";

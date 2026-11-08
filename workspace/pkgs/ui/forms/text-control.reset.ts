@@ -1,7 +1,7 @@
 import { onCleanup } from "solid-js";
 
 export function bindTextControlReset(
-  input: HTMLInputElement,
+  input: HTMLInputElement | HTMLSelectElement,
   reset: () => void,
   disposed: () => boolean,
 ) {
