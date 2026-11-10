@@ -43,6 +43,7 @@ export type {
   FieldRequiredIndicatorProps,
   FieldSuccessTextProps,
 } from "./field/field.parts";
+export * from "./file-input";
 export type { InputProps } from "./input/input";
 export { Input } from "./input/input";
 export type { InputGroupRootProps } from "./input-group/input-group";

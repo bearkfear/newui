@@ -1,0 +1,67 @@
+@layer components {
+  /* Apply state tokens to the surfaces so root recipe utilities cannot override them. */
+  .nui-file-input[data-readonly] > :not(input) {
+    --nui-text-background: var(--nui-surface);
+    --nui-text-addon-background: var(--nui-surface);
+    --nui-text-color: var(--nui-foreground);
+    --nui-text-addon-color: var(--nui-muted-foreground);
+  }
+  .nui-file-input[data-invalid] > :not(input) {
+    --nui-text-background: var(--nui-danger-soft);
+    --nui-text-addon-background: var(--nui-danger-soft-hover);
+    --nui-text-border: var(--nui-danger-border);
+    --nui-text-hover: var(--nui-danger-border-hover);
+    --nui-text-focus: var(--nui-danger-focus);
+    --nui-text-color: var(--nui-danger-text-strong);
+    --nui-text-addon-color: var(--nui-danger-text);
+  }
+  .nui-file-input[data-valid] > :not(input) {
+    --nui-text-background: var(--nui-success-soft);
+    --nui-text-addon-background: var(--nui-success-soft-hover);
+    --nui-text-border: var(--nui-success-border);
+    --nui-text-hover: var(--nui-success-border-hover);
+    --nui-text-focus: var(--nui-success-focus);
+    --nui-text-color: var(--nui-success-text-strong);
+    --nui-text-addon-color: var(--nui-success-text);
+  }
+  .nui-file-input[data-loading]:where(:not([data-invalid], [data-valid], [data-readonly]))
+    > :not(input) {
+    --nui-text-background: var(--nui-primary-soft);
+    --nui-text-addon-background: var(--nui-primary-soft-hover);
+    --nui-text-border: var(--nui-primary-border);
+    --nui-text-hover: var(--nui-primary-border-hover);
+    --nui-text-focus: var(--nui-primary-focus);
+    --nui-text-color: var(--nui-primary-text-strong);
+    --nui-text-addon-color: var(--nui-primary-text);
+  }
+  .nui-file-input[data-disabled] > :not(input),
+  .nui-file-input:has(> input:disabled) > :not(input) {
+    --nui-text-background: var(--nui-disabled-background);
+    --nui-text-addon-background: var(--nui-disabled-background);
+    --nui-text-border: var(--nui-disabled-border);
+    --nui-text-color: var(--nui-disabled-foreground);
+    --nui-text-addon-color: var(--nui-disabled-foreground);
+    color: var(--nui-disabled-foreground);
+  }
+  .nui-file-input[data-disabled] [data-part="trigger"] {
+    cursor: not-allowed;
+  }
+  .nui-file-input[data-readonly] :is([data-part="trigger"], [data-part="dropzone"]) {
+    cursor: default;
+    border-style: solid;
+  }
+  .nui-file-input[data-loading] :is([data-part="trigger"], [data-part="dropzone"]) {
+    cursor: progress;
+  }
+  .nui-file-input [data-part="indicator"] {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    color: var(--nui-text-addon-color);
+  }
+  .nui-file-input [data-part="indicator"] > svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}

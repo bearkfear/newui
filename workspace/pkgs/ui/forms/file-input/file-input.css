@@ -1,0 +1,79 @@
+@layer components {
+  .nui-file-input.nui-text-control {
+    display: grid;
+    gap: 0.5rem;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--nui-text-color);
+  }
+  .nui-file-input [data-part="control"] {
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .nui-file-input [data-part="trigger"],
+  .nui-file-input [data-part="dropzone"] {
+    --nui-focus-color: var(--nui-text-focus);
+    border: 1px solid var(--nui-text-border);
+    border-radius: var(--nui-text-radius);
+    background: var(--nui-text-addon-background);
+    color: var(--nui-text-color);
+  }
+  .nui-file-input [data-part="trigger"] {
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: var(--nui-text-height);
+    max-width: 100%;
+    padding-inline: var(--nui-text-padding);
+    font-weight: var(--nui-font-weight-medium);
+    cursor: pointer;
+  }
+  .nui-file-input [data-part="trigger"]:hover:enabled {
+    border-color: var(--nui-text-hover);
+    background: var(--nui-text-background);
+  }
+  .nui-file-input [data-part="trigger"]:focus-visible {
+    border-color: var(--nui-text-focus);
+  }
+  .nui-file-input [data-part="value-text"] {
+    display: block;
+    align-self: center;
+    min-width: 0;
+    max-width: 100%;
+    padding-inline: var(--nui-text-padding);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nui-file-input[data-variant="compact"] > [data-part="control"] {
+    height: var(--nui-text-height);
+    border: 1px solid var(--nui-text-border);
+    border-radius: var(--nui-text-radius);
+    background: var(--nui-text-background);
+  }
+  .nui-file-input[data-variant="compact"] [data-part="trigger"] {
+    height: 100%;
+    margin: 0;
+    border-block: 0;
+    border-inline-start: 0;
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    border-start-start-radius: calc(var(--nui-text-radius) - 1px);
+    border-end-start-radius: calc(var(--nui-text-radius) - 1px);
+  }
+  .nui-file-input[data-variant="compact"] > [data-part="control"]:focus-within {
+    border-color: var(--nui-text-focus);
+  }
+  .nui-file-input :is([data-part="clear-trigger"], [data-part="item-delete-trigger"]) {
+    border-radius: var(--nui-radius-sm);
+    padding: 0.25rem;
+    color: var(--nui-muted-foreground);
+    cursor: pointer;
+  }
+}

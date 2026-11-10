@@ -1,0 +1,84 @@
+.file-input-demo-inline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr) auto;
+  align-items: end;
+  gap: 0.75rem;
+}
+.file-input-demo-narrow {
+  max-width: 22rem;
+  min-width: 0;
+}
+.file-input-demo-upload-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--nui-text-border);
+  border-radius: var(--nui-radius-lg);
+  background: var(--nui-text-addon-background);
+  color: var(--nui-text-addon-color);
+}
+.file-input-demo-upload-copy {
+  display: grid;
+  gap: 0.375rem;
+  min-width: 0;
+}
+.file-input-demo-upload-title {
+  font-size: var(--nui-font-size-sm);
+  line-height: var(--nui-leading-normal);
+}
+.file-input-demo-upload-action {
+  font-weight: var(--nui-font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.file-input-demo-upload-hint {
+  font-size: var(--nui-font-size-xs);
+  color: var(--nui-text-addon-color);
+}
+.file-input-demo-file-details {
+  flex: 1;
+  min-width: 0;
+}
+.file-input-demo-state-sections {
+  display: grid;
+  gap: 2.5rem;
+}
+.file-input-demo-state-section {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+.file-input-demo-state-section > h3 {
+  font-size: var(--nui-font-size-sm);
+  font-weight: var(--nui-font-weight-semibold);
+  text-transform: capitalize;
+}
+.file-input-demo-state-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+.file-input-demo-state-grid :is(.nui-field-error, .nui-field-success) {
+  display: flex;
+  align-items: start;
+  gap: 0.375rem;
+}
+.file-input-demo-state-grid :is(.nui-field-error, .nui-field-success) > svg {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+@media (max-width: 960px) {
+  .file-input-demo-state-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .file-input-demo-inline,
+  .file-input-demo-state-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
