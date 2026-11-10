@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.2.0
+
+### Added
+
+- Add FileInput, powered by Ark FileUpload, with button, boxed and compact presentations, inherited Field states, file type/count/size validation, controlled selection and file removal.
+- Preserve native File submission, picker cancellation and rejected selections; support readonly submission, disabled fieldsets and cancelable form resets.
+- Add a full-surface upload presentation, selected-file rows and state indicators for disabled, readonly, invalid, valid and loading states, with reviewable Storybook examples.
+
+### Fixed
+
+- Stabilize Checkbox and RadioGroup item alignment in inline flow. Checkbox indicator changes no longer move following content by 2 px with Google Sans at 15 px. Add FlowAlignment examples for normal, grid and flex layouts, single/multiline labels and typography options. Fixes #12.
+- Focus the interactive FileInput Dropzone when native required validation fails and no enabled Trigger is available.
+- Propagate native fieldset disabling to FileInput drop and selection interactions, including reactive changes and the first-legend exemption.
+
+### Validation and limitations
+
+FileInput was reviewed in Chromium in light/dark themes and at mobile widths. The checkbox shift was reproduced using Google Sans and actual component events; checked, unchecked and indeterminate states retain stable positions after the fix. Existing tests may run, but no new automated interaction coverage was added. OS picker cancellation, assistive technology and full cross-browser parity remain unverified. Existing 0.x limitations below still apply.
+
 ## 0.1.0
 
 First official release without a prerelease suffix, distributed through npm's `latest` tag. Includes the components, tokens, compiled CSS, area entries, and optional Tailwind/PostCSS integration introduced in the alpha series.

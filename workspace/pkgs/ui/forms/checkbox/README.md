@@ -30,3 +30,5 @@ Space toggles a focused input. The visible control reflects keyboard focus. Them
 ## Storybook
 
 Forms / Checkbox includes default, controlled, indeterminate, disabled/readonly/validation states, sizes/tones, native submission/reset, dark, and mobile examples.
+
+FlowAlignment compares normal, grid and flex flow with multiline labels, inline text, font families and sizes, and real checked/unchecked/indeterminate transitions. Root aligns to the top of its line box so changes to indicator content do not move following content.

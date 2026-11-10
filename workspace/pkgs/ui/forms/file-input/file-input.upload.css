@@ -1,0 +1,102 @@
+@layer components {
+  .nui-file-input[data-variant="boxed"] > [data-part="control"] {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .nui-file-input [data-part="dropzone"],
+  .nui-file-input[data-variant="boxed"] > [data-part="control"] > [data-part="trigger"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    min-width: 0;
+    min-height: 11rem;
+    height: auto;
+    padding: 1.75rem 1rem;
+    border: 1px dashed var(--nui-text-border);
+    border-radius: var(--nui-radius-lg);
+    background: var(--nui-text-background);
+    text-align: center;
+    font-weight: var(--nui-font-weight-normal);
+  }
+  .nui-file-input [data-part="dropzone"][tabindex="0"] {
+    cursor: pointer;
+  }
+  .nui-file-input
+    [data-part="dropzone"]:not([data-disabled], [data-readonly]):is(:hover, :focus-visible),
+  .nui-file-input [data-part="dropzone"][data-dragging] {
+    border-color: var(--nui-text-focus);
+    background: var(--nui-text-addon-background);
+  }
+  .nui-file-input [data-part="dropzone"][data-disabled] {
+    cursor: not-allowed;
+  }
+  .nui-file-input [data-part="dropzone"] [data-part="control"] {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .nui-file-input [data-part="dropzone"] [data-part="value-text"],
+  .nui-file-input[data-variant="boxed"] [data-part="value-text"] {
+    width: 100%;
+    padding-inline: 0;
+    font-size: var(--nui-font-size-sm);
+    color: var(--nui-text-addon-color);
+  }
+  .nui-file-input [data-part="value-text"]:empty,
+  .nui-file-input [data-part="item-group"]:empty {
+    display: none;
+  }
+  .nui-file-input [data-part="item-group"] {
+    display: grid;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .nui-file-input [data-part="item"] {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--nui-text-border);
+    border-radius: var(--nui-radius-md);
+    background: var(--nui-text-background);
+  }
+  .nui-file-input [data-part="item"] > svg {
+    flex-shrink: 0;
+    color: var(--nui-text-addon-color);
+  }
+  .nui-file-input [data-part="item-name"] {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--nui-font-size-sm);
+    font-weight: var(--nui-font-weight-medium);
+  }
+  .nui-file-input [data-part="item-size-text"] {
+    color: var(--nui-text-addon-color);
+    font-size: var(--nui-font-size-xs);
+  }
+  .nui-file-input [data-part="item-delete-trigger"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+  }
+  .nui-file-input
+    :is([data-part="clear-trigger"], [data-part="item-delete-trigger"]):enabled:hover {
+    background: var(--nui-text-addon-background);
+    color: var(--nui-text-color);
+  }
+  .nui-file-input [data-part="clear-trigger"] {
+    justify-self: end;
+    font-size: var(--nui-font-size-sm);
+  }
+}

@@ -6,6 +6,7 @@
   .nui-choice-item {
     position: relative;
     display: inline-flex;
+    vertical-align: top;
     align-items: flex-start;
     gap: 0.625rem;
     width: fit-content;

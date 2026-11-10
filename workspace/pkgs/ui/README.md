@@ -2,7 +2,7 @@
 
 Composable components for **SolidJS**, with shared spacing, typography, Radix color tokens, automatic light/dark themes, and optional Tailwind integration.
 
-**First official release: 0.1.0.** This 0.x library continues to evolve. Forms includes Field, text/masked/number/currency inputs, Select, Checkbox/CheckboxGroup, RadioGroup, Switch, DateInput/DatePicker/DateRangePicker, RichTextEditor, and InputGroup; the broader catalog remains in progress. See [known limitations](#known-limitations) before adopting this release.
+**Current release: 0.2.0.** This 0.x library continues to evolve. Forms includes Field, text/masked/number/currency inputs, FileInput, Select, Checkbox/CheckboxGroup, RadioGroup, Switch, DateInput/DatePicker/DateRangePicker, RichTextEditor, and InputGroup; the broader catalog remains in progress. See [known limitations](#known-limitations) before adopting this release.
 
 ## Install
 
