@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import "../stories/text-fields-demo.css";
+import "../choice/choice.flow.demo.css";
+import { ChoiceFlowExample } from "../choice/choice.flow.examples";
 import { ChoiceFormExample } from "../choice/choice.form.examples";
 import type { CheckboxRootProps } from "./checkbox";
 import {
@@ -33,5 +35,6 @@ export const States: Story = { render: () => <CheckboxStatesExample /> };
 export const SizesAndTones: Story = { render: () => <CheckboxAppearanceExample /> };
 export const NativeSubmissionAndReset: Story = { render: () => <ChoiceFormExample /> };
 export const Indeterminate: Story = { args: { defaultChecked: "indeterminate" } };
+export const FlowAlignment: Story = { render: () => <ChoiceFlowExample /> };
 export const Dark: Story = { globals: { theme: "dark" } };
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };

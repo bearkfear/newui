@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import "../stories/text-fields-demo.css";
+import "../choice/choice.flow.demo.css";
+import { ChoiceFlowExample } from "../choice/choice.flow.examples";
 import { ChoiceFormExample } from "../choice/choice.form.examples";
 import type { RadioGroupRootProps } from "./radio-group";
 import {
@@ -33,5 +35,6 @@ export const States: Story = { render: () => <RadioStatesExample /> };
 export const SizesAndTones: Story = { render: () => <RadioAppearanceExample /> };
 export const NativeSubmissionAndReset: Story = { render: () => <ChoiceFormExample /> };
 export const Horizontal: Story = { args: { orientation: "horizontal" } };
+export const FlowAlignment: Story = { render: () => <ChoiceFlowExample /> };
 export const Dark: Story = { globals: { theme: "dark" } };
 export const Mobile: Story = { globals: { viewport: { value: "smallMobile", isRotated: false } } };

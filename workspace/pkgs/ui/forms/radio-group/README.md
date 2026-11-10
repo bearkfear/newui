@@ -33,3 +33,5 @@ Uncontrolled form resets restore the initial selection; canceled resets preserve
 ## Storybook
 
 Forms / RadioGroup includes controlled selection/clearing, unavailable items, Field feedback, disabled/readonly states, horizontal layout, sizes/tones, native submission/reset, dark, and mobile examples.
+
+FlowAlignment provides normal, grid and flex compositions alongside Checkbox, including multiline labels and typography controls. Items align to the top of their line box for stable positioning when selection changes.
