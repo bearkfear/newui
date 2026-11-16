@@ -1,0 +1,90 @@
+---
+title: Get started
+description: Install newui, configure the styles, and render your first SolidJS component.
+---
+
+import { Button, Heading, Text } from "@egcs/newui";
+
+# Start building with newui
+
+Install the library, choose how to load its styles, and use your first SolidJS component. This guide assumes you already have a Solid application built with Vite or SolidStart.
+
+## Install
+
+Install newui and SolidJS with your package manager:
+
+```sh
+bun add @egcs/newui solid-js
+```
+
+With npm, pnpm, or Yarn, use the equivalent command to add `@egcs/newui` and `solid-js`.
+
+## Choose how to use the styles
+
+You can import the complete stylesheet or select library areas with Tailwind CSS 4. Choose one option.
+
+### Option A: Compiled CSS
+
+Import the complete stylesheet once from your application entry, such as `src/index.tsx` or `src/entry-client.tsx`:
+
+```tsx
+import "@egcs/newui/styles.css";
+```
+
+This option includes the newui styles and global reset. You do not need to install or configure Tailwind to use the components.
+
+### Option B: Tailwind CSS 4
+
+Choose this option if you want to select which newui style areas enter your build and use Tailwind utilities in your application. It requires Tailwind CSS 4.3.3 or later and PostCSS 8.5 or later.
+
+Install the development dependencies:
+
+```sh
+bun add --dev tailwindcss @tailwindcss/postcss postcss
+```
+
+Create `postcss.config.mjs` in your project root:
+
+```js
+import newui from "@egcs/newui/postcss";
+import tailwind from "@tailwindcss/postcss";
+
+export default { plugins: [newui(), tailwind()] };
+```
+
+In your application entry stylesheet, select the areas you use:
+
+```css
+@import "tailwindcss";
+@import "@egcs/newui/tailwind/preset.css";
+@import "@egcs/newui/tailwind/actions.css";
+```
+
+Import this stylesheet once from your application entry. In this mode, do not import `@egcs/newui/styles.css`: your application owns Preflight. The preset is optional; it maps application utilities such as `bg-primary` and `text-foreground` to newui tokens. The components' internal styles continue to use the `nui:` prefix.
+
+> The documented Tailwind mode uses the PostCSS pipeline. Tailwind 3, CLI-only compilation, and Tailwind's native Vite plugin are not validated.
+
+## Render a component
+
+Import components from the relevant area. Start with a button:
+
+```tsx
+import { Button } from "@egcs/newui/actions";
+
+export function SaveButton() {
+  return <Button>Save changes</Button>;
+}
+```
+
+<div class="my-6 flex flex-wrap items-center gap-3 rounded-xl border border-border bg-surface p-6">
+  <Button>Save changes</Button>
+  <Button variant="outline">Cancel</Button>
+</div>
+
+The main entry also exports components. To keep imports close to the area you use, import from `@egcs/newui/actions`, `@egcs/newui/forms`, or another library area.
+
+## Where to go next
+
+- Explore [components](../#componentes).
+- Learn how to adapt [themes and tokens](../#temas).
+- See the [Tailwind integration guide](https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/getting-started/tailwind.md) for CSS options, style selection, and customization.

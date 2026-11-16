@@ -1,5 +1,6 @@
 import { Collapsible } from "@ark-ui/solid/collapsible";
 import type { NavigationMenu as ArkNavigationMenu } from "@ark-ui/solid/navigation-menu";
+import { createMediaQuery } from "@solid-primitives/media";
 import { mergeProps, splitProps } from "solid-js";
 import type { VariantProps } from "tailwind-variants/lite";
 import type { ContainerProps } from "../../layout/container/container";
@@ -32,13 +33,14 @@ export function NavbarRoot(props: NavbarRootProps) {
     "children",
   ]);
   const disclosure = useNavbarDisclosure(local);
+  const horizontalLayout = createMediaQuery("(min-width: 48rem)", true);
   const styles = () => navbarRecipe({ tone: local.tone });
   return (
     <Collapsible.RootProvider value={disclosure.api} onKeyDown={disclosure.onKeyDown}>
       <NavigationMenu.Root
         {...rest}
         onNavigate={disclosure.close}
-        orientation={disclosure.desktop() ? "horizontal" : "vertical"}
+        orientation={horizontalLayout() ? "horizontal" : "vertical"}
         class={styles().root({ class: local.class })}
       >
         <Container size={local.width} class={styles().frame()}>

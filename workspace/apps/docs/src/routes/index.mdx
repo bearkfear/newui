@@ -1,31 +1,212 @@
 ---
-title: Documentation
-description: Explore the newui component library.
+title: Componentes para SolidJS
+description: Conheça a newui, explore os componentes e comece a construir interfaces com SolidJS.
 ---
 
 import { Button, Heading, Text } from "@egcs/newui";
 
-<section class="mx-auto mb-20 grid max-w-4xl gap-4 text-center">
-  <Text size="7" tone="muted">SOLIDJS COMPONENT LIBRARY</Text>
-  <Heading as="h1" size="1" class="m-0">Build interfaces with newui</Heading>
-  <Text size="5" tone="muted">
-    Accessible, composable components for SolidJS, styled with design tokens you can make your own.
-  </Text>
-  <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
-    <Button size="lg">Get started</Button>
-    <Button size="lg" variant="outline">Explore components</Button>
+<section class="grid items-center gap-10 py-12 sm:py-16 lg:min-h-[calc(100svh-8rem)] lg:grid-cols-[1fr_0.8fr] lg:gap-16 lg:py-20" aria-labelledby="hero-title">
+  <div class="grid justify-items-start gap-5">
+    <Text size="7" tone="muted" class="m-0 font-medium uppercase tracking-widest">COMPONENTES PARA SOLIDJS</Text>
+    <Heading as="h1" size="2" class="m-0 max-w-xl text-balance" id="hero-title">
+      Boas ideias merecem interfaces extraordinárias.
+    </Heading>
+    <Text size="4" tone="muted" class="m-0 max-w-lg text-pretty">
+      Componentes acessíveis e componíveis, com estilos que você adapta ao seu projeto.
+    </Text>
+    <div class="mt-2 flex flex-wrap items-center gap-3">
+      <a href="/getting-started/" class="inline-flex min-h-11 items-center justify-center rounded-md bg-primary px-5 font-medium text-primary-foreground no-underline transition-opacity hover:opacity-90">
+        Começar a usar <span class="ml-2" aria-hidden="true">→</span>
+      </a>
+      <a href="#componentes" class="inline-flex min-h-11 items-center justify-center rounded-md border border-border px-5 font-medium text-foreground no-underline transition-colors hover:bg-surface">
+        Explorar componentes
+      </a>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+      <span>Feita para SolidJS</span>
+      <span aria-hidden="true">·</span>
+      <span>Temas por tokens</span>
+      <span aria-hidden="true">·</span>
+      <span>Composição flexível</span>
+    </div>
+  </div>
+
+  <div class="mx-auto w-full max-w-md rounded-2xl border border-border bg-surface p-5 sm:p-6">
+    <div class="mb-6 flex items-start justify-between gap-4">
+      <div class="grid gap-1">
+        <Text size="7" tone="muted" class="m-0 font-medium uppercase tracking-wider">UM EXEMPLO REAL</Text>
+        <Heading as="h2" size="5" class="m-0">Ações do seu produto</Heading>
+      </div>
+      <span class="rounded-full border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground">newui</span>
+    </div>
+    <div class="grid gap-5">
+      <div class="grid gap-2">
+        <Text size="7" tone="muted" class="m-0">BOTÕES</Text>
+        <div class="flex flex-wrap gap-2">
+          <Button size="sm">Continuar</Button>
+          <Button size="sm" variant="outline">Cancelar</Button>
+          <Button size="sm" tone="success" variant="soft">Concluído</Button>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3 border-t border-border pt-4">
+        <div class="rounded-xl border border-border bg-background p-3">
+          <Text size="7" tone="muted" class="m-0">ESTILO</Text>
+          <Text size="6" class="mb-0 mt-1 font-medium">Componível</Text>
+        </div>
+        <div class="rounded-xl border border-border bg-background p-3">
+          <Text size="7" tone="muted" class="m-0">TEMA</Text>
+          <div class="mt-2 flex items-center gap-2">
+            <span class="size-4 rounded-full bg-primary" />
+            <Text size="7" class="m-0">Por tokens</Text>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="grid gap-8 rounded-xl border border-border bg-surface p-8 max-sm:p-5" aria-labelledby="preview-title">
-  <div class="grid gap-3">
-    <Text size="7" tone="muted">LIVE COMPONENT PREVIEW</Text>
-    <Heading as="h2" size="3" class="m-0" id="preview-title">The library, in context</Heading>
-    <Text tone="muted">This first page is rendered with the same components and stylesheet consumers install.</Text>
+<section class="grid gap-8 py-20 sm:py-24" aria-labelledby="why-title">
+  <div class="grid max-w-2xl gap-3">
+    <Text size="7" tone="muted" class="m-0">FEITA PARA O SEU JEITO DE CONSTRUIR</Text>
+    <Heading as="h2" size="2" class="m-0" id="why-title">Uma base consistente. Espaço para personalizar.</Heading>
+    <Text size="4" tone="muted" class="m-0">Comece com componentes prontos e adapte a aparência sem abrir mão da composição e do controle.</Text>
   </div>
-  <div class="flex flex-wrap items-center justify-start gap-3">
-    <Button>Primary action</Button>
-    <Button tone="neutral" variant="outline">Secondary action</Button>
-    <Button tone="success" variant="soft">Success state</Button>
+  <div class="grid gap-4 md:grid-cols-3">
+    <article class="grid content-start gap-4 rounded-2xl border border-border bg-surface p-6">
+      <span class="grid size-11 place-items-center rounded-xl bg-primary/10 text-xl text-primary" aria-hidden="true">◈</span>
+      <Heading as="h3" size="5" class="m-0">Componentes componíveis</Heading>
+      <Text tone="muted" class="m-0">Monte desde controles simples até fluxos completos com APIs pensadas para SolidJS.</Text>
+      <a href="#componentes" class="mt-1 font-medium text-primary no-underline hover:underline">Explorar o catálogo <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="grid content-start gap-4 rounded-2xl border border-border bg-surface p-6">
+      <span class="grid size-11 place-items-center rounded-xl bg-primary/10 text-xl text-primary" aria-hidden="true">◐</span>
+      <Heading as="h3" size="5" class="m-0">Temas com tokens</Heading>
+      <Text tone="muted" class="m-0">Use modo claro ou escuro e ajuste cores, tipografia e espaçamento com os tokens da biblioteca.</Text>
+      <a href="#temas" class="mt-1 font-medium text-primary no-underline hover:underline">Conhecer a personalização <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="grid content-start gap-4 rounded-2xl border border-border bg-surface p-6">
+      <span class="grid size-11 place-items-center rounded-xl bg-primary/10 text-xl text-primary" aria-hidden="true">⌘</span>
+      <Heading as="h3" size="5" class="m-0">Estilos do seu projeto</Heading>
+      <Text tone="muted" class="m-0">Escolha o CSS compilado da newui ou integre os estilos com o Tailwind da sua aplicação.</Text>
+      <a href="#comece-aqui" class="mt-1 font-medium text-primary no-underline hover:underline">Ver como começar <span aria-hidden="true">→</span></a>
+    </article>
   </div>
 </section>
+
+<section id="componentes" class="grid gap-8 rounded-3xl border border-border bg-surface p-8 sm:p-10" aria-labelledby="components-title">
+  <div class="flex flex-wrap items-end justify-between gap-5">
+    <div class="grid max-w-2xl gap-3">
+      <Text size="7" tone="muted" class="m-0">UM CATÁLOGO PARA EXPLORAR</Text>
+      <Heading as="h2" size="2" class="m-0" id="components-title">Encontre a peça que você precisa.</Heading>
+      <Text tone="muted" class="m-0">Navegue por áreas da biblioteca e descubra exemplos para cada tipo de interface.</Text>
+    </div>
+    <a href="#comece-aqui" class="font-medium text-primary no-underline hover:underline">Ver todos os componentes <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <a href="#comece-aqui" class="group rounded-xl border border-border bg-background p-5 text-foreground no-underline transition-colors hover:border-primary/50">
+      <Text size="7" tone="muted" class="m-0">01</Text>
+      <Heading as="h3" size="6" class="mb-1 mt-4 group-hover:text-primary">Ações</Heading>
+      <Text size="7" tone="muted" class="m-0">Botões, menus e comandos</Text>
+    </a>
+    <a href="#comece-aqui" class="group rounded-xl border border-border bg-background p-5 text-foreground no-underline transition-colors hover:border-primary/50">
+      <Text size="7" tone="muted" class="m-0">02</Text>
+      <Heading as="h3" size="6" class="mb-1 mt-4 group-hover:text-primary">Formulários</Heading>
+      <Text size="7" tone="muted" class="m-0">Campos, seleções e entradas</Text>
+    </a>
+    <a href="#comece-aqui" class="group rounded-xl border border-border bg-background p-5 text-foreground no-underline transition-colors hover:border-primary/50">
+      <Text size="7" tone="muted" class="m-0">03</Text>
+      <Heading as="h3" size="6" class="mb-1 mt-4 group-hover:text-primary">Navegação</Heading>
+      <Text size="7" tone="muted" class="m-0">Menus, abas e orientação</Text>
+    </a>
+    <a href="#comece-aqui" class="group rounded-xl border border-border bg-background p-5 text-foreground no-underline transition-colors hover:border-primary/50">
+      <Text size="7" tone="muted" class="m-0">04</Text>
+      <Heading as="h3" size="6" class="mb-1 mt-4 group-hover:text-primary">Dados e gráficos</Heading>
+      <Text size="7" tone="muted" class="m-0">Tabelas, indicadores e charts</Text>
+    </a>
+  </div>
+</section>
+
+<section id="temas" class="grid items-center gap-8 py-20 sm:py-24 lg:grid-cols-[1fr_0.8fr]" aria-labelledby="theme-title">
+  <div class="grid max-w-xl gap-4">
+    <Text size="7" tone="muted" class="m-0">SUA IDENTIDADE, SEUS TOKENS</Text>
+    <Heading as="h2" size="2" class="m-0" id="theme-title">Comece com um tema. Faça dele o seu.</Heading>
+    <Text size="4" tone="muted" class="m-0">A newui oferece temas claro e escuro e permite personalizar a paleta e as escalas da interface. Um customizer interativo poderá deixar essas mudanças visíveis enquanto você explora os componentes.</Text>
+    <a href="#comece-aqui" class="mt-2 inline-flex w-fit items-center gap-2 font-medium text-primary no-underline hover:underline">Como funciona a personalização <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="grid gap-3 rounded-2xl border border-border bg-surface p-5 sm:p-6">
+    <div class="flex items-center justify-between border-b border-border pb-4">
+      <Text size="6" class="m-0 font-medium">Prévia de tema</Text>
+      <span class="rounded-md border border-border px-2.5 py-1 text-xs text-muted-foreground">conceito</span>
+    </div>
+    <div class="grid gap-3 rounded-xl border border-border bg-background p-4">
+      <div class="flex items-center justify-between gap-3">
+        <div>
+          <Text size="7" tone="muted" class="m-0">COR PRIMÁRIA</Text>
+          <Text size="6" class="mb-0 mt-1 font-medium">Ocean</Text>
+        </div>
+        <div class="flex gap-2" aria-label="Opções de cor ilustrativas">
+          <span class="size-7 rounded-full bg-primary ring-2 ring-primary ring-offset-2 ring-offset-background" />
+          <span class="size-7 rounded-full bg-blue-500" />
+          <span class="size-7 rounded-full bg-violet-500" />
+          <span class="size-7 rounded-full bg-rose-500" />
+        </div>
+      </div>
+      <div class="flex items-center justify-between border-t border-border pt-3">
+        <Text size="7" tone="muted" class="m-0">APARÊNCIA</Text>
+        <div class="flex gap-1 rounded-lg border border-border p-1 text-xs">
+          <span class="rounded-md bg-primary px-2.5 py-1 text-primary-foreground">Claro</span>
+          <span class="px-2.5 py-1 text-muted-foreground">Escuro</span>
+          <span class="px-2.5 py-1 text-muted-foreground">Sistema</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between border-t border-border pt-3">
+        <Text size="7" tone="muted" class="m-0">ESPAÇAMENTO</Text>
+        <div class="flex gap-1 rounded-lg border border-border p-1 text-xs text-muted-foreground">
+          <span class="px-2.5 py-1">Compacto</span>
+          <span class="rounded-md bg-muted px-2.5 py-1 text-foreground">Padrão</span>
+          <span class="px-2.5 py-1">Amplo</span>
+        </div>
+      </div>
+    </div>
+    <Text size="7" tone="muted" class="m-0">Controles ilustrativos; customização ao vivo ainda não implementada.</Text>
+  </div>
+</section>
+
+<section id="comece-aqui" class="grid gap-8 rounded-3xl bg-primary px-8 py-10 text-primary-foreground sm:px-10 sm:py-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center" aria-labelledby="start-title">
+  <div class="grid justify-items-start gap-4">
+    <Text size="7" class="m-0 opacity-80">COMECE EM POUCOS PASSOS</Text>
+    <Heading as="h2" size="2" class="m-0" id="start-title">Pronto para criar algo extraordinário?</Heading>
+    <Text class="m-0 max-w-md opacity-85">Instale a biblioteca, importe os estilos e adicione seu primeiro componente Solid.</Text>
+  </div>
+  <div class="grid gap-3 rounded-2xl bg-background p-5 text-foreground sm:p-6">
+    <div class="flex gap-3">
+      <span class="grid size-7 shrink-0 place-items-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">1</span>
+      <div>
+        <Text size="6" class="m-0 font-medium">Instale a newui</Text>
+        <Text size="7" tone="muted" class="mb-0 mt-1">Adicione o pacote e o SolidJS ao seu projeto.</Text>
+      </div>
+    </div>
+    <div class="flex gap-3 border-t border-border pt-3">
+      <span class="grid size-7 shrink-0 place-items-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">2</span>
+      <div>
+        <Text size="6" class="m-0 font-medium">Configure os estilos</Text>
+        <Text size="7" tone="muted" class="mb-0 mt-1">Escolha o CSS compilado ou integre com Tailwind.</Text>
+      </div>
+    </div>
+    <div class="flex gap-3 border-t border-border pt-3">
+      <span class="grid size-7 shrink-0 place-items-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">3</span>
+      <div>
+        <Text size="6" class="m-0 font-medium">Construa sua primeira tela</Text>
+        <Text size="7" tone="muted" class="mb-0 mt-1">Componha componentes e adapte o tema ao seu produto.</Text>
+      </div>
+    </div>
+    <a href="/getting-started/" class="mt-2 inline-flex min-h-11 items-center justify-center rounded-md border border-border bg-background px-4 font-medium text-foreground no-underline transition-colors hover:bg-muted">
+      Abrir guia de instalação <span class="ml-2" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="flex flex-wrap items-center justify-between gap-3 py-10 text-sm text-muted-foreground">
+  <span>newui — componentes para SolidJS</span>
+  <span>Feita para construir, aberta para personalizar.</span>
+</footer>

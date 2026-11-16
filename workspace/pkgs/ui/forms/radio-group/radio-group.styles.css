@@ -1,1 +1,69 @@
 @import "../choice/choice.styles.css";
+
+@layer components {
+  .nui-radio-group[data-variant="segmented"] {
+    display: inline-grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    width: fit-content;
+    padding: 0.125rem;
+    border: 1px solid var(--nui-neutral-6);
+    border-radius: var(--nui-radius-lg);
+    background: var(--nui-neutral-2);
+  }
+
+  .nui-radio-group[data-variant="segmented"] .nui-choice-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: calc(var(--nui-control-height-sm) - 6px);
+    margin: 0;
+    padding: 0 0.625rem;
+    border-radius: calc(var(--nui-radius-md) - 2px);
+    color: var(--nui-neutral-11);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .nui-radio-group[data-variant="segmented"] .nui-choice-item:hover:not([data-disabled]) {
+    background: var(--nui-neutral-soft-hover);
+    color: var(--nui-foreground);
+  }
+
+  .nui-radio-group[data-variant="segmented"]
+    .nui-choice-item:has(.nui-radio-control[data-state="checked"]) {
+    background: var(--nui-choice-color);
+    color: var(--nui-choice-contrast);
+  }
+
+  .nui-radio-group[data-variant="segmented"] .nui-radio-control {
+    display: none;
+  }
+
+  .nui-radio-group[data-variant="segmented"][data-size="md"] .nui-choice-item {
+    min-height: calc(var(--nui-control-height-md) - 6px);
+  }
+
+  .nui-radio-group[data-variant="segmented"][data-size="lg"] .nui-choice-item {
+    min-height: calc(var(--nui-control-height-lg) - 6px);
+  }
+
+  .nui-radio-group[data-variant="segmented"] .nui-choice-item:has(input:focus-visible) {
+    outline: 2px solid var(--nui-choice-focus);
+    outline-offset: 2px;
+    z-index: 1;
+  }
+
+  .nui-radio-group[data-variant="segmented"] .nui-choice-item[data-disabled] {
+    color: var(--nui-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  .nui-radio-group[data-variant="segmented"]
+    .nui-choice-item[data-disabled]:has(.nui-radio-control[data-state="checked"]) {
+    background: var(--nui-disabled-background);
+  }
+}

@@ -2,5 +2,8 @@
 @import "@egcs/newui/tailwind/preset.css";
 @import "@egcs/newui/tailwind/actions.css";
 @import "@egcs/newui/tailwind/content.css";
+@import "@egcs/newui/tailwind/navigation.css";
+@import "@egcs/newui/tailwind/forms.css";
 
 @source "./routes";
+@source "./theme";

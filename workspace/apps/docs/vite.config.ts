@@ -12,9 +12,20 @@ export default defineConfig({
   resolve: { dedupe: ["@solidjs/router"] },
   plugins: [
     solidBase.plugin({
-      title: "newui",
-      titleTemplate: "%s · newui",
+      title: "New UI",
+      titleTemplate: ":title · New UI",
       description: "Documentation and examples for the newui SolidJS component library.",
+      lang: "pt-BR",
+      routes: {
+        path: "/{locale}",
+        locale: {
+          default: "pt",
+          values: {
+            pt: { path: "", label: "Português", lang: "pt-BR" },
+            en: { path: "en", label: "English", lang: "en-US" },
+          },
+        },
+      },
     }),
     solidStart(solidBase.startConfig()),
   ],

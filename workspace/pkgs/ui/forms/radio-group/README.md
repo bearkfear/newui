@@ -22,6 +22,8 @@ Root takes a string or null `value`, `defaultValue`, and Ark's `onValueChange(de
 
 Root accepts `size="sm" | "md" | "lg"`, semantic `tone`, `valid`, `invalid`, `disabled`, and `readOnly`, inheriting Field options. Invalid overrides valid; disabled appearance takes priority. Items accept local disabled/invalid flags. Root forwards its div ref and native props; Item forwards its label ref and native props.
 
+`variant="segmented"` presents exclusive settings as one connected control. It uses semantic choice tokens for the selected segment, retains radio keyboard and native form behavior, and supports icon-only options when each item keeps an accessible name in `RadioGroup.ItemText`.
+
 Use `orientation="vertical" | "horizontal"` for layout and Ark navigation. Horizontal layout wraps. Tab enters/leaves the group; arrow keys move selection, skipping disabled options. Readonly groups remain focusable and block selection changes.
 
 For Field composition, use `Field.Label asChild={(props) => <span {...props()} />}` and omit RadioGroup.Label. Root and item inputs inherit descriptions and feedback associations. Required, disabled, readonly, and invalid Field states propagate. Use one group per Field.
@@ -32,6 +34,6 @@ Uncontrolled form resets restore the initial selection; canceled resets preserve
 
 ## Storybook
 
-Forms / RadioGroup includes controlled selection/clearing, unavailable items, Field feedback, disabled/readonly states, horizontal layout, sizes/tones, native submission/reset, dark, and mobile examples.
+Forms / RadioGroup includes controlled selection/clearing, unavailable items, Field feedback, disabled/readonly states, horizontal layout, segmented appearance, sizes/tones, native submission/reset, dark, and mobile examples.
 
 FlowAlignment provides normal, grid and flex compositions alongside Checkbox, including multiline labels and typography controls. Items align to the top of their line box for stable positioning when selection changes.
