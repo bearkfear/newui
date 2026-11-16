@@ -28,4 +28,9 @@ export function AvatarFallback(props: AvatarFallbackProps) {
   return <ArkAvatar.Fallback {...rest} class={styles.fallback({ class: local.class })} />;
 }
 
+/**
+ * Avatar.Root sizes and clips the image; Avatar.Fallback shows while loading or after failure.
+ * Supply initials or an icon explicitly (they are not generated). Give Root an accessible name
+ * that remains available before the image loads; Avatar itself is not interactive.
+ */
 export const Avatar = { Root: AvatarRoot, Image: AvatarImage, Fallback: AvatarFallback };

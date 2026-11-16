@@ -130,6 +130,7 @@ class ProgressController implements TopProgressController {
   };
 }
 
+/** Creates a page-progress controller for manual progress or tracked asynchronous work. */
 export function createTopProgress(options: CreateTopProgressOptions = {}): TopProgressController {
   return new ProgressController(options);
 }

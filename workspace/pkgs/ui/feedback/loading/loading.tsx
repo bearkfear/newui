@@ -4,9 +4,14 @@ import type { VariantProps } from "tailwind-variants/lite";
 import { LoadingIndicator } from "./loading.indicator";
 import { loadingRecipe } from "./loading.recipe";
 
+/** `label` remains available to assistive technology when `showLabel` is false (the default). */
 export type LoadingProps = Omit<JSX.HTMLAttributes<HTMLSpanElement>, "children"> &
   VariantProps<typeof loadingRecipe> & { label?: string };
 
+/**
+ * Indeterminate native status for a small pending operation. Use PageLoading for a larger in-flow
+ * placeholder or Progress when the application has a numeric value; the component owns no request.
+ */
 export function Loading(props: LoadingProps) {
   const [local, rest] = splitProps(
     mergeProps({ role: "status" as const, "aria-atomic": true as const, label: "Loading…" }, props),

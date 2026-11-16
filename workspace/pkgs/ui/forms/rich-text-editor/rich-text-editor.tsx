@@ -18,11 +18,19 @@ import { RichTextCharacterCount, RichTextContent, RichTextToolbar } from "./rich
 import { RichTextEditorRoot } from "./rich-text-editor.root";
 
 /**
- * Schema-backed rich-text editor with composable formatting controls.
+ * Schema-backed rich-text editor with composable formatting controls and a fixed set of supported
+ * nodes/marks. JSON is canonical; HTML and plain text are derived. `required` exposes accessible
+ * state but the application must validate `empty` and prevent submission.
  *
- * @remarks
- * **Português (pt-BR):** Editor rich text baseado em schema com controles de formatação
- * componíveis.
+ * @example
+ * ```tsx
+ * import { RichTextEditor } from "@egcs/newui/forms";
+ *
+ * <RichTextEditor.Root name="body">
+ *   <RichTextEditor.Toolbar />
+ *   <RichTextEditor.Content placeholder="Write the article…" />
+ * </RichTextEditor.Root>
+ * ```
  */
 export const RichTextEditor = {
   Root: RichTextEditorRoot,

@@ -38,6 +38,10 @@ export function VerticalMenuRoot(props: VerticalMenuRootProps) {
   );
 }
 
+/**
+ * Grouped page navigation built from native links, with optional Ark Collapsible branches.
+ * Use `current` on the active link; Root does not manage routes or application selection state.
+ */
 export const VerticalMenu = {
   Root: VerticalMenuRoot,
   Group: VerticalMenuGroup,

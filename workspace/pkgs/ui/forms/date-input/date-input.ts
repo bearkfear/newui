@@ -8,6 +8,10 @@ export type {
   DateRootProps as DateInputRootProps,
 } from "../date/date.types";
 
+/**
+ * A segmented date entry control without a popup calendar.
+ * Use DatePicker for a calendar popup or DateRangePicker for a pair of date endpoints.
+ */
 export const DateInput = {
   Root: DateRoot,
   Control: DateEntry,

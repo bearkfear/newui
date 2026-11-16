@@ -21,6 +21,10 @@ export function PaginationRoot(props: PaginationRootProps) {
   );
 }
 
+/**
+ * One-based navigation over records. `count` is total records and page size must be positive;
+ * Ark owns ranges, ellipses, boundary disabling, and accessible current-page state.
+ */
 export const Pagination = {
   Root: PaginationRoot,
   Items: PaginationItems,

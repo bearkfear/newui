@@ -12,8 +12,18 @@ import {
   RadioGroupLabel,
 } from "./radio-group.parts";
 
+/**
+ * RadioGroup.Root values are strings (or `null` to clear controlled selection);
+ * `onValueChange` receives Ark's details object. Item values must be unique.
+ */
 export type RadioGroupRootProps = ArkRadioGroup.RootProps & ChoiceOptions;
 
+/**
+ * A mutually exclusive option set with native radio inputs, arrow-key selection, and Field support.
+ * Compose Label with Item, ItemControl, and ItemText. Item includes its native hidden input; do not
+ * add another input or interactive content inside the Item label. Use readonly to block changes
+ * while preserving focus and submission.
+ */
 export function RadioGroupRoot(props: RadioGroupRootProps) {
   const [local, rest] = splitProps(props, [
     "size",
@@ -73,6 +83,10 @@ export function RadioGroupRoot(props: RadioGroupRootProps) {
   );
 }
 
+/**
+ * RadioGroup associates one selected string with its native form field. Use Label plus Item,
+ * ItemControl, and ItemText; arrow keys change selection and each group is one roving-focus stop.
+ */
 export const RadioGroup = {
   Root: RadioGroupRoot,
   Label: RadioGroupLabel,

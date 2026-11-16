@@ -2,10 +2,10 @@ import { CodeXml, Heading2, Heading3, List, ListOrdered, Minus, Quote } from "lu
 import { RichTextAction } from "./rich-text-editor.action";
 import type { PublicRichTextActionProps } from "./rich-text-editor.public-action";
 
-/** Props for a supported heading action. Português (pt-BR): props de uma ação de título. */
+/** `level` restricts the heading action to levels 2 and 3 supported by the editor schema. */
 export type RichTextHeadingProps = PublicRichTextActionProps & { level: 2 | 3 };
 
-/** Heading action. Português (pt-BR): ação de título. */
+/** Applies the selected supported heading level (2 or 3) to the current block. */
 export function RichTextHeading(props: RichTextHeadingProps) {
   const icon = () => (props.level === 2 ? <Heading2 size={16} /> : <Heading3 size={16} />);
   return (
@@ -19,7 +19,7 @@ export function RichTextHeading(props: RichTextHeadingProps) {
   );
 }
 
-/** Bullet-list action. Português (pt-BR): ação de lista não ordenada. */
+/** Toggles the selected blocks into or out of a bulleted list. */
 export function RichTextBulletList(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -32,7 +32,7 @@ export function RichTextBulletList(props: PublicRichTextActionProps) {
   );
 }
 
-/** Ordered-list action. Português (pt-BR): ação de lista ordenada. */
+/** Toggles the selected blocks into or out of a numbered list. */
 export function RichTextOrderedList(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -45,7 +45,7 @@ export function RichTextOrderedList(props: PublicRichTextActionProps) {
   );
 }
 
-/** Blockquote action. Português (pt-BR): ação de citação em bloco. */
+/** Toggles a blockquote around the current block selection. */
 export function RichTextBlockquote(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -58,7 +58,7 @@ export function RichTextBlockquote(props: PublicRichTextActionProps) {
   );
 }
 
-/** Code-block action. Português (pt-BR): ação de bloco de código. */
+/** Toggles a code block for the current block selection. */
 export function RichTextCodeBlock(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -71,7 +71,7 @@ export function RichTextCodeBlock(props: PublicRichTextActionProps) {
   );
 }
 
-/** Horizontal-rule action. Português (pt-BR): ação de divisor horizontal. */
+/** Inserts a horizontal rule at the current editor selection. */
 export function RichTextHorizontalRule(props: PublicRichTextActionProps) {
   return (
     <RichTextAction

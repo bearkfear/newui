@@ -4,6 +4,7 @@ import { Portal } from "solid-js/web";
 import { createPortalScope } from "../../overlays/portal-scope";
 import type { TopProgressController } from "./top-progress.contract";
 
+/** Controller and label for the fixed page bar; mount one bar per controller at the application root. */
 export type TopProgressProps = Omit<
   ArkProgress.RootProps,
   | "children"
@@ -52,6 +53,11 @@ function TopProgressBar(props: TopProgressProps) {
   );
 }
 
+/**
+ * Fixed page-level indicator for one createTopProgress controller.
+ * Controller state can combine manual start/set/done with overlapping `track(promise)` operations;
+ * the visual trickle is an estimate, not task percentage. SSR callers should create per-request state.
+ */
 export function TopProgress(props: TopProgressProps) {
   let origin: HTMLSpanElement | undefined;
   const { scope, ready } = createPortalScope(() => origin);

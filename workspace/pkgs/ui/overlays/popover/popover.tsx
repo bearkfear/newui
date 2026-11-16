@@ -14,6 +14,7 @@ import {
   PopoverTitle,
 } from "./popover.parts";
 
+/** Popover.Root controls visibility/modal behavior; default positioning is bottom-start with collision handling. */
 export type PopoverRootProps = ArkPopover.RootProps;
 export type PopoverTriggerProps = ArkPopover.TriggerProps;
 
@@ -35,6 +36,11 @@ export function PopoverRoot(props: PopoverRootProps) {
   );
 }
 
+/**
+ * Interactive disclosure for content near its trigger. It is nonmodal by default and may contain
+ * controls; provide a Title or accessible name and use Body for longer content. Content already
+ * includes its portal and positioner.
+ */
 export const Popover = {
   Root: PopoverRoot,
   Trigger: ArkPopover.Trigger,

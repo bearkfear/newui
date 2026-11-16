@@ -4,19 +4,12 @@ import { useRichTextEditor } from "./rich-text.context";
 import { RichTextDefaultToolbar } from "./rich-text-editor.toolbar";
 
 /**
- * Props for the editor's formatting action group.
- *
- * @remarks
- * **Português (pt-BR):** Props do grupo de ações de formatação do editor.
+ * Native group attributes for the editor's formatting toolbar.
  */
 export type RichTextToolbarProps = JSX.HTMLAttributes<HTMLDivElement>;
 
 /**
  * Renders formatting controls. Omitting children renders the default toolbar.
- *
- * @remarks
- * **Português (pt-BR):** Renderiza controles de formatação. Omitir os filhos renderiza a toolbar
- * padrão.
  */
 export function RichTextToolbar(props: RichTextToolbarProps) {
   const [local, rest] = splitProps(props, ["class", "children"]);
@@ -36,18 +29,12 @@ export function RichTextToolbar(props: RichTextToolbarProps) {
 }
 
 /**
- * Props for the editable surface mount point.
- *
- * @remarks
- * **Português (pt-BR):** Props do ponto de montagem da superfície editável.
+ * Native div attributes forwarded to the contenteditable mount point.
  */
 export type RichTextContentProps = JSX.HTMLAttributes<HTMLDivElement>;
 
 /**
  * Mounts the schema-backed contenteditable surface.
- *
- * @remarks
- * **Português (pt-BR):** Monta a superfície contenteditable baseada em schema.
  */
 export function RichTextContent(props: RichTextContentProps) {
   const context = useRichTextEditor();
@@ -65,18 +52,12 @@ export function RichTextContent(props: RichTextContentProps) {
 }
 
 /**
- * Props for the live character count.
- *
- * @remarks
- * **Português (pt-BR):** Props da contagem dinâmica de caracteres.
+ * Native span attributes for the live character count.
  */
 export type RichTextCharacterCountProps = JSX.HTMLAttributes<HTMLSpanElement>;
 
 /**
  * Displays the current character count and optional configured limit.
- *
- * @remarks
- * **Português (pt-BR):** Exibe a contagem atual de caracteres e o limite configurado opcional.
  */
 export function RichTextCharacterCount(props: RichTextCharacterCountProps) {
   const context = useRichTextEditor();

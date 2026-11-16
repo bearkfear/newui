@@ -11,6 +11,10 @@ import {
 } from "./table.parts";
 import { tableRecipe } from "./table.recipe";
 
+/**
+ * Table.Root variants: plain/bordered, comfortable/compact, fullWidth, striped, and hoverable.
+ * Defaults are plain, comfortable, full width, without stripes or hover treatment.
+ */
 export type TableRootProps = JSX.IntrinsicElements["table"] &
   VariantProps<typeof tableRecipe> & { striped?: boolean; hoverable?: boolean };
 export type TableContainerProps = JSX.HTMLAttributes<HTMLElement>;
@@ -52,6 +56,11 @@ export function TableContainer(props: TableContainerProps) {
   );
 }
 
+/**
+ * Native table parts with semantic sections and optional row/appearance states.
+ * Wrap wide tables in Table.Container: it provides horizontal scrolling and keyboard focus so users
+ * can scroll the region without losing native table semantics.
+ */
 export const Table = {
   Container: TableContainer,
   Root: TableRoot,

@@ -65,6 +65,11 @@ export function SidebarRoot(props: SidebarRootProps) {
   );
 }
 
+/**
+ * Application shell that uses a resizable desktop sidebar and a modal mobile sheet.
+ * Put VerticalMenu inside Body for page links. Splitter owns desktop resize/collapse; Dialog owns
+ * mobile focus and dismissal. The app supplies navigation and controls the current route.
+ */
 export const Sidebar = {
   Root: SidebarRoot,
   Panel: SidebarPanel,

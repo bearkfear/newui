@@ -20,6 +20,11 @@ export function CollapsibleRoot(props: CollapsibleRootProps) {
   );
 }
 
+/**
+ * Single disclosure for content controlled by Root's open/defaultOpen state.
+ * Pair Trigger with Content; the optional Indicator follows Ark's open state. Content is lazy-mounted
+ * by default and remains mounted when closed unless unmountOnExit is enabled.
+ */
 export const Collapsible = {
   Root: CollapsibleRoot,
   Trigger: CollapsibleTrigger,

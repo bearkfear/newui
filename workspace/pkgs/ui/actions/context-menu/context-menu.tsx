@@ -12,6 +12,10 @@ import { MenuRoot } from "../menu/menu.root";
 export type ContextMenuRootProps = ArkMenu.RootProps;
 export type ContextMenuTriggerProps = ArkMenu.ContextTriggerProps;
 
+/**
+ * Opens actions from a right-click or touch long-press on the context trigger.
+ * Provide a separate DropdownMenu with the same actions for click and keyboard discoverability.
+ */
 export const ContextMenu = {
   Root: MenuRoot,
   Trigger: ArkMenu.ContextTrigger,

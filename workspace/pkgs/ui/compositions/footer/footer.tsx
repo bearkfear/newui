@@ -28,6 +28,11 @@ export function FooterRoot(props: FooterRootProps) {
   );
 }
 
+/**
+ * Responsive page footer for brand information, grouped links, and optional metadata.
+ * Use Footer.Group's accessible label for each link collection; Footer.Link remains a native anchor
+ * and does not provide routing. Root styles the semantic footer but does not choose its content.
+ */
 export const Footer = {
   Root: FooterRoot,
   Content: FooterContent,

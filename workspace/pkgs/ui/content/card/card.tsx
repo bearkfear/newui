@@ -32,6 +32,10 @@ export function CardRoot(props: CardRootProps) {
   );
 }
 
+/**
+ * Surface for related content. Choose `as="article"` or `as="section"` when that semantic landmark
+ * fits; use Header, Media, Content, and Footer as needed. Title level remains a page-hierarchy choice.
+ */
 export const Card = {
   Root: CardRoot,
   Header: CardHeader,

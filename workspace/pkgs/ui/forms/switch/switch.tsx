@@ -7,6 +7,10 @@ import { choiceRecipe } from "../choice/choice.recipe";
 import { SwitchControl, SwitchLabel, SwitchThumb } from "./switch.parts";
 import { switchPassiveRecipe } from "./switch.recipe";
 
+/**
+ * Switch.Root uses boolean checked state; map domain-specific values in the application.
+ * Its label is part of Root's rendered label, so do not nest another label or interactive element.
+ */
 export type SwitchRootProps = ArkSwitch.RootProps &
   ChoiceOptions & {
     variant?: "solid" | "outline";
@@ -15,6 +19,11 @@ export type SwitchRootProps = ArkSwitch.RootProps &
     passiveTone?: ChoiceOptions["tone"];
   };
 
+/**
+ * A binary setting control with native checkbox submission and `role="switch"` semantics.
+ * Compose Control/Thumb with Switch.Label. Checked enabled controls submit; unchecked and disabled
+ * controls do not. Readonly blocks edits while remaining focusable and submittable.
+ */
 export function SwitchRoot(props: SwitchRootProps) {
   const [local, rest] = splitProps(props, [
     "size",
@@ -84,6 +93,11 @@ export function SwitchRoot(props: SwitchRootProps) {
   );
 }
 
+/**
+ * Switch API: Root contains the accessible label and native switch input; Control includes Thumb.
+ * Do not add a second input/label. Checked enabled switches submit; readonly checked switches remain
+ * focusable and submit, while disabled/unchecked switches are omitted.
+ */
 export const Switch = {
   Root: SwitchRoot,
   Control: SwitchControl,

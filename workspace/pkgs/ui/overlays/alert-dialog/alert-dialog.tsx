@@ -4,6 +4,7 @@ import { Dialog, type DialogRootProps } from "../dialog/dialog";
 import type { DialogContentProps } from "../dialog/dialog.content";
 import { AlertDialogActionTrigger, AlertDialogCancelTrigger } from "./alert-dialog.triggers";
 
+/** AlertDialog.Root is always modal, traps focus, and disables outside dismissal by default. */
 export type AlertDialogRootProps = Omit<
   DialogRootProps,
   "role" | "modal" | "trapFocus" | "preventScroll" | "closeOnInteractOutside"
@@ -28,6 +29,11 @@ export function AlertDialogContent(props: AlertDialogContentProps) {
   return <Dialog.Content {...rest} size={local.size} variant="card" />;
 }
 
+/**
+ * Confirmation flow for consequential actions. Always provide a Title and consequence-focused
+ * Description, then CancelTrigger before ActionTrigger; the action trigger closes on success but
+ * performs no application work itself.
+ */
 export const AlertDialog = {
   Root: AlertDialogRoot,
   Trigger: ArkDialog.Trigger,

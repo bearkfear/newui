@@ -11,8 +11,17 @@ import { createChoiceFormState } from "../choice/choice.form";
 import { choiceRecipe } from "../choice/choice.recipe";
 import { CheckboxControl, CheckboxInput, CheckboxLabel } from "./checkbox.parts";
 
+/**
+ * Checkbox.Root uses `value` within CheckboxGroup; standalone controls use boolean
+ * `checked`/`defaultChecked`. Readonly remains submittable, while disabled controls are omitted.
+ */
 export type CheckboxRootProps = ArkCheckbox.RootProps & ChoiceOptions;
 
+/**
+ * A form checkbox that can be used alone or as an item inside CheckboxGroup.
+ * Compose with Control and Label, or place it in Field for inherited accessible associations.
+ * In a group, each checkbox remains its own Tab stop and Root inherits the group's selected values.
+ */
 export function CheckboxRoot(props: CheckboxRootProps) {
   const [local, rest] = splitProps(props, [
     "size",
@@ -76,6 +85,11 @@ export function CheckboxRoot(props: CheckboxRootProps) {
   );
 }
 
+/**
+ * Checkbox API: use Root with Control and Label; Root includes the native form input.
+ * Related values belong in CheckboxGroup, whose items retain individual Tab stops. Use Field for
+ * one standalone checkbox or the documented Field.Label-as-span pattern for a group.
+ */
 export const Checkbox = {
   Root: CheckboxRoot,
   Control: CheckboxControl,

@@ -8,6 +8,12 @@ import {
 } from "./file-input.parts";
 import { FileInputRoot } from "./file-input.root";
 
+/**
+ * Local file selection with trigger/dropzone, selected-file list, preview, and removal parts.
+ * Root owns the native input and accepted File objects; use Trigger or Dropzone, not both active
+ * picker targets. It submits File objects through FormData; upload, progress, and server validation
+ * belong to the application.
+ */
 export const FileInput = {
   Root: FileInputRoot,
   Control: FileInputControl,

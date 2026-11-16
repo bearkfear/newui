@@ -30,6 +30,11 @@ export function HoverCardRoot(props: HoverCardRootProps) {
   );
 }
 
+/**
+ * Supplementary, nonmodal preview opened by hover or keyboard focus, with delayed dismissal.
+ * Use a meaningful native link as Trigger for link previews; Root `disabled` disables the preview,
+ * not navigation. Put standard padding/scrolling in Body rather than Surface.
+ */
 export const HoverCard = {
   Root: HoverCardRoot,
   Trigger: HoverCardTrigger,

@@ -4,6 +4,11 @@ import type { VariantProps } from "tailwind-variants/lite";
 import { useButtonGroup } from "../button-group/button-group.context";
 import { buttonRecipe } from "./button.recipe";
 
+/**
+ * Button-specific options add visual variants, decorative icon slots, and pending feedback to native
+ * button attributes. `iconOnly` requires an accessible name; `loading` prevents activation and
+ * exposes busy state while retaining the label.
+ */
 export type ButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonRecipe> & {
     loading?: boolean;
@@ -11,6 +16,11 @@ export type ButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> &
     endIcon?: JSX.Element;
   };
 
+/**
+ * A native action button whose default type is `button`, so it will not submit a form accidentally.
+ * The `link` variant is visual only; use an anchor for navigation. Loading keeps the label and
+ * accessible name while disabling activation.
+ */
 export function Button(props: ButtonProps) {
   const group = useButtonGroup();
   const [local, rest] = splitProps(mergeProps({ type: "button" as const }, props), [

@@ -14,6 +14,7 @@ import {
 } from "./dialog.parts";
 import { DialogPortal } from "./dialog.portal";
 
+/** Keep Dialog.Root mounted while changing `open`; it manages focus restoration and modal isolation. */
 export type DialogRootProps = ArkDialog.RootProps;
 
 export function DialogRoot(props: DialogRootProps) {
@@ -24,6 +25,11 @@ export function DialogRoot(props: DialogRootProps) {
   );
 }
 
+/**
+ * Modal content with title/description, scrollable body, and wrapping action footer.
+ * Use Content for the standard Portal/Backdrop/Positioner/Surface composition; do not add another
+ * Portal or Positioner around it. Root should remain mounted during open-state changes.
+ */
 export const Dialog = {
   Root: DialogRoot,
   Trigger: ArkDialog.Trigger,

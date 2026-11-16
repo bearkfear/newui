@@ -5,19 +5,12 @@ import { Button } from "../../actions/button/button";
 import { useRichTextEditor } from "./rich-text.context";
 
 /**
- * Props for the inline link editor.
- *
- * @remarks
- * **Português (pt-BR):** Props do editor inline de links.
+ * Native span attributes for the inline link editor.
  */
 export type RichTextLinkProps = JSX.HTMLAttributes<HTMLSpanElement>;
 
 /**
  * Opens an inline URL form and applies or removes a link on the current selection.
- *
- * @remarks
- * **Português (pt-BR):** Abre um formulário inline de URL e aplica ou remove um link da seleção
- * atual.
  */
 export function RichTextLink(props: RichTextLinkProps) {
   const context = useRichTextEditor();

@@ -2,7 +2,7 @@ import { Redo2, Undo2 } from "lucide-solid";
 import { RichTextAction } from "./rich-text-editor.action";
 import type { PublicRichTextActionProps } from "./rich-text-editor.public-action";
 
-/** Undo action. Português (pt-BR): ação de desfazer. */
+/** Undoes the latest editor transaction when history is available. */
 export function RichTextUndo(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -14,7 +14,7 @@ export function RichTextUndo(props: PublicRichTextActionProps) {
   );
 }
 
-/** Redo action. Português (pt-BR): ação de refazer. */
+/** Reapplies the latest undone editor transaction when redo history is available. */
 export function RichTextRedo(props: PublicRichTextActionProps) {
   return (
     <RichTextAction

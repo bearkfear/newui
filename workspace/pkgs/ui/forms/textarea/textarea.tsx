@@ -5,12 +5,21 @@ import { useTextControl } from "../text-control.context";
 import { initializeTextControl } from "../text-control.defaults";
 import { textControlRecipe } from "../text-control.recipe";
 
+/**
+ * Textarea rows default to 4 and `resize` to `vertical`; `autoresize` delegates sizing to
+ * Ark and disables manual resizing. Native value, input, composition, and form behavior are kept.
+ */
 export type TextareaProps = ArkField.TextareaProps &
   Omit<TextControlOptions, "rounded"> & {
     resize?: "vertical" | "horizontal" | "both" | "none";
     defaultValue?: string;
   };
 
+/**
+ * A styled native textarea with optional Ark autoresizing and Field state associations.
+ * Use Field.Root for a managed label/messages; standalone instances need an accessible name.
+ * `defaultValue` is the native reset default, while controlled reset state belongs to the app.
+ */
 export function Textarea(props: TextareaProps) {
   const [local, rest] = splitProps(mergeProps({ rows: 4, resize: "vertical" as const }, props), [
     "size",

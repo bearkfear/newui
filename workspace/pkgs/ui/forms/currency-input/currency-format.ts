@@ -10,7 +10,7 @@ export function decorateCurrency(text: string, config: CurrencyConfiguration) {
   return affix.prefix + (negative ? text.slice(1) : text) + affix.suffix;
 }
 
-/** Format exact major-unit decimal strings; never convert monetary values to number. */
+/** Formats an exact major-unit decimal string as currency without floating-point conversion. */
 export function formatCurrency(value: string, options: CurrencyFormatOptions): string {
   const config = currencyConfiguration(options);
   return decorateCurrency(formatNumber(value, config.numberOptions), config);
@@ -36,7 +36,7 @@ export function parseCurrencyText(text: string, config: CurrencyConfiguration): 
   return { status: "invalid", reason: "syntax" };
 }
 
-/** Accept the configured currency decoration or a plain localized amount. No currency conversion. */
+/** Parses configured currency decoration or localized amounts without guessing separators. */
 export function parseCurrency(text: string, options: CurrencyFormatOptions): NumberParseResult {
   return parseCurrencyText(text, currencyConfiguration(options));
 }

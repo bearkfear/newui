@@ -49,6 +49,11 @@ export function NavbarRoot(props: NavbarRootProps) {
   );
 }
 
+/**
+ * Website navigation combining brand, page links, dropdowns, actions, and a mobile disclosure.
+ * Use links for destinations and buttons only for disclosure/actions; use NavigationMenu alone when
+ * the application already owns its header and mobile toggle.
+ */
 export const Navbar = {
   Root: NavbarRoot,
   Brand: NavbarBrand,

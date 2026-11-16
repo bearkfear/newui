@@ -68,6 +68,11 @@ export function ToastCloseTrigger(props: ArkToast.CloseTriggerProps) {
   );
 }
 
+/**
+ * Render parts for the Toaster store's notifications. Use Toaster for the viewport and createToaster
+ * for state; Toast.Root/Title/Description/ActionTrigger/CloseTrigger compose one notification.
+ * These parts do not enqueue or persist notifications themselves.
+ */
 export const Toast = {
   Root: ToastRoot,
   Icon: CalloutIcon,

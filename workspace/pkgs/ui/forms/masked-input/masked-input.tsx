@@ -4,6 +4,11 @@ import { useTextControl } from "../text-control.context";
 import { createInputMask } from "./create-input-mask";
 import type { InputMaskOptions } from "./input-mask.types";
 
+/**
+ * MaskedInput accepts unformatted raw strings through `value`, `defaultValue`, and `onValueChange`;
+ * the DOM input displays literals. `submitValue="formatted"` submits the displayed value by default;
+ * `submitValue="raw"` submits the raw value through one hidden input.
+ */
 export type MaskedInputProps = Omit<InputProps, "value" | "defaultValue" | "type"> &
   InputMaskOptions & {
     type?: "text" | "tel";
@@ -11,6 +16,19 @@ export type MaskedInputProps = Omit<InputProps, "value" | "defaultValue" | "type
     submitValue?: "formatted" | "raw";
   };
 
+/**
+ * Formats editable text while preserving a raw string value for application state.
+ * `onValueChange` reports accepted edits and whether the selected pattern is complete; it does not
+ * establish domain validity. Native `onInput` remains the browser event, and pasted literals do not
+ * count toward choosing an alternative pattern. See the MaskedInput guide for token syntax/limits.
+ *
+ * @example
+ * ```tsx
+ * import { MaskedInput } from "@egcs/newui/forms";
+ *
+ * <MaskedInput name="document" mask="###.###.###-##" inputmode="numeric" />
+ * ```
+ */
 export function MaskedInput(props: MaskedInputProps) {
   const [local, rest] = splitProps(props, [
     "mask",

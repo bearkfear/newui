@@ -44,6 +44,11 @@ export function TimelineItem(props: TimelineItemProps) {
   );
 }
 
+/**
+ * Ordered event history or step presentation using native list semantics.
+ * Give Root an accessible label and mark each Item's status explicitly; Timeline is presentation-only
+ * and does not advance or control the current event.
+ */
 export const Timeline = {
   Root: TimelineRoot,
   Item: TimelineItem,
