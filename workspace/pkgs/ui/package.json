@@ -1,7 +1,7 @@
 {
   "name": "@egcs/newui",
-  "version": "0.2.0",
-  "description": "Composable SolidJS components with shared design tokens, automatic themes, and optional Tailwind integration.",
+  "version": "0.2.1",
+  "description": "Composable SolidJS UI components with design tokens, form controls, data visualizations, and CSS or Tailwind CSS 4 theming.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
   "repository": {
@@ -14,9 +14,22 @@
   },
   "keywords": [
     "solid-js",
-    "components",
+    "solidjs",
+    "ui-components",
+    "component-library",
     "design-system",
+    "design-tokens",
+    "typescript",
+    "accessible-components",
     "tailwindcss",
+    "tailwindcss-v4",
+    "forms",
+    "date-picker",
+    "rich-text-editor",
+    "data-visualization",
+    "charts",
+    "theming",
+    "css",
     "ark-ui",
     "radix-colors"
   ],
@@ -26,6 +39,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "files": [
     "dist",
     "CHANGELOG.md"

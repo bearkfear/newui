@@ -1,5 +1,6 @@
 {
-  "name": "@newui/storybook",
+  "name": "newui-storybook",
+  "description": "Private Storybook application for the newui component library.",
   "version": "0.0.0",
   "private": true,
   "type": "module",

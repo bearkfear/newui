@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1
+
+### Changed
+
+- Expand English JSDoc across the public component API so generated TypeScript declarations explain component behavior, composition, and important prop contracts.
+- Improve package metadata and declaration entry hints for package discovery, editors, and tooling.
+
 ## 0.2.0
 
 ### Added
