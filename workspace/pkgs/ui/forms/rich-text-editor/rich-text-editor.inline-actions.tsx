@@ -2,7 +2,7 @@ import { Bold, Code2, Italic, Strikethrough } from "lucide-solid";
 import { RichTextAction } from "./rich-text-editor.action";
 import type { PublicRichTextActionProps } from "./rich-text-editor.public-action";
 
-/** Bold formatting action. Português (pt-BR): ação de formatação em negrito. */
+/** Toggles bold on the current selection or applies it to subsequently typed text. */
 export function RichTextBold(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -15,7 +15,7 @@ export function RichTextBold(props: PublicRichTextActionProps) {
   );
 }
 
-/** Italic formatting action. Português (pt-BR): ação de formatação em itálico. */
+/** Toggles italic formatting on the current selection or subsequent text. */
 export function RichTextItalic(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -28,7 +28,7 @@ export function RichTextItalic(props: PublicRichTextActionProps) {
   );
 }
 
-/** Strike formatting action. Português (pt-BR): ação de formatação tachada. */
+/** Toggles strike-through formatting on the current selection or subsequent text. */
 export function RichTextStrike(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
@@ -41,7 +41,7 @@ export function RichTextStrike(props: PublicRichTextActionProps) {
   );
 }
 
-/** Inline-code action. Português (pt-BR): ação de código inline. */
+/** Toggles inline code formatting on the current selection or subsequent text. */
 export function RichTextCode(props: PublicRichTextActionProps) {
   return (
     <RichTextAction

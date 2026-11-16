@@ -50,6 +50,12 @@ export function MenubarRoot(props: MenubarRootProps) {
   );
 }
 
+/**
+ * Persistent application command menu, typically containing File, Edit, or View actions.
+ * Each Menu needs a unique stable value and a Trigger/Content pair; only one top-level menu opens
+ * at a time. Use SubRoot inside Content for cascades. Use NavigationMenu/Navbar for page links;
+ * shortcut labels do not register hotkeys and item selection does not perform commands for you.
+ */
 export const Menubar = {
   Root: MenubarRoot,
   Menu: MenubarMenu,

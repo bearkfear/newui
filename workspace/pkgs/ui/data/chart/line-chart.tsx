@@ -10,6 +10,11 @@ import { chartBaseKeys, chartColor, chartTooltip, chartX, seriesLegend } from ".
 import type { LineChartProps } from "./chart.types";
 import { ChartData } from "./chart-data";
 
+/**
+ * Plots numeric series across the input data order and includes a readable values table.
+ * Provide a `label` accessor and one `series[].value` accessor per line; sort data before rendering
+ * when chronological order matters. Colors come from each series tone or the semantic palette.
+ */
 export function LineChart<Datum>(props: LineChartProps<Datum>) {
   const [local, rest] = splitProps(props, chartBaseKeys);
   const colors = () => local.series.map((item, index) => chartColor(item.tone, index));

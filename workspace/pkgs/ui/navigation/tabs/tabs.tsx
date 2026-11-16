@@ -39,6 +39,11 @@ export function TabsRoot(props: TabsRootProps) {
   );
 }
 
+/**
+ * Horizontal content tabs with Arrow/Home/End keyboard navigation and associated panels.
+ * Automatic activation is default; use `activationMode="manual"` when changing panels is expensive.
+ * Give List an accessible label and pair every Trigger/Content by the same value.
+ */
 export const Tabs = {
   Root: TabsRoot,
   List: TabsList,

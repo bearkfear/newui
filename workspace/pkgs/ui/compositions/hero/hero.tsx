@@ -41,6 +41,11 @@ export function HeroRoot(props: HeroRootProps) {
   );
 }
 
+/**
+ * Responsive opening section with optional eyebrow, title, description, actions, and media.
+ * `layout="split"` places content beside media; choose the Title heading level to fit the page
+ * outline because Hero provides presentation, not document hierarchy.
+ */
 export const Hero = {
   Root: HeroRoot,
   Content: HeroContent,

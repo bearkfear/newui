@@ -8,6 +8,11 @@ import type { CurrencyInputProps } from "./currency-input.types";
 
 export type { CurrencyInputProps } from "./currency-input.types";
 
+/**
+ * A currency-aware numeric input that stores exact major-unit decimal strings and formats them for
+ * an independent locale/currency pair. `entryMode="minor-unit"` changes typed-digit behavior, not
+ * the meaning of initial or pasted values. It creates its own InputGroup unless one is inherited.
+ */
 export function CurrencyInput(props: CurrencyInputProps) {
   const state = createCurrencyInput(props);
   const control = useTextControl(props);

@@ -11,11 +11,33 @@ import {
   FieldSuccessText,
 } from "./field.parts";
 
+/**
+ * Field.Root combines Ark's native field state with shared appearance options. `valid` is explicit
+ * application feedback, not inferred validation;
+ * `invalid` wins when both flags are true. Ark propagates required, disabled, readonly, and invalid.
+ */
 export type FieldRootProps = ArkField.RootProps &
   TextControlOptions & {
     orientation?: "vertical" | "horizontal";
   };
 
+/**
+ * Groups one primary Input or Textarea with its label and associated descriptions/messages.
+ * Put the control ID on Root; Ark manages label and error associations. ErrorText renders only for
+ * invalid state, SuccessText only for valid state, and a single message is shown at a time.
+ * Validation rules, values, submission, and reset behavior remain application-owned.
+ *
+ * @example
+ * ```tsx
+ * import { Field, Input } from "@egcs/newui/forms";
+ *
+ * <Field.Root>
+ *   <Field.Label>Email</Field.Label>
+ *   <Input name="email" type="email" />
+ *   <Field.ErrorText />
+ * </Field.Root>
+ * ```
+ */
 export function FieldRoot(props: FieldRootProps) {
   const [local, rest] = splitProps(props, [
     "size",
@@ -55,6 +77,11 @@ export function FieldRoot(props: FieldRootProps) {
   );
 }
 
+/**
+ * Form-field composition that associates a control with labels and messages.
+ * Use `Field.Root` around a compatible control; its parts expose the label, description,
+ * error, success, and required-indicator states.
+ */
 export const Field = {
   Root: FieldRoot,
   Label: FieldLabel,

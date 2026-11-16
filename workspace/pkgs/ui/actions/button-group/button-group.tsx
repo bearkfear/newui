@@ -5,10 +5,19 @@ import type { ButtonGroupOptions } from "./button-group.context";
 import { ButtonGroupContext } from "./button-group.context";
 import { buttonGroupRecipe } from "./button-group.recipe";
 
+/**
+ * ButtonGroup adds orientation, alignment, attachment, and group-level defaults to native div
+ * attributes. Descendant Buttons inherit size, tone, variant, and disabled state; explicit Button
+ * options override appearance defaults.
+ */
 export type ButtonGroupProps = JSX.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof buttonGroupRecipe> &
   ButtonGroupOptions;
 
+/**
+ * Groups related Buttons without adding selection state or arrow-key navigation.
+ * `attached` and `fullWidth` styling expects direct Button children; do not nest groups.
+ */
 export function ButtonGroup(props: ButtonGroupProps) {
   const [local, rest] = splitProps(mergeProps({ orientation: "horizontal" as const }, props), [
     "size",

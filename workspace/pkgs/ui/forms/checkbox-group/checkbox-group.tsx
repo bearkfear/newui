@@ -6,13 +6,23 @@ import { createChoiceFormState } from "../choice/choice.form";
 import { choiceRecipe } from "../choice/choice.recipe";
 import { CheckboxGroupContext, useCheckboxGroupVisual } from "./checkbox-group.context";
 
+/**
+ * CheckboxGroup.Root uses string-array `value` and `defaultValue`; each item's value must
+ * be unique. `maxSelectedValues` disables unselected choices at the limit but keeps selected ones removable.
+ */
 export type CheckboxGroupRootProps = Omit<ArkCheckbox.GroupProps, "value"> &
   ChoiceOptions & {
     value?: string[];
     orientation?: "vertical" | "horizontal";
   };
+/** Native span attributes for the standalone CheckboxGroup label. */
 export type CheckboxGroupLabelProps = JSX.HTMLAttributes<HTMLSpanElement>;
 
+/**
+ * Coordinates selected string values, shared appearance, and native form entries for Checkbox items.
+ * Use CheckboxGroup.Label when standalone. Inside Field, name the group with Field.Label rendered
+ * as a span and omit CheckboxGroup.Label; put Field messages outside the group.
+ */
 export function CheckboxGroupRoot(props: CheckboxGroupRootProps) {
   const [local, rest] = splitProps(props, [
     "size",
@@ -83,4 +93,9 @@ export function CheckboxGroupLabel(props: CheckboxGroupLabelProps) {
   );
 }
 
+/**
+ * CheckboxGroup coordinates string values and shared disabled/readonly/validation state.
+ * In Field, use Field.Label as a span before Root and omit Group.Label to avoid labeling the wrong
+ * element; keep Field descriptions/messages outside Root.
+ */
 export const CheckboxGroup = { Root: CheckboxGroupRoot, Label: CheckboxGroupLabel };

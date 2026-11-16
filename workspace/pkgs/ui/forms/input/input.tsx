@@ -5,6 +5,12 @@ import { useTextControl } from "../text-control.context";
 import { initializeTextControl } from "../text-control.defaults";
 import { textControlRecipe } from "../text-control.recipe";
 
+/**
+ * Input adds shared visual states to native input attributes. `size` is visual size; use
+ * `htmlSize` for the HTML character width.
+ * `defaultValue` initializes the DOM default once and participates in native reset; controlled
+ * editing uses `value` and native `onInput`.
+ */
 export type InputProps = Omit<ArkField.InputProps, "size" | "type"> &
   TextControlOptions & {
     type?: "text" | "email" | "password" | "search" | "tel" | "url";
@@ -12,6 +18,11 @@ export type InputProps = Omit<ArkField.InputProps, "size" | "type"> &
     defaultValue?: string;
   };
 
+/**
+ * A styled native text input: it does not mask, trim, or format entered text.
+ * Use it inside Field.Root for managed labels and validation messages, or provide a visible native
+ * label/accessible name independently. Field states and descriptions are inherited and merged.
+ */
 export function Input(props: InputProps) {
   const [local, rest] = splitProps(props, [
     "size",

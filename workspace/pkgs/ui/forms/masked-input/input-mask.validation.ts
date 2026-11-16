@@ -1,5 +1,6 @@
 import type { TextMaskOptions } from "./input-mask.types";
 
+/** Maximum supported mask pattern length, alternative count, and custom token count. */
 export const textMaskLimits = Object.freeze({
   maxPatternLength: 256,
   maxPatterns: 16,

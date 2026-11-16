@@ -3,6 +3,7 @@ import { mergeProps, Show, splitProps } from "solid-js";
 import type { VariantProps } from "tailwind-variants/lite";
 import { progressRecipe } from "./progress.recipe";
 
+/** `value={null}` means indeterminate; the component does not estimate or advance task progress. */
 export type ProgressProps = Omit<ArkProgress.RootProps, "children" | "orientation" | "asChild"> &
   VariantProps<typeof progressRecipe> & { label?: string; showValue?: boolean };
 
@@ -43,6 +44,11 @@ function ProgressContent(props: {
   );
 }
 
+/**
+ * Horizontal accessible progress bar. Supply `value` for known progress or `null` for unknown
+ * progress; min/max set its scale. Updates are not announced individually, so announce important
+ * milestones separately when needed. Completion does not change tone automatically.
+ */
 export function Progress(props: ProgressProps) {
   const [local, rest] = splitProps(mergeProps({ defaultValue: 0, showValue: true }, props), [
     "size",

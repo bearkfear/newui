@@ -38,6 +38,11 @@ function ProgressCircleContent(props: {
   );
 }
 
+/**
+ * Circular presentation with the same value, bounds, and accessible labeling as Progress.
+ * Use a short label because the formatted value occupies the ring; null value displays an
+ * indeterminate arc without a percentage.
+ */
 export function ProgressCircle(props: ProgressCircleProps) {
   const [local, rest] = splitProps(mergeProps({ defaultValue: 0, showValue: true }, props), [
     "size",

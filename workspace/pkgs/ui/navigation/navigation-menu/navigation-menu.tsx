@@ -56,6 +56,11 @@ export function NavigationMenuRoot(props: NavigationMenuRootProps) {
   );
 }
 
+/**
+ * Page-link navigation with dropdown panels and cascading submenus.
+ * Use inside a custom header or page; choose Navbar when brand/actions/mobile toggle are needed, and
+ * Menubar for persistent application commands rather than routes.
+ */
 export const NavigationMenu = {
   Root: NavigationMenuRoot,
   List: NavigationMenuList,

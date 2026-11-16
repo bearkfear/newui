@@ -3,13 +3,16 @@ import { Show, splitProps } from "solid-js";
 import type { VariantProps } from "tailwind-variants/lite";
 import { counterAnchorRecipe, counterLabelClass, counterRecipe } from "./counter.recipe";
 
+/** Native div attributes for the relative-positioning wrapper used with Counter. */
 export type CounterAnchorProps = JSX.HTMLAttributes<HTMLDivElement>;
 
+/** Place CounterAnchor around the content and Counter as siblings to enable corner placement. */
 export function CounterAnchor(props: CounterAnchorProps) {
   const [local, rest] = splitProps(props, ["class"]);
   return <div {...rest} class={counterAnchorRecipe({ class: local.class })} />;
 }
 
+/** `value` is floored; invalid/negative values become 0. Zero is hidden unless `showZero` is true. */
 export type CounterProps = Omit<JSX.HTMLAttributes<HTMLSpanElement>, "children"> &
   VariantProps<typeof counterRecipe> & {
     value: number;
@@ -22,6 +25,11 @@ function nonNegativeInteger(value: number, fallback: number) {
   return Number.isFinite(value) ? Math.max(0, Math.floor(value)) : fallback;
 }
 
+/**
+ * Displays a numeric notification count; invalid/negative values become zero and fractions round down.
+ * Values above max display as `max+`, while the accessible label keeps the actual count. Counter is
+ * static text with no live-region behavior; add a separate status announcement if updates need one.
+ */
 export function Counter(props: CounterProps) {
   const [local, rest] = splitProps(props, [
     "value",

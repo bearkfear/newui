@@ -3,17 +3,11 @@ import type { TextControlOptions } from "../text-control.context";
 
 /**
  * A schema-backed rich-text document stored as JSON.
- *
- * @remarks
- * **Português (pt-BR):** Documento rich text baseado em schema e armazenado como JSON.
  */
 export type RichTextDocument = RichTextNode & { type: "doc" };
 
 /**
  * A node or mark attribute value accepted by the public document format.
- *
- * @remarks
- * **Português (pt-BR):** Valor de atributo de nó ou marca aceito pelo documento público.
  */
 export type RichTextAttribute =
   | string
@@ -25,88 +19,70 @@ export type RichTextAttribute =
 
 /**
  * A node in a rich-text document.
- *
- * @remarks
- * **Português (pt-BR):** Nó de um documento rich text.
  */
 export type RichTextNode = {
-  /** Node name. Português (pt-BR): nome do nó. */
+  /** Node name. */
   type: string;
-  /** Schema-defined attributes. Português (pt-BR): atributos definidos pelo schema. */
+  /** Schema-defined attributes. */
   attrs?: Record<string, RichTextAttribute>;
-  /** Child nodes. Português (pt-BR): nós filhos. */
+  /** Child nodes. */
   content?: RichTextNode[];
-  /** Inline marks. Português (pt-BR): marcas inline. */
+  /** Inline marks. */
   marks?: RichTextMark[];
-  /** Text-node content. Português (pt-BR): conteúdo do nó de texto. */
+  /** Text-node content. */
   text?: string;
 };
 
 /**
  * Inline formatting attached to a text node.
- *
- * @remarks
- * **Português (pt-BR):** Formatação inline associada a um nó de texto.
  */
 export type RichTextMark = {
-  /** Mark name. Português (pt-BR): nome da marca. */
+  /** Mark name. */
   type: string;
-  /** Mark attributes. Português (pt-BR): atributos da marca. */
+  /** Mark attributes. */
   attrs?: Record<string, RichTextAttribute>;
 };
 
 /**
  * Representations emitted after an accepted document change.
- *
- * @remarks
- * **Português (pt-BR):** Representações emitidas após uma alteração aceita no documento.
  */
 export type RichTextValueDetails = {
-  /** Canonical JSON document. Português (pt-BR): documento JSON canônico. */
+  /** Canonical JSON document. */
   value: RichTextDocument;
-  /** Normalized HTML. Português (pt-BR): HTML normalizado. */
+  /** Normalized HTML. */
   html: string;
-  /** Plain text without formatting. Português (pt-BR): texto puro sem formatação. */
+  /** Plain text without formatting. */
   text: string;
-  /** Whether the document is empty. Português (pt-BR): se o documento está vazio. */
+  /** Whether the document is empty. */
   empty: boolean;
 };
 
-/**
- * Selects the representation submitted by the editor's hidden form control.
- *
- * @remarks
- * **Português (pt-BR):** Seleciona a representação enviada pelo controle oculto do formulário.
- */
+/** Selects the representation submitted by RichTextEditor.Root's hidden form control. */
 export type RichTextSubmitValue = "json" | "html" | "text";
 
 /**
- * Props for the schema-backed rich-text editor root.
+ * RichTextEditor.Root's schema-backed state and native form options.
  *
- * @remarks
  * `value` is controlled JSON. `defaultValue` initializes an uncontrolled editor once.
- *
- * **Português (pt-BR):** Props da raiz do editor rich text baseado em schema. `value` é
- * JSON controlado. `defaultValue` inicializa uma vez um editor não controlado.
  */
 export type RichTextEditorProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "onChange" | "onInput"> &
   TextControlOptions & {
-    /** Controlled JSON document. Português (pt-BR): documento JSON controlado. */
+    /** Controlled JSON document. */
     value?: RichTextDocument;
-    /** Initial uncontrolled document. Português (pt-BR): documento inicial não controlado. */
+    /** Initial uncontrolled document. */
     defaultValue?: RichTextDocument;
-    /** Accepted-change callback. Português (pt-BR): callback de alteração aceita. */
+    /** Accepted-change callback. */
     onValueChange?: (details: RichTextValueDetails) => void;
-    /** Native form field name. Português (pt-BR): nome do campo no formulário nativo. */
+    /** Native form field name. */
     name?: string;
-    /** External native form id. Português (pt-BR): id de formulário nativo externo. */
+    /** External native form id. */
     form?: string;
-    /** Submitted representation. Português (pt-BR): representação enviada. */
+    /** Submitted representation. */
     submitValue?: RichTextSubmitValue;
-    /** Empty-document hint. Português (pt-BR): dica exibida no documento vazio. */
+    /** Empty-document hint. */
     placeholder?: string;
-    /** Maximum editable text size. Português (pt-BR): tamanho máximo do texto editável. */
+    /** Maximum editable text size. */
     maxCharacters?: number;
-    /** Accessible required state; validation remains application-owned. Português (pt-BR): estado obrigatório acessível; a validação pertence à aplicação. */
+    /** Accessible required state; validation remains application-owned. */
     required?: boolean;
   };

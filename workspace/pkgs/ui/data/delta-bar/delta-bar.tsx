@@ -3,9 +3,15 @@ import { createUniqueId, Show, splitProps } from "solid-js";
 import type { DeltaOptions } from "../delta/delta";
 import { deltaDirection, deltaLabel, deltaTone } from "../delta/delta";
 
+/** `value` is a signed percent (12.5 means +12.5); `label` and description supply metric context. */
 export type DeltaBarProps = Omit<JSX.HTMLAttributes<HTMLElement>, "children" | "title"> &
   DeltaOptions & { label: string; description?: string };
 
+/**
+ * Shows percentage change and context in text; the zero-centered bar is decorative.
+ * Geometry clamps to ±100% while text preserves the full value. Reverse impact colors with
+ * `isPositiveGood={false}` when a decrease is favorable; direction never reverses.
+ */
 export function DeltaBar(props: DeltaBarProps) {
   const [local, rest] = splitProps(props, [
     "label",

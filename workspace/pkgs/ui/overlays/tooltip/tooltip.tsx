@@ -4,6 +4,7 @@ import { OverlayPortal } from "../overlay.portal";
 import { TooltipContent } from "./tooltip.content";
 import { TooltipArrow, TooltipPositioner, TooltipSurface } from "./tooltip.parts";
 
+/** Tooltip.Root defaults to 400ms open/150ms close delays and top placement; supplied positioning overrides these defaults. */
 export type TooltipRootProps = ArkTooltip.RootProps;
 export type TooltipTriggerProps = ArkTooltip.TriggerProps;
 
@@ -20,6 +21,11 @@ export function TooltipRoot(props: TooltipRootProps) {
   );
 }
 
+/**
+ * Short descriptive text for a trigger on hover or keyboard focus; it supplements an accessible name
+ * and is not a replacement for labeling an icon button. Keep content noninteractive even though the
+ * pointer can move onto the tooltip surface.
+ */
 export const Tooltip = {
   Root: TooltipRoot,
   Trigger: ArkTooltip.Trigger,

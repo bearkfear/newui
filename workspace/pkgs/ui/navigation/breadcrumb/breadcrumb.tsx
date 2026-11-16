@@ -44,6 +44,10 @@ export function BreadcrumbPage(props: BreadcrumbPageProps) {
   return <span {...rest} aria-current="page" class={styles.page({ class: local.class })} />;
 }
 
+/**
+ * Native navigation hierarchy: Root is a named nav, List an ordered list, Link an anchor, and Page
+ * the non-focusable current location. Item adds a decorative chevron; the first separator is hidden.
+ */
 export const Breadcrumb = {
   Root: BreadcrumbRoot,
   List: BreadcrumbList,

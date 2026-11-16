@@ -5,6 +5,7 @@ import type { LoadingProps } from "../loading/loading";
 import { LoadingIndicator } from "../loading/loading.indicator";
 import { pageLoadingRecipe } from "./page-loading.recipe";
 
+/** `layout="page"` reserves viewport height; `section` reserves a smaller in-flow region. */
 export type PageLoadingProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "children"> &
   VariantProps<typeof pageLoadingRecipe> & {
     label?: string;
@@ -12,6 +13,11 @@ export type PageLoadingProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "childre
     tone?: LoadingProps["tone"];
   };
 
+/**
+ * Shows one status message and a decorative indicator in normal document flow.
+ * It does not create an overlay, block interaction, move focus, or simulate progress; the app
+ * chooses when to mount it and what content replaces it.
+ */
 export function PageLoading(props: PageLoadingProps) {
   const [local, rest] = splitProps(
     mergeProps(

@@ -11,10 +11,6 @@ import type {
 
 /**
  * Provides editor state, form participation, and shared visual options.
- *
- * @remarks
- * **Português (pt-BR):** Fornece estado do editor, participação em formulário e opções visuais
- * compartilhadas.
  */
 export function RichTextEditorRoot(props: RichTextEditorProps) {
   const [local, rest] = splitProps(props, [

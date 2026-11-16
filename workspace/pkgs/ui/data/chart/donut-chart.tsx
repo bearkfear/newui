@@ -6,6 +6,10 @@ import { chartColor, formatChartValue } from "./chart.helpers";
 import type { DonutChartProps } from "./chart.types";
 import { ChartData } from "./chart-data";
 
+/**
+ * Shows nonnegative values as parts of a whole and includes a readable data table.
+ * Negative and non-finite values are omitted from slices; zero rows remain in the table.
+ */
 export function DonutChart<Datum>(props: DonutChartProps<Datum>) {
   const [local, rest] = splitProps(props, [
     "title",

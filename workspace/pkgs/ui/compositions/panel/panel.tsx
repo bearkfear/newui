@@ -31,6 +31,11 @@ export function PanelRoot(props: PanelRootProps) {
   );
 }
 
+/**
+ * Compact section surface for search/filters, lists, and related actions.
+ * Root tone controls the body surface; Header variant/tone are independent. Panel.Item is a row,
+ * while Panel.Link provides native navigation; actions and filtering remain application-owned.
+ */
 export const Panel = {
   Root: PanelRoot,
   Bar: PanelBar,

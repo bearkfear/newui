@@ -12,6 +12,12 @@ export function EmptyRoot(props: EmptyRootProps) {
   );
 }
 
+/**
+ * Static empty-state content for a page, section, list, panel, or table.
+ * Compose Root with Content, Title, and Description; Actions can contain existing Buttons or links.
+ * The application decides when data is empty—do not render while a request is pending. Empty adds
+ * no announcement role, overlay, or loading state.
+ */
 export const Empty = {
   Root: EmptyRoot,
   Icon: EmptyIcon,

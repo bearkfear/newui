@@ -22,6 +22,11 @@ export function ActionBarRoot(props: ActionBarRootProps) {
   );
 }
 
+/**
+ * Place contextual selection or record information beside its available actions.
+ * Content and Actions stack on narrow screens and share a row from 640px. This is layout only: it
+ * adds no toolbar keyboard model, sticky positioning, selection state, or action behavior.
+ */
 export const ActionBar = {
   Root: ActionBarRoot,
   Content: ActionBarContent,

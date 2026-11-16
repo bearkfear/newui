@@ -9,6 +9,11 @@ import { chartBaseKeys, chartColor, chartTooltip, chartX, seriesLegend } from ".
 import type { BarChartProps } from "./chart.types";
 import { ChartData } from "./chart-data";
 
+/**
+ * Compares numeric series as grouped bars in the input data order and includes a readable values table.
+ * Provide a `label` accessor and one `series[].value` accessor per bar group; sort data in the
+ * application when category order is meaningful.
+ */
 export function BarChart<Datum>(props: BarChartProps<Datum>) {
   const [local, rest] = splitProps(props, chartBaseKeys);
   const colors = () => local.series.map((item, index) => chartColor(item.tone, index));

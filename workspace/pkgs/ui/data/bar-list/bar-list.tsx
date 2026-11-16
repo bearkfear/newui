@@ -3,21 +3,36 @@ import { createMemo, createUniqueId, For, Show, splitProps } from "solid-js";
 import { Empty } from "../../feedback/empty/empty";
 
 export type BarListTone = "primary" | "neutral" | "success" | "warning" | "danger" | "info";
+/**
+ * Required caption, rows, and label/value accessors plus optional formatting and color mapping.
+ * Negative or non-finite values are omitted; input order is preserved and no total is inferred.
+ */
 export type BarListProps<T> = Omit<JSX.HTMLAttributes<HTMLElement>, "children" | "title"> & {
+  /** Visible figure caption and accessible name for this list. */
   title: string;
+  /** Optional context such as period or units, shown below the title. */
   description?: string;
+  /** Rows are rendered in the supplied order; sort before passing when needed. */
   data: readonly T[];
+  /** Supplies the human-readable row label; sorting remains the caller's responsibility. */
   label: (datum: T) => string;
+  /** Nonnegative finite value used for the bar width and text. */
   value: (datum: T) => number;
+  /** Formats visible numbers only; it does not alter the bar scale. */
   valueFormat?: (value: number) => string;
   tone?: BarListTone | ((datum: T) => BarListTone);
   /** Optional shared scale. Never smaller than the largest valid value. */
   maxValue?: number;
+  /** Message rendered when data has no valid nonnegative finite values. */
   emptyMessage?: string;
 };
 
 const number = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
 
+/**
+ * Renders accessible text values in a native list; proportional bars are decorative only.
+ * The largest valid row sets the scale unless a larger positive maxValue is supplied.
+ */
 export function BarList<T>(props: BarListProps<T>) {
   const [local, rest] = splitProps(props, [
     "title",

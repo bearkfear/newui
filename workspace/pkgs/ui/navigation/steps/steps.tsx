@@ -39,6 +39,10 @@ function StepsItem(props: StepsItemProps) {
   return <ArkSteps.Item {...rest} class={styles.item({ class: local.class })} />;
 }
 
+/**
+ * Interactive progression through indexed steps. Supply count/items and connect `onStepChange` or
+ * controlled value to application state; use Timeline for read-only event history instead.
+ */
 export const Steps = {
   Root: StepsRoot,
   List: StepsList,

@@ -14,9 +14,15 @@ import {
 } from "./callout.parts";
 import { calloutRecipe } from "./callout.recipe";
 
+/** Choose tone/variant for appearance; neither one adds alert or live-region semantics. */
 export type CalloutRootProps = JSX.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof calloutRecipe>;
 
+/**
+ * Compose Title/Description with optional Icon, Actions, or CloseButton. Color does not announce the
+ * message: add native role/live-region semantics only when the application needs an announcement.
+ * CloseButton has no built-in hide state; its onClick must update application visibility.
+ */
 export function CalloutRoot(props: CalloutRootProps) {
   const [local, rest] = splitProps(props, ["tone", "variant", "class"]);
   return (
@@ -32,6 +38,7 @@ export function CalloutRoot(props: CalloutRootProps) {
   );
 }
 
+/** Callout parts for an inline message; there is no separate Alert component or dismissal state. */
 export const Callout = {
   Root: CalloutRoot,
   Header: CalloutHeader,

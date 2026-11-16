@@ -34,6 +34,11 @@ export function MediaObjectRoot(props: MediaObjectRootProps) {
   );
 }
 
+/**
+ * Place Media, Content, and optional Actions as direct Root children in that order.
+ * Actions move below content on narrow screens and into a third column at 768px. The media slot
+ * preserves image aspect ratio; supply sizing/cropping when the source dimensions need control.
+ */
 export const MediaObject = {
   Root: MediaObjectRoot,
   Media: MediaObjectMedia,

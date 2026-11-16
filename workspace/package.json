@@ -1,6 +1,27 @@
 {
-  "name": "newui-workspace",
+  "name": "newui",
+  "description": "Development monorepo for @egcs/newui, a composable SolidJS UI component library.",
   "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/bearkfear/newui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bearkfear/newui.git",
+    "directory": "workspace"
+  },
+  "bugs": {
+    "url": "https://github.com/bearkfear/newui/issues"
+  },
+  "keywords": [
+    "newui",
+    "solid-js",
+    "ui-library",
+    "design-system",
+    "storybook",
+    "tailwindcss",
+    "bun-workspaces",
+    "monorepo"
+  ],
   "type": "module",
   "packageManager": "bun@1.3.13",
   "workspaces": [

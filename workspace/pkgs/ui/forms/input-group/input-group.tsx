@@ -95,6 +95,12 @@ export function InputGroupRoot(props: InputGroupRootProps) {
   );
 }
 
+/**
+ * Decorates one text input with icon/addon/action slots and shared visual state.
+ * Put a single primary Input, NumberInput, CurrencyInput, or Textarea inside Root; place start parts
+ * before it and end parts after it. Icons are decorative, addons do not parse values, and actions
+ * remain independent Buttons. The group does not create an input or own its value.
+ */
 export const InputGroup = {
   Root: InputGroupRoot,
   Icon: InputGroupIcon,
