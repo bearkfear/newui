@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "@egcs/newui/tailwind/preset.css";
+@import "@egcs/newui/tailwind/actions.css";
+@import "@egcs/newui/tailwind/content.css";
+
+@source "./routes";

@@ -1,0 +1,31 @@
+---
+title: Documentation
+description: Explore the newui component library.
+---
+
+import { Button, Heading, Text } from "@egcs/newui";
+
+<section class="mx-auto mb-20 grid max-w-4xl gap-4 text-center">
+  <Text size="7" tone="muted">SOLIDJS COMPONENT LIBRARY</Text>
+  <Heading as="h1" size="1" class="m-0">Build interfaces with newui</Heading>
+  <Text size="5" tone="muted">
+    Accessible, composable components for SolidJS, styled with design tokens you can make your own.
+  </Text>
+  <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+    <Button size="lg">Get started</Button>
+    <Button size="lg" variant="outline">Explore components</Button>
+  </div>
+</section>
+
+<section class="grid gap-8 rounded-xl border border-border bg-surface p-8 max-sm:p-5" aria-labelledby="preview-title">
+  <div class="grid gap-3">
+    <Text size="7" tone="muted">LIVE COMPONENT PREVIEW</Text>
+    <Heading as="h2" size="3" class="m-0" id="preview-title">The library, in context</Heading>
+    <Text tone="muted">This first page is rendered with the same components and stylesheet consumers install.</Text>
+  </div>
+  <div class="flex flex-wrap items-center justify-start gap-3">
+    <Button>Primary action</Button>
+    <Button tone="neutral" variant="outline">Secondary action</Button>
+    <Button tone="success" variant="soft">Success state</Button>
+  </div>
+</section>

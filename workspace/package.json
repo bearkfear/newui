@@ -31,9 +31,11 @@
   "scripts": {
     "dev": "bun run --cwd apps/storybook dev",
     "storybook": "bun run --cwd apps/storybook dev",
+    "docs": "bun run --cwd apps/docs dev",
     "build": "bun run --cwd pkgs/ui build",
     "build:storybook": "bun run --cwd apps/storybook build",
-    "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/storybook typecheck && tsc --project scripts/tsconfig.json",
+    "build:docs": "bun run --cwd apps/docs build",
+    "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/storybook typecheck && bun run --cwd apps/docs typecheck && tsc --project scripts/tsconfig.json",
     "pack": "bun scripts/ci/pack.ts",
     "test:storybook": "bun run --cwd apps/storybook test",
     "test:masking": "bun run --cwd apps/storybook test:masking",
