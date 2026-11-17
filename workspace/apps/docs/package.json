@@ -1,6 +1,6 @@
 {
   "name": "newui-docs",
-  "description": "SolidBase documentation application for the newui component library.",
+  "description": "SolidStart documentation application for the newui component library.",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,15 +11,16 @@
   },
   "dependencies": {
     "@egcs/newui": "workspace:*",
-    "@kobalte/solidbase": "0.6.13",
-    "@solidjs/router": "0.15.4",
-    "@solidjs/start": "2.0.0",
-    "solid-js": "1.9.17",
+    "@solidjs/router": "1.0.3",
+    "@solidjs/start": "2.2.3",
+    "lucide-solid": "1.63.0",
+    "solid-js": "1.9.19",
     "vite": "8.3.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
     "postcss": "8.5.33",
-    "tailwindcss": "4.3.3"
+    "tailwindcss": "4.3.3",
+    "vite-plugin-solid": "2.11.16"
   }
 }

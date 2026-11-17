@@ -8,3 +8,10 @@ Do not create or expand automated tests before the user explicitly states that t
 At implementation handoff, tests may be suggested; wait for explicit user approval before writing them.
 Existing tests, type checks, and builds may be run without adding new tests.
 See [implementation validation](conventions/implementation-validation.md).
+
+Use `agent-browser` for browser-based review when it is available.
+Build the documentation site with components and patterns from the UI kit.
+When work reveals UI kit defects or useful improvements, report them to the user
+and ask whether to record them for follow-up or fix them in the library.
+Use kebab-case for filenames whenever the framework or tooling does not require
+a different naming convention.

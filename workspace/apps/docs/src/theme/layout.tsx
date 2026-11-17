@@ -1,73 +1,52 @@
-import { Navbar } from "@egcs/newui";
-import { createListCollection, Select } from "@egcs/newui/forms";
+import { Container, Navbar } from "@egcs/newui";
 import { createColorMode } from "@egcs/newui/theme";
-import { useLocale } from "@kobalte/solidbase/client";
-import { A } from "@solidjs/router";
-import { For, type ParentProps } from "solid-js";
+import { A, useLocation, useNavigate } from "@solidjs/router";
+import { createMemo, type ParentProps, Suspense } from "solid-js";
 import { messages } from "../i18n/messages";
-import { AppearanceControl } from "./AppearanceControl";
+import { AppearanceControl } from "./appearance-control";
 
-const languageOptions = createListCollection({
-  items: [
-    { label: "pt-BR", value: "pt", flag: "🇧🇷" },
-    { label: "EN", value: "en", flag: "🇺🇸" },
-  ],
-});
-
-function LanguageSelect(props: { label: string }) {
-  const locale = useLocale();
-
+function LanguageSelect(props: {
+  value: () => "pt" | "en";
+  label: string;
+  onChange: (locale: "pt" | "en") => void;
+}) {
   return (
-    <div class="w-[7rem] shrink-0">
-      <Select.Root
-        collection={languageOptions}
-        size="sm"
-        value={[locale.currentLocale().option?.name ?? "pt"]}
-        onValueChange={(details) => {
-          const nextLocale = locale.locales.find(
-            (option) => option.option?.name === details.value[0],
-          );
-          if (nextLocale) locale.setLocale(nextLocale);
+    <label class="sr-only">
+      {props.label}
+      <select
+        aria-label={props.label}
+        class="h-9 w-[7rem] shrink-0 rounded-md border border-border bg-background px-2 text-sm text-foreground"
+        value={props.value()}
+        onChange={(event) => {
+          const nextLocale = event.currentTarget.value;
+          if (nextLocale === "pt" || nextLocale === "en") props.onChange(nextLocale);
         }}
       >
-        <Select.Control>
-          <Select.Trigger aria-label={props.label} class="w-full px-2">
-            <span class="flex min-w-0 items-center gap-2">
-              <span aria-hidden="true" class="shrink-0">
-                {locale.currentLocale().option?.name === "en" ? "🇺🇸" : "🇧🇷"}
-              </span>
-              <Select.ValueText />
-            </span>
-            <Select.Indicator />
-          </Select.Trigger>
-        </Select.Control>
-        <Select.Content>
-          <For each={languageOptions.items}>
-            {(item) => (
-              <Select.Item item={item} class="whitespace-nowrap">
-                <span aria-hidden="true" class="shrink-0">
-                  {item.flag}
-                </span>
-                <Select.ItemText class="whitespace-nowrap">{item.label}</Select.ItemText>
-                <Select.ItemIndicator />
-              </Select.Item>
-            )}
-          </For>
-        </Select.Content>
-      </Select.Root>
-    </div>
+        <option value="pt">🇧🇷 pt-BR</option>
+        <option value="en">🇺🇸 EN</option>
+      </select>
+    </label>
   );
+}
+
+function getLocalizedPath(path: string, locale: "pt" | "en") {
+  const pathname = path.startsWith("/en/") ? path.slice(3) : path === "/en" ? "/" : path;
+  if (locale === "pt") return pathname || "/";
+  return pathname === "/" ? "/en/" : `/en${pathname}`;
 }
 
 export default function Layout(props: ParentProps) {
   const colorMode = createColorMode({ storageKey: "newui-docs-theme" });
-  const locale = useLocale();
-  const copy = () => messages[locale.currentLocale().option?.name === "en" ? "en" : "pt"];
-  const localizedPath = (path: string) => {
-    const hashIndex = path.indexOf("#");
-    const pathname = hashIndex === -1 ? path : path.slice(0, hashIndex);
-    const hash = hashIndex === -1 ? "" : path.slice(hashIndex);
-    return `${locale.applyPathPrefix(pathname || "/")}${hash}`;
+  const location = useLocation();
+  const navigate = useNavigate();
+  const locale = createMemo<"pt" | "en">(() =>
+    location.pathname === "/en" || location.pathname.startsWith("/en/") ? "en" : "pt",
+  );
+  const copy = createMemo(() => messages[locale()]);
+
+  const changeLocale = (nextLocale: "pt" | "en") => {
+    const path = getLocalizedPath(location.pathname, nextLocale);
+    navigate(`${path}${window.location.search}${window.location.hash}`);
   };
 
   return (
@@ -78,7 +57,7 @@ export default function Layout(props: ParentProps) {
           class="border-border/80 bg-background/90 [&>div]:grid-cols-[auto_minmax(0,1fr)_auto]"
         >
           <Navbar.Brand
-            href={localizedPath("/")}
+            href={getLocalizedPath("/", locale())}
             aria-label={copy().home}
             class="text-2xl font-bold tracking-[-0.055em]"
           >
@@ -90,7 +69,7 @@ export default function Layout(props: ParentProps) {
               copy={copy()}
               onModeChange={colorMode.setMode}
             />
-            <LanguageSelect label={copy().language} />
+            <LanguageSelect value={locale} label={copy().language} onChange={changeLocale} />
             <a
               aria-label={copy().github}
               class="hidden size-8 items-center justify-center rounded-md text-muted-foreground no-underline transition-colors hover:bg-surface hover:text-foreground md:inline-flex"
@@ -111,7 +90,7 @@ export default function Layout(props: ParentProps) {
               <Navbar.Item value="getting-started">
                 <Navbar.Link
                   asChild={(linkProps) => (
-                    <A {...linkProps()} href={localizedPath("/getting-started/")}>
+                    <A {...linkProps()} href={getLocalizedPath("/getting-started/", locale())}>
                       {copy().start}
                     </A>
                   )}
@@ -120,38 +99,29 @@ export default function Layout(props: ParentProps) {
               <Navbar.Item value="components">
                 <Navbar.Link
                   asChild={(linkProps) => (
-                    <a {...linkProps()} aria-current="false" href={localizedPath("/#componentes")}>
+                    <A {...linkProps()} href={`${getLocalizedPath("/", locale())}#componentes`}>
                       {copy().components}
-                    </a>
+                    </A>
                   )}
                 />
               </Navbar.Item>
               <Navbar.Item value="themes">
                 <Navbar.Link
                   asChild={(linkProps) => (
-                    <a {...linkProps()} aria-current="false" href={localizedPath("/#temas")}>
+                    <A {...linkProps()} href={`${getLocalizedPath("/", locale())}#temas`}>
                       {copy().themes}
-                    </a>
+                    </A>
                   )}
                 />
               </Navbar.Item>
             </Navbar.List>
-            <a
-              class="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground no-underline hover:bg-surface hover:text-foreground md:hidden"
-              href="https://github.com/bearkfear/newui"
-              rel="noreferrer"
-              target="_blank"
-            >
-              {copy().github}
-            </a>
           </Navbar.Content>
         </Navbar.Root>
       </header>
-      <main
-        class="mx-auto w-[calc(100%-3rem)] max-w-6xl py-12 max-sm:w-[calc(100%-2rem)] max-sm:py-8"
-        id="main-content"
-      >
-        {props.children}
+      <main id="main-content">
+        <Container size="lg" class="py-12 max-sm:py-8">
+          <Suspense>{props.children}</Suspense>
+        </Container>
       </main>
     </div>
   );
