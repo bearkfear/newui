@@ -31,6 +31,26 @@ type Story = StoryObj<typeof meta>;
 
 export const Overview: Story = {};
 export const Line: Story = { render: () => <LineExample /> };
+export const Localized: Story = {
+  render: () => (
+    <LineChart
+      title="Receita mensal"
+      data={revenue}
+      label={monthLabel}
+      series={revenueSeries}
+      labels={{
+        legend: "Legenda do gráfico",
+        viewData: "Ver dados",
+        hideData: "Ocultar dados",
+        viewDataFor: (title) => `Ver dados: ${title}`,
+        hideDataFor: (title) => `Ocultar dados: ${title}`,
+        values: (title) => `Valores: ${title}`,
+        caption: (title) => `Dados: ${title}`,
+        category: "Categoria",
+      }}
+    />
+  ),
+};
 export const Bars: Story = {
   render: () => <BarExample />,
   parameters: { docs: { source: { code: barChartSource } } },

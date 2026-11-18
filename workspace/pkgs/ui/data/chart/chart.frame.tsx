@@ -2,7 +2,7 @@ import { createUniqueId, type JSX, Show, splitProps } from "solid-js";
 import { Empty } from "../../feedback/empty/empty";
 import { ChartDetails } from "./chart.details";
 import { chartRecipe } from "./chart.recipe";
-import type { ChartLegendItem } from "./chart.types";
+import type { ChartLabels, ChartLegendItem } from "./chart.types";
 
 export type ChartFrameProps = Omit<JSX.HTMLAttributes<HTMLElement>, "title"> & {
   title: string;
@@ -11,6 +11,7 @@ export type ChartFrameProps = Omit<JSX.HTMLAttributes<HTMLElement>, "title"> & {
   legend: ChartLegendItem[];
   empty: boolean;
   dataTable: JSX.Element;
+  labels?: ChartLabels | undefined;
 };
 const styles = chartRecipe();
 
@@ -22,6 +23,7 @@ export function ChartFrame(props: ChartFrameProps) {
     "legend",
     "empty",
     "dataTable",
+    "labels",
     "class",
     "children",
   ]);
@@ -48,7 +50,7 @@ export function ChartFrame(props: ChartFrameProps) {
         <div aria-hidden="true" class={styles.plot()} style={{ height: `${local.height}px` }}>
           {local.children}
         </div>
-        <ChartDetails title={local.title} legend={local.legend}>
+        <ChartDetails title={local.title} legend={local.legend} labels={local.labels}>
           {local.dataTable}
         </ChartDetails>
       </Show>

@@ -13,6 +13,7 @@ import { ChartData } from "./chart-data";
 export function DonutChart<Datum>(props: DonutChartProps<Datum>) {
   const [local, rest] = splitProps(props, [
     "title",
+    "labels",
     "description",
     "data",
     "label",
@@ -32,6 +33,7 @@ export function DonutChart<Datum>(props: DonutChartProps<Datum>) {
     <ChartFrame
       {...rest}
       title={local.title}
+      labels={local.labels}
       description={local.description}
       height={local.height ?? 260}
       legend={slices().map((datum, index) => ({

@@ -5,12 +5,14 @@ import type { ChartBaseProps, ChartSeries } from "./chart.types";
 
 export function ChartData<Datum>(props: ChartBaseProps<Datum> & { series: ChartSeries<Datum>[] }) {
   return (
-    <Table.Container aria-label={`${props.title} values`}>
+    <Table.Container aria-label={props.labels?.values?.(props.title) ?? `${props.title} values`}>
       <Table.Root density="compact" class="nui-chart-values">
-        <Table.Caption>{props.title} — chart values</Table.Caption>
+        <Table.Caption>
+          {props.labels?.caption?.(props.title) ?? `${props.title} — chart values`}
+        </Table.Caption>
         <Table.Header>
           <Table.Row>
-            <Table.Head>Category</Table.Head>
+            <Table.Head>{props.labels?.category ?? "Category"}</Table.Head>
             <For each={props.series}>
               {(series) => <Table.Head align="end">{series.label}</Table.Head>}
             </For>

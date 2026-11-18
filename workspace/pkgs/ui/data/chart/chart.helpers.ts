@@ -32,6 +32,7 @@ export const chartBaseKeys = [
   "label",
   "height",
   "valueFormat",
+  "labels",
   "series",
   "axisFormat",
 ] as const;
