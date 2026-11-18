@@ -1,0 +1,90 @@
+@layer components {
+  .nui-code-highlight {
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-lg);
+    background: var(--nui-background);
+    color: var(--nui-foreground);
+  }
+  .nui-code-highlight-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 2.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 1rem;
+    border-bottom: 1px solid var(--nui-border);
+    color: var(--nui-muted-foreground);
+    font-size: var(--nui-font-size-sm);
+  }
+  .nui-code-highlight-pre {
+    margin: 0;
+    padding: 1rem;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: var(--nui-font-size-sm);
+    line-height: 1.6;
+    tab-size: 2;
+  }
+  .nui-code-highlight-scroll {
+    overflow: auto;
+    max-height: var(--nui-code-max-height, 24rem);
+  }
+  .nui-code-highlight-scroll:focus-visible {
+    outline: 2px solid var(--nui-focus-ring);
+    outline-offset: -2px;
+  }
+  .nui-code-highlight-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .nui-code-highlight-status[data-error] {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0 1rem 0.75rem;
+    clip-path: none;
+    color: var(--nui-danger-text);
+    font-size: var(--nui-font-size-sm);
+    white-space: normal;
+  }
+  .nui-code-token.comment,
+  .nui-code-token.prolog,
+  .nui-code-token.doctype {
+    color: var(--nui-slate-11);
+  }
+  .nui-code-token.keyword,
+  .nui-code-token.selector,
+  .nui-code-token.atrule {
+    color: var(--nui-primary-text);
+  }
+  .nui-code-token.string,
+  .nui-code-token.attr-value,
+  .nui-code-token.inserted {
+    color: var(--nui-green-11);
+  }
+  .nui-code-token.function,
+  .nui-code-token.class-name,
+  .nui-code-token.tag {
+    color: var(--nui-blue-11);
+  }
+  .nui-code-token.number,
+  .nui-code-token.boolean,
+  .nui-code-token.constant,
+  .nui-code-token.property {
+    color: var(--nui-amber-11);
+  }
+  .nui-code-token.operator,
+  .nui-code-token.punctuation {
+    color: var(--nui-muted-foreground);
+  }
+  .nui-code-token.deleted,
+  .nui-code-token.regex {
+    color: var(--nui-red-11);
+  }
+}
