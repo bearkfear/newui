@@ -9,6 +9,7 @@ import {
   RadioAppearanceExample,
   RadioGroupExample,
   RadioStatesExample,
+  SegmentedRadioExample,
 } from "./radio-group.examples";
 
 const meta = {
@@ -33,6 +34,7 @@ export const Default: Story = {};
 export const Controlled: Story = { render: () => <ControlledRadioExample /> };
 export const States: Story = { render: () => <RadioStatesExample /> };
 export const SizesAndTones: Story = { render: () => <RadioAppearanceExample /> };
+export const Segmented: Story = { render: () => <SegmentedRadioExample /> };
 export const NativeSubmissionAndReset: Story = { render: () => <ChoiceFormExample /> };
 export const Horizontal: Story = { args: { orientation: "horizontal" } };
 export const FlowAlignment: Story = { render: () => <ChoiceFlowExample /> };

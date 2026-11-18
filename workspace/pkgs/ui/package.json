@@ -1,6 +1,6 @@
 {
   "name": "@egcs/newui",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Composable SolidJS UI components with design tokens, form controls, data visualizations, and CSS or Tailwind CSS 4 theming.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
@@ -99,6 +99,11 @@
     "./numbers": {
       "types": "./dist/types/forms/number-input/index.d.ts",
       "import": "./dist/numbers.js"
+    },
+    "./theme": {
+      "types": "./dist/types/foundations/theme.d.ts",
+      "solid": "./dist/theme.jsx",
+      "import": "./dist/theme.js"
     },
     "./rich-text": {
       "types": "./dist/types/forms/rich-text-editor/index.d.ts",

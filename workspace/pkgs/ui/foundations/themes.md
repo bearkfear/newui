@@ -6,7 +6,7 @@
 
 The stylesheet includes the official Radix Colors sRGB scales for Slate, Blue, Sky, Green, Amber, and Red. Public semantic tokens map these to neutral, primary, info, success, warning, and danger. The same semantic role is used in both themes.
 
-`color-scheme: light dark` follows the operating system by default. No JavaScript provider, hydration effect, or consumer Radix installation is required. `light-dark()` selects the corresponding official value when a color is used; native controls also follow the active color scheme. This targets browsers supporting CSS `light-dark()` (Baseline 2024).
+`color-scheme: light dark` follows the operating system by default. No JavaScript provider, hydration effect, or consumer Radix installation is required for system mode. `light-dark()` selects the corresponding official value when a color is used; native controls also follow the active color scheme. This targets browsers supporting CSS `light-dark()` (Baseline 2024).
 
 Override the theme on the document or on any container:
 
@@ -43,6 +43,21 @@ Solid primary (Blue), success (Green), and danger (Red) use white text on steps 
 
 Storybook's system option exercises the public CSS contract directly. Its manager resolves the operating system separately because its theming API accepts JavaScript color values.
 
-Application-specific theme persistence and user preference storage remain the consuming application's responsibility.
+## Solid color-mode helper
+
+Solid apps can opt into typed mode state and local storage persistence. In SSR apps, put the generated script in the document head before stylesheets; it applies the stored value before the first paint. The CSS still handles system preference without JavaScript.
+
+```tsx
+import { createColorMode, getColorModeScript } from "@egcs/newui/theme";
+
+const colorMode = createColorMode({ storageKey: "app-color-mode", defaultMode: "system" });
+colorMode.mode(); // "light" | "dark" | "system"
+colorMode.setMode("dark");
+
+// In the SSR document head, before stylesheets:
+<script innerHTML={getColorModeScript({ storageKey: "app-color-mode" })} />;
+```
+
+Persistence is optional and uses the supplied key. Without a key, the helper only updates its accessor and `data-nui-theme`; the consuming application owns any storage policy. This helper targets the document root. Nested themed sections can continue to set `data-nui-theme` directly.
 
 The optional [Tailwind preset](../getting-started/tailwind.md) maps application utilities to the same tokens. [Runtime customization](../getting-started/theme-customization.md) and the isolated Storybook preset example demonstrate changing palette roles, spacing, radius, and appearance without regenerating source palettes.

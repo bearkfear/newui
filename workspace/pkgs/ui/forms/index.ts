@@ -1,4 +1,6 @@
 export type { CheckboxCheckedChangeDetails, CheckboxCheckedState } from "@ark-ui/solid/checkbox";
+export type { Color, ColorPickerValueChangeDetails } from "@ark-ui/solid/color-picker";
+export { parseColor } from "@ark-ui/solid/color-picker";
 export type { RadioGroupValueChangeDetails } from "@ark-ui/solid/radio-group";
 export type { SwitchCheckedChangeDetails } from "@ark-ui/solid/switch";
 export type { CheckboxRootProps } from "./checkbox/checkbox";
@@ -9,6 +11,8 @@ export type {
   CheckboxGroupRootProps,
 } from "./checkbox-group/checkbox-group";
 export { CheckboxGroup } from "./checkbox-group/checkbox-group";
+export type { ColorPickerContentProps, ColorPickerRootProps } from "./color-picker/color-picker";
+export { ColorPicker } from "./color-picker/color-picker";
 export type {
   CurrencyEntryMode,
   CurrencyFormatOptions,

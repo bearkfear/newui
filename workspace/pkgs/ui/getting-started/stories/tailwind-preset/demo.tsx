@@ -1,6 +1,7 @@
 import { createEffect, createSignal } from "solid-js";
+import { createTheme } from "../../../foundations/theme-tokens";
 import { Preview } from "./preview";
-import { type Palette, primaryTheme, themeMode } from "./primary-theme";
+import { type Palette, themeMode } from "./primary-theme";
 import { ThemeControls } from "./theme-controls";
 
 export function TailwindPresetDemo(props: { theme?: string } = {}) {
@@ -16,9 +17,10 @@ export function TailwindPresetDemo(props: { theme?: string } = {}) {
       class="min-h-screen bg-background p-6 font-sans text-foreground"
       data-nui-theme={theme()}
       style={{
-        ...primaryTheme(palette()),
-        "--nui-space-unit": `${spacing()}px`,
-        "--nui-radius-md": `${radius()}px`,
+        ...createTheme({
+          primary: { palette: palette(), tokens: { primaryHover: "#b59b00" } },
+          tokens: { spaceUnit: `${spacing()}px`, radiusMd: `${radius()}px` },
+        }),
       }}
     >
       <div class="mx-auto grid max-w-3xl gap-6">

@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.0
+
+### Added
+
+- Add ColorPicker with an Ark-powered color editor, hexadecimal entry, optional transparency and swatches, Field integration, and themed popover. Include controlled and uncontrolled examples, form submission and reset, and responsive Storybook examples.
+- Add the `@egcs/newui/theme` entry with color-mode helpers and typed theme customization.
+- Add a segmented presentation for RadioGroup.
+
+### Changed
+
+- Improve Navbar responsive composition and Button icon rendering.
+- Document the Select collection helper and expand theme customization guidance.
+
+### Validation and limitations
+
+ColorPicker has reviewable Storybook examples; dedicated automated interaction coverage has not been added. Its initial value defaults to black and it does not currently support an empty selection. Visual review of the final focus and size refinements remains outstanding. Existing 0.x limitations below still apply.
+
 ## 0.2.1
 
 ### Changed

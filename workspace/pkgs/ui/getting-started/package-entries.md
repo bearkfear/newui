@@ -18,6 +18,7 @@ newui remains one published package. Each area provides named component and type
 | `@egcs/newui/masking`      | DOM-independent maskText, unmaskText, validateTextMaskOptions, textMaskLimits, and mask types                                 |
 | `@egcs/newui/numbers`      | DOM-independent number/currency formatters, parsers, configuration validation, limits and types                               |
 | `@egcs/newui/rich-text`    | DOM-independent HTML/JSON conversion, plain-text extraction, emptiness, validation, and document types                        |
+| `@egcs/newui/theme`        | Typed Solid color-mode state and a pre-paint script for SSR documents                                                         |
 | `@egcs/newui/layout`       | Container, Resizable, Section                                                                                                 |
 | `@egcs/newui/navigation`   | Breadcrumb, Navbar, NavigationMenu, Pagination, Sidebar, Steps, Tabs, VerticalMenu                                            |
 | `@egcs/newui/overlays`     | AlertDialog, Dialog, HoverCard, Popover, Sheet, Tooltip                                                                       |
@@ -30,13 +31,13 @@ import { Field, Input } from "@egcs/newui/forms";
 import "@egcs/newui/styles.css";
 ```
 
-All entries preserve their existing public types, including shared part types and portal aliases. Charts stay opt-in through `@egcs/newui/charts`; they are not re-exported from `@egcs/newui/data` or `@egcs/newui`. Foundations currently expose CSS contracts, and Utilities have no implemented public API, so neither has an empty JavaScript entry.
+All entries preserve their existing public types, including shared part types and portal aliases. Charts stay opt-in through `@egcs/newui/charts`; they are not re-exported from `@egcs/newui/data` or `@egcs/newui`. The theme entry is also re-exported from the package root.
 
 ## Styles and themes
 
 Import `@egcs/newui/styles.css` once in the application entry. It remains the complete compiled stylesheet, with global Preflight and `nui`-prefixed utilities. Area JavaScript imports do not select CSS or require a consumer Tailwind build.
 
-System light/dark selection and `data-nui-theme` overrides remain available through the shared CSS. See [themes](../foundations/themes.md). Alternatively, use the [Tailwind consumer integration](tailwind.md): `@egcs/newui/postcss`, documented `@egcs/newui/tailwind/<area>.css` selections, and an optional `@egcs/newui/tailwind/preset.css` sharing tokens with application utilities. Compiler peers are optional when using the complete stylesheet.
+System light/dark selection and `data-nui-theme` overrides remain available through the shared CSS. Solid applications can optionally use `createColorMode` and `getColorModeScript` from `@egcs/newui/theme` for typed state, persistence, and flash-free SSR initialization. See [themes](../foundations/themes.md). Alternatively, use the [Tailwind consumer integration](tailwind.md): `@egcs/newui/postcss`, documented `@egcs/newui/tailwind/<area>.css` selections, and an optional `@egcs/newui/tailwind/preset.css` sharing tokens with application utilities. Compiler peers are optional when using the complete stylesheet.
 
 ## Build and module identity
 
