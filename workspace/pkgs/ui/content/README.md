@@ -7,6 +7,7 @@ Present text, identity, and information, including organization and disclosure w
 ## Components
 
 - Heading, Text, and Prose for interface typography and editorial content.
+- [CodeHighlight](code-highlight/README.md): syntax-colored, copyable code examples.
 - [Card](card/README.md): optional media, header actions, content, and simple or divided footers.
 - [Badge](badge/README.md): labels and interactive badge presentation.
 - [Avatar](avatar/README.md): identity images with Ark-powered image state and fallbacks.
