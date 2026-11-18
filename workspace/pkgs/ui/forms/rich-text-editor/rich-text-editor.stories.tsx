@@ -56,6 +56,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+export const LocalizedToolbar: Story = {
+  render: () => (
+    <RichTextEditor.Root aria-label="Notas">
+      <RichTextEditor.Toolbar aria-label="Formatação de texto">
+        <RichTextEditor.Bold label="Negrito" />
+        <RichTextEditor.Italic label="Itálico" />
+      </RichTextEditor.Toolbar>
+      <RichTextEditor.Content />
+    </RichTextEditor.Root>
+  ),
+};
 export const ControlledAndRepresentations: Story = {
   render: () => <ControlledRichTextExample />,
 };

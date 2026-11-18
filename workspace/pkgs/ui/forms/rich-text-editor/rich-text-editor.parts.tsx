@@ -23,7 +23,7 @@ export function RichTextToolbar(props: RichTextToolbarProps) {
       class={["nui-rich-text-toolbar", local.class].filter(Boolean).join(" ")}
     >
       <Show when={local.children} fallback={<RichTextDefaultToolbar />}>
-        {local.children}
+        {(children) => children()}
       </Show>
     </div>
   );

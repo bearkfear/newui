@@ -29,6 +29,8 @@ links, bullet and ordered lists, blockquotes, code blocks, hard breaks, and hori
 default Toolbar exposes the primary subset and can be replaced with composed action parts. Images are supported; tables, embeds, colors, arbitrary fonts, mentions, Markdown, collaboration, and comments are not
 part of this version.
 
+Formatting action parts accept `label` for localized accessible names and tooltips. Compose them inside Toolbar to provide translated controls.
+
 Root shares Field's size, tone, valid, invalid, loading, disabled, readonly, description, and label
 associations. Content is required and mounts the contenteditable surface. Toolbar buttons retain
 native Tab navigation and return focus to the editor after commands. CharacterCount uses Tiptap's
