@@ -1,6 +1,6 @@
 {
   "name": "@egcs/newui",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Composable SolidJS UI components with design tokens, form controls, data visualizations, and CSS or Tailwind CSS 4 theming.",
   "license": "MIT",
   "homepage": "https://github.com/bearkfear/newui#readme",
