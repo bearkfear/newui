@@ -38,6 +38,10 @@ export function NavbarContent(props: Collapsible.ContentProps) {
   );
 }
 export function NavbarActions(props: JSX.HTMLAttributes<HTMLDivElement>) {
-  const [local, rest] = splitProps(props, ["class"]);
-  return <div {...rest} class={styles.actions({ class: local.class })} />;
+  const [local, rest] = splitProps(props, ["class", "children"]);
+  return (
+    <div {...rest} class={styles.actions({ class: local.class })}>
+      {local.children}
+    </div>
+  );
 }

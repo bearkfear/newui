@@ -34,7 +34,20 @@ preview.style.setProperty("--nui-radius-md", "18px");
 preview.style.setProperty("--nui-space-unit", "5px");
 ```
 
-`primaryTheme` is example application code, not an npm export. Editors can provide their own complete role values, including `light-dark(lightValue, darkValue)`. Arbitrary brand palettes must supply their values and appropriate contrast; changing only `--nui-primary` does not recolor soft surfaces or text.
+The public `createTheme` helper builds the primary role set from a bundled palette and accepts individual semantic color token overrides:
+
+```tsx
+import { createTheme } from "@egcs/newui/theme";
+
+const colors = createTheme({
+  primary: { palette: "blue", tokens: { primaryHover: "#b59b00" } },
+  tokens: { background: { light: "white", dark: "#111111" } },
+});
+
+<section style={colors}>Themed content</section>;
+```
+
+The helper returns CSS custom properties without touching the DOM. Apply them to a container or use `style.setProperty` on the document element. `tokens` overrides preset values; the top-level `tokens` takes precedence over `primary.tokens`. Paired colors become `light-dark()`. Arbitrary brand colors must provide appropriate contrast; changing only `--nui-primary` does not recolor soft surfaces or text. The included primary presets are Blue, Sky, Green, Amber, and Red.
 
 Apply semantic role overrides on a nested scope, as the example does. Overriding only a scale alias on a descendant does not recompute other aliases already inherited from `:root`. Changing source scale aliases on the document root is a separate supported CSS mechanism.
 

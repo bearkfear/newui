@@ -101,7 +101,7 @@
       "import": "./dist/numbers.js"
     },
     "./theme": {
-      "types": "./dist/types/foundations/color-mode.d.ts",
+      "types": "./dist/types/foundations/theme.d.ts",
       "solid": "./dist/theme.jsx",
       "import": "./dist/theme.js"
     },
