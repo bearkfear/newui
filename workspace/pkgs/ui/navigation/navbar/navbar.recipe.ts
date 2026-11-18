@@ -10,7 +10,7 @@ export const navbarRecipe = tv({
     toggle:
       "nui:my-3 nui:inline-flex nui:min-h-10 nui:items-center nui:justify-center nui:gap-2 nui:rounded-md nui:border nui:border-[var(--nui-control-border)] nui:px-3 nui:py-2 nui:text-sm nui:font-medium nui:cursor-pointer nui:hover:bg-[var(--nui-neutral-soft-hover)] nui:hover:border-[var(--nui-control-border-hover)] nui-focus-ring nui:disabled:cursor-not-allowed nui:disabled:text-[var(--nui-disabled-foreground)] nui:md:hidden",
     content:
-      "nui:col-span-2 nui:flex nui:min-w-0 nui:flex-col nui:gap-4 nui:pb-4 nui:md:col-span-1 nui:md:flex-row nui:md:items-center nui:md:justify-between nui:md:pb-0",
+      "nui:col-span-2 nui:flex nui:min-w-0 nui:flex-col nui:gap-4 nui:pb-4 nui:data-[state=closed]:hidden! nui:md:col-span-1 nui:md:flex-row nui:md:items-center nui:md:justify-between nui:md:pb-0 nui:md:data-[state=closed]:flex!",
     actions: "nui:flex nui:min-w-0 nui:flex-wrap nui:items-center nui:gap-2 nui:md:ms-auto",
   },
   variants: {

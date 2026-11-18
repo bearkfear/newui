@@ -33,9 +33,15 @@ export function NavbarToggle(props: Collapsible.TriggerProps) {
 }
 export function NavbarContent(props: Collapsible.ContentProps) {
   const [local, rest] = splitProps(props, ["class"]);
-  return <Collapsible.Content {...rest} class={styles.content({ class: local.class })} />;
+  return (
+    <Collapsible.Content {...rest} hidden={false} class={styles.content({ class: local.class })} />
+  );
 }
 export function NavbarActions(props: JSX.HTMLAttributes<HTMLDivElement>) {
-  const [local, rest] = splitProps(props, ["class"]);
-  return <div {...rest} class={styles.actions({ class: local.class })} />;
+  const [local, rest] = splitProps(props, ["class", "children"]);
+  return (
+    <div {...rest} class={styles.actions({ class: local.class })}>
+      {local.children}
+    </div>
+  );
 }

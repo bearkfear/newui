@@ -64,15 +64,19 @@ export function Button(props: ButtonProps) {
       </Show>
       <span class="nui-button-content" style={{ opacity: local.loading ? 0 : undefined }}>
         <Show when={local.startIcon}>
-          <span class="nui-button-icon" aria-hidden="true">
-            {local.startIcon}
-          </span>
+          {(icon) => (
+            <span class="nui-button-icon" aria-hidden="true">
+              {icon()}
+            </span>
+          )}
         </Show>
         {local.children}
         <Show when={local.endIcon}>
-          <span class="nui-button-icon" aria-hidden="true">
-            {local.endIcon}
-          </span>
+          {(icon) => (
+            <span class="nui-button-icon" aria-hidden="true">
+              {icon()}
+            </span>
+          )}
         </Show>
       </span>
     </button>

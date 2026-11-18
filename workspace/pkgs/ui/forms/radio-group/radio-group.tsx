@@ -16,7 +16,11 @@ import {
  * RadioGroup.Root values are strings (or `null` to clear controlled selection);
  * `onValueChange` receives Ark's details object. Item values must be unique.
  */
-export type RadioGroupRootProps = ArkRadioGroup.RootProps & ChoiceOptions;
+export type RadioGroupRootProps = ArkRadioGroup.RootProps &
+  ChoiceOptions & {
+    /** Uses a compact, single-row appearance for mutually exclusive settings. */
+    variant?: "default" | "segmented";
+  };
 
 /**
  * A mutually exclusive option set with native radio inputs, arrow-key selection, and Field support.
@@ -32,6 +36,7 @@ export function RadioGroupRoot(props: RadioGroupRootProps) {
     "invalid",
     "disabled",
     "readOnly",
+    "variant",
     "class",
     "children",
     "value",
@@ -70,10 +75,12 @@ export function RadioGroupRoot(props: RadioGroupRootProps) {
           aria-labelledby={local["aria-labelledby"] ?? field?.().ids.label}
           aria-describedby={control.describedBy(local["aria-describedby"])}
           data-valid={control.valid() ? "" : undefined}
+          data-size={control.size()}
+          data-variant={local.variant ?? "default"}
           class={choiceRecipe({
             size: control.size(),
             tone: control.tone(),
-            class: ["nui-choice-group", local.class].filter(Boolean).join(" "),
+            class: ["nui-choice-group nui-radio-group", local.class].filter(Boolean).join(" "),
           })}
         >
           {local.children}

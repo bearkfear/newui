@@ -1,3 +1,4 @@
+import { Monitor, Moon, Sun } from "lucide-solid";
 import { createSignal, For } from "solid-js";
 import { Field } from "../field/field";
 import { RadioGroup, type RadioGroupRootProps } from "./radio-group";
@@ -79,6 +80,49 @@ export function RadioAppearanceExample() {
           </RadioGroup.Root>
         )}
       </For>
+    </div>
+  );
+}
+
+export function SegmentedRadioExample() {
+  return (
+    <div class="text-fields-demo-stack">
+      <RadioGroup.Root aria-label="Appearance" defaultValue="system" variant="segmented" size="sm">
+        <RadioGroup.Item value="light" aria-label="Light">
+          <RadioGroup.ItemControl />
+          <Sun size={16} aria-hidden="true" />
+          <RadioGroup.ItemText class="sr-only">Light</RadioGroup.ItemText>
+        </RadioGroup.Item>
+        <RadioGroup.Item value="dark" aria-label="Dark">
+          <RadioGroup.ItemControl />
+          <Moon size={16} aria-hidden="true" />
+          <RadioGroup.ItemText class="sr-only">Dark</RadioGroup.ItemText>
+        </RadioGroup.Item>
+        <RadioGroup.Item value="system" aria-label="System">
+          <RadioGroup.ItemControl />
+          <Monitor size={16} aria-hidden="true" />
+          <RadioGroup.ItemText class="sr-only">System</RadioGroup.ItemText>
+        </RadioGroup.Item>
+      </RadioGroup.Root>
+      <RadioGroup.Root
+        aria-label="Appearance, medium size"
+        defaultValue="dark"
+        variant="segmented"
+        size="md"
+      >
+        <RadioGroup.Item value="light">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>Light</RadioGroup.ItemText>
+        </RadioGroup.Item>
+        <RadioGroup.Item value="dark">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>Dark</RadioGroup.ItemText>
+        </RadioGroup.Item>
+        <RadioGroup.Item value="system">
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>System</RadioGroup.ItemText>
+        </RadioGroup.Item>
+      </RadioGroup.Root>
     </div>
   );
 }

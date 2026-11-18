@@ -1,0 +1,148 @@
+@layer components {
+  .nui-color-picker {
+    min-width: 0;
+    width: 100%;
+  }
+  .nui-color-picker-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: var(--nui-text-height);
+    text-align: left;
+  }
+  .nui-color-picker-trigger [data-part="value-text"] {
+    flex: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .nui-color-picker-trigger:where(:not([data-disabled], [data-readonly])):hover {
+    border-color: var(--nui-text-hover);
+  }
+  .nui-color-picker-trigger:is(:focus-visible, [data-state="open"]) {
+    --nui-focus-color: var(--nui-text-active-focus, var(--nui-text-focus));
+    border-color: var(--nui-text-active-focus, var(--nui-text-focus));
+  }
+  .nui-color-picker-trigger[data-valid][data-state="open"] {
+    --nui-text-active-focus: var(--nui-success-focus);
+  }
+  .nui-color-picker-trigger[data-invalid][data-state="open"] {
+    --nui-text-active-focus: var(--nui-danger-focus);
+  }
+  .nui-color-picker-trigger[data-readonly] {
+    background: var(--nui-surface);
+  }
+  .nui-color-picker-trigger[data-disabled] {
+    background: var(--nui-disabled-background);
+    border-color: var(--nui-disabled-border);
+    color: var(--nui-disabled-foreground);
+  }
+  .nui-color-picker-value-swatch,
+  .nui-color-picker-swatch {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-sm);
+  }
+  .nui-color-picker-value-swatch {
+    width: min(1.5rem, var(--nui-text-height) - 2 * var(--nui-text-block) - 2px);
+    height: min(1.5rem, var(--nui-text-height) - 2 * var(--nui-text-block) - 2px);
+    flex: none;
+  }
+  .nui-color-picker-positioner {
+    z-index: calc(var(--nui-z-popover) + var(--layer-index, 0));
+  }
+  .nui-color-picker-content {
+    display: grid;
+    gap: 0.75rem;
+    width: 17rem;
+    max-width: calc(100vw - 2rem);
+    max-height: min(var(--available-height, 100dvh), calc(100dvh - 2rem));
+    overflow: auto;
+    padding: 0.875rem;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-lg);
+    background: var(--nui-background);
+    color: var(--nui-foreground);
+    box-shadow: var(--nui-popover-shadow);
+  }
+  .nui-color-picker-area {
+    position: relative;
+    height: 10rem;
+    border-radius: var(--nui-radius-md);
+    touch-action: none;
+  }
+  .nui-color-picker-area-background {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  .nui-color-picker-thumb,
+  .nui-color-picker-slider-thumb {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.5);
+  }
+  .nui-color-picker-thumb:focus-visible,
+  .nui-color-picker-slider-thumb:focus-visible {
+    outline: 2px solid var(--nui-focus-ring);
+    outline-offset: 2px;
+  }
+  .nui-color-picker-slider-thumb {
+    transform: translate(-50%, -50%);
+  }
+  .nui-color-picker-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 1.25rem;
+    touch-action: none;
+  }
+  .nui-color-picker-slider-track {
+    width: 100%;
+    height: 0.625rem;
+    overflow: hidden;
+    border-radius: 999px;
+  }
+  .nui-color-picker-slider-grid {
+    position: absolute;
+    inset: 0.3125rem 0;
+    overflow: hidden;
+    border-radius: 999px;
+  }
+  .nui-color-picker-input {
+    min-width: 0;
+    flex: 1;
+    text-transform: uppercase;
+  }
+  .nui-color-picker-content [data-part="swatch-group"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+  .nui-color-picker-swatch-trigger {
+    padding: 0;
+    border-radius: var(--nui-radius-sm);
+  }
+  .nui-color-picker-swatch {
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .nui-color-picker-value-swatch::after,
+  .nui-color-picker-swatch::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color);
+  }
+  .nui-color-picker-swatch-indicator {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    color: white;
+    filter: drop-shadow(0 1px 1px black);
+  }
+}

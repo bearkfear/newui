@@ -37,6 +37,8 @@ Forms / FileInput wraps Ark FileUpload and reuses the text-control visual contra
 
 Forms / Select wraps Ark Select and reuses the text-control visual contract, recipe, and reset binding. Its value adapter preserves canceled native resets without replacing Ark navigation or selection behavior. Select Content uses Overlays / OverlayPortal for inherited themes; Indicator composes Feedback / LoadingIndicator. The lower-level select.types contract keeps the value adapter independent of Root.
 
+Forms / ColorPicker wraps Ark ColorPicker and composes InputGroup for the hexadecimal channel. Its Content uses Overlays / OverlayPortal to preserve theme scope.
+
 Forms / Checkbox, CheckboxGroup, and RadioGroup wrap Ark's corresponding primitives. Shared choice support owns the visual recipe, group options context, and native reset adapter over the existing text-control reset binding. Checkbox consumes CheckboxGroup's lower-level context for unique item IDs and input registration; CheckboxGroup does not import Checkbox. Radio item input composition preserves readonly submission and Field descriptions without replacing Ark selection or navigation.
 
 Forms / Switch wraps Ark Switch and reuses choice options, the choice visual recipe, and the shared reset adapter. Its own CSS and passive-tone recipe own track geometry and checked/unchecked appearance; it imports no other component implementation. Native disabled fieldsets are styled through the input's `:disabled` state because the installed Ark Switch does not expose that state on its visual parts.
@@ -65,6 +67,7 @@ The table summarizes direct local imports, including types. Each target is a spe
 | Forms / RichTextEditor                       | Actions / Button; Content / Prose styles               | Formatting controls and editorial typography |
 | Forms / DatePicker                           | Overlays / OverlayPortal                               | Themed calendar portals                      |
 | Forms / Select                               | Overlays / OverlayPortal; Feedback / LoadingIndicator  | Themed option list and loading indicator     |
+| Forms / ColorPicker                          | Forms / InputGroup; Overlays / OverlayPortal           | Hexadecimal prefix and themed picker         |
 | Forms / FileInput                            | Feedback / LoadingIndicator                            | Visible loading state                        |
 | Navigation / Navbar                          | Layout / Container                                     | Width constraints                            |
 | Navigation / NavigationMenu                  | Overlays / OverlayPortal                               | Themed submenu portals                       |
