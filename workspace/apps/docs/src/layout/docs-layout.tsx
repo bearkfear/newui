@@ -16,6 +16,7 @@ import type { Locales } from "../i18n/i18n-types";
 import { getLocaleFromPath, getLocalizedPath } from "../lib/localized-path";
 import { ThemeSettingsProvider } from "../lib/theme-settings";
 import { AppearanceControl } from "./appearance-control";
+import { DocsFooter } from "./docs-footer";
 import { LanguageSelect } from "./language-select";
 
 export function DocsLayout(props: ParentProps) {
@@ -62,11 +63,13 @@ function LayoutContent(
   return (
     <ThemeSettingsProvider mode={colorMode.mode} setMode={colorMode.setMode}>
       <div
-        class="min-h-screen bg-background text-foreground"
+        class="flex min-h-screen flex-col bg-background text-foreground"
         style={{
           "background-color": "var(--nui-background)",
           "background-image":
-            "radial-gradient(ellipse 85% 55% at 50% 0%, color-mix(in srgb, var(--nui-primary) 24%, transparent), transparent 100%)",
+            "radial-gradient(ellipse 85% 100% at 50% 0%, color-mix(in srgb, var(--nui-primary) 24%, transparent), transparent 100%)",
+          "background-size": "100% 720px",
+          "background-repeat": "no-repeat",
         }}
       >
         <header class="sticky top-0 z-50" classList={{ "backdrop-blur-xl": scrolled() }}>
@@ -143,11 +146,12 @@ function LayoutContent(
             </Navbar.Content>
           </Navbar.Root>
         </header>
-        <main id="main-content">
+        <main id="main-content" class="flex-1">
           <Container size="lg" class="py-12 max-sm:py-8">
             <Suspense>{props.children}</Suspense>
           </Container>
         </main>
+        <DocsFooter locale={props.locale()} />
       </div>
     </ThemeSettingsProvider>
   );

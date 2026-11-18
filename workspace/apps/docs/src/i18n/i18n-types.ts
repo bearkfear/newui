@@ -76,21 +76,171 @@ type RootTranslation = {
 		 */
 		githubTooltip: string
 	}
+	footer: {
+		/**
+		 * C​o​m​p​o​n​e​n​t​e​s​ ​p​a​r​a​ ​c​r​i​a​r​ ​i​n​t​e​r​f​a​c​e​s​ ​c​o​m​ ​S​o​l​i​d​J​S​.
+		 */
+		description: string
+		/**
+		 * D​o​c​u​m​e​n​t​a​ç​ã​o
+		 */
+		documentation: string
+		/**
+		 * P​r​o​j​e​t​o
+		 */
+		project: string
+		/**
+		 * R​e​p​o​s​i​t​ó​r​i​o​ ​n​o​ ​G​i​t​H​u​b
+		 */
+		repository: string
+		/**
+		 * C​ó​d​i​g​o​ ​a​b​e​r​t​o​ ​p​a​r​a​ ​c​o​n​s​t​r​u​i​r​ ​j​u​n​t​o​s​.
+		 */
+		openSource: string
+		/**
+		 * N​e​w​ ​U​I​ ​·​ ​C​r​i​a​d​o​ ​p​o​r​ ​E​G​C​S
+		 */
+		credit: string
+	}
+	homeShowcase: {
+		/**
+		 * C​o​m​p​o​n​e​n​t​e​s​ ​e​m​ ​a​ç​ã​o
+		 */
+		title: string
+		/**
+		 * E​x​p​l​o​r​e​ ​a​l​g​u​m​a​s​ ​d​a​s​ ​p​e​ç​a​s​ ​q​u​e​ ​v​o​c​ê​ ​p​o​d​e​ ​c​o​m​b​i​n​a​r​ ​n​a​ ​s​u​a​ ​i​n​t​e​r​f​a​c​e​.
+		 */
+		description: string
+		/**
+		 * F​E​I​T​O​ ​C​O​M​ ​N​E​W​ ​U​I
+		 */
+		eyebrow: string
+		/**
+		 * V​i​s​ã​o​ ​f​i​n​a​n​c​e​i​r​a
+		 */
+		workspace: string
+		/**
+		 * A​t​u​a​l​i​z​a​d​o
+		 */
+		status: string
+		/**
+		 * J​a​n​e​i​r​o​ ​—​ ​J​u​n​h​o
+		 */
+		period: string
+		/**
+		 * R​e​s​u​m​o​ ​p​a​r​a​ ​a​ ​e​q​u​i​p​e​ ​f​i​n​a​n​c​e​i​r​a
+		 */
+		editorDescription: string
+		/**
+		 * A​ ​r​e​c​e​i​t​a​ ​c​r​e​s​c​e​u​ ​e​m​ ​j​u​n​h​o​.​ ​V​a​m​o​s​ ​r​e​v​i​s​a​r​ ​o​s​ ​c​u​s​t​o​s​ ​e​ ​d​e​f​i​n​i​r​ ​o​ ​o​r​ç​a​m​e​n​t​o​ ​p​a​r​a​ ​o​ ​p​r​ó​x​i​m​o​ ​m​ê​s​.
+		 */
+		note: string
+		/**
+		 * P​l​a​n​e​j​a​m​e​n​t​o​ ​p​a​r​a​ ​o​ ​p​r​ó​x​i​m​o​ ​m​ê​s
+		 */
+		reserve: string
+		contribution: string
+		months: string
+		horizon: string
+		projected: string
+		goal: string
+		detailsDescription: string
+		/**
+		 * R​e​c​e​i​t​a​s​ ​e​ ​d​e​s​p​e​s​a​s
+		 */
+		chart: string
+		/**
+		 * E​v​o​l​u​ç​ã​o​ ​m​e​n​s​a​l​ ​·​ ​R​$
+		 */
+		chartDescription: string
+		/**
+		 * R​e​c​e​i​t​a
+		 */
+		revenue: string
+		/**
+		 * D​e​s​p​e​s​a​s
+		 */
+		expenses: string
+		/**
+		 * R​e​s​u​l​t​a​d​o
+		 */
+		profit: string
+		/**
+		 * e​m​ ​r​e​l​a​ç​ã​o​ ​a​ ​m​a​i​o
+		 */
+		comparison: string
+		/**
+		 * N​o​t​a​s​ ​f​i​n​a​n​c​e​i​r​a​s
+		 */
+		editor: string
+		/**
+		 * E​s​c​r​e​v​a​ ​u​m​a​ ​n​o​t​a​ ​f​i​n​a​n​c​e​i​r​a​.​.​.
+		 */
+		editorPlaceholder: string
+		/**
+		 * P​l​a​n​e​j​a​m​e​n​t​o
+		 */
+		details: string
+		/**
+		 * O​r​ç​a​m​e​n​t​o​ ​p​r​e​v​i​s​t​o
+		 */
+		budget: string
+		/**
+		 * R​e​f​e​r​ê​n​c​i​a
+		 */
+		phone: string
+		/**
+		 * F​o​r​m​a​t​a​ç​ã​o​ ​d​e​ ​t​e​x​t​o
+		 */
+		formatting: string
+		/**
+		 * N​e​g​r​i​t​o
+		 */
+		bold: string
+		/**
+		 * I​t​á​l​i​c​o
+		 */
+		italic: string
+		/**
+		 * T​a​c​h​a​d​o
+		 */
+		strike: string
+		/**
+		 * C​ó​d​i​g​o
+		 */
+		code: string
+		/**
+		 * L​e​g​e​n​d​a​ ​d​o​ ​g​r​á​f​i​c​o
+		 */
+		legend: string
+		/**
+		 * V​e​r​ ​d​a​d​o​s
+		 */
+		viewData: string
+		/**
+		 * O​c​u​l​t​a​r​ ​d​a​d​o​s
+		 */
+		hideData: string
+		/**
+		 * C​a​t​e​g​o​r​i​a
+		 */
+		category: string
+	}
 	home: {
 		/**
 		 * C​O​M​P​O​N​E​N​T​E​S​ ​P​A​R​A​ ​S​O​L​I​D​J​S
 		 */
 		eyebrow: string
 		/**
-		 * B​o​a​s​ ​i​d​e​i​a​s​ ​m​e​r​e​c​e​m​ ​i​n​t​e​r​f​a​c​e​s​ ​e​x​t​r​a​o​r​d​i​n​á​r​i​a​s​.
+		 * T​u​d​o​ ​p​a​r​a​ ​c​o​n​s​t​r​u​i​r​ ​i​n​t​e​r​f​a​c​e​s​ ​c​o​m​ ​S​o​l​i​d​J​S​.
 		 */
 		title: string
 		/**
-		 * C​o​m​p​o​n​e​n​t​e​s​ ​a​c​e​s​s​í​v​e​i​s​ ​e​ ​c​o​m​p​o​n​í​v​e​i​s​,​ ​c​o​m​ ​e​s​t​i​l​o​s​ ​q​u​e​ ​v​o​c​ê​ ​a​d​a​p​t​a​ ​a​o​ ​s​e​u​ ​p​r​o​j​e​t​o​.
+		 * D​e​ ​b​o​t​õ​e​s​ ​e​ ​f​o​r​m​u​l​á​r​i​o​s​ ​a​ ​t​a​b​e​l​a​s​,​ ​g​r​á​f​i​c​o​s​ ​e​ ​p​á​g​i​n​a​s​ ​c​o​m​p​l​e​t​a​s​:​ ​c​o​m​p​o​n​e​n​t​e​s​ ​a​c​e​s​s​í​v​e​i​s​,​ ​c​o​m​p​o​n​í​v​e​i​s​ ​e​ ​p​e​r​s​o​n​a​l​i​z​á​v​e​i​s​ ​p​a​r​a​ ​o​ ​s​e​u​ ​p​r​o​j​e​t​o​.
 		 */
 		description: string
 		/**
-		 * C​o​m​e​ç​a​r​ ​a​ ​u​s​a​r
+		 * C​o​m​e​ç​a​r
 		 */
 		start: string
 		/**
@@ -903,21 +1053,171 @@ export type TranslationFunctions = {
 		 */
 		githubTooltip: () => LocalizedString
 	}
+	footer: {
+		/**
+		 * Componentes para criar interfaces com SolidJS.
+		 */
+		description: () => LocalizedString
+		/**
+		 * Documentação
+		 */
+		documentation: () => LocalizedString
+		/**
+		 * Projeto
+		 */
+		project: () => LocalizedString
+		/**
+		 * Repositório no GitHub
+		 */
+		repository: () => LocalizedString
+		/**
+		 * Código aberto para construir juntos.
+		 */
+		openSource: () => LocalizedString
+		/**
+		 * New UI · Criado por EGCS
+		 */
+		credit: () => LocalizedString
+	}
+	homeShowcase: {
+		/**
+		 * Componentes em ação
+		 */
+		title: () => LocalizedString
+		/**
+		 * Explore algumas das peças que você pode combinar na sua interface.
+		 */
+		description: () => LocalizedString
+		/**
+		 * FEITO COM NEW UI
+		 */
+		eyebrow: () => LocalizedString
+		/**
+		 * Visão financeira
+		 */
+		workspace: () => LocalizedString
+		/**
+		 * Atualizado
+		 */
+		status: () => LocalizedString
+		/**
+		 * Janeiro — Junho
+		 */
+		period: () => LocalizedString
+		/**
+		 * Resumo para a equipe financeira
+		 */
+		editorDescription: () => LocalizedString
+		/**
+		 * A receita cresceu em junho. Vamos revisar os custos e definir o orçamento para o próximo mês.
+		 */
+		note: () => LocalizedString
+		/**
+		 * Planejamento para o próximo mês
+		 */
+		reserve: () => LocalizedString
+		contribution: () => LocalizedString
+		months: () => LocalizedString
+		horizon: () => LocalizedString
+		projected: () => LocalizedString
+		goal: () => LocalizedString
+		detailsDescription: () => LocalizedString
+		/**
+		 * Receitas e despesas
+		 */
+		chart: () => LocalizedString
+		/**
+		 * Evolução mensal · R$
+		 */
+		chartDescription: () => LocalizedString
+		/**
+		 * Receita
+		 */
+		revenue: () => LocalizedString
+		/**
+		 * Despesas
+		 */
+		expenses: () => LocalizedString
+		/**
+		 * Resultado
+		 */
+		profit: () => LocalizedString
+		/**
+		 * em relação a maio
+		 */
+		comparison: () => LocalizedString
+		/**
+		 * Notas financeiras
+		 */
+		editor: () => LocalizedString
+		/**
+		 * Escreva uma nota financeira...
+		 */
+		editorPlaceholder: () => LocalizedString
+		/**
+		 * Planejamento
+		 */
+		details: () => LocalizedString
+		/**
+		 * Orçamento previsto
+		 */
+		budget: () => LocalizedString
+		/**
+		 * Referência
+		 */
+		phone: () => LocalizedString
+		/**
+		 * Formatação de texto
+		 */
+		formatting: () => LocalizedString
+		/**
+		 * Negrito
+		 */
+		bold: () => LocalizedString
+		/**
+		 * Itálico
+		 */
+		italic: () => LocalizedString
+		/**
+		 * Tachado
+		 */
+		strike: () => LocalizedString
+		/**
+		 * Código
+		 */
+		code: () => LocalizedString
+		/**
+		 * Legenda do gráfico
+		 */
+		legend: () => LocalizedString
+		/**
+		 * Ver dados
+		 */
+		viewData: () => LocalizedString
+		/**
+		 * Ocultar dados
+		 */
+		hideData: () => LocalizedString
+		/**
+		 * Categoria
+		 */
+		category: () => LocalizedString
+	}
 	home: {
 		/**
 		 * COMPONENTES PARA SOLIDJS
 		 */
 		eyebrow: () => LocalizedString
 		/**
-		 * Boas ideias merecem interfaces extraordinárias.
+		 * Tudo para construir interfaces com SolidJS.
 		 */
 		title: () => LocalizedString
 		/**
-		 * Componentes acessíveis e componíveis, com estilos que você adapta ao seu projeto.
+		 * De botões e formulários a tabelas, gráficos e páginas completas: componentes acessíveis, componíveis e personalizáveis para o seu projeto.
 		 */
 		description: () => LocalizedString
 		/**
-		 * Começar a usar
+		 * Começar
 		 */
 		start: () => LocalizedString
 		/**

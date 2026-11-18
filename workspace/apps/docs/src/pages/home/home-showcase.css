@@ -1,0 +1,8 @@
+.home-showcase-editor .nui-rich-text-surface {
+  min-height: 5rem;
+}
+
+.home-showcase-chart > figure {
+  border: 0;
+  border-radius: 0;
+}

@@ -7,6 +7,7 @@
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
     "scripts/**/*.ts",
+    "stories/**/*.stories.tsx",
     "../../pkgs/ui/**/*.stories.tsx",
     "../../pkgs/ui/**/stories/**/*.d.ts",
     "playwright.config.ts",

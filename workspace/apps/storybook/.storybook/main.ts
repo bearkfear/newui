@@ -8,7 +8,7 @@ const sourceRoot = fileURLToPath(new URL("../../../pkgs/ui/", import.meta.url));
 
 const config: StorybookConfig = {
   framework: "storybook-solidjs-vite",
-  stories: ["../../../pkgs/ui/**/*.stories.tsx"],
+  stories: ["../../../pkgs/ui/**/*.stories.tsx", "../stories/**/*.stories.tsx"],
   staticDirs: ["../public"],
   addons: ["@storybook/addon-docs", "@storybook/addon-a11y", "@storybook/addon-links"],
   core: { disableTelemetry: true },

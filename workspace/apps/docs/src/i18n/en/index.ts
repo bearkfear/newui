@@ -1,4 +1,6 @@
 import type { Translation } from "../i18n-types";
+import { footer } from "./footer";
+import { homeShowcase } from "./home-showcase";
 
 const en: Translation = {
   navigation: {
@@ -21,10 +23,13 @@ const en: Translation = {
     github: "GitHub",
     githubTooltip: "Visit the repository on GitHub",
   },
+  footer,
+  homeShowcase,
   home: {
     eyebrow: "COMPONENTS FOR SOLIDJS",
-    title: "Great ideas deserve extraordinary interfaces.",
-    description: "Accessible, composable components with styles you can shape around your project.",
+    title: "Everything you need to build interfaces with SolidJS.",
+    description:
+      "From buttons and forms to tables, charts, and complete pages: accessible, composable, and customizable components for your project.",
     start: "Get started",
     catalog: "Explore components",
     proof: {
