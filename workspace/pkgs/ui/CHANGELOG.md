@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0
+
+### Added
+
+- Add CodeHighlight, powered by Prism, for syntax-colored code with optional title and copy action, reactive content, and light/dark themes.
+- Support plain text, Bash, CSS, HTML, JavaScript, JSON, TypeScript, JSX, and TSX. Include Storybook examples for theme configuration in TSX and CSS, dynamic content, scrolling, and mobile layouts.
+
+### Validation and limitations
+
+CodeHighlight was reviewed in Storybook. Dedicated automated interaction coverage has not been added; clipboard access depends on browser permissions and a secure context. Existing 0.x limitations below still apply.
+
 ## 0.3.0
 
 ### Added
