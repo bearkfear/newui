@@ -39,6 +39,8 @@ Forms / Select wraps Ark Select and reuses the text-control visual contract, rec
 
 Forms / ColorPicker wraps Ark ColorPicker and composes InputGroup for the hexadecimal channel. Its Content uses Overlays / OverlayPortal to preserve theme scope.
 
+Content / CodeHighlight uses Prism grammars for syntax tokens and composes Actions / Button for copying. It uses the native Clipboard API to report write failures, which the installed Ark Clipboard does not expose.
+
 Forms / Checkbox, CheckboxGroup, and RadioGroup wrap Ark's corresponding primitives. Shared choice support owns the visual recipe, group options context, and native reset adapter over the existing text-control reset binding. Checkbox consumes CheckboxGroup's lower-level context for unique item IDs and input registration; CheckboxGroup does not import Checkbox. Radio item input composition preserves readonly submission and Field descriptions without replacing Ark selection or navigation.
 
 Forms / Switch wraps Ark Switch and reuses choice options, the choice visual recipe, and the shared reset adapter. Its own CSS and passive-tone recipe own track geometry and checked/unchecked appearance; it imports no other component implementation. Native disabled fieldsets are styled through the input's `:disabled` state because the installed Ark Switch does not expose that state on its visual parts.

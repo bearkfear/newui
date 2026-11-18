@@ -18,6 +18,8 @@ export { Badge, BadgeGroup } from "./badge/badge";
 export type { CardRootProps } from "./card/card";
 export { Card } from "./card/card";
 export type { CardFooterProps } from "./card/card.parts";
+export type { CodeHighlightLanguage, CodeHighlightProps } from "./code-highlight/code-highlight";
+export { CodeHighlight } from "./code-highlight/code-highlight";
 export type { CollapsibleRootProps } from "./collapsible/collapsible";
 export { Collapsible } from "./collapsible/collapsible";
 export type {
