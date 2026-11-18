@@ -1,4 +1,4 @@
-import { Button, Dialog, RadioGroup, Text } from "@egcs/newui";
+import { Button, CodeHighlight, Dialog, RadioGroup, Text } from "@egcs/newui";
 import { createTheme } from "@egcs/newui/theme";
 import { createSignal } from "solid-js";
 import { useI18nContext } from "../../i18n/i18n-solid";
@@ -69,9 +69,7 @@ export function ThemeCode() {
               {status() === "copied" ? content().copied() : content().copy()}
             </Button>
           </div>
-          <pre class="m-0 max-h-96 overflow-auto rounded-xl border border-border bg-background p-5 text-sm">
-            <code>{code()}</code>
-          </pre>
+          <CodeHighlight language={format() === "typescript" ? "tsx" : "css"} code={code()} />
           <Text size="7" tone="muted" class="m-0" role="status">
             {status() === "error"
               ? content().copyError()

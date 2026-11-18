@@ -1,4 +1,4 @@
-import { Button, Heading, Text } from "@egcs/newui";
+import { Button, CodeHighlight, Heading, Text } from "@egcs/newui";
 import { createSignal } from "solid-js";
 import { useI18nContext } from "../../i18n/i18n-solid";
 import type { Locales } from "../../i18n/i18n-types";
@@ -34,7 +34,7 @@ export function GettingStartedPage(props: GettingStartedPageProps) {
         <Text tone="muted" class="m-0">
           {content().installDescription()}
         </Text>
-        <CodeBlock>{"bun add @egcs/newui solid-js"}</CodeBlock>
+        <CodeHighlight language="bash" code="bun add @egcs/newui solid-js" />
       </section>
 
       <section class="grid gap-5" aria-labelledby="styles-title">
@@ -48,7 +48,7 @@ export function GettingStartedPage(props: GettingStartedPageProps) {
           <Text tone="muted" class="m-0">
             {content().compiledDescription()}
           </Text>
-          <CodeBlock>{'import "@egcs/newui/styles.css";'}</CodeBlock>
+          <CodeHighlight language="javascript" code={'import "@egcs/newui/styles.css";'} />
         </div>
         <div class="grid gap-4 rounded-2xl border border-border bg-surface p-6">
           <Heading as="h3" size="5" class="m-0">
@@ -57,11 +57,12 @@ export function GettingStartedPage(props: GettingStartedPageProps) {
           <Text tone="muted" class="m-0">
             {content().tailwindDescription()}
           </Text>
-          <CodeBlock>
-            {
+          <CodeHighlight
+            language="css"
+            code={
               '@import "tailwindcss";\n@import "@egcs/newui/tailwind/preset.css";\n@import "@egcs/newui/tailwind/actions.css";'
             }
-          </CodeBlock>
+          />
         </div>
       </section>
 
@@ -72,11 +73,12 @@ export function GettingStartedPage(props: GettingStartedPageProps) {
         <Text tone="muted" class="m-0">
           {content().componentDescription()}
         </Text>
-        <CodeBlock>
-          {
+        <CodeHighlight
+          language="tsx"
+          code={
             'import { Button } from "@egcs/newui/actions";\n\nexport function SaveButton() {\n  return <Button>Save changes</Button>;\n}'
           }
-        </CodeBlock>
+        />
         <div class="grid gap-4 rounded-2xl border border-border bg-surface p-6">
           <Text size="7" tone="muted" class="m-0 font-medium uppercase tracking-wider">
             {content().preview()}
@@ -122,13 +124,5 @@ export function GettingStartedPage(props: GettingStartedPageProps) {
         </ul>
       </section>
     </article>
-  );
-}
-
-function CodeBlock(props: { children: string }) {
-  return (
-    <pre class="overflow-x-auto rounded-xl border border-border bg-background p-4 text-sm text-foreground">
-      <code>{props.children}</code>
-    </pre>
   );
 }
