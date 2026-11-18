@@ -18,6 +18,11 @@
       "!!references/_local",
       "!!patches",
       "!!pkgs/ui/foundations/radix.css",
+      "!!apps/docs/src/i18n/i18n-solid.ts",
+      "!!apps/docs/src/i18n/i18n-types.ts",
+      "!!apps/docs/src/i18n/i18n-util.ts",
+      "!!apps/docs/src/i18n/i18n-util.async.ts",
+      "!!apps/docs/src/i18n/i18n-util.sync.ts",
       "!!bun.lock"
     ]
   },
@@ -44,6 +49,7 @@
     "enabled": true,
     "rules": {
       "style": {
+        "noDefaultExport": "error",
         "noExcessiveLinesPerFile": {
           "level": "error",
           "options": {
@@ -80,5 +86,34 @@
       },
       "preset": "recommended"
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/*.stories.tsx",
+        "**/*-meta.tsx",
+        "apps/storybook/.storybook/**",
+        "apps/storybook/playwright.config.ts",
+        "apps/docs/src/routes/**",
+        "apps/docs/src/app.tsx",
+        "apps/docs/src/entry-server.tsx",
+        "apps/docs/vite.config.ts",
+        "apps/docs/postcss.config.mjs",
+        "apps/docs/src/i18n/en/index.ts",
+        "apps/docs/src/i18n/pt-BR/index.ts",
+        "apps/docs/src/i18n/i18n-util.sync.ts",
+        "apps/docs/src/i18n/i18n-util.async.ts",
+        "apps/docs/src/i18n/i18n-solid.ts",
+        "pkgs/ui/scripts/consumer-postcss.ts",
+        "**/*.d.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ]
 }

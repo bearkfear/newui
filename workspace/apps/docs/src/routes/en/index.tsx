@@ -1,5 +1,5 @@
-import { HomePage } from "../../theme/home-page";
+import { HomePage } from "../../pages/home/home-page";
 
 export default function EnglishIndexRoute() {
-  return <HomePage language="en" />;
+  return <HomePage locale="en" />;
 }

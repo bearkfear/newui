@@ -11,14 +11,14 @@ type AppearanceCopy = {
 
 type AppearanceControlProps = {
   mode: ColorMode;
-  copy: AppearanceCopy;
+  labels: AppearanceCopy;
   onModeChange: (mode: ColorMode) => void;
 };
 
 export function AppearanceControl(props: AppearanceControlProps) {
   return (
     <RadioGroup.Root
-      aria-label={props.copy.appearance}
+      aria-label={props.labels.appearance}
       class="w-[7.5rem]"
       size="sm"
       variant="segmented"
@@ -29,20 +29,20 @@ export function AppearanceControl(props: AppearanceControlProps) {
         }
       }}
     >
-      <RadioGroup.Item value="light" aria-label={props.copy.light}>
+      <RadioGroup.Item value="light" aria-label={props.labels.light}>
         <RadioGroup.ItemControl />
         <Sun class="size-4" aria-hidden="true" />
-        <RadioGroup.ItemText class="sr-only">{props.copy.light}</RadioGroup.ItemText>
+        <RadioGroup.ItemText class="sr-only">{props.labels.light}</RadioGroup.ItemText>
       </RadioGroup.Item>
-      <RadioGroup.Item value="dark" aria-label={props.copy.dark}>
+      <RadioGroup.Item value="dark" aria-label={props.labels.dark}>
         <RadioGroup.ItemControl />
         <Moon class="size-4" aria-hidden="true" />
-        <RadioGroup.ItemText class="sr-only">{props.copy.dark}</RadioGroup.ItemText>
+        <RadioGroup.ItemText class="sr-only">{props.labels.dark}</RadioGroup.ItemText>
       </RadioGroup.Item>
-      <RadioGroup.Item value="system" aria-label={props.copy.system}>
+      <RadioGroup.Item value="system" aria-label={props.labels.system}>
         <RadioGroup.ItemControl />
         <Monitor class="size-4" aria-hidden="true" />
-        <RadioGroup.ItemText class="sr-only">{props.copy.system}</RadioGroup.ItemText>
+        <RadioGroup.ItemText class="sr-only">{props.labels.system}</RadioGroup.ItemText>
       </RadioGroup.Item>
     </RadioGroup.Root>
   );

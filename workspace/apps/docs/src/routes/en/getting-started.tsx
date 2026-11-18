@@ -1,5 +1,5 @@
-import { GettingStartedPage } from "../../theme/getting-started-page";
+import { GettingStartedPage } from "../../pages/getting-started/getting-started-page";
 
 export default function EnglishGettingStartedRoute() {
-  return <GettingStartedPage language="en" />;
+  return <GettingStartedPage locale="en" />;
 }

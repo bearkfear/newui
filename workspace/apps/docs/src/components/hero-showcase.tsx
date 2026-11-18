@@ -1,49 +1,12 @@
 import { Badge, Button, Card, Heading, Text } from "@egcs/newui";
 import { ArrowUpRight, Check, Layers3, Sparkles } from "lucide-solid";
 import { createSignal } from "solid-js";
+import { useI18nContext } from "../i18n/i18n-solid";
 
-type HeroShowcaseProps = {
-  language: "en" | "pt";
-};
-
-export function HeroShowcase(props: HeroShowcaseProps) {
+export function HeroShowcase() {
   const [created, setCreated] = createSignal(false);
-  const copy = () =>
-    props.language === "en"
-      ? {
-          eyebrow: "A living component system",
-          workspace: "WORKSPACE / 01",
-          nav: "Components",
-          projects: "Projects",
-          settings: "Settings",
-          title: "A clearer way to build.",
-          description: "A thoughtful interface, assembled from newui.",
-          status: "All systems ready",
-          activity: "Interface blocks",
-          forms: "Forms",
-          navigation: "Navigation",
-          feedback: "Feedback",
-          action: "Create a project",
-          done: "Project created",
-          floating: "Accessible by design",
-        }
-      : {
-          eyebrow: "Um sistema vivo de componentes",
-          workspace: "WORKSPACE / 01",
-          nav: "Componentes",
-          projects: "Projetos",
-          settings: "Configurações",
-          title: "Uma forma mais clara de criar.",
-          description: "Uma interface cuidadosa, composta com newui.",
-          status: "Tudo pronto para começar",
-          activity: "Blocos de interface",
-          forms: "Formulários",
-          navigation: "Navegação",
-          feedback: "Feedback",
-          action: "Criar um projeto",
-          done: "Projeto criado",
-          floating: "Acessível por natureza",
-        };
+  const { LL } = useI18nContext();
+  const copy = LL().home.showcase;
 
   return (
     <div class="relative isolate mx-auto w-full max-w-2xl px-2 pb-8 sm:px-8 sm:pb-12">
@@ -60,7 +23,7 @@ export function HeroShowcase(props: HeroShowcaseProps) {
             </span>
             <div>
               <Text size="7" tone="muted" class="m-0 font-medium tracking-widest">
-                {copy().workspace}
+                {copy.workspace()}
               </Text>
               <Text size="6" class="m-0 font-semibold">
                 newui studio
@@ -69,7 +32,7 @@ export function HeroShowcase(props: HeroShowcaseProps) {
           </div>
           <Badge tone="success" variant="soft" rounded>
             <span class="mr-1.5 inline-block size-1.5 rounded-full bg-success" aria-hidden="true" />
-            {copy().status}
+            {copy.status()}
           </Badge>
         </div>
 
@@ -80,15 +43,15 @@ export function HeroShowcase(props: HeroShowcaseProps) {
             </Text>
             <div class="grid gap-1 text-sm">
               <span class="flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 font-medium text-primary">
-                <Layers3 size={15} aria-hidden="true" /> {copy().nav}
+                <Layers3 size={15} aria-hidden="true" /> {copy.nav()}
               </span>
-              <span class="px-3 py-2 text-muted-foreground">{copy().projects}</span>
-              <span class="px-3 py-2 text-muted-foreground">{copy().settings}</span>
+              <span class="px-3 py-2 text-muted-foreground">{copy.projects()}</span>
+              <span class="px-3 py-2 text-muted-foreground">{copy.settings()}</span>
             </div>
             <div class="mt-12 rounded-xl border border-border bg-background p-3">
               <Sparkles size={16} class="mb-3 text-primary" aria-hidden="true" />
               <Text size="7" tone="muted" class="m-0">
-                POWERED BY
+                {copy.poweredBy()}
               </Text>
               <Text size="6" class="mb-0 mt-1 font-semibold">
                 Solid + newui
@@ -100,13 +63,13 @@ export function HeroShowcase(props: HeroShowcaseProps) {
             <div class="flex items-center justify-between gap-3">
               <div>
                 <Text size="7" tone="muted" class="m-0 font-medium tracking-widest">
-                  {copy().eyebrow}
+                  {copy.eyebrow()}
                 </Text>
                 <Heading as="h2" size="5" class="mb-1 mt-2">
-                  {copy().title}
+                  {copy.title()}
                 </Heading>
                 <Text tone="muted" class="m-0">
-                  {copy().description}
+                  {copy.description()}
                 </Text>
               </div>
               <span class="hidden size-12 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary sm:grid">
@@ -117,16 +80,16 @@ export function HeroShowcase(props: HeroShowcaseProps) {
             <Card.Root class="rounded-2xl border-border bg-surface/70 p-4 sm:p-5">
               <div class="mb-4 flex items-center justify-between gap-2">
                 <Text size="6" class="m-0 font-semibold">
-                  {copy().activity}
+                  {copy.activity()}
                 </Text>
                 <Badge tone="primary" variant="outline" rounded>
                   newui
                 </Badge>
               </div>
               <div class="grid gap-2 sm:grid-cols-3">
-                <ShowcaseTile label={copy().forms} mark="01" />
-                <ShowcaseTile label={copy().navigation} mark="02" />
-                <ShowcaseTile label={copy().feedback} mark="03" />
+                <ShowcaseTile label={copy.forms()} mark="01" />
+                <ShowcaseTile label={copy.navigation()} mark="02" />
+                <ShowcaseTile label={copy.feedback()} mark="03" />
               </div>
               <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
                 <div class="flex -space-x-2" aria-hidden="true">
@@ -141,7 +104,7 @@ export function HeroShowcase(props: HeroShowcaseProps) {
                   </span>
                 </div>
                 <Button size="sm" endIcon={<ArrowUpRight />} onClick={() => setCreated(true)}>
-                  {created() ? copy().done : copy().action}
+                  {created() ? copy.done() : copy.action()}
                 </Button>
               </div>
             </Card.Root>
@@ -153,7 +116,7 @@ export function HeroShowcase(props: HeroShowcaseProps) {
         <span class="grid size-6 place-items-center rounded-full bg-success text-on-success">
           <Check size={14} aria-hidden="true" />
         </span>
-        {copy().floating}
+        {copy.floating()}
       </div>
     </div>
   );

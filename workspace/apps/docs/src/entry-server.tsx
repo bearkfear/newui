@@ -1,5 +1,5 @@
 import { createHandler, StartServer } from "@solidjs/start/server";
 
-import Document from "./document";
+import { Document } from "./document";
 
 export default createHandler(() => <StartServer document={Document} />);
