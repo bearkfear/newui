@@ -59,7 +59,7 @@
     },
     "pkgs/ui": {
       "name": "@egcs/newui",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "dependencies": {
         "@ark-ui/solid": "5.39.3",
         "@internationalized/date": "3.12.4",
