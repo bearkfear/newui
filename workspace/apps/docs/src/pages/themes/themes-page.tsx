@@ -177,14 +177,19 @@ function ThemeTabs() {
     <Tabs.List
       aria-label={LL().themesPage.configure()}
       style={{
+        "border-radius": "var(--nui-radius-xl)",
         "--nui-tabs-track": "var(--nui-primary-soft)",
         "--nui-tabs-hover": "var(--nui-primary-soft-hover)",
         "--nui-tabs-selected-bg": "var(--nui-primary)",
         "--nui-tabs-selected-fg": "var(--nui-on-primary)",
       }}
     >
-      <Tabs.Trigger value="basic">{LL().themesPage.basic()}</Tabs.Trigger>
-      <Tabs.Trigger value="advanced">{LL().themesPage.advanced()}</Tabs.Trigger>
+      <Tabs.Trigger value="basic" style={{ "border-radius": "var(--nui-radius-lg)" }}>
+        {LL().themesPage.basic()}
+      </Tabs.Trigger>
+      <Tabs.Trigger value="advanced" style={{ "border-radius": "var(--nui-radius-lg)" }}>
+        {LL().themesPage.advanced()}
+      </Tabs.Trigger>
     </Tabs.List>
   );
 }

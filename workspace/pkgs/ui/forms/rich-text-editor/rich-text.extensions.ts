@@ -1,6 +1,8 @@
 import CharacterCount from "@tiptap/extension-character-count";
+import Image from "@tiptap/extension-image";
 import Placeholder from "@tiptap/extension-placeholder";
 import StarterKit from "@tiptap/starter-kit";
+import { RichTextImageSize } from "./rich-text.image-size";
 
 export function createRichTextSchemaExtensions(): Extensions {
   return [
@@ -14,6 +16,16 @@ export function createRichTextSchemaExtensions(): Extensions {
       },
       trailingNode: false,
     }),
+    Image.configure({
+      allowBase64: true,
+      resize: {
+        enabled: true,
+        directions: ["bottom-right"],
+        minWidth: 24,
+        minHeight: 24,
+        alwaysPreserveAspectRatio: true,
+      },
+    }),
   ];
 }
 
@@ -23,6 +35,7 @@ export function createRichTextEditorExtensions(options: {
 }): Extensions {
   return [
     ...createRichTextSchemaExtensions(),
+    RichTextImageSize,
     Placeholder.configure({ placeholder: options.placeholder }),
     CharacterCount.configure({ limit: options.maxCharacters }),
   ];

@@ -60,6 +60,63 @@
     outline: 0;
     white-space: pre-wrap;
   }
+  .nui-rich-text-surface [data-resize-container] {
+    max-width: 100%;
+  }
+  .nui-rich-text-surface [data-resize-wrapper] {
+    max-width: 100%;
+  }
+  .nui-rich-text-surface [data-resize-handle] {
+    display: none;
+  }
+  .nui-rich-text-surface .ProseMirror-selectednode [data-resize-handle] {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: var(--nui-focus-ring);
+    cursor: nwse-resize;
+    transform: translate(50%, 50%);
+  }
+  .nui-rich-text-editor:is([data-readonly], [data-disabled]) [data-resize-handle] {
+    display: none;
+  }
+  .nui-rich-text-image-controls {
+    position: fixed;
+    z-index: 1000;
+    display: grid;
+    width: min(320px, calc(100vw - 16px));
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid var(--nui-border);
+    border-radius: var(--nui-radius-sm);
+    background: var(--nui-background);
+    color: var(--nui-foreground);
+    box-shadow: 0 4px 18px rgb(0 0 0 / 20%);
+    font: inherit;
+    font-size: var(--nui-font-size-xs);
+  }
+  .nui-rich-text-image-controls label {
+    display: grid;
+    gap: 0.25rem;
+  }
+  .nui-rich-text-image-controls input {
+    min-width: 0;
+    padding: 0.375rem;
+    border: 1px solid var(--nui-control-border);
+    border-radius: var(--nui-radius-sm);
+    background: var(--nui-background);
+    color: var(--nui-foreground);
+    font: inherit;
+  }
+  .nui-rich-text-image-controls input:focus-visible {
+    outline: 2px solid var(--nui-focus-ring);
+  }
+  .nui-rich-text-image-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
   .nui-rich-text-surface p.is-editor-empty:first-child::before {
     height: 0;
     float: left;
@@ -69,6 +126,10 @@
   }
   .nui-rich-text-surface :where(a) {
     cursor: pointer;
+  }
+  .nui-rich-text-surface img {
+    max-width: 100%;
+    height: auto;
   }
   .nui-rich-text-editor[data-disabled] .nui-rich-text-surface {
     color: var(--nui-disabled-foreground);

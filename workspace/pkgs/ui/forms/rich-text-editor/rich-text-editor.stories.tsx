@@ -10,6 +10,7 @@ import {
   RichTextStates,
   sampleDocument,
 } from "./rich-text-editor.examples";
+import { RichTextImageExample } from "./rich-text-editor.image-examples";
 
 const meta = {
   title: "Forms/Rich Text Editor",
@@ -75,3 +76,8 @@ export const Mobile: Story = {
   ...ControlledAndRepresentations,
   globals: { viewport: { value: "smallMobile", isRotated: false } },
 };
+
+export const EmbeddedImagePaste: Story = { render: () => <RichTextImageExample /> };
+export const UploadedImagePaste: Story = { render: () => <RichTextImageExample upload /> };
+
+export const ImageControls: Story = { render: () => <RichTextImageExample sample /> };

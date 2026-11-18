@@ -1,6 +1,7 @@
 import type { JSX } from "solid-js";
 import { Show, splitProps } from "solid-js";
 import { useRichTextEditor } from "./rich-text.context";
+import { RichTextImageControls } from "./rich-text-editor.image-controls";
 import { RichTextDefaultToolbar } from "./rich-text-editor.toolbar";
 
 /**
@@ -40,14 +41,17 @@ export function RichTextContent(props: RichTextContentProps) {
   const context = useRichTextEditor();
   const [local, rest] = splitProps(props, ["class", "ref"]);
   return (
-    <div
-      {...rest}
-      ref={(element) => {
-        context.registerContent(element);
-        if (typeof local.ref === "function") local.ref(element);
-      }}
-      class={["nui-rich-text-content", local.class].filter(Boolean).join(" ")}
-    />
+    <>
+      <div
+        {...rest}
+        ref={(element) => {
+          context.registerContent(element);
+          if (typeof local.ref === "function") local.ref(element);
+        }}
+        class={["nui-rich-text-content", local.class].filter(Boolean).join(" ")}
+      />
+      <RichTextImageControls />
+    </>
   );
 }
 

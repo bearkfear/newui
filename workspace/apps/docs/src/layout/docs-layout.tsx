@@ -1,7 +1,16 @@
 import { Container, Navbar } from "@egcs/newui";
 import { createColorMode } from "@egcs/newui/theme";
 import { A, useLocation, useNavigate } from "@solidjs/router";
-import { createMemo, createSignal, onCleanup, onMount, type ParentProps, Suspense } from "solid-js";
+import {
+  createEffect,
+  createMemo,
+  createSignal,
+  onCleanup,
+  onMount,
+  type ParentProps,
+  Show,
+  Suspense,
+} from "solid-js";
 import TypesafeI18n, { useI18nContext } from "../i18n/i18n-solid";
 import type { Locales } from "../i18n/i18n-types";
 import { getLocaleFromPath, getLocalizedPath } from "../lib/localized-path";
@@ -14,15 +23,23 @@ export function DocsLayout(props: ParentProps) {
   const navigate = useNavigate();
   const locale = createMemo(() => getLocaleFromPath(location.pathname));
 
+  createEffect(() => {
+    document.documentElement.lang = locale() === "en" ? "en-US" : "pt-BR";
+  });
+
   const changeLocale = (nextLocale: Locales) => {
     const path = getLocalizedPath(location.pathname, nextLocale);
     navigate(`${path}${window.location.search}${window.location.hash}`);
   };
 
   return (
-    <TypesafeI18n locale={locale()}>
-      <LayoutContent {...props} locale={locale} onLocaleChange={changeLocale} />
-    </TypesafeI18n>
+    <Show when={locale()} keyed>
+      {(currentLocale) => (
+        <TypesafeI18n locale={currentLocale}>
+          <LayoutContent {...props} locale={locale} onLocaleChange={changeLocale} />
+        </TypesafeI18n>
+      )}
+    </Show>
   );
 }
 

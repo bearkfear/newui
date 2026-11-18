@@ -83,6 +83,10 @@ export type RichTextEditorProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "onCh
     placeholder?: string;
     /** Maximum editable text size. */
     maxCharacters?: number;
+    /** Enable pasted image files: embed as data URLs or upload and return a persistent URL. */
+    imagePaste?: "embedded" | ((file: File) => Promise<string>);
+    /** Called when reading or uploading a pasted image fails. */
+    onImagePasteError?: (error: unknown, file: File) => void;
     /** Accessible required state; validation remains application-owned. */
     required?: boolean;
   };
