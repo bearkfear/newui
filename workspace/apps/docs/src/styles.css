@@ -13,3 +13,7 @@
 
 @source "./routes";
 @source "./theme";
+
+:root {
+  --nui-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}

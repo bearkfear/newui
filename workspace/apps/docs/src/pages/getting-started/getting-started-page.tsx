@@ -1,128 +1,120 @@
-import { Button, CodeHighlight, Heading, Text } from "@egcs/newui";
-import { createSignal } from "solid-js";
-import { useI18nContext } from "../../i18n/i18n-solid";
+import { Heading, Separator, Text, VerticalMenu } from "@egcs/newui";
+import { For, Match, Show, Switch } from "solid-js";
 import type { Locales } from "../../i18n/i18n-types";
+import { getLocalizedPath } from "../../lib/localized-path";
+import { FirstComponent, Installation, Overview, TailwindSetup } from "./getting-started-articles";
+import { type GuideCopy, type GuidePage, guideCopy, guidePages } from "./getting-started-content";
+import { GuideContents } from "./guide-contents";
+import { ThemeGuide } from "./theme-guide";
 
-type GettingStartedPageProps = {
-  locale: Locales;
-};
+function guidePath(page: GuidePage, locale: Locales) {
+  const path = page === "overview" ? "/getting-started/" : `/getting-started/${page}/`;
+  return getLocalizedPath(path, locale);
+}
 
-export function GettingStartedPage(props: GettingStartedPageProps) {
-  const [saved, setSaved] = createSignal(false);
-  const { LL } = useI18nContext();
-  const content = () => LL().gettingStarted;
-  const prefix = () => (props.locale === "en" ? "/en" : "");
+export function GettingStartedPage(props: { locale: Locales; page?: GuidePage }) {
+  const page = () => props.page ?? "overview";
+  const text = () => guideCopy[props.locale];
 
   return (
-    <article class="mx-auto grid max-w-3xl gap-10 py-8">
-      <header class="grid gap-4">
-        <Text size="7" tone="muted" class="m-0 font-medium uppercase tracking-widest">
-          newui · SolidJS
-        </Text>
-        <Heading as="h1" size="1" class="m-0 tracking-[-0.05em]">
-          {content().title()}
-        </Heading>
-        <Text size="4" tone="muted" class="m-0 max-w-2xl">
-          {content().description()}
-        </Text>
-      </header>
+    <div class="grid min-w-0 items-start gap-8 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-x-8 xl:grid-cols-[12rem_minmax(0,1fr)_12rem]">
+      <aside class="border-b border-border pb-4 lg:sticky lg:top-24 lg:col-start-1 lg:row-start-1 lg:row-span-2 xl:row-span-1 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
+        <VerticalMenu.Root aria-label={text().group} density="compact">
+          <VerticalMenu.Group>
+            <VerticalMenu.Label>{text().group}</VerticalMenu.Label>
+            <VerticalMenu.List>
+              <For each={guidePages}>
+                {(item) => (
+                  <VerticalMenu.Item>
+                    <VerticalMenu.Link
+                      href={guidePath(item, props.locale)}
+                      current={page() === item}
+                    >
+                      {text().pages[item].title}
+                    </VerticalMenu.Link>
+                  </VerticalMenu.Item>
+                )}
+              </For>
+            </VerticalMenu.List>
+          </VerticalMenu.Group>
+        </VerticalMenu.Root>
+      </aside>
 
-      <section class="grid gap-4" aria-labelledby="install-title">
-        <Heading as="h2" size="3" class="m-0" id="install-title">
-          {content().install()}
-        </Heading>
-        <Text tone="muted" class="m-0">
-          {content().installDescription()}
-        </Text>
-        <CodeHighlight language="bash" code="bun add @egcs/newui solid-js" />
-      </section>
+      <GuideContents page={page()} locale={props.locale} />
 
-      <section class="grid gap-5" aria-labelledby="styles-title">
-        <Heading as="h2" size="3" class="m-0" id="styles-title">
-          {content().styles()}
-        </Heading>
-        <div class="grid gap-4 rounded-2xl border border-border bg-surface p-6">
-          <Heading as="h3" size="5" class="m-0">
-            {content().compiled()}
+      <article class="grid min-w-0 max-w-3xl gap-8 lg:col-start-2 xl:row-start-1">
+        <header class="grid gap-3">
+          <Heading as="h1" size="2" class="m-0">
+            {text().pages[page()].title}
           </Heading>
-          <Text tone="muted" class="m-0">
-            {content().compiledDescription()}
+          <Text size="4" tone="muted" class="m-0">
+            {text().pages[page()].description}
           </Text>
-          <CodeHighlight language="javascript" code={'import "@egcs/newui/styles.css";'} />
-        </div>
-        <div class="grid gap-4 rounded-2xl border border-border bg-surface p-6">
-          <Heading as="h3" size="5" class="m-0">
-            {content().tailwind()}
-          </Heading>
-          <Text tone="muted" class="m-0">
-            {content().tailwindDescription()}
-          </Text>
-          <CodeHighlight
-            language="css"
-            code={
-              '@import "tailwindcss";\n@import "@egcs/newui/tailwind/preset.css";\n@import "@egcs/newui/tailwind/actions.css";'
-            }
-          />
-        </div>
-      </section>
+        </header>
+        <Separator decorative />
+        <Switch>
+          <Match when={page() === "overview"}>
+            <Overview
+              text={text()}
+              installHref={guidePath("installation", props.locale)}
+              tailwindHref={guidePath("tailwind", props.locale)}
+            />
+          </Match>
+          <Match when={page() === "installation"}>
+            <Installation text={text()} />
+          </Match>
+          <Match when={page() === "first-component"}>
+            <FirstComponent text={text()} />
+          </Match>
+          <Match when={page() === "themes-and-tokens"}>
+            <ThemeGuide locale={props.locale} text={text()} />
+          </Match>
+          <Match when={page() === "tailwind"}>
+            <TailwindSetup text={text()} />
+          </Match>
+        </Switch>
+        <GuidePagination page={page()} locale={props.locale} text={text()} />
+      </article>
+    </div>
+  );
+}
 
-      <section class="grid gap-4" aria-labelledby="component-title">
-        <Heading as="h2" size="3" class="m-0" id="component-title">
-          {content().component()}
-        </Heading>
-        <Text tone="muted" class="m-0">
-          {content().componentDescription()}
-        </Text>
-        <CodeHighlight
-          language="tsx"
-          code={
-            'import { Button } from "@egcs/newui/actions";\n\nexport function SaveButton() {\n  return <Button>Save changes</Button>;\n}'
-          }
-        />
-        <div class="grid gap-4 rounded-2xl border border-border bg-surface p-6">
-          <Text size="7" tone="muted" class="m-0 font-medium uppercase tracking-wider">
-            {content().preview()}
-          </Text>
-          <div class="flex flex-wrap gap-3">
-            <Button onClick={() => setSaved(true)}>
-              {saved() ? content().saved() : content().save()}
-            </Button>
-            <Button variant="outline">{content().cancel()}</Button>
-          </div>
-        </div>
-      </section>
-
-      <section class="grid gap-3 border-t border-border pt-8" aria-labelledby="next-title">
-        <Heading as="h2" size="4" class="m-0" id="next-title">
-          {content().next()}
-        </Heading>
-        <ul class="grid gap-2 pl-5 text-foreground">
-          <li>
-            <a
-              class="font-medium text-primary underline-offset-4 hover:underline"
-              href={`${prefix()}/components/`}
-            >
-              {content().links.components()}
-            </a>
-          </li>
-          <li>
-            <a
-              class="font-medium text-primary underline-offset-4 hover:underline"
-              href={`${prefix()}/themes/`}
-            >
-              {content().links.themes()}
-            </a>
-          </li>
-          <li>
-            <a
-              class="font-medium text-primary underline-offset-4 hover:underline"
-              href="https://github.com/bearkfear/newui/blob/main/workspace/pkgs/ui/getting-started/tailwind.md"
-            >
-              {content().links.tailwind()}
-            </a>
-          </li>
-        </ul>
-      </section>
-    </article>
+function GuidePagination(props: { page: GuidePage; locale: Locales; text: GuideCopy }) {
+  const index = () => guidePages.indexOf(props.page);
+  const links = () => [
+    { page: guidePages[index() - 1], label: props.text.previous, rel: "prev", class: "" },
+    {
+      page: guidePages[index() + 1],
+      label: props.text.next,
+      rel: "next",
+      class: "sm:col-start-2 sm:text-right",
+    },
+  ];
+  return (
+    <nav
+      aria-label={`${props.text.previous} / ${props.text.next}`}
+      class="grid gap-3 border-t border-border pt-6 sm:grid-cols-2"
+    >
+      <For each={links()}>
+        {(link) => (
+          <Show when={link.page}>
+            {(target) => (
+              <a
+                class={`grid gap-1 rounded-lg border border-border p-4 text-foreground no-underline hover:bg-surface ${link.class}`}
+                href={guidePath(target(), props.locale)}
+                rel={link.rel}
+              >
+                <Text as="span" size="7" tone="muted">
+                  {link.label}
+                </Text>
+                <Text as="span" class="font-medium">
+                  {props.text.pages[target()].title}
+                </Text>
+              </a>
+            )}
+          </Show>
+        )}
+      </For>
+    </nav>
   );
 }

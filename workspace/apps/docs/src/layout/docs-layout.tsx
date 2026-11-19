@@ -50,6 +50,8 @@ function LayoutContent(
     onLocaleChange: (locale: Locales) => void;
   }>,
 ) {
+  const location = useLocation();
+  const isHome = () => ["/", "/en", "/en/"].includes(location.pathname);
   const colorMode = createColorMode({ storageKey: "newui-docs-theme" });
   const { LL } = useI18nContext();
   const [scrolled, setScrolled] = createSignal(false);
@@ -66,8 +68,9 @@ function LayoutContent(
         class="flex min-h-screen flex-col bg-background text-foreground"
         style={{
           "background-color": "var(--nui-background)",
-          "background-image":
-            "radial-gradient(ellipse 85% 100% at 50% 0%, color-mix(in srgb, var(--nui-primary) 24%, transparent), transparent 100%)",
+          "background-image": isHome()
+            ? "radial-gradient(ellipse 85% 100% at 50% 0%, color-mix(in srgb, var(--nui-primary) 24%, transparent), transparent 100%)"
+            : "none",
           "background-size": "100% 720px",
           "background-repeat": "no-repeat",
         }}
@@ -122,28 +125,7 @@ function LayoutContent(
                 {LL().navigation.menu()}
               </Navbar.Toggle>
             </Navbar.Actions>
-            <Navbar.Content class="md:col-start-2 md:row-start-1">
-              <Navbar.List>
-                <Navbar.Item value="components">
-                  <Navbar.Link
-                    asChild={(linkProps) => (
-                      <A {...linkProps()} href={getLocalizedPath("/components/", props.locale())}>
-                        {LL().navigation.components()}
-                      </A>
-                    )}
-                  />
-                </Navbar.Item>
-                <Navbar.Item value="themes">
-                  <Navbar.Link
-                    asChild={(linkProps) => (
-                      <A {...linkProps()} href={getLocalizedPath("/themes/", props.locale())}>
-                        {LL().navigation.themes()}
-                      </A>
-                    )}
-                  />
-                </Navbar.Item>
-              </Navbar.List>
-            </Navbar.Content>
+            <DocsNavigation locale={props.locale()} />
           </Navbar.Root>
         </header>
         <main id="main-content" class="flex-1">
@@ -154,5 +136,43 @@ function LayoutContent(
         <DocsFooter locale={props.locale()} />
       </div>
     </ThemeSettingsProvider>
+  );
+}
+
+function DocsNavigation(props: { locale: Locales }) {
+  const { LL } = useI18nContext();
+
+  return (
+    <Navbar.Content class="md:col-start-2 md:row-start-1">
+      <Navbar.List>
+        <Navbar.Item value="getting-started">
+          <Navbar.Link
+            asChild={(linkProps) => (
+              <A {...linkProps()} href={getLocalizedPath("/getting-started/", props.locale)}>
+                {LL().navigation.getStarted()}
+              </A>
+            )}
+          />
+        </Navbar.Item>
+        <Navbar.Item value="components">
+          <Navbar.Link
+            asChild={(linkProps) => (
+              <A {...linkProps()} href={getLocalizedPath("/components/", props.locale)}>
+                {LL().navigation.components()}
+              </A>
+            )}
+          />
+        </Navbar.Item>
+        <Navbar.Item value="themes">
+          <Navbar.Link
+            asChild={(linkProps) => (
+              <A {...linkProps()} href={getLocalizedPath("/themes/", props.locale)}>
+                {LL().navigation.themes()}
+              </A>
+            )}
+          />
+        </Navbar.Item>
+      </Navbar.List>
+    </Navbar.Content>
   );
 }

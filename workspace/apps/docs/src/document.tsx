@@ -10,6 +10,12 @@ export function Document(props: DocumentComponentProps) {
     <html lang={language} data-nui-theme="system">
       <head>
         <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap"
+        />
         <script innerHTML={getColorModeScript({ storageKey: "newui-docs-theme" })} />
         {props.assets}
       </head>

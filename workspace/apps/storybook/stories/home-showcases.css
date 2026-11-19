@@ -3,3 +3,8 @@
 
 @source "../../docs/src/pages/home/button-playground.tsx";
 @source "../../docs/src/pages/home/home-next-steps.tsx";
+@source "../../docs/src/pages/getting-started/getting-started-page.tsx";
+@source "../../docs/src/pages/getting-started/getting-started-articles.tsx";
+@source "../../docs/src/pages/getting-started/theme-guide.tsx";
+@source "../../docs/src/pages/getting-started/token-reference.tsx";
+@source "../../docs/src/layout/page-contents.tsx";
