@@ -3,9 +3,13 @@
   "description": "SolidStart documentation application for the newui component library.",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
+    "build:vercel": "vite build --mode vercel",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "typesafe-i18n": "typesafe-i18n"
@@ -22,6 +26,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
+    "nitro": "3.0.261103-rc",
     "postcss": "8.5.33",
     "tailwindcss": "4.3.3",
     "vite-plugin-solid": "2.11.16"

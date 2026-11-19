@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "bun install --cwd ../.. --frozen-lockfile --ignore-scripts",
+  "buildCommand": "bun run --cwd ../../pkgs/ui build && bun run build:vercel"
+}
