@@ -112,7 +112,7 @@ export function Installation(props: { text: GuideCopy }) {
         <CodeHighlight
           {...copyLabels(props.text)}
           language="bash"
-          code="npx skills add egcs/newui --skill newui"
+          code="npx skills add bearkfear/newui --skill newui"
           copyable
         />
         <GuideParagraph text={props.text.agentSkillLocal} />

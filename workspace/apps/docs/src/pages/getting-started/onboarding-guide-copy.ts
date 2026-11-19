@@ -65,7 +65,7 @@ const onboardingCopy: Record<OnboardingLocale, OnboardingCopy> = {
       "Añade esta importación una sola vez en el punto de entrada de tu aplicación. En Solid con Vite suele ser `src/index.tsx`. En SolidStart, usa `src/app.tsx`.",
     agentSkill: "Skill para Claude Code y Codex",
     agentSkillInstall:
-      "Cuando la skill se publique en `egcs/newui`, ejecuta este comando desde la raíz de tu proyecto y selecciona Claude Code, Codex o ambos. Añade `-g` para usarla en todos tus proyectos.",
+      "Ejecuta este comando desde la raíz de tu proyecto y selecciona Claude Code, Codex o ambos. Añade `-g` para usar la skill en todos tus proyectos.",
     agentSkillLocal:
       "Si tienes una copia local del repositorio de NewUI que incluye la skill, instálala con `npx skills add /ruta/a/newui/workspace/skills/newui --skill newui`.",
     agentSkillExample:
@@ -119,7 +119,7 @@ const onboardingCopy: Record<OnboardingLocale, OnboardingCopy> = {
       "在应用入口文件中导入一次即可。使用 Vite 的 Solid 项目通常在 `src/index.tsx` 中导入；使用 SolidStart 时，请在 `src/app.tsx` 中导入。",
     agentSkill: "Claude Code 和 Codex 的 NewUI 技能",
     agentSkillInstall:
-      "技能发布到 `egcs/newui` 后，在项目根目录运行以下命令，选择 Claude Code、Codex 或同时选择两者。加上 `-g` 可在所有项目中使用。",
+      "在项目根目录运行以下命令，选择 Claude Code、Codex 或同时选择两者。加上 `-g` 可在所有项目中使用此技能。",
     agentSkillLocal:
       "如果你已在本地检出包含该技能的 NewUI 仓库，可以运行 `npx skills add /path/to/newui/workspace/skills/newui --skill newui` 进行安装。",
     agentSkillExample:
