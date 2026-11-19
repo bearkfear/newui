@@ -95,6 +95,17 @@ export function Installation(props: { text: GuideCopy }) {
           copyable
         />
       </GuideSection>
+      <GuideSection id="agent-skill" title={props.text.agentSkill}>
+        <GuideParagraph text={props.text.agentSkillInstall} />
+        <CodeHighlight
+          {...copyLabels(props.text)}
+          language="bash"
+          code="npx skills add egcs/newui --skill newui"
+          copyable
+        />
+        <GuideParagraph text={props.text.agentSkillLocal} />
+        <GuideParagraph text={props.text.agentSkillExample} />
+      </GuideSection>
     </>
   );
 }

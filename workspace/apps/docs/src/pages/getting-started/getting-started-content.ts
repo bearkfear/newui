@@ -55,6 +55,13 @@ export const guideCopy = {
     importStyles: "Importe o CSS",
     importInstructions:
       "Adicione este import uma vez no arquivo de entrada da aplicação. Em um projeto Solid com Vite, ele costuma ser `src/index.tsx`. No SolidStart, use `src/app.tsx`.",
+    agentSkill: "Skill para Claude Code e Codex",
+    agentSkillInstall:
+      "Quando a skill estiver publicada em `egcs/newui`, rode o comando na raiz do seu projeto e selecione Claude Code, Codex ou os dois. Para usar em todos os seus projetos, adicione `-g`.",
+    agentSkillLocal:
+      "Se você tem um checkout da NewUI que já contém a skill, instale a partir dele com `npx skills add /caminho/para/newui/workspace/skills/newui --skill newui`.",
+    agentSkillExample:
+      "A skill traz os imports, as partes principais e links para exemplos de cada componente. Depois de instalar, peça ao agente algo como “Use a skill NewUI para adicionar um menu de ações em cada linha da tabela”.",
     componentInstructions:
       "Depois da instalação e do import do CSS, use este exemplo em `src/App.tsx` ou copie o componente para uma rota da sua aplicação.",
     preview: "Prévia interativa",
@@ -115,6 +122,13 @@ export const guideCopy = {
     importStyles: "Import the CSS",
     importInstructions:
       "Add this import once in your application entry. In a Solid project with Vite, that is usually `src/index.tsx`. With SolidStart, use `src/app.tsx`.",
+    agentSkill: "Skill for Claude Code and Codex",
+    agentSkillInstall:
+      "Once the skill is published in `egcs/newui`, run this command from your project root and select Claude Code, Codex, or both. Add `-g` to make the skill available across your projects.",
+    agentSkillLocal:
+      "If you have a NewUI checkout that contains the skill, install it with `npx skills add /path/to/newui/workspace/skills/newui --skill newui`.",
+    agentSkillExample:
+      "The skill includes imports, component anatomy, and links to examples. After installation, ask your agent something like “Use the NewUI skill to add an actions menu to each row of this table.”",
     componentInstructions:
       "After installing the package and importing the CSS, use this example in `src/App.tsx` or copy the component into a route in your application.",
     preview: "Interactive preview",

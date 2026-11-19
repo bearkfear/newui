@@ -17,6 +17,7 @@ export function GuideContents(props: { page: GuidePage; locale: Locales }) {
         installation: [
           ["install-package", text().installPackage],
           ["import-styles", text().importStyles],
+          ["agent-skill", text().agentSkill],
         ],
         "first-component": [
           ["example", text().example],
