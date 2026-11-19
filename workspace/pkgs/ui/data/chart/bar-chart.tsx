@@ -21,6 +21,7 @@ export function BarChart<Datum>(props: BarChartProps<Datum>) {
     <ChartFrame
       {...rest}
       title={local.title}
+      labels={local.labels}
       description={local.description}
       height={local.height ?? 260}
       legend={seriesLegend(local.series)}

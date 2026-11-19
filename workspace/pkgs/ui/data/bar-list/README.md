@@ -27,7 +27,3 @@ The largest valid value defines full width. Optional positive finite `maxValue` 
 `valueFormat` defaults to grouped English numbers with up to two decimals. `tone` accepts primary (default), neutral, success, warning, danger, or info, either directly or through an accessor. Bars use Radix solid colors on neutral tracks, below the labels and values. Text retains the normal foreground color.
 
 Native figure attributes, events, styles, and refs target the outer figure. `class` is additive. Labels and values wrap on narrow screens. Bars have no animation or tab stops. Use external links or actions alongside this presentation when navigation is needed.
-
-## Storybook examples
-
-Data / Bar List includes default, reactive dashboard, shared-scale/tone, empty, fractional/zero/invalid, long-label, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override.

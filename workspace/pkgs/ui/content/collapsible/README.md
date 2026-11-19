@@ -30,9 +30,9 @@ Use Collapsible for one independent disclosure and Accordion for a coordinated g
 
 Content first mounts when opened, then stays mounted while hidden so its local state survives closing. Set unmountOnExit for deliberate removal. Advanced Ark collapsed-size props remain available; an indicator of collapsed content must not be the only way to access important information. Application state and requests remain outside the component.
 
-Radix surfaces, secondary text, native disabled behavior, and visible focus match Accordion. Shared CSS animates Ark's measured height and rotates the chevron. System/workshop reduced motion removes those effects. No animation library was added, and existing Ark Collapsible uses in navigation were not refactored.
+Radix surfaces, secondary text, native disabled behavior, and visible focus match Accordion. Shared CSS animates Ark's measured height and rotates the chevron. System or explicitly configured reduced motion removes those effects. No animation library was added, and existing Ark Collapsible uses in navigation were not refactored.
 
-Storybook: Content / Collapsible includes variants, initially open/closed states, native disabled behavior, controlled state, Button composition, growing content, dark theme, mobile, and reduced motion.
+
 
 ## References
 

@@ -21,7 +21,7 @@ Disabled controls use neutral step 3 backgrounds, step 6 borders, and step 8 tex
 
 Use Radix contrast guidance for solid steps 9 and 10 in both themes: Blue, Green, and Red use white text; Sky uses light Slate 12 and Amber uses light Sand 12, matching Radix Themes contrast tokens. Do not replace these mappings with an automatic black/white luminance heuristic. Neutral solid buttons intentionally use neutral 12/11 backgrounds and neutral 1 foreground. Evaluate accessibility in the context of actual text sizes and custom overrides.
 
-Keep the upstream MIT license in the distributed package. Storybook surfaces and manager colors must use the same Radix scales.
+Keep the upstream MIT license in the distributed package. Documentation surfaces must use the same Radix scales.
 
 ## Rationale
 

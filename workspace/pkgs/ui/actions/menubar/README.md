@@ -53,7 +53,3 @@ Tab enters at one enabled trigger. Left/Right move across enabled triggers with 
 The installed Ark version has no Menubar primitive. Its Navigation Menu was evaluated but owns website-link semantics, not command-menu interaction. Ark Menu's maintained multi-trigger API supplies the shared machine; the adapter adds only the menubar role, roving trigger tab stop, and horizontal coordination. Existing Ark nested Menu handles cascades. The adapter does not replace menu selection, positioning, focus within menus, or dismissal.
 
 The bar stays horizontal on small screens; keep top-level labels short. Floating panels and submenus use the shared menu's viewport constraints, so cascades may overlap their parent on narrow screens. Automatic/nested themes and disabled/destructive styling follow the shared [menu contract](../menu/README.md).
-
-## Storybook examples
-
-Storybook: Actions / Menubar includes File/Edit/View, disabled triggers/items, grouped commands, destructive actions, controlled opening, cascades, dark themes, and mobile.

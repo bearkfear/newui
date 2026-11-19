@@ -17,7 +17,7 @@ Checkbox wraps Ark UI Solid Checkbox. Ark owns selection, label associations, na
 
 Root renders a label and automatically includes Ark HiddenInput. Do not add another input or nest links, buttons, or labels inside Root. Label renders the associated text; with Field, use Checkbox.Label as the visible label instead of also rendering Field.Label.
 
-Use `checked` with `onCheckedChange`, or `defaultChecked` for uncontrolled selection. Values are `true`, `false`, or `"indeterminate"`; callbacks receive Ark details with `checked`. An indeterminate checkbox submits no value until checked. Select-all aggregation belongs to the application; see the CheckboxGroup story.
+Use `checked` with `onCheckedChange`, or `defaultChecked` for uncontrolled selection. Values are `true`, `false`, or `"indeterminate"`; callbacks receive Ark details with `checked`. An indeterminate checkbox submits no value until checked. Select-all aggregation belongs to the application.
 
 Control includes check and minus indicators. Its children can replace those defaults; Checkbox.Indicator exposes Ark's indicator for custom composition. Checkbox.Context exposes Ark's context.
 
@@ -27,8 +27,4 @@ Root accepts `size="sm" | "md" | "lg"`, semantic `tone`, `valid`, `invalid`, `di
 
 Space toggles a focused input. The visible control reflects keyboard focus. Themes, sizes, validation, reduced motion, and forced colors use shared foundations.
 
-## Storybook
-
-Forms / Checkbox includes default, controlled, indeterminate, disabled/readonly/validation states, sizes/tones, native submission/reset, dark, and mobile examples.
-
-FlowAlignment compares normal, grid and flex flow with multiline labels, inline text, font families and sizes, and real checked/unchecked/indeterminate transitions. Root aligns to the top of its line box so changes to indicator content do not move following content.
+Root aligns to the top of its line box so changes to indicator content do not move following content.

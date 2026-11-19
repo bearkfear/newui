@@ -7,7 +7,7 @@ export function RichTextUndo(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Undo"
+      label={props.label ?? "Undo"}
       icon={<Undo2 size={16} />}
       command={(editor) => editor.chain().focus().undo().run()}
     />
@@ -19,7 +19,7 @@ export function RichTextRedo(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Redo"
+      label={props.label ?? "Redo"}
       icon={<Redo2 size={16} />}
       command={(editor) => editor.chain().focus().redo().run()}
     />

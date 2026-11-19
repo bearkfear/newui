@@ -3,6 +3,7 @@ import { Editor } from "@tiptap/core";
 import { createEffect, createSignal, onCleanup, onMount, untrack } from "solid-js";
 import { bindTextControlReset } from "../text-control.reset";
 import { createRichTextEditorExtensions } from "./rich-text.extensions";
+import { createImagePasteExtension } from "./rich-text.image-paste";
 import type { ReturnTypeOfUseTextControl } from "./rich-text.internal-types";
 import { assertRichTextDocument } from "./rich-text.schema";
 import type {
@@ -67,10 +68,16 @@ function createEditor(
   const instance = new Editor({
     element,
     content: initial,
-    extensions: createRichTextEditorExtensions({
-      placeholder: props.placeholder ?? "Write something…",
-      maxCharacters: props.maxCharacters,
-    }),
+    extensions: [
+      ...createRichTextEditorExtensions({
+        placeholder: props.placeholder ?? "Write something…",
+        maxCharacters: props.maxCharacters,
+      }),
+      createImagePasteExtension(
+        () => props.imagePaste,
+        (error, file) => props.onImagePasteError?.(error, file),
+      ),
+    ],
     editable: !(props.disabled || props.readOnly),
     injectCSS: false,
     enableContentCheck: true,

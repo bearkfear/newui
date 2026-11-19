@@ -22,6 +22,8 @@ export function RichTextEditorRoot(props: RichTextEditorProps) {
     "submitValue",
     "placeholder",
     "maxCharacters",
+    "imagePaste",
+    "onImagePasteError",
     "required",
     "size",
     "tone",

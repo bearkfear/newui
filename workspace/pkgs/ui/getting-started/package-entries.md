@@ -46,7 +46,3 @@ The manifest exposes declaration files, JSX through the `solid` condition for th
 The build generates all entries together, preserves reachable implementation module boundaries through internal entries, and shares chunks within each condition. Main and area imports resolve to the same implementations and contexts when resolved under the same condition. Keep the generated internal files and chunks with the entry files; copying an entry alone is insufficient. JavaScript side-effect metadata continues to preserve CSS imports.
 
 The [consumer bundle report](bundle-sizes.md) compares named main/area imports, dependency elimination, and mixed Button bindings in both conditions. Component SSR/hydration has not been validated; workspace dependency patches are not inherited by consumers. Installing the package still installs all declared dependencies, including chart dependencies.
-
-## Storybook examples
-
-Open **Getting started / Package consumption** in Storybook for a profile form, mixed main/area button defaults, and a narrow viewport example. The catalog uses source area aggregators to keep development independent of the library build; consumer snippets show package imports.

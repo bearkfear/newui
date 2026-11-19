@@ -2,11 +2,13 @@
 
 ## Rule
 
-Run `bun run check` from `workspace/` before handing off implementation changes. This checks Biome linting, formatting, and strict TypeScript types for the library, stories, Storybook configuration, existing tests, and build scripts.
+Run `bun run check` from `workspace/` before handing off implementation changes. This checks Biome linting, formatting, and strict TypeScript types for the library, the documentation app, existing tests, and build scripts.
 
 Use Biome for formatting, import organization, and linting. Run `bun run format` to format and `bun run check:fix` for safe automatic fixes. Keep the configuration in `workspace/biome.json`.
 
-Keep supported source files within 250 lines and function bodies within 60 lines, counting blank lines. Keep cognitive complexity at 15 or lower. These are enforced Biome errors, including in stories and existing tests. Markdown conventions retain their separate 60-line limit.
+Use named exports in JavaScript, TypeScript, and TSX modules. Biome enforces this with `style/noDefaultExport`; keep exceptions limited to framework or tool entry points, generated files, and ambient module declarations that require a default export.
+
+Keep supported source files within 250 lines and function bodies within 60 lines, counting blank lines. Keep cognitive complexity at 15 or lower. These are enforced Biome errors, including in examples and existing tests. Markdown conventions retain their separate 60-line limit.
 
 Extract modules by responsibility and components by semantic purpose. Separate demos, configuration, and reusable helpers when needed. Do not compress code, introduce arbitrary numbered fragments, or add meaningless wrappers to evade limits.
 

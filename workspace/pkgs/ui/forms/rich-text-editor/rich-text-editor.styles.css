@@ -7,3 +7,5 @@
 @source "./rich-text-editor.root.tsx";
 @source "./rich-text-editor.action.tsx";
 @source "./rich-text-editor.link.tsx";
+
+@source "./rich-text-editor.image-controls.tsx";

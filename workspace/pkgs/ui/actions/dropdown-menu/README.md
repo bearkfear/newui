@@ -25,8 +25,8 @@ import "@egcs/newui/styles.css";
 
 Root, Trigger, Content, Item, Group, GroupLabel, Separator, SubRoot, and SubTrigger form the public API. Trigger styles Ark Menu.Trigger as a native button with restrained hover/open feedback and unboxed disabled text. Item and SubTrigger accept optional icons; no icon column is shown when none are supplied. Use Solid Ark's function-form `asChild` when composing Button or another native control, forwarding all provided props.
 
-Content includes the portal and positioning. Use `defaultOpen` for initial state, or `open` and `onOpenChange` for controlled state. Initial controls in Storybook apply when the example mounts. Root/item callbacks own actions; no application state is imposed.
+Content includes the portal and positioning. Use `defaultOpen` for initial state, or `open` and `onOpenChange` for controlled state. Root/item callbacks own actions; no application state is imposed.
 
-Compose SubRoot inside Content, then place SubTrigger and another Content inside it. Ark supplies right/left arrow navigation, pointer intent, and selection across levels. See the SubRoot example in Storybook source.
+Compose SubRoot inside Content, then place SubTrigger and another Content inside it. Ark supplies right/left arrow navigation, pointer intent, and selection across levels.
 
 See the [shared menu contract](../menu/README.md) for keyboard behavior, native/ARIA states, theme preservation, styling, and boundaries.

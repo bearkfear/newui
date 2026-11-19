@@ -25,7 +25,3 @@ Root is a nav named “Breadcrumb” by default; override `aria-label` or use `a
 Ark UI Solid has no Breadcrumb primitive in the installed catalog. This composition needs no interactive state machine: native navigation follows the [WAI-ARIA breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/). No alternate primitive is needed for static links and lists. Application routers own destination changes.
 
 Keep ancestors in hierarchical order and place one Page at the end. The same composition supports a single current item. There are no automatic menus, collapsing branches, size variants, or configurable separators. Parts forward native attributes, refs, events, and additive classes. Styles use shared Radix tokens and visible focus indicators.
-
-## Storybook examples
-
-Storybook includes default, dark/mobile, long labels, unbroken words, a single current item, and local navigation examples. Static examples link to actual Storybook destinations; the Navigation story keeps application state locally. The source snippet uses application paths.

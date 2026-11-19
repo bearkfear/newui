@@ -6,4 +6,4 @@ import type { RichTextActionProps } from "./rich-text-editor.action";
 export type PublicRichTextActionProps = Omit<
   RichTextActionProps,
   "label" | "icon" | "command" | "active"
->;
+> & { label?: string };

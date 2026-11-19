@@ -23,7 +23,3 @@ Zero sits at the center of a fixed −100% to +100% scale. Negative fills extend
 Positive values use success and negative values danger by default. `isPositiveGood={false}` reverses business impact colors without reversing direction. Zero and nonfinite values are neutral; nonfinite values show Unavailable with no fill. A screen-reader direction label accompanies the text. CSS geometry is decorative and never animated.
 
 Native figure attributes, events, styles, refs, and additive `class` target the outer figure. The visible caption labels the figure. Comparison labels and values wrap at narrow widths. Radix semantic tokens support automatic and nested themes.
-
-## Storybook examples
-
-Data / Delta Bar includes controls, favorable decreases, zero, unavailable, values beyond the visual bounds, custom formatting, and mobile examples. Every example follows the Storybook theme selector without a fixed theme override. A reactive dashboard is available under Data / Bar List.

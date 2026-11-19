@@ -37,8 +37,6 @@ submitValue="formatted" is the default; submitValue="raw" submits the canonical 
 
 Native required, incomplete/out-of-range validation, controlled/uncontrolled reset and reset cancellation follow NumberInput. Out-of-range amounts remain editable and fail native validity; they are not clamped. Readonly values remain submittable. Use onValueChange for accepted currency details. Native handlers are forwarded and cancellation is respected; normalized currency pastes and sign toggles do not dispatch synthetic input events.
 
-## Storybook review
+## Validation
 
-Open Forms / Currency Input: Default, Locales And Currencies, Entry Modes, Controlled, Composition, Precision And States, Native Submission And Reset, Helpers, Automatic Cents, Dark and Mobile. Review typing, real clipboard paste, selection replacement, empty/zero, sign toggling, undo/redo, initial/external values and configuration changes.
-
-Exploratory Chromium review covers automatic digit progression, backspace, selection-preserving sign toggles, undo, real clipboard amounts, rejected symbols/precision, reactive mode/locale/currency, large precise values, native submission/reset and composition without nested groups. No automated tests were added. Actual iPhone keyboards, IME and other browsers remain review items.
+Exploratory Chromium review covers automatic digit progression, backspace, selection-preserving sign toggles, undo, real clipboard amounts, rejected symbols/precision, reactive mode/locale/currency, large precise values, native submission/reset and composition without nested groups. Actual iPhone keyboards, IME and other browsers remain review items.

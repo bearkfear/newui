@@ -2,7 +2,7 @@
 
 [Contract](README.md) · [Upstream issues](upstream-issues.md)
 
-Exploratory inspection used Chromium 156.0.8078.4, the native clipboard shortcut, and the Storybook examples. Observed results below apply to this browser session, not all browsers or input methods.
+Exploratory inspection used Chromium 156.0.8078.4 and the native clipboard shortcut. Observed results below apply to this browser session, not all browsers or input methods.
 
 ## Long and mixed text
 
@@ -32,8 +32,6 @@ A canceled native reset also incorrectly restored the default: the capture liste
 
 IMask's undo shortcut could also modify a field after it became readonly. A small HTMLInputMaskElement adapter guards undo/redo using the current native readonly/disabled state, including disabled fieldsets. Inspection confirmed that readonly undo/redo preserved 987.654.321-00 and that unlocking restored access to the preceding 123.456.789-00 history entry. Consumer keyboard handlers remain in the normal event flow.
 
-## Reviewable example
-
-Forms / Masked Input / Paste And History offers clipboard buttons for 10,000 digits, long text, mixed Unicode, and overflow; an editable document field; a readonly toggle; reset; callback details; and an oversized initial value. Copying only populates the clipboard: paste into the desired position yourself.
+## Review limitations
 
 The mask filters characters in order; it does not identify which number in a paragraph is the intended document. Review extraction/validation policies in the consuming application. Firefox, Safari, mobile keyboards, and composition remain separate review work.

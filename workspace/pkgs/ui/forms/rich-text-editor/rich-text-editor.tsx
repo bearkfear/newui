@@ -7,6 +7,7 @@ import {
   RichTextOrderedList,
 } from "./rich-text-editor.block-actions";
 import { RichTextRedo, RichTextUndo } from "./rich-text-editor.history-actions";
+import { RichTextImageAlt } from "./rich-text-editor.image-alt";
 import {
   RichTextBold,
   RichTextCode,
@@ -42,6 +43,7 @@ export const RichTextEditor = {
   Strike: RichTextStrike,
   Code: RichTextCode,
   Link: RichTextLink,
+  ImageAlt: RichTextImageAlt,
   Heading: RichTextHeading,
   BulletList: RichTextBulletList,
   OrderedList: RichTextOrderedList,

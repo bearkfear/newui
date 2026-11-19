@@ -19,4 +19,4 @@ Use background for the app plane, surface for subtle grouping, and borders for s
 
 `--nui-header-gap` (0.125rem) controls compact title/description spacing across Card, Panel, Dialog, AlertDialog, Sheet, and Popover. It is independent of outer padding and body gaps.
 
-Review Foundations / Dimensions and Foundations / Customization. Local token overrides inherit into descendants and are copied into the existing themed overlay portals. Use direct CSS for application layout and media proportions; no Flex, Grid, Skeleton, or AspectRatio component is planned.
+Local token overrides inherit into descendants and are copied into the existing themed overlay portals. Use direct CSS for application layout and media proportions; no Flex, Grid, Skeleton, or AspectRatio component is planned.

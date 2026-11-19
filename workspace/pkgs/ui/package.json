@@ -153,6 +153,7 @@
     "@solid-primitives/media": "2.3.6",
     "@tiptap/core": "3.33.0",
     "@tiptap/extension-character-count": "3.33.0",
+    "@tiptap/extension-image": "3.33.0",
     "@tiptap/extension-placeholder": "3.33.0",
     "@tiptap/html": "3.33.0",
     "@tiptap/pm": "3.33.0",
@@ -180,9 +181,7 @@
     "babel-preset-solid": "1.9.16",
     "esbuild": "0.28.2",
     "postcss": "8.5.31",
-    "solid-js": "1.9.17",
-    "storybook": "10.6.1",
-    "storybook-solidjs-vite": "10.7.2",
+    "solid-js": "1.9.19",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3"
   },

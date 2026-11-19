@@ -25,12 +25,8 @@ Items generates page buttons and decorative ellipses. Below 640px it automatical
 
 Use `defaultPage` / `defaultPageSize` for initial state, or `page` / `pageSize` with `onPageChange` / `onPageSizeChange` for controlled state. Changing initial values after mount does not control state.
 
-Consumers own data loading, record slicing, status announcements, and page-size controls. Reset or clamp a controlled page when filtering records or changing page size. The Controlled Records story uses a labeled native select and a status summary; this is not a new Select component.
+Consumers own data loading, record slicing, status announcements, and page-size controls. Reset or clamp a controlled page when filtering records or changing page size.
 
 Pagination uses buttons for local page changes. Consumers can update application routing in `onPageChange`; generated URL links are outside this API.
 
 Compositions / Pages / Orders demonstrates a compact table footer: visible record range on the left, icon-only previous/next triggers on the right, and automatic page-summary presentation based on the panel's available width. Its layout uses application-owned container queries; the default standalone Pagination presentation remains unchanged. The footer omits navigation when one page contains all matching records.
-
-## Storybook examples
-
-Storybook covers ellipses, page boundaries, one-page and empty results, sizes, dark/mobile layouts, and a controlled record list with page-size selection. The Panel record-list demo reuses this footer, adapting its zero-based page state at the integration boundary. The shared footer labels its navigation and handles empty totals.

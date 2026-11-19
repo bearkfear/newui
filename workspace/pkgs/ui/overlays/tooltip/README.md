@@ -31,13 +31,13 @@ Public types: `TooltipRootProps`, `TooltipTriggerProps`, `TooltipContentProps`, 
 
 ## Visual contract
 
-The compact, inverse neutral surface uses Radix Slate 12 for its background and Slate 1 for text in both themes. It wraps long text within 20rem or the viewport width minus 2rem. Public tokens: `--nui-tooltip-background`, `--nui-tooltip-foreground`, `--nui-tooltip-shadow`, and `--nui-z-tooltip` (1100, above the default modal layer). The arrow follows the background token. Set overrides on a surrounding scope; the portal copies inherited tokens, typography, color scheme, and the workshop's reduced-motion preference. CSS also respects system reduced motion.
+The compact, inverse neutral surface uses Radix Slate 12 for its background and Slate 1 for text in both themes. It wraps long text within 20rem or the viewport width minus 2rem. Public tokens: `--nui-tooltip-background`, `--nui-tooltip-foreground`, `--nui-tooltip-shadow`, and `--nui-z-tooltip` (1100, above the default modal layer). The arrow follows the background token. Set overrides on a surrounding scope; the portal copies inherited tokens, typography, color scheme, and the configured reduced-motion preference. CSS also respects system reduced motion.
 
 ## Usage and review
 
 Keep content brief and noninteractive. Use Popover for controls or deliberate click/tap disclosure. Ark ignores touch hover events; essential information must remain available through visible content or another touch-friendly interaction. A native disabled button cannot receive focus: do not rely on its tooltip to explain a required action. Root `disabled` disables the hint, independently of the trigger's native disabled state.
 
-Storybook: Overlays / Tooltip includes controls for placement and delays, optional arrow, four preferred placements, disabled hints, controlled state, use within Dialog, nested light/dark themes, long text, small mobile viewport, and reduced motion. Check hover/focus opening, pointer movement onto the text, Escape dismissal, trigger clicks, edge repositioning, and theme inheritance. The Mobile story previews layout; it does not introduce a tap-to-open gesture.
+
 
 ## References
 

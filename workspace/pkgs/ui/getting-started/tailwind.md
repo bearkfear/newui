@@ -48,7 +48,3 @@ Existing Tailwind palettes, breakpoints, and unrelated utilities remain availabl
 The PostCSS plugin compiles the selected library graph separately, without Preflight or scanning application files, and inserts it before application overrides. The following Tailwind pass compiles application utilities normally. This preserves both `nui:px-4` and `px-4`, deduplicates shared library dependencies, and keeps a single application reset. Public CSS files select areas; they are not standalone browser stylesheets.
 
 Use plain imports in the entry stylesheet. Vite's CSS import pipeline is supported; for a direct PostCSS pipeline, keep selection imports at the root rather than inside another imported application file. Do not layer, prefix, or condition these selection imports. This implementation supports the documented PostCSS pipeline; Tailwind 3, CLI-only compilation, and the native Tailwind Vite plugin are not validated.
-
-## Storybook examples
-
-Run `bun run dev` from `workspace/` and open **Getting started / Tailwind preset** in Storybook. The example compiles selected library areas and application utilities in an isolated document, with interactive palette, spacing, radius, and appearance controls.

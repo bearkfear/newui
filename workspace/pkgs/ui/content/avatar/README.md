@@ -21,5 +21,3 @@ Public types: `AvatarRootProps`, `AvatarImageProps`, and `AvatarFallbackProps`.
 Name the root as an image so its identity remains available while loading or after an image error; the nested image can have empty alt text. If adjacent visible text already names the owner, the entire avatar can be aria-hidden instead. Avatar itself adds no button behavior or focus stop. Compose a native control when the avatar must perform an action.
 
 Root uses a fixed size and clips image content to its shape. Fallback is visible while loading, when no image is supplied, or after failure; it is hidden when the image loads. Keep fallback text short so it fits the selected size.
-
-Review Content / Avatar for image and initials, failure/recovery, shapes, sizes, and redundant-image semantics.

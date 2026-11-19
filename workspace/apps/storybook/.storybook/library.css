@@ -1,4 +1,0 @@
-@import "../../../pkgs/ui/foundations/styles.css";
-
-/* Catalog-only recipes stay outside the library's component style graph. */
-@source "../../../pkgs/ui/navigation/pagination/stories/record-footer.recipe.ts";

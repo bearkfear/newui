@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "@egcs/newui/tailwind/preset.css";
+@import "@egcs/newui/tailwind/actions.css";
+@import "@egcs/newui/tailwind/compositions.css";
+@import "@egcs/newui/tailwind/content.css";
+@import "@egcs/newui/tailwind/layout.css";
+@import "@egcs/newui/tailwind/navigation.css";
+@import "@egcs/newui/tailwind/overlays.css";
+@import "@egcs/newui/tailwind/feedback.css";
+@import "@egcs/newui/tailwind/forms.css";
+@import "@egcs/newui/tailwind/data.css";
+@import "@egcs/newui/tailwind/charts.css";
+
+@source "./routes";
+@source "./theme";
+
+:root {
+  --nui-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}

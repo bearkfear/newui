@@ -23,9 +23,8 @@ A horizontal progress bar powered by Ark UI Solid Progress. Ark owns value state
 
 The actual track has the progressbar role, named through Ark's label ID or an external aria-labelledby. Ark supplies min/max/current value; indeterminate work omits aria-valuenow. The wrapper adds formatted aria-valuetext. Visible value text uses aria-live off to avoid announcing every update; applications can announce important stages and completion through a separate persistent status region. Labels and values use steps 12 and 11 of the selected tone. Fill uses step 9 for colored tones and neutral text for neutral; `--nui-progress-track` defaults to Radix Slate 3.
 
-CSS transitions known-value changes and moves a partial range for indeterminate work. System/workshop reduced motion removes transitions and holds a static partial range rather than implying completion. Keep essential task context in text. Use Loading for a simple pending status and PageLoading for a page placeholder; these progress components support numeric work as well as unknown duration.
+CSS transitions known-value changes and moves a partial range for indeterminate work. System or explicitly configured reduced motion removes transitions and holds a static partial range rather than implying completion. Keep essential task context in text. Use Loading for a simple pending status and PageLoading for a page placeholder; these progress components support numeric work as well as unknown duration.
 
-Storybook: Feedback / Progress includes sizes, tones, zero/partial/complete/unknown states, hidden labels, value visibility, custom bounds/formatting, simulated upload controls, light/dark comparison, mobile, and reduced motion. Only the demo owns its timer.
 
 ## References
 

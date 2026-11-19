@@ -6,8 +6,6 @@
 
 Solid headers use the shared Radix solid/contrast mappings and scope title, description, and focus colors to their surface. Body colors stay independent.
 
-See Storybook's Solid Header Tones and Solid Headers Dark examples.
-
 A compact section for search, filters, lists, free-form content, and related actions.
 
 ```tsx
@@ -32,7 +30,7 @@ Root options: `tone` default or subtle. Root renders section; name it with a mat
 
 Toolbar accepts application controls. Link requires href and renders an anchor with hover, active, focus, and `aria-current="page"` styles. Item is a non-interactive li; put a native control or Link inside it. Lists have no action-menu or custom keyboard behavior. Footer wraps actions and supporting information on narrow screens.
 
-Filtering, current destinations, empty states, loading, and application state belong to the consumer. Storybook demonstrates search, an active-only filter, current-link state, and reset with local Solid signals. Its native search input is not a new public Input component.
+Filtering, current destinations, empty states, loading, and application state belong to the consumer.
 
 Root and parts forward native attributes, events, styles, refs, and additive classes. Surface and interaction colors follow existing Radix semantic tokens.
 
@@ -42,7 +40,7 @@ Import `@egcs/newui/styles.css` once. Review Compositions / Panel and Overview.
 
 Compose `Item > Row` with `ItemContent` and `ItemActions` for compact records with actions aligned on the right. ItemContent holds ItemTitle and ItemDescription. Rows wrap long text while keeping actions available; they are not links and do not receive hover/selection behavior. Give icon buttons contextual accessible names.
 
-Record List reproduces a subdued summary header, divided records, and a footer using the validated Ark-powered Pagination with a labeled native page-size select. Its rename, removal, undo, and zero-based pagination state belong to the demo; the integration adapts page numbers to Pagination's one-based API. The footer shares the compact record composition from the Pagination stories, including range summaries and empty totals. It does not introduce a public Select component.
+When using Pagination in a record list, adapt zero-based application state to Pagination's one-based API. A labeled native select can control page size.
 
 ## Compact file header
 

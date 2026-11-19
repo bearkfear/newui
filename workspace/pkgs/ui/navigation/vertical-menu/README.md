@@ -37,5 +37,3 @@ Root is nav, Group is div, Label is h2 size 6 by default, List/SubList are ul, I
 Always put Item and Branch directly inside List/SubList. A static nested hierarchy needs only Item plus SubList. Branch/BranchTrigger/BranchContent use Ark Collapsible for IDs, expanded state, controlled/uncontrolled state, and hidden content. Branch accepts open, defaultOpen, onOpenChange, disabled, lazyMount, and unmountOnExit. Disabled state is also applied to the native trigger. Branch refs target li; other part refs target their rendered elements.
 
 This is site navigation, not an ARIA action menu or tree view. Links keep native Tab/Shift+Tab behavior; triggers use Enter/Space. There is no arrow-key selection model, focus trapping, or automatic route inference. Applications own href values, current-page state, and routing. Native attributes, events, styles, and additive classes are forwarded.
-
-Review Navigation / Vertical menu for static nesting, expandable branches, controlled state, disabled behavior, density, mobile, and dark mode. Navigation / Overview synchronizes current-page state between the Navbar and VerticalMenu in a local example.

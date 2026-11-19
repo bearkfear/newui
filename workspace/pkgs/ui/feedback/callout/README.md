@@ -29,9 +29,9 @@ Public types: `CalloutRootProps`, `CalloutIconProps`, and `CalloutCloseButtonPro
 
 ## Behavior and accessibility
 
-Use the default without a live role for static guidance. Set `role="status"` for polite updates or `role="alert"` for important, time-sensitive messages. Prefer an already mounted live region when updating content; the Live Alert story keeps an alert region mounted before inserting its message. Do not assume that an alert present at initial page load will be announced. Alert semantics do not move focus. Use Alert Dialog when a workflow must be interrupted for confirmation.
+Use the default without a live role for static guidance. Set `role="status"` for polite updates or `role="alert"` for important, time-sensitive messages. Mount the live region before inserting its message. Do not assume that an alert present at initial page load will be announced. Alert semantics do not move focus. Use Alert Dialog when a workflow must be interrupted for confirmation.
 
-Ark's catalog was evaluated: Toast is for queued transient notifications and Collapsible for expandable content. Neither is needed for a static native message with an application-owned button. Callout adds no keyboard model, state machine, timer, portal, focus trap, or automatic dismissal. The Dismissible story restores focus to its application-owned Show notice button after removing the message; consumers choose an appropriate next focus target for their own page.
+Ark's catalog was evaluated: Toast is for queued transient notifications and Collapsible for expandable content. Neither is needed for a static native message with an application-owned button. Callout adds no keyboard model, state machine, timer, portal, focus trap, or automatic dismissal. When removing a focused message, move focus to a stable action in the application.
 
 Announcements, visibility, actions, errors, and retries remain application-owned. Avoid automatically removing important messages. A danger tone alone does not imply an assertive announcement. Use descriptive text rather than relying only on color or icon shape. The Actions example updates a persistent external status region after its simulated retry.
 
@@ -39,7 +39,6 @@ Announcements, visibility, actions, errors, and retries remain application-owned
 
 Surfaces use Radix step 3 and noninteractive borders step 6. Titles use step 12 of the selected tone for higher contrast; descriptions, icons, and links use step 11 of that same scale. Neutral maps to Slate rather than switching to pure black or white. Close-button hover/active backgrounds use steps 4/5; disabled controls use the shared neutral tokens. Both variants follow nested light/dark scopes, wrap long text, and keep icon/close controls separate from the flexible content column. There are no component animations.
 
-Storybook: Feedback / Callout includes all tones and variants, optional icon/title, actions with retry, dismiss/restore, a dynamic alert, structured content with links, theme comparison, long text, and mobile. These are reviewable demos without test assertions or play functions.
 
 ## References
 

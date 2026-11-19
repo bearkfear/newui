@@ -45,5 +45,3 @@ MenuContent accepts `layout="wide"` for grouped links and `align="end"` near the
 Opening defaults to click/tap, with pointer-leave closing disabled so cascades stay open. Top-level panels retain Ark navigation behavior. Cascading page-link disclosures use nonmodal Ark Popover and native Tab/Enter/Space/Escape interaction; they do not adopt ARIA action-menu semantics. Selecting a link closes its ancestor disclosures and the mobile navigation unless `onSelect` is canceled.
 
 Ark's Solid `asChild` uses a render function, rather than a boolean. Link forwards this prop for custom router elements. Applications own destinations, routing, and route-change focus. Class values are additive; use variants and tokens for reliable customization.
-
-Review Navigation / Navbar and Overview in Storybook.

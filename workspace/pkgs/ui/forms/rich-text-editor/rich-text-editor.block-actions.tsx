@@ -11,7 +11,7 @@ export function RichTextHeading(props: RichTextHeadingProps) {
   return (
     <RichTextAction
       {...props}
-      label={`Heading ${props.level}`}
+      label={props.label ?? `Heading ${props.level}`}
       icon={icon()}
       active={(editor) => editor.isActive("heading", { level: props.level })}
       command={(editor) => editor.chain().focus().toggleHeading({ level: props.level }).run()}
@@ -24,7 +24,7 @@ export function RichTextBulletList(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Bullet list"
+      label={props.label ?? "Bullet list"}
       icon={<List size={16} />}
       active={(editor) => editor.isActive("bulletList")}
       command={(editor) => editor.chain().focus().toggleBulletList().run()}
@@ -37,7 +37,7 @@ export function RichTextOrderedList(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Ordered list"
+      label={props.label ?? "Ordered list"}
       icon={<ListOrdered size={16} />}
       active={(editor) => editor.isActive("orderedList")}
       command={(editor) => editor.chain().focus().toggleOrderedList().run()}
@@ -50,7 +50,7 @@ export function RichTextBlockquote(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Blockquote"
+      label={props.label ?? "Blockquote"}
       icon={<Quote size={16} />}
       active={(editor) => editor.isActive("blockquote")}
       command={(editor) => editor.chain().focus().toggleBlockquote().run()}
@@ -63,7 +63,7 @@ export function RichTextCodeBlock(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Code block"
+      label={props.label ?? "Code block"}
       icon={<CodeXml size={16} />}
       active={(editor) => editor.isActive("codeBlock")}
       command={(editor) => editor.chain().focus().toggleCodeBlock().run()}
@@ -76,7 +76,7 @@ export function RichTextHorizontalRule(props: PublicRichTextActionProps) {
   return (
     <RichTextAction
       {...props}
-      label="Horizontal rule"
+      label={props.label ?? "Horizontal rule"}
       icon={<Minus size={16} />}
       command={(editor) => editor.chain().focus().setHorizontalRule().run()}
     />

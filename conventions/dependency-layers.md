@@ -2,7 +2,7 @@
 
 ## Rule
 
-Keep the library's local module dependencies acyclic, including type-only imports. Apply this rule to distributable implementation modules; stories, application examples, and build tooling consume the library but are not its implementation layers.
+Keep the library's local module dependencies acyclic, including type-only imports. Apply this rule to distributable implementation modules; documentation examples and build tooling consume the library but are not its implementation layers.
 
 Separate catalog areas from dependency layers. Actions, Forms, Content, Navigation, Overlays, Feedback, Data, and Layout may contain both independent and composed components. An area name does not authorize importing the whole area.
 

@@ -26,9 +26,10 @@ derived representations.
 
 The fixed schema supports paragraphs, headings 2–3, bold, italic, underline, strike, inline code,
 links, bullet and ordered lists, blockquotes, code blocks, hard breaks, and horizontal rules. The
-default Toolbar exposes the primary subset and can be replaced with composed action parts. Images,
-tables, embeds, colors, arbitrary fonts, mentions, Markdown, collaboration, and comments are not
+default Toolbar exposes the primary subset and can be replaced with composed action parts. Images are supported; tables, embeds, colors, arbitrary fonts, mentions, Markdown, collaboration, and comments are not
 part of this version.
+
+Formatting action parts accept `label` for localized accessible names and tooltips. Compose them inside Toolbar to provide translated controls.
 
 Root shares Field's size, tone, valid, invalid, loading, disabled, readonly, description, and label
 associations. Content is required and mounts the contenteditable surface. Toolbar buttons retain
@@ -51,7 +52,18 @@ inline styles may be removed or reduced to supported content. Rendering imported
 still requires an application-appropriate sanitization policy. The editor and helpers use the same
 fixed schema, so helper output can be opened by the component.
 
-## Storybook examples
+## Pasted images
 
-Forms / Rich Text Editor includes default, controlled representations, native submission/reset,
-legacy HTML helpers, states, empty, dark, and mobile examples.
+Set `imagePaste="embedded"` to store clipboard image files as data URLs in the document.
+Alternatively, pass `imagePaste={async (file) => uploadImage(file)}` to upload a file and return
+a persistent image URL. Image-file paste is disabled by default. HTML image elements are supported
+by the shared schema regardless of this setting. Applications must validate files and URLs and
+apply their own content security and sanitization policies. Embedded images can make JSON and
+HTML substantially larger; plain text does not contain images.
+
+A processing indicator marks the insertion position while reading or uploading. Errors are reported
+through `onImagePasteError(error, file)`; failed images are not inserted. Pasted images initially have empty alt text. Select an image to open controls next to it for alternative text, pixel width, and removal.
+Leave alternative text empty only for decorative images. Drag the lower-right handle to resize
+the selected image while preserving its proportions. Width and height are saved in the document.
+Custom toolbars may also include `RichTextEditor.ImageAlt`. When image files are present, they take precedence over other
+clipboard content. The selected text is preserved, and images are inserted after the selection.

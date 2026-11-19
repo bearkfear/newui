@@ -34,13 +34,15 @@ DonutChart accepts `value(datum)`, optional `tone(datum)`, and optional `valueLa
 
 `valueFormat` formats values in hover details, tables, Y axes, and the donut total; it defaults to grouped English numbers. XY charts also accept `axisFormat` for compact axis labels while keeping full values in tooltips and tables. Color defaults cycle through the five `--nui-chart-1` through `--nui-chart-5` tokens; explicit tones use the existing semantic solid tokens. Override palette tokens on the chart's native `style` or through CSS. Axis/grid/text colors use existing Radix semantic tokens, including system themes and nested light/dark scopes, without global body theme classes.
 
+Use `labels` to translate the legend, data disclosure and table labels. The title-dependent labels accept functions. Defaults remain in English.
+
 Each chart is a figure with a caption, visible legend, and keyboard-accessible View data disclosure containing a native Table. The decorative SVG is hidden from screen readers; the table supplies the data alternative. XY hover details list the category and all series, using DOM text nodes rather than interpolated HTML. The donut's legend and table supply category names and values. Tooltips stay inside the plot boundary; value tables scroll horizontally on narrow screens. Chart geometry and tooltip transitions are not animated, including for reduced-motion users.
 
 The initial chart entry is intended for client rendering. Server rendering/hydration has not been validated for the DOM-compiled upstream Solid adapter; it remains a separate distribution task. The main library entry retains its existing support scope. Both upstream packages use Apache-2.0 licensing and retain their own license files as external dependencies.
 
 ## Review and size
 
-Data / Charts includes a dashboard with reactive data, line/grouped bars/donut, empty and zero-total states, one-point lines, negative values, Resizable, dark, mobile, and nested themes.
+See the chart examples in the [official documentation](../../../../apps/docs/README.md).
 
 See [bundle measurements](bundle-size.md) for the reproducible build-size inspection. There are no runtime performance guarantees based solely on tree shaking.
 

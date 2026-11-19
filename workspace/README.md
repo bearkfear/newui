@@ -4,8 +4,8 @@ This directory contains the development environment, applications, library packa
 
 ## Structure
 
-- [UI package](pkgs/ui/README.md): components, recipes, foundations, utilities, documentation, and colocated stories.
-- [Storybook application](apps/storybook/README.md): the interactive component catalog.
+- [Official documentation](apps/docs/README.md): the SolidStart site and interactive component catalog built with `@egcs/newui`.
+- [UI package](pkgs/ui/README.md): components, recipes, foundations, utilities, and package usage notes.
 - [Philosophy](philosophy.md): purpose and organizational principles.
 - [Architecture](architecture.md): technical choices and implementation layers.
 - [Dependency map](dependencies.md): module layers, cross-area reuse, and distribution boundaries.
@@ -17,17 +17,17 @@ This directory contains the development environment, applications, library packa
 ## Commands
 
 Run these commands from `workspace/`:
-- `bun run dev` or `bun run storybook`: start Storybook at `http://localhost:6006`.
+- `bun run dev` or `bun run docs`: start the official documentation at `http://localhost:5173`. Build the library first in a fresh checkout.
 - `bun run check`: run Biome linting, formatting verification, and strict TypeScript checks.
 - `bun run check:fix`: apply safe Biome fixes and organize imports.
 - `bun run lint` / `bun run lint:fix`: lint without/with safe fixes.
 - `bun run format` / `bun run format:check`: write/check formatting.
-- `bun run typecheck`: check the UI package, stories, Storybook, existing tests, and build scripts.
+- `bun run typecheck`: check the UI package, docs app, and build scripts.
 - `bun run hooks:install`: install the pre-commit hook; `bun install` also runs this through `prepare`.
 - `bun run build`: build the UI package in `pkgs/ui/dist/`.
 - `bun run pack`: package the existing build and verify every public export target in `artifacts/newui-preview.tgz`.
-- `bun run test:storybook`: run browser checks for the catalog, interactions, and accessibility.
-- `bun run build:storybook`: generate the static catalog in `apps/storybook/storybook-static/`.
+- `bun run test:masking`: run mask helper regression checks.
+- `bun run build:docs`: build the documentation application.
 
 `package.json` coordinates the Bun workspaces; `tsconfig.base.json` shares compiler settings. Each application and package owns its manifest, configuration, and build output. GitHub's required workflow entry point lives in `.github/workflows/`; its commands and scripts live here.
 

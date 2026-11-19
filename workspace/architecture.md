@@ -13,11 +13,11 @@ newui is a SolidJS component library distributed as one npm package, `@egcs/newu
 - Lucide for Solid supplies interface icons; see [iconography](pkgs/ui/foundations/iconography.md).
 - Unovis supplies chart rendering; see [Charts](pkgs/ui/data/chart/README.md).
 - IMask supplies opt-in pattern masking and decimal editing; see [MaskedInput](pkgs/ui/forms/masked-input/README.md), [NumberInput](pkgs/ui/forms/number-input/README.md) and [CurrencyInput](pkgs/ui/forms/currency-input/README.md).
-- Storybook with SolidJS/Vite provides interactive documentation and component examples.
+- SolidStart serves the official documentation and interactive component examples.
 
 ## Repository and module layers
 
-Development lives in `workspace/`, with the catalog in `apps/storybook/` and the library in `pkgs/ui/`. Each owns its configuration and generated output; see [repository structure](../conventions/repository-structure.md).
+Development lives in `workspace/`, with the official documentation in `apps/docs/` and the library in `pkgs/ui/`. Each owns its configuration and generated output; see [repository structure](../conventions/repository-structure.md).
 
 The [dependency map](dependencies.md) documents module ownership and cross-area reuse. Catalog areas group components by use; they are not dependency layers. Implementations import specific owning modules, with acyclic runtime and type dependencies.
 1. **Foundations:** palettes, semantic tokens, shared metrics, themes, and utility mappings.

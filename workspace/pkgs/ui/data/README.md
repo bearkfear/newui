@@ -14,6 +14,6 @@ Browse, compare, and interpret structured information.
 
 ## Composition
 
-Table is presentational. Applications own sorting, filtering, selection, and pagination; see [application pages](../compositions/pages/README.md) for examples.
+Table is presentational. Applications own sorting, filtering, selection, and pagination.
 
 Charts include textual data alternatives and responsive examples. Generic Badge and Timeline belong to [Content](../content/README.md); BadgeDelta communicates numeric changes.
