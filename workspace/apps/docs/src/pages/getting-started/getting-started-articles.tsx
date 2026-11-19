@@ -1,5 +1,5 @@
 import { Badge, Button, Card, CodeHighlight, Heading, Tabs, Text } from "@egcs/newui";
-import { createSignal, For, type ParentProps } from "solid-js";
+import { createSignal, For, type ParentProps, Show } from "solid-js";
 import type { GuideCopy } from "./getting-started-content";
 import bunIcon from "./package-manager-icons/bun.svg";
 import npmIcon from "./package-manager-icons/npm.svg";
@@ -52,7 +52,12 @@ export function GuideParagraph(props: { text: string }) {
   );
 }
 
-export function Overview(props: { text: GuideCopy; installHref: string; tailwindHref: string }) {
+export function Overview(props: {
+  text: GuideCopy;
+  installHref: string;
+  tailwindHref: string;
+  otherGuides?: string | undefined;
+}) {
   return (
     <>
       <GuideSection id="prerequisites" title={props.text.prerequisites}>
@@ -75,6 +80,13 @@ export function Overview(props: { text: GuideCopy; installHref: string; tailwind
         <a class={linkClass} href={props.tailwindHref}>
           {props.text.pages.tailwind.title}
         </a>
+        <Show when={props.otherGuides}>
+          {(message) => (
+            <Text class="m-0" tone="muted">
+              {message()}
+            </Text>
+          )}
+        </Show>
       </GuideSection>
     </>
   );
@@ -100,7 +112,7 @@ export function Installation(props: { text: GuideCopy }) {
         <CodeHighlight
           {...copyLabels(props.text)}
           language="bash"
-          code="npx skills add egcs/newui --skill newui"
+          code="npx skills add bearkfear/newui --skill newui"
           copyable
         />
         <GuideParagraph text={props.text.agentSkillLocal} />

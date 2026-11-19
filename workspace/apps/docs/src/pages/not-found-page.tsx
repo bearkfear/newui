@@ -1,11 +1,11 @@
 import { Heading, Text } from "@egcs/newui";
 import { A } from "@solidjs/router";
 import { HttpStatusCode } from "@solidjs/start";
-import type { Locales } from "../i18n/i18n-types";
+import type { DocsLocale } from "../i18n/docs-locales";
 import { missingPageMetadata } from "../i18n/page-metadata";
-import { getLocalizedPath } from "../lib/localized-path";
+import { getLanguageSwitchPath } from "../lib/localized-path";
 
-export function NotFoundPage(props: { locale: Locales }) {
+export function NotFoundPage(props: { locale: DocsLocale }) {
   const text = () => missingPageMetadata[props.locale];
 
   return (
@@ -19,7 +19,7 @@ export function NotFoundPage(props: { locale: Locales }) {
       </Text>
       <A
         class="w-fit font-medium text-primary underline underline-offset-4"
-        href={getLocalizedPath("/", props.locale)}
+        href={getLanguageSwitchPath("/", props.locale)}
       >
         {text().action}
       </A>

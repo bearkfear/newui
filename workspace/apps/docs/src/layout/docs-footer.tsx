@@ -1,10 +1,10 @@
 import { Footer, Heading, Text } from "@egcs/newui";
-import { useI18nContext } from "../i18n/i18n-solid";
-import type { Locales } from "../i18n/i18n-types";
+import type { DocsLocale } from "../i18n/docs-locales";
+import { getShellCopy } from "../i18n/onboarding-shell-copy";
 import { getLocalizedPath } from "../lib/localized-path";
 
-export function DocsFooter(props: { locale: Locales }) {
-  const { LL } = useI18nContext();
+export function DocsFooter(props: { locale: DocsLocale }) {
+  const text = () => getShellCopy(props.locale);
 
   return (
     <Footer.Root tone="subtle">
@@ -14,33 +14,33 @@ export function DocsFooter(props: { locale: Locales }) {
             newui<span class="text-primary">.</span>
           </Heading>
           <Text tone="muted" class="m-0 max-w-xs">
-            {LL().footer.description()}
+            {text().footer.description}
           </Text>
         </Footer.Brand>
         <Footer.Links>
-          <Footer.Group aria-label={LL().footer.documentation()}>
-            <Footer.Title class="m-0">{LL().footer.documentation()}</Footer.Title>
+          <Footer.Group aria-label={text().footer.documentation}>
+            <Footer.Title class="m-0">{text().footer.documentation}</Footer.Title>
             <Footer.Link href={getLocalizedPath("/getting-started/", props.locale)}>
-              {LL().navigation.getStarted()}
+              {text().navigation.getStarted}
             </Footer.Link>
             <Footer.Link href={getLocalizedPath("/components/", props.locale)}>
-              {LL().navigation.components()}
+              {text().navigation.components}
             </Footer.Link>
             <Footer.Link href={getLocalizedPath("/themes/", props.locale)}>
-              {LL().navigation.themes()}
+              {text().navigation.themes}
             </Footer.Link>
           </Footer.Group>
-          <Footer.Group aria-label={LL().footer.project()}>
-            <Footer.Title class="m-0">{LL().footer.project()}</Footer.Title>
+          <Footer.Group aria-label={text().footer.project}>
+            <Footer.Title class="m-0">{text().footer.project}</Footer.Title>
             <Footer.Link href="https://github.com/bearkfear/newui">
-              {LL().footer.repository()} <span aria-hidden="true">↗</span>
+              {text().footer.repository} <span aria-hidden="true">↗</span>
             </Footer.Link>
           </Footer.Group>
         </Footer.Links>
       </Footer.Content>
       <Footer.Meta>
-        <span>{LL().footer.openSource()}</span>
-        <span>{LL().footer.credit()}</span>
+        <span>{text().footer.openSource}</span>
+        <span>{text().footer.credit}</span>
       </Footer.Meta>
     </Footer.Root>
   );

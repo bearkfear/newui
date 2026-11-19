@@ -1,26 +1,26 @@
-import type { Locales } from "../i18n/i18n-types";
+import { type DocsLocale, docsLocaleOptions } from "../i18n/docs-locales";
 import { type IndexablePath, indexablePages, missingPageMetadata } from "../i18n/page-metadata";
-import { getLocaleFromPath, getLocalizedPath } from "./localized-path";
+import { getCanonicalPath, getLocaleFromPath, getLocalizedPath } from "./localized-path";
 
 export const siteName = "NewUI";
-export const locales = ["pt-BR", "en"] as const satisfies readonly Locales[];
-export const ogLocales = { "pt-BR": "pt_BR", en: "en_US" };
+export function pageLocales(path: string) {
+  return docsLocaleOptions.filter(({ value }) => indexablePages[path]?.[value]);
+}
 
 export function siteOrigin(requestUrl: string) {
   return new URL(import.meta.env["VITE_DOCS_SITE_URL"] || requestUrl).origin;
 }
 
-export function pageUrl(path: string, locale: Locales, origin: string) {
+export function pageUrl(path: string, locale: DocsLocale, origin: string) {
   return new URL(getLocalizedPath(path, locale), origin).href;
 }
 
 export function resolvePageMetadata(pathname: string) {
   const locale = getLocaleFromPath(pathname);
-  const base = getLocalizedPath(pathname, "pt-BR");
-  const normalized = `${base.replace(/\/+$/, "")}/`;
-  const indexed = indexablePages[normalized];
+  const normalized = getCanonicalPath(pathname);
+  const indexed = indexablePages[normalized]?.[locale];
   const path = indexed ? (normalized as IndexablePath) : undefined;
-  const entry = indexed?.[locale] ?? missingPageMetadata[locale];
+  const entry = indexed ?? missingPageMetadata[locale];
 
   return {
     path,
@@ -30,7 +30,7 @@ export function resolvePageMetadata(pathname: string) {
   };
 }
 
-export function breadcrumbs(path: IndexablePath, locale: Locales, origin: string) {
+export function breadcrumbs(path: IndexablePath, locale: DocsLocale, origin: string) {
   const paths: IndexablePath[] = ["/"];
   if (path.startsWith("/getting-started/") && path !== "/getting-started/")
     paths.push("/getting-started/");
@@ -42,7 +42,7 @@ export function breadcrumbs(path: IndexablePath, locale: Locales, origin: string
     itemListElement: paths.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: item === "/" ? siteName : (indexablePages[item]?.[locale].title ?? siteName),
+      name: item === "/" ? siteName : (indexablePages[item]?.[locale]?.title ?? siteName),
       item: pageUrl(item, locale, origin),
     })),
   };

@@ -1,20 +1,21 @@
 import { Heading, Separator, Text, VerticalMenu } from "@egcs/newui";
 import { For, Match, Show, Switch } from "solid-js";
-import type { Locales } from "../../i18n/i18n-types";
+import { type DocsLocale, getFullLocale } from "../../i18n/docs-locales";
 import { getLocalizedPath } from "../../lib/localized-path";
 import { FirstComponent, Installation, Overview, TailwindSetup } from "./getting-started-articles";
-import { type GuideCopy, type GuidePage, guideCopy, guidePages } from "./getting-started-content";
+import { type GuideCopy, type GuidePage, guidePages } from "./getting-started-content";
 import { GuideContents } from "./guide-contents";
+import { getGuideCopy } from "./onboarding-guide-copy";
 import { ThemeGuide } from "./theme-guide";
 
-function guidePath(page: GuidePage, locale: Locales) {
+function guidePath(page: GuidePage, locale: DocsLocale) {
   const path = page === "overview" ? "/getting-started/" : `/getting-started/${page}/`;
   return getLocalizedPath(path, locale);
 }
 
-export function GettingStartedPage(props: { locale: Locales; page?: GuidePage }) {
+export function GettingStartedPage(props: { locale: DocsLocale; page?: GuidePage }) {
   const page = () => props.page ?? "overview";
-  const text = () => guideCopy[props.locale];
+  const text = () => getGuideCopy(props.locale);
 
   return (
     <div class="grid min-w-0 items-start gap-8 lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-x-8 xl:grid-cols-[12rem_minmax(0,1fr)_12rem]">
@@ -58,6 +59,7 @@ export function GettingStartedPage(props: { locale: Locales; page?: GuidePage })
               text={text()}
               installHref={guidePath("installation", props.locale)}
               tailwindHref={guidePath("tailwind", props.locale)}
+              otherGuides={text().otherGuides}
             />
           </Match>
           <Match when={page() === "installation"}>
@@ -67,7 +69,7 @@ export function GettingStartedPage(props: { locale: Locales; page?: GuidePage })
             <FirstComponent text={text()} />
           </Match>
           <Match when={page() === "themes-and-tokens"}>
-            <ThemeGuide locale={props.locale} text={text()} />
+            <ThemeGuide locale={getFullLocale(props.locale)} text={text()} />
           </Match>
           <Match when={page() === "tailwind"}>
             <TailwindSetup text={text()} />
@@ -79,7 +81,7 @@ export function GettingStartedPage(props: { locale: Locales; page?: GuidePage })
   );
 }
 
-function GuidePagination(props: { page: GuidePage; locale: Locales; text: GuideCopy }) {
+function GuidePagination(props: { page: GuidePage; locale: DocsLocale; text: GuideCopy }) {
   const index = () => guidePages.indexOf(props.page);
   const links = () => [
     { page: guidePages[index() - 1], label: props.text.previous, rel: "prev", class: "" },

@@ -16,7 +16,7 @@ Run these from `workspace/`. Build the library with `bun run build` before start
 
 Add reviewable UI examples under `src/pages/components/`, using the published NewUI entry points and the existing example and API reference components.
 
-The Portuguese pages use the root paths; English pages live under `/en/`. Keep route files thin: they choose the locale and render the matching page.
+The Portuguese pages use the root paths and English pages live under `/en/`. The getting-started overview, installation, and first-component guides also live under `/es/` and `/zh-cn/`. Links to guides outside that translated subset open their English versions. Keep route files thin so they choose the locale and render the matching page.
 
 ## Deploy to Vercel
 

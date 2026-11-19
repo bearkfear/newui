@@ -1,10 +1,12 @@
 import { getColorModeScript } from "@egcs/newui/theme";
 import type { DocumentComponentProps } from "@solidjs/start/server";
 import { getRequestEvent } from "solid-js/web";
+import { getLocaleOption } from "./i18n/docs-locales";
+import { getLocaleFromPath } from "./lib/localized-path";
 
 export function Document(props: DocumentComponentProps) {
   const path = new URL(getRequestEvent()?.request.url ?? "http://localhost/").pathname;
-  const language = path.startsWith("/en/") || path === "/en" ? "en-US" : "pt-BR";
+  const language = getLocaleOption(getLocaleFromPath(path)).htmlLang;
 
   return (
     <html lang={language} data-nui-theme="system">

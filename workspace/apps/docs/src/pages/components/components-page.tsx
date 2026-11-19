@@ -23,7 +23,7 @@ export function ComponentsPage(props: { locale: Locales }) {
   const text = () => labels[props.locale];
 
   return (
-    <div class="grid min-w-0 items-start gap-8 text-left lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-x-12">
+    <div class="grid min-w-0 items-start gap-8 text-left lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-x-12">
       <CatalogNavigation locale={props.locale} label={text().navigation} />
       <article class="grid min-w-0 gap-8">
         <header class="grid max-w-2xl gap-3">

@@ -23,7 +23,7 @@ export function ComponentDocPage(
   }>,
 ) {
   return (
-    <div class="grid min-w-0 items-start gap-8 text-left lg:grid-cols-[12rem_minmax(0,1fr)] lg:gap-x-8 xl:grid-cols-[12rem_minmax(0,1fr)_12rem]">
+    <div class="grid min-w-0 items-start gap-8 text-left lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-x-8 xl:grid-cols-[14rem_minmax(0,1fr)_12rem]">
       <CatalogNavigation
         locale={props.locale}
         label={props.text.navigation}

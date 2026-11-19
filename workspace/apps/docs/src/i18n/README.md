@@ -6,6 +6,6 @@ When adding or changing a message:
 1. Update the base locale in `pt-BR/index.ts` first.
 2. Add the matching translation in `en/index.ts`; the generated types enforce key and parameter parity.
 3. Run `bun run typesafe-i18n --no-watch` from `apps/docs` to regenerate the Solid adapter and translation types.
-4. Resolve the locale from the URL. Portuguese uses the root path and English uses `/en/`; do not use a process-wide mutable locale for SSR.
+4. Resolve the locale from the URL. Portuguese uses the root path and English uses `/en/`. Spanish (`/es/`) and Simplified Chinese (`/zh-cn/`) translate the onboarding guides and the shared shell through `onboarding-shell-copy.ts` and `pages/getting-started/onboarding-guide-copy.ts`. Keep locale resolution request-scoped for SSR.
 
 Use `Intl` formatters with an explicit locale for dates, numbers, and currency. Keep source content and route slugs separate from translated UI labels unless a route is intentionally localized.
