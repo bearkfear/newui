@@ -18,6 +18,7 @@ import { ThemeSettingsProvider } from "../lib/theme-settings";
 import { AppearanceControl } from "./appearance-control";
 import { DocsFooter } from "./docs-footer";
 import { LanguageSelect } from "./language-select";
+import { PageHead } from "./page-head";
 
 export function DocsLayout(props: ParentProps) {
   const location = useLocation();
@@ -34,13 +35,16 @@ export function DocsLayout(props: ParentProps) {
   };
 
   return (
-    <Show when={locale()} keyed>
-      {(currentLocale) => (
-        <TypesafeI18n locale={currentLocale}>
-          <LayoutContent {...props} locale={locale} onLocaleChange={changeLocale} />
-        </TypesafeI18n>
-      )}
-    </Show>
+    <>
+      <PageHead />
+      <Show when={locale()} keyed>
+        {(currentLocale) => (
+          <TypesafeI18n locale={currentLocale}>
+            <LayoutContent {...props} locale={locale} onLocaleChange={changeLocale} />
+          </TypesafeI18n>
+        )}
+      </Show>
+    </>
   );
 }
 

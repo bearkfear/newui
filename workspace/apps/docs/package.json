@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@egcs/newui": "workspace:*",
+    "@solidjs/meta": "0.29.8",
     "@solidjs/router": "1.0.3",
     "@solidjs/start": "2.2.3",
     "lucide-solid": "1.63.0",

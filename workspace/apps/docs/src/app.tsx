@@ -1,3 +1,4 @@
+import { MetaProvider } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { loadLocale } from "./i18n/i18n-util.sync";
@@ -8,8 +9,10 @@ loadLocale("en");
 
 export default function App() {
   return (
-    <Router root={DocsLayout}>
-      <FileRoutes />
-    </Router>
+    <MetaProvider>
+      <Router root={DocsLayout}>
+        <FileRoutes />
+      </Router>
+    </MetaProvider>
   );
 }

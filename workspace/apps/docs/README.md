@@ -14,3 +14,9 @@ Run these from `workspace/`:
 - `bun run --cwd apps/docs typecheck`: check the docs app types.
 
 The Portuguese pages use the root paths; English pages live under `/en/`. Keep route files thin: they choose the locale and render the matching page.
+
+## Search metadata
+
+Each public page has localized metadata in `src/i18n/page-metadata.ts`. Add a corresponding entry when adding a public route so its canonical links, language alternates and sitemap entries use the same paths.
+
+Set `VITE_DOCS_SITE_URL` to the public HTTPS origin at build time. The site uses this origin in canonical links, sharing metadata, structured data and `/sitemap.xml`. Local development uses the incoming request origin when the variable is unset. The `/robots.txt` endpoint advertises the sitemap for crawlers.
