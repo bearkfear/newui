@@ -1,3 +1,4 @@
+import { Suspense } from "solid-js";
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import {
   componentAnchor,
@@ -20,7 +21,11 @@ const meta = {
     locale: { control: "inline-radio", options: ["pt-BR", "en"] },
     slug: { control: "select", options: slugs },
   },
-  render: (args) => <ReferencePage {...args} />,
+  render: (args) => (
+    <Suspense>
+      <ReferencePage {...args} />
+    </Suspense>
+  ),
 } satisfies Meta<typeof ReferencePage>;
 
 export default meta;
