@@ -18,6 +18,12 @@ Add reviewable UI examples under `src/pages/components/`, using the published Ne
 
 The Portuguese pages use the root paths; English pages live under `/en/`. Keep route files thin: they choose the locale and render the matching page.
 
+## Deploy to Vercel
+
+Import the repository with `workspace/apps/docs` as the Root Directory and select the **Other** preset. Enable access to source files outside the Root Directory so the build can use the workspace lockfile and UI package.
+
+Leave the install, build, and output overrides disabled. The app's `vercel.json` installs the workspace with Bun and builds the library before the docs. Nitro writes the static assets and SSR function to `.vercel/output/` for Node.js 24.
+
 ## Search metadata
 
 Each public page has localized metadata in `src/i18n/page-metadata.ts`. Add a corresponding entry when adding a public route so its canonical links, language alternates and sitemap entries use the same paths.
