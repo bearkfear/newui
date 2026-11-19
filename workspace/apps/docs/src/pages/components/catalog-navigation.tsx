@@ -14,7 +14,12 @@ import {
 import { For } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import type { Locales } from "../../i18n/i18n-types";
-import { componentGroups, componentHref, type DocumentedComponent } from "./component-catalog";
+import {
+  type CatalogComponent,
+  componentGroups,
+  componentHref,
+  groupIncludes,
+} from "./component-catalog";
 
 const groupIcons = {
   actions: MousePointer2,
@@ -32,7 +37,7 @@ const groupIcons = {
 export function CatalogNavigation(props: {
   locale: Locales;
   label: string;
-  current?: DocumentedComponent;
+  current?: CatalogComponent;
 }) {
   return (
     <aside
@@ -45,7 +50,11 @@ export function CatalogNavigation(props: {
           <VerticalMenu.List>
             <For each={componentGroups}>
               {(group) => (
-                <VerticalMenu.Branch defaultOpen={group.id === "actions"}>
+                <VerticalMenu.Branch
+                  defaultOpen={
+                    props.current ? groupIncludes(group, props.current) : group.id === "actions"
+                  }
+                >
                   <VerticalMenu.BranchTrigger>
                     <span class="flex min-w-0 flex-1 items-center gap-2 text-left">
                       <VerticalMenu.Icon>
@@ -60,7 +69,7 @@ export function CatalogNavigation(props: {
                         {(name) => (
                           <VerticalMenu.Item>
                             <VerticalMenu.Link
-                              href={componentHref(name, props.locale, !props.current)}
+                              href={componentHref(name, props.locale)}
                               current={name === props.current}
                               class="h-auto whitespace-normal"
                             >

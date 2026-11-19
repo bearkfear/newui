@@ -1,5 +1,5 @@
 import type { Locales } from "../i18n/i18n-types";
-import { type IndexablePath, missingPageMetadata, pageMetadata } from "../i18n/page-metadata";
+import { type IndexablePath, indexablePages, missingPageMetadata } from "../i18n/page-metadata";
 import { getLocaleFromPath, getLocalizedPath } from "./localized-path";
 
 export const siteName = "NewUI";
@@ -18,8 +18,9 @@ export function resolvePageMetadata(pathname: string) {
   const locale = getLocaleFromPath(pathname);
   const base = getLocalizedPath(pathname, "pt-BR");
   const normalized = `${base.replace(/\/+$/, "")}/`;
-  const path = Object.hasOwn(pageMetadata, normalized) ? (normalized as IndexablePath) : undefined;
-  const entry = path ? pageMetadata[path][locale] : missingPageMetadata[locale];
+  const indexed = indexablePages[normalized];
+  const path = indexed ? (normalized as IndexablePath) : undefined;
+  const entry = indexed?.[locale] ?? missingPageMetadata[locale];
 
   return {
     path,
@@ -41,7 +42,7 @@ export function breadcrumbs(path: IndexablePath, locale: Locales, origin: string
     itemListElement: paths.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: item === "/" ? siteName : pageMetadata[item][locale].title,
+      name: item === "/" ? siteName : (indexablePages[item]?.[locale].title ?? siteName),
       item: pageUrl(item, locale, origin),
     })),
   };

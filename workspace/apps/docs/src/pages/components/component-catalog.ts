@@ -120,19 +120,21 @@ export function componentAnchor(name: ComponentName) {
   return name.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 }
 
-export const documentedComponents = [
-  "Button",
-  "ButtonGroup",
-] as const satisfies readonly ComponentName[];
-export type DocumentedComponent = (typeof documentedComponents)[number];
+export type CatalogComponent = (typeof componentGroups)[number]["components"][number];
+export type CatalogGroup = (typeof componentGroups)[number];
 
-export function hasComponentPage(name: ComponentName): name is DocumentedComponent {
-  return documentedComponents.some((component) => component === name);
+export function componentHref(name: CatalogComponent, locale: Locales) {
+  return getLocalizedPath(`/components/${componentAnchor(name)}/`, locale);
 }
 
-export function componentHref(name: ComponentName, locale: Locales, inCatalog = false) {
-  if (hasComponentPage(name))
-    return getLocalizedPath(`/components/${componentAnchor(name)}/`, locale);
-  const anchor = `#${componentAnchor(name)}`;
-  return inCatalog ? anchor : `${getLocalizedPath("/components/", locale)}${anchor}`;
+export function findCatalogComponent(slug: string) {
+  for (const group of componentGroups) {
+    const name = group.components.find((name) => componentAnchor(name) === slug);
+    if (name) return { name, group };
+  }
+  return undefined;
+}
+
+export function groupIncludes(group: CatalogGroup, component: CatalogComponent) {
+  return group.components.some((name) => name === component);
 }

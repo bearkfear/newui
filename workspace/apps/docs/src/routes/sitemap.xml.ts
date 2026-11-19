@@ -1,10 +1,10 @@
 import type { APIEvent } from "@solidjs/start/server";
-import { pageMetadata } from "../i18n/page-metadata";
+import { indexablePages } from "../i18n/page-metadata";
 import { locales, pageUrl, siteOrigin } from "../lib/site-metadata";
 
 export function GET(event: APIEvent) {
   const origin = siteOrigin(event.request.url);
-  const entries = Object.keys(pageMetadata).flatMap((path) => {
+  const entries = Object.keys(indexablePages).flatMap((path) => {
     const alternateLinks = locales.map(
       (locale) =>
         `<xhtml:link rel="alternate" hreflang="${locale}" href="${pageUrl(path, locale, origin)}"/>`,

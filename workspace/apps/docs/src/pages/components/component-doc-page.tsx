@@ -4,13 +4,14 @@ import type { Locales } from "../../i18n/i18n-types";
 import { PageContents } from "../../layout/page-contents";
 import { getLocalizedPath } from "../../lib/localized-path";
 import { CatalogNavigation } from "./catalog-navigation";
-import { componentHref, type DocumentedComponent } from "./component-catalog";
+import { type CatalogComponent, componentHref } from "./component-catalog";
 
 export function ComponentDocPage(
   props: ParentProps<{
     locale: Locales;
-    component: DocumentedComponent;
-    related: DocumentedComponent;
+    component: CatalogComponent;
+    group?: string;
+    related: CatalogComponent;
     entries: readonly (readonly [string, string])[];
     text: {
       navigation: string;
@@ -33,7 +34,7 @@ export function ComponentDocPage(
         <header class="grid gap-3">
           <a
             class="w-fit text-sm font-medium text-primary underline-offset-4 hover:underline"
-            href={`${getLocalizedPath("/components/", props.locale)}#actions`}
+            href={`${getLocalizedPath("/components/", props.locale)}#${props.group ?? "actions"}`}
           >
             {props.text.section}
           </a>

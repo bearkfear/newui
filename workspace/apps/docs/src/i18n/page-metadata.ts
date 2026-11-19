@@ -1,3 +1,5 @@
+import { componentAnchor } from "../pages/components/component-catalog";
+import { componentSummaries } from "./component-summaries";
 import type { Locales } from "./i18n-types";
 
 type PageMetadata = { title: string; description: string };
@@ -125,7 +127,20 @@ export const pageMetadata = {
   },
 } satisfies Record<string, Record<Locales, PageMetadata>>;
 
-export type IndexablePath = keyof typeof pageMetadata;
+export type IndexablePath = keyof typeof pageMetadata | `/components/${string}/`;
+
+export const indexablePages: Record<string, Record<Locales, PageMetadata>> = {
+  ...Object.fromEntries(
+    Object.entries(componentSummaries).map(([name, summary]) => [
+      `/components/${componentAnchor(name as keyof typeof componentSummaries)}/`,
+      {
+        "pt-BR": { title: `${name} para SolidJS — Exemplos e API`, description: summary["pt-BR"] },
+        en: { title: `${name} for SolidJS — Examples and API`, description: summary.en },
+      },
+    ]),
+  ),
+  ...pageMetadata,
+};
 
 export const missingPageMetadata = {
   "pt-BR": {
