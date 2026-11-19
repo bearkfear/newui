@@ -1,5 +1,6 @@
 import { componentAnchor } from "../pages/components/component-catalog";
 import { componentSummaries } from "./component-summaries";
+import type { DocsLocale } from "./docs-locales";
 import type { Locales } from "./i18n-types";
 
 type PageMetadata = { title: string; description: string };
@@ -28,6 +29,15 @@ export const pageMetadata = {
       description:
         "Add NewUI to a SolidJS project, choose a stylesheet setup, and render your first component. Find prerequisites and the right integration path.",
     },
+    es: {
+      title: "Primeros pasos con NewUI para SolidJS",
+      description:
+        "Añade NewUI a un proyecto SolidJS, elige cómo cargar los estilos y muestra tu primer componente.",
+    },
+    "zh-CN": {
+      title: "NewUI 快速入门",
+      description: "在 SolidJS 项目中添加 NewUI，选择样式加载方式，并渲染第一个组件。",
+    },
   },
   "/getting-started/installation/": {
     "pt-BR": {
@@ -40,6 +50,16 @@ export const pageMetadata = {
       description:
         "Install @egcs/newui with npm, pnpm, Yarn, or Bun and import the compiled CSS from the entry point of your SolidJS or SolidStart project.",
     },
+    es: {
+      title: "Instala NewUI en un proyecto SolidJS",
+      description:
+        "Instala @egcs/newui, importa el CSS compilado y configura la skill para Claude Code o Codex.",
+    },
+    "zh-CN": {
+      title: "在 SolidJS 项目中安装 NewUI",
+      description:
+        "安装 @egcs/newui，导入编译好的 CSS，并为 Claude Code 或 Codex 配置 NewUI 技能。",
+    },
   },
   "/getting-started/first-component/": {
     "pt-BR": {
@@ -51,6 +71,15 @@ export const pageMetadata = {
       title: "Build Your First SolidJS Component with NewUI",
       description:
         "Build your first NewUI button. Copy the complete App.tsx example and learn how to update a button label with a SolidJS signal.",
+    },
+    es: {
+      title: "Tu primer componente de NewUI",
+      description:
+        "Muestra un botón de NewUI en SolidJS y usa una señal para cambiar su texto en el ejemplo interactivo.",
+    },
+    "zh-CN": {
+      title: "你的第一个 NewUI 组件",
+      description: "在 SolidJS 中渲染 NewUI 按钮，并在交互示例中使用信号更新按钮文字。",
     },
   },
   "/getting-started/themes-and-tokens/": {
@@ -125,11 +154,14 @@ export const pageMetadata = {
         "Customize NewUI colors, radii, and design tokens in a live preview. Copy CSS variables or a createTheme configuration for your SolidJS project.",
     },
   },
-} satisfies Record<string, Record<Locales, PageMetadata>>;
+} satisfies Record<
+  string,
+  Record<Locales, PageMetadata> & Partial<Record<DocsLocale, PageMetadata>>
+>;
 
 export type IndexablePath = keyof typeof pageMetadata | `/components/${string}/`;
 
-export const indexablePages: Record<string, Record<Locales, PageMetadata>> = {
+export const indexablePages: Record<string, Partial<Record<DocsLocale, PageMetadata>>> = {
   ...Object.fromEntries(
     Object.entries(componentSummaries).map(([name, summary]) => [
       `/components/${componentAnchor(name as keyof typeof componentSummaries)}/`,
@@ -152,5 +184,15 @@ export const missingPageMetadata = {
     title: "Page not found",
     description: "This NewUI documentation page is unavailable.",
     action: "Back to the homepage",
+  },
+  es: {
+    title: "Página no encontrada",
+    description: "Esta página de la documentación de NewUI no está disponible.",
+    action: "Ir a primeros pasos",
+  },
+  "zh-CN": {
+    title: "找不到页面",
+    description: "此 NewUI 文档页面不可用。",
+    action: "前往快速入门",
   },
 };

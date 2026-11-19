@@ -2,7 +2,7 @@ import type { BaseTranslation } from "../i18n-types";
 import { footer } from "./footer";
 import { homeShowcase } from "./home-showcase";
 
-const ptBR: BaseTranslation = {
+const ptBR = {
   navigation: {
     getStarted: "Começar",
     components: "Componentes",
@@ -245,6 +245,6 @@ const ptBR: BaseTranslation = {
     copied: "Copiado",
     copyError: "Não foi possível copiar. Selecione o código e copie manualmente.",
   },
-};
+} satisfies BaseTranslation;
 
 export default ptBR;

@@ -41,7 +41,7 @@ export function CatalogNavigation(props: {
 }) {
   return (
     <aside
-      class="min-w-0 border-b border-border pb-4 lg:col-start-1 lg:row-start-1 lg:sticky lg:top-24 lg:max-h-[calc(100dvh-7rem)] lg:overflow-y-auto lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4"
+      class="min-w-0 border-b border-border pb-4 lg:col-start-1 lg:row-start-1 lg:sticky lg:top-24 lg:max-h-[calc(100dvh-7rem)] lg:overflow-y-auto lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4 lg:[scrollbar-gutter:stable]"
       classList={{ "lg:row-span-2 xl:row-span-1": Boolean(props.current) }}
     >
       <VerticalMenu.Root aria-label={props.label} density="compact">
@@ -71,7 +71,7 @@ export function CatalogNavigation(props: {
                             <VerticalMenu.Link
                               href={componentHref(name, props.locale)}
                               current={name === props.current}
-                              class="h-auto whitespace-normal"
+                              class="whitespace-nowrap"
                             >
                               {name}
                             </VerticalMenu.Link>

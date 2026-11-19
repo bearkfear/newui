@@ -1,12 +1,14 @@
-import type { Locales } from "../../i18n/i18n-types";
+import { type DocsLocale, getFullLocale } from "../../i18n/docs-locales";
 import { PageContents } from "../../layout/page-contents";
-import { type GuidePage, guideCopy } from "./getting-started-content";
+import type { GuidePage } from "./getting-started-content";
+import { getGuideCopy } from "./onboarding-guide-copy";
 import { themeGuideCopy } from "./theme-guide-content";
 import { tokenReferenceLabels } from "./token-reference-content";
 
-export function GuideContents(props: { page: GuidePage; locale: Locales }) {
-  const text = () => guideCopy[props.locale];
-  const theme = () => themeGuideCopy[props.locale];
+export function GuideContents(props: { page: GuidePage; locale: DocsLocale }) {
+  const text = () => getGuideCopy(props.locale);
+  const fullLocale = () => getFullLocale(props.locale);
+  const theme = () => themeGuideCopy[fullLocale()];
   const entries = () =>
     (
       ({
@@ -28,7 +30,7 @@ export function GuideContents(props: { page: GuidePage; locale: Locales }) {
           ["color-modes", theme().modes],
           ["brand", theme().brand],
           ["global-tokens", theme().global],
-          ["token-reference", tokenReferenceLabels[props.locale].title],
+          ["token-reference", tokenReferenceLabels[fullLocale()].title],
         ],
         tailwind: [
           ["build-dependencies", text().tailwindDependencies],

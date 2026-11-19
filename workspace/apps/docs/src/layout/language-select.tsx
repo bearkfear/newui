@@ -1,37 +1,42 @@
 import { createListCollection, Select } from "@egcs/newui/forms";
 import { For } from "solid-js";
-import type { Locales } from "../i18n/i18n-types";
-import { isLocale } from "../i18n/i18n-util";
+import {
+  type DocsLocale,
+  docsLocaleOptions,
+  getLocaleOption,
+  isDocsLocale,
+} from "../i18n/docs-locales";
 
-const languageOptions = createListCollection<{ label: string; value: Locales }>({
-  items: [
-    { label: "🇧🇷 pt-BR", value: "pt-BR" },
-    { label: "🇺🇸 EN", value: "en" },
-  ],
+const languageOptions = createListCollection<{
+  label: string;
+  value: DocsLocale;
+  htmlLang: string;
+}>({
+  items: [...docsLocaleOptions],
 });
 
 type LanguageSelectProps = {
-  value: () => Locales;
+  value: () => DocsLocale;
   label: string;
-  onChange: (locale: Locales) => void;
+  onChange: (locale: DocsLocale) => void;
 };
 
 export function LanguageSelect(props: LanguageSelectProps) {
   return (
     <Select.Root
       aria-label={props.label}
-      class="w-[7.5rem] shrink-0"
+      class="w-36 shrink-0 sm:w-40"
       collection={languageOptions}
       size="sm"
       value={[props.value()]}
       onValueChange={(details) => {
         const [nextLocale] = details.value;
-        if (nextLocale && isLocale(nextLocale)) props.onChange(nextLocale);
+        if (nextLocale && isDocsLocale(nextLocale)) props.onChange(nextLocale);
       }}
     >
       <Select.Control>
         <Select.Trigger aria-label={props.label}>
-          <Select.ValueText />
+          <Select.ValueText lang={getLocaleOption(props.value()).htmlLang} />
           <Select.Indicator />
         </Select.Trigger>
       </Select.Control>
@@ -39,7 +44,9 @@ export function LanguageSelect(props: LanguageSelectProps) {
         <For each={languageOptions.items}>
           {(item) => (
             <Select.Item item={item}>
-              <Select.ItemText>{item.label}</Select.ItemText>
+              <Select.ItemText class="whitespace-nowrap" lang={item.htmlLang}>
+                {item.label}
+              </Select.ItemText>
               <Select.ItemIndicator />
             </Select.Item>
           )}
