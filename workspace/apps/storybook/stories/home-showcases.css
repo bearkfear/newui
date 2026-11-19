@@ -8,3 +8,10 @@
 @source "../../docs/src/pages/getting-started/theme-guide.tsx";
 @source "../../docs/src/pages/getting-started/token-reference.tsx";
 @source "../../docs/src/layout/page-contents.tsx";
+@source "../../docs/src/pages/components/components-page.tsx";
+@source "../../docs/src/pages/components/catalog-navigation.tsx";
+@source "../../docs/src/pages/components/component-doc-page.tsx";
+@source "../../docs/src/pages/components/component-example.tsx";
+@source "../../docs/src/pages/components/component-api.tsx";
+@source "../../docs/src/pages/components/button/button-examples.tsx";
+@source "../../docs/src/pages/components/button-group/button-group-page.tsx";
