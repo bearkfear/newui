@@ -26,4 +26,4 @@ Use variants first, then the owning public token contract, then native style or 
 
 Theme scopes preserve color-scheme and existing portals copy public --nui-* tokens, inherited typography, and motion preferences. Portaled content is not a CSS descendant of the trigger; ancestor application selectors and inherited classes do not automatically follow it. See [Themes](themes.md), [Typography](typography.md), and [Dimensions](dimensions.md).
 
-Review Foundations / Customization and Interaction states for concrete examples. The documented contracts consolidate existing APIs; no new universal polymorphic or icon component is introduced.
+The documented contracts consolidate existing APIs; no new universal polymorphic or icon component is introduced.

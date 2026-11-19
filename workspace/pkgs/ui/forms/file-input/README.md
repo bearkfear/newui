@@ -41,6 +41,6 @@ Named inputs submit real File objects through FormData. Disabled inputs and disa
 
 The small native adapter keeps the FileList aligned with accepted selection after rejected input, controlled updates, clear and delete. Opening then canceling the picker preserves selection. An uncanceled form reset restores uncontrolled initial files after native reset propagation; canceled resets preserve selection. Restoring defaults does not emit a selection callback; clearing rejection feedback may emit Ark callbacks. Controlled values remain unchanged. Files cannot be restored across page reloads without the application providing File objects.
 
-## Review examples
+## Browser review
 
-Storybook Forms / FileInput includes presentations, inline sizes alongside Input/Select/Button, Field states, multiple images with type/count/size limits and removal, controlled selection, native submission/reset cancellation, long names, dark theme and mobile. DisabledFieldset demonstrates reactive fieldset disabling and a selection-change counter. RequiredDropzone demonstrates required validation focus without a Trigger. Examples contain no interaction tests. Browser review should include picker cancellation, rejected files, required focus and actual FormData values.
+Check picker cancellation, rejected files, required focus, and submitted FormData values.

@@ -12,6 +12,6 @@ Organize space, alignment, flow, and sizing independently of page content.
 
 ## Composition
 
-Use native CSS flexbox and grid for layout, gap for item spacing, and aspect-ratio for media proportions. Storybook's Layout / Media proportions demonstrates responsive media.
+Use native CSS flexbox and grid for layout, gap for item spacing, and aspect-ratio for media proportions.
 
 [Hero and Footer](../compositions/README.md) combine layout and content into larger interface compositions.

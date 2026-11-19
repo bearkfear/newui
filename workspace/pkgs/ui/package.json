@@ -182,8 +182,6 @@
     "esbuild": "0.28.2",
     "postcss": "8.5.31",
     "solid-js": "1.9.19",
-    "storybook": "10.6.1",
-    "storybook-solidjs-vite": "10.7.2",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3"
   },

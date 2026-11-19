@@ -42,4 +42,4 @@ const [cpf, setCpf] = createSignal("");
 
 The controlled value is raw. The DOM input.value, including native onInput currentTarget.value after accepted editing, is displayed text. Native forms submit formatted text by default; choose submitValue="raw" to submit the raw string instead. During composition, native events can expose uncommitted text; onValueChange supplies accepted values.
 
-Review Forms / Masked Input / Text Helpers for document, postal code, progressive phone, custom token, partial, literal prefix, uppercase normalization, and empty examples. [Regression coverage](test-coverage.md) also verifies the public DOM-independent entry during packing.
+See the [mask regression guide](test-coverage.md) for helper tests and verification of the DOM-independent entry.

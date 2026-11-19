@@ -42,7 +42,7 @@ The initial chart entry is intended for client rendering. Server rendering/hydra
 
 ## Review and size
 
-Data / Charts includes a dashboard with reactive data, line/grouped bars/donut, empty and zero-total states, one-point lines, negative values, Resizable, dark, mobile, and nested themes.
+See the chart examples in the [official documentation](../../../../apps/docs/README.md).
 
 See [bundle measurements](bundle-size.md) for the reproducible build-size inspection. There are no runtime performance guarantees based solely on tree shaking.
 

@@ -37,7 +37,3 @@ Size, tone, valid, invalid, disabled, and readOnly inherit shared Field options.
 Uncontrolled form resets restore the initial defaultChecked value. Canceled resets preserve selection. The shared choice reset adapter also synchronizes native checked properties for controlled values. Native disabled fieldsets retain browser behavior and receive neutral disabled styling, including dynamically disabled fieldsets and the first-legend exception.
 
 Space toggles a focused input; Tab moves between controls. Checked state changes move the thumb from left to right. Shared focus contours, reduced motion, forced colors, automatic themes, and nested theme scopes remain supported.
-
-## Storybook
-
-Forms / Switch includes default, checked, controlled custom-value mapping, sizes, tones, variants/icons, Field states, a settings panel, native submission/reset/canceled reset, dark, and mobile examples.

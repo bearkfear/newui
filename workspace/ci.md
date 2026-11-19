@@ -1,6 +1,6 @@
 # Continuous integration
 
-The [CI workflow](../.github/workflows/ci.yml) runs on pull requests, pushes to `main`, and manual dispatch. It builds the library, checks Biome and strict TypeScript, builds Storybook, runs the mask regression suite in Chromium, and validates the packed package.
+The [CI workflow](../.github/workflows/ci.yml) validates pull requests targeting `main` before merge. It builds the library, checks Biome and strict TypeScript, builds the official documentation, runs the mask helper regression checks, and validates the packed package.
 
 ## Reproduce locally
 
@@ -10,20 +10,18 @@ Use Node from `.node-version` and Bun from `packageManager` in `package.json`. R
 bun install --frozen-lockfile --ignore-scripts
 bun run build
 bun run check
-bun run build:storybook
+bun run build:docs
 bun run test:masking
 bun run pack
 ```
 
 Build first: examples importing public package entries resolve declarations from the generated build. Ignoring install scripts skips the local Git hook installer; developers can run `bun run hooks:install` locally.
 
-Install Chromium when needed with `bunx --no-install playwright install --with-deps chromium` from `apps/storybook/`. In CI, Playwright serves the built Storybook with Vite preview; local tests can reuse Storybook development mode.
-
 ## Package artifacts
 
 `bun run pack` verifies public export targets and release documents inside `artifacts/newui-preview.tgz`. Successful CI uploads the archive as `newui-package` for seven days. Pull request artifacts are review material; inspect the source before executing their contents.
 
-Package validation checks the archive and its exports. Browser coverage is described in the [mask regression guide](pkgs/ui/forms/masked-input/test-coverage.md); package-wide limitations are in the [library guide](pkgs/ui/README.md#known-limitations).
+Package validation checks the archive and its exports. Mask helper coverage is described in the [mask regression guide](pkgs/ui/forms/masked-input/test-coverage.md); package-wide limitations are in the [library guide](pkgs/ui/README.md#known-limitations).
 
 CI does not publish or deploy. The separate [publishing workflow](publishing.md) publishes package versions merged into `main` through npm OIDC.
 

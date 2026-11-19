@@ -32,8 +32,4 @@ For Field composition, use `Field.Label asChild={(props) => <span {...props()} /
 
 Uncontrolled form resets restore the initial selection; canceled resets preserve it. Controlled values and controlled resets remain application-owned. The internal reset adapter also synchronizes input checked properties when the value did not change.
 
-## Storybook
-
-Forms / RadioGroup includes controlled selection/clearing, unavailable items, Field feedback, disabled/readonly states, horizontal layout, segmented appearance, sizes/tones, native submission/reset, dark, and mobile examples.
-
-FlowAlignment provides normal, grid and flex compositions alongside Checkbox, including multiline labels and typography controls. Items align to the top of their line box for stable positioning when selection changes.
+Items align to the top of their line box for stable positioning when selection changes.

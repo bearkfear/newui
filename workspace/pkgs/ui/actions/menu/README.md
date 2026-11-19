@@ -25,7 +25,3 @@ ContextTrigger handles native context-menu events and touch long-press. Provide 
 Use these components for actions. Page-link navigation belongs to Breadcrumb, Navbar, or VerticalMenu. Destructive appearance does not add a confirmation step; the application decides whether an action needs AlertDialog. Selection callbacks own application behavior. Demo callbacks update a status message.
 
 The design follows [Solid UI Dropdown Menu](https://www.solid-ui.com/docs/components/dropdown-menu) and [Context Menu](https://www.solid-ui.com/docs/components/context-menu), using newui tokens and Ark rather than copying upstream implementation code. Menus are static surfaces with no new animation behavior.
-
-## Storybook examples
-
-Storybook includes default/open, controlled, disabled trigger, dark/mobile dropdowns, and context examples with a separate ordinary dropdown alternative, submenus, and icon-free variants.

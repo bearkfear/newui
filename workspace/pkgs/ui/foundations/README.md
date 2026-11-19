@@ -20,7 +20,7 @@ Define the visual language and shared rules for all areas.
 - [Interaction states](interaction-states.md): focus, disabled/loading/selected states, and reduced motion.
 - [Component contracts](component-contracts.md): imports, composition, variants, classes, styles, refs, and primitive behavior.
 
-[Iconography](iconography.md) uses Lucide for Solid for interface icons, with named imports, inherited colors, contextual sizes, and accessible control labels. Foundations / Iconography provides reviewable examples.
+[Iconography](iconography.md) uses Lucide for Solid for interface icons, with named imports, inherited colors, contextual sizes, and accessible control labels.
 
 ## Implementation
 
@@ -30,10 +30,6 @@ Heading and Text belong to [Content](../content/README.md); they apply the typog
 
 Compact component headers share `--nui-header-gap` (0.125rem) for the vertical gap between title and description. Card, Panel, Dialog, Alert Dialog, Sheet, and Popover use this token independently of their outer padding.
 
-## Storybook examples
-
-Foundations / Typography, Dimensions, Interaction states, and Customization demonstrate the consolidated contracts. Review keyboard focus, narrow widths, light/dark scopes, reduced motion, native refs, and local overrides including portals.
-
 ## Themes
 
-[Theme contract](themes.md) records the implemented automatic system preference, explicit light/dark selection, and nested scopes; application persistence remains separate. The Storybook theme switch already exercises the initial light and dark appearances.
+[Theme contract](themes.md) records the implemented automatic system preference, explicit light/dark selection, and nested scopes; application persistence remains separate.

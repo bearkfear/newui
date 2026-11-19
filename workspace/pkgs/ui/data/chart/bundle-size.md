@@ -1,6 +1,6 @@
 # Chart bundle measurements
 
-These measurements bundle browser consumers of the built library with esbuild, minification, and Solid compilation for upstream JSX dependencies. Each consumer exports the named components so the bundler retains them. Shared Solid/Ark and formatting code is included; Storybook and the shared CSS file are excluded. This measures JavaScript output size, not rendering speed or installed dependency size.
+These measurements bundle browser consumers of the built library with esbuild, minification, and Solid compilation for upstream JSX dependencies. Each consumer exports the named components so the bundler retains them. Shared Solid/Ark and formatting code is included; the shared CSS file is excluded. This measures JavaScript output size, not rendering speed or installed dependency size.
 
 Run from `workspace/`:
 

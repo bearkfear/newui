@@ -52,11 +52,6 @@ inline styles may be removed or reduced to supported content. Rendering imported
 still requires an application-appropriate sanitization policy. The editor and helpers use the same
 fixed schema, so helper output can be opened by the component.
 
-## Storybook examples
-
-Forms / Rich Text Editor includes default, controlled representations, native submission/reset,
-legacy HTML helpers, states, empty, dark, and mobile examples.
-
 ## Pasted images
 
 Set `imagePaste="embedded"` to store clipboard image files as data URLs in the document.

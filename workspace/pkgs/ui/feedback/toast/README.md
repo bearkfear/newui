@@ -38,17 +38,16 @@ function App() {
 
 ## Visual and behavior contracts
 
-Toast shares Callout's soft/outline surfaces, decorative icons, compact title gap, tone step 12 titles, and step 11 descriptions. `--nui-toast-width` defaults to 24rem, constrained by the viewport and store offsets; `--nui-toast-shadow` controls elevation. The portal copies inherited theme tokens, typography, color scheme, and workshop motion preference. System/workshop reduced motion disables transitions and loading rotation. Ark owns group stacking order and its high z-index.
+Toast shares Callout's soft/outline surfaces, decorative icons, compact title gap, tone step 12 titles, and step 11 descriptions. `--nui-toast-width` defaults to 24rem, constrained by the viewport and store offsets; `--nui-toast-shadow` controls elevation. The portal copies inherited theme tokens, typography, color scheme, and the configured motion preference. System or explicitly configured reduced motion disables transitions and loading rotation. Ark owns group stacking order and its high z-index.
 
-Keep messages brief and mount one Toaster per store in a stable application scope. Do not create a process-wide store for server-rendered requests. Stores and requests belong to the application; this package creates no global singleton. Use distinct placements if deliberately mounting multiple regions in one document. Storybook uses isolated docs iframes, per-demo stores, and cleanup to avoid cross-story notifications. Changing controls recreates the demo store.
+Keep messages brief and mount one Toaster per store in a stable application scope. Do not create a process-wide store for server-rendered requests. Stores and requests belong to the application; this package creates no global singleton. Use distinct placements if deliberately mounting multiple regions in one document.
 
-Notifications use Ark's polite status semantics, including error types. Critical information must remain available in page content; use Callout or Alert Dialog for persistent or interrupting workflows. Prefer a persistent duration for important actions such as Undo. Focus/hover pause helps reading and interaction; Escape dismisses the focused notification. Application callbacks own follow-up focus and result announcements. The Loading To Result demo updates one notification in place; its simulated timers make no external requests.
+Notifications use Ark's polite status semantics, including error types. Critical information must remain available in page content; use Callout or Alert Dialog for persistent or interrupting workflows. Prefer a persistent duration for important actions such as Undo. Focus/hover pause helps reading and interaction; Escape dismisses the focused notification. Application callbacks own follow-up focus and result announcements.
 
 ## Choice and review
 
 Solid UI Toast demonstrates a composable toaster and imperative creation API; its Sonner reference uses the opinionated solid-sonner system. We selected Ark Toast because it is already in the dependency set, supplies the needed behavior, and allows direct reuse of our visual contracts. No Sonner dependency or second notification API was added.
 
-Storybook: Feedback / Toast includes all standard result types, persistent notifications, Undo, queuing, six placement controls, soft/outline styling, optional icons, loading-to-success/error updates, custom composition, live nested theme changes, dark mode, mobile, and reduced motion.
 
 ## References
 

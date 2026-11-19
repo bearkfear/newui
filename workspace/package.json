@@ -17,7 +17,7 @@
     "solid-js",
     "ui-library",
     "design-system",
-    "storybook",
+    "documentation",
     "tailwindcss",
     "bun-workspaces",
     "monorepo"
@@ -29,16 +29,13 @@
     "pkgs/*"
   ],
   "scripts": {
-    "dev": "bun run --cwd apps/storybook dev",
-    "storybook": "bun run --cwd apps/storybook dev",
+    "dev": "bun run docs",
     "docs": "bun run --cwd apps/docs dev",
     "build": "bun run --cwd pkgs/ui build",
-    "build:storybook": "bun run --cwd apps/storybook build",
     "build:docs": "bun run --cwd apps/docs build",
-    "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/storybook typecheck && bun run --cwd apps/docs typecheck && tsc --project scripts/tsconfig.json",
+    "typecheck": "bun run --cwd pkgs/ui typecheck && bun run --cwd apps/docs typecheck && tsc --project scripts/tsconfig.json",
     "pack": "bun scripts/ci/pack.ts",
-    "test:storybook": "bun run --cwd apps/storybook test",
-    "test:masking": "bun run --cwd apps/storybook test:masking",
+    "test:masking": "bun test pkgs/ui/tests",
     "lint": "biome lint . --error-on-warnings",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",
@@ -49,7 +46,6 @@
     "prepare": "simple-git-hooks"
   },
   "patchedDependencies": {
-    "storybook@10.6.1": "patches/storybook@10.6.1.patch",
     "@zag-js/focus-visible@1.45.0": "patches/@zag-js%2Ffocus-visible@1.45.0.patch"
   },
   "devDependencies": {

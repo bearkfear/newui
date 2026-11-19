@@ -6,7 +6,7 @@
 
 Composable components, a shared visual language, and room to make it yours.
 
-[Explore the library](workspace/pkgs/ui/README.md) · [Our philosophy](workspace/philosophy.md) · [Contribute](#contributing)
+[Official documentation](workspace/apps/docs/README.md) · [Our philosophy](workspace/philosophy.md) · [Contribute](#contributing)
 
 </div>
 
@@ -34,7 +34,7 @@ See the [package guide](workspace/pkgs/ui/README.md) for component imports, comp
 
 The current collection includes buttons and button groups; containers and sections; typography, avatars, badges, cards, and separators; responsive navigation; dialogs; and compositions such as Hero, Footer, Panel, MediaObject, and ActionBar.
 
-Storybook brings these pieces together with interactive examples, theme switching, responsive viewports, and accessibility checks. Browse the [library guide](workspace/pkgs/ui/README.md) for installation and usage.
+The [official documentation](workspace/apps/docs/README.md) includes installation guides, theme customization, and an interactive component reference in Portuguese and English.
 
 ## Get started locally
 
@@ -43,10 +43,11 @@ With Bun installed, run these commands from your checkout:
 ```sh
 cd workspace
 bun install
+bun run build
 bun run dev
 ```
 
-Open [Storybook at localhost:6006](http://localhost:6006) to explore the library and try the examples.
+Open [the docs at localhost:5173](http://localhost:5173) to explore the library and try the examples.
 
 All development commands run from `workspace/`:
 
@@ -54,7 +55,7 @@ All development commands run from `workspace/`:
 | --- | --- |
 | `bun run check` | Check formatting, linting, and TypeScript types |
 | `bun run build` | Build the library and its compiled stylesheet |
-| `bun run build:storybook` | Build the static component catalog |
+| `bun run build:docs` | Build the official documentation site |
 
 See the [workspace guide](workspace/README.md) for the full command list and [getting started](workspace/pkgs/ui/getting-started/README.md) for distribution details.
 
@@ -62,6 +63,6 @@ See the [workspace guide](workspace/README.md) for the full command list and [ge
 
 Contributions can start with a small observation: an unclear example, a missing state, an awkward keyboard interaction, or a composition that could be easier to use. Bug reports, documentation improvements, and concrete usage examples all help shape the library.
 
-Before changing code, read the [project conventions](conventions/) and [philosophy](workspace/philosophy.md). Keep implementation in `workspace/`, place component examples alongside their source, and include Storybook stories for UI changes. Follow the [implementation validation process](conventions/implementation-validation.md): make the change reviewable first, then add or expand automated tests after validation and explicit approval.
+Before changing code, read the [project conventions](conventions/) and [philosophy](workspace/philosophy.md). Keep implementation in `workspace/`, add reviewable component examples to the official documentation app for UI changes. Follow the [implementation validation process](conventions/implementation-validation.md): make the change reviewable first, then add or expand automated tests after validation and explicit approval.
 
 Development, documentation, and pull requests use English to give contributors a shared language. Start with the [architecture](workspace/architecture.md) to understand the technical choices, or explore `workspace/pkgs/ui/` to find a component you would like to improve.

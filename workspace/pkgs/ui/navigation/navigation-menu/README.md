@@ -50,7 +50,3 @@ Ark Navigation Menu has no dedicated cascade primitive in the installed version.
 Root uses Ark's hook and RootProvider with a narrow compatibility adapter: Zag 1.45 applies `disablePointerLeaveClose` only to Viewport. The adapter also honors it on individual Content panels, preventing parent closure while the pointer crosses into a portalled cascade. Other Ark handlers and consumer callbacks remain intact; setting the option to false restores Ark's pointer-leave behavior.
 
 Root accepts Ark `defaultValue` or controlled `value`/`onValueChange` for the open top-level panel. Submenu accepts Ark Popover `defaultOpen` or controlled `open`/`onOpenChange` and `positioning`. Link selection closes its ancestor disclosures and invokes Root `onNavigate`; cancel Link `onSelect` to retain the navigation. Submenu content is lazy-mounted and unmounted on exit; keep persistent application state outside it.
-
-## Storybook examples
-
-Storybook: Navigation / Navigation Menu and Navigation / Navbar cover simple and grouped panels, three-level cascades, current links, desktop/mobile, and dark themes.

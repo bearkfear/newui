@@ -1,6 +1,6 @@
 # Documentation application
 
-The documentation site is a SolidStart application with server-side rendering. Files in `src/routes` mirror public URLs and delegate rendering to page components. Translated interface and page copy lives in `src/i18n/<locale>`, reusable interface pieces live in `src/components`, and the shared application shell lives in `src/layout`.
+This SolidStart application is the official NewUI documentation site. It contains installation guides, theme customization, and an interactive component reference. Files in `src/routes` mirror public URLs and delegate rendering to page components. Translated interface and page copy lives in `src/i18n/<locale>`, reusable interface pieces live in `src/components`, and the shared application shell lives in `src/layout`.
 
 The `src/i18n` directory contains translated interface messages and generated locale utilities. `src/lib` contains framework independent helpers such as locale and path resolution. Keep page-specific sections under their owning page in `src/pages`.
 
@@ -8,10 +8,13 @@ The app stylesheet uses Tailwind CSS 4 with the newui preset. Utilities written 
 
 ## Commands
 
-Run these from `workspace/`:
-- `bun run docs`: start the site at `http://localhost:5173`.
+Run these from `workspace/`. Build the library with `bun run build` before starting the docs in a fresh checkout. Rebuild the library after changing its source.
+- `bun run dev` or `bun run docs`: start the site at `http://localhost:5173`.
 - `bun run build:docs`: build the client and server bundles.
+- `bun run --cwd apps/docs preview`: serve those bundles locally.
 - `bun run --cwd apps/docs typecheck`: check the docs app types.
+
+Add reviewable UI examples under `src/pages/components/`, using the published NewUI entry points and the existing example and API reference components.
 
 The Portuguese pages use the root paths; English pages live under `/en/`. Keep route files thin: they choose the locale and render the matching page.
 

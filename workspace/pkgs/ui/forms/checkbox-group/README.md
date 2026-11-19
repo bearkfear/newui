@@ -29,7 +29,3 @@ Group-level required/minimum selection is application validation, not native `re
 Root's `name` produces repeated FormData entries for selected items. Disabled items are omitted; readonly selected items are submitted. Root forwards its div ref and native props. Use an item's `form` attribute for external form association. A group should belong to a single form.
 
 Uncontrolled resets restore defaultValue, including a canceled-reset guard. Controlled resets remain application-owned. Select-all is composed with a separate controlled Checkbox; the group does not infer aggregation rules.
-
-## Storybook
-
-Forms / CheckboxGroup includes select-all with indeterminate state, controlled validation, disabled/readonly states, selection limits, horizontal layout, native submission/reset, dark, and mobile examples.

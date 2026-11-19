@@ -42,7 +42,3 @@ Title reuses Heading with h3 and size 6 defaults; set `as` to match surrounding 
 This component presents a sequence rather than an interactive stepper. Native ol/li/time and ordinary controls cover its semantics; no Ark interaction primitive or custom focus/keyboard state machine is needed. Applications own actions and asynchronous announcements. Root has no automatic live role, focus changes, animation, or disabled steps. A pending step is informational rather than a disabled control.
 
 Radix-backed neutral step 6 draws the connectors and borders. Markers use neutral/success/primary soft surfaces and semantic supporting text; status is also expressed in demo text. Existing automatic, explicit, and nested themes apply without a separate palette. Both orientations retain their reading order on small screens. For no events, compose [Empty](../../feedback/empty/README.md) rather than rendering placeholder list items.
-
-## Storybook examples
-
-Content / Timeline includes both orientations, event dates, compact/titles-only layouts, custom icons, a reactive shipment progression with textual statuses, rich Card content and actions, one event in each orientation, Empty integration, long wrapping content, dark/nested themes, and mobile examples.

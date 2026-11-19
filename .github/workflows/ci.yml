@@ -2,9 +2,7 @@ name: CI
 
 on:
   pull_request:
-  push:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -47,14 +45,10 @@ jobs:
       - name: Check lint, formatting and types
         run: bun run check
 
-      - name: Build Storybook
-        run: bun run build:storybook
+      - name: Build official documentation
+        run: bun run build:docs
 
-      - name: Install Chromium for mask regression coverage
-        working-directory: workspace/apps/storybook
-        run: bunx --no-install playwright install --with-deps chromium
-
-      - name: Run mask regression coverage
+      - name: Run mask helper regression checks
         run: bun run test:masking
 
       - name: Pack library and verify public exports

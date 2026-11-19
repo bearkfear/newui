@@ -38,7 +38,3 @@ Wrap the target and Counter in `CounterAnchor` and choose a corner with `placeme
 `placement` defaults to `inline` (normal document flow). Overlay values: `top-end`, `top-start`, `bottom-end`, `bottom-start`. Overlays sit halfway beyond the corner, do not intercept pointer events, and have a 2px separating ring. Set `--nui-counter-ring` to the surrounding surface color when it differs from `--nui-background`. Allow enough space around the anchor; an ancestor with clipped overflow can still cut off an overlay.
 
 For a button, include the count in its accessible name and hide the sibling Counter from assistive technology. For static content, supply a contextual Counter label. CounterAnchor accepts native div attributes, styles, refs, and additive classes.
-
-Storybook includes value lengths, all tones and variants, sizes, zero, custom maximum, interactive notifications, dark theme, and mobile. Tabs has additional examples of icons, counters, and mixed content in every appearance.
-
-Overlay stories cover text/icon buttons, Avatar, a content tile, all four corners, `99+`, alternate surfaces, interactive clearing/incrementing, dark theme, and mobile.

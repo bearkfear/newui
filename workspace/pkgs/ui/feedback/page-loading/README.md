@@ -22,13 +22,9 @@ A centered loading placeholder composed from the same indicator as Loading, a vi
 
 The placeholder shares Loading's native status semantics and reduced-motion support. It adds layout rather than a new interaction primitive. It does not create a fixed overlay, add a main landmark, trap/move focus, block page interaction, run a request, or invent progress percentages. Applications decide when to render it and what replaces it.
 
-Set `aria-busy` on the region receiving data and provide a persistent status region outside that busy subtree when live announcements are needed. In that composition, pass `role="presentation"` and `aria-hidden="true"` to PageLoading to make its repeated message decorative. The Loading To Content story demonstrates this flow, including a simulated delay and a completion announcement. The timer belongs to the demo, not the component.
+Set `aria-busy` on the region receiving data and provide a persistent status region outside that busy subtree when live announcements are needed. In that composition, pass `role="presentation"` and `aria-hidden="true"` to PageLoading to make its repeated message decorative.
 
 The default page layout suits a full route placeholder. Use section layout inside Card or another bounded container; native style can adapt the reserved height to the application shell. Text wraps within a maximum 24rem width, and colors follow the surrounding theme. The component keeps the container's background so it can blend into either page or card surfaces.
-
-## Storybook examples
-
-Storybook: Feedback / Page Loading includes page and section layouts, optional description, use inside Card, simulated loading-to-content replacement, light/dark comparison, long messages, mobile, and reduced motion.
 
 ## References
 

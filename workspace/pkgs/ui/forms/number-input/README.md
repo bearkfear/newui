@@ -34,6 +34,6 @@ InputGroup supports existing prefix/suffix addons, icons and actions. Controlled
 
 ## Review
 
-Open Forms / Number Input: Default, Locales, Decimal Places, Controlled And Composition, Native Submission And Reset, Helpers, States, Dark and Mobile. Review typing/paste, selection replacement, sign toggling in the middle, undo/redo, initial/external values, blur padding and empty versus zero.
+Review typing/paste, selection replacement, sign toggling in the middle, undo/redo, initial/external values, blur padding and empty versus zero.
 
 Implementation checks include lint/types, library build and exploratory Chromium editing, clipboard, grouping, precision, forms and reset. No new automated tests were added. Actual iPhone keyboard, composition and cross-browser behavior still require review before claiming parity.

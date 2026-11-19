@@ -37,10 +37,6 @@ Public types: `AlertDialogRootProps`, `AlertDialogContentProps`, and `AlertDialo
 
 Use the example's direct action only for synchronous work. For async work, control Root open state, prevent the action click's default closing, and close after success. Keep errors visible and allow retry. Disable action/cancel controls and prevent Escape while pending when the operation cannot be interrupted. Pending state, requests, and errors belong to the application; the component does not infer them from promises.
 
-## Storybook examples
-
-Storybook: Overlays / Alert Dialog includes destructive confirmation, medium sizing, explicit choice, controlled async failure/retry, publishing with a primary action, mobile, dark theme, and reduced motion. Check initial Cancel focus, Tab containment, Escape cancellation, outside clicks staying open, and focus restoration. AsyncConfirmation simulates failure on the first attempt and success on retry without external requests.
-
 ## References
 
 - [Ark UI Dialog and Alert Dialog behavior](https://ark-ui.com/docs/components/dialog#alert-dialog).

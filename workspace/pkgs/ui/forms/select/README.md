@@ -64,8 +64,3 @@ Content includes the theme-preserving portal and positioner, with optional `moun
 bottom-start, matches the trigger width, flips when space is limited, and scrolls within the viewport.
 Root accepts Ark positioning and open-state props. Enter/Space/arrows open and navigate; typing
 letters uses typeahead; Escape dismisses and restores focus. Search input belongs to Combobox.
-
-## Storybook examples
-
-Forms / Select includes open, controlled, multiple/clear, groups, scrollable, inherited states,
-sizes/rounded, tones, native submission/canceled reset, Dialog, dark, and mobile examples.

@@ -16,7 +16,7 @@ Organize source styles as colocated `*.styles.css` component/support entries and
 
 Keep the Tailwind engine and Preflight in compilation roots. Source component and area entries must not import Tailwind or add a reset. `foundations/base.css` owns the shared tokens and theme mappings; `foundations/styles.css` remains the complete stylesheet compilation entry.
 
-Use the shared library import normalizer before Tailwind in the library build and Storybook. Resolve internal literal CSS imports once per compilation, reject cycles, retain original source bases, and report dependencies for watch mode. Tailwind imports alone do not guarantee deduplication of custom CSS.
+Use the shared library import normalizer before Tailwind in the library build and the documentation app. Resolve internal literal CSS imports once per compilation, reject cycles, retain original source bases, and report dependencies for watch mode. Tailwind imports alone do not guarantee deduplication of custom CSS.
 
 Keep the raw component graph private. Export documented area selections through `@egcs/newui/tailwind/<area>.css`, the optional application theme through `@egcs/newui/tailwind/preset.css`, and the required consumer plugin through `@egcs/newui/postcss`. Run that plugin before `@tailwindcss/postcss` to compile selected `nui:` utilities independently of the application's unprefixed utilities. The application owns Preflight in this mode; use it instead of the complete stylesheet.
 

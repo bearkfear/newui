@@ -39,15 +39,6 @@ Sizes are sm/md/lg; tones match Input. Light/dark tokens and nested themes survi
 
 One month is the default. `numOfMonths={2}` shows adjacent months above 42rem and one month below it. The machine's actual visible duration changes; a second focusable calendar is never merely hidden with CSS. Inputs and actions share one border. Range endpoints have visible localized labels and stack inside narrow containers.
 
-## Review examples
+## Interactive examples
 
-[Visual review against Input](http://localhost:6006/?path=/story/forms-datepicker--visual-review) compares the complete family.
-- [DateInput comparison](http://localhost:6006/?path=/story/forms-dateinput--same-date-across-regions)
-- [DatePicker comparison](http://localhost:6006/?path=/story/forms-datepicker--same-date-across-regions)
-- [Range comparison](http://localhost:6006/?path=/story/forms-daterangepicker--same-range-across-regions)
-- [Partial/reversed ranges](http://localhost:6006/?path=/story/forms-daterangepicker--partial-and-reversed)
-- [Submission/reset](http://localhost:6006/?path=/story/forms-datepicker--native-submission-and-reset)
-- [Dialog and nested dark theme](http://localhost:6006/?path=/story/forms-datepicker--in-dialog)
-- [Two months](http://localhost:6006/?path=/story/forms-daterangepicker--two-months) · [Mobile](http://localhost:6006/?path=/story/forms-daterangepicker--mobile)
-
-Implementation review precedes automated test creation. No new automated tests or Storybook interaction assertions accompany this family.
+See DateInput, DatePicker, and DateRangePicker in the [official documentation](../../../../apps/docs/README.md).

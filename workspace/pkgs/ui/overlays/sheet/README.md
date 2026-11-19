@@ -37,15 +37,11 @@ Public types: `SheetRootProps`, `SheetContentProps`, `SheetSurfaceProps`, `Sheet
 
 ## Behavior and scope
 
-The panel slides from the selected edge; the backdrop uses the existing Dialog fade. Theme tokens, nested layers, and system/workshop reduced motion follow the existing overlay contract. Header/footer spacing accounts for top/bottom safe-area insets. Consumers can override `--nui-sheet-size` locally through the existing class/style contracts; it controls the relevant maximum dimension. Other visual tokens are shared with Dialog.
+The panel slides from the selected edge; the backdrop uses the existing Dialog fade. Theme tokens, nested layers, and system or explicitly configured reduced motion follow the existing overlay contract. Header/footer spacing accounts for top/bottom safe-area insets. Consumers can override `--nui-sheet-size` locally through the existing class/style contracts; it controls the relevant maximum dimension. Other visual tokens are shared with Dialog.
 
-The application chooses responsive sides; the Responsive story uses the maintained media-query primitive to select right from 48rem and bottom below it, keeping one Root mounted and application state intact. Sheet does not automatically switch presentation. Nonmodal mode omits the backdrop and lets pointer events reach the page outside the panel.
+To change sides at a breakpoint, use a media-query signal and keep one Root mounted to preserve application state. Nonmodal mode omits the backdrop and lets pointer events reach the page outside the panel.
 
 Sheet does not provide dragging, swipe-to-dismiss, snap points, or a decorative drag handle. Keep application state outside lazy content when it must survive closing.
-
-## Storybook examples
-
-Storybook: Overlays / Sheet includes all four sides, three sizes, controlled state, nonmodal mode, dismissal options, long content, responsive side selection, a nested Dialog, dark theme, mobile right/bottom layouts, and reduced motion. Review sliding direction, focus containment/restoration, Escape/outside closing, body scrolling with a fixed footer, nesting, and viewport fit.
 
 ## References
 

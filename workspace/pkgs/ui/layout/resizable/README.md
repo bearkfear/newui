@@ -29,7 +29,3 @@ Numeric `defaultSize`, controlled `size`, `minSize`, `maxSize`, and `collapsedSi
 Handle uses Ark's separator-role button with an optional decorative grip (`withHandle`). Supply an accessible name for each divider. Arrow keys resize along the layout axis, Shift increases the step, Home/End reach the available constraints, and Enter toggles a collapsible adjacent panel. These commands and native event cancellation remain with Ark. `keyboardResizeBy` is forwarded to Root. The default button explicitly receives native `disabled` because the installed Ark primitive consumes that prop for its state without forwarding it to the DOM. Handle also forwards `aria-disabled`. When overriding `asChild`, preserve supplied props, refs, and native disabled behavior on your element.
 
 All parts preserve Ark props, DOM refs, styles, event handlers, and additive classes. Custom Handle children replace the grip. Keep them decorative; do not nest interactive controls inside the separator. `--nui-resizable-handle-size` defaults to `0.5rem`; coarse pointers get at least `1.5rem`. The divider stays visible without a grip, uses semantic Radix tokens for interaction/focus states, and adds no animation. Nest independent Roots to combine orientations.
-
-## Storybook examples
-
-Layout / Resizable includes horizontal/vertical, grip-free, disabled, nested editor/terminal, controlled sizes/reset, collapsible navigation, dark, and mobile examples.

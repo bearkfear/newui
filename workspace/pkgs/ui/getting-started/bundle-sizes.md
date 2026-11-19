@@ -11,7 +11,7 @@ bun run build
 bun run --cwd pkgs/ui measure:bundles
 ```
 
-The command bundles named exports from the built package with esbuild, including their required third-party code and Solid runtime. It uses browser resolution, the `module` optimization condition, and either the `solid` or `import` package entry. JSX is compiled with the Solid browser preset; output is minified ESM. Exporting each selected resource keeps it live without introducing an application or Storybook overhead.
+The command bundles named exports from the built package with esbuild, including their required third-party code and Solid runtime. It uses browser resolution, the `module` optimization condition, and either the `solid` or `import` package entry. JSX is compiled with the Solid browser preset; output is minified ESM. Exporting each selected resource keeps it live without introducing application code.
 
 Reports print raw JavaScript bytes, gzip bytes, emitted dependency bytes, and contributing library chunks. Dependency attribution is uncompressed metafile data, not an allocation of gzip size. The final observational report also inspects a non-minified bundle's Button aliases and context declarations. There are no assertions, snapshots, budgets, or pass/fail thresholds.
 

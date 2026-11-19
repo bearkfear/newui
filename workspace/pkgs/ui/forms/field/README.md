@@ -27,8 +27,4 @@ Loading exposes busy state and does not disable editing. For a visible indicator
 
 For horizontal layout, put the control and messages in Field.Content after Field.Label. Labels align to the shared control height, and the layout stacks below 640px. CSS remains responsible for surrounding multi-field layouts. All part classes are additive.
 
-The application owns values, validation rules/timing, async requests, submit prevention, and resets for controlled values. The Profile story demonstrates blur/submit validation, revalidation after touch, first-invalid-field focus, simulated saving, and reset. Native Submission And Reset demonstrates platform validation and FormData without a form library.
-
-## Storybook examples
-
-Forms / Field includes the full text-family overview, neutral/valid/invalid/conflicting flags, profile editing, native submission/reset, horizontal layout, and mobile stories. Every story follows the theme toolbar.
+The application owns values, validation rules/timing, async requests, submit prevention, and resets for controlled values.

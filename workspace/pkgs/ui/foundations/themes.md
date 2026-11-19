@@ -41,8 +41,6 @@ Solid primary (Blue), success (Green), and danger (Red) use white text on steps 
 
 `foundations/radix.css` is generated from the pinned `@radix-ui/colors` dependency. Regenerate with `bun run colors:generate` from `workspace/pkgs/ui/` after an intentional dependency update. The package build includes `RADIX_COLORS_LICENSE.txt`.
 
-Storybook's system option exercises the public CSS contract directly. Its manager resolves the operating system separately because its theming API accepts JavaScript color values.
-
 ## Solid color-mode helper
 
 Solid apps can opt into typed mode state and local storage persistence. In SSR apps, put the generated script in the document head before stylesheets; it applies the stored value before the first paint. The CSS still handles system preference without JavaScript.
@@ -60,4 +58,4 @@ colorMode.setMode("dark");
 
 Persistence is optional and uses the supplied key. Without a key, the helper only updates its accessor and `data-nui-theme`; the consuming application owns any storage policy. This helper targets the document root. Nested themed sections can continue to set `data-nui-theme` directly.
 
-The optional [Tailwind preset](../getting-started/tailwind.md) maps application utilities to the same tokens. [Runtime customization](../getting-started/theme-customization.md) and the isolated Storybook preset example demonstrate changing palette roles, spacing, radius, and appearance without regenerating source palettes.
+The optional [Tailwind preset](../getting-started/tailwind.md) maps application utilities to the same tokens. [Runtime customization](../getting-started/theme-customization.md) demonstrates changing palette roles, spacing, radius, and appearance without regenerating source palettes.

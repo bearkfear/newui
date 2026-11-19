@@ -39,16 +39,10 @@ Root supports `variant="plain" | "bordered"`, `density="comfortable" | "compact"
 
 Head defaults to `scope="col"`; pass `scope="row"` for row headers or `scope="colgroup"` for grouped headers. Native `colSpan`, `rowSpan`, `headers`, and IDs remain available. Head and Cell accept `align="start" | "center" | "end"`; end alignment adds tabular numerals. Caption sits below the table by default; native `style` can change its caption side.
 
-Row's `selected` is presentational emphasis with a soft primary background, including over stripes and hover states. It does not add `aria-selected`, focusability, or selection behavior to a native table. Communicate the meaning with text or a control, as demonstrated by the Current label in Storybook. Use links and buttons inside cells for actions.
+Row's `selected` is presentational emphasis with a soft primary background, including over stripes and hover states. It does not add `aria-selected`, focusability, or selection behavior to a native table. Communicate the meaning with text or a control. Use links and buttons inside cells for actions.
 
 Container is optional and renders a named `section` with horizontal overflow, keyboard focus, and a visible focus ring. Its default name is Scrollable table; give multiple regions distinct names. Arrow keys scroll through native browser behavior. Container DOM attributes and ref target the section; Root attributes and ref target the table. Applications can set a minimum table width when columns should scroll rather than compress. Native table semantics remain intact on mobile.
 
 Surfaces and stripes use neutral Radix steps 1–2, borders use step 6, hover uses step 3, and selected states use primary steps 3–4. Text retains foreground/muted semantic tokens. System, explicit, and nested themes work through the existing tokens. Class values are additive; arbitrary conflicting utility overrides are not guaranteed to win.
 
 Sorting, filtering, pagination, row-selection logic, virtualization, and column management belong to a future Data Table contract. Table does not introduce a data engine or an ARIA grid. Empty content composes [Empty](../../feedback/empty/README.md) inside a spanning Cell.
-
-## Storybook examples
-
-Data / Table includes invoice totals and badges, individual and combined options, natural width, highlighted rows, grouped headers, an empty state, native cell actions, and mobile scrolling. Every example follows the Storybook theme selector without fixed theme overrides.
-
-Playlist and Playlist Mobile compose the reference music-library layout with illustrated CSS covers, title/album details, artists, duration, favorites, library toggles, and Ark dropdown actions. Both follow the selected Storybook theme. Song-title buttons select a row independently of the play/pause preview; no audio is loaded. Scoped story styles demonstrate solid primary selection and rounded rows without changing the Table API. Mobile preserves the columns in the existing horizontal scroll region.

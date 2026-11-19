@@ -33,7 +33,3 @@ Native attributes, refs, events, editing, FormData, default values, and resets a
 [Input masking](input-masking.md) documents the IMask adapter and text helpers. The DOM-independent `@egcs/newui/masking` entry supports formatting and validation in Node and browsers.
 
 [Rich text editing](rich-text-editor/README.md) uses canonical JSON and exposes the DOM-independent `@egcs/newui/rich-text` entry for legacy HTML conversion, normalized HTML rendering, plain-text extraction, emptiness checks, and schema validation.
-
-## Storybook examples
-
-Forms / Field / Overview demonstrates profile editing, password reveal, clear/search actions, sizes, tones, addons, loading, readonly/disabled states, explicit validation, horizontal layout, and mobile. Native Submission And Reset demonstrates browser form behavior.

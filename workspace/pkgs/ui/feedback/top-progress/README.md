@@ -37,10 +37,8 @@ Public CSS tokens: `--nui-top-progress-color` (primary), `--nui-top-progress-hei
 
 Ark owns label associations, numeric bounds, and progressbar semantics. Automatic trickling passes `value=null` to Ark so estimated widths are never announced as real percentages. Manual mode passes the actual value. The bar does not move focus, intercept pointer events, or live-announce every update. Applications own busy regions, failure messages, and completion announcements.
 
-System and workshop reduced motion disable transitions and keep automatic progress at a static partial width. Forced colors use the system highlight color. A fixed bar is scoped to its document; the Storybook iframe represents the consuming page.
+System and explicit reduced motion disable transitions and keep automatic progress at a static partial width. Forced colors use the system highlight color. A fixed bar is scoped to its document.
 
 ## Implementation mapping and review
 
 [Ark Progress](https://ark-ui.com/docs/components/progress-linear) supplies the rendering and accessible value contract. Its progress API has no page-request aggregation/trickle lifecycle, so the controller adds the timer and promise bookkeeping around Ark without replacing its accessible primitive. No dependency was added.
-
-Storybook: Feedback / Top Progress includes manual controls, overlapping requests, an error while another request remains pending, fast requests, restart controls, a global context example, glow, dark/mobile, and reduced motion.

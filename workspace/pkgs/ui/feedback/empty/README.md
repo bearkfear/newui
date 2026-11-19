@@ -31,10 +31,6 @@ Applications own result state and action behavior. For asynchronous updates, kee
 
 ## Composition
 
-Use Root directly inside a Card or Panel. In a table, place it inside one Cell spanning the visible columns; Root must not be a direct child of table, tbody, or tr. The Table Empty story uses `layout="compact"`. Smaller or inline gaps may use plain Text rather than a complete empty-state composition.
+Use Root directly inside a Card or Panel. In a table, place it inside one Cell spanning the visible columns; Root must not be a direct child of table, tbody, or tr. Use `layout="compact"` for the empty table state. Smaller or inline gaps may use plain Text rather than a complete empty-state composition.
 
 No-results copy should explain how to recover, such as clearing filters. First-use copy can offer creation; a passive empty activity feed may need no action. Icon, description, and actions are optional, and applications own localization. No generic page text is injected by Root.
-
-## Storybook examples
-
-Feedback / Empty includes default, optional parts, compact/page layouts, Card and Table integration, custom search icon and recovery actions, a loading-to-empty-to-content flow, long text, dark/nested themes, and mobile examples.

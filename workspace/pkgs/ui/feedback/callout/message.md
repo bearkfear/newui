@@ -24,9 +24,9 @@ Use Header and Body with variant message. Header is optional; Body alone supplie
 
 The header uses the tone's solid background and existing on-color token. Blue/Green/Red use white text; Sky/Amber use their mapped dark text, following the library's Radix contrast policy. Neutral uses its existing solid/on-neutral mapping. The body remains a step 3 surface with step 11 secondary text; titles outside the solid header keep step 12. Header overrides are scoped, so text in the body and existing soft/outline Callouts keep their color roles. Header close-button hover uses the tone's solid hover token and its focus ring uses the header foreground.
 
-All parts forward native attributes, refs, events, and additive classes. Dismissal still belongs to the application. The example's dismissNotice callback is application-provided; the Dismissible story demonstrates hiding/restoring a message and returning focus to a stable page action. The presentation adds no timer, live role, or state machine.
+All parts forward native attributes, refs, events, and additive classes. Dismissal still belongs to the application. The example's dismissNotice callback is application-provided. The presentation adds no timer, live role, or state machine.
 
-Review Feedback / Callout → Message, Message Tones And Headers, Message Dismissible, Message Dark, and Message Mobile. The variant is also available in the standard controls and tone matrix.
+
 
 ## References
 

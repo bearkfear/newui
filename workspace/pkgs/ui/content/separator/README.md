@@ -23,5 +23,3 @@ A margin-free divider using the Radix neutral separator token. It complements na
 ```
 
 The surrounding layout owns margins and gaps. Vertical separators stretch in flex rows and have a minimum height of 1rem; supply a height when using another layout. Separators are not focusable or resizable splitters. Use semantic separators for content divisions and decorative separators for visual embellishment.
-
-Review Content / Separator for both orientations, decorative usage, and composition with content.

@@ -20,9 +20,8 @@ ProgressCircle uses the same props as [Progress](../progress/README.md): value/d
 
 The SVG carries Ark's progressbar role and the task name; the HTML value is a visual complement with live announcements disabled. Numeric updates do not move focus. The track shares `--nui-progress-track` with the bar, and tones share the same Radix fill/text mapping. Size sets Ark's --size and --thickness geometry variables; the public customization API remains the size and tone variants plus native root style/class.
 
-Known values transition the arc length. Indeterminate work rotates a partial arc; system/workshop reduced motion stops rotation and removes value transitions while keeping the partial arc visible. No additional animation dependency is installed.
+Known values transition the arc length. Indeterminate work rotates a partial arc; system or explicitly configured reduced motion stops rotation and removes value transitions while keeping the partial arc visible. No additional animation dependency is installed.
 
-Storybook: Feedback / Progress Circle includes sizes, tones, zero/partial/complete/unknown states, value visibility, custom range, the shared simulated upload, light/dark comparison, mobile, and reduced motion.
 
 ## References
 

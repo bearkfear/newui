@@ -43,11 +43,11 @@ Public types: DialogRootProps, DialogContentProps, DialogSurfaceProps, and Dialo
 
 Ark owns focus trapping/restoration, modal isolation, scroll locking, Escape, outside interaction, presence, accessible associations, and nested-layer metadata. Use Root callbacks to prevent a close attempt when appropriate. An action does not close the dialog unless it uses CloseTrigger or updates controlled open state. Async work and errors remain application-owned.
 
-The portal follows Ark presence so closed lazy content does not create an empty modal layer. It copies inherited --nui-* tokens, color-scheme, and typography from its origin, and observes ancestor theme/class/style changes. Root unmountOnExit removes content after exit; keep application state outside the content when it must survive closing. The portal also carries the workshop's reduced-motion setting, while CSS respects the system preference independently.
+The portal follows Ark presence so closed lazy content does not create an empty modal layer. It copies inherited --nui-* tokens, color-scheme, and typography from its origin, and observes ancestor theme/class/style changes. Root unmountOnExit removes content after exit; keep application state outside the content when it must survive closing. The portal also carries the configured reduced-motion setting, while CSS respects the system preference independently.
 
 Use variant free for media or custom content without card chrome; provide an accessible title or label and a visible way to close. Dialog does not add forms. Use [Alert Dialog](../alert-dialog/README.md) for critical confirmations with initial Cancel focus and blocked outside dismissal.
 
-Review Overlays / Dialog for sizes, long-content scrolling, media, controlled state, dismissal options, nested layers, custom composition, mobile, and reduced motion.
+
 
 ## References
 

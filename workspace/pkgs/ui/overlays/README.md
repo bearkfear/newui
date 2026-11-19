@@ -18,5 +18,3 @@ Present content above the interface with appropriate opening, closing, focus, an
 Ark owns interaction, accessible associations, focus, controlled/uncontrolled state, and dismissal. Shared portals preserve inherited theme tokens and motion preferences.
 
 Use Popover for deliberate interactive disclosure and Tooltip for short non-interactive hints. Sheet supports edge-attached presentation without drag gestures or snap points. Select controls belong to [Forms](../forms/README.md) and command menus to [Actions](../actions/README.md).
-
-Storybook demonstrates controlled state, nested themes and layers, positioning, responsive layouts, scrolling, and reduced motion. Alert Dialog includes async failure/retry with application-owned state.

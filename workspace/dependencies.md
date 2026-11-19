@@ -84,7 +84,7 @@ InputGroup supplies button defaults through a context; it does not import or ren
 
 Button group options derive from the recipe and native button attributes; Sidebar options live in `sidebar.types.ts`. These support contracts avoid type-only back references to their components.
 
-Stories, `stories/` helpers, foundation previews, and `compositions/pages/` are catalog consumers. Their broad imports and page-level combinations do not authorize those dependencies in reusable library components. They must not become dependencies of public implementations.
+The official docs app in `apps/docs/` is a catalog consumer. Their broad imports and page-level combinations do not authorize those dependencies in reusable library components. They must not become dependencies of public implementations.
 
 `foundations/styles.css` compiles the full [source stylesheet graph](pkgs/ui/styles/README.md). Component entries declare CSS/recipe dependencies, and area aggregators compose them. A shared normalizer deduplicates internal imports before Tailwind; JavaScript imports do not select CSS.
 

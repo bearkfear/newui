@@ -16,4 +16,4 @@ import { ColorPicker, Field, parseColor } from "@egcs/newui/forms";
 
 Values are Ark Color objects; use `parseColor` and `onValueChange` for controlled state. A hidden input submits Ark's current serialized color under `name`. The hexadecimal input commits on blur or Enter. `alpha` adds an opacity slider; callers should supply an opaque initial color when opacity is not offered. Set `hexLabel`, `hueLabel`, and `alphaLabel` for localized controls. Add `SwatchGroup` and `SwatchTrigger` inside Content for suggested colors. Use Field.Label or ColorPicker.Label to name the trigger. Controlled values and resets remain application-owned.
 
-Storybook covers default, controlled, transparency, states, form submission/reset, dialog, dark and mobile presentations. See [Ark Color Picker](https://ark-ui.com/docs/components/color-picker).
+See [Ark Color Picker](https://ark-ui.com/docs/components/color-picker).

@@ -16,7 +16,7 @@ bun run pack
 npm publish ./artifacts/newui-preview.tgz --dry-run --access public --tag latest --ignore-scripts
 ```
 
-Review the archive's file list, README, license, changelog, public exports, and dependencies. CI also builds Storybook and runs the mask regression suite. Validate installation and bundling in a separate consumer when distribution changes; workspace patches and overrides do not propagate to consumers.
+Review the archive's file list, README, license, changelog, public exports, and dependencies. CI also builds the official documentation and runs the mask helper regression checks. Validate installation and bundling in a separate consumer when distribution changes; workspace patches and overrides do not propagate to consumers.
 
 ## Automated publishing
 

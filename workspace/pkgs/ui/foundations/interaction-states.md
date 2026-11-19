@@ -15,5 +15,3 @@ Button loading prevents activation and exposes aria-busy while preserving its ac
 `--nui-motion-duration` (150ms) and `--nui-motion-easing` (cubic-bezier(0.4, 0, 0.2, 1)) control default recipe utility transitions. Component CSS retains its existing behavior-specific durations: short overlay fades, longer Sheet/disclosure movement, and continuous progress/spinner motion. These are not all controlled by the default transition token.
 
 Both prefers-reduced-motion and a `data-motion="reduced"` container suppress the existing utility transitions and component-specific animations. The local setting supplements the OS preference; another scope cannot force motion back on against an OS reduced-motion preference. Portal scopes carry the local setting. Static indicators, disclosure state, and progress values remain available. The validated solid Button press filter has no positional motion and remains enabled.
-
-Foundations / Interaction states provides native focus/ref actions, disabled and pressed controls, and comparable motion scopes. Use Tab, Shift+Tab, Enter/Space, and the Storybook Motion toolbar to review.

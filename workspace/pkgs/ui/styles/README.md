@@ -26,11 +26,11 @@ Charts → Button, Empty → Heading, Text
 
 Forms includes the action styles needed by InputGroup and RichTextEditor without importing action menus. RichTextEditor also reuses Prose's semantic native-element rules for consistent editing and reading surfaces. Sidebar includes VerticalMenu's styling contract for compact navigation. Popover imports Dialog styles because its close trigger reuses the dialog recipe. Shared data captions, tones, and accessibility rules are separated from BarList and DeltaBar geometry.
 
-Recipes register their own literal source files. Recipe dependencies such as disclosure, badge appearance, navigation links, progress tones, and Panel headers are included explicitly. Catalog-only pagination recipes are registered by Storybook's `library.css`, not by the library.
+Recipes register their own literal source files. Recipe dependencies such as disclosure, badge appearance, navigation links, progress tones, and Panel headers are included explicitly.
 
 ## Compilation and deduplication
 
-Both the library build and Storybook run `scripts/style-imports.ts` before Tailwind. It expands plain relative CSS imports inside the library once per compilation, detects cycles, resolves recipe sources against their original files, and publishes dependency messages for watch mode. External Tailwind imports remain the compiler's responsibility.
+The library build and the consumer PostCSS integration share `scripts/style-imports.ts`. It expands plain relative CSS imports inside the library once per compilation, detects cycles, resolves recipe sources against their original files, and publishes dependency messages for watch mode. External Tailwind imports remain the compiler's responsibility.
 
 The normalizer is necessary because repeated CSS imports can otherwise emit repeated custom rules. Selecting Actions and Forms in one compilation shares their Button and foundation nodes. Independently compiling both areas and concatenating the results does not provide the same guarantee. The public consumer plugin preserves normalization while compiling prefixed library utilities separately from application utilities, without adding another reset.
 
@@ -50,4 +50,4 @@ Run `bun run --cwd pkgs/ui measure:styles` from `workspace/`. It prints raw/gzip
 | Data without Charts   |         34980 |       7572 |
 | Full catalog          |        129115 |      21641 |
 
-All reported selections emit zero repeated complete rules. Source order can change rule grouping and compression while retaining the same dependencies. Open **Getting started / Modular styles** for isolated Actions, Forms, combined, dark, and mobile previews. Parent Storybook CSS cannot style the preview document.
+All reported selections emit zero repeated complete rules. Source order can change rule grouping and compression while retaining the same dependencies.

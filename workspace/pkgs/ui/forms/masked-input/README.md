@@ -45,11 +45,11 @@ Changing mask/tokens reprocesses the current raw value with a fresh model, prese
 
 Uncontrolled native reset restores the initial raw default using the current mask. Canceled resets preserve values. Controlled reset uses the current application value. Mask synchronization runs in the next task after reset propagation and its native default action; inspect FormData after synchronization completes.
 
-Accepted reset, configuration changes, and external controlled replacements start a new undo history. Normal accepted controlled edits preserve undo/redo; canceled reset preserves history. Readonly/disabled controls cannot invoke IMask undo/redo. Paste And History provides long clipboard samples, a readonly toggle, and an oversized initial value for review.
+Accepted reset, configuration changes, and external controlled replacements start a new undo history. Normal accepted controlled edits preserve undo/redo; canceled reset preserves history. Readonly/disabled controls cannot invoke IMask undo/redo.
 
 Native required validates nonempty visible text; validate completeness/business rules explicitly. Do not mutate input.value directly: update controlled value or use native editing. Native maxlength counts displayed characters, including literals; the mask already limits editable positions.
 
-## Storybook examples
+## Validation
 
 The [Chromium inspection](upstream-issues.md#chromium-inspection) records real clipboard paste, initial/default values, external controlled updates, selection replacement, and native submission/reset. Other browser-specific scenarios remain pending.
 
@@ -57,4 +57,4 @@ The [Chromium inspection](upstream-issues.md#chromium-inspection) records real c
 
 [Paste and editing review](paste-review.md) records oversized clipboard input, selection replacement, dynamic phone masks, and the history correction found during exploration.
 
-The [automated coverage](test-coverage.md) covers helpers, configuration, clipboard editing, native forms, and the history corrections. See that guide for browser coverage and limitations.
+See the [mask regression guide](test-coverage.md) for automated helper coverage.

@@ -12,9 +12,6 @@
       "**",
       "!!**/node_modules",
       "!!**/dist",
-      "!!**/storybook-static",
-      "!!**/test-results",
-      "!!**/playwright-report",
       "!!references/_local",
       "!!patches",
       "!!pkgs/ui/foundations/radix.css",
@@ -90,10 +87,6 @@
   "overrides": [
     {
       "includes": [
-        "**/*.stories.tsx",
-        "**/*-meta.tsx",
-        "apps/storybook/.storybook/**",
-        "apps/storybook/playwright.config.ts",
         "apps/docs/src/routes/**",
         "apps/docs/src/app.tsx",
         "apps/docs/src/entry-server.tsx",
